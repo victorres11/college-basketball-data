@@ -2,7 +2,7 @@
   "team": "UCLA",
   "season": "2024-25",
   "seasonType": "Regular",
-  "dataGenerated": "2025-10-27T18:32:42.556706",
+  "dataGenerated": "2025-10-27T19:02:39.976347",
   "players": [
     {
       "name": "Kobe Johnson",
@@ -1107,7 +1107,117 @@
           "totalPlayers": 244,
           "value": 20
         }
-      }
+      },
+      "previousSeasons": [
+        {
+          "season": 2024,
+          "team": "USC",
+          "conference": "Pac-12",
+          "games": 31,
+          "gamesStarted": 28,
+          "seasonStats": {
+            "points": 337,
+            "assists": 101,
+            "rebounds": {
+              "offensive": 16,
+              "defensive": 126,
+              "total": 142
+            },
+            "steals": 68,
+            "blocks": 25,
+            "fieldGoals": {
+              "made": 126,
+              "attempted": 312,
+              "pct": 40.4
+            },
+            "threePointFieldGoals": {
+              "made": 40,
+              "attempted": 128,
+              "pct": 31.3
+            },
+            "freeThrows": {
+              "made": 45,
+              "attempted": 62,
+              "pct": 72.6
+            },
+            "offensiveRating": 98.6,
+            "defensiveRating": 101.8,
+            "netRating": -3.2
+          }
+        },
+        {
+          "season": 2023,
+          "team": "USC",
+          "conference": "Pac-12",
+          "games": 32,
+          "gamesStarted": 28,
+          "seasonStats": {
+            "points": 289,
+            "assists": 81,
+            "rebounds": {
+              "offensive": 40,
+              "defensive": 117,
+              "total": 157
+            },
+            "steals": 71,
+            "blocks": 14,
+            "fieldGoals": {
+              "made": 96,
+              "attempted": 204,
+              "pct": 47.1
+            },
+            "threePointFieldGoals": {
+              "made": 28,
+              "attempted": 79,
+              "pct": 35.4
+            },
+            "freeThrows": {
+              "made": 69,
+              "attempted": 82,
+              "pct": 84.1
+            },
+            "offensiveRating": 114,
+            "defensiveRating": 93.8,
+            "netRating": 20.2
+          }
+        },
+        {
+          "season": 2022,
+          "team": "USC",
+          "conference": "Pac-12",
+          "games": 26,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "points": 32,
+            "assists": 21,
+            "rebounds": {
+              "offensive": 6,
+              "defensive": 22,
+              "total": 28
+            },
+            "steals": 16,
+            "blocks": 5,
+            "fieldGoals": {
+              "made": 11,
+              "attempted": 34,
+              "pct": 32.4
+            },
+            "threePointFieldGoals": {
+              "made": 4,
+              "attempted": 14,
+              "pct": 28.6
+            },
+            "freeThrows": {
+              "made": 6,
+              "attempted": 8,
+              "pct": 75
+            },
+            "offensiveRating": 91.7,
+            "defensiveRating": 92.3,
+            "netRating": -0.6
+          }
+        }
+      ]
     },
     {
       "name": "Skyy Clark",
@@ -2212,7 +2322,81 @@
           "totalPlayers": 244,
           "value": 19.2
         }
-      }
+      },
+      "previousSeasons": [
+        {
+          "season": 2024,
+          "team": "Louisville",
+          "conference": "ACC",
+          "games": 29,
+          "gamesStarted": 28,
+          "seasonStats": {
+            "points": 384,
+            "assists": 87,
+            "rebounds": {
+              "offensive": 8,
+              "defensive": 81,
+              "total": 89
+            },
+            "steals": 30,
+            "blocks": 4,
+            "fieldGoals": {
+              "made": 127,
+              "attempted": 308,
+              "pct": 41.2
+            },
+            "threePointFieldGoals": {
+              "made": 47,
+              "attempted": 133,
+              "pct": 35.3
+            },
+            "freeThrows": {
+              "made": 83,
+              "attempted": 107,
+              "pct": 77.6
+            },
+            "offensiveRating": 98.7,
+            "defensiveRating": 112.7,
+            "netRating": -14
+          }
+        },
+        {
+          "season": 2023,
+          "team": "Illinois",
+          "conference": "Big Ten",
+          "games": 13,
+          "gamesStarted": 12,
+          "seasonStats": {
+            "points": 91,
+            "assists": 27,
+            "rebounds": {
+              "offensive": 6,
+              "defensive": 42,
+              "total": 48
+            },
+            "steals": 7,
+            "blocks": 2,
+            "fieldGoals": {
+              "made": 30,
+              "attempted": 73,
+              "pct": 41.1
+            },
+            "threePointFieldGoals": {
+              "made": 15,
+              "attempted": 45,
+              "pct": 33.3
+            },
+            "freeThrows": {
+              "made": 16,
+              "attempted": 23,
+              "pct": 69.6
+            },
+            "offensiveRating": 99.2,
+            "defensiveRating": 94.8,
+            "netRating": 4.4
+          }
+        }
+      ]
     },
     {
       "name": "Tyler Bilodeau",
@@ -3288,7 +3472,81 @@
           "totalPlayers": 244,
           "value": 17.8
         }
-      }
+      },
+      "previousSeasons": [
+        {
+          "season": 2024,
+          "team": "Oregon State",
+          "conference": "Pac-12",
+          "games": 32,
+          "gamesStarted": 32,
+          "seasonStats": {
+            "points": 459,
+            "assists": 39,
+            "rebounds": {
+              "offensive": 29,
+              "defensive": 153,
+              "total": 182
+            },
+            "steals": 18,
+            "blocks": 13,
+            "fieldGoals": {
+              "made": 171,
+              "attempted": 321,
+              "pct": 53.3
+            },
+            "threePointFieldGoals": {
+              "made": 30,
+              "attempted": 87,
+              "pct": 34.5
+            },
+            "freeThrows": {
+              "made": 87,
+              "attempted": 109,
+              "pct": 79.8
+            },
+            "offensiveRating": 118.1,
+            "defensiveRating": 107.6,
+            "netRating": 10.5
+          }
+        },
+        {
+          "season": 2023,
+          "team": "Oregon State",
+          "conference": "Pac-12",
+          "games": 32,
+          "gamesStarted": 13,
+          "seasonStats": {
+            "points": 224,
+            "assists": 18,
+            "rebounds": {
+              "offensive": 33,
+              "defensive": 91,
+              "total": 124
+            },
+            "steals": 12,
+            "blocks": 11,
+            "fieldGoals": {
+              "made": 84,
+              "attempted": 184,
+              "pct": 45.7
+            },
+            "threePointFieldGoals": {
+              "made": 12,
+              "attempted": 40,
+              "pct": 30
+            },
+            "freeThrows": {
+              "made": 44,
+              "attempted": 54,
+              "pct": 81.5
+            },
+            "offensiveRating": 100.4,
+            "defensiveRating": 103.7,
+            "netRating": -3.3
+          }
+        }
+      ]
     },
     {
       "name": "Dylan Andrews",
@@ -4335,7 +4593,81 @@
           "totalPlayers": 244,
           "value": -10.4
         }
-      }
+      },
+      "previousSeasons": [
+        {
+          "season": 2024,
+          "team": "UCLA",
+          "conference": "Pac-12",
+          "games": 32,
+          "gamesStarted": 32,
+          "seasonStats": {
+            "points": 412,
+            "assists": 119,
+            "rebounds": {
+              "offensive": 13,
+              "defensive": 58,
+              "total": 71
+            },
+            "steals": 27,
+            "blocks": 2,
+            "fieldGoals": {
+              "made": 153,
+              "attempted": 387,
+              "pct": 39.5
+            },
+            "threePointFieldGoals": {
+              "made": 47,
+              "attempted": 145,
+              "pct": 32.4
+            },
+            "freeThrows": {
+              "made": 59,
+              "attempted": 73,
+              "pct": 80.8
+            },
+            "offensiveRating": 102.8,
+            "defensiveRating": 110.1,
+            "netRating": -7.3
+          }
+        },
+        {
+          "season": 2023,
+          "team": "UCLA",
+          "conference": "Pac-12",
+          "games": 33,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "points": 106,
+            "assists": 33,
+            "rebounds": {
+              "offensive": 8,
+              "defensive": 26,
+              "total": 34
+            },
+            "steals": 10,
+            "blocks": 1,
+            "fieldGoals": {
+              "made": 42,
+              "attempted": 96,
+              "pct": 43.8
+            },
+            "threePointFieldGoals": {
+              "made": 11,
+              "attempted": 37,
+              "pct": 29.7
+            },
+            "freeThrows": {
+              "made": 11,
+              "attempted": 18,
+              "pct": 61.1
+            },
+            "offensiveRating": 106,
+            "defensiveRating": 94.5,
+            "netRating": 11.5
+          }
+        }
+      ]
     },
     {
       "name": "Eric Dailey Jr.",
@@ -5411,7 +5743,45 @@
           "totalPlayers": 244,
           "value": 24.5
         }
-      }
+      },
+      "previousSeasons": [
+        {
+          "season": 2024,
+          "team": "Oklahoma State",
+          "conference": "Big 12",
+          "games": 32,
+          "gamesStarted": 16,
+          "seasonStats": {
+            "points": 299,
+            "assists": 49,
+            "rebounds": {
+              "offensive": 48,
+              "defensive": 107,
+              "total": 155
+            },
+            "steals": 24,
+            "blocks": 4,
+            "fieldGoals": {
+              "made": 112,
+              "attempted": 226,
+              "pct": 49.6
+            },
+            "threePointFieldGoals": {
+              "made": 19,
+              "attempted": 57,
+              "pct": 33.3
+            },
+            "freeThrows": {
+              "made": 56,
+              "attempted": 93,
+              "pct": 60.2
+            },
+            "offensiveRating": 112.5,
+            "defensiveRating": 105.6,
+            "netRating": 6.9
+          }
+        }
+      ]
     },
     {
       "name": "Sebastian Mack",
@@ -6516,7 +6886,45 @@
           "totalPlayers": 244,
           "value": 7.4
         }
-      }
+      },
+      "previousSeasons": [
+        {
+          "season": 2024,
+          "team": "UCLA",
+          "conference": "Pac-12",
+          "games": 33,
+          "gamesStarted": 30,
+          "seasonStats": {
+            "points": 399,
+            "assists": 52,
+            "rebounds": {
+              "offensive": 21,
+              "defensive": 97,
+              "total": 118
+            },
+            "steals": 44,
+            "blocks": 2,
+            "fieldGoals": {
+              "made": 123,
+              "attempted": 318,
+              "pct": 38.7
+            },
+            "threePointFieldGoals": {
+              "made": 28,
+              "attempted": 99,
+              "pct": 28.3
+            },
+            "freeThrows": {
+              "made": 125,
+              "attempted": 172,
+              "pct": 72.7
+            },
+            "offensiveRating": 103.3,
+            "defensiveRating": 102.8,
+            "netRating": 0.5
+          }
+        }
+      ]
     },
     {
       "name": "Lazar Stefanovic",
@@ -7621,7 +8029,117 @@
           "totalPlayers": 244,
           "value": 8.9
         }
-      }
+      },
+      "previousSeasons": [
+        {
+          "season": 2024,
+          "team": "UCLA",
+          "conference": "Pac-12",
+          "games": 33,
+          "gamesStarted": 33,
+          "seasonStats": {
+            "points": 381,
+            "assists": 53,
+            "rebounds": {
+              "offensive": 50,
+              "defensive": 152,
+              "total": 202
+            },
+            "steals": 35,
+            "blocks": 3,
+            "fieldGoals": {
+              "made": 122,
+              "attempted": 317,
+              "pct": 38.5
+            },
+            "threePointFieldGoals": {
+              "made": 58,
+              "attempted": 149,
+              "pct": 38.9
+            },
+            "freeThrows": {
+              "made": 79,
+              "attempted": 91,
+              "pct": 86.8
+            },
+            "offensiveRating": 114,
+            "defensiveRating": 104.4,
+            "netRating": 9.6
+          }
+        },
+        {
+          "season": 2023,
+          "team": "Utah",
+          "conference": "Pac-12",
+          "games": 32,
+          "gamesStarted": 15,
+          "seasonStats": {
+            "points": 329,
+            "assists": 86,
+            "rebounds": {
+              "offensive": 14,
+              "defensive": 83,
+              "total": 97
+            },
+            "steals": 34,
+            "blocks": 5,
+            "fieldGoals": {
+              "made": 114,
+              "attempted": 307,
+              "pct": 37.1
+            },
+            "threePointFieldGoals": {
+              "made": 55,
+              "attempted": 153,
+              "pct": 35.9
+            },
+            "freeThrows": {
+              "made": 46,
+              "attempted": 53,
+              "pct": 86.8
+            },
+            "offensiveRating": 102.6,
+            "defensiveRating": 97.8,
+            "netRating": 4.8
+          }
+        },
+        {
+          "season": 2022,
+          "team": "Utah",
+          "conference": "Pac-12",
+          "games": 31,
+          "gamesStarted": 18,
+          "seasonStats": {
+            "points": 233,
+            "assists": 41,
+            "rebounds": {
+              "offensive": 23,
+              "defensive": 65,
+              "total": 88
+            },
+            "steals": 13,
+            "blocks": 1,
+            "fieldGoals": {
+              "made": 80,
+              "attempted": 221,
+              "pct": 36.2
+            },
+            "threePointFieldGoals": {
+              "made": 33,
+              "attempted": 107,
+              "pct": 30.8
+            },
+            "freeThrows": {
+              "made": 40,
+              "attempted": 48,
+              "pct": 83.3
+            },
+            "offensiveRating": 95.1,
+            "defensiveRating": 108.8,
+            "netRating": -13.7
+          }
+        }
+      ]
     },
     {
       "name": "Aday Mara",
@@ -8697,7 +9215,45 @@
           "totalPlayers": 244,
           "value": 24.7
         }
-      }
+      },
+      "previousSeasons": [
+        {
+          "season": 2024,
+          "team": "UCLA",
+          "conference": "Pac-12",
+          "games": 28,
+          "gamesStarted": 8,
+          "seasonStats": {
+            "points": 97,
+            "assists": 15,
+            "rebounds": {
+              "offensive": 16,
+              "defensive": 38,
+              "total": 54
+            },
+            "steals": 2,
+            "blocks": 20,
+            "fieldGoals": {
+              "made": 38,
+              "attempted": 86,
+              "pct": 44.2
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 21,
+              "attempted": 30,
+              "pct": 70
+            },
+            "offensiveRating": 95.6,
+            "defensiveRating": 102.9,
+            "netRating": -7.3
+          }
+        }
+      ]
     },
     {
       "name": "Trent Perry",
@@ -10791,7 +11347,81 @@
           "totalPlayers": 244,
           "value": 15.5
         }
-      }
+      },
+      "previousSeasons": [
+        {
+          "season": 2024,
+          "team": "South Dakota State",
+          "conference": "Summit",
+          "games": 34,
+          "gamesStarted": 23,
+          "seasonStats": {
+            "points": 445,
+            "assists": 54,
+            "rebounds": {
+              "offensive": 76,
+              "defensive": 149,
+              "total": 225
+            },
+            "steals": 11,
+            "blocks": 55,
+            "fieldGoals": {
+              "made": 189,
+              "attempted": 303,
+              "pct": 62.4
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 1,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 67,
+              "attempted": 115,
+              "pct": 58.3
+            },
+            "offensiveRating": 121.9,
+            "defensiveRating": 105.3,
+            "netRating": 16.6
+          }
+        },
+        {
+          "season": 2023,
+          "team": "South Dakota State",
+          "conference": "Summit",
+          "games": 32,
+          "gamesStarted": 25,
+          "seasonStats": {
+            "points": 286,
+            "assists": 31,
+            "rebounds": {
+              "offensive": 47,
+              "defensive": 105,
+              "total": 152
+            },
+            "steals": 11,
+            "blocks": 38,
+            "fieldGoals": {
+              "made": 117,
+              "attempted": 216,
+              "pct": 54.2
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 52,
+              "attempted": 81,
+              "pct": 64.2
+            },
+            "offensiveRating": 103.4,
+            "defensiveRating": 102.2,
+            "netRating": 1.2
+          }
+        }
+      ]
     },
     {
       "name": "Dominick Harris",
@@ -11287,7 +11917,81 @@
           "totalPlayers": 244,
           "value": -32.2
         }
-      }
+      },
+      "previousSeasons": [
+        {
+          "season": 2024,
+          "team": "Loyola Marymount",
+          "conference": "WCC",
+          "games": 24,
+          "gamesStarted": 13,
+          "seasonStats": {
+            "points": 343,
+            "assists": 25,
+            "rebounds": {
+              "offensive": 14,
+              "defensive": 64,
+              "total": 78
+            },
+            "steals": 11,
+            "blocks": 2,
+            "fieldGoals": {
+              "made": 112,
+              "attempted": 261,
+              "pct": 42.9
+            },
+            "threePointFieldGoals": {
+              "made": 65,
+              "attempted": 145,
+              "pct": 44.8
+            },
+            "freeThrows": {
+              "made": 54,
+              "attempted": 69,
+              "pct": 78.3
+            },
+            "offensiveRating": 111.6,
+            "defensiveRating": 108,
+            "netRating": 3.6
+          }
+        },
+        {
+          "season": 2023,
+          "team": "Gonzaga",
+          "conference": "WCC",
+          "games": 12,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "points": 19,
+            "assists": 7,
+            "rebounds": {
+              "offensive": 1,
+              "defensive": 6,
+              "total": 7
+            },
+            "steals": 1,
+            "blocks": 1,
+            "fieldGoals": {
+              "made": 7,
+              "attempted": 17,
+              "pct": 41.2
+            },
+            "threePointFieldGoals": {
+              "made": 3,
+              "attempted": 10,
+              "pct": 30
+            },
+            "freeThrows": {
+              "made": 2,
+              "attempted": 2,
+              "pct": 100
+            },
+            "offensiveRating": 117.6,
+            "defensiveRating": 102.3,
+            "netRating": 15.3
+          }
+        }
+      ]
     },
     {
       "name": "Jack Seidler",
@@ -16490,6 +17194,6 @@
   },
   "metadata": {
     "totalPlayers": 12,
-    "apiCalls": 8
+    "apiCalls": 44
   }
 }

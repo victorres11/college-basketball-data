@@ -9,6 +9,67 @@ import json
 from datetime import datetime
 
 
+def get_player_career_season_stats(api, player_name, current_team):
+    """
+    Get player's season stats from previous seasons and schools.
+    Searches across D1 players for the player name.
+    """
+    historical_seasons = []
+    seasons_to_check = [2024, 2023, 2022]  # Check last 3 seasons
+    
+    print(f"  Searching historical data for {player_name}...")
+    
+    for season in seasons_to_check:
+        # Skip current season (2025)
+        if season == 2025:
+            continue
+            
+        try:
+            # Get all player stats for the season
+            all_player_stats = api.get_player_season_stats(season, season_type='regular')
+            
+            # Look for player with similar name
+            for player in all_player_stats:
+                # Check if name matches (flexible matching)
+                player_name_lower = player_name.lower()
+                found_name_lower = player.get('name', '').lower()
+                
+                # Exact match or close match
+                if player_name_lower == found_name_lower or \
+                   (all(word in found_name_lower for word in player_name_lower.split()) and 
+                    len(player_name_lower.split()) > 1):
+                    
+                    # Found the player
+                    season_data = {
+                        'season': season,
+                        'team': player.get('team'),
+                        'conference': player.get('conference'),
+                        'games': player.get('games'),
+                        'gamesStarted': player.get('starts'),
+                        'seasonStats': {
+                            'points': player.get('points'),
+                            'assists': player.get('assists'),
+                            'rebounds': player.get('rebounds'),
+                            'steals': player.get('steals'),
+                            'blocks': player.get('blocks'),
+                            'fieldGoals': player.get('fieldGoals'),
+                            'threePointFieldGoals': player.get('threePointFieldGoals'),
+                            'freeThrows': player.get('freeThrows'),
+                            'offensiveRating': player.get('offensiveRating'),
+                            'defensiveRating': player.get('defensiveRating'),
+                            'netRating': player.get('netRating')
+                        }
+                    }
+                    historical_seasons.append(season_data)
+                    print(f"    Found {season}: {player.get('team')} ({player.get('conference', 'N/A')})")
+                    break
+        except Exception as e:
+            print(f"    Error fetching {season}: {e}")
+            continue
+    
+    return historical_seasons
+
+
 def calculate_player_conference_rankings_from_list(all_players_raw, conference_name, target_player_name):
     """Calculate player's conference rankings for key statistical categories."""
     
@@ -505,6 +566,11 @@ def generate_msu_data_json():
         player_conference_rankings = calculate_player_conference_rankings_from_list(all_conference_players, "Big Ten", player_name)
         if player_conference_rankings:
             player_record['conferenceRankings'] = player_conference_rankings
+        
+        # Get player's historical season stats from previous schools
+        historical_seasons = get_player_career_season_stats(api, player_name, "michigan state")
+        if historical_seasons:
+            player_record['previousSeasons'] = historical_seasons
         
         team_data['players'].append(player_record)
     

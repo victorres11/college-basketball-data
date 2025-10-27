@@ -2,7 +2,7 @@
   "team": "Michigan State",
   "season": "2024-25",
   "seasonType": "Regular",
-  "dataGenerated": "2025-10-27T18:32:50.706468",
+  "dataGenerated": "2025-10-27T19:04:25.755639",
   "players": [
     {
       "name": "Jaden Akins",
@@ -1078,7 +1078,117 @@
           "totalPlayers": 244,
           "value": 5.5
         }
-      }
+      },
+      "previousSeasons": [
+        {
+          "season": 2024,
+          "team": "Michigan State",
+          "conference": "Big Ten",
+          "games": 33,
+          "gamesStarted": 33,
+          "seasonStats": {
+            "points": 337,
+            "assists": 40,
+            "rebounds": {
+              "offensive": 34,
+              "defensive": 90,
+              "total": 124
+            },
+            "steals": 38,
+            "blocks": 13,
+            "fieldGoals": {
+              "made": 131,
+              "attempted": 318,
+              "pct": 41.2
+            },
+            "threePointFieldGoals": {
+              "made": 59,
+              "attempted": 164,
+              "pct": 36
+            },
+            "freeThrows": {
+              "made": 16,
+              "attempted": 22,
+              "pct": 72.7
+            },
+            "offensiveRating": 104.1,
+            "defensiveRating": 101.1,
+            "netRating": 3
+          }
+        },
+        {
+          "season": 2023,
+          "team": "Michigan State",
+          "conference": "Big Ten",
+          "games": 27,
+          "gamesStarted": 22,
+          "seasonStats": {
+            "points": 260,
+            "assists": 32,
+            "rebounds": {
+              "offensive": 18,
+              "defensive": 87,
+              "total": 105
+            },
+            "steals": 31,
+            "blocks": 8,
+            "fieldGoals": {
+              "made": 97,
+              "attempted": 232,
+              "pct": 41.8
+            },
+            "threePointFieldGoals": {
+              "made": 44,
+              "attempted": 101,
+              "pct": 43.6
+            },
+            "freeThrows": {
+              "made": 22,
+              "attempted": 28,
+              "pct": 78.6
+            },
+            "offensiveRating": 101.7,
+            "defensiveRating": 98.9,
+            "netRating": 2.8
+          }
+        },
+        {
+          "season": 2022,
+          "team": "Michigan State",
+          "conference": "Big Ten",
+          "games": 34,
+          "gamesStarted": 1,
+          "seasonStats": {
+            "points": 119,
+            "assists": 25,
+            "rebounds": {
+              "offensive": 23,
+              "defensive": 60,
+              "total": 83
+            },
+            "steals": 22,
+            "blocks": 9,
+            "fieldGoals": {
+              "made": 42,
+              "attempted": 106,
+              "pct": 39.6
+            },
+            "threePointFieldGoals": {
+              "made": 18,
+              "attempted": 48,
+              "pct": 37.5
+            },
+            "freeThrows": {
+              "made": 17,
+              "attempted": 28,
+              "pct": 60.7
+            },
+            "offensiveRating": 98.8,
+            "defensiveRating": 100.9,
+            "netRating": -2.1
+          }
+        }
+      ]
     },
     {
       "name": "Jase Richardson",
@@ -3201,7 +3311,81 @@
           "totalPlayers": 244,
           "value": 6.1
         }
-      }
+      },
+      "previousSeasons": [
+        {
+          "season": 2024,
+          "team": "Michigan State",
+          "conference": "Big Ten",
+          "games": 33,
+          "gamesStarted": 2,
+          "seasonStats": {
+            "points": 193,
+            "assists": 83,
+            "rebounds": {
+              "offensive": 7,
+              "defensive": 45,
+              "total": 52
+            },
+            "steals": 20,
+            "blocks": 9,
+            "fieldGoals": {
+              "made": 70,
+              "attempted": 150,
+              "pct": 46.7
+            },
+            "threePointFieldGoals": {
+              "made": 33,
+              "attempted": 79,
+              "pct": 41.8
+            },
+            "freeThrows": {
+              "made": 20,
+              "attempted": 25,
+              "pct": 80
+            },
+            "offensiveRating": 121.7,
+            "defensiveRating": 103.9,
+            "netRating": 17.8
+          }
+        },
+        {
+          "season": 2023,
+          "team": "Michigan State",
+          "conference": "Big Ten",
+          "games": 31,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "points": 41,
+            "assists": 28,
+            "rebounds": {
+              "offensive": 3,
+              "defensive": 24,
+              "total": 27
+            },
+            "steals": 5,
+            "blocks": 3,
+            "fieldGoals": {
+              "made": 16,
+              "attempted": 42,
+              "pct": 38.1
+            },
+            "threePointFieldGoals": {
+              "made": 3,
+              "attempted": 13,
+              "pct": 23.1
+            },
+            "freeThrows": {
+              "made": 6,
+              "attempted": 10,
+              "pct": 60
+            },
+            "offensiveRating": 95.8,
+            "defensiveRating": 105.4,
+            "netRating": -9.6
+          }
+        }
+      ]
     },
     {
       "name": "Jeremy Fears Jr.",
@@ -4248,7 +4432,45 @@
           "totalPlayers": 244,
           "value": 12.6
         }
-      }
+      },
+      "previousSeasons": [
+        {
+          "season": 2024,
+          "team": "Michigan State",
+          "conference": "Big Ten",
+          "games": 12,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "points": 42,
+            "assists": 40,
+            "rebounds": {
+              "offensive": 2,
+              "defensive": 21,
+              "total": 23
+            },
+            "steals": 10,
+            "blocks": 2,
+            "fieldGoals": {
+              "made": 15,
+              "attempted": 30,
+              "pct": 50
+            },
+            "threePointFieldGoals": {
+              "made": 1,
+              "attempted": 6,
+              "pct": 16.7
+            },
+            "freeThrows": {
+              "made": 11,
+              "attempted": 17,
+              "pct": 64.7
+            },
+            "offensiveRating": 112.3,
+            "defensiveRating": 92.5,
+            "netRating": 19.8
+          }
+        }
+      ]
     },
     {
       "name": "Jaxon Kohler",
@@ -5324,7 +5546,81 @@
           "totalPlayers": 244,
           "value": 21.5
         }
-      }
+      },
+      "previousSeasons": [
+        {
+          "season": 2024,
+          "team": "Michigan State",
+          "conference": "Big Ten",
+          "games": 19,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "points": 38,
+            "assists": 4,
+            "rebounds": {
+              "offensive": 15,
+              "defensive": 24,
+              "total": 39
+            },
+            "steals": 2,
+            "blocks": 11,
+            "fieldGoals": {
+              "made": 18,
+              "attempted": 42,
+              "pct": 42.9
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 3,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 2,
+              "attempted": 7,
+              "pct": 28.6
+            },
+            "offensiveRating": 84.3,
+            "defensiveRating": 104.2,
+            "netRating": -19.9
+          }
+        },
+        {
+          "season": 2023,
+          "team": "Michigan State",
+          "conference": "Big Ten",
+          "games": 31,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "points": 98,
+            "assists": 10,
+            "rebounds": {
+              "offensive": 34,
+              "defensive": 61,
+              "total": 95
+            },
+            "steals": 4,
+            "blocks": 17,
+            "fieldGoals": {
+              "made": 48,
+              "attempted": 96,
+              "pct": 50
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 2,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 2,
+              "attempted": 8,
+              "pct": 25
+            },
+            "offensiveRating": 94,
+            "defensiveRating": 99.9,
+            "netRating": -5.9
+          }
+        }
+      ]
     },
     {
       "name": "Coen Carr",
@@ -6400,7 +6696,45 @@
           "totalPlayers": 244,
           "value": 22.1
         }
-      }
+      },
+      "previousSeasons": [
+        {
+          "season": 2024,
+          "team": "Michigan State",
+          "conference": "Big Ten",
+          "games": 33,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "points": 109,
+            "assists": 8,
+            "rebounds": {
+              "offensive": 23,
+              "defensive": 40,
+              "total": 63
+            },
+            "steals": 18,
+            "blocks": 18,
+            "fieldGoals": {
+              "made": 41,
+              "attempted": 63,
+              "pct": 65.1
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 27,
+              "attempted": 48,
+              "pct": 56.3
+            },
+            "offensiveRating": 113.2,
+            "defensiveRating": 98.2,
+            "netRating": 15
+          }
+        }
+      ]
     },
     {
       "name": "Frankie Fidler",
@@ -7476,7 +7810,117 @@
           "totalPlayers": 244,
           "value": 15.1
         }
-      }
+      },
+      "previousSeasons": [
+        {
+          "season": 2024,
+          "team": "Omaha",
+          "conference": "Summit",
+          "games": 33,
+          "gamesStarted": 33,
+          "seasonStats": {
+            "points": 664,
+            "assists": 86,
+            "rebounds": {
+              "offensive": 39,
+              "defensive": 168,
+              "total": 207
+            },
+            "steals": 41,
+            "blocks": 12,
+            "fieldGoals": {
+              "made": 198,
+              "attempted": 438,
+              "pct": 45.2
+            },
+            "threePointFieldGoals": {
+              "made": 52,
+              "attempted": 146,
+              "pct": 35.6
+            },
+            "freeThrows": {
+              "made": 216,
+              "attempted": 253,
+              "pct": 85.4
+            },
+            "offensiveRating": 123.8,
+            "defensiveRating": 112.9,
+            "netRating": 10.9
+          }
+        },
+        {
+          "season": 2023,
+          "team": "Omaha",
+          "conference": "Summit",
+          "games": 32,
+          "gamesStarted": 32,
+          "seasonStats": {
+            "points": 469,
+            "assists": 86,
+            "rebounds": {
+              "offensive": 21,
+              "defensive": 164,
+              "total": 185
+            },
+            "steals": 39,
+            "blocks": 17,
+            "fieldGoals": {
+              "made": 152,
+              "attempted": 352,
+              "pct": 43.2
+            },
+            "threePointFieldGoals": {
+              "made": 24,
+              "attempted": 86,
+              "pct": 27.9
+            },
+            "freeThrows": {
+              "made": 141,
+              "attempted": 159,
+              "pct": 88.7
+            },
+            "offensiveRating": 104.8,
+            "defensiveRating": 109.9,
+            "netRating": -5.1
+          }
+        },
+        {
+          "season": 2022,
+          "team": "Omaha",
+          "conference": "Summit",
+          "games": 29,
+          "gamesStarted": 26,
+          "seasonStats": {
+            "points": 372,
+            "assists": 51,
+            "rebounds": {
+              "offensive": 20,
+              "defensive": 87,
+              "total": 107
+            },
+            "steals": 22,
+            "blocks": 8,
+            "fieldGoals": {
+              "made": 133,
+              "attempted": 275,
+              "pct": 48.4
+            },
+            "threePointFieldGoals": {
+              "made": 36,
+              "attempted": 84,
+              "pct": 42.9
+            },
+            "freeThrows": {
+              "made": 70,
+              "attempted": 85,
+              "pct": 82.4
+            },
+            "offensiveRating": 108.5,
+            "defensiveRating": 119.6,
+            "netRating": -11.1
+          }
+        }
+      ]
     },
     {
       "name": "Carson Cooper",
@@ -8552,7 +8996,81 @@
           "totalPlayers": 244,
           "value": 31.3
         }
-      }
+      },
+      "previousSeasons": [
+        {
+          "season": 2024,
+          "team": "Michigan State",
+          "conference": "Big Ten",
+          "games": 33,
+          "gamesStarted": 6,
+          "seasonStats": {
+            "points": 118,
+            "assists": 15,
+            "rebounds": {
+              "offensive": 51,
+              "defensive": 100,
+              "total": 151
+            },
+            "steals": 15,
+            "blocks": 23,
+            "fieldGoals": {
+              "made": 40,
+              "attempted": 74,
+              "pct": 54.1
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 38,
+              "attempted": 60,
+              "pct": 63.3
+            },
+            "offensiveRating": 109.6,
+            "defensiveRating": 97.2,
+            "netRating": 12.4
+          }
+        },
+        {
+          "season": 2023,
+          "team": "Michigan State",
+          "conference": "Big Ten",
+          "games": 27,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "points": 39,
+            "assists": 2,
+            "rebounds": {
+              "offensive": 6,
+              "defensive": 13,
+              "total": 19
+            },
+            "steals": 4,
+            "blocks": 7,
+            "fieldGoals": {
+              "made": 16,
+              "attempted": 23,
+              "pct": 69.6
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 7,
+              "attempted": 15,
+              "pct": 46.7
+            },
+            "offensiveRating": 108,
+            "defensiveRating": 103,
+            "netRating": 5
+          }
+        }
+      ]
     },
     {
       "name": "Szymon Zapala",
@@ -9628,7 +10146,117 @@
           "totalPlayers": 244,
           "value": 19.9
         }
-      }
+      },
+      "previousSeasons": [
+        {
+          "season": 2024,
+          "team": "Longwood",
+          "conference": "Big South",
+          "games": 34,
+          "gamesStarted": 24,
+          "seasonStats": {
+            "points": 338,
+            "assists": 12,
+            "rebounds": {
+              "offensive": 75,
+              "defensive": 118,
+              "total": 193
+            },
+            "steals": 7,
+            "blocks": 29,
+            "fieldGoals": {
+              "made": 132,
+              "attempted": 209,
+              "pct": 63.2
+            },
+            "threePointFieldGoals": {
+              "made": 2,
+              "attempted": 3,
+              "pct": 66.7
+            },
+            "freeThrows": {
+              "made": 72,
+              "attempted": 111,
+              "pct": 64.9
+            },
+            "offensiveRating": 119,
+            "defensiveRating": 97.3,
+            "netRating": 21.7
+          }
+        },
+        {
+          "season": 2023,
+          "team": "Utah State",
+          "conference": "Mountain West",
+          "games": 11,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "points": 7,
+            "assists": 1,
+            "rebounds": {
+              "offensive": 3,
+              "defensive": 3,
+              "total": 6
+            },
+            "steals": 1,
+            "blocks": 2,
+            "fieldGoals": {
+              "made": 3,
+              "attempted": 4,
+              "pct": 75
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 1,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 1,
+              "attempted": 3,
+              "pct": 33.3
+            },
+            "offensiveRating": 93.3,
+            "defensiveRating": 99.9,
+            "netRating": -6.6
+          }
+        },
+        {
+          "season": 2022,
+          "team": "Utah State",
+          "conference": "Mountain West",
+          "games": 20,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "points": 32,
+            "assists": 2,
+            "rebounds": {
+              "offensive": 12,
+              "defensive": 25,
+              "total": 37
+            },
+            "steals": 1,
+            "blocks": 7,
+            "fieldGoals": {
+              "made": 13,
+              "attempted": 19,
+              "pct": 68.4
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 6,
+              "attempted": 11,
+              "pct": 54.5
+            },
+            "offensiveRating": 99.5,
+            "defensiveRating": 89.2,
+            "netRating": 10.3
+          }
+        }
+      ]
     },
     {
       "name": "Xavier Booker",
@@ -10675,7 +11303,45 @@
           "totalPlayers": 244,
           "value": -5
         }
-      }
+      },
+      "previousSeasons": [
+        {
+          "season": 2024,
+          "team": "Michigan State",
+          "conference": "Big Ten",
+          "games": 25,
+          "gamesStarted": 2,
+          "seasonStats": {
+            "points": 90,
+            "assists": 6,
+            "rebounds": {
+              "offensive": 8,
+              "defensive": 32,
+              "total": 40
+            },
+            "steals": 3,
+            "blocks": 13,
+            "fieldGoals": {
+              "made": 32,
+              "attempted": 74,
+              "pct": 43.2
+            },
+            "threePointFieldGoals": {
+              "made": 14,
+              "attempted": 43,
+              "pct": 32.6
+            },
+            "freeThrows": {
+              "made": 12,
+              "attempted": 19,
+              "pct": 63.2
+            },
+            "offensiveRating": 111.1,
+            "defensiveRating": 97.1,
+            "netRating": 14
+          }
+        }
+      ]
     },
     {
       "name": "Kur Teng",
@@ -12337,7 +13003,81 @@
           "totalPlayers": 244,
           "value": -7.6
         }
-      }
+      },
+      "previousSeasons": [
+        {
+          "season": 2024,
+          "team": "Michigan State",
+          "conference": "Big Ten",
+          "games": 8,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "points": 3,
+            "assists": 0,
+            "rebounds": {
+              "offensive": 0,
+              "defensive": 0,
+              "total": 0
+            },
+            "steals": 0,
+            "blocks": 0,
+            "fieldGoals": {
+              "made": 1,
+              "attempted": 3,
+              "pct": 33.3
+            },
+            "threePointFieldGoals": {
+              "made": 1,
+              "attempted": 3,
+              "pct": 33.3
+            },
+            "freeThrows": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "offensiveRating": 105.5,
+            "defensiveRating": 95.3,
+            "netRating": 10.2
+          }
+        },
+        {
+          "season": 2023,
+          "team": "Michigan State",
+          "conference": "Big Ten",
+          "games": 7,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "points": 0,
+            "assists": 0,
+            "rebounds": {
+              "offensive": 0,
+              "defensive": 0,
+              "total": 0
+            },
+            "steals": 0,
+            "blocks": 0,
+            "fieldGoals": {
+              "made": 0,
+              "attempted": 2,
+              "pct": 0
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 1,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "offensiveRating": 0,
+            "defensiveRating": 101.5,
+            "netRating": -101.5
+          }
+        }
+      ]
     }
   ],
   "teamGameStats": [
@@ -17052,6 +17792,6 @@
   },
   "metadata": {
     "totalPlayers": 13,
-    "apiCalls": 8
+    "apiCalls": 47
   }
 }
