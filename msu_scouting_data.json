@@ -2,7 +2,7 @@
   "team": "Michigan State",
   "season": "2024-25",
   "seasonType": "Regular",
-  "dataGenerated": "2025-10-27T14:57:06.032274",
+  "dataGenerated": "2025-10-27T18:32:50.706468",
   "players": [
     {
       "name": "Jaden Akins",
@@ -950,7 +950,135 @@
             "attempted": 0
           }
         }
-      ]
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2025,
+        "seasonLabel": "20242025",
+        "teamId": 169,
+        "team": "Michigan State",
+        "conference": "Big Ten",
+        "athleteId": 2475,
+        "athleteSourceId": "4683730",
+        "name": "Jaden Akins",
+        "position": "G",
+        "games": 33,
+        "starts": 33,
+        "minutes": 886,
+        "points": 419,
+        "turnovers": 36,
+        "fouls": 50,
+        "assists": 50,
+        "steals": 27,
+        "blocks": 9,
+        "offensiveRating": 107.1,
+        "defensiveRating": 101.6,
+        "netRating": 5.5,
+        "PORPAG": 2.2,
+        "usage": 26,
+        "assistsTurnoverRatio": 1.39,
+        "offensiveReboundPct": 19.5,
+        "freeThrowRate": 20.1,
+        "effectiveFieldGoalPct": 46,
+        "trueShootingPct": 0.495,
+        "fieldGoals": {
+          "made": 154,
+          "attempted": 389,
+          "pct": 39.6
+        },
+        "twoPointFieldGoals": {
+          "made": 104,
+          "attempted": 220,
+          "pct": 47.3
+        },
+        "threePointFieldGoals": {
+          "made": 50,
+          "attempted": 169,
+          "pct": 29.6
+        },
+        "freeThrows": {
+          "made": 61,
+          "attempted": 78,
+          "pct": 78.2
+        },
+        "rebounds": {
+          "offensive": 23,
+          "defensive": 95,
+          "total": 118
+        },
+        "winShares": {
+          "offensive": 1.5,
+          "defensive": 1.4,
+          "total": 2.9,
+          "totalPer40": 0.131
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 38,
+          "totalPlayers": 255,
+          "value": 12.696969696969697
+        },
+        "assistsPerGame": {
+          "rank": 74,
+          "totalPlayers": 255,
+          "value": 1.5151515151515151
+        },
+        "reboundsPerGame": {
+          "rank": 64,
+          "totalPlayers": 255,
+          "value": 3.5757575757575757
+        },
+        "stealsPerGame": {
+          "rank": 62,
+          "totalPlayers": 255,
+          "value": 0.8181818181818182
+        },
+        "blocksPerGame": {
+          "rank": 86,
+          "totalPlayers": 255,
+          "value": 0.2727272727272727
+        },
+        "fieldGoalPct": {
+          "rank": 166,
+          "totalPlayers": 255,
+          "value": 39.6
+        },
+        "threePointPct": {
+          "rank": 126,
+          "totalPlayers": 255,
+          "value": 29.6
+        },
+        "freeThrowPct": {
+          "rank": 65,
+          "totalPlayers": 255,
+          "value": 78.2
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 173,
+          "totalPlayers": 244,
+          "value": 46
+        },
+        "assistToTurnoverRatio": {
+          "rank": 130,
+          "totalPlayers": 222,
+          "value": 1.39
+        },
+        "offensiveRating": {
+          "rank": 149,
+          "totalPlayers": 244,
+          "value": 107.1
+        },
+        "defensiveRating": {
+          "rank": 81,
+          "totalPlayers": 255,
+          "value": 101.6
+        },
+        "netRating": {
+          "rank": 124,
+          "totalPlayers": 244,
+          "value": 5.5
+        }
+      }
     },
     {
       "name": "Jase Richardson",
@@ -1869,7 +1997,135 @@
             "attempted": 4
           }
         }
-      ]
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2025,
+        "seasonLabel": "20242025",
+        "teamId": 169,
+        "team": "Michigan State",
+        "conference": "Big Ten",
+        "athleteId": 2479,
+        "athleteSourceId": "5239561",
+        "name": "Jase Richardson",
+        "position": "G",
+        "games": 32,
+        "starts": 11,
+        "minutes": 790,
+        "points": 385,
+        "turnovers": 28,
+        "fouls": 46,
+        "assists": 62,
+        "steals": 25,
+        "blocks": 10,
+        "offensiveRating": 133.9,
+        "defensiveRating": 100.9,
+        "netRating": 33,
+        "PORPAG": 3.8,
+        "usage": 20.4,
+        "assistsTurnoverRatio": 2.21,
+        "offensiveReboundPct": 19.4,
+        "freeThrowRate": 42.4,
+        "effectiveFieldGoalPct": 59.2,
+        "trueShootingPct": 0.649,
+        "fieldGoals": {
+          "made": 128,
+          "attempted": 250,
+          "pct": 51.2
+        },
+        "twoPointFieldGoals": {
+          "made": 88,
+          "attempted": 153,
+          "pct": 57.5
+        },
+        "threePointFieldGoals": {
+          "made": 40,
+          "attempted": 97,
+          "pct": 41.2
+        },
+        "freeThrows": {
+          "made": 89,
+          "attempted": 106,
+          "pct": 84
+        },
+        "rebounds": {
+          "offensive": 20,
+          "defensive": 83,
+          "total": 103
+        },
+        "winShares": {
+          "offensive": 3.1,
+          "defensive": 1.3,
+          "total": 4.4,
+          "totalPer40": 0.223
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 42,
+          "totalPlayers": 255,
+          "value": 12.03125
+        },
+        "assistsPerGame": {
+          "rank": 55,
+          "totalPlayers": 255,
+          "value": 1.9375
+        },
+        "reboundsPerGame": {
+          "rank": 80,
+          "totalPlayers": 255,
+          "value": 3.21875
+        },
+        "stealsPerGame": {
+          "rank": 67,
+          "totalPlayers": 255,
+          "value": 0.78125
+        },
+        "blocksPerGame": {
+          "rank": 72,
+          "totalPlayers": 255,
+          "value": 0.3125
+        },
+        "fieldGoalPct": {
+          "rank": 65,
+          "totalPlayers": 255,
+          "value": 51.2
+        },
+        "threePointPct": {
+          "rank": 25,
+          "totalPlayers": 255,
+          "value": 41.2
+        },
+        "freeThrowPct": {
+          "rank": 36,
+          "totalPlayers": 255,
+          "value": 84
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 54,
+          "totalPlayers": 244,
+          "value": 59.2
+        },
+        "assistToTurnoverRatio": {
+          "rank": 185,
+          "totalPlayers": 222,
+          "value": 2.21
+        },
+        "offensiveRating": {
+          "rank": 14,
+          "totalPlayers": 244,
+          "value": 133.9
+        },
+        "defensiveRating": {
+          "rank": 70,
+          "totalPlayers": 255,
+          "value": 100.9
+        },
+        "netRating": {
+          "rank": 11,
+          "totalPlayers": 244,
+          "value": 33
+        }
+      }
     },
     {
       "name": "Tre Holloman",
@@ -2817,7 +3073,135 @@
             "attempted": 3
           }
         }
-      ]
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2025,
+        "seasonLabel": "20242025",
+        "teamId": 169,
+        "team": "Michigan State",
+        "conference": "Big Ten",
+        "athleteId": 2481,
+        "athleteSourceId": "5105816",
+        "name": "Tre Holloman",
+        "position": "G",
+        "games": 33,
+        "starts": 16,
+        "minutes": 759,
+        "points": 297,
+        "turnovers": 54,
+        "fouls": 60,
+        "assists": 123,
+        "steals": 27,
+        "blocks": 8,
+        "offensiveRating": 108.1,
+        "defensiveRating": 102,
+        "netRating": 6.1,
+        "PORPAG": 1.7,
+        "usage": 22.8,
+        "assistsTurnoverRatio": 2.28,
+        "offensiveReboundPct": 9.2,
+        "freeThrowRate": 22.6,
+        "effectiveFieldGoalPct": 46.4,
+        "trueShootingPct": 0.51,
+        "fieldGoals": {
+          "made": 102,
+          "attempted": 265,
+          "pct": 38.5
+        },
+        "twoPointFieldGoals": {
+          "made": 60,
+          "attempted": 135,
+          "pct": 44.4
+        },
+        "threePointFieldGoals": {
+          "made": 42,
+          "attempted": 130,
+          "pct": 32.3
+        },
+        "freeThrows": {
+          "made": 51,
+          "attempted": 60,
+          "pct": 85
+        },
+        "rebounds": {
+          "offensive": 6,
+          "defensive": 59,
+          "total": 65
+        },
+        "winShares": {
+          "offensive": 1.3,
+          "defensive": 1.1,
+          "total": 2.4,
+          "totalPer40": 0.126
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 72,
+          "totalPlayers": 255,
+          "value": 9.0
+        },
+        "assistsPerGame": {
+          "rank": 14,
+          "totalPlayers": 255,
+          "value": 3.727272727272727
+        },
+        "reboundsPerGame": {
+          "rank": 138,
+          "totalPlayers": 255,
+          "value": 1.9696969696969697
+        },
+        "stealsPerGame": {
+          "rank": 59,
+          "totalPlayers": 255,
+          "value": 0.8181818181818182
+        },
+        "blocksPerGame": {
+          "rank": 96,
+          "totalPlayers": 255,
+          "value": 0.24242424242424243
+        },
+        "fieldGoalPct": {
+          "rank": 171,
+          "totalPlayers": 255,
+          "value": 38.5
+        },
+        "threePointPct": {
+          "rank": 109,
+          "totalPlayers": 255,
+          "value": 32.3
+        },
+        "freeThrowPct": {
+          "rank": 31,
+          "totalPlayers": 255,
+          "value": 85
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 168,
+          "totalPlayers": 244,
+          "value": 46.4
+        },
+        "assistToTurnoverRatio": {
+          "rank": 188,
+          "totalPlayers": 222,
+          "value": 2.28
+        },
+        "offensiveRating": {
+          "rank": 144,
+          "totalPlayers": 244,
+          "value": 108.1
+        },
+        "defensiveRating": {
+          "rank": 88,
+          "totalPlayers": 255,
+          "value": 102
+        },
+        "netRating": {
+          "rank": 116,
+          "totalPlayers": 244,
+          "value": 6.1
+        }
+      }
     },
     {
       "name": "Jeremy Fears Jr.",
@@ -3736,7 +4120,135 @@
             "attempted": 8
           }
         }
-      ]
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2025,
+        "seasonLabel": "20242025",
+        "teamId": 169,
+        "team": "Michigan State",
+        "conference": "Big Ten",
+        "athleteId": 2474,
+        "athleteSourceId": "4711255",
+        "name": "Jeremy Fears Jr.",
+        "position": "G",
+        "games": 32,
+        "starts": 32,
+        "minutes": 744,
+        "points": 236,
+        "turnovers": 64,
+        "fouls": 72,
+        "assists": 177,
+        "steals": 34,
+        "blocks": 5,
+        "offensiveRating": 113.1,
+        "defensiveRating": 100.5,
+        "netRating": 12.6,
+        "PORPAG": 1.8,
+        "usage": 18.8,
+        "assistsTurnoverRatio": 2.77,
+        "offensiveReboundPct": 12.1,
+        "freeThrowRate": 74.1,
+        "effectiveFieldGoalPct": 45.1,
+        "trueShootingPct": 0.549,
+        "fieldGoals": {
+          "made": 67,
+          "attempted": 162,
+          "pct": 41.4
+        },
+        "twoPointFieldGoals": {
+          "made": 55,
+          "attempted": 130,
+          "pct": 42.3
+        },
+        "threePointFieldGoals": {
+          "made": 12,
+          "attempted": 32,
+          "pct": 37.5
+        },
+        "freeThrows": {
+          "made": 90,
+          "attempted": 120,
+          "pct": 75
+        },
+        "rebounds": {
+          "offensive": 8,
+          "defensive": 58,
+          "total": 66
+        },
+        "winShares": {
+          "offensive": 1.6,
+          "defensive": 1.2,
+          "total": 2.8,
+          "totalPer40": 0.151
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 89,
+          "totalPlayers": 255,
+          "value": 7.375
+        },
+        "assistsPerGame": {
+          "rank": 3,
+          "totalPlayers": 255,
+          "value": 5.53125
+        },
+        "reboundsPerGame": {
+          "rank": 136,
+          "totalPlayers": 255,
+          "value": 2.0625
+        },
+        "stealsPerGame": {
+          "rank": 31,
+          "totalPlayers": 255,
+          "value": 1.0625
+        },
+        "blocksPerGame": {
+          "rank": 137,
+          "totalPlayers": 255,
+          "value": 0.15625
+        },
+        "fieldGoalPct": {
+          "rank": 154,
+          "totalPlayers": 255,
+          "value": 41.4
+        },
+        "threePointPct": {
+          "rank": 58,
+          "totalPlayers": 255,
+          "value": 37.5
+        },
+        "freeThrowPct": {
+          "rank": 81,
+          "totalPlayers": 255,
+          "value": 75
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 183,
+          "totalPlayers": 244,
+          "value": 45.1
+        },
+        "assistToTurnoverRatio": {
+          "rank": 205,
+          "totalPlayers": 222,
+          "value": 2.77
+        },
+        "offensiveRating": {
+          "rank": 110,
+          "totalPlayers": 244,
+          "value": 113.1
+        },
+        "defensiveRating": {
+          "rank": 65,
+          "totalPlayers": 255,
+          "value": 100.5
+        },
+        "netRating": {
+          "rank": 76,
+          "totalPlayers": 244,
+          "value": 12.6
+        }
+      }
     },
     {
       "name": "Jaxon Kohler",
@@ -4684,7 +5196,135 @@
             "attempted": 0
           }
         }
-      ]
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2025,
+        "seasonLabel": "20242025",
+        "teamId": 169,
+        "team": "Michigan State",
+        "conference": "Big Ten",
+        "athleteId": 2476,
+        "athleteSourceId": "5105815",
+        "name": "Jaxon Kohler",
+        "position": "F",
+        "games": 33,
+        "starts": 30,
+        "minutes": 687,
+        "points": 264,
+        "turnovers": 42,
+        "fouls": 59,
+        "assists": 43,
+        "steals": 13,
+        "blocks": 25,
+        "offensiveRating": 116.7,
+        "defensiveRating": 95.2,
+        "netRating": 21.5,
+        "PORPAG": 1.9,
+        "usage": 19.3,
+        "assistsTurnoverRatio": 1.02,
+        "offensiveReboundPct": 33.3,
+        "freeThrowRate": 27.1,
+        "effectiveFieldGoalPct": 55.3,
+        "trueShootingPct": 0.593,
+        "fieldGoals": {
+          "made": 102,
+          "attempted": 199,
+          "pct": 51.3
+        },
+        "twoPointFieldGoals": {
+          "made": 86,
+          "attempted": 152,
+          "pct": 56.6
+        },
+        "threePointFieldGoals": {
+          "made": 16,
+          "attempted": 47,
+          "pct": 34
+        },
+        "freeThrows": {
+          "made": 44,
+          "attempted": 54,
+          "pct": 81.5
+        },
+        "rebounds": {
+          "offensive": 84,
+          "defensive": 168,
+          "total": 252
+        },
+        "winShares": {
+          "offensive": 1.6,
+          "defensive": 1.5,
+          "total": 3.1,
+          "totalPer40": 0.18
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 86,
+          "totalPlayers": 255,
+          "value": 8.0
+        },
+        "assistsPerGame": {
+          "rank": 86,
+          "totalPlayers": 255,
+          "value": 1.303030303030303
+        },
+        "reboundsPerGame": {
+          "rank": 8,
+          "totalPlayers": 255,
+          "value": 7.636363636363637
+        },
+        "stealsPerGame": {
+          "rank": 132,
+          "totalPlayers": 255,
+          "value": 0.3939393939393939
+        },
+        "blocksPerGame": {
+          "rank": 24,
+          "totalPlayers": 255,
+          "value": 0.7575757575757576
+        },
+        "fieldGoalPct": {
+          "rank": 64,
+          "totalPlayers": 255,
+          "value": 51.3
+        },
+        "threePointPct": {
+          "rank": 88,
+          "totalPlayers": 255,
+          "value": 34
+        },
+        "freeThrowPct": {
+          "rank": 44,
+          "totalPlayers": 255,
+          "value": 81.5
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 95,
+          "totalPlayers": 244,
+          "value": 55.3
+        },
+        "assistToTurnoverRatio": {
+          "rank": 88,
+          "totalPlayers": 222,
+          "value": 1.02
+        },
+        "offensiveRating": {
+          "rank": 88,
+          "totalPlayers": 244,
+          "value": 116.7
+        },
+        "defensiveRating": {
+          "rank": 28,
+          "totalPlayers": 255,
+          "value": 95.2
+        },
+        "netRating": {
+          "rank": 39,
+          "totalPlayers": 244,
+          "value": 21.5
+        }
+      }
     },
     {
       "name": "Coen Carr",
@@ -5632,15 +6272,143 @@
             "attempted": 3
           }
         }
-      ]
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2025,
+        "seasonLabel": "20242025",
+        "teamId": 169,
+        "team": "Michigan State",
+        "conference": "Big Ten",
+        "athleteId": 2477,
+        "athleteSourceId": "4872740",
+        "name": "Coen Carr",
+        "position": "F",
+        "games": 33,
+        "starts": 0,
+        "minutes": 665,
+        "points": 254,
+        "turnovers": 29,
+        "fouls": 39,
+        "assists": 17,
+        "steals": 19,
+        "blocks": 23,
+        "offensiveRating": 122.4,
+        "defensiveRating": 100.3,
+        "netRating": 22.1,
+        "PORPAG": 1.9,
+        "usage": 16.9,
+        "assistsTurnoverRatio": 0.59,
+        "offensiveReboundPct": 38.9,
+        "freeThrowRate": 53.2,
+        "effectiveFieldGoalPct": 62.7,
+        "trueShootingPct": 0.651,
+        "fieldGoals": {
+          "made": 97,
+          "attempted": 158,
+          "pct": 61.4
+        },
+        "twoPointFieldGoals": {
+          "made": 93,
+          "attempted": 145,
+          "pct": 64.1
+        },
+        "threePointFieldGoals": {
+          "made": 4,
+          "attempted": 13,
+          "pct": 30.8
+        },
+        "freeThrows": {
+          "made": 56,
+          "attempted": 84,
+          "pct": 66.7
+        },
+        "rebounds": {
+          "offensive": 44,
+          "defensive": 69,
+          "total": 113
+        },
+        "winShares": {
+          "offensive": 1.6,
+          "defensive": 1.1,
+          "total": 2.7,
+          "totalPer40": 0.162
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 88,
+          "totalPlayers": 255,
+          "value": 7.696969696969697
+        },
+        "assistsPerGame": {
+          "rank": 154,
+          "totalPlayers": 255,
+          "value": 0.5151515151515151
+        },
+        "reboundsPerGame": {
+          "rank": 76,
+          "totalPlayers": 255,
+          "value": 3.4242424242424243
+        },
+        "stealsPerGame": {
+          "rank": 100,
+          "totalPlayers": 255,
+          "value": 0.5757575757575758
+        },
+        "blocksPerGame": {
+          "rank": 28,
+          "totalPlayers": 255,
+          "value": 0.696969696969697
+        },
+        "fieldGoalPct": {
+          "rank": 22,
+          "totalPlayers": 255,
+          "value": 61.4
+        },
+        "threePointPct": {
+          "rank": 118,
+          "totalPlayers": 255,
+          "value": 30.8
+        },
+        "freeThrowPct": {
+          "rank": 131,
+          "totalPlayers": 255,
+          "value": 66.7
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 29,
+          "totalPlayers": 244,
+          "value": 62.7
+        },
+        "assistToTurnoverRatio": {
+          "rank": 37,
+          "totalPlayers": 222,
+          "value": 0.59
+        },
+        "offensiveRating": {
+          "rank": 52,
+          "totalPlayers": 244,
+          "value": 122.4
+        },
+        "defensiveRating": {
+          "rank": 61,
+          "totalPlayers": 255,
+          "value": 100.3
+        },
+        "netRating": {
+          "rank": 36,
+          "totalPlayers": 244,
+          "value": 22.1
+        }
+      }
     },
     {
       "name": "Frankie Fidler",
       "jerseyNumber": "8",
       "position": "Forward",
       "height": "6-7",
-      "class": "SO",
-      "isFreshman": false,
+      "class": "FR",
+      "isFreshman": true,
       "hometown": "Bellevue, NE",
       "highSchool": "N/A",
       "seasonTotals": {
@@ -6580,7 +7348,135 @@
             "attempted": 2
           }
         }
-      ]
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2025,
+        "seasonLabel": "20242025",
+        "teamId": 169,
+        "team": "Michigan State",
+        "conference": "Big Ten",
+        "athleteId": 2471,
+        "athleteSourceId": "4897263",
+        "name": "Frankie Fidler",
+        "position": "F",
+        "games": 33,
+        "starts": 7,
+        "minutes": 540,
+        "points": 230,
+        "turnovers": 20,
+        "fouls": 36,
+        "assists": 26,
+        "steals": 17,
+        "blocks": 6,
+        "offensiveRating": 114.4,
+        "defensiveRating": 99.3,
+        "netRating": 15.1,
+        "PORPAG": 1.6,
+        "usage": 22.6,
+        "assistsTurnoverRatio": 1.3,
+        "offensiveReboundPct": 24.5,
+        "freeThrowRate": 49.7,
+        "effectiveFieldGoalPct": 41,
+        "trueShootingPct": 0.516,
+        "fieldGoals": {
+          "made": 69,
+          "attempted": 183,
+          "pct": 37.7
+        },
+        "twoPointFieldGoals": {
+          "made": 57,
+          "attempted": 122,
+          "pct": 46.7
+        },
+        "threePointFieldGoals": {
+          "made": 12,
+          "attempted": 61,
+          "pct": 19.7
+        },
+        "freeThrows": {
+          "made": 80,
+          "attempted": 91,
+          "pct": 87.9
+        },
+        "rebounds": {
+          "offensive": 27,
+          "defensive": 83,
+          "total": 110
+        },
+        "winShares": {
+          "offensive": 1.2,
+          "defensive": 0.9,
+          "total": 2.1,
+          "totalPer40": 0.156
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 95,
+          "totalPlayers": 255,
+          "value": 6.96969696969697
+        },
+        "assistsPerGame": {
+          "rank": 123,
+          "totalPlayers": 255,
+          "value": 0.7878787878787878
+        },
+        "reboundsPerGame": {
+          "rank": 78,
+          "totalPlayers": 255,
+          "value": 3.3333333333333335
+        },
+        "stealsPerGame": {
+          "rank": 107,
+          "totalPlayers": 255,
+          "value": 0.5151515151515151
+        },
+        "blocksPerGame": {
+          "rank": 123,
+          "totalPlayers": 255,
+          "value": 0.18181818181818182
+        },
+        "fieldGoalPct": {
+          "rank": 179,
+          "totalPlayers": 255,
+          "value": 37.7
+        },
+        "threePointPct": {
+          "rank": 173,
+          "totalPlayers": 255,
+          "value": 19.7
+        },
+        "freeThrowPct": {
+          "rank": 19,
+          "totalPlayers": 255,
+          "value": 87.9
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 202,
+          "totalPlayers": 244,
+          "value": 41
+        },
+        "assistToTurnoverRatio": {
+          "rank": 122,
+          "totalPlayers": 222,
+          "value": 1.3
+        },
+        "offensiveRating": {
+          "rank": 100,
+          "totalPlayers": 244,
+          "value": 114.4
+        },
+        "defensiveRating": {
+          "rank": 51,
+          "totalPlayers": 255,
+          "value": 99.3
+        },
+        "netRating": {
+          "rank": 66,
+          "totalPlayers": 244,
+          "value": 15.1
+        }
+      }
     },
     {
       "name": "Carson Cooper",
@@ -7528,7 +8424,135 @@
             "attempted": 4
           }
         }
-      ]
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2025,
+        "seasonLabel": "20242025",
+        "teamId": 169,
+        "team": "Michigan State",
+        "conference": "Big Ten",
+        "athleteId": 2478,
+        "athleteSourceId": "5105817",
+        "name": "Carson Cooper",
+        "position": "C",
+        "games": 33,
+        "starts": 0,
+        "minutes": 563,
+        "points": 168,
+        "turnovers": 21,
+        "fouls": 72,
+        "assists": 21,
+        "steals": 7,
+        "blocks": 22,
+        "offensiveRating": 128.5,
+        "defensiveRating": 97.2,
+        "netRating": 31.3,
+        "PORPAG": 1.5,
+        "usage": 13.2,
+        "assistsTurnoverRatio": 1,
+        "offensiveReboundPct": 28.5,
+        "freeThrowRate": 76.8,
+        "effectiveFieldGoalPct": 60,
+        "trueShootingPct": 0.661,
+        "fieldGoals": {
+          "made": 57,
+          "attempted": 95,
+          "pct": 60
+        },
+        "twoPointFieldGoals": {
+          "made": 57,
+          "attempted": 94,
+          "pct": 60.6
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 1,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 54,
+          "attempted": 73,
+          "pct": 74
+        },
+        "rebounds": {
+          "offensive": 47,
+          "defensive": 118,
+          "total": 165
+        },
+        "winShares": {
+          "offensive": 1.3,
+          "defensive": 1.1,
+          "total": 2.4,
+          "totalPer40": 0.171
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 120,
+          "totalPlayers": 255,
+          "value": 5.090909090909091
+        },
+        "assistsPerGame": {
+          "rank": 136,
+          "totalPlayers": 255,
+          "value": 0.6363636363636364
+        },
+        "reboundsPerGame": {
+          "rank": 35,
+          "totalPlayers": 255,
+          "value": 5.0
+        },
+        "stealsPerGame": {
+          "rank": 173,
+          "totalPlayers": 255,
+          "value": 0.21212121212121213
+        },
+        "blocksPerGame": {
+          "rank": 35,
+          "totalPlayers": 255,
+          "value": 0.6666666666666666
+        },
+        "fieldGoalPct": {
+          "rank": 27,
+          "totalPlayers": 255,
+          "value": 60
+        },
+        "threePointPct": {
+          "rank": 245,
+          "totalPlayers": 255,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 92,
+          "totalPlayers": 255,
+          "value": 74
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 45,
+          "totalPlayers": 244,
+          "value": 60
+        },
+        "assistToTurnoverRatio": {
+          "rank": 79,
+          "totalPlayers": 222,
+          "value": 1
+        },
+        "offensiveRating": {
+          "rank": 24,
+          "totalPlayers": 244,
+          "value": 128.5
+        },
+        "defensiveRating": {
+          "rank": 36,
+          "totalPlayers": 255,
+          "value": 97.2
+        },
+        "netRating": {
+          "rank": 16,
+          "totalPlayers": 244,
+          "value": 31.3
+        }
+      }
     },
     {
       "name": "Szymon Zapala",
@@ -8476,7 +9500,135 @@
             "attempted": 0
           }
         }
-      ]
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2025,
+        "seasonLabel": "20242025",
+        "teamId": 169,
+        "team": "Michigan State",
+        "conference": "Big Ten",
+        "athleteId": 2473,
+        "athleteSourceId": "4701993",
+        "name": "Szymon Zapala",
+        "position": "C",
+        "games": 33,
+        "starts": 33,
+        "minutes": 481,
+        "points": 147,
+        "turnovers": 29,
+        "fouls": 75,
+        "assists": 22,
+        "steals": 9,
+        "blocks": 19,
+        "offensiveRating": 118.3,
+        "defensiveRating": 98.4,
+        "netRating": 19.9,
+        "PORPAG": 1,
+        "usage": 14.4,
+        "assistsTurnoverRatio": 0.76,
+        "offensiveReboundPct": 41.7,
+        "freeThrowRate": 48.9,
+        "effectiveFieldGoalPct": 65.6,
+        "trueShootingPct": 0.672,
+        "fieldGoals": {
+          "made": 59,
+          "attempted": 90,
+          "pct": 65.6
+        },
+        "twoPointFieldGoals": {
+          "made": 59,
+          "attempted": 88,
+          "pct": 67
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 2,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 29,
+          "attempted": 44,
+          "pct": 65.9
+        },
+        "rebounds": {
+          "offensive": 55,
+          "defensive": 77,
+          "total": 132
+        },
+        "winShares": {
+          "offensive": 0.9,
+          "defensive": 0.9,
+          "total": 1.8,
+          "totalPer40": 0.15
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 131,
+          "totalPlayers": 255,
+          "value": 4.454545454545454
+        },
+        "assistsPerGame": {
+          "rank": 132,
+          "totalPlayers": 255,
+          "value": 0.6666666666666666
+        },
+        "reboundsPerGame": {
+          "rank": 57,
+          "totalPlayers": 255,
+          "value": 4.0
+        },
+        "stealsPerGame": {
+          "rank": 159,
+          "totalPlayers": 255,
+          "value": 0.2727272727272727
+        },
+        "blocksPerGame": {
+          "rank": 40,
+          "totalPlayers": 255,
+          "value": 0.5757575757575758
+        },
+        "fieldGoalPct": {
+          "rank": 15,
+          "totalPlayers": 255,
+          "value": 65.6
+        },
+        "threePointPct": {
+          "rank": 191,
+          "totalPlayers": 255,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 137,
+          "totalPlayers": 255,
+          "value": 65.9
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 20,
+          "totalPlayers": 244,
+          "value": 65.6
+        },
+        "assistToTurnoverRatio": {
+          "rank": 57,
+          "totalPlayers": 222,
+          "value": 0.76
+        },
+        "offensiveRating": {
+          "rank": 79,
+          "totalPlayers": 244,
+          "value": 118.3
+        },
+        "defensiveRating": {
+          "rank": 45,
+          "totalPlayers": 255,
+          "value": 98.4
+        },
+        "netRating": {
+          "rank": 48,
+          "totalPlayers": 244,
+          "value": 19.9
+        }
+      }
     },
     {
       "name": "Xavier Booker",
@@ -9395,7 +10547,135 @@
             "attempted": 0
           }
         }
-      ]
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2025,
+        "seasonLabel": "20242025",
+        "teamId": 169,
+        "team": "Michigan State",
+        "conference": "Big Ten",
+        "athleteId": 2472,
+        "athleteSourceId": "4711304",
+        "name": "Xavier Booker",
+        "position": "F",
+        "games": 32,
+        "starts": 3,
+        "minutes": 418,
+        "points": 155,
+        "turnovers": 29,
+        "fouls": 40,
+        "assists": 8,
+        "steals": 2,
+        "blocks": 22,
+        "offensiveRating": 96,
+        "defensiveRating": 101,
+        "netRating": -5,
+        "PORPAG": 0.4,
+        "usage": 21.6,
+        "assistsTurnoverRatio": 0.28,
+        "offensiveReboundPct": 29.2,
+        "freeThrowRate": 20.1,
+        "effectiveFieldGoalPct": 47.8,
+        "trueShootingPct": 0.512,
+        "fieldGoals": {
+          "made": 58,
+          "attempted": 139,
+          "pct": 41.7
+        },
+        "twoPointFieldGoals": {
+          "made": 41,
+          "attempted": 66,
+          "pct": 62.1
+        },
+        "threePointFieldGoals": {
+          "made": 17,
+          "attempted": 73,
+          "pct": 23.3
+        },
+        "freeThrows": {
+          "made": 22,
+          "attempted": 28,
+          "pct": 78.6
+        },
+        "rebounds": {
+          "offensive": 21,
+          "defensive": 51,
+          "total": 72
+        },
+        "winShares": {
+          "offensive": 0.2,
+          "defensive": 0.7,
+          "total": 0.9,
+          "totalPer40": 0.086
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 124,
+          "totalPlayers": 255,
+          "value": 4.84375
+        },
+        "assistsPerGame": {
+          "rank": 178,
+          "totalPlayers": 255,
+          "value": 0.25
+        },
+        "reboundsPerGame": {
+          "rank": 126,
+          "totalPlayers": 255,
+          "value": 2.25
+        },
+        "stealsPerGame": {
+          "rank": 207,
+          "totalPlayers": 255,
+          "value": 0.0625
+        },
+        "blocksPerGame": {
+          "rank": 30,
+          "totalPlayers": 255,
+          "value": 0.6875
+        },
+        "fieldGoalPct": {
+          "rank": 149,
+          "totalPlayers": 255,
+          "value": 41.7
+        },
+        "threePointPct": {
+          "rank": 164,
+          "totalPlayers": 255,
+          "value": 23.3
+        },
+        "freeThrowPct": {
+          "rank": 62,
+          "totalPlayers": 255,
+          "value": 78.6
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 163,
+          "totalPlayers": 244,
+          "value": 47.8
+        },
+        "assistToTurnoverRatio": {
+          "rank": 21,
+          "totalPlayers": 222,
+          "value": 0.28
+        },
+        "offensiveRating": {
+          "rank": 190,
+          "totalPlayers": 244,
+          "value": 96
+        },
+        "defensiveRating": {
+          "rank": 73,
+          "totalPlayers": 255,
+          "value": 101
+        },
+        "netRating": {
+          "rank": 166,
+          "totalPlayers": 244,
+          "value": -5
+        }
+      }
     },
     {
       "name": "Kur Teng",
@@ -9966,7 +11246,135 @@
             "attempted": 0
           }
         }
-      ]
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2025,
+        "seasonLabel": "20242025",
+        "teamId": 169,
+        "team": "Michigan State",
+        "conference": "Big Ten",
+        "athleteId": 2483,
+        "athleteSourceId": "4873111",
+        "name": "Kur Teng",
+        "position": "G",
+        "games": 18,
+        "starts": 0,
+        "minutes": 52,
+        "points": 10,
+        "turnovers": 3,
+        "fouls": 8,
+        "assists": 3,
+        "steals": 1,
+        "blocks": 0,
+        "offensiveRating": 86,
+        "defensiveRating": 97.5,
+        "netRating": -11.5,
+        "PORPAG": 0,
+        "usage": 16.3,
+        "assistsTurnoverRatio": 1,
+        "offensiveReboundPct": 28.6,
+        "freeThrowRate": 15.4,
+        "effectiveFieldGoalPct": 30.8,
+        "trueShootingPct": 0.36,
+        "fieldGoals": {
+          "made": 3,
+          "attempted": 13,
+          "pct": 23.1
+        },
+        "twoPointFieldGoals": {
+          "made": 1,
+          "attempted": 5,
+          "pct": 20
+        },
+        "threePointFieldGoals": {
+          "made": 2,
+          "attempted": 8,
+          "pct": 25
+        },
+        "freeThrows": {
+          "made": 2,
+          "attempted": 2,
+          "pct": 100
+        },
+        "rebounds": {
+          "offensive": 4,
+          "defensive": 10,
+          "total": 14
+        },
+        "winShares": {
+          "offensive": 0,
+          "defensive": 0.1,
+          "total": 0.1,
+          "totalPer40": 0.077
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 217,
+          "totalPlayers": 255,
+          "value": 0.5555555555555556
+        },
+        "assistsPerGame": {
+          "rank": 197,
+          "totalPlayers": 255,
+          "value": 0.16666666666666666
+        },
+        "reboundsPerGame": {
+          "rank": 194,
+          "totalPlayers": 255,
+          "value": 0.7777777777777778
+        },
+        "stealsPerGame": {
+          "rank": 208,
+          "totalPlayers": 255,
+          "value": 0.05555555555555555
+        },
+        "blocksPerGame": {
+          "rank": 211,
+          "totalPlayers": 255,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 225,
+          "totalPlayers": 255,
+          "value": 23.1
+        },
+        "threePointPct": {
+          "rank": 154,
+          "totalPlayers": 255,
+          "value": 25
+        },
+        "freeThrowPct": {
+          "rank": 2,
+          "totalPlayers": 255,
+          "value": 100
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 222,
+          "totalPlayers": 244,
+          "value": 30.8
+        },
+        "assistToTurnoverRatio": {
+          "rank": 84,
+          "totalPlayers": 222,
+          "value": 1
+        },
+        "offensiveRating": {
+          "rank": 214,
+          "totalPlayers": 244,
+          "value": 86
+        },
+        "defensiveRating": {
+          "rank": 38,
+          "totalPlayers": 255,
+          "value": 97.5
+        },
+        "netRating": {
+          "rank": 194,
+          "totalPlayers": 244,
+          "value": -11.5
+        }
+      }
     },
     {
       "name": "Gehrig Normand",
@@ -10363,7 +11771,135 @@
             "attempted": 0
           }
         }
-      ]
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2025,
+        "seasonLabel": "20242025",
+        "teamId": 169,
+        "team": "Michigan State",
+        "conference": "Big Ten",
+        "athleteId": 2482,
+        "athleteSourceId": "5086370",
+        "name": "Gehrig Normand",
+        "position": "G",
+        "games": 13,
+        "starts": 0,
+        "minutes": 26,
+        "points": 8,
+        "turnovers": 1,
+        "fouls": 4,
+        "assists": 3,
+        "steals": 0,
+        "blocks": 0,
+        "offensiveRating": 124.5,
+        "defensiveRating": 104.4,
+        "netRating": 20.1,
+        "PORPAG": 0.2,
+        "usage": 15.1,
+        "assistsTurnoverRatio": 3,
+        "offensiveReboundPct": 100,
+        "freeThrowRate": 0,
+        "effectiveFieldGoalPct": 57.1,
+        "trueShootingPct": 0.571,
+        "fieldGoals": {
+          "made": 3,
+          "attempted": 7,
+          "pct": 42.9
+        },
+        "twoPointFieldGoals": {
+          "made": 1,
+          "attempted": 2,
+          "pct": 50
+        },
+        "threePointFieldGoals": {
+          "made": 2,
+          "attempted": 5,
+          "pct": 40
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 1,
+          "defensive": 0,
+          "total": 1
+        },
+        "winShares": {
+          "offensive": 0.1,
+          "defensive": 0,
+          "total": 0.1,
+          "totalPer40": 0.154
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 215,
+          "totalPlayers": 255,
+          "value": 0.6153846153846154
+        },
+        "assistsPerGame": {
+          "rank": 183,
+          "totalPlayers": 255,
+          "value": 0.23076923076923078
+        },
+        "reboundsPerGame": {
+          "rank": 235,
+          "totalPlayers": 255,
+          "value": 0.07692307692307693
+        },
+        "stealsPerGame": {
+          "rank": 242,
+          "totalPlayers": 255,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 234,
+          "totalPlayers": 255,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 140,
+          "totalPlayers": 255,
+          "value": 42.9
+        },
+        "threePointPct": {
+          "rank": 38,
+          "totalPlayers": 255,
+          "value": 40
+        },
+        "freeThrowPct": {
+          "rank": 240,
+          "totalPlayers": 255,
+          "value": 0
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 74,
+          "totalPlayers": 244,
+          "value": 57.1
+        },
+        "assistToTurnoverRatio": {
+          "rank": 212,
+          "totalPlayers": 222,
+          "value": 3
+        },
+        "offensiveRating": {
+          "rank": 43,
+          "totalPlayers": 244,
+          "value": 124.5
+        },
+        "defensiveRating": {
+          "rank": 114,
+          "totalPlayers": 255,
+          "value": 104.4
+        },
+        "netRating": {
+          "rank": 46,
+          "totalPlayers": 244,
+          "value": 20.1
+        }
+      }
     },
     {
       "name": "Nick Sanders",
@@ -10673,11 +12209,4849 @@
             "attempted": 0
           }
         }
-      ]
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2025,
+        "seasonLabel": "20242025",
+        "teamId": 169,
+        "team": "Michigan State",
+        "conference": "Big Ten",
+        "athleteId": 2480,
+        "athleteSourceId": "5105818",
+        "name": "Nick Sanders",
+        "position": "G",
+        "games": 9,
+        "starts": 0,
+        "minutes": 13,
+        "points": 6,
+        "turnovers": 1,
+        "fouls": 0,
+        "assists": 0,
+        "steals": 0,
+        "blocks": 0,
+        "offensiveRating": 91.9,
+        "defensiveRating": 99.5,
+        "netRating": -7.6,
+        "PORPAG": 0,
+        "usage": 26,
+        "assistsTurnoverRatio": 0,
+        "offensiveReboundPct": 50,
+        "freeThrowRate": 0,
+        "effectiveFieldGoalPct": 50,
+        "trueShootingPct": 0.5,
+        "fieldGoals": {
+          "made": 3,
+          "attempted": 6,
+          "pct": 50
+        },
+        "twoPointFieldGoals": {
+          "made": 3,
+          "attempted": 4,
+          "pct": 75
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 2,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 1,
+          "defensive": 1,
+          "total": 2
+        },
+        "winShares": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0,
+          "totalPer40": 0
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 213,
+          "totalPlayers": 255,
+          "value": 0.6666666666666666
+        },
+        "assistsPerGame": {
+          "rank": 218,
+          "totalPlayers": 255,
+          "value": 0.0
+        },
+        "reboundsPerGame": {
+          "rank": 227,
+          "totalPlayers": 255,
+          "value": 0.2222222222222222
+        },
+        "stealsPerGame": {
+          "rank": 218,
+          "totalPlayers": 255,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 204,
+          "totalPlayers": 255,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 76,
+          "totalPlayers": 255,
+          "value": 50
+        },
+        "threePointPct": {
+          "rank": 198,
+          "totalPlayers": 255,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 214,
+          "totalPlayers": 255,
+          "value": 0
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 146,
+          "totalPlayers": 244,
+          "value": 50
+        },
+        "assistToTurnoverRatio": {
+          "rank": 14,
+          "totalPlayers": 222,
+          "value": 0
+        },
+        "offensiveRating": {
+          "rank": 202,
+          "totalPlayers": 244,
+          "value": 91.9
+        },
+        "defensiveRating": {
+          "rank": 53,
+          "totalPlayers": 255,
+          "value": 99.5
+        },
+        "netRating": {
+          "rank": 178,
+          "totalPlayers": 244,
+          "value": -7.6
+        }
+      }
     }
   ],
+  "teamGameStats": [
+    {
+      "gameId": 70,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2024-11-05T00:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 178,
+      "opponent": "Monmouth",
+      "opponentConference": "CAA",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": true,
+      "conferenceGame": false,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": null,
+      "teamStats": {
+        "possessions": null,
+        "assists": 23,
+        "steals": 6,
+        "blocks": 8,
+        "trueShooting": 55.6,
+        "rating": null,
+        "gameScore": 75.8,
+        "points": {
+          "total": 81,
+          "byPeriod": [
+            38,
+            43
+          ],
+          "largestLead": 24,
+          "fastBreak": 25,
+          "inPaint": 48,
+          "offTurnovers": 17
+        },
+        "twoPointFieldGoals": {
+          "made": 27,
+          "attempted": 43,
+          "pct": 62.8
+        },
+        "threePointFieldGoals": {
+          "made": 3,
+          "attempted": 18,
+          "pct": 16.7
+        },
+        "freeThrows": {
+          "made": 18,
+          "attempted": 27,
+          "pct": 66.7
+        },
+        "fieldGoals": {
+          "made": 30,
+          "attempted": 61,
+          "pct": 49.2
+        },
+        "turnovers": {
+          "total": 13,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 15,
+          "defensive": 33,
+          "total": 48
+        },
+        "fouls": {
+          "total": 15,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 51.6,
+          "freeThrowRate": 44.3,
+          "turnoverRatio": null,
+          "offensiveReboundPct": 31.3
+        }
+      },
+      "opponentStats": {
+        "possessions": null,
+        "assists": 9,
+        "steals": 7,
+        "blocks": 2,
+        "trueShooting": 41.9,
+        "rating": null,
+        "gameScore": 24.9,
+        "points": {
+          "total": 57,
+          "byPeriod": [
+            27,
+            30
+          ],
+          "largestLead": 0,
+          "fastBreak": 15,
+          "inPaint": 8,
+          "offTurnovers": 10
+        },
+        "twoPointFieldGoals": {
+          "made": 9,
+          "attempted": 34,
+          "pct": 26.5
+        },
+        "threePointFieldGoals": {
+          "made": 8,
+          "attempted": 27,
+          "pct": 29.6
+        },
+        "freeThrows": {
+          "made": 15,
+          "attempted": 16,
+          "pct": 93.8
+        },
+        "fieldGoals": {
+          "made": 17,
+          "attempted": 61,
+          "pct": 27.9
+        },
+        "turnovers": {
+          "total": 15,
+          "teamTotal": 1
+        },
+        "rebounds": {
+          "offensive": 11,
+          "defensive": 20,
+          "total": 31
+        },
+        "fouls": {
+          "total": 23,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 34.4,
+          "freeThrowRate": 26.2,
+          "turnoverRatio": null,
+          "offensiveReboundPct": 35.5
+        }
+      }
+    },
+    {
+      "gameId": 284,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2024-11-08T01:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 194,
+      "opponent": "Niagara",
+      "opponentConference": "MAAC",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": true,
+      "conferenceGame": false,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 70,
+      "teamStats": {
+        "possessions": 70,
+        "assists": 20,
+        "steals": 6,
+        "blocks": 1,
+        "trueShooting": 61.5,
+        "rating": 137.1,
+        "gameScore": 86.7,
+        "points": {
+          "total": 96,
+          "byPeriod": [
+            46,
+            50
+          ],
+          "largestLead": 38,
+          "fastBreak": 28,
+          "inPaint": 52,
+          "offTurnovers": 27
+        },
+        "twoPointFieldGoals": {
+          "made": 29,
+          "attempted": 49,
+          "pct": 59.2
+        },
+        "threePointFieldGoals": {
+          "made": 6,
+          "attempted": 18,
+          "pct": 33.3
+        },
+        "freeThrows": {
+          "made": 20,
+          "attempted": 25,
+          "pct": 80
+        },
+        "fieldGoals": {
+          "made": 35,
+          "attempted": 67,
+          "pct": 52.2
+        },
+        "turnovers": {
+          "total": 9,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 16,
+          "defensive": 29,
+          "total": 45
+        },
+        "fouls": {
+          "total": 15,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 56.7,
+          "freeThrowRate": 37.3,
+          "turnoverRatio": 12.9,
+          "offensiveReboundPct": 35.6
+        }
+      },
+      "opponentStats": {
+        "possessions": 70,
+        "assists": 11,
+        "steals": 5,
+        "blocks": 1,
+        "trueShooting": 49.2,
+        "rating": 85.7,
+        "gameScore": 28.30000000000001,
+        "points": {
+          "total": 60,
+          "byPeriod": [
+            39,
+            21
+          ],
+          "largestLead": 7,
+          "fastBreak": 8,
+          "inPaint": 20,
+          "offTurnovers": 9
+        },
+        "twoPointFieldGoals": {
+          "made": 11,
+          "attempted": 27,
+          "pct": 40.7
+        },
+        "threePointFieldGoals": {
+          "made": 9,
+          "attempted": 26,
+          "pct": 34.6
+        },
+        "freeThrows": {
+          "made": 11,
+          "attempted": 18,
+          "pct": 61.1
+        },
+        "fieldGoals": {
+          "made": 20,
+          "attempted": 53,
+          "pct": 37.7
+        },
+        "turnovers": {
+          "total": 16,
+          "teamTotal": 1
+        },
+        "rebounds": {
+          "offensive": 8,
+          "defensive": 20,
+          "total": 28
+        },
+        "fouls": {
+          "total": 22,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 46.2,
+          "freeThrowRate": 34,
+          "turnoverRatio": 22.9,
+          "offensiveReboundPct": 28.6
+        }
+      }
+    },
+    {
+      "gameId": 511,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2024-11-12T23:30:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 131,
+      "opponent": "Kansas",
+      "opponentConference": "Big 12",
+      "opponentSeed": null,
+      "neutralSite": true,
+      "isHome": false,
+      "conferenceGame": false,
+      "gameType": "STD",
+      "notes": "State Farm Champions Classic",
+      "gameMinutes": 40,
+      "pace": 78,
+      "teamStats": {
+        "possessions": 78,
+        "assists": 11,
+        "steals": 5,
+        "blocks": 4,
+        "trueShooting": 44.1,
+        "rating": 88.5,
+        "gameScore": 43.69999999999999,
+        "points": {
+          "total": 69,
+          "byPeriod": [
+            24,
+            45
+          ],
+          "largestLead": 2,
+          "fastBreak": 18,
+          "inPaint": 36,
+          "offTurnovers": 8
+        },
+        "twoPointFieldGoals": {
+          "made": 21,
+          "attempted": 45,
+          "pct": 46.7
+        },
+        "threePointFieldGoals": {
+          "made": 3,
+          "attempted": 24,
+          "pct": 12.5
+        },
+        "freeThrows": {
+          "made": 18,
+          "attempted": 21,
+          "pct": 85.7
+        },
+        "fieldGoals": {
+          "made": 24,
+          "attempted": 69,
+          "pct": 34.8
+        },
+        "turnovers": {
+          "total": 11,
+          "teamTotal": 1
+        },
+        "rebounds": {
+          "offensive": 11,
+          "defensive": 32,
+          "total": 43
+        },
+        "fouls": {
+          "total": 18,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 37,
+          "freeThrowRate": 30.4,
+          "turnoverRatio": 14.1,
+          "offensiveReboundPct": 25.6
+        }
+      },
+      "opponentStats": {
+        "possessions": 78,
+        "assists": 17,
+        "steals": 7,
+        "blocks": 5,
+        "trueShooting": 48.9,
+        "rating": 98.7,
+        "gameScore": 60.80000000000001,
+        "points": {
+          "total": 77,
+          "byPeriod": [
+            30,
+            47
+          ],
+          "largestLead": 10,
+          "fastBreak": 13,
+          "inPaint": 42,
+          "offTurnovers": 7
+        },
+        "twoPointFieldGoals": {
+          "made": 23,
+          "attempted": 52,
+          "pct": 44.2
+        },
+        "threePointFieldGoals": {
+          "made": 5,
+          "attempted": 17,
+          "pct": 29.4
+        },
+        "freeThrows": {
+          "made": 16,
+          "attempted": 22,
+          "pct": 72.7
+        },
+        "fieldGoals": {
+          "made": 28,
+          "attempted": 69,
+          "pct": 40.6
+        },
+        "turnovers": {
+          "total": 10,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 11,
+          "defensive": 36,
+          "total": 47
+        },
+        "fouls": {
+          "total": 19,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 44.2,
+          "freeThrowRate": 31.9,
+          "turnoverRatio": 12.8,
+          "offensiveReboundPct": 23.4
+        }
+      }
+    },
+    {
+      "gameId": 775,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2024-11-16T23:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 28,
+      "opponent": "Bowling Green",
+      "opponentConference": "MAC",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": true,
+      "conferenceGame": false,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 72,
+      "teamStats": {
+        "possessions": 73,
+        "assists": 20,
+        "steals": 7,
+        "blocks": 7,
+        "trueShooting": 58.8,
+        "rating": 117.8,
+        "gameScore": 82.60000000000001,
+        "points": {
+          "total": 86,
+          "byPeriod": [
+            43,
+            43
+          ],
+          "largestLead": 14,
+          "fastBreak": 15,
+          "inPaint": 36,
+          "offTurnovers": 11
+        },
+        "twoPointFieldGoals": {
+          "made": 23,
+          "attempted": 39,
+          "pct": 59
+        },
+        "threePointFieldGoals": {
+          "made": 4,
+          "attempted": 20,
+          "pct": 20
+        },
+        "freeThrows": {
+          "made": 28,
+          "attempted": 32,
+          "pct": 87.5
+        },
+        "fieldGoals": {
+          "made": 27,
+          "attempted": 59,
+          "pct": 45.8
+        },
+        "turnovers": {
+          "total": 11,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 15,
+          "defensive": 27,
+          "total": 42
+        },
+        "fouls": {
+          "total": 12,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 49.2,
+          "freeThrowRate": 54.2,
+          "turnoverRatio": 15.1,
+          "offensiveReboundPct": 35.7
+        }
+      },
+      "opponentStats": {
+        "possessions": 71,
+        "assists": 12,
+        "steals": 8,
+        "blocks": 4,
+        "trueShooting": 52.8,
+        "rating": 101.4,
+        "gameScore": 47.800000000000004,
+        "points": {
+          "total": 72,
+          "byPeriod": [
+            43,
+            29
+          ],
+          "largestLead": 12,
+          "fastBreak": 14,
+          "inPaint": 40,
+          "offTurnovers": 13
+        },
+        "twoPointFieldGoals": {
+          "made": 22,
+          "attempted": 36,
+          "pct": 61.1
+        },
+        "threePointFieldGoals": {
+          "made": 5,
+          "attempted": 26,
+          "pct": 19.2
+        },
+        "freeThrows": {
+          "made": 13,
+          "attempted": 14,
+          "pct": 92.9
+        },
+        "fieldGoals": {
+          "made": 27,
+          "attempted": 62,
+          "pct": 43.5
+        },
+        "turnovers": {
+          "total": 12,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 9,
+          "defensive": 19,
+          "total": 28
+        },
+        "fouls": {
+          "total": 26,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 47.6,
+          "freeThrowRate": 22.6,
+          "turnoverRatio": 16.9,
+          "offensiveReboundPct": 32.1
+        }
+      }
+    },
+    {
+      "gameId": 911,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2024-11-20T01:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 256,
+      "opponent": "Samford",
+      "opponentConference": "SoCon",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": true,
+      "conferenceGame": false,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 71,
+      "teamStats": {
+        "possessions": 71,
+        "assists": 21,
+        "steals": 13,
+        "blocks": 2,
+        "trueShooting": 63.7,
+        "rating": 116.9,
+        "gameScore": 76.60000000000001,
+        "points": {
+          "total": 83,
+          "byPeriod": [
+            38,
+            45
+          ],
+          "largestLead": 13,
+          "fastBreak": 36,
+          "inPaint": 40,
+          "offTurnovers": 27
+        },
+        "twoPointFieldGoals": {
+          "made": 21,
+          "attempted": 31,
+          "pct": 67.7
+        },
+        "threePointFieldGoals": {
+          "made": 7,
+          "attempted": 24,
+          "pct": 29.2
+        },
+        "freeThrows": {
+          "made": 20,
+          "attempted": 23,
+          "pct": 87
+        },
+        "fieldGoals": {
+          "made": 28,
+          "attempted": 55,
+          "pct": 50.9
+        },
+        "turnovers": {
+          "total": 14,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 10,
+          "defensive": 20,
+          "total": 30
+        },
+        "fouls": {
+          "total": 15,
+          "technical": 1,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 57.3,
+          "freeThrowRate": 41.8,
+          "turnoverRatio": 19.7,
+          "offensiveReboundPct": 33.3
+        }
+      },
+      "opponentStats": {
+        "possessions": 71,
+        "assists": 20,
+        "steals": 7,
+        "blocks": 4,
+        "trueShooting": 59.4,
+        "rating": 105.6,
+        "gameScore": 54.5,
+        "points": {
+          "total": 75,
+          "byPeriod": [
+            28,
+            47
+          ],
+          "largestLead": 13,
+          "fastBreak": 8,
+          "inPaint": 32,
+          "offTurnovers": 13
+        },
+        "twoPointFieldGoals": {
+          "made": 19,
+          "attempted": 31,
+          "pct": 61.3
+        },
+        "threePointFieldGoals": {
+          "made": 9,
+          "attempted": 26,
+          "pct": 34.6
+        },
+        "freeThrows": {
+          "made": 10,
+          "attempted": 14,
+          "pct": 71.4
+        },
+        "fieldGoals": {
+          "made": 28,
+          "attempted": 57,
+          "pct": 49.1
+        },
+        "turnovers": {
+          "total": 19,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 11,
+          "defensive": 19,
+          "total": 30
+        },
+        "fouls": {
+          "total": 21,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 57,
+          "freeThrowRate": 24.6,
+          "turnoverRatio": 26.8,
+          "offensiveReboundPct": 36.7
+        }
+      }
+    },
+    {
+      "gameId": 1229,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2024-11-25T22:45:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 56,
+      "opponent": "Colorado",
+      "opponentConference": "Big 12",
+      "opponentSeed": null,
+      "neutralSite": true,
+      "isHome": true,
+      "conferenceGame": false,
+      "gameType": "TRNMNT",
+      "notes": "The Maui Invitational Presented by Novavax",
+      "gameMinutes": 40,
+      "pace": 69,
+      "teamStats": {
+        "possessions": 69,
+        "assists": 11,
+        "steals": 6,
+        "blocks": 4,
+        "trueShooting": 54,
+        "rating": 104.3,
+        "gameScore": 55,
+        "points": {
+          "total": 72,
+          "byPeriod": [
+            38,
+            34
+          ],
+          "largestLead": 18,
+          "fastBreak": 22,
+          "inPaint": 50,
+          "offTurnovers": 8
+        },
+        "twoPointFieldGoals": {
+          "made": 28,
+          "attempted": 40,
+          "pct": 70
+        },
+        "threePointFieldGoals": {
+          "made": 2,
+          "attempted": 21,
+          "pct": 9.5
+        },
+        "freeThrows": {
+          "made": 10,
+          "attempted": 13,
+          "pct": 76.9
+        },
+        "fieldGoals": {
+          "made": 30,
+          "attempted": 61,
+          "pct": 49.2
+        },
+        "turnovers": {
+          "total": 11,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 9,
+          "defensive": 33,
+          "total": 42
+        },
+        "fouls": {
+          "total": 17,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 50.8,
+          "freeThrowRate": 21.3,
+          "turnoverRatio": 15.9,
+          "offensiveReboundPct": 21.4
+        }
+      },
+      "opponentStats": {
+        "possessions": 69,
+        "assists": 13,
+        "steals": 7,
+        "blocks": 1,
+        "trueShooting": 44.6,
+        "rating": 81.2,
+        "gameScore": 33.7,
+        "points": {
+          "total": 56,
+          "byPeriod": [
+            25,
+            31
+          ],
+          "largestLead": 3,
+          "fastBreak": 6,
+          "inPaint": 28,
+          "offTurnovers": 3
+        },
+        "twoPointFieldGoals": {
+          "made": 16,
+          "attempted": 35,
+          "pct": 45.7
+        },
+        "threePointFieldGoals": {
+          "made": 4,
+          "attempted": 19,
+          "pct": 21.1
+        },
+        "freeThrows": {
+          "made": 12,
+          "attempted": 20,
+          "pct": 60
+        },
+        "fieldGoals": {
+          "made": 20,
+          "attempted": 54,
+          "pct": 37
+        },
+        "turnovers": {
+          "total": 12,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 7,
+          "defensive": 22,
+          "total": 29
+        },
+        "fouls": {
+          "total": 14,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 40.7,
+          "freeThrowRate": 37,
+          "turnoverRatio": 17.4,
+          "offensiveReboundPct": 24.1
+        }
+      }
+    },
+    {
+      "gameId": 1291,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2024-11-26T23:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 163,
+      "opponent": "Memphis",
+      "opponentConference": "American",
+      "opponentSeed": null,
+      "neutralSite": true,
+      "isHome": true,
+      "conferenceGame": false,
+      "gameType": "TRNMNT",
+      "notes": "The Maui Invitational Presented by Novavax",
+      "gameMinutes": 40,
+      "pace": 61.5,
+      "teamStats": {
+        "possessions": 62,
+        "assists": 15,
+        "steals": 1,
+        "blocks": 2,
+        "trueShooting": 52.2,
+        "rating": 101.6,
+        "gameScore": 41.7,
+        "points": {
+          "total": 63,
+          "byPeriod": [
+            31,
+            32
+          ],
+          "largestLead": 3,
+          "fastBreak": 5,
+          "inPaint": 22,
+          "offTurnovers": 10
+        },
+        "twoPointFieldGoals": {
+          "made": 15,
+          "attempted": 32,
+          "pct": 46.9
+        },
+        "threePointFieldGoals": {
+          "made": 7,
+          "attempted": 20,
+          "pct": 35
+        },
+        "freeThrows": {
+          "made": 12,
+          "attempted": 19,
+          "pct": 63.2
+        },
+        "fieldGoals": {
+          "made": 22,
+          "attempted": 52,
+          "pct": 42.3
+        },
+        "turnovers": {
+          "total": 13,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 12,
+          "defensive": 24,
+          "total": 36
+        },
+        "fouls": {
+          "total": 16,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 49,
+          "freeThrowRate": 36.5,
+          "turnoverRatio": 21,
+          "offensiveReboundPct": 33.3
+        }
+      },
+      "opponentStats": {
+        "possessions": 61,
+        "assists": 10,
+        "steals": 4,
+        "blocks": 2,
+        "trueShooting": 58,
+        "rating": 116.4,
+        "gameScore": 48.300000000000004,
+        "points": {
+          "total": 71,
+          "byPeriod": [
+            34,
+            37
+          ],
+          "largestLead": 15,
+          "fastBreak": 11,
+          "inPaint": 32,
+          "offTurnovers": 22
+        },
+        "twoPointFieldGoals": {
+          "made": 18,
+          "attempted": 32,
+          "pct": 56.3
+        },
+        "threePointFieldGoals": {
+          "made": 8,
+          "attempted": 23,
+          "pct": 34.8
+        },
+        "freeThrows": {
+          "made": 11,
+          "attempted": 14,
+          "pct": 78.6
+        },
+        "fieldGoals": {
+          "made": 26,
+          "attempted": 55,
+          "pct": 47.3
+        },
+        "turnovers": {
+          "total": 9,
+          "teamTotal": 1
+        },
+        "rebounds": {
+          "offensive": 6,
+          "defensive": 22,
+          "total": 28
+        },
+        "fouls": {
+          "total": 19,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 54.5,
+          "freeThrowRate": 25.5,
+          "turnoverRatio": 14.8,
+          "offensiveReboundPct": 21.4
+        }
+      }
+    },
+    {
+      "gameId": 1336,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2024-11-28T02:30:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 200,
+      "opponent": "North Carolina",
+      "opponentConference": "ACC",
+      "opponentSeed": null,
+      "neutralSite": true,
+      "isHome": false,
+      "conferenceGame": false,
+      "gameType": "TRNMNT",
+      "notes": "The Maui Invitational Presented by Novavax - 3rd Place Game",
+      "gameMinutes": 45,
+      "pace": 70.7,
+      "teamStats": {
+        "possessions": 80,
+        "assists": 16,
+        "steals": 7,
+        "blocks": 4,
+        "trueShooting": 63,
+        "rating": 117.5,
+        "gameScore": 77.4,
+        "points": {
+          "total": 94,
+          "byPeriod": [
+            43,
+            39,
+            12
+          ],
+          "largestLead": 14,
+          "fastBreak": 11,
+          "inPaint": 50,
+          "offTurnovers": 11
+        },
+        "twoPointFieldGoals": {
+          "made": 29,
+          "attempted": 45,
+          "pct": 64.4
+        },
+        "threePointFieldGoals": {
+          "made": 4,
+          "attempted": 16,
+          "pct": 25
+        },
+        "freeThrows": {
+          "made": 24,
+          "attempted": 31,
+          "pct": 77.4
+        },
+        "fieldGoals": {
+          "made": 33,
+          "attempted": 61,
+          "pct": 54.1
+        },
+        "turnovers": {
+          "total": 12,
+          "teamTotal": 2
+        },
+        "rebounds": {
+          "offensive": 8,
+          "defensive": 29,
+          "total": 37
+        },
+        "fouls": {
+          "total": 19,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 57.4,
+          "freeThrowRate": 50.8,
+          "turnoverRatio": 15,
+          "offensiveReboundPct": 21.6
+        }
+      },
+      "opponentStats": {
+        "possessions": 79,
+        "assists": 17,
+        "steals": 8,
+        "blocks": 4,
+        "trueShooting": 62.1,
+        "rating": 115.2,
+        "gameScore": 70.19999999999999,
+        "points": {
+          "total": 91,
+          "byPeriod": [
+            34,
+            48,
+            9
+          ],
+          "largestLead": 1,
+          "fastBreak": 14,
+          "inPaint": 30,
+          "offTurnovers": 14
+        },
+        "twoPointFieldGoals": {
+          "made": 21,
+          "attempted": 41,
+          "pct": 51.2
+        },
+        "threePointFieldGoals": {
+          "made": 11,
+          "attempted": 23,
+          "pct": 47.8
+        },
+        "freeThrows": {
+          "made": 16,
+          "attempted": 21,
+          "pct": 76.2
+        },
+        "fieldGoals": {
+          "made": 32,
+          "attempted": 64,
+          "pct": 50
+        },
+        "turnovers": {
+          "total": 11,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 5,
+          "defensive": 24,
+          "total": 29
+        },
+        "fouls": {
+          "total": 23,
+          "technical": 1,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 58.6,
+          "freeThrowRate": 32.8,
+          "turnoverRatio": 13.9,
+          "offensiveReboundPct": 17.2
+        }
+      }
+    },
+    {
+      "gameId": 1701,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2024-12-05T01:30:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 173,
+      "opponent": "Minnesota",
+      "opponentConference": "Big Ten",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": false,
+      "conferenceGame": true,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 64,
+      "teamStats": {
+        "possessions": 64,
+        "assists": 25,
+        "steals": 5,
+        "blocks": 5,
+        "trueShooting": 67.7,
+        "rating": 140.6,
+        "gameScore": 88.19999999999999,
+        "points": {
+          "total": 90,
+          "byPeriod": [
+            42,
+            48
+          ],
+          "largestLead": 21,
+          "fastBreak": 27,
+          "inPaint": 36,
+          "offTurnovers": 7
+        },
+        "twoPointFieldGoals": {
+          "made": 18,
+          "attempted": 33,
+          "pct": 54.5
+        },
+        "threePointFieldGoals": {
+          "made": 11,
+          "attempted": 22,
+          "pct": 50
+        },
+        "freeThrows": {
+          "made": 21,
+          "attempted": 26,
+          "pct": 80.8
+        },
+        "fieldGoals": {
+          "made": 29,
+          "attempted": 55,
+          "pct": 52.7
+        },
+        "turnovers": {
+          "total": 9,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 12,
+          "defensive": 27,
+          "total": 39
+        },
+        "fouls": {
+          "total": 16,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 62.7,
+          "freeThrowRate": 47.3,
+          "turnoverRatio": 14.1,
+          "offensiveReboundPct": 30.8
+        }
+      },
+      "opponentStats": {
+        "possessions": 64,
+        "assists": 15,
+        "steals": 5,
+        "blocks": 4,
+        "trueShooting": 54.2,
+        "rating": 112.5,
+        "gameScore": 53.70000000000001,
+        "points": {
+          "total": 72,
+          "byPeriod": [
+            30,
+            42
+          ],
+          "largestLead": 3,
+          "fastBreak": 2,
+          "inPaint": 28,
+          "offTurnovers": 14
+        },
+        "twoPointFieldGoals": {
+          "made": 17,
+          "attempted": 31,
+          "pct": 54.8
+        },
+        "threePointFieldGoals": {
+          "made": 9,
+          "attempted": 28,
+          "pct": 32.1
+        },
+        "freeThrows": {
+          "made": 11,
+          "attempted": 17,
+          "pct": 64.7
+        },
+        "fieldGoals": {
+          "made": 26,
+          "attempted": 59,
+          "pct": 44.1
+        },
+        "turnovers": {
+          "total": 7,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 10,
+          "defensive": 17,
+          "total": 27
+        },
+        "fouls": {
+          "total": 21,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 51.7,
+          "freeThrowRate": 28.8,
+          "turnoverRatio": 10.9,
+          "offensiveReboundPct": 37
+        }
+      }
+    },
+    {
+      "gameId": 1779,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2024-12-07T17:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 188,
+      "opponent": "Nebraska",
+      "opponentConference": "Big Ten",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": true,
+      "conferenceGame": true,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 70.5,
+      "teamStats": {
+        "possessions": 71,
+        "assists": 20,
+        "steals": 4,
+        "blocks": 5,
+        "trueShooting": 67.3,
+        "rating": 125.4,
+        "gameScore": 77.9,
+        "points": {
+          "total": 89,
+          "byPeriod": [
+            41,
+            48
+          ],
+          "largestLead": 42,
+          "fastBreak": 18,
+          "inPaint": 32,
+          "offTurnovers": 19
+        },
+        "twoPointFieldGoals": {
+          "made": 20,
+          "attempted": 33,
+          "pct": 60.6
+        },
+        "threePointFieldGoals": {
+          "made": 9,
+          "attempted": 23,
+          "pct": 39.1
+        },
+        "freeThrows": {
+          "made": 22,
+          "attempted": 23,
+          "pct": 95.7
+        },
+        "fieldGoals": {
+          "made": 29,
+          "attempted": 56,
+          "pct": 51.8
+        },
+        "turnovers": {
+          "total": 17,
+          "teamTotal": 3
+        },
+        "rebounds": {
+          "offensive": 12,
+          "defensive": 36,
+          "total": 48
+        },
+        "fouls": {
+          "total": 17,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 59.8,
+          "freeThrowRate": 41.1,
+          "turnoverRatio": 23.9,
+          "offensiveReboundPct": 25
+        }
+      },
+      "opponentStats": {
+        "possessions": 70,
+        "assists": 8,
+        "steals": 8,
+        "blocks": 0,
+        "trueShooting": 42,
+        "rating": 74.3,
+        "gameScore": 20.900000000000013,
+        "points": {
+          "total": 52,
+          "byPeriod": [
+            31,
+            21
+          ],
+          "largestLead": 0,
+          "fastBreak": 7,
+          "inPaint": 24,
+          "offTurnovers": 14
+        },
+        "twoPointFieldGoals": {
+          "made": 14,
+          "attempted": 32,
+          "pct": 43.8
+        },
+        "threePointFieldGoals": {
+          "made": 4,
+          "attempted": 22,
+          "pct": 18.2
+        },
+        "freeThrows": {
+          "made": 12,
+          "attempted": 18,
+          "pct": 66.7
+        },
+        "fieldGoals": {
+          "made": 18,
+          "attempted": 54,
+          "pct": 33.3
+        },
+        "turnovers": {
+          "total": 11,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 4,
+          "defensive": 15,
+          "total": 19
+        },
+        "fouls": {
+          "total": 20,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 37,
+          "freeThrowRate": 33.3,
+          "turnoverRatio": 15.7,
+          "offensiveReboundPct": 21.1
+        }
+      }
+    },
+    {
+      "gameId": 2165,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2024-12-18T00:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 214,
+      "opponent": "Oakland",
+      "opponentConference": "Horizon",
+      "opponentSeed": null,
+      "neutralSite": true,
+      "isHome": false,
+      "conferenceGame": false,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 63.5,
+      "teamStats": {
+        "possessions": 63,
+        "assists": 14,
+        "steals": 3,
+        "blocks": 11,
+        "trueShooting": 54.9,
+        "rating": 122.2,
+        "gameScore": 70.00000000000001,
+        "points": {
+          "total": 77,
+          "byPeriod": [
+            31,
+            46
+          ],
+          "largestLead": 20,
+          "fastBreak": 8,
+          "inPaint": 36,
+          "offTurnovers": 12
+        },
+        "twoPointFieldGoals": {
+          "made": 20,
+          "attempted": 43,
+          "pct": 46.5
+        },
+        "threePointFieldGoals": {
+          "made": 6,
+          "attempted": 17,
+          "pct": 35.3
+        },
+        "freeThrows": {
+          "made": 19,
+          "attempted": 23,
+          "pct": 82.6
+        },
+        "fieldGoals": {
+          "made": 26,
+          "attempted": 60,
+          "pct": 43.3
+        },
+        "turnovers": {
+          "total": 12,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 20,
+          "defensive": 31,
+          "total": 51
+        },
+        "fouls": {
+          "total": 14,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 48.3,
+          "freeThrowRate": 38.3,
+          "turnoverRatio": 19,
+          "offensiveReboundPct": 39.2
+        }
+      },
+      "opponentStats": {
+        "possessions": 64,
+        "assists": 12,
+        "steals": 6,
+        "blocks": 5,
+        "trueShooting": 41.1,
+        "rating": 90.6,
+        "gameScore": 36.7,
+        "points": {
+          "total": 58,
+          "byPeriod": [
+            30,
+            28
+          ],
+          "largestLead": 2,
+          "fastBreak": 7,
+          "inPaint": 12,
+          "offTurnovers": 6
+        },
+        "twoPointFieldGoals": {
+          "made": 8,
+          "attempted": 32,
+          "pct": 25
+        },
+        "threePointFieldGoals": {
+          "made": 11,
+          "attempted": 31,
+          "pct": 35.5
+        },
+        "freeThrows": {
+          "made": 9,
+          "attempted": 17,
+          "pct": 52.9
+        },
+        "fieldGoals": {
+          "made": 19,
+          "attempted": 63,
+          "pct": 30.2
+        },
+        "turnovers": {
+          "total": 8,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 15,
+          "defensive": 16,
+          "total": 31
+        },
+        "fouls": {
+          "total": 17,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 38.9,
+          "freeThrowRate": 27,
+          "turnoverRatio": 12.5,
+          "offensiveReboundPct": 48.4
+        }
+      }
+    },
+    {
+      "gameId": 2331,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2024-12-21T19:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 86,
+      "opponent": "Florida Atlantic",
+      "opponentConference": "American",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": true,
+      "conferenceGame": false,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 72.5,
+      "teamStats": {
+        "possessions": 72,
+        "assists": 21,
+        "steals": 3,
+        "blocks": 6,
+        "trueShooting": 55.3,
+        "rating": 119.4,
+        "gameScore": 73.60000000000001,
+        "points": {
+          "total": 86,
+          "byPeriod": [
+            42,
+            44
+          ],
+          "largestLead": 20,
+          "fastBreak": 27,
+          "inPaint": 36,
+          "offTurnovers": 14
+        },
+        "twoPointFieldGoals": {
+          "made": 23,
+          "attempted": 48,
+          "pct": 47.9
+        },
+        "threePointFieldGoals": {
+          "made": 8,
+          "attempted": 21,
+          "pct": 38.1
+        },
+        "freeThrows": {
+          "made": 16,
+          "attempted": 20,
+          "pct": 80
+        },
+        "fieldGoals": {
+          "made": 31,
+          "attempted": 69,
+          "pct": 44.9
+        },
+        "turnovers": {
+          "total": 10,
+          "teamTotal": 1
+        },
+        "rebounds": {
+          "offensive": 14,
+          "defensive": 34,
+          "total": 48
+        },
+        "fouls": {
+          "total": 17,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 50.7,
+          "freeThrowRate": 29,
+          "turnoverRatio": 13.9,
+          "offensiveReboundPct": 29.2
+        }
+      },
+      "opponentStats": {
+        "possessions": 73,
+        "assists": 16,
+        "steals": 5,
+        "blocks": 4,
+        "trueShooting": 46.5,
+        "rating": 94.5,
+        "gameScore": 47,
+        "points": {
+          "total": 69,
+          "byPeriod": [
+            29,
+            40
+          ],
+          "largestLead": 3,
+          "fastBreak": 17,
+          "inPaint": 38,
+          "offTurnovers": 6
+        },
+        "twoPointFieldGoals": {
+          "made": 23,
+          "attempted": 46,
+          "pct": 50
+        },
+        "threePointFieldGoals": {
+          "made": 4,
+          "attempted": 22,
+          "pct": 18.2
+        },
+        "freeThrows": {
+          "made": 11,
+          "attempted": 14,
+          "pct": 78.6
+        },
+        "fieldGoals": {
+          "made": 27,
+          "attempted": 68,
+          "pct": 39.7
+        },
+        "turnovers": {
+          "total": 9,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 10,
+          "defensive": 26,
+          "total": 36
+        },
+        "fouls": {
+          "total": 22,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 42.6,
+          "freeThrowRate": 20.6,
+          "turnoverRatio": 12.3,
+          "offensiveReboundPct": 27.8
+        }
+      }
+    },
+    {
+      "gameId": 2615,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2024-12-30T20:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 351,
+      "opponent": "Western Michigan",
+      "opponentConference": "MAC",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": true,
+      "conferenceGame": false,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 72,
+      "teamStats": {
+        "possessions": 72,
+        "assists": 20,
+        "steals": 6,
+        "blocks": 7,
+        "trueShooting": 62.8,
+        "rating": 111.1,
+        "gameScore": 68.80000000000001,
+        "points": {
+          "total": 80,
+          "byPeriod": [
+            37,
+            43
+          ],
+          "largestLead": 20,
+          "fastBreak": 23,
+          "inPaint": 36,
+          "offTurnovers": 17
+        },
+        "twoPointFieldGoals": {
+          "made": 21,
+          "attempted": 34,
+          "pct": 61.8
+        },
+        "threePointFieldGoals": {
+          "made": 6,
+          "attempted": 20,
+          "pct": 30
+        },
+        "freeThrows": {
+          "made": 20,
+          "attempted": 22,
+          "pct": 90.9
+        },
+        "fieldGoals": {
+          "made": 27,
+          "attempted": 54,
+          "pct": 50
+        },
+        "turnovers": {
+          "total": 17,
+          "teamTotal": 1
+        },
+        "rebounds": {
+          "offensive": 8,
+          "defensive": 29,
+          "total": 37
+        },
+        "fouls": {
+          "total": 14,
+          "technical": 1,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 55.6,
+          "freeThrowRate": 40.7,
+          "turnoverRatio": 23.6,
+          "offensiveReboundPct": 21.6
+        }
+      },
+      "opponentStats": {
+        "possessions": 72,
+        "assists": 14,
+        "steals": 8,
+        "blocks": 2,
+        "trueShooting": 47.3,
+        "rating": 86.1,
+        "gameScore": 35.8,
+        "points": {
+          "total": 62,
+          "byPeriod": [
+            24,
+            38
+          ],
+          "largestLead": 6,
+          "fastBreak": 16,
+          "inPaint": 28,
+          "offTurnovers": 14
+        },
+        "twoPointFieldGoals": {
+          "made": 17,
+          "attempted": 35,
+          "pct": 48.6
+        },
+        "threePointFieldGoals": {
+          "made": 7,
+          "attempted": 23,
+          "pct": 30.4
+        },
+        "freeThrows": {
+          "made": 7,
+          "attempted": 17,
+          "pct": 41.2
+        },
+        "fieldGoals": {
+          "made": 24,
+          "attempted": 58,
+          "pct": 41.4
+        },
+        "turnovers": {
+          "total": 17,
+          "teamTotal": 2
+        },
+        "rebounds": {
+          "offensive": 11,
+          "defensive": 19,
+          "total": 30
+        },
+        "fouls": {
+          "total": 17,
+          "technical": 2,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 47.4,
+          "freeThrowRate": 29.3,
+          "turnoverRatio": 23.6,
+          "offensiveReboundPct": 36.7
+        }
+      }
+    },
+    {
+      "gameId": 2774,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-01-04T01:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 216,
+      "opponent": "Ohio State",
+      "opponentConference": "Big Ten",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": false,
+      "conferenceGame": true,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 66.5,
+      "teamStats": {
+        "possessions": 67,
+        "assists": 13,
+        "steals": 5,
+        "blocks": 5,
+        "trueShooting": 53.3,
+        "rating": 103,
+        "gameScore": 49.89999999999999,
+        "points": {
+          "total": 69,
+          "byPeriod": [
+            37,
+            32
+          ],
+          "largestLead": 14,
+          "fastBreak": 9,
+          "inPaint": 38,
+          "offTurnovers": 18
+        },
+        "twoPointFieldGoals": {
+          "made": 21,
+          "attempted": 37,
+          "pct": 56.8
+        },
+        "threePointFieldGoals": {
+          "made": 3,
+          "attempted": 18,
+          "pct": 16.7
+        },
+        "freeThrows": {
+          "made": 18,
+          "attempted": 22,
+          "pct": 81.8
+        },
+        "fieldGoals": {
+          "made": 24,
+          "attempted": 55,
+          "pct": 43.6
+        },
+        "turnovers": {
+          "total": 16,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 12,
+          "defensive": 22,
+          "total": 34
+        },
+        "fouls": {
+          "total": 13,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 46.4,
+          "freeThrowRate": 40,
+          "turnoverRatio": 23.9,
+          "offensiveReboundPct": 35.3
+        }
+      },
+      "opponentStats": {
+        "possessions": 66,
+        "assists": 9,
+        "steals": 11,
+        "blocks": 2,
+        "trueShooting": 46.2,
+        "rating": 93.9,
+        "gameScore": 37.79999999999999,
+        "points": {
+          "total": 62,
+          "byPeriod": [
+            29,
+            33
+          ],
+          "largestLead": 4,
+          "fastBreak": 7,
+          "inPaint": 22,
+          "offTurnovers": 16
+        },
+        "twoPointFieldGoals": {
+          "made": 15,
+          "attempted": 33,
+          "pct": 45.5
+        },
+        "threePointFieldGoals": {
+          "made": 7,
+          "attempted": 27,
+          "pct": 25.9
+        },
+        "freeThrows": {
+          "made": 11,
+          "attempted": 16,
+          "pct": 68.8
+        },
+        "fieldGoals": {
+          "made": 22,
+          "attempted": 60,
+          "pct": 36.7
+        },
+        "turnovers": {
+          "total": 16,
+          "teamTotal": 4
+        },
+        "rebounds": {
+          "offensive": 15,
+          "defensive": 18,
+          "total": 33
+        },
+        "fouls": {
+          "total": 19,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 42.5,
+          "freeThrowRate": 26.7,
+          "turnoverRatio": 24.2,
+          "offensiveReboundPct": 45.5
+        }
+      }
+    },
+    {
+      "gameId": 3056,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-01-10T01:15:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 343,
+      "opponent": "Washington",
+      "opponentConference": "Big Ten",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": true,
+      "conferenceGame": true,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 72,
+      "teamStats": {
+        "possessions": 73,
+        "assists": 24,
+        "steals": 10,
+        "blocks": 6,
+        "trueShooting": 63.8,
+        "rating": 120.5,
+        "gameScore": 85.5,
+        "points": {
+          "total": 88,
+          "byPeriod": [
+            42,
+            46
+          ],
+          "largestLead": 41,
+          "fastBreak": 28,
+          "inPaint": 44,
+          "offTurnovers": 13
+        },
+        "twoPointFieldGoals": {
+          "made": 25,
+          "attempted": 40,
+          "pct": 62.5
+        },
+        "threePointFieldGoals": {
+          "made": 7,
+          "attempted": 21,
+          "pct": 33.3
+        },
+        "freeThrows": {
+          "made": 17,
+          "attempted": 18,
+          "pct": 94.4
+        },
+        "fieldGoals": {
+          "made": 32,
+          "attempted": 61,
+          "pct": 52.5
+        },
+        "turnovers": {
+          "total": 12,
+          "teamTotal": 1
+        },
+        "rebounds": {
+          "offensive": 9,
+          "defensive": 31,
+          "total": 40
+        },
+        "fouls": {
+          "total": 17,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 58.2,
+          "freeThrowRate": 29.5,
+          "turnoverRatio": 16.4,
+          "offensiveReboundPct": 22.5
+        }
+      },
+      "opponentStats": {
+        "possessions": 71,
+        "assists": 11,
+        "steals": 6,
+        "blocks": 6,
+        "trueShooting": 41.5,
+        "rating": 76.1,
+        "gameScore": 28.6,
+        "points": {
+          "total": 54,
+          "byPeriod": [
+            13,
+            41
+          ],
+          "largestLead": 1,
+          "fastBreak": 2,
+          "inPaint": 26,
+          "offTurnovers": 17
+        },
+        "twoPointFieldGoals": {
+          "made": 15,
+          "attempted": 39,
+          "pct": 38.5
+        },
+        "threePointFieldGoals": {
+          "made": 3,
+          "attempted": 16,
+          "pct": 18.8
+        },
+        "freeThrows": {
+          "made": 15,
+          "attempted": 23,
+          "pct": 65.2
+        },
+        "fieldGoals": {
+          "made": 18,
+          "attempted": 55,
+          "pct": 32.7
+        },
+        "turnovers": {
+          "total": 15,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 9,
+          "defensive": 21,
+          "total": 30
+        },
+        "fouls": {
+          "total": 16,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 35.5,
+          "freeThrowRate": 41.8,
+          "turnoverRatio": 21.1,
+          "offensiveReboundPct": 30
+        }
+      }
+    },
+    {
+      "gameId": 3269,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-01-12T17:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 212,
+      "opponent": "Northwestern",
+      "opponentConference": "Big Ten",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": false,
+      "conferenceGame": true,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 68,
+      "teamStats": {
+        "possessions": 67,
+        "assists": 18,
+        "steals": 8,
+        "blocks": 5,
+        "trueShooting": 59.2,
+        "rating": 116.4,
+        "gameScore": 67.60000000000001,
+        "points": {
+          "total": 78,
+          "byPeriod": [
+            47,
+            31
+          ],
+          "largestLead": 23,
+          "fastBreak": 4,
+          "inPaint": 36,
+          "offTurnovers": 18
+        },
+        "twoPointFieldGoals": {
+          "made": 23,
+          "attempted": 46,
+          "pct": 50
+        },
+        "threePointFieldGoals": {
+          "made": 4,
+          "attempted": 8,
+          "pct": 50
+        },
+        "freeThrows": {
+          "made": 20,
+          "attempted": 27,
+          "pct": 74.1
+        },
+        "fieldGoals": {
+          "made": 27,
+          "attempted": 54,
+          "pct": 50
+        },
+        "turnovers": {
+          "total": 11,
+          "teamTotal": 2
+        },
+        "rebounds": {
+          "offensive": 10,
+          "defensive": 27,
+          "total": 37
+        },
+        "fouls": {
+          "total": 22,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 53.7,
+          "freeThrowRate": 50,
+          "turnoverRatio": 16.4,
+          "offensiveReboundPct": 27
+        }
+      },
+      "opponentStats": {
+        "possessions": 69,
+        "assists": 10,
+        "steals": 6,
+        "blocks": 4,
+        "trueShooting": 48,
+        "rating": 98.6,
+        "gameScore": 42.3,
+        "points": {
+          "total": 68,
+          "byPeriod": [
+            28,
+            40
+          ],
+          "largestLead": 5,
+          "fastBreak": 5,
+          "inPaint": 26,
+          "offTurnovers": 12
+        },
+        "twoPointFieldGoals": {
+          "made": 16,
+          "attempted": 34,
+          "pct": 47.1
+        },
+        "threePointFieldGoals": {
+          "made": 5,
+          "attempted": 25,
+          "pct": 20
+        },
+        "freeThrows": {
+          "made": 21,
+          "attempted": 27,
+          "pct": 77.8
+        },
+        "fieldGoals": {
+          "made": 21,
+          "attempted": 59,
+          "pct": 35.6
+        },
+        "turnovers": {
+          "total": 12,
+          "teamTotal": 1
+        },
+        "rebounds": {
+          "offensive": 14,
+          "defensive": 16,
+          "total": 30
+        },
+        "fouls": {
+          "total": 22,
+          "technical": 1,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 39.8,
+          "freeThrowRate": 45.8,
+          "turnoverRatio": 17.4,
+          "offensiveReboundPct": 46.7
+        }
+      }
+    },
+    {
+      "gameId": 3350,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-01-16T00:30:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 226,
+      "opponent": "Penn State",
+      "opponentConference": "Big Ten",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": true,
+      "conferenceGame": true,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 72,
+      "teamStats": {
+        "possessions": 72,
+        "assists": 24,
+        "steals": 8,
+        "blocks": 5,
+        "trueShooting": 57.3,
+        "rating": 125,
+        "gameScore": 80.29999999999998,
+        "points": {
+          "total": 90,
+          "byPeriod": [
+            46,
+            44
+          ],
+          "largestLead": 12,
+          "fastBreak": 20,
+          "inPaint": 48,
+          "offTurnovers": 27
+        },
+        "twoPointFieldGoals": {
+          "made": 26,
+          "attempted": 45,
+          "pct": 57.8
+        },
+        "threePointFieldGoals": {
+          "made": 6,
+          "attempted": 23,
+          "pct": 26.1
+        },
+        "freeThrows": {
+          "made": 20,
+          "attempted": 24,
+          "pct": 83.3
+        },
+        "fieldGoals": {
+          "made": 32,
+          "attempted": 68,
+          "pct": 47.1
+        },
+        "turnovers": {
+          "total": 10,
+          "teamTotal": 1
+        },
+        "rebounds": {
+          "offensive": 15,
+          "defensive": 21,
+          "total": 36
+        },
+        "fouls": {
+          "total": 21,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 51.5,
+          "freeThrowRate": 35.3,
+          "turnoverRatio": 13.9,
+          "offensiveReboundPct": 41.7
+        }
+      },
+      "opponentStats": {
+        "possessions": 72,
+        "assists": 20,
+        "steals": 4,
+        "blocks": 4,
+        "trueShooting": 66.4,
+        "rating": 118.1,
+        "gameScore": 67.50000000000001,
+        "points": {
+          "total": 85,
+          "byPeriod": [
+            36,
+            49
+          ],
+          "largestLead": 0,
+          "fastBreak": 14,
+          "inPaint": 34,
+          "offTurnovers": 13
+        },
+        "twoPointFieldGoals": {
+          "made": 18,
+          "attempted": 29,
+          "pct": 62.1
+        },
+        "threePointFieldGoals": {
+          "made": 10,
+          "attempted": 24,
+          "pct": 41.7
+        },
+        "freeThrows": {
+          "made": 19,
+          "attempted": 25,
+          "pct": 76
+        },
+        "fieldGoals": {
+          "made": 28,
+          "attempted": 53,
+          "pct": 52.8
+        },
+        "turnovers": {
+          "total": 14,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 8,
+          "defensive": 24,
+          "total": 32
+        },
+        "fouls": {
+          "total": 22,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 62.3,
+          "freeThrowRate": 47.2,
+          "turnoverRatio": 19.4,
+          "offensiveReboundPct": 25
+        }
+      }
+    },
+    {
+      "gameId": 3616,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-01-19T17:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 118,
+      "opponent": "Illinois",
+      "opponentConference": "Big Ten",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": true,
+      "conferenceGame": true,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 71,
+      "teamStats": {
+        "possessions": 71,
+        "assists": 14,
+        "steals": 2,
+        "blocks": 5,
+        "trueShooting": 52,
+        "rating": 112.7,
+        "gameScore": 59.80000000000001,
+        "points": {
+          "total": 80,
+          "byPeriod": [
+            36,
+            44
+          ],
+          "largestLead": 7,
+          "fastBreak": 8,
+          "inPaint": 40,
+          "offTurnovers": 4
+        },
+        "twoPointFieldGoals": {
+          "made": 25,
+          "attempted": 55,
+          "pct": 45.5
+        },
+        "threePointFieldGoals": {
+          "made": 3,
+          "attempted": 10,
+          "pct": 30
+        },
+        "freeThrows": {
+          "made": 21,
+          "attempted": 27,
+          "pct": 77.8
+        },
+        "fieldGoals": {
+          "made": 28,
+          "attempted": 65,
+          "pct": 43.1
+        },
+        "turnovers": {
+          "total": 8,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 13,
+          "defensive": 27,
+          "total": 40
+        },
+        "fouls": {
+          "total": 20,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 45.4,
+          "freeThrowRate": 41.5,
+          "turnoverRatio": 11.3,
+          "offensiveReboundPct": 32.5
+        }
+      },
+      "opponentStats": {
+        "possessions": 71,
+        "assists": 16,
+        "steals": 3,
+        "blocks": 2,
+        "trueShooting": 50.1,
+        "rating": 109.9,
+        "gameScore": 54.900000000000006,
+        "points": {
+          "total": 78,
+          "byPeriod": [
+            36,
+            42
+          ],
+          "largestLead": 10,
+          "fastBreak": 14,
+          "inPaint": 44,
+          "offTurnovers": 10
+        },
+        "twoPointFieldGoals": {
+          "made": 23,
+          "attempted": 42,
+          "pct": 54.8
+        },
+        "threePointFieldGoals": {
+          "made": 5,
+          "attempted": 24,
+          "pct": 20.8
+        },
+        "freeThrows": {
+          "made": 17,
+          "attempted": 27,
+          "pct": 63
+        },
+        "fieldGoals": {
+          "made": 28,
+          "attempted": 66,
+          "pct": 42.4
+        },
+        "turnovers": {
+          "total": 10,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 15,
+          "defensive": 26,
+          "total": 41
+        },
+        "fouls": {
+          "total": 20,
+          "technical": 1,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 46.2,
+          "freeThrowRate": 40.9,
+          "turnoverRatio": 14.1,
+          "offensiveReboundPct": 36.6
+        }
+      }
+    },
+    {
+      "gameId": 3828,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-01-25T18:30:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 245,
+      "opponent": "Rutgers",
+      "opponentConference": "Big Ten",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": false,
+      "conferenceGame": true,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 72,
+      "teamStats": {
+        "possessions": 72,
+        "assists": 19,
+        "steals": 2,
+        "blocks": 8,
+        "trueShooting": 60.1,
+        "rating": 112.5,
+        "gameScore": 66.5,
+        "points": {
+          "total": 81,
+          "byPeriod": [
+            35,
+            46
+          ],
+          "largestLead": 13,
+          "fastBreak": 21,
+          "inPaint": 42,
+          "offTurnovers": 9
+        },
+        "twoPointFieldGoals": {
+          "made": 22,
+          "attempted": 37,
+          "pct": 59.5
+        },
+        "threePointFieldGoals": {
+          "made": 5,
+          "attempted": 19,
+          "pct": 26.3
+        },
+        "freeThrows": {
+          "made": 22,
+          "attempted": 26,
+          "pct": 84.6
+        },
+        "fieldGoals": {
+          "made": 27,
+          "attempted": 56,
+          "pct": 48.2
+        },
+        "turnovers": {
+          "total": 15,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 10,
+          "defensive": 34,
+          "total": 44
+        },
+        "fouls": {
+          "total": 19,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 52.7,
+          "freeThrowRate": 46.4,
+          "turnoverRatio": 20.8,
+          "offensiveReboundPct": 22.7
+        }
+      },
+      "opponentStats": {
+        "possessions": 72,
+        "assists": 9,
+        "steals": 10,
+        "blocks": 2,
+        "trueShooting": 46.8,
+        "rating": 102.8,
+        "gameScore": 53.10000000000002,
+        "points": {
+          "total": 74,
+          "byPeriod": [
+            32,
+            42
+          ],
+          "largestLead": 7,
+          "fastBreak": 15,
+          "inPaint": 26,
+          "offTurnovers": 14
+        },
+        "twoPointFieldGoals": {
+          "made": 14,
+          "attempted": 38,
+          "pct": 36.8
+        },
+        "threePointFieldGoals": {
+          "made": 9,
+          "attempted": 30,
+          "pct": 30
+        },
+        "freeThrows": {
+          "made": 19,
+          "attempted": 25,
+          "pct": 76
+        },
+        "fieldGoals": {
+          "made": 23,
+          "attempted": 68,
+          "pct": 33.8
+        },
+        "turnovers": {
+          "total": 6,
+          "teamTotal": 1
+        },
+        "rebounds": {
+          "offensive": 15,
+          "defensive": 19,
+          "total": 34
+        },
+        "fouls": {
+          "total": 20,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 40.4,
+          "freeThrowRate": 36.8,
+          "turnoverRatio": 8.3,
+          "offensiveReboundPct": 44.1
+        }
+      }
+    },
+    {
+      "gameId": 4005,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-01-29T01:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 173,
+      "opponent": "Minnesota",
+      "opponentConference": "Big Ten",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": true,
+      "conferenceGame": true,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 60.5,
+      "teamStats": {
+        "possessions": 60,
+        "assists": 20,
+        "steals": 7,
+        "blocks": 6,
+        "trueShooting": 56.3,
+        "rating": 121.7,
+        "gameScore": 70,
+        "points": {
+          "total": 73,
+          "byPeriod": [
+            36,
+            37
+          ],
+          "largestLead": 22,
+          "fastBreak": 17,
+          "inPaint": 30,
+          "offTurnovers": 12
+        },
+        "twoPointFieldGoals": {
+          "made": 17,
+          "attempted": 31,
+          "pct": 54.8
+        },
+        "threePointFieldGoals": {
+          "made": 8,
+          "attempted": 25,
+          "pct": 32
+        },
+        "freeThrows": {
+          "made": 15,
+          "attempted": 20,
+          "pct": 75
+        },
+        "fieldGoals": {
+          "made": 25,
+          "attempted": 56,
+          "pct": 44.6
+        },
+        "turnovers": {
+          "total": 9,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 13,
+          "defensive": 27,
+          "total": 40
+        },
+        "fouls": {
+          "total": 13,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 51.8,
+          "freeThrowRate": 35.7,
+          "turnoverRatio": 15,
+          "offensiveReboundPct": 32.5
+        }
+      },
+      "opponentStats": {
+        "possessions": 61,
+        "assists": 15,
+        "steals": 6,
+        "blocks": 5,
+        "trueShooting": 47.9,
+        "rating": 83.6,
+        "gameScore": 31.9,
+        "points": {
+          "total": 51,
+          "byPeriod": [
+            16,
+            35
+          ],
+          "largestLead": 0,
+          "fastBreak": 3,
+          "inPaint": 20,
+          "offTurnovers": 13
+        },
+        "twoPointFieldGoals": {
+          "made": 15,
+          "attempted": 34,
+          "pct": 44.1
+        },
+        "threePointFieldGoals": {
+          "made": 6,
+          "attempted": 17,
+          "pct": 35.3
+        },
+        "freeThrows": {
+          "made": 3,
+          "attempted": 5,
+          "pct": 60
+        },
+        "fieldGoals": {
+          "made": 21,
+          "attempted": 51,
+          "pct": 41.2
+        },
+        "turnovers": {
+          "total": 12,
+          "teamTotal": 3
+        },
+        "rebounds": {
+          "offensive": 5,
+          "defensive": 17,
+          "total": 22
+        },
+        "fouls": {
+          "total": 19,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 47.1,
+          "freeThrowRate": 9.8,
+          "turnoverRatio": 19.7,
+          "offensiveReboundPct": 22.7
+        }
+      }
+    },
+    {
+      "gameId": 4224,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-02-01T21:30:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 323,
+      "opponent": "USC",
+      "opponentConference": "Big Ten",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": false,
+      "conferenceGame": true,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 65,
+      "teamStats": {
+        "possessions": 65,
+        "assists": 16,
+        "steals": 5,
+        "blocks": 3,
+        "trueShooting": 49,
+        "rating": 98.5,
+        "gameScore": 43.599999999999994,
+        "points": {
+          "total": 64,
+          "byPeriod": [
+            32,
+            32
+          ],
+          "largestLead": 0,
+          "fastBreak": 9,
+          "inPaint": 34,
+          "offTurnovers": 8
+        },
+        "twoPointFieldGoals": {
+          "made": 19,
+          "attempted": 42,
+          "pct": 45.2
+        },
+        "threePointFieldGoals": {
+          "made": 5,
+          "attempted": 15,
+          "pct": 33.3
+        },
+        "freeThrows": {
+          "made": 11,
+          "attempted": 19,
+          "pct": 57.9
+        },
+        "fieldGoals": {
+          "made": 24,
+          "attempted": 57,
+          "pct": 42.1
+        },
+        "turnovers": {
+          "total": 13,
+          "teamTotal": 1
+        },
+        "rebounds": {
+          "offensive": 11,
+          "defensive": 23,
+          "total": 34
+        },
+        "fouls": {
+          "total": 17,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 46.5,
+          "freeThrowRate": 33.3,
+          "turnoverRatio": 20,
+          "offensiveReboundPct": 32.4
+        }
+      },
+      "opponentStats": {
+        "possessions": 65,
+        "assists": 9,
+        "steals": 2,
+        "blocks": 2,
+        "trueShooting": 53.5,
+        "rating": 107.7,
+        "gameScore": 42.69999999999999,
+        "points": {
+          "total": 70,
+          "byPeriod": [
+            35,
+            35
+          ],
+          "largestLead": 15,
+          "fastBreak": 4,
+          "inPaint": 34,
+          "offTurnovers": 12
+        },
+        "twoPointFieldGoals": {
+          "made": 17,
+          "attempted": 35,
+          "pct": 48.6
+        },
+        "threePointFieldGoals": {
+          "made": 7,
+          "attempted": 22,
+          "pct": 31.8
+        },
+        "freeThrows": {
+          "made": 15,
+          "attempted": 19,
+          "pct": 78.9
+        },
+        "fieldGoals": {
+          "made": 24,
+          "attempted": 57,
+          "pct": 42.1
+        },
+        "turnovers": {
+          "total": 11,
+          "teamTotal": 2
+        },
+        "rebounds": {
+          "offensive": 10,
+          "defensive": 23,
+          "total": 33
+        },
+        "fouls": {
+          "total": 20,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 48.2,
+          "freeThrowRate": 33.3,
+          "turnoverRatio": 16.9,
+          "offensiveReboundPct": 30.3
+        }
+      }
+    },
+    {
+      "gameId": 4359,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-02-05T03:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 313,
+      "opponent": "UCLA",
+      "opponentConference": "Big Ten",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": false,
+      "conferenceGame": true,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 62.5,
+      "teamStats": {
+        "possessions": 63,
+        "assists": 13,
+        "steals": 3,
+        "blocks": 4,
+        "trueShooting": 49.7,
+        "rating": 96.8,
+        "gameScore": 42.7,
+        "points": {
+          "total": 61,
+          "byPeriod": [
+            28,
+            33
+          ],
+          "largestLead": 7,
+          "fastBreak": 9,
+          "inPaint": 26,
+          "offTurnovers": 4
+        },
+        "twoPointFieldGoals": {
+          "made": 15,
+          "attempted": 31,
+          "pct": 48.4
+        },
+        "threePointFieldGoals": {
+          "made": 5,
+          "attempted": 22,
+          "pct": 22.7
+        },
+        "freeThrows": {
+          "made": 16,
+          "attempted": 19,
+          "pct": 84.2
+        },
+        "fieldGoals": {
+          "made": 20,
+          "attempted": 53,
+          "pct": 37.7
+        },
+        "turnovers": {
+          "total": 16,
+          "teamTotal": 1
+        },
+        "rebounds": {
+          "offensive": 14,
+          "defensive": 31,
+          "total": 45
+        },
+        "fouls": {
+          "total": 15,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 42.5,
+          "freeThrowRate": 35.8,
+          "turnoverRatio": 25.4,
+          "offensiveReboundPct": 31.1
+        }
+      },
+      "opponentStats": {
+        "possessions": 62,
+        "assists": 13,
+        "steals": 8,
+        "blocks": 2,
+        "trueShooting": 46.1,
+        "rating": 101.6,
+        "gameScore": 47.00000000000001,
+        "points": {
+          "total": 63,
+          "byPeriod": [
+            35,
+            28
+          ],
+          "largestLead": 11,
+          "fastBreak": 3,
+          "inPaint": 22,
+          "offTurnovers": 19
+        },
+        "twoPointFieldGoals": {
+          "made": 14,
+          "attempted": 32,
+          "pct": 43.8
+        },
+        "threePointFieldGoals": {
+          "made": 7,
+          "attempted": 28,
+          "pct": 25
+        },
+        "freeThrows": {
+          "made": 14,
+          "attempted": 19,
+          "pct": 73.7
+        },
+        "fieldGoals": {
+          "made": 21,
+          "attempted": 60,
+          "pct": 35
+        },
+        "turnovers": {
+          "total": 3,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 8,
+          "defensive": 19,
+          "total": 27
+        },
+        "fouls": {
+          "total": 18,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 40.8,
+          "freeThrowRate": 31.7,
+          "turnoverRatio": 4.8,
+          "offensiveReboundPct": 29.6
+        }
+      }
+    },
+    {
+      "gameId": 4493,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-02-08T17:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 223,
+      "opponent": "Oregon",
+      "opponentConference": "Big Ten",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": true,
+      "conferenceGame": true,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 66.5,
+      "teamStats": {
+        "possessions": 66,
+        "assists": 14,
+        "steals": 4,
+        "blocks": 4,
+        "trueShooting": 65.3,
+        "rating": 130.3,
+        "gameScore": 69.99999999999999,
+        "points": {
+          "total": 86,
+          "byPeriod": [
+            36,
+            50
+          ],
+          "largestLead": 12,
+          "fastBreak": 11,
+          "inPaint": 28,
+          "offTurnovers": 10
+        },
+        "twoPointFieldGoals": {
+          "made": 19,
+          "attempted": 36,
+          "pct": 52.8
+        },
+        "threePointFieldGoals": {
+          "made": 8,
+          "attempted": 18,
+          "pct": 44.4
+        },
+        "freeThrows": {
+          "made": 24,
+          "attempted": 27,
+          "pct": 88.9
+        },
+        "fieldGoals": {
+          "made": 27,
+          "attempted": 54,
+          "pct": 50
+        },
+        "turnovers": {
+          "total": 12,
+          "teamTotal": 1
+        },
+        "rebounds": {
+          "offensive": 10,
+          "defensive": 30,
+          "total": 40
+        },
+        "fouls": {
+          "total": 21,
+          "technical": 1,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 57.4,
+          "freeThrowRate": 50,
+          "turnoverRatio": 18.2,
+          "offensiveReboundPct": 25
+        }
+      },
+      "opponentStats": {
+        "possessions": 67,
+        "assists": 12,
+        "steals": 6,
+        "blocks": 4,
+        "trueShooting": 52,
+        "rating": 110.4,
+        "gameScore": 51,
+        "points": {
+          "total": 74,
+          "byPeriod": [
+            50,
+            24
+          ],
+          "largestLead": 14,
+          "fastBreak": 13,
+          "inPaint": 24,
+          "offTurnovers": 28
+        },
+        "twoPointFieldGoals": {
+          "made": 14,
+          "attempted": 34,
+          "pct": 41.2
+        },
+        "threePointFieldGoals": {
+          "made": 10,
+          "attempted": 27,
+          "pct": 37
+        },
+        "freeThrows": {
+          "made": 16,
+          "attempted": 23,
+          "pct": 69.6
+        },
+        "fieldGoals": {
+          "made": 24,
+          "attempted": 61,
+          "pct": 39.3
+        },
+        "turnovers": {
+          "total": 8,
+          "teamTotal": 1
+        },
+        "rebounds": {
+          "offensive": 11,
+          "defensive": 16,
+          "total": 27
+        },
+        "fouls": {
+          "total": 22,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 47.5,
+          "freeThrowRate": 37.7,
+          "turnoverRatio": 11.9,
+          "offensiveReboundPct": 40.7
+        }
+      }
+    },
+    {
+      "gameId": 4691,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-02-12T02:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 121,
+      "opponent": "Indiana",
+      "opponentConference": "Big Ten",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": true,
+      "conferenceGame": true,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 67,
+      "teamStats": {
+        "possessions": 67,
+        "assists": 15,
+        "steals": 2,
+        "blocks": 4,
+        "trueShooting": 50.8,
+        "rating": 100,
+        "gameScore": 45.6,
+        "points": {
+          "total": 67,
+          "byPeriod": [
+            29,
+            38
+          ],
+          "largestLead": 12,
+          "fastBreak": 19,
+          "inPaint": 32,
+          "offTurnovers": 10
+        },
+        "twoPointFieldGoals": {
+          "made": 17,
+          "attempted": 32,
+          "pct": 53.1
+        },
+        "threePointFieldGoals": {
+          "made": 4,
+          "attempted": 23,
+          "pct": 17.4
+        },
+        "freeThrows": {
+          "made": 21,
+          "attempted": 25,
+          "pct": 84
+        },
+        "fieldGoals": {
+          "made": 21,
+          "attempted": 55,
+          "pct": 38.2
+        },
+        "turnovers": {
+          "total": 11,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 12,
+          "defensive": 24,
+          "total": 36
+        },
+        "fouls": {
+          "total": 24,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 41.8,
+          "freeThrowRate": 45.5,
+          "turnoverRatio": 16.4,
+          "offensiveReboundPct": 33.3
+        }
+      },
+      "opponentStats": {
+        "possessions": 67,
+        "assists": 10,
+        "steals": 8,
+        "blocks": 2,
+        "trueShooting": 57,
+        "rating": 106,
+        "gameScore": 54.69999999999999,
+        "points": {
+          "total": 71,
+          "byPeriod": [
+            32,
+            39
+          ],
+          "largestLead": 9,
+          "fastBreak": 17,
+          "inPaint": 38,
+          "offTurnovers": 13
+        },
+        "twoPointFieldGoals": {
+          "made": 21,
+          "attempted": 37,
+          "pct": 56.8
+        },
+        "threePointFieldGoals": {
+          "made": 3,
+          "attempted": 13,
+          "pct": 23.1
+        },
+        "freeThrows": {
+          "made": 20,
+          "attempted": 28,
+          "pct": 71.4
+        },
+        "fieldGoals": {
+          "made": 24,
+          "attempted": 50,
+          "pct": 48
+        },
+        "turnovers": {
+          "total": 9,
+          "teamTotal": 1
+        },
+        "rebounds": {
+          "offensive": 7,
+          "defensive": 24,
+          "total": 31
+        },
+        "fouls": {
+          "total": 18,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 51,
+          "freeThrowRate": 56,
+          "turnoverRatio": 13.4,
+          "offensiveReboundPct": 22.6
+        }
+      }
+    },
+    {
+      "gameId": 4943,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-02-16T01:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 118,
+      "opponent": "Illinois",
+      "opponentConference": "Big Ten",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": false,
+      "conferenceGame": true,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 64,
+      "teamStats": {
+        "possessions": 63,
+        "assists": 12,
+        "steals": 5,
+        "blocks": 5,
+        "trueShooting": 53.6,
+        "rating": 125.4,
+        "gameScore": 64.4,
+        "points": {
+          "total": 79,
+          "byPeriod": [
+            37,
+            42
+          ],
+          "largestLead": 14,
+          "fastBreak": 6,
+          "inPaint": 40,
+          "offTurnovers": 21
+        },
+        "twoPointFieldGoals": {
+          "made": 28,
+          "attempted": 56,
+          "pct": 50
+        },
+        "threePointFieldGoals": {
+          "made": 5,
+          "attempted": 12,
+          "pct": 41.7
+        },
+        "freeThrows": {
+          "made": 8,
+          "attempted": 13,
+          "pct": 61.5
+        },
+        "fieldGoals": {
+          "made": 33,
+          "attempted": 68,
+          "pct": 48.5
+        },
+        "turnovers": {
+          "total": 7,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 14,
+          "defensive": 27,
+          "total": 41
+        },
+        "fouls": {
+          "total": 15,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 52.2,
+          "freeThrowRate": 19.1,
+          "turnoverRatio": 11.1,
+          "offensiveReboundPct": 34.1
+        }
+      },
+      "opponentStats": {
+        "possessions": 65,
+        "assists": 10,
+        "steals": 4,
+        "blocks": 4,
+        "trueShooting": 47.3,
+        "rating": 100,
+        "gameScore": 42.1,
+        "points": {
+          "total": 65,
+          "byPeriod": [
+            41,
+            24
+          ],
+          "largestLead": 16,
+          "fastBreak": 2,
+          "inPaint": 30,
+          "offTurnovers": 10
+        },
+        "twoPointFieldGoals": {
+          "made": 17,
+          "attempted": 30,
+          "pct": 56.7
+        },
+        "threePointFieldGoals": {
+          "made": 7,
+          "attempted": 33,
+          "pct": 21.2
+        },
+        "freeThrows": {
+          "made": 10,
+          "attempted": 13,
+          "pct": 76.9
+        },
+        "fieldGoals": {
+          "made": 24,
+          "attempted": 63,
+          "pct": 38.1
+        },
+        "turnovers": {
+          "total": 11,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 12,
+          "defensive": 24,
+          "total": 36
+        },
+        "fouls": {
+          "total": 14,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 43.7,
+          "freeThrowRate": 20.6,
+          "turnoverRatio": 16.9,
+          "offensiveReboundPct": 33.3
+        }
+      }
+    },
+    {
+      "gameId": 5019,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-02-19T00:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 236,
+      "opponent": "Purdue",
+      "opponentConference": "Big Ten",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": true,
+      "conferenceGame": true,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 54.5,
+      "teamStats": {
+        "possessions": 55,
+        "assists": 20,
+        "steals": 10,
+        "blocks": 2,
+        "trueShooting": 65.5,
+        "rating": 136.4,
+        "gameScore": 71.30000000000001,
+        "points": {
+          "total": 75,
+          "byPeriod": [
+            33,
+            42
+          ],
+          "largestLead": 13,
+          "fastBreak": 21,
+          "inPaint": 42,
+          "offTurnovers": 19
+        },
+        "twoPointFieldGoals": {
+          "made": 24,
+          "attempted": 35,
+          "pct": 68.6
+        },
+        "threePointFieldGoals": {
+          "made": 4,
+          "attempted": 13,
+          "pct": 30.8
+        },
+        "freeThrows": {
+          "made": 15,
+          "attempted": 21,
+          "pct": 71.4
+        },
+        "fieldGoals": {
+          "made": 28,
+          "attempted": 48,
+          "pct": 58.3
+        },
+        "turnovers": {
+          "total": 8,
+          "teamTotal": 2
+        },
+        "rebounds": {
+          "offensive": 5,
+          "defensive": 18,
+          "total": 23
+        },
+        "fouls": {
+          "total": 13,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 62.5,
+          "freeThrowRate": 43.8,
+          "turnoverRatio": 14.5,
+          "offensiveReboundPct": 21.7
+        }
+      },
+      "opponentStats": {
+        "possessions": 54,
+        "assists": 16,
+        "steals": 4,
+        "blocks": 3,
+        "trueShooting": 63.7,
+        "rating": 122.2,
+        "gameScore": 47.499999999999986,
+        "points": {
+          "total": 66,
+          "byPeriod": [
+            31,
+            35
+          ],
+          "largestLead": 7,
+          "fastBreak": 7,
+          "inPaint": 24,
+          "offTurnovers": 8
+        },
+        "twoPointFieldGoals": {
+          "made": 15,
+          "attempted": 23,
+          "pct": 65.2
+        },
+        "threePointFieldGoals": {
+          "made": 9,
+          "attempted": 24,
+          "pct": 37.5
+        },
+        "freeThrows": {
+          "made": 9,
+          "attempted": 11,
+          "pct": 81.8
+        },
+        "fieldGoals": {
+          "made": 24,
+          "attempted": 47,
+          "pct": 51.1
+        },
+        "turnovers": {
+          "total": 12,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 5,
+          "defensive": 16,
+          "total": 21
+        },
+        "fouls": {
+          "total": 20,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 60.6,
+          "freeThrowRate": 23.4,
+          "turnoverRatio": 22.2,
+          "offensiveReboundPct": 23.8
+        }
+      }
+    },
+    {
+      "gameId": 5167,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-02-22T01:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 170,
+      "opponent": "Michigan",
+      "opponentConference": "Big Ten",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": false,
+      "conferenceGame": true,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 64.5,
+      "teamStats": {
+        "possessions": 64,
+        "assists": 12,
+        "steals": 6,
+        "blocks": 0,
+        "trueShooting": 55.5,
+        "rating": 117.2,
+        "gameScore": 53.10000000000001,
+        "points": {
+          "total": 75,
+          "byPeriod": [
+            34,
+            41
+          ],
+          "largestLead": 13,
+          "fastBreak": 10,
+          "inPaint": 32,
+          "offTurnovers": 18
+        },
+        "twoPointFieldGoals": {
+          "made": 19,
+          "attempted": 39,
+          "pct": 48.7
+        },
+        "threePointFieldGoals": {
+          "made": 9,
+          "attempted": 22,
+          "pct": 40.9
+        },
+        "freeThrows": {
+          "made": 10,
+          "attempted": 15,
+          "pct": 66.7
+        },
+        "fieldGoals": {
+          "made": 28,
+          "attempted": 61,
+          "pct": 45.9
+        },
+        "turnovers": {
+          "total": 11,
+          "teamTotal": 1
+        },
+        "rebounds": {
+          "offensive": 14,
+          "defensive": 20,
+          "total": 34
+        },
+        "fouls": {
+          "total": 19,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 53.3,
+          "freeThrowRate": 24.6,
+          "turnoverRatio": 17.2,
+          "offensiveReboundPct": 41.2
+        }
+      },
+      "opponentStats": {
+        "possessions": 65,
+        "assists": 12,
+        "steals": 5,
+        "blocks": 2,
+        "trueShooting": 53.5,
+        "rating": 95.4,
+        "gameScore": 37.5,
+        "points": {
+          "total": 62,
+          "byPeriod": [
+            38,
+            24
+          ],
+          "largestLead": 8,
+          "fastBreak": 10,
+          "inPaint": 34,
+          "offTurnovers": 11
+        },
+        "twoPointFieldGoals": {
+          "made": 18,
+          "attempted": 29,
+          "pct": 62.1
+        },
+        "threePointFieldGoals": {
+          "made": 5,
+          "attempted": 21,
+          "pct": 23.8
+        },
+        "freeThrows": {
+          "made": 11,
+          "attempted": 18,
+          "pct": 61.1
+        },
+        "fieldGoals": {
+          "made": 23,
+          "attempted": 50,
+          "pct": 46
+        },
+        "turnovers": {
+          "total": 15,
+          "teamTotal": 2
+        },
+        "rebounds": {
+          "offensive": 7,
+          "defensive": 18,
+          "total": 25
+        },
+        "fouls": {
+          "total": 15,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 51,
+          "freeThrowRate": 36,
+          "turnoverRatio": 23.1,
+          "offensiveReboundPct": 28
+        }
+      }
+    },
+    {
+      "gameId": 5392,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-02-26T23:30:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 160,
+      "opponent": "Maryland",
+      "opponentConference": "Big Ten",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": false,
+      "conferenceGame": true,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 67,
+      "teamStats": {
+        "possessions": 67,
+        "assists": 7,
+        "steals": 6,
+        "blocks": 3,
+        "trueShooting": 41.3,
+        "rating": 86.6,
+        "gameScore": 32.599999999999994,
+        "points": {
+          "total": 58,
+          "byPeriod": [
+            21,
+            37
+          ],
+          "largestLead": 9,
+          "fastBreak": 11,
+          "inPaint": 28,
+          "offTurnovers": 8
+        },
+        "twoPointFieldGoals": {
+          "made": 18,
+          "attempted": 50,
+          "pct": 36
+        },
+        "threePointFieldGoals": {
+          "made": 4,
+          "attempted": 15,
+          "pct": 26.7
+        },
+        "freeThrows": {
+          "made": 10,
+          "attempted": 12,
+          "pct": 83.3
+        },
+        "fieldGoals": {
+          "made": 22,
+          "attempted": 65,
+          "pct": 33.8
+        },
+        "turnovers": {
+          "total": 12,
+          "teamTotal": 2
+        },
+        "rebounds": {
+          "offensive": 13,
+          "defensive": 32,
+          "total": 45
+        },
+        "fouls": {
+          "total": 19,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 36.9,
+          "freeThrowRate": 18.5,
+          "turnoverRatio": 17.9,
+          "offensiveReboundPct": 28.9
+        }
+      },
+      "opponentStats": {
+        "possessions": 67,
+        "assists": 4,
+        "steals": 7,
+        "blocks": 4,
+        "trueShooting": 46.3,
+        "rating": 82.1,
+        "gameScore": 33.3,
+        "points": {
+          "total": 55,
+          "byPeriod": [
+            23,
+            32
+          ],
+          "largestLead": 3,
+          "fastBreak": 5,
+          "inPaint": 16,
+          "offTurnovers": 8
+        },
+        "twoPointFieldGoals": {
+          "made": 11,
+          "attempted": 28,
+          "pct": 39.3
+        },
+        "threePointFieldGoals": {
+          "made": 4,
+          "attempted": 20,
+          "pct": 20
+        },
+        "freeThrows": {
+          "made": 21,
+          "attempted": 26,
+          "pct": 80.8
+        },
+        "fieldGoals": {
+          "made": 15,
+          "attempted": 48,
+          "pct": 31.3
+        },
+        "turnovers": {
+          "total": 11,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 4,
+          "defensive": 29,
+          "total": 33
+        },
+        "fouls": {
+          "total": 13,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 35.4,
+          "freeThrowRate": 54.2,
+          "turnoverRatio": 16.4,
+          "offensiveReboundPct": 12.1
+        }
+      }
+    },
+    {
+      "gameId": 5661,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-03-02T18:30:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 355,
+      "opponent": "Wisconsin",
+      "opponentConference": "Big Ten",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": true,
+      "conferenceGame": true,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 73,
+      "teamStats": {
+        "possessions": 73,
+        "assists": 20,
+        "steals": 4,
+        "blocks": 6,
+        "trueShooting": 46.3,
+        "rating": 97.3,
+        "gameScore": 56.60000000000001,
+        "points": {
+          "total": 71,
+          "byPeriod": [
+            32,
+            39
+          ],
+          "largestLead": 10,
+          "fastBreak": 20,
+          "inPaint": 32,
+          "offTurnovers": 7
+        },
+        "twoPointFieldGoals": {
+          "made": 19,
+          "attempted": 44,
+          "pct": 43.2
+        },
+        "threePointFieldGoals": {
+          "made": 9,
+          "attempted": 27,
+          "pct": 33.3
+        },
+        "freeThrows": {
+          "made": 6,
+          "attempted": 13,
+          "pct": 46.2
+        },
+        "fieldGoals": {
+          "made": 28,
+          "attempted": 71,
+          "pct": 39.4
+        },
+        "turnovers": {
+          "total": 9,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 13,
+          "defensive": 38,
+          "total": 51
+        },
+        "fouls": {
+          "total": 17,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 45.8,
+          "freeThrowRate": 18.3,
+          "turnoverRatio": 12.3,
+          "offensiveReboundPct": 25.5
+        }
+      },
+      "opponentStats": {
+        "possessions": 73,
+        "assists": 9,
+        "steals": 3,
+        "blocks": 4,
+        "trueShooting": 43,
+        "rating": 84.9,
+        "gameScore": 36.39999999999999,
+        "points": {
+          "total": 62,
+          "byPeriod": [
+            34,
+            28
+          ],
+          "largestLead": 9,
+          "fastBreak": 8,
+          "inPaint": 32,
+          "offTurnovers": 11
+        },
+        "twoPointFieldGoals": {
+          "made": 17,
+          "attempted": 33,
+          "pct": 51.5
+        },
+        "threePointFieldGoals": {
+          "made": 5,
+          "attempted": 32,
+          "pct": 15.6
+        },
+        "freeThrows": {
+          "made": 13,
+          "attempted": 16,
+          "pct": 81.3
+        },
+        "fieldGoals": {
+          "made": 22,
+          "attempted": 65,
+          "pct": 33.8
+        },
+        "turnovers": {
+          "total": 9,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 8,
+          "defensive": 32,
+          "total": 40
+        },
+        "fouls": {
+          "total": 15,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 37.7,
+          "freeThrowRate": 24.6,
+          "turnoverRatio": 12.3,
+          "offensiveReboundPct": 20
+        }
+      }
+    },
+    {
+      "gameId": 5772,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-03-07T01:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 124,
+      "opponent": "Iowa",
+      "opponentConference": "Big Ten",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": false,
+      "conferenceGame": true,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 72,
+      "teamStats": {
+        "possessions": 72,
+        "assists": 15,
+        "steals": 6,
+        "blocks": 5,
+        "trueShooting": 61.3,
+        "rating": 126.4,
+        "gameScore": 77.50000000000001,
+        "points": {
+          "total": 91,
+          "byPeriod": [
+            30,
+            61
+          ],
+          "largestLead": 17,
+          "fastBreak": 16,
+          "inPaint": 42,
+          "offTurnovers": 20
+        },
+        "twoPointFieldGoals": {
+          "made": 22,
+          "attempted": 34,
+          "pct": 64.7
+        },
+        "threePointFieldGoals": {
+          "made": 9,
+          "attempted": 27,
+          "pct": 33.3
+        },
+        "freeThrows": {
+          "made": 20,
+          "attempted": 30,
+          "pct": 66.7
+        },
+        "fieldGoals": {
+          "made": 31,
+          "attempted": 61,
+          "pct": 50.8
+        },
+        "turnovers": {
+          "total": 8,
+          "teamTotal": 2
+        },
+        "rebounds": {
+          "offensive": 10,
+          "defensive": 26,
+          "total": 36
+        },
+        "fouls": {
+          "total": 15,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 58.2,
+          "freeThrowRate": 49.2,
+          "turnoverRatio": 11.1,
+          "offensiveReboundPct": 27.8
+        }
+      },
+      "opponentStats": {
+        "possessions": 72,
+        "assists": 18,
+        "steals": 4,
+        "blocks": 5,
+        "trueShooting": 59.2,
+        "rating": 116.7,
+        "gameScore": 65.3,
+        "points": {
+          "total": 84,
+          "byPeriod": [
+            37,
+            47
+          ],
+          "largestLead": 14,
+          "fastBreak": 11,
+          "inPaint": 40,
+          "offTurnovers": 11
+        },
+        "twoPointFieldGoals": {
+          "made": 21,
+          "attempted": 40,
+          "pct": 52.5
+        },
+        "threePointFieldGoals": {
+          "made": 9,
+          "attempted": 23,
+          "pct": 39.1
+        },
+        "freeThrows": {
+          "made": 15,
+          "attempted": 18,
+          "pct": 83.3
+        },
+        "fieldGoals": {
+          "made": 30,
+          "attempted": 63,
+          "pct": 47.6
+        },
+        "turnovers": {
+          "total": 10,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 10,
+          "defensive": 25,
+          "total": 35
+        },
+        "fouls": {
+          "total": 25,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 54.8,
+          "freeThrowRate": 28.6,
+          "turnoverRatio": 13.9,
+          "offensiveReboundPct": 28.6
+        }
+      }
+    },
+    {
+      "gameId": 5871,
+      "season": 2025,
+      "seasonLabel": "20242025",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-03-09T16:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 169,
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 170,
+      "opponent": "Michigan",
+      "opponentConference": "Big Ten",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": true,
+      "conferenceGame": true,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 71.5,
+      "teamStats": {
+        "possessions": 72,
+        "assists": 16,
+        "steals": 8,
+        "blocks": 5,
+        "trueShooting": 59.3,
+        "rating": 109.7,
+        "gameScore": 63.2,
+        "points": {
+          "total": 79,
+          "byPeriod": [
+            50,
+            29
+          ],
+          "largestLead": 25,
+          "fastBreak": 14,
+          "inPaint": 22,
+          "offTurnovers": 18
+        },
+        "twoPointFieldGoals": {
+          "made": 16,
+          "attempted": 32,
+          "pct": 50
+        },
+        "threePointFieldGoals": {
+          "made": 9,
+          "attempted": 24,
+          "pct": 37.5
+        },
+        "freeThrows": {
+          "made": 20,
+          "attempted": 24,
+          "pct": 83.3
+        },
+        "fieldGoals": {
+          "made": 25,
+          "attempted": 56,
+          "pct": 44.6
+        },
+        "turnovers": {
+          "total": 15,
+          "teamTotal": 1
+        },
+        "rebounds": {
+          "offensive": 12,
+          "defensive": 27,
+          "total": 39
+        },
+        "fouls": {
+          "total": 23,
+          "technical": 2,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 52.7,
+          "freeThrowRate": 42.9,
+          "turnoverRatio": 20.8,
+          "offensiveReboundPct": 30.8
+        }
+      },
+      "opponentStats": {
+        "possessions": 71,
+        "assists": 10,
+        "steals": 9,
+        "blocks": 2,
+        "trueShooting": 47.9,
+        "rating": 87.3,
+        "gameScore": 35.39999999999999,
+        "points": {
+          "total": 62,
+          "byPeriod": [
+            28,
+            34
+          ],
+          "largestLead": 1,
+          "fastBreak": 9,
+          "inPaint": 30,
+          "offTurnovers": 11
+        },
+        "twoPointFieldGoals": {
+          "made": 16,
+          "attempted": 28,
+          "pct": 57.1
+        },
+        "threePointFieldGoals": {
+          "made": 3,
+          "attempted": 24,
+          "pct": 12.5
+        },
+        "freeThrows": {
+          "made": 21,
+          "attempted": 29,
+          "pct": 72.4
+        },
+        "fieldGoals": {
+          "made": 19,
+          "attempted": 52,
+          "pct": 36.5
+        },
+        "turnovers": {
+          "total": 15,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 9,
+          "defensive": 21,
+          "total": 30
+        },
+        "fouls": {
+          "total": 24,
+          "technical": 2,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 39.4,
+          "freeThrowRate": 55.8,
+          "turnoverRatio": 21.1,
+          "offensiveReboundPct": 30
+        }
+      }
+    }
+  ],
+  "teamSeasonStats": {
+    "season": 2025,
+    "seasonLabel": "20242025",
+    "teamId": 169,
+    "team": "Michigan State",
+    "conference": "Big Ten",
+    "games": 33,
+    "wins": 27,
+    "losses": 6,
+    "totalMinutes": 1335,
+    "pace": 65.6,
+    "teamStats": {
+      "assists": 555,
+      "blocks": 149,
+      "steals": 181,
+      "possessions": 2191,
+      "trueShooting": 56.5,
+      "rating": 117.7,
+      "fieldGoals": {
+        "made": 902,
+        "attempted": 1956,
+        "pct": 46.1
+      },
+      "twoPointFieldGoals": {
+        "made": 705,
+        "attempted": 1316,
+        "pct": 53.6
+      },
+      "threePointFieldGoals": {
+        "made": 197,
+        "attempted": 640,
+        "pct": 30.8
+      },
+      "freeThrows": {
+        "made": 578,
+        "attempted": 740,
+        "pct": 78.1
+      },
+      "rebounds": {
+        "offensive": 390,
+        "defensive": 924,
+        "total": 1314
+      },
+      "turnovers": {
+        "total": 381,
+        "teamTotal": 24
+      },
+      "fouls": {
+        "total": 562,
+        "technical": 6,
+        "flagrant": 0
+      },
+      "points": {
+        "total": 2579,
+        "inPaint": 1204,
+        "offTurnovers": 453,
+        "fastBreak": 533
+      },
+      "fourFactors": {
+        "effectiveFieldGoalPct": 51.2,
+        "turnoverRatio": 0.17,
+        "offensiveReboundPct": 29.7,
+        "freeThrowRate": 37.8
+      }
+    },
+    "opponentStats": {
+      "assists": 412,
+      "blocks": 103,
+      "steals": 198,
+      "possessions": 2185,
+      "trueShooting": 50.7,
+      "rating": 101.6,
+      "fieldGoals": {
+        "made": 771,
+        "attempted": 1912,
+        "pct": 40.3
+      },
+      "twoPointFieldGoals": {
+        "made": 550,
+        "attempted": 1121,
+        "pct": 49.1
+      },
+      "threePointFieldGoals": {
+        "made": 221,
+        "attempted": 791,
+        "pct": 27.9
+      },
+      "freeThrows": {
+        "made": 456,
+        "attempted": 632,
+        "pct": 72.2
+      },
+      "rebounds": {
+        "offensive": 301,
+        "defensive": 714,
+        "total": 1015
+      },
+      "turnovers": {
+        "total": 377,
+        "teamTotal": 20
+      },
+      "fouls": {
+        "total": 648,
+        "technical": 8,
+        "flagrant": 0
+      },
+      "points": {
+        "total": 2219,
+        "inPaint": 948,
+        "offTurnovers": 406,
+        "fastBreak": 302
+      },
+      "fourFactors": {
+        "effectiveFieldGoalPct": 46.1,
+        "turnoverRatio": 0.17,
+        "offensiveReboundPct": 29.7,
+        "freeThrowRate": 33.1
+      }
+    }
+  },
+  "conferenceRankings": {
+    "conference": "Big Ten",
+    "team": "Michigan State",
+    "rankings": {
+      "pointsPerGame": {
+        "rank": 8,
+        "totalTeams": 18,
+        "value": 78.15151515151516
+      },
+      "assistsPerGame": {
+        "rank": 2,
+        "totalTeams": 18,
+        "value": 16.818181818181817
+      },
+      "reboundsPerGame": {
+        "rank": 2,
+        "totalTeams": 18,
+        "value": 39.81818181818182
+      },
+      "stealsPerGame": {
+        "rank": 15,
+        "totalTeams": 18,
+        "value": 5.484848484848484
+      },
+      "blocksPerGame": {
+        "rank": 2,
+        "totalTeams": 18,
+        "value": 4.515151515151516
+      },
+      "fieldGoalPct": {
+        "rank": 9,
+        "totalTeams": 18,
+        "value": 46.1
+      },
+      "threePointPct": {
+        "rank": 18,
+        "totalTeams": 18,
+        "value": 30.8
+      },
+      "freeThrowPct": {
+        "rank": 2,
+        "totalTeams": 18,
+        "value": 78.1
+      },
+      "effectiveFieldGoalPct": {
+        "rank": 13,
+        "totalTeams": 18,
+        "value": 51.2
+      },
+      "offensiveReboundPct": {
+        "rank": 7,
+        "totalTeams": 18,
+        "value": 29.7
+      },
+      "opponentPointsPerGame": {
+        "rank": 3,
+        "totalTeams": 18,
+        "value": 67.24242424242425
+      }
+    }
+  },
+  "d1Rankings": {
+    "level": "Division 1",
+    "team": "Michigan State",
+    "rankings": {
+      "pointsPerGame": {
+        "rank": 74,
+        "totalTeams": 364,
+        "value": 78.15151515151516
+      },
+      "assistsPerGame": {
+        "rank": 19,
+        "totalTeams": 364,
+        "value": 16.818181818181817
+      },
+      "reboundsPerGame": {
+        "rank": 12,
+        "totalTeams": 364,
+        "value": 39.81818181818182
+      },
+      "stealsPerGame": {
+        "rank": 319,
+        "totalTeams": 364,
+        "value": 5.484848484848484
+      },
+      "blocksPerGame": {
+        "rank": 42,
+        "totalTeams": 364,
+        "value": 4.515151515151516
+      },
+      "fieldGoalPct": {
+        "rank": 104,
+        "totalTeams": 364,
+        "value": 46.1
+      },
+      "threePointPct": {
+        "rank": 332,
+        "totalTeams": 364,
+        "value": 30.8
+      },
+      "freeThrowPct": {
+        "rank": 20,
+        "totalTeams": 364,
+        "value": 78.1
+      },
+      "effectiveFieldGoalPct": {
+        "rank": 187,
+        "totalTeams": 364,
+        "value": 51.2
+      },
+      "offensiveReboundPct": {
+        "rank": 194,
+        "totalTeams": 364,
+        "value": 29.7
+      },
+      "opponentPointsPerGame": {
+        "rank": 50,
+        "totalTeams": 364,
+        "value": 67.24242424242425
+      }
+    }
+  },
   "metadata": {
     "totalPlayers": 13,
-    "apiCalls": 3
+    "apiCalls": 8
   }
 }

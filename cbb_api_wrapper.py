@@ -223,11 +223,13 @@ class CollegeBasketballAPI:
             raise ValueError(f"Game with ID {game_id} not found")
     
     # Player statistics endpoints
-    def get_player_season_stats(self, season: int, team: Optional[str] = None) -> List[Dict]:
+    def get_player_season_stats(self, season: int, team: Optional[str] = None, season_type: Optional[str] = None) -> List[Dict]:
         """Get player season statistics."""
         params = {"season": season}
         if team:
             params["team"] = team
+        if season_type:
+            params["seasonType"] = season_type
         return self._make_request("stats/player/season", params)
     
     def get_player_game_stats(self, season: int, team: Optional[str] = None) -> List[Dict]:
@@ -238,11 +240,13 @@ class CollegeBasketballAPI:
         return self._make_request("stats/player/game", params)
     
     # Team statistics endpoints
-    def get_team_season_stats(self, season: int, team: Optional[str] = None) -> List[Dict]:
+    def get_team_season_stats(self, season: int, team: Optional[str] = None, season_type: Optional[str] = None) -> List[Dict]:
         """Get team season statistics."""
         params = {"season": season}
         if team:
             params["team"] = team
+        if season_type:
+            params["seasonType"] = season_type
         return self._make_request("stats/team/season", params)
     
     def get_team_game_stats(self, season: int, team: Optional[str] = None) -> List[Dict]:
@@ -262,6 +266,20 @@ class CollegeBasketballAPI:
         if team:
             params["team"] = team
         return self._make_request("games/players", params)
+    
+    # Team game statistics
+    def get_team_game_stats(self, season: int, start_date: Optional[str] = None, end_date: Optional[str] = None, team: Optional[str] = None, season_type: Optional[str] = None) -> List[Dict]:
+        """Get team game statistics."""
+        params = {"season": season}
+        if start_date:
+            params["startDateRange"] = start_date
+        if end_date:
+            params["endDateRange"] = end_date
+        if team:
+            params["team"] = team
+        if season_type:
+            params["seasonType"] = season_type
+        return self._make_request("games/teams", params)
     
     # Recruiting endpoints
     def get_recruiting_players(self, team: Optional[str] = None, year: Optional[int] = None) -> List[Dict]:

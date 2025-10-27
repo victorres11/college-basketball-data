@@ -9,6 +9,157 @@ import json
 from datetime import datetime
 
 
+def calculate_player_conference_rankings_from_list(all_players_raw, conference_name, target_player_name):
+    """Calculate player's conference rankings for key statistical categories."""
+    
+    
+    # Filter for conference players
+    conference_players = [p for p in all_players_raw if p.get('conference') == conference_name]
+    
+    # Find our player
+    target_player = None
+    for player in conference_players:
+        if target_player_name.lower() in player.get('name', '').lower():
+            target_player = player
+            break
+    
+    if not target_player:
+        return {}
+    
+    rankings = {}
+    
+    # Calculate rankings for key stats
+    stats_to_rank = [
+        ('pointsPerGame', lambda p: (p['points'] / p['games']) if p['games'] > 0 else None),
+        ('assistsPerGame', lambda p: (p['assists'] / p['games']) if p['games'] > 0 else None),
+        ('reboundsPerGame', lambda p: (p['rebounds']['total'] / p['games']) if p['games'] > 0 else None),
+        ('stealsPerGame', lambda p: (p['steals'] / p['games']) if p['games'] > 0 else None),
+        ('blocksPerGame', lambda p: (p['blocks'] / p['games']) if p['games'] > 0 else None),
+        ('fieldGoalPct', lambda p: p['fieldGoals']['pct']),
+        ('threePointPct', lambda p: p['threePointFieldGoals']['pct']),
+        ('freeThrowPct', lambda p: p['freeThrows']['pct']),
+        ('effectiveFieldGoalPct', lambda p: p.get('effectiveFieldGoalPct')),
+        ('assistToTurnoverRatio', lambda p: p['assistsTurnoverRatio']),
+        ('offensiveRating', lambda p: p.get('offensiveRating')),
+        ('defensiveRating', lambda p: p.get('defensiveRating')),
+        ('netRating', lambda p: p.get('netRating')),
+    ]
+    
+    for stat_name, calc_func in stats_to_rank:
+        values = []
+        for player in conference_players:
+            try:
+                value = calc_func(player)
+                if value is not None:
+                    values.append((value, player['name']))
+            except:
+                pass
+        
+        # Sort to determine rank (determine if higher is better)
+        is_higher_better = not ('Turnover' in stat_name or 'defensiveRating' in stat_name)
+        values.sort(reverse=is_higher_better)
+        
+        # Find our player's rank
+        for rank, (value, player_name) in enumerate(values, 1):
+            if target_player_name.lower() in player_name.lower():
+                rankings[stat_name] = {
+                    'rank': rank,
+                    'totalPlayers': len(values),
+                    'value': value
+                }
+                break
+    
+    return rankings
+
+
+def calculate_conference_rankings(api, team_name, conference_name):
+    """Calculate team's conference rankings for key statistical categories."""
+    
+    # Fetch all team season stats
+    print(f"Fetching all team season statistics for {conference_name} and D1 rankings...")
+    all_teams_raw = api.get_team_season_stats(2025, season_type='regular')
+    
+    # Filter for D1 teams (those with conferences and enough games)
+    d1_teams = [team for team in all_teams_raw if team.get('conference') is not None and team.get('games', 0) >= 10]
+    
+    # Filter for conference teams
+    conference_teams = [team for team in all_teams_raw if team.get('conference') == conference_name]
+    
+    # Find our team
+    target_team = None
+    for team in conference_teams:
+        if team_name.lower() in team.get('team', '').lower():
+            target_team = team
+            break
+    
+    if not target_team:
+        print(f"Team {team_name} not found in {conference_name} conference")
+        return {'conference': {}, 'd1': {}}
+    
+    # Helper function to calculate rankings for a set of teams
+    def calculate_rankings_for_teams(teams, target_team_name):
+        rankings = {}
+        target_stats = target_team['teamStats']
+        
+        # Calculate rankings for key stats
+        stats_to_rank = [
+            ('pointsPerGame', lambda t: (t['teamStats']['points']['total'] / t['games']) if t['games'] > 0 else None),
+            ('assistsPerGame', lambda t: (t['teamStats']['assists'] / t['games']) if t['games'] > 0 else None),
+            ('reboundsPerGame', lambda t: (t['teamStats']['rebounds']['total'] / t['games']) if t['games'] > 0 else None),
+            ('stealsPerGame', lambda t: (t['teamStats']['steals'] / t['games']) if t['games'] > 0 else None),
+            ('blocksPerGame', lambda t: (t['teamStats']['blocks'] / t['games']) if t['games'] > 0 else None),
+            ('fieldGoalPct', lambda t: t['teamStats']['fieldGoals']['pct']),
+            ('threePointPct', lambda t: t['teamStats']['threePointFieldGoals']['pct']),
+            ('freeThrowPct', lambda t: t['teamStats']['freeThrows']['pct']),
+            ('effectiveFieldGoalPct', lambda t: t['teamStats']['fourFactors']['effectiveFieldGoalPct']),
+            ('offensiveReboundPct', lambda t: t['teamStats']['fourFactors']['offensiveReboundPct']),
+            ('opponentPointsPerGame', lambda t: (t['opponentStats']['points']['total'] / t['games']) if t['games'] > 0 else None),
+        ]
+        
+        for stat_name, calc_func in stats_to_rank:
+            values = []
+            for team in teams:
+                try:
+                    value = calc_func(team)
+                    if value is not None:
+                        values.append((value, team['team']))
+                except:
+                    pass
+            
+            # Sort to determine rank (determine if higher is better)
+            is_higher_better = not ('opponent' in stat_name or 'Points' in stat_name and 'opponent' in stat_name)
+            values.sort(reverse=is_higher_better)
+            
+            # Find our team's rank
+            for rank, (value, team) in enumerate(values, 1):
+                if team_name.lower() in team.lower():
+                    rankings[stat_name] = {
+                        'rank': rank,
+                        'totalTeams': len(values),
+                        'value': value
+                    }
+                    break
+        
+        return rankings
+    
+    # Calculate conference and D1 rankings
+    conference_rankings = calculate_rankings_for_teams(conference_teams, team_name)
+    d1_rankings = calculate_rankings_for_teams(d1_teams, team_name)
+    
+    return {
+        'conference': {
+            'conference': conference_name,
+            'team': team_name,
+            'rankings': conference_rankings
+        },
+        'd1': {
+            'level': 'Division 1',
+            'team': team_name,
+            'rankings': d1_rankings
+        }
+    }
+
+
 def calculate_regular_season_stats(player_name, game_data):
     """Calculate regular season stats from per-game data for a specific player."""
     player_games = []
@@ -157,6 +308,22 @@ def generate_ucla_data_json():
     print("Fetching recruiting data...")
     recruiting_data = api.get_recruiting_players("UCLA")
     
+    print("Fetching team game stats...")
+    team_game_stats = api.get_team_game_stats(2025, '2024-11-04', '2025-03-17', "ucla", "regular")
+    
+    print("Fetching player season stats with rankings...")
+    player_season_stats = api.get_player_season_stats(2025, "ucla", "regular")
+    
+    print("Fetching team season stats with rankings...")
+    team_season_stats = api.get_team_season_stats(2025, "ucla", "regular")
+    
+    print("Calculating conference rankings...")
+    conference_rankings = calculate_conference_rankings(api, "UCLA", "Big Ten")
+    
+    # Fetch all conference players for individual player rankings (one-time fetch)
+    print("Fetching all conference player stats for rankings...")
+    all_conference_players = api.get_player_season_stats(2025, season_type='regular')
+    
     # Create lookups
     roster_lookup = {}
     if roster_data and len(roster_data) > 0 and 'players' in roster_data[0]:
@@ -198,6 +365,27 @@ def generate_ucla_data_json():
         'dataGenerated': datetime.now().isoformat(),
         'players': []
     }
+    
+    # Add team game stats if available
+    if team_game_stats:
+        team_data['teamGameStats'] = team_game_stats
+    
+    # Add team season stats with rankings if available
+    if team_season_stats and len(team_season_stats) > 0:
+        team_data['teamSeasonStats'] = team_season_stats[0]  # Usually just one team
+    
+    # Add conference and D1 rankings if available
+    if conference_rankings:
+        team_data['conferenceRankings'] = conference_rankings['conference']
+        team_data['d1Rankings'] = conference_rankings['d1']
+    
+    # Create lookup for player season stats (for rankings)
+    player_stats_lookup = {}
+    if player_season_stats:
+        for player in player_season_stats:
+            player_name = player.get('name', '')
+            if player_name:
+                player_stats_lookup[player_name.lower()] = player
     
     # Process each player
     for player_name in sorted(unique_players):
@@ -302,6 +490,16 @@ def generate_ucla_data_json():
             },
             'gameByGame': stats.get('game_by_game', [])
         }
+        
+        # Add player season stats with rankings if available
+        player_season_data = player_stats_lookup.get(player_name.lower())
+        if player_season_data:
+            player_record['seasonStatsWithRankings'] = player_season_data
+        
+        # Calculate player's conference rankings (using cached conference players)
+        player_conference_rankings = calculate_player_conference_rankings_from_list(all_conference_players, "Big Ten", player_name)
+        if player_conference_rankings:
+            player_record['conferenceRankings'] = player_conference_rankings
         
         team_data['players'].append(player_record)
     
