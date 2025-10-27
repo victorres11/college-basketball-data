@@ -1,0 +1,1095 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaxon Kohler - Complete Statistics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #18453b 0%, #2d5a4f 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .season-summary {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 5px solid #18453b;
+        }
+        
+        .season-summary h2 {
+            color: #18453b;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .stat-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #18453b;
+        }
+        
+        .games-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        .games-table th,
+        .games-table td {
+            padding: 8px 6px;
+            text-align: center;
+            border: 1px solid #dee2e6;
+        }
+        
+        .games-table th {
+            background: #18453b;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        
+        .games-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .games-table tr:hover {
+            background: #e3f2fd;
+        }
+        
+        .game-number {
+            font-weight: bold;
+            color: #18453b;
+        }
+        
+        .date-cell {
+            font-size: 11px;
+            white-space: nowrap;
+        }
+        
+        .opponent-cell {
+            text-align: left;
+            font-weight: 500;
+            max-width: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .percentage {
+            font-weight: bold;
+        }
+        
+        .high-value {
+            background: #d4edda;
+            font-weight: bold;
+        }
+        
+        .low-value {
+            background: #f8d7da;
+            font-weight: bold;
+        }
+        
+        .summary-section {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .summary-section h3 {
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        
+        .summary-item {
+            text-align: center;
+        }
+        
+        .summary-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+        
+        .summary-value {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .games-table {
+                font-size: 11px;
+            }
+            
+            .games-table th,
+            .games-table td {
+                padding: 4px 2px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏀 Jaxon Kohler</h1>
+            <p>Michigan State Spartans • 2024 Season • Complete Statistics</p>
+        </div>
+        
+        <div class="content">
+            <div class="season-summary">
+                <h2>📊 Season Summary</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-label">Games Played</div>
+                        <div class="stat-value">31</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Games Started</div>
+                        <div class="stat-value">28</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Field Goals</div>
+                        <div class="stat-value">97-193</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Field Goal %</div>
+                        <div class="stat-value">50.3%</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">3-Pointers</div>
+                        <div class="stat-value">14-45</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">3-Point %</div>
+                        <div class="stat-value">31.1%</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Free Throws</div>
+                        <div class="stat-value">44-53</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Free Throw %</div>
+                        <div class="stat-value">83.0%</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Offensive Rebounds</div>
+                        <div class="stat-value">82</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Defensive Rebounds</div>
+                        <div class="stat-value">159</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Total Rebounds</div>
+                        <div class="stat-value">241</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Rebounds Per Game</div>
+                        <div class="stat-value">7.8</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Fouls</div>
+                        <div class="stat-value">53</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Assists</div>
+                        <div class="stat-value">41</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Assists Per Game</div>
+                        <div class="stat-value">1.3</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">A/T Ratio</div>
+                        <div class="stat-value">1.02</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Steals</div>
+                        <div class="stat-value">13</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Steals Per Game</div>
+                        <div class="stat-value">0.4</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Blocks</div>
+                        <div class="stat-value">25</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Blocks Per Game</div>
+                        <div class="stat-value">0.8</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Minutes</div>
+                        <div class="stat-value">645</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Minutes Per Game</div>
+                        <div class="stat-value">20.8</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Points</div>
+                        <div class="stat-value">252</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Points Per Game</div>
+                        <div class="stat-value">8.1</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="summary-section">
+                <h3>🎯 Key Performance Metrics</h3>
+                <div class="summary-grid">
+                    <div class="summary-item">
+                        <div class="summary-label">Games Started</div>
+                        <div class="summary-value">28/31</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-label">Start %</div>
+                        <div class="summary-value">90.3%</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-label">FG%</div>
+                        <div class="summary-value">50.3%</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-label">3P%</div>
+                        <div class="summary-value">31.1%</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-label">FT%</div>
+                        <div class="summary-value">83.0%</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-label">A/T Ratio</div>
+                        <div class="summary-value">1.02</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>🎮 Game-by-Game Statistics</h2>
+            <table class="games-table">
+                <thead>
+                    <tr>
+                        <th>G</th>
+                        <th>GS</th>
+                        <th>Date</th>
+                        <th>Opponent</th>
+                        <th>FG-FGA</th>
+                        <th>FG%</th>
+                        <th>3P-3PA</th>
+                        <th>FT-FTA</th>
+                        <th>OR</th>
+                        <th>DR</th>
+                        <th>Reb</th>
+                        <th>DQ</th>
+                        <th>AST</th>
+                        <th>APG</th>
+                        <th>Ratio</th>
+                        <th>SPG</th>
+                        <th>BLK</th>
+                        <th>BPG</th>
+                        <th>MPG</th>
+                        <th>PPG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr>
+            <td class="game-number">1</td>
+            <td>0</td>
+            <td class="date-cell">2024-11-05</td>
+            <td class="opponent-cell">Monmouth</td>
+            <td>2-5</td>
+            <td class="percentage ">40.0%</td>
+            <td>1-2</td>
+            <td>0-0</td>
+            <td>2</td>
+            <td>6</td>
+            <td>8</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0.0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>18</td>
+            <td class="">5</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">2</td>
+            <td>0</td>
+            <td class="date-cell">2024-11-08</td>
+            <td class="opponent-cell">Niagara</td>
+            <td>8-12</td>
+            <td class="percentage high-value">66.7%</td>
+            <td>0-2</td>
+            <td>4-5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>13</td>
+            <td>2</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>2</td>
+            <td>0</td>
+            <td>0</td>
+            <td>18</td>
+            <td class="high-value">20</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">3</td>
+            <td>0</td>
+            <td class="date-cell">2024-11-12</td>
+            <td class="opponent-cell">Kansas</td>
+            <td>5-14</td>
+            <td class="percentage ">35.7%</td>
+            <td>1-5</td>
+            <td>1-1</td>
+            <td>4</td>
+            <td>6</td>
+            <td>10</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1.0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>23</td>
+            <td class="high-value">12</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">4</td>
+            <td>1</td>
+            <td class="date-cell">2024-11-16</td>
+            <td class="opponent-cell">Bowling Green</td>
+            <td>2-3</td>
+            <td class="percentage high-value">66.7%</td>
+            <td>0-0</td>
+            <td>6-6</td>
+            <td>0</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>2</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>16</td>
+            <td class="high-value">10</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">5</td>
+            <td>1</td>
+            <td class="date-cell">2024-11-20</td>
+            <td class="opponent-cell">Samford</td>
+            <td>1-2</td>
+            <td class="percentage ">50.0%</td>
+            <td>0-1</td>
+            <td>2-2</td>
+            <td>0</td>
+            <td>6</td>
+            <td>6</td>
+            <td>1</td>
+            <td>2</td>
+            <td>2</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>16</td>
+            <td class="">4</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">6</td>
+            <td>1</td>
+            <td class="date-cell">2024-11-25</td>
+            <td class="opponent-cell">Colorado</td>
+            <td>2-4</td>
+            <td class="percentage ">50.0%</td>
+            <td>0-2</td>
+            <td>0-0</td>
+            <td>1</td>
+            <td>6</td>
+            <td>7</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0.0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>20</td>
+            <td class="">4</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">7</td>
+            <td>1</td>
+            <td class="date-cell">2024-11-26</td>
+            <td class="opponent-cell">Memphis</td>
+            <td>3-7</td>
+            <td class="percentage ">42.9%</td>
+            <td>1-1</td>
+            <td>0-3</td>
+            <td>3</td>
+            <td>5</td>
+            <td>8</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>0.5</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>28</td>
+            <td class="">7</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">8</td>
+            <td>1</td>
+            <td class="date-cell">2024-11-28</td>
+            <td class="opponent-cell">North Carolina</td>
+            <td>1-7</td>
+            <td class="percentage low-value">14.3%</td>
+            <td>0-2</td>
+            <td>1-2</td>
+            <td>0</td>
+            <td>5</td>
+            <td>5</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>13</td>
+            <td class="">3</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">9</td>
+            <td>1</td>
+            <td class="date-cell">2024-12-05</td>
+            <td class="opponent-cell">Minnesota</td>
+            <td>3-4</td>
+            <td class="percentage high-value">75.0%</td>
+            <td>1-1</td>
+            <td>4-4</td>
+            <td>3</td>
+            <td>8</td>
+            <td>11</td>
+            <td>0</td>
+            <td>2</td>
+            <td>2</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>26</td>
+            <td class="high-value">11</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">10</td>
+            <td>1</td>
+            <td class="date-cell">2024-12-07</td>
+            <td class="opponent-cell">Nebraska</td>
+            <td>3-3</td>
+            <td class="percentage high-value">100.0%</td>
+            <td>0-0</td>
+            <td>2-2</td>
+            <td>7</td>
+            <td>5</td>
+            <td>12</td>
+            <td>1</td>
+            <td>4</td>
+            <td>4</td>
+            <td>1.0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>2</td>
+            <td>24</td>
+            <td class="">8</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">11</td>
+            <td>1</td>
+            <td class="date-cell">2024-12-18</td>
+            <td class="opponent-cell">Oakland</td>
+            <td>6-11</td>
+            <td class="percentage ">54.5%</td>
+            <td>0-1</td>
+            <td>2-2</td>
+            <td>3</td>
+            <td>7</td>
+            <td>10</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0.5</td>
+            <td>0</td>
+            <td>3</td>
+            <td>3</td>
+            <td>25</td>
+            <td class="high-value">14</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">12</td>
+            <td>1</td>
+            <td class="date-cell">2024-12-21</td>
+            <td class="opponent-cell">Florida Atlantic</td>
+            <td>2-9</td>
+            <td class="percentage low-value">22.2%</td>
+            <td>0-1</td>
+            <td>2-2</td>
+            <td>4</td>
+            <td>8</td>
+            <td>12</td>
+            <td>3</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0.5</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>22</td>
+            <td class="">6</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">13</td>
+            <td>1</td>
+            <td class="date-cell">2024-12-30</td>
+            <td class="opponent-cell">Western Michigan</td>
+            <td>0-4</td>
+            <td class="percentage low-value">0.0%</td>
+            <td>0-2</td>
+            <td>1-2</td>
+            <td>1</td>
+            <td>3</td>
+            <td>4</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0.0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>16</td>
+            <td class="">1</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">14</td>
+            <td>1</td>
+            <td class="date-cell">2025-01-04</td>
+            <td class="opponent-cell">Ohio State</td>
+            <td>3-5</td>
+            <td class="percentage high-value">60.0%</td>
+            <td>0-1</td>
+            <td>2-2</td>
+            <td>4</td>
+            <td>6</td>
+            <td>10</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1.0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>20</td>
+            <td class="">8</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">15</td>
+            <td>1</td>
+            <td class="date-cell">2025-01-10</td>
+            <td class="opponent-cell">Washington</td>
+            <td>2-2</td>
+            <td class="percentage high-value">100.0%</td>
+            <td>0-0</td>
+            <td>2-2</td>
+            <td>0</td>
+            <td>7</td>
+            <td>7</td>
+            <td>1</td>
+            <td>4</td>
+            <td>4</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>17</td>
+            <td class="">6</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">16</td>
+            <td>1</td>
+            <td class="date-cell">2025-01-12</td>
+            <td class="opponent-cell">Northwestern</td>
+            <td>4-4</td>
+            <td class="percentage high-value">100.0%</td>
+            <td>0-0</td>
+            <td>0-0</td>
+            <td>4</td>
+            <td>1</td>
+            <td>5</td>
+            <td>3</td>
+            <td>5</td>
+            <td>5</td>
+            <td>2.5</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>22</td>
+            <td class="">8</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">17</td>
+            <td>1</td>
+            <td class="date-cell">2025-01-16</td>
+            <td class="opponent-cell">Penn State</td>
+            <td>3-9</td>
+            <td class="percentage ">33.3%</td>
+            <td>1-3</td>
+            <td>0-0</td>
+            <td>3</td>
+            <td>3</td>
+            <td>6</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>18</td>
+            <td class="">7</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">18</td>
+            <td>1</td>
+            <td class="date-cell">2025-01-19</td>
+            <td class="opponent-cell">Illinois</td>
+            <td>4-9</td>
+            <td class="percentage ">44.4%</td>
+            <td>0-1</td>
+            <td>0-0</td>
+            <td>3</td>
+            <td>3</td>
+            <td>6</td>
+            <td>1</td>
+            <td>2</td>
+            <td>2</td>
+            <td>0.67</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>20</td>
+            <td class="">8</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">19</td>
+            <td>1</td>
+            <td class="date-cell">2025-01-25</td>
+            <td class="opponent-cell">Rutgers</td>
+            <td>1-1</td>
+            <td class="percentage high-value">100.0%</td>
+            <td>0-0</td>
+            <td>0-0</td>
+            <td>0</td>
+            <td>2</td>
+            <td>2</td>
+            <td>3</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0.0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>10</td>
+            <td class="">2</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">20</td>
+            <td>1</td>
+            <td class="date-cell">2025-01-29</td>
+            <td class="opponent-cell">Minnesota</td>
+            <td>3-6</td>
+            <td class="percentage ">50.0%</td>
+            <td>2-4</td>
+            <td>0-0</td>
+            <td>1</td>
+            <td>6</td>
+            <td>7</td>
+            <td>3</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1.0</td>
+            <td>0</td>
+            <td>2</td>
+            <td>2</td>
+            <td>18</td>
+            <td class="">8</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">21</td>
+            <td>1</td>
+            <td class="date-cell">2025-02-01</td>
+            <td class="opponent-cell">USC</td>
+            <td>1-2</td>
+            <td class="percentage ">50.0%</td>
+            <td>0-1</td>
+            <td>0-0</td>
+            <td>1</td>
+            <td>7</td>
+            <td>8</td>
+            <td>3</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0.5</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>19</td>
+            <td class="">2</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">22</td>
+            <td>1</td>
+            <td class="date-cell">2025-02-05</td>
+            <td class="opponent-cell">UCLA</td>
+            <td>3-5</td>
+            <td class="percentage high-value">60.0%</td>
+            <td>0-0</td>
+            <td>2-2</td>
+            <td>4</td>
+            <td>3</td>
+            <td>7</td>
+            <td>3</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0.33</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>13</td>
+            <td class="">8</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">23</td>
+            <td>1</td>
+            <td class="date-cell">2025-02-08</td>
+            <td class="opponent-cell">Oregon</td>
+            <td>5-9</td>
+            <td class="percentage ">55.6%</td>
+            <td>1-2</td>
+            <td>3-3</td>
+            <td>4</td>
+            <td>8</td>
+            <td>12</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0.5</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>31</td>
+            <td class="high-value">14</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">24</td>
+            <td>1</td>
+            <td class="date-cell">2025-02-12</td>
+            <td class="opponent-cell">Indiana</td>
+            <td>2-5</td>
+            <td class="percentage ">40.0%</td>
+            <td>0-0</td>
+            <td>1-1</td>
+            <td>3</td>
+            <td>4</td>
+            <td>7</td>
+            <td>4</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1.0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>18</td>
+            <td class="">5</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">25</td>
+            <td>1</td>
+            <td class="date-cell">2025-02-16</td>
+            <td class="opponent-cell">Illinois</td>
+            <td>9-13</td>
+            <td class="percentage high-value">69.2%</td>
+            <td>4-5</td>
+            <td>1-3</td>
+            <td>6</td>
+            <td>4</td>
+            <td>10</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>30</td>
+            <td class="high-value">23</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">26</td>
+            <td>1</td>
+            <td class="date-cell">2025-02-19</td>
+            <td class="opponent-cell">Purdue</td>
+            <td>4-5</td>
+            <td class="percentage high-value">80.0%</td>
+            <td>1-2</td>
+            <td>0-0</td>
+            <td>1</td>
+            <td>3</td>
+            <td>4</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0.5</td>
+            <td>0</td>
+            <td>2</td>
+            <td>2</td>
+            <td>27</td>
+            <td class="">9</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">27</td>
+            <td>1</td>
+            <td class="date-cell">2025-02-22</td>
+            <td class="opponent-cell">Michigan</td>
+            <td>1-5</td>
+            <td class="percentage low-value">20.0%</td>
+            <td>0-2</td>
+            <td>0-0</td>
+            <td>2</td>
+            <td>2</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3.0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>20</td>
+            <td class="">2</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">28</td>
+            <td>1</td>
+            <td class="date-cell">2025-02-26</td>
+            <td class="opponent-cell">Maryland</td>
+            <td>1-3</td>
+            <td class="percentage ">33.3%</td>
+            <td>0-0</td>
+            <td>1-1</td>
+            <td>2</td>
+            <td>6</td>
+            <td>8</td>
+            <td>3</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>18</td>
+            <td class="">3</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">29</td>
+            <td>1</td>
+            <td class="date-cell">2025-03-02</td>
+            <td class="opponent-cell">Wisconsin</td>
+            <td>4-10</td>
+            <td class="percentage ">40.0%</td>
+            <td>0-2</td>
+            <td>2-3</td>
+            <td>7</td>
+            <td>9</td>
+            <td>16</td>
+            <td>1</td>
+            <td>2</td>
+            <td>2</td>
+            <td>1.0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>30</td>
+            <td class="high-value">10</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">30</td>
+            <td>1</td>
+            <td class="date-cell">2025-03-07</td>
+            <td class="opponent-cell">Iowa</td>
+            <td>5-7</td>
+            <td class="percentage high-value">71.4%</td>
+            <td>0-0</td>
+            <td>5-5</td>
+            <td>1</td>
+            <td>5</td>
+            <td>6</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>24</td>
+            <td class="high-value">15</td>
+        </tr>
+        
+        <tr>
+            <td class="game-number">31</td>
+            <td>1</td>
+            <td class="date-cell">2025-03-09</td>
+            <td class="opponent-cell">Michigan</td>
+            <td>4-8</td>
+            <td class="percentage ">50.0%</td>
+            <td>1-2</td>
+            <td>0-0</td>
+            <td>2</td>
+            <td>5</td>
+            <td>7</td>
+            <td>3</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1.0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>2</td>
+            <td>25</td>
+            <td class="">9</td>
+        </tr>
+        
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

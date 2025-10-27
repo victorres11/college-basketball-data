@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michigan State Scouting Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial Narrow', Arial, sans-serif;
+            width: 8.5in;
+            margin: 0;
+            padding: 0;
+            background: white;
+            color: black;
+            line-height: 1.2;
+        }
+        
+        .content-container {
+            padding: 0.15in;
+        }
+        
+        .page-header {
+            margin-bottom: 0.15in;
+            border-bottom: 2px solid black;
+            padding-bottom: 0.1in;
+        }
+        
+        .team-name {
+            font-size: 18pt;
+            font-weight: bold;
+            margin-bottom: 0.05in;
+        }
+        
+        .records-grid {
+            font-size: 9pt;
+        }
+        
+        .record-line {
+            display: flex;
+            gap: 0.2in;
+            margin-bottom: 0.03in;
+        }
+        
+        .record-label {
+            font-weight: bold;
+        }
+        
+        .record-item {
+            margin-right: 0.05in;
+        }
+        
+        .coach-section {
+            margin-top: 0.08in;
+            font-size: 9pt;
+        }
+        
+        .coach-line {
+            font-weight: bold;
+            margin-bottom: 0.02in;
+        }
+        
+        .coach-notes {
+            font-size: 8pt;
+        }
+        
+        .player-cards-grid {
+            margin-bottom: 0.3in;
+            padding-left: 0.1in;
+            padding-right: 0.1in;
+        }
+        
+        .compact-player-card {
+            border: 1px solid black;
+            padding: 4px;
+            width: 100%;
+            background: white;
+            margin-bottom: 0.1in;
+            margin-left: 0;
+            margin-right: auto;
+        }
+        
+        .freshman-card {
+            background-color: #e8f5e9 !important;
+        }
+        
+        .freshman-name {
+            color: #2e7d32 !important;
+            font-weight: bold;
+        }
+        
+        .bench-section {
+            margin-top: 0.3in;
+            margin-bottom: 0.3in;
+        }
+        
+        .bench-header {
+            font-size: 11pt;
+            font-weight: bold;
+            margin-bottom: 0.1in;
+            padding-bottom: 0.05in;
+            border-bottom: 1px solid black;
+        }
+        
+        .card-header-compact {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 3px;
+        }
+        
+        .jersey-large {
+            font-size: 42pt;
+            font-weight: bold;
+            line-height: 1;
+            margin-right: 5px;
+        }
+        
+        .name-section {
+            flex: 1;
+        }
+        
+        .player-name-compact {
+            font-size: 12pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+        
+        .player-bio-compact {
+            font-size: 9pt;
+        }
+        
+        .bio-line-compact {
+            font-size: 8pt;
+            margin-bottom: 3px;
+        }
+        
+        .last-game-compact {
+            font-size: 7.5pt;
+            margin-bottom: 5px;
+        }
+        
+        .stats-table-compact {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 6.5pt;
+            margin-bottom: 4px;
+        }
+        
+        .stats-table-compact td {
+            border: 0.5px solid #333;
+            padding: 1px;
+            text-align: right;
+        }
+        
+        .stats-table-compact .header-row td {
+            font-weight: bold;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+        
+        .summary-line {
+            font-size: 8pt;
+            text-align: right;
+            margin-bottom: 3px;
+        }
+        
+        .foul-circles {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 5px;
+        }
+        
+        .foul-circle {
+            width: 10px;
+            height: 10px;
+            border: 1px solid black;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        
+        /* Keep existing table styles from original report */
+        .team-stats-section {
+            margin-top: 0.4in;
+        }
+        
+        .team-stats-section h2 {
+            font-size: 12pt;
+            margin-bottom: 0.1in;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+        }
+        
+        .team-stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 8pt;
+        }
+        
+        .team-stats-table th,
+        .team-stats-table td {
+            border: 0.5px solid #333;
+            padding: 2px 4px;
+            text-align: center;
+        }
+        
+        .team-stats-table th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="page-header">
+        <div class="team-header">
+            <h1 class="team-name">Michigan State</h1>
+            <div class="records-grid">
+                <div class="record-line">
+                    <span class="record-label">Overall:</span>
+                    <span class="record-value">[OVERALL: TBD]</span>
+                    <span class="record-label">Conference:</span>
+                    <span class="record-value">[CONF: TBD]</span>
+                </div>
+                <div class="record-line">
+                    <span class="record-item">KP:</span><span>[KP: TBD]</span>
+                    <span class="record-item">NET:</span><span>[NET: TBD]</span>
+                    <span class="record-item">Hm:</span><span>[HOME: TBD]</span>
+                    <span class="record-item">Rd:</span><span>[ROAD: TBD]</span>
+                    <span class="record-item">Neu:</span><span>[NEUTRAL: TBD]</span>
+                </div>
+                <div class="record-line">
+                    <span class="record-item">Q1:</span><span>[Q1: TBD]</span>
+                    <span class="record-item">Q2:</span><span>[Q2: TBD]</span>
+                    <span class="record-item">Q3:</span><span>[Q3: TBD]</span>
+                    <span class="record-item">Q4:</span><span>[Q4: TBD]</span>
+                    <span class="record-item">1P:</span><span>[1P: TBD]</span>
+                    <span class="record-item">2P:</span><span>[2P: TBD]</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="coach-section">
+            <div class="coach-line">[COACH: TBD] - [YEARS] ([TOTAL])</div>
+            <div class="coach-notes">[Coach achievements and notes to be added]</div>
+        </div>
+    </div>
+    
+    
+    <div class="player-cards-grid">
+        
+    <div class="compact-player-card ">
+        <div class="card-header-compact">
+            <span class="jersey-large">3</span>
+            <div class="name-section">
+                <div class="player-name-compact ">JADEN AKINS</div>
+                <div class="player-bio-compact">SR 6-4 Guard</div>
+            </div>
+        </div>
+        
+        <div class="bio-line-compact">Farmington, MI (Ypsi Prep Academy)</div>
+        <div class="last-game-compact">11p, 5r, 3a, 3to, 2s, 0b, 4-14fg, 0-0ft, (3-9)3p, [27]</div>
+        
+        <table class="stats-table-compact">
+            <tr class="header-row">
+                <td>G</td><td>GS</td><td>FG-FGA</td><td>FG%</td><td>3P-3PA</td><td>FT-FTA</td><td>OR</td><td>DR</td><td>Reb</td><td>DQ</td><td>AST</td><td>APG</td><td>ratio</td><td>SPG</td><td>BLK</td><td>BPG</td><td>MPG</td>
+            </tr>
+            <tr class="value-row">
+                <td>31</td><td>31</td><td>147-368</td><td>39.9%</td><td>48-162</td><td>59-73</td><td>23</td><td>91</td><td>114</td><td>0</td><td>50</td><td>1.6</td><td>1.6</td><td>0.8</td><td>8</td><td>0.3</td><td>27</td>
+            </tr>
+        </table>
+        
+        <div class="summary-line">3P% 29.6% FT% 80.8% RPG 3.7 PPG 12.9</div>
+        
+        <div class="foul-circles">
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+        </div>
+    </div>
+    
+    <div class="compact-player-card freshman-card">
+        <div class="card-header-compact">
+            <span class="jersey-large">11</span>
+            <div class="name-section">
+                <div class="player-name-compact freshman-name">JASE RICHARDSON</div>
+                <div class="player-bio-compact">FR 6-3 Guard</div>
+            </div>
+        </div>
+        
+        <div class="bio-line-compact">Denver, CO (Columbus)</div>
+        <div class="last-game-compact">18p, 5r, 3a, 2to, 1s, 0b, 6-10fg, 4-4ft, (2-5)3p, [30]</div>
+        
+        <table class="stats-table-compact">
+            <tr class="header-row">
+                <td>G</td><td>GS</td><td>FG-FGA</td><td>FG%</td><td>3P-3PA</td><td>FT-FTA</td><td>OR</td><td>DR</td><td>Reb</td><td>DQ</td><td>AST</td><td>APG</td><td>ratio</td><td>SPG</td><td>BLK</td><td>BPG</td><td>MPG</td>
+            </tr>
+            <tr class="value-row">
+                <td>30</td><td>9</td><td>119-227</td><td>52.4%</td><td>33-85</td><td>76-89</td><td>18</td><td>75</td><td>93</td><td>0</td><td>59</td><td>2.0</td><td>2.0</td><td>0.8</td><td>9</td><td>0.3</td><td>24</td>
+            </tr>
+        </table>
+        
+        <div class="summary-line">3P% 38.8% FT% 85.4% RPG 3.1 PPG 11.6</div>
+        
+        <div class="foul-circles">
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+        </div>
+    </div>
+    
+    <div class="compact-player-card ">
+        <div class="card-header-compact">
+            <span class="jersey-large">5</span>
+            <div class="name-section">
+                <div class="player-name-compact ">TRE HOLLOMAN</div>
+                <div class="player-bio-compact">JR 6-2 Guard</div>
+            </div>
+        </div>
+        
+        <div class="bio-line-compact">Minneapolis, MN (Cretin Derham Hall)</div>
+        <div class="last-game-compact">20p, 3r, 1a, 1to, 0s, 0b, 8-12fg, 1-3ft, (3-5)3p, [26]</div>
+        
+        <table class="stats-table-compact">
+            <tr class="header-row">
+                <td>G</td><td>GS</td><td>FG-FGA</td><td>FG%</td><td>3P-3PA</td><td>FT-FTA</td><td>OR</td><td>DR</td><td>Reb</td><td>DQ</td><td>AST</td><td>APG</td><td>ratio</td><td>SPG</td><td>BLK</td><td>BPG</td><td>MPG</td>
+            </tr>
+            <tr class="value-row">
+                <td>31</td><td>16</td><td>97-249</td><td>39.0%</td><td>41-124</td><td>46-54</td><td>6</td><td>54</td><td>60</td><td>0</td><td>117</td><td>3.8</td><td>3.8</td><td>0.8</td><td>8</td><td>0.3</td><td>23</td>
+            </tr>
+        </table>
+        
+        <div class="summary-line">3P% 33.1% FT% 85.2% RPG 1.9 PPG 9.1</div>
+        
+        <div class="foul-circles">
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+        </div>
+    </div>
+    
+    <div class="compact-player-card ">
+        <div class="card-header-compact">
+            <span class="jersey-large">1</span>
+            <div class="name-section">
+                <div class="player-name-compact ">JEREMY FEARS JR.</div>
+                <div class="player-bio-compact">JR 6-2 Guard</div>
+            </div>
+        </div>
+        
+        <div class="bio-line-compact">Joliet, IL (Joliet West)</div>
+        <div class="last-game-compact">7p, 1r, 6a, 5to, 3s, 0b, 0-1fg, 7-8ft, (0-0)3p, [19]</div>
+        
+        <table class="stats-table-compact">
+            <tr class="header-row">
+                <td>G</td><td>GS</td><td>FG-FGA</td><td>FG%</td><td>3P-3PA</td><td>FT-FTA</td><td>OR</td><td>DR</td><td>Reb</td><td>DQ</td><td>AST</td><td>APG</td><td>ratio</td><td>SPG</td><td>BLK</td><td>BPG</td><td>MPG</td>
+            </tr>
+            <tr class="value-row">
+                <td>30</td><td>30</td><td>59-147</td><td>40.1%</td><td>12-30</td><td>81-108</td><td>7</td><td>54</td><td>61</td><td>0</td><td>166</td><td>5.5</td><td>5.5</td><td>1.1</td><td>5</td><td>0.2</td><td>23</td>
+            </tr>
+        </table>
+        
+        <div class="summary-line">3P% 40.0% FT% 75.0% RPG 2.0 PPG 7.0</div>
+        
+        <div class="foul-circles">
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+        </div>
+    </div>
+    
+    <div class="compact-player-card ">
+        <div class="card-header-compact">
+            <span class="jersey-large">0</span>
+            <div class="name-section">
+                <div class="player-name-compact ">JAXON KOHLER</div>
+                <div class="player-bio-compact">SR 6-9 Forward</div>
+            </div>
+        </div>
+        
+        <div class="bio-line-compact">American Fork, UT (SoCal Academy)</div>
+        <div class="last-game-compact">9p, 7r, 1a, 1to, 1s, 2b, 4-8fg, 0-0ft, (1-2)3p, [25]</div>
+        
+        <table class="stats-table-compact">
+            <tr class="header-row">
+                <td>G</td><td>GS</td><td>FG-FGA</td><td>FG%</td><td>3P-3PA</td><td>FT-FTA</td><td>OR</td><td>DR</td><td>Reb</td><td>DQ</td><td>AST</td><td>APG</td><td>ratio</td><td>SPG</td><td>BLK</td><td>BPG</td><td>MPG</td>
+            </tr>
+            <tr class="value-row">
+                <td>31</td><td>28</td><td>97-193</td><td>50.3%</td><td>14-45</td><td>44-53</td><td>82</td><td>159</td><td>241</td><td>0</td><td>41</td><td>1.3</td><td>1.3</td><td>0.4</td><td>25</td><td>0.8</td><td>21</td>
+            </tr>
+        </table>
+        
+        <div class="summary-line">3P% 31.1% FT% 83.0% RPG 7.8 PPG 8.1</div>
+        
+        <div class="foul-circles">
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+        </div>
+    </div>
+    
+    <div class="compact-player-card ">
+        <div class="card-header-compact">
+            <span class="jersey-large">55</span>
+            <div class="name-section">
+                <div class="player-name-compact ">COEN CARR</div>
+                <div class="player-bio-compact">JR 6-6 Forward</div>
+            </div>
+        </div>
+        
+        <div class="bio-line-compact">Stockbridge, GA (Legacy Early College)</div>
+        <div class="last-game-compact">4p, 1r, 1a, 0to, 1s, 1b, 1-1fg, 2-3ft, (0-0)3p, [17]</div>
+        
+        <table class="stats-table-compact">
+            <tr class="header-row">
+                <td>G</td><td>GS</td><td>FG-FGA</td><td>FG%</td><td>3P-3PA</td><td>FT-FTA</td><td>OR</td><td>DR</td><td>Reb</td><td>DQ</td><td>AST</td><td>APG</td><td>ratio</td><td>SPG</td><td>BLK</td><td>BPG</td><td>MPG</td>
+            </tr>
+            <tr class="value-row">
+                <td>31</td><td>0</td><td>91-145</td><td>62.8%</td><td>3-10</td><td>53-79</td><td>40</td><td>61</td><td>101</td><td>0</td><td>17</td><td>0.5</td><td>0.5</td><td>0.5</td><td>23</td><td>0.7</td><td>20</td>
+            </tr>
+        </table>
+        
+        <div class="summary-line">3P% 30.0% FT% 67.1% RPG 3.3 PPG 7.7</div>
+        
+        <div class="foul-circles">
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+        </div>
+    </div>
+    
+    <div class="compact-player-card ">
+        <div class="card-header-compact">
+            <span class="jersey-large">8</span>
+            <div class="name-section">
+                <div class="player-name-compact ">FRANKIE FIDLER</div>
+                <div class="player-bio-compact">SO 6-7 Forward</div>
+            </div>
+        </div>
+        
+        <div class="bio-line-compact">Bellevue, NE (N/A)</div>
+        <div class="last-game-compact">4p, 1r, 0a, 1to, 0s, 0b, 1-4fg, 2-2ft, (0-1)3p, [15]</div>
+        
+        <table class="stats-table-compact">
+            <tr class="header-row">
+                <td>G</td><td>GS</td><td>FG-FGA</td><td>FG%</td><td>3P-3PA</td><td>FT-FTA</td><td>OR</td><td>DR</td><td>Reb</td><td>DQ</td><td>AST</td><td>APG</td><td>ratio</td><td>SPG</td><td>BLK</td><td>BPG</td><td>MPG</td>
+            </tr>
+            <tr class="value-row">
+                <td>31</td><td>7</td><td>66-175</td><td>37.7%</td><td>11-60</td><td>80-91</td><td>27</td><td>80</td><td>107</td><td>0</td><td>26</td><td>0.8</td><td>0.8</td><td>0.5</td><td>6</td><td>0.2</td><td>17</td>
+            </tr>
+        </table>
+        
+        <div class="summary-line">3P% 18.3% FT% 87.9% RPG 3.5 PPG 7.2</div>
+        
+        <div class="foul-circles">
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+        </div>
+    </div>
+    
+    <div class="compact-player-card ">
+        <div class="card-header-compact">
+            <span class="jersey-large">15</span>
+            <div class="name-section">
+                <div class="player-name-compact ">CARSON COOPER</div>
+                <div class="player-bio-compact">SR 6-11 Center</div>
+            </div>
+        </div>
+        
+        <div class="bio-line-compact">Jackson, MI (N/A)</div>
+        <div class="last-game-compact">4p, 8r, 0a, 0to, 0s, 1b, 0-3fg, 4-4ft, (0-0)3p, [20]</div>
+        
+        <table class="stats-table-compact">
+            <tr class="header-row">
+                <td>G</td><td>GS</td><td>FG-FGA</td><td>FG%</td><td>3P-3PA</td><td>FT-FTA</td><td>OR</td><td>DR</td><td>Reb</td><td>DQ</td><td>AST</td><td>APG</td><td>ratio</td><td>SPG</td><td>BLK</td><td>BPG</td><td>MPG</td>
+            </tr>
+            <tr class="value-row">
+                <td>31</td><td>0</td><td>52-87</td><td>59.8%</td><td>0-1</td><td>50-69</td><td>41</td><td>109</td><td>150</td><td>0</td><td>17</td><td>0.5</td><td>0.5</td><td>0.2</td><td>22</td><td>0.7</td><td>17</td>
+            </tr>
+        </table>
+        
+        <div class="summary-line">3P% 0.0% FT% 72.5% RPG 4.8 PPG 5.0</div>
+        
+        <div class="foul-circles">
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+        </div>
+    </div>
+    
+    <div class="compact-player-card freshman-card">
+        <div class="card-header-compact">
+            <span class="jersey-large">10</span>
+            <div class="name-section">
+                <div class="player-name-compact freshman-name">SZYMON ZAPALA</div>
+                <div class="player-bio-compact">FR 7-0 Center</div>
+            </div>
+        </div>
+        
+        <div class="bio-line-compact">Zaborze, Poland (N/A)</div>
+        <div class="last-game-compact">2p, 3r, 1a, 1to, 0s, 1b, 1-1fg, 0-0ft, (0-0)3p, [11]</div>
+        
+        <table class="stats-table-compact">
+            <tr class="header-row">
+                <td>G</td><td>GS</td><td>FG-FGA</td><td>FG%</td><td>3P-3PA</td><td>FT-FTA</td><td>OR</td><td>DR</td><td>Reb</td><td>DQ</td><td>AST</td><td>APG</td><td>ratio</td><td>SPG</td><td>BLK</td><td>BPG</td><td>MPG</td>
+            </tr>
+            <tr class="value-row">
+                <td>31</td><td>31</td><td>58-88</td><td>65.9%</td><td>0-2</td><td>29-42</td><td>53</td><td>75</td><td>128</td><td>0</td><td>22</td><td>0.7</td><td>0.7</td><td>0.2</td><td>19</td><td>0.6</td><td>15</td>
+            </tr>
+        </table>
+        
+        <div class="summary-line">3P% 0.0% FT% 69.0% RPG 4.1 PPG 4.7</div>
+        
+        <div class="foul-circles">
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+        </div>
+    </div>
+    
+    <div class="compact-player-card ">
+        <div class="card-header-compact">
+            <span class="jersey-large">34</span>
+            <div class="name-section">
+                <div class="player-name-compact ">XAVIER BOOKER</div>
+                <div class="player-bio-compact">SO 6-11 Forward</div>
+            </div>
+        </div>
+        
+        <div class="bio-line-compact">Indianapolis, IN (Cathedral)</div>
+        <div class="last-game-compact">0p, 2r, 0a, 0to, 0s, 0b, 0-2fg, 0-0ft, (0-2)3p, [7]</div>
+        
+        <table class="stats-table-compact">
+            <tr class="header-row">
+                <td>G</td><td>GS</td><td>FG-FGA</td><td>FG%</td><td>3P-3PA</td><td>FT-FTA</td><td>OR</td><td>DR</td><td>Reb</td><td>DQ</td><td>AST</td><td>APG</td><td>ratio</td><td>SPG</td><td>BLK</td><td>BPG</td><td>MPG</td>
+            </tr>
+            <tr class="value-row">
+                <td>30</td><td>3</td><td>58-138</td><td>42.0%</td><td>17-72</td><td>22-27</td><td>21</td><td>51</td><td>72</td><td>0</td><td>8</td><td>0.3</td><td>0.3</td><td>0.1</td><td>22</td><td>0.7</td><td>14</td>
+            </tr>
+        </table>
+        
+        <div class="summary-line">3P% 23.6% FT% 81.5% RPG 2.4 PPG 5.2</div>
+        
+        <div class="foul-circles">
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+        </div>
+    </div>
+    
+    </div>
+    
+    <div class="bench-section"><h2 class="bench-header">Bench Players (&lt;10 MPG)</h2><div class="player-cards-grid">
+    <div class="compact-player-card ">
+        <div class="card-header-compact">
+            <span class="jersey-large">2</span>
+            <div class="name-section">
+                <div class="player-name-compact ">KUR TENG</div>
+                <div class="player-bio-compact">SO 6-4 Guard</div>
+            </div>
+        </div>
+        
+        <div class="bio-line-compact">Manchester, NH (Bradford Christian Academy)</div>
+        <div class="last-game-compact">0p, 0r, 0a, 0to, 0s, 0b, 0-0fg, 0-0ft, (0-0)3p, [1]</div>
+        
+        <table class="stats-table-compact">
+            <tr class="header-row">
+                <td>G</td><td>GS</td><td>FG-FGA</td><td>FG%</td><td>3P-3PA</td><td>FT-FTA</td><td>OR</td><td>DR</td><td>Reb</td><td>DQ</td><td>AST</td><td>APG</td><td>ratio</td><td>SPG</td><td>BLK</td><td>BPG</td><td>MPG</td>
+            </tr>
+            <tr class="value-row">
+                <td>18</td><td>0</td><td>3-13</td><td>23.1%</td><td>2-8</td><td>2-2</td><td>4</td><td>10</td><td>14</td><td>0</td><td>3</td><td>0.2</td><td>0.2</td><td>0.1</td><td>0</td><td>0.0</td><td>3</td>
+            </tr>
+        </table>
+        
+        <div class="summary-line">3P% 25.0% FT% 100.0% RPG 0.8 PPG 0.6</div>
+        
+        <div class="foul-circles">
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+        </div>
+    </div>
+    
+    <div class="compact-player-card ">
+        <div class="card-header-compact">
+            <span class="jersey-large">7</span>
+            <div class="name-section">
+                <div class="player-name-compact ">GEHRIG NORMAND</div>
+                <div class="player-bio-compact">SO 6-6 Guard</div>
+            </div>
+        </div>
+        
+        <div class="bio-line-compact">North Richland Hills, TX (Birdville)</div>
+        <div class="last-game-compact">0p, 0r, 0a, 0to, 0s, 0b, 0-0fg, 0-0ft, (0-0)3p, [1]</div>
+        
+        <table class="stats-table-compact">
+            <tr class="header-row">
+                <td>G</td><td>GS</td><td>FG-FGA</td><td>FG%</td><td>3P-3PA</td><td>FT-FTA</td><td>OR</td><td>DR</td><td>Reb</td><td>DQ</td><td>AST</td><td>APG</td><td>ratio</td><td>SPG</td><td>BLK</td><td>BPG</td><td>MPG</td>
+            </tr>
+            <tr class="value-row">
+                <td>12</td><td>0</td><td>3-7</td><td>42.9%</td><td>2-5</td><td>0-0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>3</td><td>0.2</td><td>0.2</td><td>0.0</td><td>0</td><td>0.0</td><td>2</td>
+            </tr>
+        </table>
+        
+        <div class="summary-line">3P% 40.0% FT% 0.0% RPG 0.1 PPG 0.7</div>
+        
+        <div class="foul-circles">
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+        </div>
+    </div>
+    
+    <div class="compact-player-card ">
+        <div class="card-header-compact">
+            <span class="jersey-large">20</span>
+            <div class="name-section">
+                <div class="player-name-compact ">NICK SANDERS</div>
+                <div class="player-bio-compact">SR 5-10 Guard</div>
+            </div>
+        </div>
+        
+        <div class="bio-line-compact">Franklin, MI (N/A)</div>
+        <div class="last-game-compact">0p, 0r, 0a, 0to, 0s, 0b, 0-0fg, 0-0ft, (0-0)3p, [1]</div>
+        
+        <table class="stats-table-compact">
+            <tr class="header-row">
+                <td>G</td><td>GS</td><td>FG-FGA</td><td>FG%</td><td>3P-3PA</td><td>FT-FTA</td><td>OR</td><td>DR</td><td>Reb</td><td>DQ</td><td>AST</td><td>APG</td><td>ratio</td><td>SPG</td><td>BLK</td><td>BPG</td><td>MPG</td>
+            </tr>
+            <tr class="value-row">
+                <td>9</td><td>0</td><td>3-6</td><td>50.0%</td><td>0-2</td><td>0-0</td><td>1</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0</td><td>0.0</td><td>1</td>
+            </tr>
+        </table>
+        
+        <div class="summary-line">3P% 0.0% FT% 0.0% RPG 0.2 PPG 0.7</div>
+        
+        <div class="foul-circles">
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+            <span class="foul-circle"></span>
+        </div>
+    </div>
+    </div></div>
+    
+    <!-- Placeholder for existing tables -->
+    <div class="team-stats-section">
+        <p style="font-size: 10pt; text-align: center; font-style: italic;">
+            [Game-by-game team statistics and rankings tables will be added below]
+        </p>
+    </div>
+</body>
+</html>
+    

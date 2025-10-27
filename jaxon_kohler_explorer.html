@@ -1,0 +1,1066 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaxon Kohler - Michigan State 2024 Season</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #18453b 0%, #2d5a4f 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .nav {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .nav-btn {
+            background: #18453b;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background: #2d5a4f;
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.active {
+            background: #28a745;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .section {
+            display: none;
+        }
+        
+        .section.active {
+            display: block;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #18453b;
+        }
+        
+        .stat-card h3 {
+            color: #18453b;
+            margin-bottom: 10px;
+        }
+        
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #2d5a4f;
+        }
+        
+        .games-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .games-table th,
+        .games-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .games-table th {
+            background: #18453b;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .games-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #dee2e6;
+            border-radius: 25px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .search-box:focus {
+            outline: none;
+            border-color: #18453b;
+        }
+        
+        .best-performance {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .best-performance h3 {
+            margin-bottom: 15px;
+        }
+        
+        .performance-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 5px;
+        }
+        
+        .chart-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .month-section {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .month-section h3 {
+            color: #18453b;
+            margin-bottom: 15px;
+        }
+        
+        .game-item {
+            padding: 10px;
+            margin: 5px 0;
+            background: white;
+            border-radius: 5px;
+            border-left: 3px solid #18453b;
+        }
+        
+        .export-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .export-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .export-btn:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .nav-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .games-table {
+                font-size: 14px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏀 Jaxon Kohler</h1>
+            <p>Michigan State Spartans • 2024 Season</p>
+        </div>
+        
+        <div class="nav">
+            <div class="nav-buttons">
+                <button class="nav-btn active" onclick="showSection('overview')">📈 Season Overview</button>
+                <button class="nav-btn" onclick="showSection('games')">🎮 Game-by-Game</button>
+                <button class="nav-btn" onclick="showSection('search')">🔍 Search Games</button>
+                <button class="nav-btn" onclick="showSection('analysis')">📊 Analysis</button>
+                <button class="nav-btn" onclick="showSection('best')">🏆 Best Games</button>
+                <button class="nav-btn" onclick="showSection('calendar')">📅 Calendar</button>
+            </div>
+        </div>
+        
+        <div class="content">
+            <!-- Season Overview -->
+            <div id="overview" class="section active">
+                <h2>📈 Season Overview</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Games Played</h3>
+                        <div class="stat-value">31</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Points</h3>
+                        <div class="stat-value">252</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Points Per Game</h3>
+                        <div class="stat-value">8.1</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Rebounds</h3>
+                        <div class="stat-value">241</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Rebounds Per Game</h3>
+                        <div class="stat-value">7.8</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Assists</h3>
+                        <div class="stat-value">41</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Assists Per Game</h3>
+                        <div class="stat-value">1.3</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Games Started</h3>
+                        <div class="stat-value">28</div>
+                    </div>
+                </div>
+                
+                
+                <div class="stat-card" style="grid-column: 1 / -1;">
+                    <h3>Shooting Statistics</h3>
+                    <p><strong>Field Goals:</strong> 20-46 (43.5%)</p>
+                    <p><strong>3-Pointers:</strong> 0-3 (0%)</p>
+                    <p><strong>Free Throws:</strong> 2-7 (28.6%)</p>
+                </div>
+                
+            </div>
+            
+            <!-- Game-by-Game -->
+            <div id="games" class="section">
+                <h2>🎮 Game-by-Game Statistics</h2>
+                <table class="games-table">
+                    <thead>
+                        <tr>
+                            <th>Game</th>
+                            <th>Date</th>
+                            <th>Opponent</th>
+                            <th>PTS</th>
+                            <th>REB</th>
+                            <th>AST</th>
+                            <th>MIN</th>
+                            <th>Started</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>2024-11-05</td>
+                            <td>Monmouth</td>
+                            <td>5</td>
+                            <td>8</td>
+                            <td>0</td>
+                            <td>18</td>
+                            <td>No</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>2</td>
+                            <td>2024-11-08</td>
+                            <td>Niagara</td>
+                            <td>20</td>
+                            <td>13</td>
+                            <td>0</td>
+                            <td>18</td>
+                            <td>No</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>3</td>
+                            <td>2024-11-12</td>
+                            <td>Kansas</td>
+                            <td>12</td>
+                            <td>10</td>
+                            <td>1</td>
+                            <td>23</td>
+                            <td>No</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>4</td>
+                            <td>2024-11-16</td>
+                            <td>Bowling Green</td>
+                            <td>10</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>16</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>5</td>
+                            <td>2024-11-20</td>
+                            <td>Samford</td>
+                            <td>4</td>
+                            <td>6</td>
+                            <td>2</td>
+                            <td>16</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>6</td>
+                            <td>2024-11-25</td>
+                            <td>Colorado</td>
+                            <td>4</td>
+                            <td>7</td>
+                            <td>0</td>
+                            <td>20</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>7</td>
+                            <td>2024-11-26</td>
+                            <td>Memphis</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>2</td>
+                            <td>28</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>8</td>
+                            <td>2024-11-28</td>
+                            <td>North Carolina</td>
+                            <td>3</td>
+                            <td>5</td>
+                            <td>0</td>
+                            <td>13</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>9</td>
+                            <td>2024-12-05</td>
+                            <td>Minnesota</td>
+                            <td>11</td>
+                            <td>11</td>
+                            <td>2</td>
+                            <td>26</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>10</td>
+                            <td>2024-12-07</td>
+                            <td>Nebraska</td>
+                            <td>8</td>
+                            <td>12</td>
+                            <td>4</td>
+                            <td>24</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>11</td>
+                            <td>2024-12-18</td>
+                            <td>Oakland</td>
+                            <td>14</td>
+                            <td>10</td>
+                            <td>1</td>
+                            <td>25</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>12</td>
+                            <td>2024-12-21</td>
+                            <td>Florida Atlantic</td>
+                            <td>6</td>
+                            <td>12</td>
+                            <td>1</td>
+                            <td>22</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>13</td>
+                            <td>2024-12-30</td>
+                            <td>Western Michigan</td>
+                            <td>1</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>16</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>14</td>
+                            <td>2025-01-04</td>
+                            <td>Ohio State</td>
+                            <td>8</td>
+                            <td>10</td>
+                            <td>1</td>
+                            <td>20</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>15</td>
+                            <td>2025-01-10</td>
+                            <td>Washington</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>4</td>
+                            <td>17</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>16</td>
+                            <td>2025-01-12</td>
+                            <td>Northwestern</td>
+                            <td>8</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>22</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>17</td>
+                            <td>2025-01-16</td>
+                            <td>Penn State</td>
+                            <td>7</td>
+                            <td>6</td>
+                            <td>1</td>
+                            <td>18</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>18</td>
+                            <td>2025-01-19</td>
+                            <td>Illinois</td>
+                            <td>8</td>
+                            <td>6</td>
+                            <td>2</td>
+                            <td>20</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>19</td>
+                            <td>2025-01-25</td>
+                            <td>Rutgers</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>10</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>20</td>
+                            <td>2025-01-29</td>
+                            <td>Minnesota</td>
+                            <td>8</td>
+                            <td>7</td>
+                            <td>1</td>
+                            <td>18</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>21</td>
+                            <td>2025-02-01</td>
+                            <td>USC</td>
+                            <td>2</td>
+                            <td>8</td>
+                            <td>1</td>
+                            <td>19</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>22</td>
+                            <td>2025-02-05</td>
+                            <td>UCLA</td>
+                            <td>8</td>
+                            <td>7</td>
+                            <td>1</td>
+                            <td>13</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>23</td>
+                            <td>2025-02-08</td>
+                            <td>Oregon</td>
+                            <td>14</td>
+                            <td>12</td>
+                            <td>1</td>
+                            <td>31</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>24</td>
+                            <td>2025-02-12</td>
+                            <td>Indiana</td>
+                            <td>5</td>
+                            <td>7</td>
+                            <td>1</td>
+                            <td>18</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>25</td>
+                            <td>2025-02-16</td>
+                            <td>Illinois</td>
+                            <td>23</td>
+                            <td>10</td>
+                            <td>0</td>
+                            <td>30</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>26</td>
+                            <td>2025-02-19</td>
+                            <td>Purdue</td>
+                            <td>9</td>
+                            <td>4</td>
+                            <td>1</td>
+                            <td>27</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>27</td>
+                            <td>2025-02-22</td>
+                            <td>Michigan</td>
+                            <td>2</td>
+                            <td>4</td>
+                            <td>3</td>
+                            <td>20</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>28</td>
+                            <td>2025-02-26</td>
+                            <td>Maryland</td>
+                            <td>3</td>
+                            <td>8</td>
+                            <td>0</td>
+                            <td>18</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>29</td>
+                            <td>2025-03-02</td>
+                            <td>Wisconsin</td>
+                            <td>10</td>
+                            <td>16</td>
+                            <td>2</td>
+                            <td>30</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>30</td>
+                            <td>2025-03-07</td>
+                            <td>Iowa</td>
+                            <td>15</td>
+                            <td>6</td>
+                            <td>1</td>
+                            <td>24</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>31</td>
+                            <td>2025-03-09</td>
+                            <td>Michigan</td>
+                            <td>9</td>
+                            <td>7</td>
+                            <td>1</td>
+                            <td>25</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Search Games -->
+            <div id="search" class="section">
+                <h2>🔍 Search Games</h2>
+                <input type="text" class="search-box" id="searchInput" placeholder="Search by opponent name..." onkeyup="filterGames()">
+                <div id="searchResults"></div>
+            </div>
+            
+            <!-- Analysis -->
+            <div id="analysis" class="section">
+                <h2>📊 Statistical Analysis</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Scoring Range</h3>
+                        <div class="stat-value">1 - 23</div>
+                        <p>Lowest to highest points in a game</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Rebounding Range</h3>
+                        <div class="stat-value">2 - 16</div>
+                        <p>Lowest to highest rebounds in a game</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>High Scoring Games</h3>
+                        <div class="stat-value">7</div>
+                        <p>Games with 10.1+ points</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Double-Digit Games</h3>
+                        <div class="stat-value">9</div>
+                        <p>Games with 10+ points</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Best Performances -->
+            <div id="best" class="section">
+                <h2>🏆 Best Performances</h2>
+                
+                <div class="best-performance">
+                    <h3>🔥 Top Scoring Games</h3>
+                    
+                    <div class="performance-item">
+                        <strong>23 points</strong> vs Illinois 
+                        (2025-02-16)
+                    </div>
+                    
+                    <div class="performance-item">
+                        <strong>20 points</strong> vs Niagara 
+                        (2024-11-08)
+                    </div>
+                    
+                    <div class="performance-item">
+                        <strong>15 points</strong> vs Iowa 
+                        (2025-03-07)
+                    </div>
+                    
+                    <div class="performance-item">
+                        <strong>14 points</strong> vs Oakland 
+                        (2024-12-18)
+                    </div>
+                    
+                    <div class="performance-item">
+                        <strong>14 points</strong> vs Oregon 
+                        (2025-02-08)
+                    </div>
+                    
+                </div>
+                
+                <div class="best-performance" style="background: linear-gradient(135deg, #4ecdc4, #44a08d);">
+                    <h3>🏀 Top Rebounding Games</h3>
+                    
+                    <div class="performance-item">
+                        <strong>16 rebounds</strong> vs Wisconsin 
+                        (2025-03-02)
+                    </div>
+                    
+                    <div class="performance-item">
+                        <strong>13 rebounds</strong> vs Niagara 
+                        (2024-11-08)
+                    </div>
+                    
+                    <div class="performance-item">
+                        <strong>12 rebounds</strong> vs Nebraska 
+                        (2024-12-07)
+                    </div>
+                    
+                    <div class="performance-item">
+                        <strong>12 rebounds</strong> vs Florida Atlantic 
+                        (2024-12-21)
+                    </div>
+                    
+                    <div class="performance-item">
+                        <strong>12 rebounds</strong> vs Oregon 
+                        (2025-02-08)
+                    </div>
+                    
+                </div>
+                
+                <div class="best-performance" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                    <h3>🎯 Top Assist Games</h3>
+                    
+                    <div class="performance-item">
+                        <strong>5 assists</strong> vs Northwestern 
+                        (2025-01-12)
+                    </div>
+                    
+                    <div class="performance-item">
+                        <strong>4 assists</strong> vs Nebraska 
+                        (2024-12-07)
+                    </div>
+                    
+                    <div class="performance-item">
+                        <strong>4 assists</strong> vs Washington 
+                        (2025-01-10)
+                    </div>
+                    
+                    <div class="performance-item">
+                        <strong>3 assists</strong> vs Michigan 
+                        (2025-02-22)
+                    </div>
+                    
+                    <div class="performance-item">
+                        <strong>2 assists</strong> vs Bowling Green 
+                        (2024-11-16)
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!-- Calendar -->
+            <div id="calendar" class="section">
+                <h2>📅 Game Calendar</h2>
+                
+        <div class="month-section">
+            <h3>📆 November 2024</h3>
+            
+            <div class="game-item">
+                <strong>2024-11-05</strong> 
+                vs Monmouth 
+                - 5PTS, 8REB, 0AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2024-11-08</strong> 
+                vs Niagara 
+                - 20PTS, 13REB, 0AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2024-11-12</strong> 
+                @ Kansas 
+                - 12PTS, 10REB, 1AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2024-11-16</strong> 
+                vs Bowling Green 
+                - 10PTS, 3REB, 2AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2024-11-20</strong> 
+                vs Samford 
+                - 4PTS, 6REB, 2AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2024-11-25</strong> 
+                vs Colorado 
+                - 4PTS, 7REB, 0AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2024-11-26</strong> 
+                vs Memphis 
+                - 7PTS, 8REB, 2AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2024-11-28</strong> 
+                @ North Carolina 
+                - 3PTS, 5REB, 0AST
+            </div>
+            
+        </div>
+        
+        <div class="month-section">
+            <h3>📆 December 2024</h3>
+            
+            <div class="game-item">
+                <strong>2024-12-05</strong> 
+                @ Minnesota 
+                - 11PTS, 11REB, 2AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2024-12-07</strong> 
+                vs Nebraska 
+                - 8PTS, 12REB, 4AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2024-12-18</strong> 
+                @ Oakland 
+                - 14PTS, 10REB, 1AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2024-12-21</strong> 
+                vs Florida Atlantic 
+                - 6PTS, 12REB, 1AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2024-12-30</strong> 
+                vs Western Michigan 
+                - 1PTS, 4REB, 0AST
+            </div>
+            
+        </div>
+        
+        <div class="month-section">
+            <h3>📆 January 2025</h3>
+            
+            <div class="game-item">
+                <strong>2025-01-04</strong> 
+                @ Ohio State 
+                - 8PTS, 10REB, 1AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2025-01-10</strong> 
+                vs Washington 
+                - 6PTS, 7REB, 4AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2025-01-12</strong> 
+                @ Northwestern 
+                - 8PTS, 5REB, 5AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2025-01-16</strong> 
+                vs Penn State 
+                - 7PTS, 6REB, 1AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2025-01-19</strong> 
+                vs Illinois 
+                - 8PTS, 6REB, 2AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2025-01-25</strong> 
+                @ Rutgers 
+                - 2PTS, 2REB, 0AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2025-01-29</strong> 
+                vs Minnesota 
+                - 8PTS, 7REB, 1AST
+            </div>
+            
+        </div>
+        
+        <div class="month-section">
+            <h3>📆 February 2025</h3>
+            
+            <div class="game-item">
+                <strong>2025-02-01</strong> 
+                @ USC 
+                - 2PTS, 8REB, 1AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2025-02-05</strong> 
+                @ UCLA 
+                - 8PTS, 7REB, 1AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2025-02-08</strong> 
+                vs Oregon 
+                - 14PTS, 12REB, 1AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2025-02-12</strong> 
+                vs Indiana 
+                - 5PTS, 7REB, 1AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2025-02-16</strong> 
+                @ Illinois 
+                - 23PTS, 10REB, 0AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2025-02-19</strong> 
+                vs Purdue 
+                - 9PTS, 4REB, 1AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2025-02-22</strong> 
+                @ Michigan 
+                - 2PTS, 4REB, 3AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2025-02-26</strong> 
+                @ Maryland 
+                - 3PTS, 8REB, 0AST
+            </div>
+            
+        </div>
+        
+        <div class="month-section">
+            <h3>📆 March 2025</h3>
+            
+            <div class="game-item">
+                <strong>2025-03-02</strong> 
+                vs Wisconsin 
+                - 10PTS, 16REB, 2AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2025-03-07</strong> 
+                @ Iowa 
+                - 15PTS, 6REB, 1AST
+            </div>
+            
+            <div class="game-item">
+                <strong>2025-03-09</strong> 
+                vs Michigan 
+                - 9PTS, 7REB, 1AST
+            </div>
+            
+        </div>
+        
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Game data for JavaScript
+        const gameData = [{"athleteId": 2608, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": false, "ejected": false, "minutes": 18, "points": 5, "turnovers": 3, "fouls": 0, "assists": 0, "steals": 1, "blocks": 1, "gameScore": 4.2, "offensiveRating": 66.2, "defensiveRating": null, "netRating": null, "usage": 20.7, "effectiveFieldGoalPct": 50, "trueShootingPct": 50, "assistsTurnoverRatio": 0, "freeThrowRate": 0, "offensiveReboundPct": 25, "fieldGoals": {"made": 2, "attempted": 5, "pct": 40}, "twoPointFieldGoals": {"made": 1, "attempted": 3, "pct": 33.3}, "threePointFieldGoals": {"made": 1, "attempted": 2, "pct": 50}, "freeThrows": {"made": 0, "attempted": 0, "pct": 0}, "rebounds": {"offensive": 2, "defensive": 6, "total": 8}, "gameId": 70, "startDate": "2024-11-05T00:00:00.000Z", "opponent": "Monmouth", "isHome": true}, {"athleteId": 10463, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": false, "ejected": false, "minutes": 18, "points": 20, "turnovers": 0, "fouls": 2, "assists": 0, "steals": 2, "blocks": 0, "gameScore": 21.9, "offensiveRating": 160.6, "defensiveRating": 65.2, "netRating": 95.4, "usage": 36.3, "effectiveFieldGoalPct": 66.7, "trueShootingPct": 70.4, "assistsTurnoverRatio": null, "freeThrowRate": 41.7, "offensiveReboundPct": 46.2, "fieldGoals": {"made": 8, "attempted": 12, "pct": 66.7}, "twoPointFieldGoals": {"made": 8, "attempted": 10, "pct": 80}, "threePointFieldGoals": {"made": 0, "attempted": 2, "pct": 0}, "freeThrows": {"made": 4, "attempted": 5, "pct": 80}, "rebounds": {"offensive": 6, "defensive": 7, "total": 13}, "gameId": 284, "startDate": "2024-11-08T01:00:00.000Z", "opponent": "Niagara", "isHome": true}, {"athleteId": 18210, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": false, "ejected": false, "minutes": 23, "points": 12, "turnovers": 1, "fouls": 2, "assists": 1, "steals": 0, "blocks": 1, "gameScore": 8.4, "offensiveRating": 90.1, "defensiveRating": 96.9, "netRating": -6.8, "usage": 30.1, "effectiveFieldGoalPct": 39.3, "trueShootingPct": 41.6, "assistsTurnoverRatio": 1, "freeThrowRate": 7.1, "offensiveReboundPct": 40, "fieldGoals": {"made": 5, "attempted": 14, "pct": 35.7}, "twoPointFieldGoals": {"made": 4, "attempted": 9, "pct": 44.4}, "threePointFieldGoals": {"made": 1, "attempted": 5, "pct": 20}, "freeThrows": {"made": 1, "attempted": 1, "pct": 100}, "rebounds": {"offensive": 4, "defensive": 6, "total": 10}, "gameId": 511, "startDate": "2024-11-12T23:30:00.000Z", "opponent": "Kansas", "isHome": false}, {"athleteId": 27190, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 16, "points": 10, "turnovers": 0, "fouls": 3, "assists": 2, "steals": 1, "blocks": 1, "gameScore": 11.5, "offensiveRating": 202.7, "defensiveRating": 93.1, "netRating": 109.6, "usage": 16.8, "effectiveFieldGoalPct": 66.7, "trueShootingPct": 88.7, "assistsTurnoverRatio": null, "freeThrowRate": 200, "offensiveReboundPct": 0, "fieldGoals": {"made": 2, "attempted": 3, "pct": 66.7}, "twoPointFieldGoals": {"made": 2, "attempted": 3, "pct": 66.7}, "threePointFieldGoals": {"made": 0, "attempted": 0, "pct": 0}, "freeThrows": {"made": 6, "attempted": 6, "pct": 100}, "rebounds": {"offensive": 0, "defensive": 3, "total": 3}, "gameId": 775, "startDate": "2024-11-16T23:00:00.000Z", "opponent": "Bowling Green", "isHome": true}, {"athleteId": 31850, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 16, "points": 4, "turnovers": 0, "fouls": 1, "assists": 2, "steals": 0, "blocks": 0, "gameScore": 5.8, "offensiveRating": 172.1, "defensiveRating": 101.5, "netRating": 70.6, "usage": 9.1, "effectiveFieldGoalPct": 50, "trueShootingPct": 69.4, "assistsTurnoverRatio": null, "freeThrowRate": 100, "offensiveReboundPct": 0, "fieldGoals": {"made": 1, "attempted": 2, "pct": 50}, "twoPointFieldGoals": {"made": 1, "attempted": 1, "pct": 100}, "threePointFieldGoals": {"made": 0, "attempted": 1, "pct": 0}, "freeThrows": {"made": 2, "attempted": 2, "pct": 100}, "rebounds": {"offensive": 0, "defensive": 6, "total": 6}, "gameId": 911, "startDate": "2024-11-20T01:00:00.000Z", "opponent": "Samford", "isHome": true}, {"athleteId": 42277, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 20, "points": 4, "turnovers": 1, "fouls": 0, "assists": 0, "steals": 0, "blocks": 1, "gameScore": 4.2, "offensiveRating": 89.1, "defensiveRating": 79, "netRating": 10.1, "usage": 12.9, "effectiveFieldGoalPct": 50, "trueShootingPct": 50, "assistsTurnoverRatio": 0, "freeThrowRate": 0, "offensiveReboundPct": 14.3, "fieldGoals": {"made": 2, "attempted": 4, "pct": 50}, "twoPointFieldGoals": {"made": 2, "attempted": 2, "pct": 100}, "threePointFieldGoals": {"made": 0, "attempted": 2, "pct": 0}, "freeThrows": {"made": 0, "attempted": 0, "pct": 0}, "rebounds": {"offensive": 1, "defensive": 6, "total": 7}, "gameId": 1229, "startDate": "2024-11-25T22:45:00.000Z", "opponent": "Colorado", "isHome": true}, {"athleteId": 44340, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 28, "points": 7, "turnovers": 4, "fouls": 2, "assists": 2, "steals": 0, "blocks": 0, "gameScore": 2.3, "offensiveRating": 67.5, "defensiveRating": 113.1, "netRating": -45.6, "usage": 24, "effectiveFieldGoalPct": 50, "trueShootingPct": 42.1, "assistsTurnoverRatio": 0.5, "freeThrowRate": 42.9, "offensiveReboundPct": 37.5, "fieldGoals": {"made": 3, "attempted": 7, "pct": 42.9}, "twoPointFieldGoals": {"made": 2, "attempted": 6, "pct": 33.3}, "threePointFieldGoals": {"made": 1, "attempted": 1, "pct": 100}, "freeThrows": {"made": 0, "attempted": 3, "pct": 0}, "rebounds": {"offensive": 3, "defensive": 5, "total": 8}, "gameId": 1291, "startDate": "2024-11-26T23:00:00.000Z", "opponent": "Memphis", "isHome": true}, {"athleteId": 45823, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 13, "points": 3, "turnovers": 0, "fouls": 1, "assists": 0, "steals": 0, "blocks": 0, "gameScore": -0.8, "offensiveRating": 45.2, "defensiveRating": 115.3, "netRating": -70.1, "usage": 31.5, "effectiveFieldGoalPct": 14.3, "trueShootingPct": 19, "assistsTurnoverRatio": null, "freeThrowRate": 28.6, "offensiveReboundPct": 0, "fieldGoals": {"made": 1, "attempted": 7, "pct": 14.3}, "twoPointFieldGoals": {"made": 1, "attempted": 5, "pct": 20}, "threePointFieldGoals": {"made": 0, "attempted": 2, "pct": 0}, "freeThrows": {"made": 1, "attempted": 2, "pct": 50}, "rebounds": {"offensive": 0, "defensive": 5, "total": 5}, "gameId": 1336, "startDate": "2024-11-28T02:30:00.000Z", "opponent": "North Carolina", "isHome": false}, {"athleteId": 58034, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 26, "points": 11, "turnovers": 0, "fouls": 0, "assists": 2, "steals": 1, "blocks": 1, "gameScore": 17, "offensiveRating": 211.9, "defensiveRating": 102.2, "netRating": 109.7, "usage": 11.7, "effectiveFieldGoalPct": 87.5, "trueShootingPct": 95.5, "assistsTurnoverRatio": null, "freeThrowRate": 100, "offensiveReboundPct": 27.3, "fieldGoals": {"made": 3, "attempted": 4, "pct": 75}, "twoPointFieldGoals": {"made": 2, "attempted": 3, "pct": 66.7}, "threePointFieldGoals": {"made": 1, "attempted": 1, "pct": 100}, "freeThrows": {"made": 4, "attempted": 4, "pct": 100}, "rebounds": {"offensive": 3, "defensive": 8, "total": 11}, "gameId": 1701, "startDate": "2024-12-05T01:30:00.000Z", "opponent": "Minnesota", "isHome": false}, {"athleteId": 60627, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 24, "points": 8, "turnovers": 4, "fouls": 1, "assists": 4, "steals": 1, "blocks": 2, "gameScore": 14.3, "offensiveRating": 122.1, "defensiveRating": 66.3, "netRating": 55.8, "usage": 15.8, "effectiveFieldGoalPct": 100, "trueShootingPct": 103.1, "assistsTurnoverRatio": 1, "freeThrowRate": 66.7, "offensiveReboundPct": 58.3, "fieldGoals": {"made": 3, "attempted": 3, "pct": 100}, "twoPointFieldGoals": {"made": 3, "attempted": 3, "pct": 100}, "threePointFieldGoals": {"made": 0, "attempted": 0, "pct": 0}, "freeThrows": {"made": 2, "attempted": 2, "pct": 100}, "rebounds": {"offensive": 7, "defensive": 5, "total": 12}, "gameId": 1779, "startDate": "2024-12-07T17:00:00.000Z", "opponent": "Nebraska", "isHome": true}, {"athleteId": 73739, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 25, "points": 14, "turnovers": 2, "fouls": 1, "assists": 1, "steals": 0, "blocks": 3, "gameScore": 13.3, "offensiveRating": 123.5, "defensiveRating": 81.3, "netRating": 42.2, "usage": 27, "effectiveFieldGoalPct": 54.5, "trueShootingPct": 58.9, "assistsTurnoverRatio": 0.5, "freeThrowRate": 18.2, "offensiveReboundPct": 30, "fieldGoals": {"made": 6, "attempted": 11, "pct": 54.5}, "twoPointFieldGoals": {"made": 6, "attempted": 10, "pct": 60}, "threePointFieldGoals": {"made": 0, "attempted": 1, "pct": 0}, "freeThrows": {"made": 2, "attempted": 2, "pct": 100}, "rebounds": {"offensive": 3, "defensive": 7, "total": 10}, "gameId": 2165, "startDate": "2024-12-18T00:00:00.000Z", "opponent": "Oakland", "isHome": false}, {"athleteId": 79437, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 22, "points": 6, "turnovers": 2, "fouls": 3, "assists": 1, "steals": 0, "blocks": 1, "gameScore": 3.9, "offensiveRating": 76.1, "defensiveRating": 88.6, "netRating": -12.5, "usage": 24.6, "effectiveFieldGoalPct": 22.2, "trueShootingPct": 30.4, "assistsTurnoverRatio": 0.5, "freeThrowRate": 22.2, "offensiveReboundPct": 33.3, "fieldGoals": {"made": 2, "attempted": 9, "pct": 22.2}, "twoPointFieldGoals": {"made": 2, "attempted": 8, "pct": 25}, "threePointFieldGoals": {"made": 0, "attempted": 1, "pct": 0}, "freeThrows": {"made": 2, "attempted": 2, "pct": 100}, "rebounds": {"offensive": 4, "defensive": 8, "total": 12}, "gameId": 2331, "startDate": "2024-12-21T19:00:00.000Z", "opponent": "Florida Atlantic", "isHome": true}, {"athleteId": 89204, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 16, "points": 1, "turnovers": 1, "fouls": 0, "assists": 0, "steals": 0, "blocks": 0, "gameScore": -1.6, "offensiveRating": 29.3, "defensiveRating": 90.4, "netRating": -61.1, "usage": 18.2, "effectiveFieldGoalPct": 0, "trueShootingPct": 10.2, "assistsTurnoverRatio": 0, "freeThrowRate": 50, "offensiveReboundPct": 25, "fieldGoals": {"made": 0, "attempted": 4, "pct": 0}, "twoPointFieldGoals": {"made": 0, "attempted": 2, "pct": 0}, "threePointFieldGoals": {"made": 0, "attempted": 2, "pct": 0}, "freeThrows": {"made": 1, "attempted": 2, "pct": 50}, "rebounds": {"offensive": 1, "defensive": 3, "total": 4}, "gameId": 2615, "startDate": "2024-12-30T20:00:00.000Z", "opponent": "Western Michigan", "isHome": true}, {"athleteId": 94519, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 20, "points": 8, "turnovers": 1, "fouls": 1, "assists": 1, "steals": 0, "blocks": 0, "gameScore": 9.6, "offensiveRating": 135.5, "defensiveRating": 83.7, "netRating": 51.8, "usage": 17.1, "effectiveFieldGoalPct": 60, "trueShootingPct": 68, "assistsTurnoverRatio": 1, "freeThrowRate": 40, "offensiveReboundPct": 40, "fieldGoals": {"made": 3, "attempted": 5, "pct": 60}, "twoPointFieldGoals": {"made": 3, "attempted": 4, "pct": 75}, "threePointFieldGoals": {"made": 0, "attempted": 1, "pct": 0}, "freeThrows": {"made": 2, "attempted": 2, "pct": 100}, "rebounds": {"offensive": 4, "defensive": 6, "total": 10}, "gameId": 2774, "startDate": "2025-01-04T01:00:00.000Z", "opponent": "Ohio State", "isHome": false}, {"athleteId": 103601, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 17, "points": 6, "turnovers": 0, "fouls": 1, "assists": 4, "steals": 1, "blocks": 1, "gameScore": 11.6, "offensiveRating": 220, "defensiveRating": 61.6, "netRating": 158.4, "usage": 8.4, "effectiveFieldGoalPct": 100, "trueShootingPct": 104.2, "assistsTurnoverRatio": null, "freeThrowRate": 100, "offensiveReboundPct": 0, "fieldGoals": {"made": 2, "attempted": 2, "pct": 100}, "twoPointFieldGoals": {"made": 2, "attempted": 2, "pct": 100}, "threePointFieldGoals": {"made": 0, "attempted": 0, "pct": 0}, "freeThrows": {"made": 2, "attempted": 2, "pct": 100}, "rebounds": {"offensive": 0, "defensive": 7, "total": 7}, "gameId": 3056, "startDate": "2025-01-10T01:15:00.000Z", "opponent": "Washington", "isHome": true}, {"athleteId": 110359, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 22, "points": 8, "turnovers": 2, "fouls": 3, "assists": 5, "steals": 0, "blocks": 1, "gameScore": 10.9, "offensiveRating": 143.9, "defensiveRating": 109.9, "netRating": 34, "usage": 14.2, "effectiveFieldGoalPct": 100, "trueShootingPct": 100, "assistsTurnoverRatio": 2.5, "freeThrowRate": 0, "offensiveReboundPct": 80, "fieldGoals": {"made": 4, "attempted": 4, "pct": 100}, "twoPointFieldGoals": {"made": 4, "attempted": 4, "pct": 100}, "threePointFieldGoals": {"made": 0, "attempted": 0, "pct": 0}, "freeThrows": {"made": 0, "attempted": 0, "pct": 0}, "rebounds": {"offensive": 4, "defensive": 1, "total": 5}, "gameId": 3269, "startDate": "2025-01-12T17:00:00.000Z", "opponent": "Northwestern", "isHome": false}, {"athleteId": 112945, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 18, "points": 7, "turnovers": 0, "fouls": 2, "assists": 1, "steals": 1, "blocks": 1, "gameScore": 6.5, "offensiveRating": 106.8, "defensiveRating": 113, "netRating": -6.2, "usage": 22.6, "effectiveFieldGoalPct": 38.9, "trueShootingPct": 38.9, "assistsTurnoverRatio": null, "freeThrowRate": 0, "offensiveReboundPct": 50, "fieldGoals": {"made": 3, "attempted": 9, "pct": 33.3}, "twoPointFieldGoals": {"made": 2, "attempted": 6, "pct": 33.3}, "threePointFieldGoals": {"made": 1, "attempted": 3, "pct": 33.3}, "freeThrows": {"made": 0, "attempted": 0, "pct": 0}, "rebounds": {"offensive": 3, "defensive": 3, "total": 6}, "gameId": 3350, "startDate": "2025-01-16T00:30:00.000Z", "opponent": "Penn State", "isHome": true}, {"athleteId": 121514, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 20, "points": 8, "turnovers": 3, "fouls": 1, "assists": 2, "steals": 0, "blocks": 0, "gameScore": 4.3, "offensiveRating": 81.6, "defensiveRating": 110.1, "netRating": -28.5, "usage": 28.3, "effectiveFieldGoalPct": 44.4, "trueShootingPct": 44.4, "assistsTurnoverRatio": 0.7, "freeThrowRate": 0, "offensiveReboundPct": 50, "fieldGoals": {"made": 4, "attempted": 9, "pct": 44.4}, "twoPointFieldGoals": {"made": 4, "attempted": 8, "pct": 50}, "threePointFieldGoals": {"made": 0, "attempted": 1, "pct": 0}, "freeThrows": {"made": 0, "attempted": 0, "pct": 0}, "rebounds": {"offensive": 3, "defensive": 3, "total": 6}, "gameId": 3616, "startDate": "2025-01-19T17:00:00.000Z", "opponent": "Illinois", "isHome": true}, {"athleteId": 2322889, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 10, "points": 2, "turnovers": 1, "fouls": 3, "assists": 0, "steals": 0, "blocks": 0, "gameScore": 0.1, "offensiveRating": 71.4, "defensiveRating": 104, "netRating": -32.6, "usage": 9.7, "effectiveFieldGoalPct": 100, "trueShootingPct": 100, "assistsTurnoverRatio": 0, "freeThrowRate": 0, "offensiveReboundPct": 0, "fieldGoals": {"made": 1, "attempted": 1, "pct": 100}, "twoPointFieldGoals": {"made": 1, "attempted": 1, "pct": 100}, "threePointFieldGoals": {"made": 0, "attempted": 0, "pct": 0}, "freeThrows": {"made": 0, "attempted": 0, "pct": 0}, "rebounds": {"offensive": 0, "defensive": 2, "total": 2}, "gameId": 3828, "startDate": "2025-01-25T18:30:00.000Z", "opponent": "Rutgers", "isHome": false}, {"athleteId": 3784244, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 18, "points": 8, "turnovers": 1, "fouls": 3, "assists": 1, "steals": 0, "blocks": 2, "gameScore": 7.4, "offensiveRating": 121.8, "defensiveRating": 75.3, "netRating": 46.5, "usage": 21.1, "effectiveFieldGoalPct": 66.7, "trueShootingPct": 66.7, "assistsTurnoverRatio": 1, "freeThrowRate": 0, "offensiveReboundPct": 14.3, "fieldGoals": {"made": 3, "attempted": 6, "pct": 50}, "twoPointFieldGoals": {"made": 1, "attempted": 2, "pct": 50}, "threePointFieldGoals": {"made": 2, "attempted": 4, "pct": 50}, "freeThrows": {"made": 0, "attempted": 0, "pct": 0}, "rebounds": {"offensive": 1, "defensive": 6, "total": 7}, "gameId": 4005, "startDate": "2025-01-29T01:00:00.000Z", "opponent": "Minnesota", "isHome": true}, {"athleteId": 3804952, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 19, "points": 2, "turnovers": 2, "fouls": 3, "assists": 1, "steals": 0, "blocks": 0, "gameScore": 1.3, "offensiveRating": 61.8, "defensiveRating": 98.6, "netRating": -36.8, "usage": 10.7, "effectiveFieldGoalPct": 50, "trueShootingPct": 50, "assistsTurnoverRatio": 0.5, "freeThrowRate": 0, "offensiveReboundPct": 12.5, "fieldGoals": {"made": 1, "attempted": 2, "pct": 50}, "twoPointFieldGoals": {"made": 1, "attempted": 1, "pct": 100}, "threePointFieldGoals": {"made": 0, "attempted": 1, "pct": 0}, "freeThrows": {"made": 0, "attempted": 0, "pct": 0}, "rebounds": {"offensive": 1, "defensive": 7, "total": 8}, "gameId": 4224, "startDate": "2025-02-01T21:30:00.000Z", "opponent": "USC", "isHome": false}, {"athleteId": 4046867, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 13, "points": 8, "turnovers": 3, "fouls": 3, "assists": 1, "steals": 0, "blocks": 1, "gameScore": 6.6, "offensiveRating": 97.7, "defensiveRating": 94.1, "netRating": 3.6, "usage": 35.3, "effectiveFieldGoalPct": 60, "trueShootingPct": 68, "assistsTurnoverRatio": 0.3, "freeThrowRate": 40, "offensiveReboundPct": 57.1, "fieldGoals": {"made": 3, "attempted": 5, "pct": 60}, "twoPointFieldGoals": {"made": 3, "attempted": 5, "pct": 60}, "threePointFieldGoals": {"made": 0, "attempted": 0, "pct": 0}, "freeThrows": {"made": 2, "attempted": 2, "pct": 100}, "rebounds": {"offensive": 4, "defensive": 3, "total": 7}, "gameId": 4359, "startDate": "2025-02-05T03:00:00.000Z", "opponent": "UCLA", "isHome": false}, {"athleteId": 3979939, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 31, "points": 14, "turnovers": 2, "fouls": 1, "assists": 1, "steals": 0, "blocks": 1, "gameScore": 13.9, "offensiveRating": 131.4, "defensiveRating": 107.1, "netRating": 24.3, "usage": 20.4, "effectiveFieldGoalPct": 61.1, "trueShootingPct": 67.8, "assistsTurnoverRatio": 0.5, "freeThrowRate": 33.3, "offensiveReboundPct": 33.3, "fieldGoals": {"made": 5, "attempted": 9, "pct": 55.6}, "twoPointFieldGoals": {"made": 4, "attempted": 7, "pct": 57.1}, "threePointFieldGoals": {"made": 1, "attempted": 2, "pct": 50}, "freeThrows": {"made": 3, "attempted": 3, "pct": 100}, "rebounds": {"offensive": 4, "defensive": 8, "total": 12}, "gameId": 4493, "startDate": "2025-02-08T17:00:00.000Z", "opponent": "Oregon", "isHome": true}, {"athleteId": 4005002, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 18, "points": 5, "turnovers": 1, "fouls": 4, "assists": 1, "steals": 0, "blocks": 1, "gameScore": 4.4, "offensiveRating": 97.8, "defensiveRating": 102.4, "netRating": -4.6, "usage": 18.6, "effectiveFieldGoalPct": 40, "trueShootingPct": 46, "assistsTurnoverRatio": 1, "freeThrowRate": 20, "offensiveReboundPct": 42.9, "fieldGoals": {"made": 2, "attempted": 5, "pct": 40}, "twoPointFieldGoals": {"made": 2, "attempted": 5, "pct": 40}, "threePointFieldGoals": {"made": 0, "attempted": 0, "pct": 0}, "freeThrows": {"made": 1, "attempted": 1, "pct": 100}, "rebounds": {"offensive": 3, "defensive": 4, "total": 7}, "gameId": 4691, "startDate": "2025-02-12T02:00:00.000Z", "opponent": "Indiana", "isHome": true}, {"athleteId": 4024406, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 30, "points": 23, "turnovers": 0, "fouls": 0, "assists": 0, "steals": 2, "blocks": 1, "gameScore": 24.8, "offensiveRating": 172.7, "defensiveRating": 94.4, "netRating": 78.3, "usage": 23.7, "effectiveFieldGoalPct": 84.6, "trueShootingPct": 80.3, "assistsTurnoverRatio": null, "freeThrowRate": 23.1, "offensiveReboundPct": 60, "fieldGoals": {"made": 9, "attempted": 13, "pct": 69.2}, "twoPointFieldGoals": {"made": 5, "attempted": 8, "pct": 62.5}, "threePointFieldGoals": {"made": 4, "attempted": 5, "pct": 80}, "freeThrows": {"made": 1, "attempted": 3, "pct": 33.3}, "rebounds": {"offensive": 6, "defensive": 4, "total": 10}, "gameId": 4943, "startDate": "2025-02-16T01:00:00.000Z", "opponent": "Illinois", "isHome": false}, {"athleteId": 4046084, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 27, "points": 9, "turnovers": 2, "fouls": 0, "assists": 1, "steals": 0, "blocks": 2, "gameScore": 8.8, "offensiveRating": 116.4, "defensiveRating": 118.6, "netRating": -2.2, "usage": 15.9, "effectiveFieldGoalPct": 90, "trueShootingPct": 90, "assistsTurnoverRatio": 0.5, "freeThrowRate": 0, "offensiveReboundPct": 25, "fieldGoals": {"made": 4, "attempted": 5, "pct": 80}, "twoPointFieldGoals": {"made": 3, "attempted": 3, "pct": 100}, "threePointFieldGoals": {"made": 1, "attempted": 2, "pct": 50}, "freeThrows": {"made": 0, "attempted": 0, "pct": 0}, "rebounds": {"offensive": 1, "defensive": 3, "total": 4}, "gameId": 5019, "startDate": "2025-02-19T00:00:00.000Z", "opponent": "Purdue", "isHome": true}, {"athleteId": 4074339, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 20, "points": 2, "turnovers": 1, "fouls": 4, "assists": 3, "steals": 1, "blocks": 0, "gameScore": 1.4, "offensiveRating": 84.1, "defensiveRating": 92.8, "netRating": -8.7, "usage": 15.3, "effectiveFieldGoalPct": 20, "trueShootingPct": 20, "assistsTurnoverRatio": 3, "freeThrowRate": 0, "offensiveReboundPct": 50, "fieldGoals": {"made": 1, "attempted": 5, "pct": 20}, "twoPointFieldGoals": {"made": 1, "attempted": 3, "pct": 33.3}, "threePointFieldGoals": {"made": 0, "attempted": 2, "pct": 0}, "freeThrows": {"made": 0, "attempted": 0, "pct": 0}, "rebounds": {"offensive": 2, "defensive": 2, "total": 4}, "gameId": 5167, "startDate": "2025-02-22T01:00:00.000Z", "opponent": "Michigan", "isHome": false}, {"athleteId": 4107942, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 18, "points": 3, "turnovers": 0, "fouls": 3, "assists": 0, "steals": 0, "blocks": 0, "gameScore": 3.3, "offensiveRating": 113.6, "defensiveRating": 82.9, "netRating": 30.7, "usage": 9.3, "effectiveFieldGoalPct": 33.3, "trueShootingPct": 43.6, "assistsTurnoverRatio": null, "freeThrowRate": 33.3, "offensiveReboundPct": 25, "fieldGoals": {"made": 1, "attempted": 3, "pct": 33.3}, "twoPointFieldGoals": {"made": 1, "attempted": 3, "pct": 33.3}, "threePointFieldGoals": {"made": 0, "attempted": 0, "pct": 0}, "freeThrows": {"made": 1, "attempted": 1, "pct": 100}, "rebounds": {"offensive": 2, "defensive": 6, "total": 8}, "gameId": 5392, "startDate": "2025-02-26T23:30:00.000Z", "opponent": "Maryland", "isHome": false}, {"athleteId": 4144805, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 30, "points": 10, "turnovers": 2, "fouls": 1, "assists": 2, "steals": 0, "blocks": 1, "gameScore": 11.5, "offensiveRating": 99.5, "defensiveRating": 83.2, "netRating": 16.3, "usage": 20.7, "effectiveFieldGoalPct": 40, "trueShootingPct": 44.2, "assistsTurnoverRatio": 1, "freeThrowRate": 30, "offensiveReboundPct": 43.8, "fieldGoals": {"made": 4, "attempted": 10, "pct": 40}, "twoPointFieldGoals": {"made": 4, "attempted": 8, "pct": 50}, "threePointFieldGoals": {"made": 0, "attempted": 2, "pct": 0}, "freeThrows": {"made": 2, "attempted": 3, "pct": 66.7}, "rebounds": {"offensive": 7, "defensive": 9, "total": 16}, "gameId": 5661, "startDate": "2025-03-02T18:30:00.000Z", "opponent": "Wisconsin", "isHome": true}, {"athleteId": 4162752, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 24, "points": 15, "turnovers": 0, "fouls": 1, "assists": 1, "steals": 1, "blocks": 0, "gameScore": 15.6, "offensiveRating": 177, "defensiveRating": 114.4, "netRating": 62.6, "usage": 18.7, "effectiveFieldGoalPct": 71.4, "trueShootingPct": 81.5, "assistsTurnoverRatio": null, "freeThrowRate": 71.4, "offensiveReboundPct": 16.7, "fieldGoals": {"made": 5, "attempted": 7, "pct": 71.4}, "twoPointFieldGoals": {"made": 5, "attempted": 7, "pct": 71.4}, "threePointFieldGoals": {"made": 0, "attempted": 0, "pct": 0}, "freeThrows": {"made": 5, "attempted": 5, "pct": 100}, "rebounds": {"offensive": 1, "defensive": 5, "total": 6}, "gameId": 5772, "startDate": "2025-03-07T01:00:00.000Z", "opponent": "Iowa", "isHome": false}, {"athleteId": 4187387, "athleteSourceId": "5105815", "name": "Jaxon Kohler", "position": "F", "starter": true, "ejected": false, "minutes": 25, "points": 9, "turnovers": 1, "fouls": 3, "assists": 1, "steals": 1, "blocks": 2, "gameScore": 8.8, "offensiveRating": 114.1, "defensiveRating": 81.1, "netRating": 33, "usage": 17.7, "effectiveFieldGoalPct": 56.3, "trueShootingPct": 56.3, "assistsTurnoverRatio": 1, "freeThrowRate": 0, "offensiveReboundPct": 28.6, "fieldGoals": {"made": 4, "attempted": 8, "pct": 50}, "twoPointFieldGoals": {"made": 3, "attempted": 6, "pct": 50}, "threePointFieldGoals": {"made": 1, "attempted": 2, "pct": 50}, "freeThrows": {"made": 0, "attempted": 0, "pct": 0}, "rebounds": {"offensive": 2, "defensive": 5, "total": 7}, "gameId": 5871, "startDate": "2025-03-09T16:00:00.000Z", "opponent": "Michigan", "isHome": true}];
+        
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+        
+        function filterGames() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const results = gameData.filter(game => 
+                game.opponent.toLowerCase().includes(searchTerm)
+            );
+            
+            const resultsHtml = results.map((game, index) => `
+                <div class="game-item">
+                    <strong>Game ${index + 1}:</strong> ${game.startDate ? game.startDate.substring(0, 10) : 'N/A'} vs ${game.opponent || 'N/A'} 
+                    - ${game.points || 0}PTS, ${game.rebounds ? game.rebounds.total || 0 : 0}REB, ${game.assists || 0}AST
+                </div>
+            `).join('');
+            
+            document.getElementById('searchResults').innerHTML = resultsHtml || '<p>No games found matching your search.</p>';
+        }
+        
+        // Initialize search results
+        filterGames();
+    </script>
+</body>
+</html>
