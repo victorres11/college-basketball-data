@@ -352,6 +352,7 @@ def calculate_regular_season_stats(player_name, game_data):
             'turnovers': game.get('turnovers', 0),
             'steals': game.get('steals', 0),
             'blocks': game.get('blocks', 0),
+            'fouls': game.get('fouls', 0),
             'fieldGoals': {
                 'made': game.get('fieldGoals', {}).get('made', 0),
                 'attempted': game.get('fieldGoals', {}).get('attempted', 0)
@@ -370,6 +371,9 @@ def calculate_regular_season_stats(player_name, game_data):
             }
         })
     
+    # Count foul-outs (games with 5+ fouls)
+    foul_outs = sum(1 for pg in player_games if pg['game'].get('fouls', 0) >= 5)
+    
     return {
         'games': games,
         'starts': starts,
@@ -383,6 +387,7 @@ def calculate_regular_season_stats(player_name, game_data):
         'points': points, 'ppg': round(ppg, 1),
         'minutes': minutes, 'mpg': round(mpg, 1),
         'ratio': round(ratio, 1),
+        'fouls': fouls, 'foulOuts': foul_outs,
         'game_by_game': game_by_game
     }
 
@@ -566,6 +571,8 @@ def generate_msu_data_json():
                 'spg': stats['spg'],
                 'blocks': stats['blocks'],
                 'bpg': stats['bpg'],
+                'fouls': stats['fouls'],
+                'foulOuts': stats['foulOuts'],
                 'fieldGoals': {
                     'made': stats['fgm'],
                     'attempted': stats['fga'],

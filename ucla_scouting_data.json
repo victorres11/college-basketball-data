@@ -2,7 +2,7 @@
   "team": "UCLA",
   "season": "2024-25",
   "seasonType": "Regular",
-  "dataGenerated": "2025-10-28T12:34:48.448415",
+  "dataGenerated": "2025-10-28T16:26:05.593356",
   "players": [
     {
       "name": "Kobe Johnson",
@@ -33,6 +33,8 @@
         "spg": 1.7,
         "blocks": 7,
         "bpg": 0.2,
+        "fouls": 90,
+        "foulOuts": 3,
         "fieldGoals": {
           "made": 94,
           "attempted": 202,
@@ -67,6 +69,7 @@
           "turnovers": 3,
           "steals": 2,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 5,
             "attempted": 9
@@ -96,6 +99,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 2,
             "attempted": 4
@@ -125,6 +129,7 @@
           "turnovers": 4,
           "steals": 4,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 3,
             "attempted": 7
@@ -154,6 +159,7 @@
           "turnovers": 1,
           "steals": 2,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 1,
             "attempted": 2
@@ -183,6 +189,7 @@
           "turnovers": 2,
           "steals": 2,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 3,
             "attempted": 5
@@ -212,6 +219,7 @@
           "turnovers": 1,
           "steals": 6,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 4,
             "attempted": 8
@@ -241,6 +249,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 1,
             "attempted": 6
@@ -270,6 +279,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 1,
             "attempted": 7
@@ -299,6 +309,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 4,
             "attempted": 7
@@ -328,6 +339,7 @@
           "turnovers": 3,
           "steals": 3,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 2,
             "attempted": 6
@@ -357,6 +369,7 @@
           "turnovers": 1,
           "steals": 3,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 4,
             "attempted": 7
@@ -386,6 +399,7 @@
           "turnovers": 1,
           "steals": 3,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 0,
             "attempted": 3
@@ -415,6 +429,7 @@
           "turnovers": 2,
           "steals": 1,
           "blocks": 1,
+          "fouls": 2,
           "fieldGoals": {
             "made": 4,
             "attempted": 6
@@ -444,6 +459,7 @@
           "turnovers": 2,
           "steals": 1,
           "blocks": 0,
+          "fouls": 5,
           "fieldGoals": {
             "made": 3,
             "attempted": 9
@@ -473,6 +489,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 2,
+          "fouls": 2,
           "fieldGoals": {
             "made": 2,
             "attempted": 3
@@ -502,6 +519,7 @@
           "turnovers": 2,
           "steals": 1,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 2,
             "attempted": 5
@@ -531,6 +549,7 @@
           "turnovers": 1,
           "steals": 2,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 5,
             "attempted": 8
@@ -560,6 +579,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 3,
             "attempted": 6
@@ -589,6 +609,7 @@
           "turnovers": 2,
           "steals": 1,
           "blocks": 0,
+          "fouls": 5,
           "fieldGoals": {
             "made": 1,
             "attempted": 4
@@ -618,6 +639,7 @@
           "turnovers": 0,
           "steals": 2,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 3,
             "attempted": 7
@@ -647,6 +669,7 @@
           "turnovers": 2,
           "steals": 1,
           "blocks": 0,
+          "fouls": 5,
           "fieldGoals": {
             "made": 3,
             "attempted": 3
@@ -676,6 +699,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 4,
             "attempted": 7
@@ -705,6 +729,7 @@
           "turnovers": 1,
           "steals": 2,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 2,
             "attempted": 7
@@ -734,6 +759,7 @@
           "turnovers": 0,
           "steals": 4,
           "blocks": 1,
+          "fouls": 3,
           "fieldGoals": {
             "made": 7,
             "attempted": 12
@@ -763,6 +789,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 5,
             "attempted": 7
@@ -792,6 +819,7 @@
           "turnovers": 2,
           "steals": 0,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 4,
             "attempted": 10
@@ -821,6 +849,7 @@
           "turnovers": 2,
           "steals": 2,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 5,
             "attempted": 9
@@ -850,6 +879,7 @@
           "turnovers": 2,
           "steals": 3,
           "blocks": 1,
+          "fouls": 3,
           "fieldGoals": {
             "made": 1,
             "attempted": 8
@@ -879,6 +909,7 @@
           "turnovers": 2,
           "steals": 0,
           "blocks": 1,
+          "fouls": 3,
           "fieldGoals": {
             "made": 2,
             "attempted": 3
@@ -908,6 +939,7 @@
           "turnovers": 1,
           "steals": 2,
           "blocks": 1,
+          "fouls": 2,
           "fieldGoals": {
             "made": 2,
             "attempted": 4
@@ -937,6 +969,7 @@
           "turnovers": 2,
           "steals": 1,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 1,
             "attempted": 4
@@ -966,6 +999,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 5,
             "attempted": 9
@@ -1389,6 +1423,8 @@
         "spg": 1.3,
         "blocks": 3,
         "bpg": 0.1,
+        "fouls": 72,
+        "foulOuts": 1,
         "fieldGoals": {
           "made": 89,
           "attempted": 197,
@@ -1423,6 +1459,7 @@
           "turnovers": 3,
           "steals": 1,
           "blocks": 1,
+          "fouls": 2,
           "fieldGoals": {
             "made": 1,
             "attempted": 5
@@ -1452,6 +1489,7 @@
           "turnovers": 1,
           "steals": 6,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 3,
             "attempted": 9
@@ -1481,6 +1519,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 1,
             "attempted": 3
@@ -1510,6 +1549,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 3,
             "attempted": 4
@@ -1539,6 +1579,7 @@
           "turnovers": 0,
           "steals": 3,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 1,
             "attempted": 4
@@ -1568,6 +1609,7 @@
           "turnovers": 1,
           "steals": 2,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 2,
             "attempted": 4
@@ -1597,6 +1639,7 @@
           "turnovers": 0,
           "steals": 3,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 2,
             "attempted": 5
@@ -1626,6 +1669,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 2,
             "attempted": 7
@@ -1655,6 +1699,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 1,
             "attempted": 6
@@ -1684,6 +1729,7 @@
           "turnovers": 3,
           "steals": 1,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 5,
             "attempted": 9
@@ -1713,6 +1759,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 3,
             "attempted": 6
@@ -1742,6 +1789,7 @@
           "turnovers": 0,
           "steals": 2,
           "blocks": 0,
+          "fouls": 5,
           "fieldGoals": {
             "made": 4,
             "attempted": 7
@@ -1771,6 +1819,7 @@
           "turnovers": 2,
           "steals": 1,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 3,
             "attempted": 5
@@ -1800,6 +1849,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 4,
             "attempted": 8
@@ -1829,6 +1879,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 2,
             "attempted": 3
@@ -1858,6 +1909,7 @@
           "turnovers": 3,
           "steals": 0,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 1,
             "attempted": 2
@@ -1887,6 +1939,7 @@
           "turnovers": 3,
           "steals": 0,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 2,
             "attempted": 6
@@ -1916,6 +1969,7 @@
           "turnovers": 0,
           "steals": 3,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 4,
             "attempted": 7
@@ -1945,6 +1999,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 3,
             "attempted": 7
@@ -1974,6 +2029,7 @@
           "turnovers": 2,
           "steals": 2,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 3,
             "attempted": 6
@@ -2003,6 +2059,7 @@
           "turnovers": 1,
           "steals": 2,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 2,
             "attempted": 5
@@ -2032,6 +2089,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 2,
             "attempted": 5
@@ -2061,6 +2119,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 3,
             "attempted": 10
@@ -2090,6 +2149,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 6,
             "attempted": 7
@@ -2119,6 +2179,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 3,
             "attempted": 7
@@ -2148,6 +2209,7 @@
           "turnovers": 2,
           "steals": 0,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 4,
             "attempted": 5
@@ -2177,6 +2239,7 @@
           "turnovers": 0,
           "steals": 2,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 2,
             "attempted": 4
@@ -2206,6 +2269,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 1,
+          "fouls": 3,
           "fieldGoals": {
             "made": 4,
             "attempted": 9
@@ -2235,6 +2299,7 @@
           "turnovers": 2,
           "steals": 1,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 0,
             "attempted": 3
@@ -2264,6 +2329,7 @@
           "turnovers": 2,
           "steals": 2,
           "blocks": 1,
+          "fouls": 0,
           "fieldGoals": {
             "made": 3,
             "attempted": 9
@@ -2293,6 +2359,7 @@
           "turnovers": 2,
           "steals": 3,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 7,
             "attempted": 10
@@ -2322,6 +2389,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 3,
             "attempted": 10
@@ -2682,6 +2750,8 @@
         "spg": 0.9,
         "blocks": 11,
         "bpg": 0.4,
+        "fouls": 71,
+        "foulOuts": 1,
         "fieldGoals": {
           "made": 161,
           "attempted": 324,
@@ -2716,6 +2786,7 @@
           "turnovers": 0,
           "steals": 2,
           "blocks": 1,
+          "fouls": 1,
           "fieldGoals": {
             "made": 9,
             "attempted": 16
@@ -2745,6 +2816,7 @@
           "turnovers": 3,
           "steals": 2,
           "blocks": 1,
+          "fouls": 3,
           "fieldGoals": {
             "made": 8,
             "attempted": 20
@@ -2774,6 +2846,7 @@
           "turnovers": 2,
           "steals": 1,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 3,
             "attempted": 8
@@ -2803,6 +2876,7 @@
           "turnovers": 2,
           "steals": 1,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 5,
             "attempted": 7
@@ -2832,6 +2906,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 8,
             "attempted": 14
@@ -2861,6 +2936,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 1,
+          "fouls": 1,
           "fieldGoals": {
             "made": 4,
             "attempted": 8
@@ -2890,6 +2966,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 1,
+          "fouls": 0,
           "fieldGoals": {
             "made": 2,
             "attempted": 10
@@ -2919,6 +2996,7 @@
           "turnovers": 2,
           "steals": 2,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 6,
             "attempted": 8
@@ -2948,6 +3026,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 1,
+          "fouls": 2,
           "fieldGoals": {
             "made": 3,
             "attempted": 11
@@ -2977,6 +3056,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 1,
+          "fouls": 2,
           "fieldGoals": {
             "made": 8,
             "attempted": 15
@@ -3006,6 +3086,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 1,
+          "fouls": 1,
           "fieldGoals": {
             "made": 5,
             "attempted": 6
@@ -3035,6 +3116,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 1,
+          "fouls": 4,
           "fieldGoals": {
             "made": 9,
             "attempted": 14
@@ -3064,6 +3146,7 @@
           "turnovers": 3,
           "steals": 2,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 2,
             "attempted": 10
@@ -3093,6 +3176,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 6,
             "attempted": 9
@@ -3122,6 +3206,7 @@
           "turnovers": 2,
           "steals": 1,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 8,
             "attempted": 15
@@ -3151,6 +3236,7 @@
           "turnovers": 4,
           "steals": 1,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 7,
             "attempted": 12
@@ -3180,6 +3266,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 1,
+          "fouls": 4,
           "fieldGoals": {
             "made": 0,
             "attempted": 7
@@ -3209,6 +3296,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 8,
             "attempted": 10
@@ -3238,6 +3326,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 5,
           "fieldGoals": {
             "made": 6,
             "attempted": 10
@@ -3267,6 +3356,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 2
@@ -3296,6 +3386,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 1,
+          "fouls": 2,
           "fieldGoals": {
             "made": 5,
             "attempted": 8
@@ -3325,6 +3416,7 @@
           "turnovers": 0,
           "steals": 2,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 4,
             "attempted": 10
@@ -3354,6 +3446,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 1,
+          "fouls": 1,
           "fieldGoals": {
             "made": 5,
             "attempted": 11
@@ -3383,6 +3476,7 @@
           "turnovers": 1,
           "steals": 2,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 9,
             "attempted": 17
@@ -3412,6 +3506,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 3,
             "attempted": 8
@@ -3441,6 +3536,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 4,
             "attempted": 8
@@ -3470,6 +3566,7 @@
           "turnovers": 3,
           "steals": 0,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 2,
             "attempted": 4
@@ -3499,6 +3596,7 @@
           "turnovers": 3,
           "steals": 1,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 7,
             "attempted": 13
@@ -3528,6 +3626,7 @@
           "turnovers": 3,
           "steals": 1,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 8,
             "attempted": 14
@@ -3557,6 +3656,7 @@
           "turnovers": 0,
           "steals": 2,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 6,
             "attempted": 12
@@ -3586,6 +3686,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 1,
             "attempted": 7
@@ -3946,6 +4047,8 @@
         "spg": 0.6,
         "blocks": 2,
         "bpg": 0.1,
+        "fouls": 25,
+        "foulOuts": 0,
         "fieldGoals": {
           "made": 83,
           "attempted": 217,
@@ -3980,6 +4083,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 6,
             "attempted": 11
@@ -4009,6 +4113,7 @@
           "turnovers": 6,
           "steals": 1,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 2,
             "attempted": 6
@@ -4038,6 +4143,7 @@
           "turnovers": 2,
           "steals": 0,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 1,
             "attempted": 2
@@ -4067,6 +4173,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 3,
             "attempted": 8
@@ -4096,6 +4203,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 5,
             "attempted": 8
@@ -4125,6 +4233,7 @@
           "turnovers": 2,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 5,
             "attempted": 12
@@ -4154,6 +4263,7 @@
           "turnovers": 3,
           "steals": 0,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 4,
             "attempted": 7
@@ -4183,6 +4293,7 @@
           "turnovers": 3,
           "steals": 4,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 2,
             "attempted": 4
@@ -4212,6 +4323,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 8,
             "attempted": 12
@@ -4241,6 +4353,7 @@
           "turnovers": 3,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 1,
             "attempted": 6
@@ -4270,6 +4383,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 5
@@ -4299,6 +4413,7 @@
           "turnovers": 4,
           "steals": 0,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 1,
             "attempted": 6
@@ -4328,6 +4443,7 @@
           "turnovers": 0,
           "steals": 3,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 1,
             "attempted": 7
@@ -4357,6 +4473,7 @@
           "turnovers": 3,
           "steals": 1,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 3,
             "attempted": 6
@@ -4386,6 +4503,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -4415,6 +4533,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 5,
             "attempted": 9
@@ -4444,6 +4563,7 @@
           "turnovers": 1,
           "steals": 2,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 4,
             "attempted": 10
@@ -4473,6 +4593,7 @@
           "turnovers": 3,
           "steals": 0,
           "blocks": 1,
+          "fouls": 3,
           "fieldGoals": {
             "made": 4,
             "attempted": 13
@@ -4502,6 +4623,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 4,
             "attempted": 9
@@ -4531,6 +4653,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 6,
             "attempted": 11
@@ -4560,6 +4683,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 1,
             "attempted": 6
@@ -4589,6 +4713,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 2,
             "attempted": 7
@@ -4618,6 +4743,7 @@
           "turnovers": 1,
           "steals": 2,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 3,
             "attempted": 8
@@ -4647,6 +4773,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 1,
             "attempted": 7
@@ -4676,6 +4803,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 1,
             "attempted": 6
@@ -4705,6 +4833,7 @@
           "turnovers": 3,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 1,
             "attempted": 5
@@ -4734,6 +4863,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 3,
             "attempted": 7
@@ -4763,6 +4893,7 @@
           "turnovers": 4,
           "steals": 0,
           "blocks": 1,
+          "fouls": 0,
           "fieldGoals": {
             "made": 2,
             "attempted": 7
@@ -4792,6 +4923,7 @@
           "turnovers": 1,
           "steals": 2,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 2,
             "attempted": 4
@@ -4821,6 +4953,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 2,
             "attempted": 8
@@ -5181,6 +5314,8 @@
         "spg": 1.3,
         "blocks": 5,
         "bpg": 0.2,
+        "fouls": 83,
+        "foulOuts": 2,
         "fieldGoals": {
           "made": 134,
           "attempted": 260,
@@ -5215,6 +5350,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 1,
+          "fouls": 4,
           "fieldGoals": {
             "made": 4,
             "attempted": 6
@@ -5244,6 +5380,7 @@
           "turnovers": 2,
           "steals": 0,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 1,
             "attempted": 3
@@ -5273,6 +5410,7 @@
           "turnovers": 2,
           "steals": 3,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 4,
             "attempted": 10
@@ -5302,6 +5440,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 6,
             "attempted": 11
@@ -5331,6 +5470,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 7,
             "attempted": 9
@@ -5360,6 +5500,7 @@
           "turnovers": 2,
           "steals": 3,
           "blocks": 1,
+          "fouls": 3,
           "fieldGoals": {
             "made": 4,
             "attempted": 9
@@ -5389,6 +5530,7 @@
           "turnovers": 1,
           "steals": 2,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 6,
             "attempted": 8
@@ -5418,6 +5560,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 3,
             "attempted": 7
@@ -5447,6 +5590,7 @@
           "turnovers": 0,
           "steals": 2,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 7,
             "attempted": 8
@@ -5476,6 +5620,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 1,
             "attempted": 3
@@ -5505,6 +5650,7 @@
           "turnovers": 2,
           "steals": 0,
           "blocks": 1,
+          "fouls": 2,
           "fieldGoals": {
             "made": 5,
             "attempted": 13
@@ -5534,6 +5680,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 1,
             "attempted": 2
@@ -5563,6 +5710,7 @@
           "turnovers": 1,
           "steals": 4,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 5,
             "attempted": 10
@@ -5592,6 +5740,7 @@
           "turnovers": 1,
           "steals": 2,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 3,
             "attempted": 9
@@ -5621,6 +5770,7 @@
           "turnovers": 2,
           "steals": 0,
           "blocks": 0,
+          "fouls": 5,
           "fieldGoals": {
             "made": 3,
             "attempted": 9
@@ -5650,6 +5800,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 8,
             "attempted": 15
@@ -5679,6 +5830,7 @@
           "turnovers": 1,
           "steals": 2,
           "blocks": 0,
+          "fouls": 5,
           "fieldGoals": {
             "made": 8,
             "attempted": 12
@@ -5708,6 +5860,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 2,
             "attempted": 5
@@ -5737,6 +5890,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 5,
             "attempted": 11
@@ -5766,6 +5920,7 @@
           "turnovers": 1,
           "steals": 2,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 6,
             "attempted": 10
@@ -5795,6 +5950,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 8,
             "attempted": 9
@@ -5824,6 +5980,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 3,
             "attempted": 9
@@ -5853,6 +6010,7 @@
           "turnovers": 1,
           "steals": 3,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 2,
             "attempted": 6
@@ -5882,6 +6040,7 @@
           "turnovers": 2,
           "steals": 1,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 2,
             "attempted": 6
@@ -5911,6 +6070,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 1,
+          "fouls": 1,
           "fieldGoals": {
             "made": 3,
             "attempted": 4
@@ -5940,6 +6100,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 3,
             "attempted": 10
@@ -5969,6 +6130,7 @@
           "turnovers": 2,
           "steals": 2,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 8,
             "attempted": 15
@@ -5998,6 +6160,7 @@
           "turnovers": 2,
           "steals": 1,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 3,
             "attempted": 6
@@ -6027,6 +6190,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 3,
             "attempted": 6
@@ -6056,6 +6220,7 @@
           "turnovers": 1,
           "steals": 3,
           "blocks": 1,
+          "fouls": 2,
           "fieldGoals": {
             "made": 10,
             "attempted": 13
@@ -6085,6 +6250,7 @@
           "turnovers": 1,
           "steals": 2,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 0,
             "attempted": 6
@@ -6382,6 +6548,8 @@
         "spg": 0.9,
         "blocks": 1,
         "bpg": 0.0,
+        "fouls": 57,
+        "foulOuts": 2,
         "fieldGoals": {
           "made": 100,
           "attempted": 231,
@@ -6416,6 +6584,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 4,
             "attempted": 7
@@ -6445,6 +6614,7 @@
           "turnovers": 3,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -6474,6 +6644,7 @@
           "turnovers": 0,
           "steals": 2,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 3,
             "attempted": 5
@@ -6503,6 +6674,7 @@
           "turnovers": 2,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 4,
             "attempted": 6
@@ -6532,6 +6704,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 3,
             "attempted": 6
@@ -6561,6 +6734,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 1,
             "attempted": 7
@@ -6590,6 +6764,7 @@
           "turnovers": 0,
           "steals": 2,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 3,
             "attempted": 6
@@ -6619,6 +6794,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 4,
             "attempted": 12
@@ -6648,6 +6824,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 5,
             "attempted": 13
@@ -6677,6 +6854,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 3,
             "attempted": 7
@@ -6706,6 +6884,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 1
@@ -6735,6 +6914,7 @@
           "turnovers": 2,
           "steals": 2,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 6,
             "attempted": 11
@@ -6764,6 +6944,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 1,
             "attempted": 7
@@ -6793,6 +6974,7 @@
           "turnovers": 4,
           "steals": 3,
           "blocks": 0,
+          "fouls": 5,
           "fieldGoals": {
             "made": 3,
             "attempted": 11
@@ -6822,6 +7004,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 1,
+          "fouls": 2,
           "fieldGoals": {
             "made": 6,
             "attempted": 13
@@ -6851,6 +7034,7 @@
           "turnovers": 2,
           "steals": 1,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 1,
             "attempted": 3
@@ -6880,6 +7064,7 @@
           "turnovers": 3,
           "steals": 2,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 6,
             "attempted": 12
@@ -6909,6 +7094,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 2,
             "attempted": 5
@@ -6938,6 +7124,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 6,
             "attempted": 12
@@ -6967,6 +7154,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 2,
             "attempted": 4
@@ -6996,6 +7184,7 @@
           "turnovers": 2,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 4,
             "attempted": 7
@@ -7025,6 +7214,7 @@
           "turnovers": 2,
           "steals": 1,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 3
@@ -7054,6 +7244,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 2,
             "attempted": 4
@@ -7083,6 +7274,7 @@
           "turnovers": 1,
           "steals": 2,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 4,
             "attempted": 9
@@ -7112,6 +7304,7 @@
           "turnovers": 1,
           "steals": 2,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 4,
             "attempted": 11
@@ -7141,6 +7334,7 @@
           "turnovers": 3,
           "steals": 2,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 2,
             "attempted": 7
@@ -7170,6 +7364,7 @@
           "turnovers": 3,
           "steals": 1,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 4,
             "attempted": 8
@@ -7199,6 +7394,7 @@
           "turnovers": 2,
           "steals": 0,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 3,
             "attempted": 6
@@ -7228,6 +7424,7 @@
           "turnovers": 3,
           "steals": 1,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 4,
             "attempted": 4
@@ -7257,6 +7454,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 2,
             "attempted": 6
@@ -7286,6 +7484,7 @@
           "turnovers": 2,
           "steals": 1,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 3,
             "attempted": 4
@@ -7315,6 +7514,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 5,
           "fieldGoals": {
             "made": 5,
             "attempted": 14
@@ -7612,6 +7812,8 @@
         "spg": 0.5,
         "blocks": 0,
         "bpg": 0.0,
+        "fouls": 41,
+        "foulOuts": 1,
         "fieldGoals": {
           "made": 53,
           "attempted": 128,
@@ -7646,6 +7848,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 2,
             "attempted": 3
@@ -7675,6 +7878,7 @@
           "turnovers": 3,
           "steals": 0,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 1,
             "attempted": 4
@@ -7704,6 +7908,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 4,
             "attempted": 7
@@ -7733,6 +7938,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 1,
             "attempted": 4
@@ -7762,6 +7968,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 1
@@ -7791,6 +7998,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -7820,6 +8028,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 8,
             "attempted": 12
@@ -7849,6 +8058,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 2,
             "attempted": 5
@@ -7878,6 +8088,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 2,
             "attempted": 5
@@ -7907,6 +8118,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 1
@@ -7936,6 +8148,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 5,
           "fieldGoals": {
             "made": 2,
             "attempted": 4
@@ -7965,6 +8178,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 2,
             "attempted": 3
@@ -7994,6 +8208,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 4,
             "attempted": 8
@@ -8023,6 +8238,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 3,
             "attempted": 9
@@ -8052,6 +8268,7 @@
           "turnovers": 0,
           "steals": 2,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 2,
             "attempted": 7
@@ -8081,6 +8298,7 @@
           "turnovers": 2,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 1,
             "attempted": 4
@@ -8110,6 +8328,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 3,
             "attempted": 7
@@ -8139,6 +8358,7 @@
           "turnovers": 1,
           "steals": 2,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 0,
             "attempted": 2
@@ -8168,6 +8388,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 2
@@ -8197,6 +8418,7 @@
           "turnovers": 1,
           "steals": 2,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 1,
             "attempted": 2
@@ -8226,6 +8448,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 2,
             "attempted": 3
@@ -8255,6 +8478,7 @@
           "turnovers": 0,
           "steals": 2,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 0,
             "attempted": 3
@@ -8284,6 +8508,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 3,
             "attempted": 3
@@ -8313,6 +8538,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 4
@@ -8342,6 +8568,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -8371,6 +8598,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 2,
             "attempted": 5
@@ -8400,6 +8628,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 2,
             "attempted": 3
@@ -8429,6 +8658,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 1,
             "attempted": 2
@@ -8458,6 +8688,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 2,
             "attempted": 10
@@ -8487,6 +8718,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 2,
             "attempted": 3
@@ -8516,6 +8748,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 1,
             "attempted": 2
@@ -8545,6 +8778,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -8968,6 +9202,8 @@
         "spg": 0.2,
         "blocks": 45,
         "bpg": 1.5,
+        "fouls": 43,
+        "foulOuts": 0,
         "fieldGoals": {
           "made": 78,
           "attempted": 130,
@@ -9002,6 +9238,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 3,
+          "fouls": 2,
           "fieldGoals": {
             "made": 2,
             "attempted": 3
@@ -9031,6 +9268,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -9060,6 +9298,7 @@
           "turnovers": 2,
           "steals": 0,
           "blocks": 1,
+          "fouls": 1,
           "fieldGoals": {
             "made": 2,
             "attempted": 6
@@ -9089,6 +9328,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 7,
             "attempted": 8
@@ -9118,6 +9358,7 @@
           "turnovers": 2,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -9147,6 +9388,7 @@
           "turnovers": 2,
           "steals": 0,
           "blocks": 2,
+          "fouls": 1,
           "fieldGoals": {
             "made": 4,
             "attempted": 6
@@ -9176,6 +9418,7 @@
           "turnovers": 3,
           "steals": 1,
           "blocks": 3,
+          "fouls": 4,
           "fieldGoals": {
             "made": 3,
             "attempted": 6
@@ -9205,6 +9448,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 2,
+          "fouls": 2,
           "fieldGoals": {
             "made": 2,
             "attempted": 2
@@ -9234,6 +9478,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 1,
             "attempted": 1
@@ -9263,6 +9508,7 @@
           "turnovers": 2,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 1,
             "attempted": 2
@@ -9292,6 +9538,7 @@
           "turnovers": 2,
           "steals": 1,
           "blocks": 2,
+          "fouls": 1,
           "fieldGoals": {
             "made": 3,
             "attempted": 3
@@ -9321,6 +9568,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 1
@@ -9350,6 +9598,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 2,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 3
@@ -9379,6 +9628,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 2,
+          "fouls": 2,
           "fieldGoals": {
             "made": 2,
             "attempted": 2
@@ -9408,6 +9658,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 1,
             "attempted": 2
@@ -9437,6 +9688,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 1
@@ -9466,6 +9718,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 1,
             "attempted": 2
@@ -9495,6 +9748,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 2,
+          "fouls": 3,
           "fieldGoals": {
             "made": 7,
             "attempted": 7
@@ -9524,6 +9778,7 @@
           "turnovers": 2,
           "steals": 0,
           "blocks": 5,
+          "fouls": 3,
           "fieldGoals": {
             "made": 5,
             "attempted": 10
@@ -9553,6 +9808,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 5,
+          "fouls": 0,
           "fieldGoals": {
             "made": 6,
             "attempted": 11
@@ -9582,6 +9838,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 3,
+          "fouls": 1,
           "fieldGoals": {
             "made": 3,
             "attempted": 4
@@ -9611,6 +9868,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 2,
+          "fouls": 2,
           "fieldGoals": {
             "made": 3,
             "attempted": 9
@@ -9640,6 +9898,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 1,
+          "fouls": 0,
           "fieldGoals": {
             "made": 2,
             "attempted": 5
@@ -9669,6 +9928,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -9698,6 +9958,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 2,
+          "fouls": 1,
           "fieldGoals": {
             "made": 3,
             "attempted": 5
@@ -9727,6 +9988,7 @@
           "turnovers": 2,
           "steals": 1,
           "blocks": 1,
+          "fouls": 2,
           "fieldGoals": {
             "made": 2,
             "attempted": 2
@@ -9756,6 +10018,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 2,
+          "fouls": 2,
           "fieldGoals": {
             "made": 3,
             "attempted": 8
@@ -9785,6 +10048,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 2,
             "attempted": 2
@@ -9814,6 +10078,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 3,
+          "fouls": 1,
           "fieldGoals": {
             "made": 5,
             "attempted": 8
@@ -9843,6 +10108,7 @@
           "turnovers": 2,
           "steals": 0,
           "blocks": 2,
+          "fouls": 1,
           "fieldGoals": {
             "made": 6,
             "attempted": 7
@@ -9872,6 +10138,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 2,
             "attempted": 4
@@ -10169,6 +10436,8 @@
         "spg": 0.6,
         "blocks": 3,
         "bpg": 0.1,
+        "fouls": 34,
+        "foulOuts": 0,
         "fieldGoals": {
           "made": 30,
           "attempted": 82,
@@ -10203,6 +10472,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 1,
             "attempted": 4
@@ -10232,6 +10502,7 @@
           "turnovers": 1,
           "steals": 2,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 1,
             "attempted": 4
@@ -10261,6 +10532,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 1,
             "attempted": 4
@@ -10290,6 +10562,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 2,
             "attempted": 6
@@ -10319,6 +10592,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 2,
             "attempted": 3
@@ -10348,6 +10622,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 4,
             "attempted": 5
@@ -10377,6 +10652,7 @@
           "turnovers": 1,
           "steals": 3,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 4,
             "attempted": 9
@@ -10406,6 +10682,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -10435,6 +10712,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 2
@@ -10464,6 +10742,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 2
@@ -10493,6 +10772,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 2,
             "attempted": 2
@@ -10522,6 +10802,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 1
@@ -10551,6 +10832,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 1,
             "attempted": 1
@@ -10580,6 +10862,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 1
@@ -10609,6 +10892,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 1
@@ -10638,6 +10922,7 @@
           "turnovers": 1,
           "steals": 2,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 4,
             "attempted": 11
@@ -10667,6 +10952,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 1,
+          "fouls": 2,
           "fieldGoals": {
             "made": 0,
             "attempted": 2
@@ -10696,6 +10982,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -10725,6 +11012,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 1
@@ -10754,6 +11042,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 2
@@ -10783,6 +11072,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 0,
             "attempted": 2
@@ -10812,6 +11102,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 2
@@ -10841,6 +11132,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 1,
             "attempted": 2
@@ -10870,6 +11162,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 1,
             "attempted": 1
@@ -10899,6 +11192,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 1,
+          "fouls": 1,
           "fieldGoals": {
             "made": 3,
             "attempted": 3
@@ -10928,6 +11222,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 1
@@ -10957,6 +11252,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 1
@@ -10986,6 +11282,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 1
@@ -11015,6 +11312,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 1,
             "attempted": 3
@@ -11044,6 +11342,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 1,
+          "fouls": 2,
           "fieldGoals": {
             "made": 2,
             "attempted": 5
@@ -11276,6 +11575,8 @@
         "spg": 0.2,
         "blocks": 19,
         "bpg": 0.6,
+        "fouls": 34,
+        "foulOuts": 0,
         "fieldGoals": {
           "made": 37,
           "attempted": 52,
@@ -11310,6 +11611,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 3,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -11339,6 +11641,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 2,
+          "fouls": 2,
           "fieldGoals": {
             "made": 2,
             "attempted": 5
@@ -11368,6 +11671,7 @@
           "turnovers": 2,
           "steals": 0,
           "blocks": 1,
+          "fouls": 2,
           "fieldGoals": {
             "made": 3,
             "attempted": 4
@@ -11397,6 +11701,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 1,
             "attempted": 2
@@ -11426,6 +11731,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 2,
             "attempted": 3
@@ -11455,6 +11761,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 4,
             "attempted": 4
@@ -11484,6 +11791,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 2,
             "attempted": 4
@@ -11513,6 +11821,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 1,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -11542,6 +11851,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 1,
             "attempted": 2
@@ -11571,6 +11881,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 1,
             "attempted": 1
@@ -11600,6 +11911,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 2,
             "attempted": 3
@@ -11629,6 +11941,7 @@
           "turnovers": 4,
           "steals": 0,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 3,
             "attempted": 4
@@ -11658,6 +11971,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -11687,6 +12001,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -11716,6 +12031,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -11745,6 +12061,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 3,
           "fieldGoals": {
             "made": 6,
             "attempted": 7
@@ -11774,6 +12091,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 2,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -11803,6 +12121,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 2,
+          "fouls": 2,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -11832,6 +12151,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 4,
           "fieldGoals": {
             "made": 1,
             "attempted": 1
@@ -11861,6 +12181,7 @@
           "turnovers": 1,
           "steals": 1,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 2,
             "attempted": 2
@@ -11890,6 +12211,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -11919,6 +12241,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 1,
+          "fouls": 0,
           "fieldGoals": {
             "made": 2,
             "attempted": 3
@@ -11948,6 +12271,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 1,
+          "fouls": 1,
           "fieldGoals": {
             "made": 1,
             "attempted": 1
@@ -11977,6 +12301,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 1,
             "attempted": 1
@@ -12006,6 +12331,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -12035,6 +12361,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 3,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -12064,6 +12391,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 1,
+          "fouls": 2,
           "fieldGoals": {
             "made": 1,
             "attempted": 1
@@ -12093,6 +12421,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -12122,6 +12451,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -12151,6 +12481,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 2,
+          "fouls": 0,
           "fieldGoals": {
             "made": 2,
             "attempted": 4
@@ -12511,6 +12842,8 @@
         "spg": 0.4,
         "blocks": 0,
         "bpg": 0.0,
+        "fouls": 6,
+        "foulOuts": 0,
         "fieldGoals": {
           "made": 4,
           "attempted": 26,
@@ -12545,6 +12878,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 1
@@ -12574,6 +12908,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 0,
             "attempted": 6
@@ -12603,6 +12938,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 1,
             "attempted": 6
@@ -12632,6 +12968,7 @@
           "turnovers": 1,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -12661,6 +12998,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 1
@@ -12690,6 +13028,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 1,
             "attempted": 4
@@ -12719,6 +13058,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 1
@@ -12748,6 +13088,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 1,
           "fieldGoals": {
             "made": 2,
             "attempted": 4
@@ -12777,6 +13118,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 1
@@ -12806,6 +13148,7 @@
           "turnovers": 2,
           "steals": 0,
           "blocks": 0,
+          "fouls": 2,
           "fieldGoals": {
             "made": 0,
             "attempted": 2
@@ -12835,6 +13178,7 @@
           "turnovers": 0,
           "steals": 1,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -13195,6 +13539,8 @@
         "spg": 0.0,
         "blocks": 0,
         "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
         "fieldGoals": {
           "made": 1,
           "attempted": 4,
@@ -13229,6 +13575,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -13258,6 +13605,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -13287,6 +13635,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 1,
             "attempted": 2
@@ -13316,6 +13665,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 0
@@ -13345,6 +13695,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 1
@@ -13374,6 +13725,7 @@
           "turnovers": 0,
           "steals": 0,
           "blocks": 0,
+          "fouls": 0,
           "fieldGoals": {
             "made": 0,
             "attempted": 1
