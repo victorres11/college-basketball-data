@@ -2,7 +2,7 @@
   "team": "Michigan State",
   "season": "2024-25",
   "seasonType": "Regular",
-  "dataGenerated": "2025-10-28T10:53:41.261206",
+  "dataGenerated": "2025-10-28T12:38:04.687017",
   "players": [
     {
       "name": "Jaden Akins",
@@ -1077,6 +1077,66 @@
           "rank": 124,
           "totalPlayers": 244,
           "value": 5.5
+        },
+        "fieldGoalsMade": {
+          "rank": 26,
+          "totalPlayers": 255,
+          "value": 154
+        },
+        "fieldGoalsAttempted": {
+          "rank": 11,
+          "totalPlayers": 255,
+          "value": 389
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 30,
+          "totalPlayers": 255,
+          "value": 50
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 14,
+          "totalPlayers": 255,
+          "value": 169
+        },
+        "freeThrowsMade": {
+          "rank": 55,
+          "totalPlayers": 255,
+          "value": 61
+        },
+        "freeThrowsAttempted": {
+          "rank": 61,
+          "totalPlayers": 255,
+          "value": 78
+        },
+        "offensiveRebounds": {
+          "rank": 92,
+          "totalPlayers": 255,
+          "value": 23
+        },
+        "defensiveRebounds": {
+          "rank": 51,
+          "totalPlayers": 255,
+          "value": 95
+        },
+        "totalRebounds": {
+          "rank": 62,
+          "totalPlayers": 255,
+          "value": 118
+        },
+        "totalAssists": {
+          "rank": 68,
+          "totalPlayers": 255,
+          "value": 50
+        },
+        "totalBlocks": {
+          "rank": 74,
+          "totalPlayers": 255,
+          "value": 9
+        },
+        "minutesPerGame": {
+          "rank": 53,
+          "totalPlayers": 255,
+          "value": 26.848484848484848
         }
       },
       "previousSeasons": [
@@ -2315,6 +2375,66 @@
           "rank": 11,
           "totalPlayers": 244,
           "value": 33
+        },
+        "fieldGoalsMade": {
+          "rank": 47,
+          "totalPlayers": 255,
+          "value": 128
+        },
+        "fieldGoalsAttempted": {
+          "rank": 56,
+          "totalPlayers": 255,
+          "value": 250
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 42,
+          "totalPlayers": 255,
+          "value": 40
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 54,
+          "totalPlayers": 255,
+          "value": 97
+        },
+        "freeThrowsMade": {
+          "rank": 25,
+          "totalPlayers": 255,
+          "value": 89
+        },
+        "freeThrowsAttempted": {
+          "rank": 32,
+          "totalPlayers": 255,
+          "value": 106
+        },
+        "offensiveRebounds": {
+          "rank": 99,
+          "totalPlayers": 255,
+          "value": 20
+        },
+        "defensiveRebounds": {
+          "rank": 65,
+          "totalPlayers": 255,
+          "value": 83
+        },
+        "totalRebounds": {
+          "rank": 73,
+          "totalPlayers": 255,
+          "value": 103
+        },
+        "totalAssists": {
+          "rank": 54,
+          "totalPlayers": 255,
+          "value": 62
+        },
+        "totalBlocks": {
+          "rank": 64,
+          "totalPlayers": 255,
+          "value": 10
+        },
+        "minutesPerGame": {
+          "rank": 72,
+          "totalPlayers": 255,
+          "value": 24.6875
         }
       }
     },
@@ -3391,6 +3511,66 @@
           "rank": 116,
           "totalPlayers": 244,
           "value": 6.1
+        },
+        "fieldGoalsMade": {
+          "rank": 68,
+          "totalPlayers": 255,
+          "value": 102
+        },
+        "fieldGoalsAttempted": {
+          "rank": 48,
+          "totalPlayers": 255,
+          "value": 265
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 39,
+          "totalPlayers": 255,
+          "value": 42
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 40,
+          "totalPlayers": 255,
+          "value": 130
+        },
+        "freeThrowsMade": {
+          "rank": 67,
+          "totalPlayers": 255,
+          "value": 51
+        },
+        "freeThrowsAttempted": {
+          "rank": 78,
+          "totalPlayers": 255,
+          "value": 60
+        },
+        "offensiveRebounds": {
+          "rank": 171,
+          "totalPlayers": 255,
+          "value": 6
+        },
+        "defensiveRebounds": {
+          "rank": 102,
+          "totalPlayers": 255,
+          "value": 59
+        },
+        "totalRebounds": {
+          "rank": 123,
+          "totalPlayers": 255,
+          "value": 65
+        },
+        "totalAssists": {
+          "rank": 13,
+          "totalPlayers": 255,
+          "value": 123
+        },
+        "totalBlocks": {
+          "rank": 80,
+          "totalPlayers": 255,
+          "value": 8
+        },
+        "minutesPerGame": {
+          "rank": 86,
+          "totalPlayers": 255,
+          "value": 23.0
         }
       },
       "previousSeasons": [
@@ -4566,6 +4746,66 @@
           "rank": 76,
           "totalPlayers": 244,
           "value": 12.6
+        },
+        "fieldGoalsMade": {
+          "rank": 100,
+          "totalPlayers": 255,
+          "value": 67
+        },
+        "fieldGoalsAttempted": {
+          "rank": 95,
+          "totalPlayers": 255,
+          "value": 162
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 110,
+          "totalPlayers": 255,
+          "value": 12
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 124,
+          "totalPlayers": 255,
+          "value": 32
+        },
+        "freeThrowsMade": {
+          "rank": 23,
+          "totalPlayers": 255,
+          "value": 90
+        },
+        "freeThrowsAttempted": {
+          "rank": 25,
+          "totalPlayers": 255,
+          "value": 120
+        },
+        "offensiveRebounds": {
+          "rank": 164,
+          "totalPlayers": 255,
+          "value": 8
+        },
+        "defensiveRebounds": {
+          "rank": 105,
+          "totalPlayers": 255,
+          "value": 58
+        },
+        "totalRebounds": {
+          "rank": 121,
+          "totalPlayers": 255,
+          "value": 66
+        },
+        "totalAssists": {
+          "rank": 3,
+          "totalPlayers": 255,
+          "value": 177
+        },
+        "totalBlocks": {
+          "rank": 123,
+          "totalPlayers": 255,
+          "value": 5
+        },
+        "minutesPerGame": {
+          "rank": 81,
+          "totalPlayers": 255,
+          "value": 23.25
         }
       },
       "previousSeasons": [
@@ -5707,6 +5947,66 @@
           "rank": 39,
           "totalPlayers": 244,
           "value": 21.5
+        },
+        "fieldGoalsMade": {
+          "rank": 70,
+          "totalPlayers": 255,
+          "value": 102
+        },
+        "fieldGoalsAttempted": {
+          "rank": 78,
+          "totalPlayers": 255,
+          "value": 199
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 97,
+          "totalPlayers": 255,
+          "value": 16
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 103,
+          "totalPlayers": 255,
+          "value": 47
+        },
+        "freeThrowsMade": {
+          "rank": 78,
+          "totalPlayers": 255,
+          "value": 44
+        },
+        "freeThrowsAttempted": {
+          "rank": 88,
+          "totalPlayers": 255,
+          "value": 54
+        },
+        "offensiveRebounds": {
+          "rank": 4,
+          "totalPlayers": 255,
+          "value": 84
+        },
+        "defensiveRebounds": {
+          "rank": 9,
+          "totalPlayers": 255,
+          "value": 168
+        },
+        "totalRebounds": {
+          "rank": 5,
+          "totalPlayers": 255,
+          "value": 252
+        },
+        "totalAssists": {
+          "rank": 80,
+          "totalPlayers": 255,
+          "value": 43
+        },
+        "totalBlocks": {
+          "rank": 21,
+          "totalPlayers": 255,
+          "value": 25
+        },
+        "minutesPerGame": {
+          "rank": 100,
+          "totalPlayers": 255,
+          "value": 20.818181818181817
         }
       },
       "previousSeasons": [
@@ -6911,6 +7211,66 @@
           "rank": 36,
           "totalPlayers": 244,
           "value": 22.1
+        },
+        "fieldGoalsMade": {
+          "rank": 74,
+          "totalPlayers": 255,
+          "value": 97
+        },
+        "fieldGoalsAttempted": {
+          "rank": 97,
+          "totalPlayers": 255,
+          "value": 158
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 149,
+          "totalPlayers": 255,
+          "value": 4
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 156,
+          "totalPlayers": 255,
+          "value": 13
+        },
+        "freeThrowsMade": {
+          "rank": 61,
+          "totalPlayers": 255,
+          "value": 56
+        },
+        "freeThrowsAttempted": {
+          "rank": 50,
+          "totalPlayers": 255,
+          "value": 84
+        },
+        "offensiveRebounds": {
+          "rank": 35,
+          "totalPlayers": 255,
+          "value": 44
+        },
+        "defensiveRebounds": {
+          "rank": 77,
+          "totalPlayers": 255,
+          "value": 69
+        },
+        "totalRebounds": {
+          "rank": 67,
+          "totalPlayers": 255,
+          "value": 113
+        },
+        "totalAssists": {
+          "rank": 137,
+          "totalPlayers": 255,
+          "value": 17
+        },
+        "totalBlocks": {
+          "rank": 23,
+          "totalPlayers": 255,
+          "value": 23
+        },
+        "minutesPerGame": {
+          "rank": 102,
+          "totalPlayers": 255,
+          "value": 20.151515151515152
         }
       },
       "previousSeasons": [
@@ -8052,6 +8412,66 @@
           "rank": 66,
           "totalPlayers": 244,
           "value": 15.1
+        },
+        "fieldGoalsMade": {
+          "rank": 98,
+          "totalPlayers": 255,
+          "value": 69
+        },
+        "fieldGoalsAttempted": {
+          "rank": 86,
+          "totalPlayers": 255,
+          "value": 183
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 113,
+          "totalPlayers": 255,
+          "value": 12
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 91,
+          "totalPlayers": 255,
+          "value": 61
+        },
+        "freeThrowsMade": {
+          "rank": 33,
+          "totalPlayers": 255,
+          "value": 80
+        },
+        "freeThrowsAttempted": {
+          "rank": 42,
+          "totalPlayers": 255,
+          "value": 91
+        },
+        "offensiveRebounds": {
+          "rank": 68,
+          "totalPlayers": 255,
+          "value": 27
+        },
+        "defensiveRebounds": {
+          "rank": 67,
+          "totalPlayers": 255,
+          "value": 83
+        },
+        "totalRebounds": {
+          "rank": 70,
+          "totalPlayers": 255,
+          "value": 110
+        },
+        "totalAssists": {
+          "rank": 116,
+          "totalPlayers": 255,
+          "value": 26
+        },
+        "totalBlocks": {
+          "rank": 106,
+          "totalPlayers": 255,
+          "value": 6
+        },
+        "minutesPerGame": {
+          "rank": 130,
+          "totalPlayers": 255,
+          "value": 16.363636363636363
         }
       },
       "previousSeasons": [
@@ -8178,69 +8598,6 @@
               "defensive": 0.8,
               "total": 2.4,
               "totalPer40": 0.09
-            }
-          }
-        },
-        {
-          "season": "2021-22",
-          "team": "Omaha",
-          "conference": "Summit",
-          "games": 29,
-          "gamesStarted": 26,
-          "seasonStats": {
-            "games": 29,
-            "minutes": 833,
-            "minutesPerGame": 28.7,
-            "points": 372,
-            "pointsPerGame": 12.8,
-            "assists": 51,
-            "assistsPerGame": 1.8,
-            "rebounds": {
-              "offensive": 20,
-              "defensive": 87,
-              "total": 107
-            },
-            "reboundsPerGame": 3.7,
-            "steals": 22,
-            "stealsPerGame": 0.8,
-            "blocks": 8,
-            "blocksPerGame": 0.3,
-            "turnovers": 60,
-            "turnoversPerGame": 2.1,
-            "fouls": 51,
-            "foulsPerGame": 1.8,
-            "fieldGoals": {
-              "made": 133,
-              "attempted": 275,
-              "pct": 48.4
-            },
-            "twoPointFieldGoals": {
-              "made": 97,
-              "attempted": 191,
-              "pct": 50.8
-            },
-            "threePointFieldGoals": {
-              "made": 36,
-              "attempted": 84,
-              "pct": 42.9
-            },
-            "freeThrows": {
-              "made": 70,
-              "attempted": 85,
-              "pct": 82.4
-            },
-            "offensiveRating": 108.5,
-            "defensiveRating": 119.6,
-            "netRating": -11.1,
-            "usage": 22.6,
-            "assistsTurnoverRatio": 0.85,
-            "effectiveFieldGoalPct": 54.9,
-            "trueShootingPct": 0.595,
-            "winShares": {
-              "offensive": 1.4,
-              "defensive": -0.1,
-              "total": 1.3,
-              "totalPer40": 0.062
             }
           }
         }
@@ -9319,6 +9676,66 @@
           "rank": 16,
           "totalPlayers": 244,
           "value": 31.3
+        },
+        "fieldGoalsMade": {
+          "rank": 113,
+          "totalPlayers": 255,
+          "value": 57
+        },
+        "fieldGoalsAttempted": {
+          "rank": 133,
+          "totalPlayers": 255,
+          "value": 95
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 245,
+          "totalPlayers": 255,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 210,
+          "totalPlayers": 255,
+          "value": 1
+        },
+        "freeThrowsMade": {
+          "rank": 64,
+          "totalPlayers": 255,
+          "value": 54
+        },
+        "freeThrowsAttempted": {
+          "rank": 66,
+          "totalPlayers": 255,
+          "value": 73
+        },
+        "offensiveRebounds": {
+          "rank": 29,
+          "totalPlayers": 255,
+          "value": 47
+        },
+        "defensiveRebounds": {
+          "rank": 29,
+          "totalPlayers": 255,
+          "value": 118
+        },
+        "totalRebounds": {
+          "rank": 27,
+          "totalPlayers": 255,
+          "value": 165
+        },
+        "totalAssists": {
+          "rank": 128,
+          "totalPlayers": 255,
+          "value": 21
+        },
+        "totalBlocks": {
+          "rank": 28,
+          "totalPlayers": 255,
+          "value": 22
+        },
+        "minutesPerGame": {
+          "rank": 119,
+          "totalPlayers": 255,
+          "value": 17.060606060606062
         }
       },
       "previousSeasons": [
@@ -10523,6 +10940,66 @@
           "rank": 48,
           "totalPlayers": 244,
           "value": 19.9
+        },
+        "fieldGoalsMade": {
+          "rank": 110,
+          "totalPlayers": 255,
+          "value": 59
+        },
+        "fieldGoalsAttempted": {
+          "rank": 136,
+          "totalPlayers": 255,
+          "value": 90
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 191,
+          "totalPlayers": 255,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 181,
+          "totalPlayers": 255,
+          "value": 2
+        },
+        "freeThrowsMade": {
+          "rank": 102,
+          "totalPlayers": 255,
+          "value": 29
+        },
+        "freeThrowsAttempted": {
+          "rank": 99,
+          "totalPlayers": 255,
+          "value": 44
+        },
+        "offensiveRebounds": {
+          "rank": 21,
+          "totalPlayers": 255,
+          "value": 55
+        },
+        "defensiveRebounds": {
+          "rank": 71,
+          "totalPlayers": 255,
+          "value": 77
+        },
+        "totalRebounds": {
+          "rank": 49,
+          "totalPlayers": 255,
+          "value": 132
+        },
+        "totalAssists": {
+          "rank": 124,
+          "totalPlayers": 255,
+          "value": 22
+        },
+        "totalBlocks": {
+          "rank": 31,
+          "totalPlayers": 255,
+          "value": 19
+        },
+        "minutesPerGame": {
+          "rank": 140,
+          "totalPlayers": 255,
+          "value": 14.575757575757576
         }
       },
       "previousSeasons": [
@@ -11761,6 +12238,66 @@
           "rank": 166,
           "totalPlayers": 244,
           "value": -5
+        },
+        "fieldGoalsMade": {
+          "rank": 111,
+          "totalPlayers": 255,
+          "value": 58
+        },
+        "fieldGoalsAttempted": {
+          "rank": 105,
+          "totalPlayers": 255,
+          "value": 139
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 91,
+          "totalPlayers": 255,
+          "value": 17
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 74,
+          "totalPlayers": 255,
+          "value": 73
+        },
+        "freeThrowsMade": {
+          "rank": 119,
+          "totalPlayers": 255,
+          "value": 22
+        },
+        "freeThrowsAttempted": {
+          "rank": 128,
+          "totalPlayers": 255,
+          "value": 28
+        },
+        "offensiveRebounds": {
+          "rank": 96,
+          "totalPlayers": 255,
+          "value": 21
+        },
+        "defensiveRebounds": {
+          "rank": 114,
+          "totalPlayers": 255,
+          "value": 51
+        },
+        "totalRebounds": {
+          "rank": 112,
+          "totalPlayers": 255,
+          "value": 72
+        },
+        "totalAssists": {
+          "rank": 160,
+          "totalPlayers": 255,
+          "value": 8
+        },
+        "totalBlocks": {
+          "rank": 25,
+          "totalPlayers": 255,
+          "value": 22
+        },
+        "minutesPerGame": {
+          "rank": 145,
+          "totalPlayers": 255,
+          "value": 13.0625
         }
       },
       "previousSeasons": [
@@ -12525,6 +13062,66 @@
           "rank": 194,
           "totalPlayers": 244,
           "value": -11.5
+        },
+        "fieldGoalsMade": {
+          "rank": 204,
+          "totalPlayers": 255,
+          "value": 3
+        },
+        "fieldGoalsAttempted": {
+          "rank": 194,
+          "totalPlayers": 255,
+          "value": 13
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 161,
+          "totalPlayers": 255,
+          "value": 2
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 161,
+          "totalPlayers": 255,
+          "value": 8
+        },
+        "freeThrowsMade": {
+          "rank": 198,
+          "totalPlayers": 255,
+          "value": 2
+        },
+        "freeThrowsAttempted": {
+          "rank": 206,
+          "totalPlayers": 255,
+          "value": 2
+        },
+        "offensiveRebounds": {
+          "rank": 181,
+          "totalPlayers": 255,
+          "value": 4
+        },
+        "defensiveRebounds": {
+          "rank": 186,
+          "totalPlayers": 255,
+          "value": 10
+        },
+        "totalRebounds": {
+          "rank": 187,
+          "totalPlayers": 255,
+          "value": 14
+        },
+        "totalAssists": {
+          "rank": 186,
+          "totalPlayers": 255,
+          "value": 3
+        },
+        "totalBlocks": {
+          "rank": 211,
+          "totalPlayers": 255,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 210,
+          "totalPlayers": 255,
+          "value": 2.888888888888889
         }
       }
     },
@@ -13050,6 +13647,66 @@
           "rank": 46,
           "totalPlayers": 244,
           "value": 20.1
+        },
+        "fieldGoalsMade": {
+          "rank": 207,
+          "totalPlayers": 255,
+          "value": 3
+        },
+        "fieldGoalsAttempted": {
+          "rank": 204,
+          "totalPlayers": 255,
+          "value": 7
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 169,
+          "totalPlayers": 255,
+          "value": 2
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 173,
+          "totalPlayers": 255,
+          "value": 5
+        },
+        "freeThrowsMade": {
+          "rank": 240,
+          "totalPlayers": 255,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 241,
+          "totalPlayers": 255,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 215,
+          "totalPlayers": 255,
+          "value": 1
+        },
+        "defensiveRebounds": {
+          "rank": 249,
+          "totalPlayers": 255,
+          "value": 0
+        },
+        "totalRebounds": {
+          "rank": 232,
+          "totalPlayers": 255,
+          "value": 1
+        },
+        "totalAssists": {
+          "rank": 190,
+          "totalPlayers": 255,
+          "value": 3
+        },
+        "totalBlocks": {
+          "rank": 234,
+          "totalPlayers": 255,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 221,
+          "totalPlayers": 255,
+          "value": 2.0
         }
       }
     },
@@ -13488,6 +14145,66 @@
           "rank": 178,
           "totalPlayers": 244,
           "value": -7.6
+        },
+        "fieldGoalsMade": {
+          "rank": 203,
+          "totalPlayers": 255,
+          "value": 3
+        },
+        "fieldGoalsAttempted": {
+          "rank": 208,
+          "totalPlayers": 255,
+          "value": 6
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 198,
+          "totalPlayers": 255,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 184,
+          "totalPlayers": 255,
+          "value": 2
+        },
+        "freeThrowsMade": {
+          "rank": 214,
+          "totalPlayers": 255,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 218,
+          "totalPlayers": 255,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 208,
+          "totalPlayers": 255,
+          "value": 1
+        },
+        "defensiveRebounds": {
+          "rank": 225,
+          "totalPlayers": 255,
+          "value": 1
+        },
+        "totalRebounds": {
+          "rank": 222,
+          "totalPlayers": 255,
+          "value": 2
+        },
+        "totalAssists": {
+          "rank": 218,
+          "totalPlayers": 255,
+          "value": 0
+        },
+        "totalBlocks": {
+          "rank": 204,
+          "totalPlayers": 255,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 234,
+          "totalPlayers": 255,
+          "value": 1.4444444444444444
         }
       },
       "previousSeasons": [

@@ -124,6 +124,19 @@ def calculate_player_conference_rankings_from_list(all_players_raw, conference_n
         ('offensiveRating', lambda p: p.get('offensiveRating')),
         ('defensiveRating', lambda p: p.get('defensiveRating')),
         ('netRating', lambda p: p.get('netRating')),
+        # New counting stats rankings
+        ('fieldGoalsMade', lambda p: p['fieldGoals']['made']),
+        ('fieldGoalsAttempted', lambda p: p['fieldGoals']['attempted']),
+        ('threePointFieldGoalsMade', lambda p: p['threePointFieldGoals']['made']),
+        ('threePointFieldGoalsAttempted', lambda p: p['threePointFieldGoals']['attempted']),
+        ('freeThrowsMade', lambda p: p['freeThrows']['made']),
+        ('freeThrowsAttempted', lambda p: p['freeThrows']['attempted']),
+        ('offensiveRebounds', lambda p: p['rebounds']['offensive']),
+        ('defensiveRebounds', lambda p: p['rebounds']['defensive']),
+        ('totalRebounds', lambda p: p['rebounds']['total']),
+        ('totalAssists', lambda p: p['assists']),
+        ('totalBlocks', lambda p: p['blocks']),
+        ('minutesPerGame', lambda p: (p['minutes'] / p['games']) if p['games'] > 0 else None),
     ]
     
     for stat_name, calc_func in stats_to_rank:
