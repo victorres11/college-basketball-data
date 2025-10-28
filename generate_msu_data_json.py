@@ -47,17 +47,28 @@ def get_player_career_season_stats(api, player_name, current_team):
                         'games': player.get('games'),
                         'gamesStarted': player.get('starts'),
                         'seasonStats': {
+                            'games': player.get('games'),
+                            'minutes': player.get('minutes'),
+                            'minutesPerGame': round(player.get('minutes', 0) / max(player.get('games', 1), 1), 1),
                             'points': player.get('points'),
                             'assists': player.get('assists'),
                             'rebounds': player.get('rebounds'),
                             'steals': player.get('steals'),
                             'blocks': player.get('blocks'),
+                            'turnovers': player.get('turnovers'),
+                            'fouls': player.get('fouls'),
                             'fieldGoals': player.get('fieldGoals'),
+                            'twoPointFieldGoals': player.get('twoPointFieldGoals'),
                             'threePointFieldGoals': player.get('threePointFieldGoals'),
                             'freeThrows': player.get('freeThrows'),
                             'offensiveRating': player.get('offensiveRating'),
                             'defensiveRating': player.get('defensiveRating'),
-                            'netRating': player.get('netRating')
+                            'netRating': player.get('netRating'),
+                            'usage': player.get('usage'),
+                            'assistsTurnoverRatio': player.get('assistsTurnoverRatio'),
+                            'effectiveFieldGoalPct': player.get('effectiveFieldGoalPct'),
+                            'trueShootingPct': player.get('trueShootingPct'),
+                            'winShares': player.get('winShares')
                         }
                     }
                     historical_seasons.append(season_data)

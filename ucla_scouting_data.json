@@ -2,7 +2,7 @@
   "team": "UCLA",
   "season": "2024-25",
   "seasonType": "Regular",
-  "dataGenerated": "2025-10-27T19:02:39.976347",
+  "dataGenerated": "2025-10-28T09:31:56.569285",
   "players": [
     {
       "name": "Kobe Johnson",
@@ -1116,6 +1116,9 @@
           "games": 31,
           "gamesStarted": 28,
           "seasonStats": {
+            "games": 31,
+            "minutes": 962,
+            "minutesPerGame": 31.0,
             "points": 337,
             "assists": 101,
             "rebounds": {
@@ -1125,10 +1128,17 @@
             },
             "steals": 68,
             "blocks": 25,
+            "turnovers": 65,
+            "fouls": 69,
             "fieldGoals": {
               "made": 126,
               "attempted": 312,
               "pct": 40.4
+            },
+            "twoPointFieldGoals": {
+              "made": 86,
+              "attempted": 184,
+              "pct": 46.7
             },
             "threePointFieldGoals": {
               "made": 40,
@@ -1142,7 +1152,17 @@
             },
             "offensiveRating": 98.6,
             "defensiveRating": 101.8,
-            "netRating": -3.2
+            "netRating": -3.2,
+            "usage": 21.9,
+            "assistsTurnoverRatio": 1.55,
+            "effectiveFieldGoalPct": 46.8,
+            "trueShootingPct": 0.497,
+            "winShares": {
+              "offensive": 0.7,
+              "defensive": 1.5,
+              "total": 2.2,
+              "totalPer40": 0.091
+            }
           }
         },
         {
@@ -1152,6 +1172,9 @@
           "games": 32,
           "gamesStarted": 28,
           "seasonStats": {
+            "games": 32,
+            "minutes": 915,
+            "minutesPerGame": 28.6,
             "points": 289,
             "assists": 81,
             "rebounds": {
@@ -1161,10 +1184,17 @@
             },
             "steals": 71,
             "blocks": 14,
+            "turnovers": 56,
+            "fouls": 72,
             "fieldGoals": {
               "made": 96,
               "attempted": 204,
               "pct": 47.1
+            },
+            "twoPointFieldGoals": {
+              "made": 68,
+              "attempted": 125,
+              "pct": 54.4
             },
             "threePointFieldGoals": {
               "made": 28,
@@ -1178,7 +1208,17 @@
             },
             "offensiveRating": 114,
             "defensiveRating": 93.8,
-            "netRating": 20.2
+            "netRating": 20.2,
+            "usage": 16.8,
+            "assistsTurnoverRatio": 1.45,
+            "effectiveFieldGoalPct": 53.9,
+            "trueShootingPct": 0.602,
+            "winShares": {
+              "offensive": 1.6,
+              "defensive": 2.1,
+              "total": 3.7,
+              "totalPer40": 0.162
+            }
           }
         },
         {
@@ -1188,6 +1228,9 @@
           "games": 26,
           "gamesStarted": 0,
           "seasonStats": {
+            "games": 26,
+            "minutes": 199,
+            "minutesPerGame": 7.7,
             "points": 32,
             "assists": 21,
             "rebounds": {
@@ -1197,10 +1240,17 @@
             },
             "steals": 16,
             "blocks": 5,
+            "turnovers": 12,
+            "fouls": 19,
             "fieldGoals": {
               "made": 11,
               "attempted": 34,
               "pct": 32.4
+            },
+            "twoPointFieldGoals": {
+              "made": 7,
+              "attempted": 20,
+              "pct": 35
             },
             "threePointFieldGoals": {
               "made": 4,
@@ -1214,7 +1264,17 @@
             },
             "offensiveRating": 91.7,
             "defensiveRating": 92.3,
-            "netRating": -0.6
+            "netRating": -0.6,
+            "usage": 12.6,
+            "assistsTurnoverRatio": 1.75,
+            "effectiveFieldGoalPct": 38.2,
+            "trueShootingPct": 0.426,
+            "winShares": {
+              "offensive": 0,
+              "defensive": 0.5,
+              "total": 0.5,
+              "totalPer40": 0.101
+            }
           }
         }
       ]
@@ -2331,6 +2391,9 @@
           "games": 29,
           "gamesStarted": 28,
           "seasonStats": {
+            "games": 29,
+            "minutes": 925,
+            "minutesPerGame": 31.9,
             "points": 384,
             "assists": 87,
             "rebounds": {
@@ -2340,10 +2403,17 @@
             },
             "steals": 30,
             "blocks": 4,
+            "turnovers": 88,
+            "fouls": 71,
             "fieldGoals": {
               "made": 127,
               "attempted": 308,
               "pct": 41.2
+            },
+            "twoPointFieldGoals": {
+              "made": 80,
+              "attempted": 175,
+              "pct": 45.7
             },
             "threePointFieldGoals": {
               "made": 47,
@@ -2357,7 +2427,17 @@
             },
             "offensiveRating": 98.7,
             "defensiveRating": 112.7,
-            "netRating": -14
+            "netRating": -14,
+            "usage": 24.3,
+            "assistsTurnoverRatio": 0.99,
+            "effectiveFieldGoalPct": 48.9,
+            "trueShootingPct": 0.541,
+            "winShares": {
+              "offensive": 0.7,
+              "defensive": 0.5,
+              "total": 1.2,
+              "totalPer40": 0.052
+            }
           }
         },
         {
@@ -2367,6 +2447,9 @@
           "games": 13,
           "gamesStarted": 12,
           "seasonStats": {
+            "games": 13,
+            "minutes": 317,
+            "minutesPerGame": 24.4,
             "points": 91,
             "assists": 27,
             "rebounds": {
@@ -2376,10 +2459,17 @@
             },
             "steals": 7,
             "blocks": 2,
+            "turnovers": 27,
+            "fouls": 36,
             "fieldGoals": {
               "made": 30,
               "attempted": 73,
               "pct": 41.1
+            },
+            "twoPointFieldGoals": {
+              "made": 15,
+              "attempted": 28,
+              "pct": 53.6
             },
             "threePointFieldGoals": {
               "made": 15,
@@ -2393,7 +2483,17 @@
             },
             "offensiveRating": 99.2,
             "defensiveRating": 94.8,
-            "netRating": 4.4
+            "netRating": 4.4,
+            "usage": 17.1,
+            "assistsTurnoverRatio": 1,
+            "effectiveFieldGoalPct": 51.4,
+            "trueShootingPct": 0.547,
+            "winShares": {
+              "offensive": 0.2,
+              "defensive": 0.7,
+              "total": 0.9,
+              "totalPer40": 0.114
+            }
           }
         }
       ]
@@ -3481,6 +3581,9 @@
           "games": 32,
           "gamesStarted": 32,
           "seasonStats": {
+            "games": 32,
+            "minutes": 953,
+            "minutesPerGame": 29.8,
             "points": 459,
             "assists": 39,
             "rebounds": {
@@ -3490,10 +3593,17 @@
             },
             "steals": 18,
             "blocks": 13,
+            "turnovers": 49,
+            "fouls": 93,
             "fieldGoals": {
               "made": 171,
               "attempted": 321,
               "pct": 53.3
+            },
+            "twoPointFieldGoals": {
+              "made": 141,
+              "attempted": 234,
+              "pct": 60.3
             },
             "threePointFieldGoals": {
               "made": 30,
@@ -3507,7 +3617,17 @@
             },
             "offensiveRating": 118.1,
             "defensiveRating": 107.6,
-            "netRating": 10.5
+            "netRating": 10.5,
+            "usage": 24.5,
+            "assistsTurnoverRatio": 0.8,
+            "effectiveFieldGoalPct": 57.9,
+            "trueShootingPct": 0.622,
+            "winShares": {
+              "offensive": 2.7,
+              "defensive": 0.9,
+              "total": 3.6,
+              "totalPer40": 0.151
+            }
           }
         },
         {
@@ -3517,6 +3637,9 @@
           "games": 32,
           "gamesStarted": 13,
           "seasonStats": {
+            "games": 32,
+            "minutes": 628,
+            "minutesPerGame": 19.6,
             "points": 224,
             "assists": 18,
             "rebounds": {
@@ -3526,10 +3649,17 @@
             },
             "steals": 12,
             "blocks": 11,
+            "turnovers": 37,
+            "fouls": 87,
             "fieldGoals": {
               "made": 84,
               "attempted": 184,
               "pct": 45.7
+            },
+            "twoPointFieldGoals": {
+              "made": 72,
+              "attempted": 144,
+              "pct": 50
             },
             "threePointFieldGoals": {
               "made": 12,
@@ -3543,7 +3673,17 @@
             },
             "offensiveRating": 100.4,
             "defensiveRating": 103.7,
-            "netRating": -3.3
+            "netRating": -3.3,
+            "usage": 21.5,
+            "assistsTurnoverRatio": 0.49,
+            "effectiveFieldGoalPct": 48.9,
+            "trueShootingPct": 0.539,
+            "winShares": {
+              "offensive": 0.5,
+              "defensive": 0.8,
+              "total": 1.3,
+              "totalPer40": 0.083
+            }
           }
         }
       ]
@@ -4602,6 +4742,9 @@
           "games": 32,
           "gamesStarted": 32,
           "seasonStats": {
+            "games": 32,
+            "minutes": 1125,
+            "minutesPerGame": 35.2,
             "points": 412,
             "assists": 119,
             "rebounds": {
@@ -4611,10 +4754,17 @@
             },
             "steals": 27,
             "blocks": 2,
+            "turnovers": 62,
+            "fouls": 58,
             "fieldGoals": {
               "made": 153,
               "attempted": 387,
               "pct": 39.5
+            },
+            "twoPointFieldGoals": {
+              "made": 106,
+              "attempted": 242,
+              "pct": 43.8
             },
             "threePointFieldGoals": {
               "made": 47,
@@ -4628,7 +4778,17 @@
             },
             "offensiveRating": 102.8,
             "defensiveRating": 110.1,
-            "netRating": -7.3
+            "netRating": -7.3,
+            "usage": 23,
+            "assistsTurnoverRatio": 1.92,
+            "effectiveFieldGoalPct": 45.6,
+            "trueShootingPct": 0.492,
+            "winShares": {
+              "offensive": 1.3,
+              "defensive": 0.8,
+              "total": 2.1,
+              "totalPer40": 0.075
+            }
           }
         },
         {
@@ -4638,6 +4798,9 @@
           "games": 33,
           "gamesStarted": 0,
           "seasonStats": {
+            "games": 33,
+            "minutes": 345,
+            "minutesPerGame": 10.5,
             "points": 106,
             "assists": 33,
             "rebounds": {
@@ -4647,10 +4810,17 @@
             },
             "steals": 10,
             "blocks": 1,
+            "turnovers": 17,
+            "fouls": 35,
             "fieldGoals": {
               "made": 42,
               "attempted": 96,
               "pct": 43.8
+            },
+            "twoPointFieldGoals": {
+              "made": 31,
+              "attempted": 59,
+              "pct": 52.5
             },
             "threePointFieldGoals": {
               "made": 11,
@@ -4664,7 +4834,17 @@
             },
             "offensiveRating": 106,
             "defensiveRating": 94.5,
-            "netRating": 11.5
+            "netRating": 11.5,
+            "usage": 17.9,
+            "assistsTurnoverRatio": 1.94,
+            "effectiveFieldGoalPct": 49.5,
+            "trueShootingPct": 0.51,
+            "winShares": {
+              "offensive": 0.4,
+              "defensive": 0.8,
+              "total": 1.2,
+              "totalPer40": 0.139
+            }
           }
         }
       ]
@@ -5752,6 +5932,9 @@
           "games": 32,
           "gamesStarted": 16,
           "seasonStats": {
+            "games": 32,
+            "minutes": 715,
+            "minutesPerGame": 22.3,
             "points": 299,
             "assists": 49,
             "rebounds": {
@@ -5761,10 +5944,17 @@
             },
             "steals": 24,
             "blocks": 4,
+            "turnovers": 35,
+            "fouls": 64,
             "fieldGoals": {
               "made": 112,
               "attempted": 226,
               "pct": 49.6
+            },
+            "twoPointFieldGoals": {
+              "made": 93,
+              "attempted": 169,
+              "pct": 55
             },
             "threePointFieldGoals": {
               "made": 19,
@@ -5778,7 +5968,17 @@
             },
             "offensiveRating": 112.5,
             "defensiveRating": 105.6,
-            "netRating": 6.9
+            "netRating": 6.9,
+            "usage": 22.6,
+            "assistsTurnoverRatio": 1.4,
+            "effectiveFieldGoalPct": 53.8,
+            "trueShootingPct": 0.56,
+            "winShares": {
+              "offensive": 1.5,
+              "defensive": 0.8,
+              "total": 2.3,
+              "totalPer40": 0.129
+            }
           }
         }
       ]
@@ -6895,6 +7095,9 @@
           "games": 33,
           "gamesStarted": 30,
           "seasonStats": {
+            "games": 33,
+            "minutes": 886,
+            "minutesPerGame": 26.8,
             "points": 399,
             "assists": 52,
             "rebounds": {
@@ -6904,10 +7107,17 @@
             },
             "steals": 44,
             "blocks": 2,
+            "turnovers": 52,
+            "fouls": 77,
             "fieldGoals": {
               "made": 123,
               "attempted": 318,
               "pct": 38.7
+            },
+            "twoPointFieldGoals": {
+              "made": 95,
+              "attempted": 219,
+              "pct": 43.4
             },
             "threePointFieldGoals": {
               "made": 28,
@@ -6921,7 +7131,17 @@
             },
             "offensiveRating": 103.3,
             "defensiveRating": 102.8,
-            "netRating": 0.5
+            "netRating": 0.5,
+            "usage": 27,
+            "assistsTurnoverRatio": 1,
+            "effectiveFieldGoalPct": 43.1,
+            "trueShootingPct": 0.507,
+            "winShares": {
+              "offensive": 1.3,
+              "defensive": 1.3,
+              "total": 2.6,
+              "totalPer40": 0.117
+            }
           }
         }
       ]
@@ -8038,6 +8258,9 @@
           "games": 33,
           "gamesStarted": 33,
           "seasonStats": {
+            "games": 33,
+            "minutes": 1141,
+            "minutesPerGame": 34.6,
             "points": 381,
             "assists": 53,
             "rebounds": {
@@ -8047,10 +8270,17 @@
             },
             "steals": 35,
             "blocks": 3,
+            "turnovers": 35,
+            "fouls": 82,
             "fieldGoals": {
               "made": 122,
               "attempted": 317,
               "pct": 38.5
+            },
+            "twoPointFieldGoals": {
+              "made": 64,
+              "attempted": 168,
+              "pct": 38.1
             },
             "threePointFieldGoals": {
               "made": 58,
@@ -8064,7 +8294,17 @@
             },
             "offensiveRating": 114,
             "defensiveRating": 104.4,
-            "netRating": 9.6
+            "netRating": 9.6,
+            "usage": 18.4,
+            "assistsTurnoverRatio": 1.51,
+            "effectiveFieldGoalPct": 47.6,
+            "trueShootingPct": 0.534,
+            "winShares": {
+              "offensive": 2.1,
+              "defensive": 1.5,
+              "total": 3.6,
+              "totalPer40": 0.126
+            }
           }
         },
         {
@@ -8074,6 +8314,9 @@
           "games": 32,
           "gamesStarted": 15,
           "seasonStats": {
+            "games": 32,
+            "minutes": 905,
+            "minutesPerGame": 28.3,
             "points": 329,
             "assists": 86,
             "rebounds": {
@@ -8083,10 +8326,17 @@
             },
             "steals": 34,
             "blocks": 5,
+            "turnovers": 51,
+            "fouls": 50,
             "fieldGoals": {
               "made": 114,
               "attempted": 307,
               "pct": 37.1
+            },
+            "twoPointFieldGoals": {
+              "made": 59,
+              "attempted": 154,
+              "pct": 38.3
             },
             "threePointFieldGoals": {
               "made": 55,
@@ -8100,7 +8350,17 @@
             },
             "offensiveRating": 102.6,
             "defensiveRating": 97.8,
-            "netRating": 4.8
+            "netRating": 4.8,
+            "usage": 22.1,
+            "assistsTurnoverRatio": 1.69,
+            "effectiveFieldGoalPct": 46.1,
+            "trueShootingPct": 0.498,
+            "winShares": {
+              "offensive": 1,
+              "defensive": 1.7,
+              "total": 2.7,
+              "totalPer40": 0.119
+            }
           }
         },
         {
@@ -8110,6 +8370,9 @@
           "games": 31,
           "gamesStarted": 18,
           "seasonStats": {
+            "games": 31,
+            "minutes": 779,
+            "minutesPerGame": 25.1,
             "points": 233,
             "assists": 41,
             "rebounds": {
@@ -8119,10 +8382,17 @@
             },
             "steals": 13,
             "blocks": 1,
+            "turnovers": 43,
+            "fouls": 74,
             "fieldGoals": {
               "made": 80,
               "attempted": 221,
               "pct": 36.2
+            },
+            "twoPointFieldGoals": {
+              "made": 47,
+              "attempted": 114,
+              "pct": 41.2
             },
             "threePointFieldGoals": {
               "made": 33,
@@ -8136,7 +8406,17 @@
             },
             "offensiveRating": 95.1,
             "defensiveRating": 108.8,
-            "netRating": -13.7
+            "netRating": -13.7,
+            "usage": 19.1,
+            "assistsTurnoverRatio": 0.95,
+            "effectiveFieldGoalPct": 43.7,
+            "trueShootingPct": 0.481,
+            "winShares": {
+              "offensive": 0.2,
+              "defensive": 0.7,
+              "total": 0.9,
+              "totalPer40": 0.046
+            }
           }
         }
       ]
@@ -9224,6 +9504,9 @@
           "games": 28,
           "gamesStarted": 8,
           "seasonStats": {
+            "games": 28,
+            "minutes": 267,
+            "minutesPerGame": 9.5,
             "points": 97,
             "assists": 15,
             "rebounds": {
@@ -9233,7 +9516,14 @@
             },
             "steals": 2,
             "blocks": 20,
+            "turnovers": 19,
+            "fouls": 25,
             "fieldGoals": {
+              "made": 38,
+              "attempted": 86,
+              "pct": 44.2
+            },
+            "twoPointFieldGoals": {
               "made": 38,
               "attempted": 86,
               "pct": 44.2
@@ -9250,7 +9540,17 @@
             },
             "offensiveRating": 95.6,
             "defensiveRating": 102.9,
-            "netRating": -7.3
+            "netRating": -7.3,
+            "usage": 23.6,
+            "assistsTurnoverRatio": 0.79,
+            "effectiveFieldGoalPct": 44.2,
+            "trueShootingPct": 0.489,
+            "winShares": {
+              "offensive": 0.1,
+              "defensive": 0.4,
+              "total": 0.5,
+              "totalPer40": 0.075
+            }
           }
         }
       ]
@@ -11356,6 +11656,9 @@
           "games": 34,
           "gamesStarted": 23,
           "seasonStats": {
+            "games": 34,
+            "minutes": 940,
+            "minutesPerGame": 27.6,
             "points": 445,
             "assists": 54,
             "rebounds": {
@@ -11365,10 +11668,17 @@
             },
             "steals": 11,
             "blocks": 55,
+            "turnovers": 49,
+            "fouls": 50,
             "fieldGoals": {
               "made": 189,
               "attempted": 303,
               "pct": 62.4
+            },
+            "twoPointFieldGoals": {
+              "made": 189,
+              "attempted": 302,
+              "pct": 62.6
             },
             "threePointFieldGoals": {
               "made": 0,
@@ -11382,7 +11692,17 @@
             },
             "offensiveRating": 121.9,
             "defensiveRating": 105.3,
-            "netRating": 16.6
+            "netRating": 16.6,
+            "usage": 22.8,
+            "assistsTurnoverRatio": 1.1,
+            "effectiveFieldGoalPct": 62.4,
+            "trueShootingPct": 0.629,
+            "winShares": {
+              "offensive": 3.2,
+              "defensive": 1.1,
+              "total": 4.3,
+              "totalPer40": 0.183
+            }
           }
         },
         {
@@ -11392,6 +11712,9 @@
           "games": 32,
           "gamesStarted": 25,
           "seasonStats": {
+            "games": 32,
+            "minutes": 788,
+            "minutesPerGame": 24.6,
             "points": 286,
             "assists": 31,
             "rebounds": {
@@ -11401,7 +11724,14 @@
             },
             "steals": 11,
             "blocks": 38,
+            "turnovers": 53,
+            "fouls": 57,
             "fieldGoals": {
+              "made": 117,
+              "attempted": 216,
+              "pct": 54.2
+            },
+            "twoPointFieldGoals": {
               "made": 117,
               "attempted": 216,
               "pct": 54.2
@@ -11418,7 +11748,17 @@
             },
             "offensiveRating": 103.4,
             "defensiveRating": 102.2,
-            "netRating": 1.2
+            "netRating": 1.2,
+            "usage": 21.1,
+            "assistsTurnoverRatio": 0.58,
+            "effectiveFieldGoalPct": 54.2,
+            "trueShootingPct": 0.568,
+            "winShares": {
+              "offensive": 0.9,
+              "defensive": 1.2,
+              "total": 2.1,
+              "totalPer40": 0.107
+            }
           }
         }
       ]
@@ -11926,6 +12266,9 @@
           "games": 24,
           "gamesStarted": 13,
           "seasonStats": {
+            "games": 24,
+            "minutes": 682,
+            "minutesPerGame": 28.4,
             "points": 343,
             "assists": 25,
             "rebounds": {
@@ -11935,10 +12278,17 @@
             },
             "steals": 11,
             "blocks": 2,
+            "turnovers": 46,
+            "fouls": 55,
             "fieldGoals": {
               "made": 112,
               "attempted": 261,
               "pct": 42.9
+            },
+            "twoPointFieldGoals": {
+              "made": 47,
+              "attempted": 116,
+              "pct": 40.5
             },
             "threePointFieldGoals": {
               "made": 65,
@@ -11952,7 +12302,17 @@
             },
             "offensiveRating": 111.6,
             "defensiveRating": 108,
-            "netRating": 3.6
+            "netRating": 3.6,
+            "usage": 25.5,
+            "assistsTurnoverRatio": 0.54,
+            "effectiveFieldGoalPct": 55.4,
+            "trueShootingPct": 0.589,
+            "winShares": {
+              "offensive": 1.5,
+              "defensive": 0.6,
+              "total": 2.1,
+              "totalPer40": 0.123
+            }
           }
         },
         {
@@ -11962,6 +12322,9 @@
           "games": 12,
           "gamesStarted": 0,
           "seasonStats": {
+            "games": 12,
+            "minutes": 55,
+            "minutesPerGame": 4.6,
             "points": 19,
             "assists": 7,
             "rebounds": {
@@ -11971,10 +12334,17 @@
             },
             "steals": 1,
             "blocks": 1,
+            "turnovers": 3,
+            "fouls": 10,
             "fieldGoals": {
               "made": 7,
               "attempted": 17,
               "pct": 41.2
+            },
+            "twoPointFieldGoals": {
+              "made": 4,
+              "attempted": 7,
+              "pct": 57.1
             },
             "threePointFieldGoals": {
               "made": 3,
@@ -11988,7 +12358,17 @@
             },
             "offensiveRating": 117.6,
             "defensiveRating": 102.3,
-            "netRating": 15.3
+            "netRating": 15.3,
+            "usage": 18.1,
+            "assistsTurnoverRatio": 2.33,
+            "effectiveFieldGoalPct": 50,
+            "trueShootingPct": 0.531,
+            "winShares": {
+              "offensive": 0.1,
+              "defensive": 0.1,
+              "total": 0.2,
+              "totalPer40": 0.145
+            }
           }
         }
       ]
