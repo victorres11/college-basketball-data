@@ -2,7 +2,7 @@
   "team": "Michigan State",
   "season": "2024-25",
   "seasonType": "Regular",
-  "dataGenerated": "2025-10-28T10:41:57.793071",
+  "dataGenerated": "2025-10-28T10:53:41.261206",
   "players": [
     {
       "name": "Jaden Akins",
@@ -1081,7 +1081,7 @@
       },
       "previousSeasons": [
         {
-          "season": 2024,
+          "season": "2023-24",
           "team": "Michigan State",
           "conference": "Big Ten",
           "games": 33,
@@ -1144,7 +1144,7 @@
           }
         },
         {
-          "season": 2023,
+          "season": "2022-23",
           "team": "Michigan State",
           "conference": "Big Ten",
           "games": 27,
@@ -1207,7 +1207,7 @@
           }
         },
         {
-          "season": 2022,
+          "season": "2021-22",
           "team": "Michigan State",
           "conference": "Big Ten",
           "games": 34,
@@ -3395,7 +3395,7 @@
       },
       "previousSeasons": [
         {
-          "season": 2024,
+          "season": "2023-24",
           "team": "Michigan State",
           "conference": "Big Ten",
           "games": 33,
@@ -3458,7 +3458,7 @@
           }
         },
         {
-          "season": 2023,
+          "season": "2022-23",
           "team": "Michigan State",
           "conference": "Big Ten",
           "games": 31,
@@ -4570,7 +4570,7 @@
       },
       "previousSeasons": [
         {
-          "season": 2024,
+          "season": "2023-24",
           "team": "Michigan State",
           "conference": "Big Ten",
           "games": 12,
@@ -5711,7 +5711,7 @@
       },
       "previousSeasons": [
         {
-          "season": 2024,
+          "season": "2023-24",
           "team": "Michigan State",
           "conference": "Big Ten",
           "games": 19,
@@ -5774,7 +5774,7 @@
           }
         },
         {
-          "season": 2023,
+          "season": "2022-23",
           "team": "Michigan State",
           "conference": "Big Ten",
           "games": 31,
@@ -6915,7 +6915,7 @@
       },
       "previousSeasons": [
         {
-          "season": 2024,
+          "season": "2023-24",
           "team": "Michigan State",
           "conference": "Big Ten",
           "games": 33,
@@ -8056,7 +8056,7 @@
       },
       "previousSeasons": [
         {
-          "season": 2024,
+          "season": "2023-24",
           "team": "Omaha",
           "conference": "Summit",
           "games": 33,
@@ -8119,7 +8119,7 @@
           }
         },
         {
-          "season": 2023,
+          "season": "2022-23",
           "team": "Omaha",
           "conference": "Summit",
           "games": 32,
@@ -8182,7 +8182,7 @@
           }
         },
         {
-          "season": 2022,
+          "season": "2021-22",
           "team": "Omaha",
           "conference": "Summit",
           "games": 29,
@@ -9323,7 +9323,7 @@
       },
       "previousSeasons": [
         {
-          "season": 2024,
+          "season": "2023-24",
           "team": "Michigan State",
           "conference": "Big Ten",
           "games": 33,
@@ -9386,7 +9386,7 @@
           }
         },
         {
-          "season": 2023,
+          "season": "2022-23",
           "team": "Michigan State",
           "conference": "Big Ten",
           "games": 27,
@@ -10527,7 +10527,7 @@
       },
       "previousSeasons": [
         {
-          "season": 2024,
+          "season": "2023-24",
           "team": "Longwood",
           "conference": "Big South",
           "games": 34,
@@ -10590,7 +10590,7 @@
           }
         },
         {
-          "season": 2023,
+          "season": "2022-23",
           "team": "Utah State",
           "conference": "Mountain West",
           "games": 11,
@@ -10653,7 +10653,7 @@
           }
         },
         {
-          "season": 2022,
+          "season": "2021-22",
           "team": "Utah State",
           "conference": "Mountain West",
           "games": 20,
@@ -11765,7 +11765,7 @@
       },
       "previousSeasons": [
         {
-          "season": 2024,
+          "season": "2023-24",
           "team": "Michigan State",
           "conference": "Big Ten",
           "games": 25,
@@ -13492,7 +13492,7 @@
       },
       "previousSeasons": [
         {
-          "season": 2024,
+          "season": "2023-24",
           "team": "Michigan State",
           "conference": "Big Ten",
           "games": 8,
@@ -13555,7 +13555,7 @@
           }
         },
         {
-          "season": 2023,
+          "season": "2022-23",
           "team": "Michigan State",
           "conference": "Big Ten",
           "games": 7,

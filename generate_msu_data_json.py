@@ -40,8 +40,11 @@ def get_player_career_season_stats(api, player_name, current_team):
                     len(player_name_lower.split()) > 1):
                     
                     # Found the player
+                    # Convert API season to academic year
+                    academic_year = f"{season-1}-{str(season)[2:]}"
+                    
                     season_data = {
-                        'season': season,
+                        'season': academic_year,
                         'team': player.get('team'),
                         'conference': player.get('conference'),
                         'games': player.get('games'),

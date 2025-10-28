@@ -2,7 +2,7 @@
   "team": "UCLA",
   "season": "2024-25",
   "seasonType": "Regular",
-  "dataGenerated": "2025-10-28T10:39:49.756593",
+  "dataGenerated": "2025-10-28T10:51:37.424849",
   "players": [
     {
       "name": "Kobe Johnson",
@@ -1110,7 +1110,7 @@
       },
       "previousSeasons": [
         {
-          "season": 2024,
+          "season": "2023-24",
           "team": "USC",
           "conference": "Pac-12",
           "games": 31,
@@ -1173,7 +1173,7 @@
           }
         },
         {
-          "season": 2023,
+          "season": "2022-23",
           "team": "USC",
           "conference": "Pac-12",
           "games": 32,
@@ -1236,7 +1236,7 @@
           }
         },
         {
-          "season": 2022,
+          "season": "2021-22",
           "team": "USC",
           "conference": "Pac-12",
           "games": 26,
@@ -2406,7 +2406,7 @@
       },
       "previousSeasons": [
         {
-          "season": 2024,
+          "season": "2023-24",
           "team": "Louisville",
           "conference": "ACC",
           "games": 29,
@@ -2469,7 +2469,7 @@
           }
         },
         {
-          "season": 2023,
+          "season": "2022-23",
           "team": "Illinois",
           "conference": "Big Ten",
           "games": 13,
@@ -3610,7 +3610,7 @@
       },
       "previousSeasons": [
         {
-          "season": 2024,
+          "season": "2023-24",
           "team": "Oregon State",
           "conference": "Pac-12",
           "games": 32,
@@ -3673,7 +3673,7 @@
           }
         },
         {
-          "season": 2023,
+          "season": "2022-23",
           "team": "Oregon State",
           "conference": "Pac-12",
           "games": 32,
@@ -4785,7 +4785,7 @@
       },
       "previousSeasons": [
         {
-          "season": 2024,
+          "season": "2023-24",
           "team": "UCLA",
           "conference": "Pac-12",
           "games": 32,
@@ -4848,7 +4848,7 @@
           }
         },
         {
-          "season": 2023,
+          "season": "2022-23",
           "team": "UCLA",
           "conference": "Pac-12",
           "games": 33,
@@ -5989,7 +5989,7 @@
       },
       "previousSeasons": [
         {
-          "season": 2024,
+          "season": "2023-24",
           "team": "Oklahoma State",
           "conference": "Big 12",
           "games": 32,
@@ -7159,7 +7159,7 @@
       },
       "previousSeasons": [
         {
-          "season": 2024,
+          "season": "2023-24",
           "team": "UCLA",
           "conference": "Pac-12",
           "games": 33,
@@ -8329,7 +8329,7 @@
       },
       "previousSeasons": [
         {
-          "season": 2024,
+          "season": "2023-24",
           "team": "UCLA",
           "conference": "Pac-12",
           "games": 33,
@@ -8392,7 +8392,7 @@
           }
         },
         {
-          "season": 2023,
+          "season": "2022-23",
           "team": "Utah",
           "conference": "Pac-12",
           "games": 32,
@@ -8455,7 +8455,7 @@
           }
         },
         {
-          "season": 2022,
+          "season": "2021-22",
           "team": "Utah",
           "conference": "Pac-12",
           "games": 31,
@@ -9596,7 +9596,7 @@
       },
       "previousSeasons": [
         {
-          "season": 2024,
+          "season": "2023-24",
           "team": "UCLA",
           "conference": "Pac-12",
           "games": 28,
@@ -11755,7 +11755,7 @@
       },
       "previousSeasons": [
         {
-          "season": 2024,
+          "season": "2023-24",
           "team": "South Dakota State",
           "conference": "Summit",
           "games": 34,
@@ -11818,7 +11818,7 @@
           }
         },
         {
-          "season": 2023,
+          "season": "2022-23",
           "team": "South Dakota State",
           "conference": "Summit",
           "games": 32,
@@ -12379,7 +12379,7 @@
       },
       "previousSeasons": [
         {
-          "season": 2024,
+          "season": "2023-24",
           "team": "Loyola Marymount",
           "conference": "WCC",
           "games": 24,
@@ -12442,7 +12442,7 @@
           }
         },
         {
-          "season": 2023,
+          "season": "2022-23",
           "team": "Gonzaga",
           "conference": "WCC",
           "games": 12,
