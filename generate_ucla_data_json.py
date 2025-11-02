@@ -209,6 +209,25 @@ def calculate_conference_rankings(api, team_name, conference_name):
             ('effectiveFieldGoalPct', lambda t: t['teamStats']['fourFactors']['effectiveFieldGoalPct']),
             ('offensiveReboundPct', lambda t: t['teamStats']['fourFactors']['offensiveReboundPct']),
             ('opponentPointsPerGame', lambda t: (t['opponentStats']['points']['total'] / t['games']) if t['games'] > 0 else None),
+            # Per-game team stats rankings
+            ('threePointFieldGoalsMadePerGame', lambda t: (t['teamStats']['threePointFieldGoals']['made'] / t['games']) if t['games'] > 0 else None),
+            ('threePointFieldGoalsAttemptedPerGame', lambda t: (t['teamStats']['threePointFieldGoals']['attempted'] / t['games']) if t['games'] > 0 else None),
+            ('offensiveReboundsPerGame', lambda t: (t['teamStats']['rebounds']['offensive'] / t['games']) if t['games'] > 0 else None),
+            ('turnoversPerGame', lambda t: (t['teamStats']['turnovers']['total'] / t['games']) if t['games'] > 0 else None),
+            ('freeThrowsMadePerGame', lambda t: (t['teamStats']['freeThrows']['made'] / t['games']) if t['games'] > 0 else None),
+            ('freeThrowsAttemptedPerGame', lambda t: (t['teamStats']['freeThrows']['attempted'] / t['games']) if t['games'] > 0 else None),
+            ('foulsPerGame', lambda t: (t['teamStats']['fouls']['total'] / t['games']) if t['games'] > 0 else None),
+            ('defensiveReboundsPerGame', lambda t: (t['teamStats']['rebounds']['defensive'] / t['games']) if t['games'] > 0 else None),
+            # Per-game opponent stats rankings
+            ('opponentFieldGoalPct', lambda t: t['opponentStats']['fieldGoals']['pct']),
+            ('opponentThreePointPct', lambda t: t['opponentStats']['threePointFieldGoals']['pct']),
+            ('turnoversForcedPerGame', lambda t: (t['opponentStats']['turnovers']['total'] / t['games']) if t['games'] > 0 else None),
+            # Margin rankings
+            ('pointMargin', lambda t: ((t['teamStats']['points']['total'] - t['opponentStats']['points']['total']) / t['games']) if t['games'] > 0 else None),
+            ('reboundMargin', lambda t: ((t['teamStats']['rebounds']['total'] - t['opponentStats']['rebounds']['total']) / t['games']) if t['games'] > 0 else None),
+            ('turnoverMargin', lambda t: ((t['opponentStats']['turnovers']['total'] - t['teamStats']['turnovers']['total']) / t['games']) if t['games'] > 0 else None),
+            # Ratio rankings
+            ('assistToTurnoverRatio', lambda t: (t['teamStats']['assists'] / t['teamStats']['turnovers']['total']) if t['teamStats']['turnovers']['total'] > 0 else None),
         ]
         
         for stat_name, calc_func in stats_to_rank:
@@ -222,7 +241,13 @@ def calculate_conference_rankings(api, team_name, conference_name):
                     pass
             
             # Sort to determine rank (determine if higher is better)
-            is_higher_better = not ('opponent' in stat_name or 'Points' in stat_name and 'opponent' in stat_name)
+            # Lower is better for: opponent points, opponent FG%, opponent 3P%, turnovers, fouls
+            is_higher_better = not (
+                'opponent' in stat_name or 
+                ('Points' in stat_name and 'opponent' in stat_name) or
+                'turnovers' in stat_name.lower() or
+                'fouls' in stat_name.lower()
+            )
             values.sort(reverse=is_higher_better)
             
             # Find our team's rank

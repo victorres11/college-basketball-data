@@ -2,7 +2,7 @@
   "team": "UCLA",
   "season": "2024-25",
   "seasonType": "Regular",
-  "dataGenerated": "2025-11-02T17:10:33.868382",
+  "dataGenerated": "2025-11-02T17:27:09.396419",
   "players": [
     {
       "name": "Kobe Johnson",
@@ -18743,6 +18743,81 @@
         "rank": 1,
         "totalTeams": 18,
         "value": 65.71875
+      },
+      "threePointFieldGoalsMadePerGame": {
+        "rank": 9,
+        "totalTeams": 18,
+        "value": 7.34375
+      },
+      "threePointFieldGoalsAttemptedPerGame": {
+        "rank": 12,
+        "totalTeams": 18,
+        "value": 20.875
+      },
+      "offensiveReboundsPerGame": {
+        "rank": 7,
+        "totalTeams": 18,
+        "value": 10.84375
+      },
+      "turnoversPerGame": {
+        "rank": 6,
+        "totalTeams": 18,
+        "value": 10.625
+      },
+      "freeThrowsMadePerGame": {
+        "rank": 16,
+        "totalTeams": 18,
+        "value": 13.40625
+      },
+      "freeThrowsAttemptedPerGame": {
+        "rank": 15,
+        "totalTeams": 18,
+        "value": 19.0625
+      },
+      "foulsPerGame": {
+        "rank": 13,
+        "totalTeams": 18,
+        "value": 17.46875
+      },
+      "defensiveReboundsPerGame": {
+        "rank": 18,
+        "totalTeams": 18,
+        "value": 21.84375
+      },
+      "opponentFieldGoalPct": {
+        "rank": 9,
+        "totalTeams": 18,
+        "value": 43.1
+      },
+      "opponentThreePointPct": {
+        "rank": 10,
+        "totalTeams": 18,
+        "value": 33.2
+      },
+      "turnoversForcedPerGame": {
+        "rank": 18,
+        "totalTeams": 18,
+        "value": 15.15625
+      },
+      "pointMargin": {
+        "rank": 5,
+        "totalTeams": 18,
+        "value": 9.03125
+      },
+      "reboundMargin": {
+        "rank": 8,
+        "totalTeams": 18,
+        "value": 1.53125
+      },
+      "turnoverMargin": {
+        "rank": 1,
+        "totalTeams": 18,
+        "value": 4.53125
+      },
+      "assistToTurnoverRatio": {
+        "rank": 2,
+        "totalTeams": 18,
+        "value": 1.5382352941176471
       }
     }
   },
@@ -18804,6 +18879,81 @@
         "rank": 27,
         "totalTeams": 364,
         "value": 65.71875
+      },
+      "threePointFieldGoalsMadePerGame": {
+        "rank": 213,
+        "totalTeams": 364,
+        "value": 7.34375
+      },
+      "threePointFieldGoalsAttemptedPerGame": {
+        "rank": 256,
+        "totalTeams": 364,
+        "value": 20.875
+      },
+      "offensiveReboundsPerGame": {
+        "rank": 162,
+        "totalTeams": 364,
+        "value": 10.84375
+      },
+      "turnoversPerGame": {
+        "rank": 70,
+        "totalTeams": 364,
+        "value": 10.625
+      },
+      "freeThrowsMadePerGame": {
+        "rank": 207,
+        "totalTeams": 364,
+        "value": 13.40625
+      },
+      "freeThrowsAttemptedPerGame": {
+        "rank": 187,
+        "totalTeams": 364,
+        "value": 19.0625
+      },
+      "foulsPerGame": {
+        "rank": 238,
+        "totalTeams": 364,
+        "value": 17.46875
+      },
+      "defensiveReboundsPerGame": {
+        "rank": 349,
+        "totalTeams": 364,
+        "value": 21.84375
+      },
+      "opponentFieldGoalPct": {
+        "rank": 133,
+        "totalTeams": 364,
+        "value": 43.1
+      },
+      "opponentThreePointPct": {
+        "rank": 159,
+        "totalTeams": 364,
+        "value": 33.2
+      },
+      "turnoversForcedPerGame": {
+        "rank": 349,
+        "totalTeams": 364,
+        "value": 15.15625
+      },
+      "pointMargin": {
+        "rank": 39,
+        "totalTeams": 364,
+        "value": 9.03125
+      },
+      "reboundMargin": {
+        "rank": 153,
+        "totalTeams": 364,
+        "value": 1.53125
+      },
+      "turnoverMargin": {
+        "rank": 7,
+        "totalTeams": 364,
+        "value": 4.53125
+      },
+      "assistToTurnoverRatio": {
+        "rank": 21,
+        "totalTeams": 364,
+        "value": 1.5382352941176471
       }
     }
   },
