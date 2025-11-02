@@ -2,7 +2,7 @@
   "team": "UCLA",
   "season": "2024-25",
   "seasonType": "Regular",
-  "dataGenerated": "2025-10-28T16:26:05.593356",
+  "dataGenerated": "2025-11-02T17:10:33.868382",
   "players": [
     {
       "name": "Kobe Johnson",
@@ -18652,6 +18652,36 @@
         "turnoverRatio": 0.23,
         "offensiveReboundPct": 28.8,
         "freeThrowRate": 34.6
+      }
+    },
+    "perGameStats": {
+      "teamStats": {
+        "threePointFieldGoalsMadePerGame": 7.34,
+        "threePointFieldGoalsAttemptedPerGame": 20.88,
+        "offensiveReboundsPerGame": 10.84,
+        "turnoversPerGame": 10.62,
+        "assistsPerGame": 16.34,
+        "freeThrowsMadePerGame": 13.41,
+        "freeThrowsAttemptedPerGame": 19.06,
+        "foulsPerGame": 17.47,
+        "defensiveReboundsPerGame": 21.84,
+        "stealsPerGame": 8.09,
+        "blocksPerGame": 3.0,
+        "freeThrowPct": 70.3
+      },
+      "opponentStats": {
+        "pointsPerGame": 65.72,
+        "fieldGoalPct": 43.1,
+        "threePointPct": 33.2,
+        "turnoversForcedPerGame": 15.16
+      },
+      "margins": {
+        "pointMargin": 9.03,
+        "reboundMargin": 1.53,
+        "turnoverMargin": 4.53
+      },
+      "ratios": {
+        "assistToTurnoverRatio": 1.54
       }
     }
   },

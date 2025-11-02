@@ -255,6 +255,52 @@ def calculate_conference_rankings(api, team_name, conference_name):
     }
 
 
+def calculate_per_game_stats(team_season_stats):
+    """Calculate per-game statistics from team season totals."""
+    if not team_season_stats:
+        return None
+    
+    games = team_season_stats.get('games', 1)
+    if games == 0:
+        games = 1  # Avoid division by zero
+    
+    team_stats = team_season_stats.get('teamStats', {})
+    opponent_stats = team_season_stats.get('opponentStats', {})
+    
+    per_game_stats = {
+        'teamStats': {
+            'threePointFieldGoalsMadePerGame': round(team_stats.get('threePointFieldGoals', {}).get('made', 0) / games, 2),
+            'threePointFieldGoalsAttemptedPerGame': round(team_stats.get('threePointFieldGoals', {}).get('attempted', 0) / games, 2),
+            'offensiveReboundsPerGame': round(team_stats.get('rebounds', {}).get('offensive', 0) / games, 2),
+            'turnoversPerGame': round(team_stats.get('turnovers', {}).get('total', 0) / games, 2),
+            'assistsPerGame': round(team_stats.get('assists', 0) / games, 2),
+            'freeThrowsMadePerGame': round(team_stats.get('freeThrows', {}).get('made', 0) / games, 2),
+            'freeThrowsAttemptedPerGame': round(team_stats.get('freeThrows', {}).get('attempted', 0) / games, 2),
+            'foulsPerGame': round(team_stats.get('fouls', {}).get('total', 0) / games, 2),
+            'defensiveReboundsPerGame': round(team_stats.get('rebounds', {}).get('defensive', 0) / games, 2),
+            'stealsPerGame': round(team_stats.get('steals', 0) / games, 2),
+            'blocksPerGame': round(team_stats.get('blocks', 0) / games, 2),
+            'freeThrowPct': team_stats.get('freeThrows', {}).get('pct', 0)  # Already exists, just reference
+        },
+        'opponentStats': {
+            'pointsPerGame': round(opponent_stats.get('points', {}).get('total', 0) / games, 2),
+            'fieldGoalPct': opponent_stats.get('fieldGoals', {}).get('pct', 0),  # Already exists, just reference
+            'threePointPct': opponent_stats.get('threePointFieldGoals', {}).get('pct', 0),  # Already exists, just reference
+            'turnoversForcedPerGame': round(opponent_stats.get('turnovers', {}).get('total', 0) / games, 2)
+        },
+        'margins': {
+            'pointMargin': round((team_stats.get('points', {}).get('total', 0) - opponent_stats.get('points', {}).get('total', 0)) / games, 2),
+            'reboundMargin': round((team_stats.get('rebounds', {}).get('total', 0) - opponent_stats.get('rebounds', {}).get('total', 0)) / games, 2),
+            'turnoverMargin': round((opponent_stats.get('turnovers', {}).get('total', 0) - team_stats.get('turnovers', {}).get('total', 0)) / games, 2)
+        },
+        'ratios': {
+            'assistToTurnoverRatio': round(team_stats.get('assists', 0) / max(team_stats.get('turnovers', {}).get('total', 1), 1), 2)
+        }
+    }
+    
+    return per_game_stats
+
+
 def calculate_regular_season_stats(player_name, game_data):
     """Calculate regular season stats from per-game data for a specific player."""
     player_games = []
@@ -473,6 +519,11 @@ def generate_ucla_data_json():
     # Add team season stats with rankings if available
     if team_season_stats and len(team_season_stats) > 0:
         team_data['teamSeasonStats'] = team_season_stats[0]  # Usually just one team
+        
+        # Calculate and add per-game stats
+        per_game_stats = calculate_per_game_stats(team_data['teamSeasonStats'])
+        if per_game_stats:
+            team_data['teamSeasonStats']['perGameStats'] = per_game_stats
     
     # Add conference and D1 rankings if available
     if conference_rankings:

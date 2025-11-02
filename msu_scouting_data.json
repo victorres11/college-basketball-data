@@ -2,7 +2,7 @@
   "team": "Michigan State",
   "season": "2024-25",
   "seasonType": "Regular",
-  "dataGenerated": "2025-10-28T16:28:19.280330",
+  "dataGenerated": "2025-11-02T17:08:38.859970",
   "players": [
     {
       "name": "Jaden Akins",
@@ -19357,6 +19357,36 @@
         "turnoverRatio": 0.17,
         "offensiveReboundPct": 29.7,
         "freeThrowRate": 33.1
+      }
+    },
+    "perGameStats": {
+      "teamStats": {
+        "threePointFieldGoalsMadePerGame": 5.97,
+        "threePointFieldGoalsAttemptedPerGame": 19.39,
+        "offensiveReboundsPerGame": 11.82,
+        "turnoversPerGame": 11.55,
+        "assistsPerGame": 16.82,
+        "freeThrowsMadePerGame": 17.52,
+        "freeThrowsAttemptedPerGame": 22.42,
+        "foulsPerGame": 17.03,
+        "defensiveReboundsPerGame": 28.0,
+        "stealsPerGame": 5.48,
+        "blocksPerGame": 4.52,
+        "freeThrowPct": 78.1
+      },
+      "opponentStats": {
+        "pointsPerGame": 67.24,
+        "fieldGoalPct": 40.3,
+        "threePointPct": 27.9,
+        "turnoversForcedPerGame": 11.42
+      },
+      "margins": {
+        "pointMargin": 10.91,
+        "reboundMargin": 9.06,
+        "turnoverMargin": -0.12
+      },
+      "ratios": {
+        "assistToTurnoverRatio": 1.46
       }
     }
   },

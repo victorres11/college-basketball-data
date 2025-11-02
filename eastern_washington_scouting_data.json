@@ -2,7 +2,7 @@
   "team": "Eastern Washington",
   "season": "2024-25",
   "seasonType": "Regular",
-  "dataGenerated": "2025-11-01T09:57:57.378250",
+  "dataGenerated": "2025-11-02T17:06:48.012860",
   "players": [
     {
       "name": "Andrew Cook",
@@ -18961,6 +18961,36 @@
         "turnoverRatio": 0.2,
         "offensiveReboundPct": 31,
         "freeThrowRate": 37.8
+      }
+    },
+    "perGameStats": {
+      "teamStats": {
+        "threePointFieldGoalsMadePerGame": 6.75,
+        "threePointFieldGoalsAttemptedPerGame": 20.75,
+        "offensiveReboundsPerGame": 8.53,
+        "turnoversPerGame": 12.53,
+        "assistsPerGame": 13.66,
+        "freeThrowsMadePerGame": 13.47,
+        "freeThrowsAttemptedPerGame": 17.31,
+        "foulsPerGame": 18.22,
+        "defensiveReboundsPerGame": 21.56,
+        "stealsPerGame": 7.53,
+        "blocksPerGame": 3.12,
+        "freeThrowPct": 77.8
+      },
+      "opponentStats": {
+        "pointsPerGame": 75.47,
+        "fieldGoalPct": 46.7,
+        "threePointPct": 36.6,
+        "turnoversForcedPerGame": 13.09
+      },
+      "margins": {
+        "pointMargin": -4.12,
+        "reboundMargin": -3.38,
+        "turnoverMargin": 0.56
+      },
+      "ratios": {
+        "assistToTurnoverRatio": 1.09
       }
     }
   },

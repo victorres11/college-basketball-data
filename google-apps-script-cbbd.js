@@ -1,5 +1,3 @@
-// Updated oct 30 - get this in github version control at some point.
-
 // ========================================
 // CATEGORY 1: TEAM META INFORMATION
 // ========================================
@@ -153,6 +151,45 @@ function GET_TEAM_META(url) {
         ["Offensive Rebound %", stats.teamStats.fourFactors.offensiveReboundPct + "%", stats.opponentStats.fourFactors.offensiveReboundPct + "%"],
         ["Free Throw Rate", stats.teamStats.fourFactors.freeThrowRate + "%", stats.opponentStats.fourFactors.freeThrowRate + "%"]
       ];
+      
+      // Add per-game stats if available
+      if (stats.perGameStats) {
+        var pg = stats.perGameStats;
+        var pgTeam = pg.teamStats || {};
+        var pgOpp = pg.opponentStats || {};
+        var pgMargins = pg.margins || {};
+        var pgRatios = pg.ratios || {};
+        
+        table.push([""]);
+        table.push(["--- Per Game Stats ---"]);
+        table.push(["", "Team", "Opponent"]);
+        table.push(["3PT FGM/G", (pgTeam.threePointFieldGoalsMadePerGame || 0).toFixed(2), ""]);
+        table.push(["3PT FGA/G", (pgTeam.threePointFieldGoalsAttemptedPerGame || 0).toFixed(2), ""]);
+        table.push(["Off Reb/G", (pgTeam.offensiveReboundsPerGame || 0).toFixed(2), ""]);
+        table.push(["TO/G", (pgTeam.turnoversPerGame || 0).toFixed(2), ""]);
+        table.push(["APG", (pgTeam.assistsPerGame || 0).toFixed(2), ""]);
+        table.push(["FTM/G", (pgTeam.freeThrowsMadePerGame || 0).toFixed(2), ""]);
+        table.push(["FTA/G", (pgTeam.freeThrowsAttemptedPerGame || 0).toFixed(2), ""]);
+        table.push(["FT%", (pgTeam.freeThrowPct || 0).toFixed(1) + "%", ""]);
+        table.push(["Fouls/G", (pgTeam.foulsPerGame || 0).toFixed(2), ""]);
+        table.push(["Def Rebs/G", (pgTeam.defensiveReboundsPerGame || 0).toFixed(2), ""]);
+        table.push(["SPG", (pgTeam.stealsPerGame || 0).toFixed(2), ""]);
+        table.push(["BPG", (pgTeam.blocksPerGame || 0).toFixed(2), ""]);
+        table.push([""]);
+        table.push(["--- Opponent Per Game Stats ---"]);
+        table.push(["Def. PPG", "", (pgOpp.pointsPerGame || 0).toFixed(2)]);
+        table.push(["Def. FG%", "", (pgOpp.fieldGoalPct || 0).toFixed(1) + "%"]);
+        table.push(["Def. 3P%", "", (pgOpp.threePointPct || 0).toFixed(1) + "%"]);
+        table.push(["TO Forced/G", "", (pgOpp.turnoversForcedPerGame || 0).toFixed(2)]);
+        table.push([""]);
+        table.push(["--- Margins (Per Game) ---"]);
+        table.push(["Point Margin", (pgMargins.pointMargin || 0).toFixed(2), ""]);
+        table.push(["Rebound Margin", (pgMargins.reboundMargin || 0).toFixed(2), ""]);
+        table.push(["TO Margin", (pgMargins.turnoverMargin || 0).toFixed(2), ""]);
+        table.push([""]);
+        table.push(["--- Ratios ---"]);
+        table.push(["A:TO Ratio", (pgRatios.assistToTurnoverRatio || 0).toFixed(2), ""]);
+      }
       
       return table;
     } catch (e) {
