@@ -21,7 +21,7 @@ function GET_TEAM_META(url) {
       if (data.totalRecord) {
         table.push([""]);
         table.push(["=== RECORD ==="]);
-        table.push(["Total Record", data.totalRecord.wins + "-" + data.totalRecord.losses + " (" + data.totalRecord.games + " games)"]);
+        table.push(["Total Record", data.totalRecord.wins + "-" + data.totalRecord.losses]);
         table.push(["Total Wins", data.totalRecord.wins]);
         table.push(["Total Losses", data.totalRecord.losses]);
         table.push(["Total Games", data.totalRecord.games]);
@@ -31,7 +31,7 @@ function GET_TEAM_META(url) {
       if (data.conferenceRecord) {
         table.push([""]);
         table.push(["=== CONFERENCE RECORD ==="]);
-        table.push(["Conference Record", data.conferenceRecord.wins + "-" + data.conferenceRecord.losses + " (" + data.conferenceRecord.games + " games)"]);
+        table.push(["Conference Record", data.conferenceRecord.wins + "-" + data.conferenceRecord.losses]);
         table.push(["Conference Wins", data.conferenceRecord.wins]);
         table.push(["Conference Losses", data.conferenceRecord.losses]);
         table.push(["Conference Games", data.conferenceRecord.games]);
@@ -331,8 +331,6 @@ function GET_TEAM_META(url) {
         "Ast", "APG", "TO", "A/TO",
         // Season Totals - Defense
         "Stl", "SPG", "Blk", "BPG",
-        // Season Totals - Fouls/Ejections
-        "Fouls", "Foul Outs", "Ejections",
         // Season Totals - Shooting
         "FGM", "FGA", "FG%", "2PM", "2PA", "2P%",
         "3PM", "3PA", "3P%", "FTM", "FTA", "FT%",
@@ -347,7 +345,9 @@ function GET_TEAM_META(url) {
         // Conference Rankings - New Total/Volume Stats (12 new)
         "MPG Rank", "FGM Rank", "FGA Rank", "3PM Rank", "3PA Rank",
         "FTM Rank", "FTA Rank", "OReb Rank", "DReb Rank", "TReb Rank",
-        "Ast Rank", "Blk Rank"
+        "Ast Rank", "Blk Rank",
+        // Season Totals - Fouls/Ejections (moved to end)
+        "Fouls", "Foul Outs", "Ejections"
       ]];
       
       // Sort players: Top 9 by MPG (then by jersey), rest by total minutes
@@ -430,10 +430,6 @@ function GET_TEAM_META(url) {
           safe(st, 'spg', 0),
           safe(st, 'blocks', 0),
           safe(st, 'bpg', 0),
-          // Season Totals - Fouls/Ejections
-          safe(st, 'fouls', 0),
-          safe(st, 'foulOuts', 0),
-          safe(st, 'ejections', 0),
           // Season Totals - Shooting
           safe(st, 'fieldGoals.made', 0),
           safe(st, 'fieldGoals.attempted', 0),
@@ -488,7 +484,11 @@ function GET_TEAM_META(url) {
           cr && cr.defensiveRebounds ? cr.defensiveRebounds.rank + "/" + cr.defensiveRebounds.totalPlayers : "",
           cr && cr.totalRebounds ? cr.totalRebounds.rank + "/" + cr.totalRebounds.totalPlayers : "",
           cr && cr.totalAssists ? cr.totalAssists.rank + "/" + cr.totalAssists.totalPlayers : "",
-          cr && cr.totalBlocks ? cr.totalBlocks.rank + "/" + cr.totalBlocks.totalPlayers : ""
+          cr && cr.totalBlocks ? cr.totalBlocks.rank + "/" + cr.totalBlocks.totalPlayers : "",
+          // Season Totals - Fouls/Ejections (moved to end)
+          safe(st, 'fouls', 0),
+          safe(st, 'foulOuts', 0),
+          safe(st, 'ejections', 0)
         ]);
       });
       
@@ -516,11 +516,13 @@ function GET_TEAM_META(url) {
       var table = [[
         "Date", "Opponent", "Home/Away", "Conf", "Starter",
         "Min", "Pts", "OReb", "DReb", "TReb", "Ast", "TO", "Stl", "Blk",
-        "Fouls", "Ejected",
-        "FGM-FGA", "3PM-3PA", "FTM-FTA"
+        "FGM-FGA", "3PM-3PA", "FTM-FTA",
+        "Fouls", "Foul Outs", "Ejections"
       ]];
       
       player.gameByGame.forEach(function(game) {
+        var fouls = game.fouls || 0;
+        var foulOut = fouls >= 5 ? "Yes" : "No";
         table.push([
           game.date,
           game.opponent,
@@ -536,11 +538,12 @@ function GET_TEAM_META(url) {
           game.turnovers,
           game.steals,
           game.blocks,
-          game.fouls || 0,
-          game.ejected ? "Yes" : "No",
           game.fieldGoals.made + "-" + game.fieldGoals.attempted,
           game.threePointFieldGoals.made + "-" + game.threePointFieldGoals.attempted,
-          game.freeThrows.made + "-" + game.freeThrows.attempted
+          game.freeThrows.made + "-" + game.freeThrows.attempted,
+          fouls,
+          foulOut,
+          game.ejected ? "Yes" : "No"
         ]);
       });
       
