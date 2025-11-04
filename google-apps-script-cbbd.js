@@ -34,8 +34,12 @@ function GET_TEAM_META(url) {
       if (!data.conferenceRankings || !data.conferenceRankings.rankings) {
         return [["Error: Conference rankings data not found in JSON"]];
       }
-      if (!data.d1Rankings || !data.d1Rankings.rankings) {
-        return [["Error: D1 rankings data not found in JSON"]];
+      // D1 rankings might be empty for early season data, so make it optional
+      if (!data.d1Rankings) {
+        data.d1Rankings = { rankings: {} };
+      }
+      if (!data.d1Rankings.rankings) {
+        data.d1Rankings.rankings = {};
       }
       
       var confRankings = data.conferenceRankings.rankings;
@@ -57,14 +61,15 @@ function GET_TEAM_META(url) {
         // Convert camelCase to readable format
         var readableName = cat.replace(/([A-Z])/g, ' $1').replace(/^./, function(str){ return str.toUpperCase(); });
         
+        // Handle cases where D1 data might not exist (e.g., early season)
         table.push([
           readableName,
-          confData.rank,
-          confData.totalTeams,
-          confData.value,
-          d1Data.rank,
-          d1Data.totalTeams,
-          d1Data.value
+          confData && confData.rank ? confData.rank : "",
+          confData && confData.totalTeams ? confData.totalTeams : "",
+          confData && confData.value !== undefined ? confData.value : "",
+          d1Data && d1Data.rank ? d1Data.rank : "",
+          d1Data && d1Data.totalTeams ? d1Data.totalTeams : "",
+          d1Data && d1Data.value !== undefined ? d1Data.value : ""
         ]);
       });
       
@@ -304,6 +309,8 @@ function GET_TEAM_META(url) {
         "Ast", "APG", "TO", "A/TO",
         // Season Totals - Defense
         "Stl", "SPG", "Blk", "BPG",
+        // Season Totals - Fouls/Ejections
+        "Fouls", "Foul Outs", "Ejections",
         // Season Totals - Shooting
         "FGM", "FGA", "FG%", "2PM", "2PA", "2P%",
         "3PM", "3PA", "3P%", "FTM", "FTA", "FT%",
@@ -401,6 +408,10 @@ function GET_TEAM_META(url) {
           safe(st, 'spg', 0),
           safe(st, 'blocks', 0),
           safe(st, 'bpg', 0),
+          // Season Totals - Fouls/Ejections
+          safe(st, 'fouls', 0),
+          safe(st, 'foulOuts', 0),
+          safe(st, 'ejections', 0),
           // Season Totals - Shooting
           safe(st, 'fieldGoals.made', 0),
           safe(st, 'fieldGoals.attempted', 0),
@@ -483,6 +494,7 @@ function GET_TEAM_META(url) {
       var table = [[
         "Date", "Opponent", "Home/Away", "Conf", "Starter",
         "Min", "Pts", "OReb", "DReb", "TReb", "Ast", "TO", "Stl", "Blk",
+        "Fouls", "Ejected",
         "FGM-FGA", "3PM-3PA", "FTM-FTA"
       ]];
       
@@ -502,6 +514,8 @@ function GET_TEAM_META(url) {
           game.turnovers,
           game.steals,
           game.blocks,
+          game.fouls || 0,
+          game.ejected ? "Yes" : "No",
           game.fieldGoals.made + "-" + game.fieldGoals.attempted,
           game.threePointFieldGoals.made + "-" + game.threePointFieldGoals.attempted,
           game.freeThrows.made + "-" + game.freeThrows.attempted
@@ -530,6 +544,7 @@ function GET_TEAM_META(url) {
       var table = [[
         "Date", "Opponent", "Home/Away", "Conf", "Starter",
         "Min", "Pts", "OReb", "DReb", "TReb", "Ast", "TO", "Stl", "Blk",
+        "Fouls", "Ejected",
         "FGM-FGA", "3PM-3PA", "FTM-FTA"
       ]];
       
@@ -551,6 +566,8 @@ function GET_TEAM_META(url) {
         game.turnovers,
         game.steals,
         game.blocks,
+        game.fouls || 0,
+        game.ejected ? "Yes" : "No",
         game.fieldGoals.made + "-" + game.fieldGoals.attempted,
         game.threePointFieldGoals.made + "-" + game.threePointFieldGoals.attempted,
         game.freeThrows.made + "-" + game.freeThrows.attempted
@@ -656,6 +673,7 @@ function GET_TEAM_META(url) {
       var table = [[
         "Date", "Opponent", "Home/Away", "Conf", "Starter",
         "Min", "Pts", "OReb", "DReb", "TReb", "Ast", "TO", "Stl", "Blk",
+        "Fouls", "Ejected",
         "FGM-FGA", "3PM-3PA", "FTM-FTA"
       ]];
       
@@ -680,6 +698,8 @@ function GET_TEAM_META(url) {
           game.turnovers,
           game.steals,
           game.blocks,
+          game.fouls || 0,
+          game.ejected ? "Yes" : "No",
           game.fieldGoals.made + "-" + game.fieldGoals.attempted,
           game.threePointFieldGoals.made + "-" + game.threePointFieldGoals.attempted,
           game.freeThrows.made + "-" + game.freeThrows.attempted

@@ -173,8 +173,9 @@ def calculate_conference_rankings(api, team_name, conference_name):
     print(f"Fetching all team season statistics for {conference_name} and D1 rankings...")
     all_teams_raw = api.get_team_season_stats(2026, season_type='regular')
     
-    # Filter for D1 teams (those with conferences and enough games)
-    d1_teams = [team for team in all_teams_raw if team.get('conference') is not None and team.get('games', 0) >= 10]
+    # Filter for D1 teams (those with conferences and at least 1 game)
+    # Lower threshold for early season data
+    d1_teams = [team for team in all_teams_raw if team.get('conference') is not None and team.get('games', 0) >= 1]
     
     # Filter for conference teams
     conference_teams = [team for team in all_teams_raw if team.get('conference') == conference_name]

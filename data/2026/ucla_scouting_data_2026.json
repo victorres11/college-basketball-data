@@ -2,7 +2,7 @@
   "team": "UCLA",
   "season": "2025-26",
   "seasonType": "Regular",
-  "dataGenerated": "2025-11-04T17:15:19.607013",
+  "dataGenerated": "2025-11-04T17:39:26.028630",
   "players": [
     {
       "name": "Donovan Dent",
@@ -4769,7 +4769,138 @@
   "d1Rankings": {
     "level": "Division 1",
     "team": "UCLA",
-    "rankings": {}
+    "rankings": {
+      "pointsPerGame": {
+        "rank": 141,
+        "totalTeams": 277,
+        "value": 80.0
+      },
+      "assistsPerGame": {
+        "rank": 72,
+        "totalTeams": 277,
+        "value": 19.0
+      },
+      "reboundsPerGame": {
+        "rank": 175,
+        "totalTeams": 277,
+        "value": 35.0
+      },
+      "stealsPerGame": {
+        "rank": 148,
+        "totalTeams": 277,
+        "value": 7.0
+      },
+      "blocksPerGame": {
+        "rank": 147,
+        "totalTeams": 277,
+        "value": 3.0
+      },
+      "fieldGoalPct": {
+        "rank": 128,
+        "totalTeams": 277,
+        "value": 47.1
+      },
+      "threePointPct": {
+        "rank": 161,
+        "totalTeams": 277,
+        "value": 30.8
+      },
+      "freeThrowPct": {
+        "rank": 227,
+        "totalTeams": 277,
+        "value": 60
+      },
+      "effectiveFieldGoalPct": {
+        "rank": 138,
+        "totalTeams": 277,
+        "value": 52.9
+      },
+      "offensiveReboundPct": {
+        "rank": 98,
+        "totalTeams": 277,
+        "value": 34.3
+      },
+      "opponentPointsPerGame": {
+        "rank": 141,
+        "totalTeams": 277,
+        "value": 74.0
+      },
+      "threePointFieldGoalsMadePerGame": {
+        "rank": 117,
+        "totalTeams": 277,
+        "value": 8.0
+      },
+      "threePointFieldGoalsAttemptedPerGame": {
+        "rank": 116,
+        "totalTeams": 277,
+        "value": 26.0
+      },
+      "offensiveReboundsPerGame": {
+        "rank": 127,
+        "totalTeams": 277,
+        "value": 12.0
+      },
+      "turnoversPerGame": {
+        "rank": 47,
+        "totalTeams": 277,
+        "value": 8.0
+      },
+      "freeThrowsMadePerGame": {
+        "rank": 259,
+        "totalTeams": 277,
+        "value": 6.0
+      },
+      "freeThrowsAttemptedPerGame": {
+        "rank": 258,
+        "totalTeams": 277,
+        "value": 10.0
+      },
+      "foulsPerGame": {
+        "rank": 28,
+        "totalTeams": 277,
+        "value": 12.0
+      },
+      "defensiveReboundsPerGame": {
+        "rank": 192,
+        "totalTeams": 277,
+        "value": 23.0
+      },
+      "opponentFieldGoalPct": {
+        "rank": 253,
+        "totalTeams": 277,
+        "value": 53.7
+      },
+      "opponentThreePointPct": {
+        "rank": 115,
+        "totalTeams": 277,
+        "value": 28
+      },
+      "turnoversForcedPerGame": {
+        "rank": 196,
+        "totalTeams": 277,
+        "value": 16.0
+      },
+      "pointMargin": {
+        "rank": 141,
+        "totalTeams": 277,
+        "value": 6.0
+      },
+      "reboundMargin": {
+        "rank": 126,
+        "totalTeams": 277,
+        "value": 5.0
+      },
+      "turnoverMargin": {
+        "rank": 41,
+        "totalTeams": 277,
+        "value": 8.0
+      },
+      "assistToTurnoverRatio": {
+        "rank": 38,
+        "totalTeams": 277,
+        "value": 2.375
+      }
+    }
   },
   "metadata": {
     "totalPlayers": 15,
