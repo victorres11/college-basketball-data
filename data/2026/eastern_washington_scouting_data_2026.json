@@ -1,0 +1,4365 @@
+{
+  "team": "Eastern Washington",
+  "season": "2025-26",
+  "seasonType": "Regular",
+  "dataGenerated": "2025-11-04T17:00:13.337723",
+  "players": [
+    {
+      "name": "Isaiah Moses",
+      "jerseyNumber": "2",
+      "position": "Guard",
+      "height": "6-0",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Anchorage, AK",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 1,
+        "minutes": 34,
+        "mpg": 34.0,
+        "points": 15,
+        "ppg": 15.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 2,
+          "total": 2
+        },
+        "rpg": 2.0,
+        "assists": 4,
+        "apg": 4.0,
+        "turnovers": 5,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 1,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 5,
+          "attempted": 13,
+          "percentage": 38.5
+        },
+        "threePointFieldGoals": {
+          "made": 2,
+          "attempted": 7,
+          "percentage": 28.6
+        },
+        "freeThrows": {
+          "made": 3,
+          "attempted": 3,
+          "percentage": 100.0
+        },
+        "assistToTurnoverRatio": 0.8
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T03:30:00.000Z",
+          "opponent": "UCLA",
+          "isHome": false,
+          "conferenceGame": false,
+          "starter": true,
+          "minutes": 34,
+          "points": 15,
+          "rebounds": {
+            "offensive": 0,
+            "defensive": 2
+          },
+          "assists": 4,
+          "turnovers": 5,
+          "steals": 0,
+          "blocks": 0,
+          "fouls": 1,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 5,
+            "attempted": 13
+          },
+          "threePointFieldGoals": {
+            "made": 2,
+            "attempted": 7
+          },
+          "freeThrows": {
+            "made": 3,
+            "attempted": 3
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 80,
+        "team": "Eastern Washington",
+        "conference": "Big Sky",
+        "athleteId": 7226,
+        "athleteSourceId": "5176412",
+        "name": "Isaiah Moses",
+        "position": "G",
+        "games": 1,
+        "starts": 1,
+        "minutes": 34,
+        "points": 15,
+        "turnovers": 5,
+        "fouls": 1,
+        "assists": 4,
+        "steals": 0,
+        "blocks": 0,
+        "offensiveRating": 85.5,
+        "defensiveRating": 121.6,
+        "netRating": -36.1,
+        "PORPAG": -0.4,
+        "usage": 29.8,
+        "assistsTurnoverRatio": 0.8,
+        "offensiveReboundPct": 0,
+        "freeThrowRate": 23.1,
+        "effectiveFieldGoalPct": 46.2,
+        "trueShootingPct": 0.524,
+        "fieldGoals": {
+          "made": 5,
+          "attempted": 13,
+          "pct": 38.5
+        },
+        "twoPointFieldGoals": {
+          "made": 3,
+          "attempted": 6,
+          "pct": 50
+        },
+        "threePointFieldGoals": {
+          "made": 2,
+          "attempted": 7,
+          "pct": 28.6
+        },
+        "freeThrows": {
+          "made": 3,
+          "attempted": 3,
+          "pct": 100
+        },
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 2,
+          "total": 2
+        },
+        "winShares": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0,
+          "totalPer40": 0
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 8,
+          "totalPlayers": 76,
+          "value": 15.0
+        },
+        "assistsPerGame": {
+          "rank": 13,
+          "totalPlayers": 76,
+          "value": 4.0
+        },
+        "reboundsPerGame": {
+          "rank": 55,
+          "totalPlayers": 76,
+          "value": 2.0
+        },
+        "stealsPerGame": {
+          "rank": 58,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 48,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 51,
+          "totalPlayers": 76,
+          "value": 38.5
+        },
+        "threePointPct": {
+          "rank": 33,
+          "totalPlayers": 76,
+          "value": 28.6
+        },
+        "freeThrowPct": {
+          "rank": 15,
+          "totalPlayers": 76,
+          "value": 100
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 48,
+          "totalPlayers": 72,
+          "value": 46.2
+        },
+        "assistToTurnoverRatio": {
+          "rank": 20,
+          "totalPlayers": 46,
+          "value": 0.8
+        },
+        "offensiveRating": {
+          "rank": 56,
+          "totalPlayers": 72,
+          "value": 85.5
+        },
+        "defensiveRating": {
+          "rank": 53,
+          "totalPlayers": 63,
+          "value": 121.6
+        },
+        "netRating": {
+          "rank": 46,
+          "totalPlayers": 60,
+          "value": -36.1
+        },
+        "fieldGoalsMade": {
+          "rank": 14,
+          "totalPlayers": 76,
+          "value": 5
+        },
+        "fieldGoalsAttempted": {
+          "rank": 5,
+          "totalPlayers": 76,
+          "value": 13
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 15,
+          "totalPlayers": 76,
+          "value": 2
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 7,
+          "totalPlayers": 76,
+          "value": 7
+        },
+        "freeThrowsMade": {
+          "rank": 15,
+          "totalPlayers": 76,
+          "value": 3
+        },
+        "freeThrowsAttempted": {
+          "rank": 19,
+          "totalPlayers": 76,
+          "value": 3
+        },
+        "offensiveRebounds": {
+          "rank": 63,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "defensiveRebounds": {
+          "rank": 44,
+          "totalPlayers": 76,
+          "value": 2
+        },
+        "totalRebounds": {
+          "rank": 55,
+          "totalPlayers": 76,
+          "value": 2
+        },
+        "totalAssists": {
+          "rank": 13,
+          "totalPlayers": 76,
+          "value": 4
+        },
+        "totalBlocks": {
+          "rank": 48,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 4,
+          "totalPlayers": 76,
+          "value": 34.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "UC Riverside",
+          "conference": "Big West",
+          "games": 33,
+          "gamesStarted": 18,
+          "seasonStats": {
+            "games": 33,
+            "minutes": 869,
+            "minutesPerGame": 26.3,
+            "points": 402,
+            "pointsPerGame": 12.2,
+            "assists": 99,
+            "assistsPerGame": 3.0,
+            "rebounds": {
+              "offensive": 9,
+              "defensive": 56,
+              "total": 65
+            },
+            "reboundsPerGame": 2.0,
+            "steals": 26,
+            "stealsPerGame": 0.8,
+            "blocks": 0,
+            "blocksPerGame": 0.0,
+            "turnovers": 60,
+            "turnoversPerGame": 1.8,
+            "fouls": 65,
+            "foulsPerGame": 2.0,
+            "fieldGoals": {
+              "made": 137,
+              "attempted": 326,
+              "pct": 42
+            },
+            "twoPointFieldGoals": {
+              "made": 81,
+              "attempted": 171,
+              "pct": 47.4
+            },
+            "threePointFieldGoals": {
+              "made": 56,
+              "attempted": 155,
+              "pct": 36.1
+            },
+            "freeThrows": {
+              "made": 72,
+              "attempted": 77,
+              "pct": 93.5
+            },
+            "offensiveRating": 113.8,
+            "defensiveRating": 113.1,
+            "netRating": 0.7,
+            "usage": 24.9,
+            "assistsTurnoverRatio": 1.65,
+            "effectiveFieldGoalPct": 50.6,
+            "trueShootingPct": 0.559,
+            "winShares": {
+              "offensive": 2.2,
+              "defensive": 0.4,
+              "total": 2.6,
+              "totalPer40": 0.12
+            }
+          }
+        },
+        {
+          "season": "2023-24",
+          "team": "UC Riverside",
+          "conference": "Big West",
+          "games": 33,
+          "gamesStarted": 30,
+          "seasonStats": {
+            "games": 33,
+            "minutes": 985,
+            "minutesPerGame": 29.8,
+            "points": 401,
+            "pointsPerGame": 12.2,
+            "assists": 125,
+            "assistsPerGame": 3.8,
+            "rebounds": {
+              "offensive": 16,
+              "defensive": 80,
+              "total": 96
+            },
+            "reboundsPerGame": 2.9,
+            "steals": 31,
+            "stealsPerGame": 0.9,
+            "blocks": 1,
+            "blocksPerGame": 0.0,
+            "turnovers": 73,
+            "turnoversPerGame": 2.2,
+            "fouls": 55,
+            "foulsPerGame": 1.7,
+            "fieldGoals": {
+              "made": 136,
+              "attempted": 341,
+              "pct": 39.9
+            },
+            "twoPointFieldGoals": {
+              "made": 84,
+              "attempted": 183,
+              "pct": 45.9
+            },
+            "threePointFieldGoals": {
+              "made": 52,
+              "attempted": 158,
+              "pct": 32.9
+            },
+            "freeThrows": {
+              "made": 77,
+              "attempted": 91,
+              "pct": 84.6
+            },
+            "offensiveRating": 105.6,
+            "defensiveRating": 108.6,
+            "netRating": -3,
+            "usage": 23.1,
+            "assistsTurnoverRatio": 1.71,
+            "effectiveFieldGoalPct": 47.5,
+            "trueShootingPct": 0.526,
+            "winShares": {
+              "offensive": 1.5,
+              "defensive": 0.9,
+              "total": 2.4,
+              "totalPer40": 0.097
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Johnny Radford",
+      "jerseyNumber": "21",
+      "position": "Guard",
+      "height": "6-1",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Hailey, ID",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 1,
+        "minutes": 27,
+        "mpg": 27.0,
+        "points": 8,
+        "ppg": 8.0,
+        "rebounds": {
+          "offensive": 1,
+          "defensive": 7,
+          "total": 8
+        },
+        "rpg": 8.0,
+        "assists": 3,
+        "apg": 3.0,
+        "turnovers": 2,
+        "steals": 1,
+        "spg": 1.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 4,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 2,
+          "attempted": 9,
+          "percentage": 22.2
+        },
+        "threePointFieldGoals": {
+          "made": 2,
+          "attempted": 9,
+          "percentage": 22.2
+        },
+        "freeThrows": {
+          "made": 2,
+          "attempted": 3,
+          "percentage": 66.7
+        },
+        "assistToTurnoverRatio": 1.5
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T03:30:00.000Z",
+          "opponent": "UCLA",
+          "isHome": false,
+          "conferenceGame": false,
+          "starter": true,
+          "minutes": 27,
+          "points": 8,
+          "rebounds": {
+            "offensive": 1,
+            "defensive": 7
+          },
+          "assists": 3,
+          "turnovers": 2,
+          "steals": 1,
+          "blocks": 0,
+          "fouls": 4,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 2,
+            "attempted": 9
+          },
+          "threePointFieldGoals": {
+            "made": 2,
+            "attempted": 9
+          },
+          "freeThrows": {
+            "made": 2,
+            "attempted": 3
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 80,
+        "team": "Eastern Washington",
+        "conference": "Big Sky",
+        "athleteId": 33178,
+        "athleteSourceId": "4708534",
+        "name": "Johnny Radford",
+        "position": "G",
+        "games": 1,
+        "starts": 1,
+        "minutes": 27,
+        "points": 8,
+        "turnovers": 2,
+        "fouls": 4,
+        "assists": 3,
+        "steals": 1,
+        "blocks": 0,
+        "offensiveRating": 83,
+        "defensiveRating": 107.2,
+        "netRating": -24.2,
+        "PORPAG": -0.5,
+        "usage": 24,
+        "assistsTurnoverRatio": 1.5,
+        "offensiveReboundPct": 12.5,
+        "freeThrowRate": 33.3,
+        "effectiveFieldGoalPct": 33.3,
+        "trueShootingPct": 0.388,
+        "fieldGoals": {
+          "made": 2,
+          "attempted": 9,
+          "pct": 22.2
+        },
+        "twoPointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "threePointFieldGoals": {
+          "made": 2,
+          "attempted": 9,
+          "pct": 22.2
+        },
+        "freeThrows": {
+          "made": 2,
+          "attempted": 3,
+          "pct": 66.7
+        },
+        "rebounds": {
+          "offensive": 1,
+          "defensive": 7,
+          "total": 8
+        },
+        "winShares": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0,
+          "totalPer40": 0
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 36,
+          "totalPlayers": 76,
+          "value": 8.0
+        },
+        "assistsPerGame": {
+          "rank": 16,
+          "totalPlayers": 76,
+          "value": 3.0
+        },
+        "reboundsPerGame": {
+          "rank": 6,
+          "totalPlayers": 76,
+          "value": 8.0
+        },
+        "stealsPerGame": {
+          "rank": 20,
+          "totalPlayers": 76,
+          "value": 1.0
+        },
+        "blocksPerGame": {
+          "rank": 42,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 61,
+          "totalPlayers": 76,
+          "value": 22.2
+        },
+        "threePointPct": {
+          "rank": 36,
+          "totalPlayers": 76,
+          "value": 22.2
+        },
+        "freeThrowPct": {
+          "rank": 28,
+          "totalPlayers": 76,
+          "value": 66.7
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 58,
+          "totalPlayers": 72,
+          "value": 33.3
+        },
+        "assistToTurnoverRatio": {
+          "rank": 31,
+          "totalPlayers": 46,
+          "value": 1.5
+        },
+        "offensiveRating": {
+          "rank": 58,
+          "totalPlayers": 72,
+          "value": 83
+        },
+        "defensiveRating": {
+          "rank": 26,
+          "totalPlayers": 63,
+          "value": 107.2
+        },
+        "netRating": {
+          "rank": 43,
+          "totalPlayers": 60,
+          "value": -24.2
+        },
+        "fieldGoalsMade": {
+          "rank": 51,
+          "totalPlayers": 76,
+          "value": 2
+        },
+        "fieldGoalsAttempted": {
+          "rank": 19,
+          "totalPlayers": 76,
+          "value": 9
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 13,
+          "totalPlayers": 76,
+          "value": 2
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 2,
+          "totalPlayers": 76,
+          "value": 9
+        },
+        "freeThrowsMade": {
+          "rank": 20,
+          "totalPlayers": 76,
+          "value": 2
+        },
+        "freeThrowsAttempted": {
+          "rank": 17,
+          "totalPlayers": 76,
+          "value": 3
+        },
+        "offensiveRebounds": {
+          "rank": 28,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "defensiveRebounds": {
+          "rank": 4,
+          "totalPlayers": 76,
+          "value": 7
+        },
+        "totalRebounds": {
+          "rank": 6,
+          "totalPlayers": 76,
+          "value": 8
+        },
+        "totalAssists": {
+          "rank": 16,
+          "totalPlayers": 76,
+          "value": 3
+        },
+        "totalBlocks": {
+          "rank": 42,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 14,
+          "totalPlayers": 76,
+          "value": 27.0
+        }
+      }
+    },
+    {
+      "name": "Kiree Huie",
+      "jerseyNumber": "15",
+      "position": "Forward",
+      "height": "6-9",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Grayson, GA",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 1,
+        "minutes": 27,
+        "mpg": 27.0,
+        "points": 8,
+        "ppg": 8.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 5,
+          "total": 5
+        },
+        "rpg": 5.0,
+        "assists": 1,
+        "apg": 1.0,
+        "turnovers": 1,
+        "steals": 1,
+        "spg": 1.0,
+        "blocks": 1,
+        "bpg": 1.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 3,
+          "attempted": 5,
+          "percentage": 60.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "freeThrows": {
+          "made": 2,
+          "attempted": 4,
+          "percentage": 50.0
+        },
+        "assistToTurnoverRatio": 1.0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T03:30:00.000Z",
+          "opponent": "UCLA",
+          "isHome": false,
+          "conferenceGame": false,
+          "starter": true,
+          "minutes": 27,
+          "points": 8,
+          "rebounds": {
+            "offensive": 0,
+            "defensive": 5
+          },
+          "assists": 1,
+          "turnovers": 1,
+          "steals": 1,
+          "blocks": 1,
+          "fouls": 0,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 3,
+            "attempted": 5
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 0
+          },
+          "freeThrows": {
+            "made": 2,
+            "attempted": 4
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 80,
+        "team": "Eastern Washington",
+        "conference": "Big Sky",
+        "athleteId": 3086,
+        "athleteSourceId": "5176321",
+        "name": "Kiree Huie",
+        "position": "F",
+        "games": 1,
+        "starts": 1,
+        "minutes": 27,
+        "points": 8,
+        "turnovers": 1,
+        "fouls": 0,
+        "assists": 1,
+        "steals": 1,
+        "blocks": 1,
+        "offensiveRating": 104.4,
+        "defensiveRating": 109.5,
+        "netRating": -5.1,
+        "PORPAG": 1.1,
+        "usage": 15.1,
+        "assistsTurnoverRatio": 1,
+        "offensiveReboundPct": 0,
+        "freeThrowRate": 80,
+        "effectiveFieldGoalPct": 60,
+        "trueShootingPct": 0.592,
+        "fieldGoals": {
+          "made": 3,
+          "attempted": 5,
+          "pct": 60
+        },
+        "twoPointFieldGoals": {
+          "made": 3,
+          "attempted": 5,
+          "pct": 60
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 2,
+          "attempted": 4,
+          "pct": 50
+        },
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 5,
+          "total": 5
+        },
+        "winShares": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0,
+          "totalPer40": 0
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 35,
+          "totalPlayers": 76,
+          "value": 8.0
+        },
+        "assistsPerGame": {
+          "rank": 43,
+          "totalPlayers": 76,
+          "value": 1.0
+        },
+        "reboundsPerGame": {
+          "rank": 24,
+          "totalPlayers": 76,
+          "value": 5.0
+        },
+        "stealsPerGame": {
+          "rank": 18,
+          "totalPlayers": 76,
+          "value": 1.0
+        },
+        "blocksPerGame": {
+          "rank": 5,
+          "totalPlayers": 76,
+          "value": 1.0
+        },
+        "fieldGoalPct": {
+          "rank": 23,
+          "totalPlayers": 76,
+          "value": 60
+        },
+        "threePointPct": {
+          "rank": 56,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 30,
+          "totalPlayers": 76,
+          "value": 50
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 38,
+          "totalPlayers": 72,
+          "value": 60
+        },
+        "assistToTurnoverRatio": {
+          "rank": 24,
+          "totalPlayers": 46,
+          "value": 1
+        },
+        "offensiveRating": {
+          "rank": 48,
+          "totalPlayers": 72,
+          "value": 104.4
+        },
+        "defensiveRating": {
+          "rank": 31,
+          "totalPlayers": 63,
+          "value": 109.5
+        },
+        "netRating": {
+          "rank": 37,
+          "totalPlayers": 60,
+          "value": -5.1
+        },
+        "fieldGoalsMade": {
+          "rank": 36,
+          "totalPlayers": 76,
+          "value": 3
+        },
+        "fieldGoalsAttempted": {
+          "rank": 42,
+          "totalPlayers": 76,
+          "value": 5
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 56,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 66,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "freeThrowsMade": {
+          "rank": 19,
+          "totalPlayers": 76,
+          "value": 2
+        },
+        "freeThrowsAttempted": {
+          "rank": 7,
+          "totalPlayers": 76,
+          "value": 4
+        },
+        "offensiveRebounds": {
+          "rank": 56,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "defensiveRebounds": {
+          "rank": 14,
+          "totalPlayers": 76,
+          "value": 5
+        },
+        "totalRebounds": {
+          "rank": 24,
+          "totalPlayers": 76,
+          "value": 5
+        },
+        "totalAssists": {
+          "rank": 43,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "totalBlocks": {
+          "rank": 5,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "minutesPerGame": {
+          "rank": 13,
+          "totalPlayers": 76,
+          "value": 27.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Miami",
+          "conference": "ACC",
+          "games": 14,
+          "gamesStarted": 2,
+          "seasonStats": {
+            "games": 14,
+            "minutes": 127,
+            "minutesPerGame": 9.1,
+            "points": 22,
+            "pointsPerGame": 1.6,
+            "assists": 1,
+            "assistsPerGame": 0.1,
+            "rebounds": {
+              "offensive": 11,
+              "defensive": 9,
+              "total": 20
+            },
+            "reboundsPerGame": 1.4,
+            "steals": 1,
+            "stealsPerGame": 0.1,
+            "blocks": 4,
+            "blocksPerGame": 0.3,
+            "turnovers": 7,
+            "turnoversPerGame": 0.5,
+            "fouls": 8,
+            "foulsPerGame": 0.6,
+            "fieldGoals": {
+              "made": 9,
+              "attempted": 19,
+              "pct": 47.4
+            },
+            "twoPointFieldGoals": {
+              "made": 9,
+              "attempted": 19,
+              "pct": 47.4
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 4,
+              "attempted": 7,
+              "pct": 57.1
+            },
+            "offensiveRating": 89.6,
+            "defensiveRating": 131,
+            "netRating": -41.4,
+            "usage": 12.2,
+            "assistsTurnoverRatio": 0.14,
+            "effectiveFieldGoalPct": 47.4,
+            "trueShootingPct": 0.498,
+            "winShares": {
+              "offensive": 0,
+              "defensive": -0.2,
+              "total": -0.2,
+              "totalPer40": -0.063
+            }
+          }
+        },
+        {
+          "season": "2023-24",
+          "team": "Idaho State",
+          "conference": "Big Sky",
+          "games": 34,
+          "gamesStarted": 32,
+          "seasonStats": {
+            "games": 34,
+            "minutes": 916,
+            "minutesPerGame": 26.9,
+            "points": 384,
+            "pointsPerGame": 11.3,
+            "assists": 25,
+            "assistsPerGame": 0.7,
+            "rebounds": {
+              "offensive": 73,
+              "defensive": 123,
+              "total": 196
+            },
+            "reboundsPerGame": 5.8,
+            "steals": 19,
+            "stealsPerGame": 0.6,
+            "blocks": 40,
+            "blocksPerGame": 1.2,
+            "turnovers": 58,
+            "turnoversPerGame": 1.7,
+            "fouls": 73,
+            "foulsPerGame": 2.1,
+            "fieldGoals": {
+              "made": 165,
+              "attempted": 308,
+              "pct": 53.6
+            },
+            "twoPointFieldGoals": {
+              "made": 165,
+              "attempted": 306,
+              "pct": 53.9
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 2,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 54,
+              "attempted": 92,
+              "pct": 58.7
+            },
+            "offensiveRating": 105,
+            "defensiveRating": 106,
+            "netRating": -1,
+            "usage": 24.6,
+            "assistsTurnoverRatio": 0.43,
+            "effectiveFieldGoalPct": 53.6,
+            "trueShootingPct": 0.551,
+            "winShares": {
+              "offensive": 1.3,
+              "defensive": 1,
+              "total": 2.3,
+              "totalPer40": 0.1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Alton Hamilton IV",
+      "jerseyNumber": "13",
+      "position": "Forward",
+      "height": "6-8",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Fontana, CA",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 0,
+        "minutes": 25,
+        "mpg": 25.0,
+        "points": 13,
+        "ppg": 13.0,
+        "rebounds": {
+          "offensive": 1,
+          "defensive": 3,
+          "total": 4
+        },
+        "rpg": 4.0,
+        "assists": 1,
+        "apg": 1.0,
+        "turnovers": 2,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 1,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 6,
+          "attempted": 9,
+          "percentage": 66.7
+        },
+        "threePointFieldGoals": {
+          "made": 1,
+          "attempted": 2,
+          "percentage": 50.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "assistToTurnoverRatio": 0.5
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T03:30:00.000Z",
+          "opponent": "UCLA",
+          "isHome": false,
+          "conferenceGame": false,
+          "starter": false,
+          "minutes": 25,
+          "points": 13,
+          "rebounds": {
+            "offensive": 1,
+            "defensive": 3
+          },
+          "assists": 1,
+          "turnovers": 2,
+          "steals": 0,
+          "blocks": 0,
+          "fouls": 1,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 6,
+            "attempted": 9
+          },
+          "threePointFieldGoals": {
+            "made": 1,
+            "attempted": 2
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 0
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 80,
+        "team": "Eastern Washington",
+        "conference": "Big Sky",
+        "athleteId": 199070,
+        "athleteSourceId": "5313112",
+        "name": "Alton Hamilton IV",
+        "position": "F",
+        "games": 1,
+        "starts": 0,
+        "minutes": 25,
+        "points": 13,
+        "turnovers": 2,
+        "fouls": 1,
+        "assists": 1,
+        "steals": 0,
+        "blocks": 0,
+        "offensiveRating": 108.8,
+        "defensiveRating": 118.8,
+        "netRating": -10,
+        "PORPAG": 2,
+        "usage": 23.1,
+        "assistsTurnoverRatio": 0.5,
+        "offensiveReboundPct": 25,
+        "freeThrowRate": 0,
+        "effectiveFieldGoalPct": 72.2,
+        "trueShootingPct": 0.722,
+        "fieldGoals": {
+          "made": 6,
+          "attempted": 9,
+          "pct": 66.7
+        },
+        "twoPointFieldGoals": {
+          "made": 5,
+          "attempted": 7,
+          "pct": 71.4
+        },
+        "threePointFieldGoals": {
+          "made": 1,
+          "attempted": 2,
+          "pct": 50
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 1,
+          "defensive": 3,
+          "total": 4
+        },
+        "winShares": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0,
+          "totalPer40": 0
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 15,
+          "totalPlayers": 76,
+          "value": 13.0
+        },
+        "assistsPerGame": {
+          "rank": 54,
+          "totalPlayers": 76,
+          "value": 1.0
+        },
+        "reboundsPerGame": {
+          "rank": 36,
+          "totalPlayers": 76,
+          "value": 4.0
+        },
+        "stealsPerGame": {
+          "rank": 76,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 76,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 20,
+          "totalPlayers": 76,
+          "value": 66.7
+        },
+        "threePointPct": {
+          "rank": 19,
+          "totalPlayers": 76,
+          "value": 50
+        },
+        "freeThrowPct": {
+          "rank": 76,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 20,
+          "totalPlayers": 72,
+          "value": 72.2
+        },
+        "assistToTurnoverRatio": {
+          "rank": 16,
+          "totalPlayers": 46,
+          "value": 0.5
+        },
+        "offensiveRating": {
+          "rank": 45,
+          "totalPlayers": 72,
+          "value": 108.8
+        },
+        "defensiveRating": {
+          "rank": 49,
+          "totalPlayers": 63,
+          "value": 118.8
+        },
+        "netRating": {
+          "rank": 39,
+          "totalPlayers": 60,
+          "value": -10
+        },
+        "fieldGoalsMade": {
+          "rank": 9,
+          "totalPlayers": 76,
+          "value": 6
+        },
+        "fieldGoalsAttempted": {
+          "rank": 22,
+          "totalPlayers": 76,
+          "value": 9
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 40,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 43,
+          "totalPlayers": 76,
+          "value": 2
+        },
+        "freeThrowsMade": {
+          "rank": 76,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 76,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 41,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "defensiveRebounds": {
+          "rank": 36,
+          "totalPlayers": 76,
+          "value": 3
+        },
+        "totalRebounds": {
+          "rank": 36,
+          "totalPlayers": 76,
+          "value": 4
+        },
+        "totalAssists": {
+          "rank": 54,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "totalBlocks": {
+          "rank": 76,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 17,
+          "totalPlayers": 76,
+          "value": 25.0
+        }
+      }
+    },
+    {
+      "name": "Emmett Marquardt",
+      "jerseyNumber": "33",
+      "position": "Forward",
+      "height": "6-9",
+      "class": "JR",
+      "isFreshman": false,
+      "hometown": "Seattle, WA",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 1,
+        "minutes": 23,
+        "mpg": 23.0,
+        "points": 8,
+        "ppg": 8.0,
+        "rebounds": {
+          "offensive": 1,
+          "defensive": 2,
+          "total": 3
+        },
+        "rpg": 3.0,
+        "assists": 3,
+        "apg": 3.0,
+        "turnovers": 1,
+        "steals": 1,
+        "spg": 1.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 3,
+          "attempted": 5,
+          "percentage": 60.0
+        },
+        "threePointFieldGoals": {
+          "made": 1,
+          "attempted": 3,
+          "percentage": 33.3
+        },
+        "freeThrows": {
+          "made": 1,
+          "attempted": 2,
+          "percentage": 50.0
+        },
+        "assistToTurnoverRatio": 3.0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T03:30:00.000Z",
+          "opponent": "UCLA",
+          "isHome": false,
+          "conferenceGame": false,
+          "starter": true,
+          "minutes": 23,
+          "points": 8,
+          "rebounds": {
+            "offensive": 1,
+            "defensive": 2
+          },
+          "assists": 3,
+          "turnovers": 1,
+          "steals": 1,
+          "blocks": 0,
+          "fouls": 0,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 3,
+            "attempted": 5
+          },
+          "threePointFieldGoals": {
+            "made": 1,
+            "attempted": 3
+          },
+          "freeThrows": {
+            "made": 1,
+            "attempted": 2
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 80,
+        "team": "Eastern Washington",
+        "conference": "Big Sky",
+        "athleteId": 6685,
+        "athleteSourceId": "5175374",
+        "name": "Emmett Marquardt",
+        "position": "F",
+        "games": 1,
+        "starts": 1,
+        "minutes": 23,
+        "points": 8,
+        "turnovers": 1,
+        "fouls": 0,
+        "assists": 3,
+        "steals": 1,
+        "blocks": 0,
+        "offensiveRating": 127.4,
+        "defensiveRating": 115.1,
+        "netRating": 12.3,
+        "PORPAG": 2.3,
+        "usage": 15.7,
+        "assistsTurnoverRatio": 3,
+        "offensiveReboundPct": 33.3,
+        "freeThrowRate": 40,
+        "effectiveFieldGoalPct": 70,
+        "trueShootingPct": 0.68,
+        "fieldGoals": {
+          "made": 3,
+          "attempted": 5,
+          "pct": 60
+        },
+        "twoPointFieldGoals": {
+          "made": 2,
+          "attempted": 2,
+          "pct": 100
+        },
+        "threePointFieldGoals": {
+          "made": 1,
+          "attempted": 3,
+          "pct": 33.3
+        },
+        "freeThrows": {
+          "made": 1,
+          "attempted": 2,
+          "pct": 50
+        },
+        "rebounds": {
+          "offensive": 1,
+          "defensive": 2,
+          "total": 3
+        },
+        "winShares": {
+          "offensive": 0.1,
+          "defensive": 0,
+          "total": 0.1,
+          "totalPer40": 0.174
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 38,
+          "totalPlayers": 76,
+          "value": 8.0
+        },
+        "assistsPerGame": {
+          "rank": 17,
+          "totalPlayers": 76,
+          "value": 3.0
+        },
+        "reboundsPerGame": {
+          "rank": 43,
+          "totalPlayers": 76,
+          "value": 3.0
+        },
+        "stealsPerGame": {
+          "rank": 23,
+          "totalPlayers": 76,
+          "value": 1.0
+        },
+        "blocksPerGame": {
+          "rank": 52,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 24,
+          "totalPlayers": 76,
+          "value": 60
+        },
+        "threePointPct": {
+          "rank": 31,
+          "totalPlayers": 76,
+          "value": 33.3
+        },
+        "freeThrowPct": {
+          "rank": 33,
+          "totalPlayers": 76,
+          "value": 50
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 23,
+          "totalPlayers": 72,
+          "value": 70
+        },
+        "assistToTurnoverRatio": {
+          "rank": 41,
+          "totalPlayers": 46,
+          "value": 3
+        },
+        "offensiveRating": {
+          "rank": 34,
+          "totalPlayers": 72,
+          "value": 127.4
+        },
+        "defensiveRating": {
+          "rank": 39,
+          "totalPlayers": 63,
+          "value": 115.1
+        },
+        "netRating": {
+          "rank": 33,
+          "totalPlayers": 60,
+          "value": 12.3
+        },
+        "fieldGoalsMade": {
+          "rank": 41,
+          "totalPlayers": 76,
+          "value": 3
+        },
+        "fieldGoalsAttempted": {
+          "rank": 44,
+          "totalPlayers": 76,
+          "value": 5
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 31,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 31,
+          "totalPlayers": 76,
+          "value": 3
+        },
+        "freeThrowsMade": {
+          "rank": 34,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "freeThrowsAttempted": {
+          "rank": 29,
+          "totalPlayers": 76,
+          "value": 2
+        },
+        "offensiveRebounds": {
+          "rank": 34,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "defensiveRebounds": {
+          "rank": 47,
+          "totalPlayers": 76,
+          "value": 2
+        },
+        "totalRebounds": {
+          "rank": 43,
+          "totalPlayers": 76,
+          "value": 3
+        },
+        "totalAssists": {
+          "rank": 17,
+          "totalPlayers": 76,
+          "value": 3
+        },
+        "totalBlocks": {
+          "rank": 52,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 21,
+          "totalPlayers": 76,
+          "value": 23.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Eastern Washington",
+          "conference": "Big Sky",
+          "games": 32,
+          "gamesStarted": 32,
+          "seasonStats": {
+            "games": 32,
+            "minutes": 728,
+            "minutesPerGame": 22.8,
+            "points": 286,
+            "pointsPerGame": 8.9,
+            "assists": 37,
+            "assistsPerGame": 1.2,
+            "rebounds": {
+              "offensive": 45,
+              "defensive": 97,
+              "total": 142
+            },
+            "reboundsPerGame": 4.4,
+            "steals": 20,
+            "stealsPerGame": 0.6,
+            "blocks": 23,
+            "blocksPerGame": 0.7,
+            "turnovers": 29,
+            "turnoversPerGame": 0.9,
+            "fouls": 97,
+            "foulsPerGame": 3.0,
+            "fieldGoals": {
+              "made": 110,
+              "attempted": 222,
+              "pct": 49.5
+            },
+            "twoPointFieldGoals": {
+              "made": 75,
+              "attempted": 126,
+              "pct": 59.5
+            },
+            "threePointFieldGoals": {
+              "made": 35,
+              "attempted": 96,
+              "pct": 36.5
+            },
+            "freeThrows": {
+              "made": 31,
+              "attempted": 41,
+              "pct": 75.6
+            },
+            "offensiveRating": 117.6,
+            "defensiveRating": 112.8,
+            "netRating": 4.8,
+            "usage": 19.4,
+            "assistsTurnoverRatio": 1.28,
+            "effectiveFieldGoalPct": 57.4,
+            "trueShootingPct": 0.596,
+            "winShares": {
+              "offensive": 1.7,
+              "defensive": 0.4,
+              "total": 2.1,
+              "totalPer40": 0.115
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Straton Rogers",
+      "jerseyNumber": "12",
+      "position": "Guard",
+      "height": "6-5",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Eagle, ID",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 1,
+        "minutes": 23,
+        "mpg": 23.0,
+        "points": 12,
+        "ppg": 12.0,
+        "rebounds": {
+          "offensive": 3,
+          "defensive": 1,
+          "total": 4
+        },
+        "rpg": 4.0,
+        "assists": 3,
+        "apg": 3.0,
+        "turnovers": 1,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 3,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 6,
+          "attempted": 6,
+          "percentage": 100.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "assistToTurnoverRatio": 3.0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T03:30:00.000Z",
+          "opponent": "UCLA",
+          "isHome": false,
+          "conferenceGame": false,
+          "starter": true,
+          "minutes": 23,
+          "points": 12,
+          "rebounds": {
+            "offensive": 3,
+            "defensive": 1
+          },
+          "assists": 3,
+          "turnovers": 1,
+          "steals": 0,
+          "blocks": 0,
+          "fouls": 3,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 6,
+            "attempted": 6
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 0
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 0
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 80,
+        "team": "Eastern Washington",
+        "conference": "Big Sky",
+        "athleteId": 199078,
+        "athleteSourceId": "5313111",
+        "name": "Straton Rogers",
+        "position": "G",
+        "games": 1,
+        "starts": 1,
+        "minutes": 23,
+        "points": 12,
+        "turnovers": 1,
+        "fouls": 3,
+        "assists": 3,
+        "steals": 0,
+        "blocks": 0,
+        "offensiveRating": 172.9,
+        "defensiveRating": 121.7,
+        "netRating": 51.2,
+        "PORPAG": 5.2,
+        "usage": 16,
+        "assistsTurnoverRatio": 3,
+        "offensiveReboundPct": 75,
+        "freeThrowRate": 0,
+        "effectiveFieldGoalPct": 100,
+        "trueShootingPct": 1,
+        "fieldGoals": {
+          "made": 6,
+          "attempted": 6,
+          "pct": 100
+        },
+        "twoPointFieldGoals": {
+          "made": 6,
+          "attempted": 6,
+          "pct": 100
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 3,
+          "defensive": 1,
+          "total": 4
+        },
+        "winShares": {
+          "offensive": 0.1,
+          "defensive": 0,
+          "total": 0.1,
+          "totalPer40": 0.174
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 17,
+          "totalPlayers": 76,
+          "value": 12.0
+        },
+        "assistsPerGame": {
+          "rank": 15,
+          "totalPlayers": 76,
+          "value": 3.0
+        },
+        "reboundsPerGame": {
+          "rank": 27,
+          "totalPlayers": 76,
+          "value": 4.0
+        },
+        "stealsPerGame": {
+          "rank": 39,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 26,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 3,
+          "totalPlayers": 76,
+          "value": 100
+        },
+        "threePointPct": {
+          "rank": 50,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 46,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 5,
+          "totalPlayers": 72,
+          "value": 100
+        },
+        "assistToTurnoverRatio": {
+          "rank": 42,
+          "totalPlayers": 46,
+          "value": 3
+        },
+        "offensiveRating": {
+          "rank": 11,
+          "totalPlayers": 72,
+          "value": 172.9
+        },
+        "defensiveRating": {
+          "rank": 54,
+          "totalPlayers": 63,
+          "value": 121.7
+        },
+        "netRating": {
+          "rank": 19,
+          "totalPlayers": 60,
+          "value": 51.2
+        },
+        "fieldGoalsMade": {
+          "rank": 5,
+          "totalPlayers": 76,
+          "value": 6
+        },
+        "fieldGoalsAttempted": {
+          "rank": 35,
+          "totalPlayers": 76,
+          "value": 6
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 50,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 62,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "freeThrowsMade": {
+          "rank": 46,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 49,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 8,
+          "totalPlayers": 76,
+          "value": 3
+        },
+        "defensiveRebounds": {
+          "rank": 55,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "totalRebounds": {
+          "rank": 27,
+          "totalPlayers": 76,
+          "value": 4
+        },
+        "totalAssists": {
+          "rank": 15,
+          "totalPlayers": 76,
+          "value": 3
+        },
+        "totalBlocks": {
+          "rank": 26,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 19,
+          "totalPlayers": 76,
+          "value": 23.0
+        }
+      }
+    },
+    {
+      "name": "Jojo Anderson",
+      "jerseyNumber": "22",
+      "position": "Guard",
+      "height": "6-1",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Spokane, WA",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 0,
+        "minutes": 15,
+        "mpg": 15.0,
+        "points": 6,
+        "ppg": 6.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 1,
+          "total": 1
+        },
+        "rpg": 1.0,
+        "assists": 5,
+        "apg": 5.0,
+        "turnovers": 2,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 1,
+        "bpg": 1.0,
+        "fouls": 2,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 2,
+          "attempted": 2,
+          "percentage": 100.0
+        },
+        "threePointFieldGoals": {
+          "made": 1,
+          "attempted": 1,
+          "percentage": 100.0
+        },
+        "freeThrows": {
+          "made": 1,
+          "attempted": 2,
+          "percentage": 50.0
+        },
+        "assistToTurnoverRatio": 2.5
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T03:30:00.000Z",
+          "opponent": "UCLA",
+          "isHome": false,
+          "conferenceGame": false,
+          "starter": false,
+          "minutes": 15,
+          "points": 6,
+          "rebounds": {
+            "offensive": 0,
+            "defensive": 1
+          },
+          "assists": 5,
+          "turnovers": 2,
+          "steals": 0,
+          "blocks": 1,
+          "fouls": 2,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 2,
+            "attempted": 2
+          },
+          "threePointFieldGoals": {
+            "made": 1,
+            "attempted": 1
+          },
+          "freeThrows": {
+            "made": 1,
+            "attempted": 2
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 80,
+        "team": "Eastern Washington",
+        "conference": "Big Sky",
+        "athleteId": 6557,
+        "athleteSourceId": "5241269",
+        "name": "Jojo Anderson",
+        "position": "G",
+        "games": 1,
+        "starts": 0,
+        "minutes": 15,
+        "points": 6,
+        "turnovers": 2,
+        "fouls": 2,
+        "assists": 5,
+        "steals": 0,
+        "blocks": 1,
+        "offensiveRating": 133.5,
+        "defensiveRating": 117.2,
+        "netRating": 16.3,
+        "PORPAG": 1.9,
+        "usage": 17.1,
+        "assistsTurnoverRatio": 2.5,
+        "offensiveReboundPct": 0,
+        "freeThrowRate": 100,
+        "effectiveFieldGoalPct": 125,
+        "trueShootingPct": 1.042,
+        "fieldGoals": {
+          "made": 2,
+          "attempted": 2,
+          "pct": 100
+        },
+        "twoPointFieldGoals": {
+          "made": 1,
+          "attempted": 1,
+          "pct": 100
+        },
+        "threePointFieldGoals": {
+          "made": 1,
+          "attempted": 1,
+          "pct": 100
+        },
+        "freeThrows": {
+          "made": 1,
+          "attempted": 2,
+          "pct": 50
+        },
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 1,
+          "total": 1
+        },
+        "winShares": {
+          "offensive": 0.1,
+          "defensive": 0,
+          "total": 0.1,
+          "totalPer40": 0.267
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 50,
+          "totalPlayers": 76,
+          "value": 6.0
+        },
+        "assistsPerGame": {
+          "rank": 4,
+          "totalPlayers": 76,
+          "value": 5.0
+        },
+        "reboundsPerGame": {
+          "rank": 65,
+          "totalPlayers": 76,
+          "value": 1.0
+        },
+        "stealsPerGame": {
+          "rank": 52,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 6,
+          "totalPlayers": 76,
+          "value": 1.0
+        },
+        "fieldGoalPct": {
+          "rank": 6,
+          "totalPlayers": 76,
+          "value": 100
+        },
+        "threePointPct": {
+          "rank": 6,
+          "totalPlayers": 76,
+          "value": 100
+        },
+        "freeThrowPct": {
+          "rank": 32,
+          "totalPlayers": 76,
+          "value": 50
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 1,
+          "totalPlayers": 72,
+          "value": 125
+        },
+        "assistToTurnoverRatio": {
+          "rank": 39,
+          "totalPlayers": 46,
+          "value": 2.5
+        },
+        "offensiveRating": {
+          "rank": 29,
+          "totalPlayers": 72,
+          "value": 133.5
+        },
+        "defensiveRating": {
+          "rank": 45,
+          "totalPlayers": 63,
+          "value": 117.2
+        },
+        "netRating": {
+          "rank": 31,
+          "totalPlayers": 60,
+          "value": 16.3
+        },
+        "fieldGoalsMade": {
+          "rank": 50,
+          "totalPlayers": 76,
+          "value": 2
+        },
+        "fieldGoalsAttempted": {
+          "rank": 65,
+          "totalPlayers": 76,
+          "value": 2
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 28,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 50,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "freeThrowsMade": {
+          "rank": 33,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "freeThrowsAttempted": {
+          "rank": 27,
+          "totalPlayers": 76,
+          "value": 2
+        },
+        "offensiveRebounds": {
+          "rank": 60,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "defensiveRebounds": {
+          "rank": 59,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "totalRebounds": {
+          "rank": 65,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "totalAssists": {
+          "rank": 4,
+          "totalPlayers": 76,
+          "value": 5
+        },
+        "totalBlocks": {
+          "rank": 6,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "minutesPerGame": {
+          "rank": 52,
+          "totalPlayers": 76,
+          "value": 15.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Idaho",
+          "conference": "Big Sky",
+          "games": 30,
+          "gamesStarted": 1,
+          "seasonStats": {
+            "games": 30,
+            "minutes": 448,
+            "minutesPerGame": 14.9,
+            "points": 79,
+            "pointsPerGame": 2.6,
+            "assists": 47,
+            "assistsPerGame": 1.6,
+            "rebounds": {
+              "offensive": 11,
+              "defensive": 24,
+              "total": 35
+            },
+            "reboundsPerGame": 1.2,
+            "steals": 10,
+            "stealsPerGame": 0.3,
+            "blocks": 3,
+            "blocksPerGame": 0.1,
+            "turnovers": 28,
+            "turnoversPerGame": 0.9,
+            "fouls": 30,
+            "foulsPerGame": 1.0,
+            "fieldGoals": {
+              "made": 21,
+              "attempted": 76,
+              "pct": 27.6
+            },
+            "twoPointFieldGoals": {
+              "made": 13,
+              "attempted": 36,
+              "pct": 36.1
+            },
+            "threePointFieldGoals": {
+              "made": 8,
+              "attempted": 40,
+              "pct": 20
+            },
+            "freeThrows": {
+              "made": 29,
+              "attempted": 38,
+              "pct": 76.3
+            },
+            "offensiveRating": 91.9,
+            "defensiveRating": 120.8,
+            "netRating": -28.9,
+            "usage": 14,
+            "assistsTurnoverRatio": 1.68,
+            "effectiveFieldGoalPct": 32.9,
+            "trueShootingPct": 0.426,
+            "winShares": {
+              "offensive": 0,
+              "defensive": -0.1,
+              "total": -0.1,
+              "totalPer40": -0.009
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tyler Powell",
+      "jerseyNumber": "1",
+      "position": "Guard",
+      "height": "6-5",
+      "class": "SO",
+      "isFreshman": false,
+      "hometown": "Los Angeles, CA",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 0,
+        "minutes": 13,
+        "mpg": 13.0,
+        "points": 2,
+        "ppg": 2.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 1,
+        "apg": 1.0,
+        "turnovers": 1,
+        "steals": 1,
+        "spg": 1.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 2,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 1,
+          "attempted": 2,
+          "percentage": 50.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 1,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "assistToTurnoverRatio": 1.0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T03:30:00.000Z",
+          "opponent": "UCLA",
+          "isHome": false,
+          "conferenceGame": false,
+          "starter": false,
+          "minutes": 13,
+          "points": 2,
+          "rebounds": {
+            "offensive": 0,
+            "defensive": 0
+          },
+          "assists": 1,
+          "turnovers": 1,
+          "steals": 1,
+          "blocks": 0,
+          "fouls": 2,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 1,
+            "attempted": 2
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 1
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 0
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 80,
+        "team": "Eastern Washington",
+        "conference": "Big Sky",
+        "athleteId": 6697,
+        "athleteSourceId": "4684146",
+        "name": "Tyler Powell",
+        "position": "G",
+        "games": 1,
+        "starts": 0,
+        "minutes": 13,
+        "points": 2,
+        "turnovers": 1,
+        "fouls": 2,
+        "assists": 1,
+        "steals": 1,
+        "blocks": 0,
+        "offensiveRating": 76.8,
+        "defensiveRating": 113.9,
+        "netRating": -37.1,
+        "PORPAG": -0.3,
+        "usage": 12.1,
+        "assistsTurnoverRatio": 1,
+        "offensiveReboundPct": null,
+        "freeThrowRate": 0,
+        "effectiveFieldGoalPct": 50,
+        "trueShootingPct": 0.5,
+        "fieldGoals": {
+          "made": 1,
+          "attempted": 2,
+          "pct": 50
+        },
+        "twoPointFieldGoals": {
+          "made": 1,
+          "attempted": 1,
+          "pct": 100
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 1,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "winShares": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0,
+          "totalPer40": 0
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 62,
+          "totalPlayers": 76,
+          "value": 2.0
+        },
+        "assistsPerGame": {
+          "rank": 36,
+          "totalPlayers": 76,
+          "value": 1.0
+        },
+        "reboundsPerGame": {
+          "rank": 72,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "stealsPerGame": {
+          "rank": 11,
+          "totalPlayers": 76,
+          "value": 1.0
+        },
+        "blocksPerGame": {
+          "rank": 19,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 33,
+          "totalPlayers": 76,
+          "value": 50
+        },
+        "threePointPct": {
+          "rank": 44,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 41,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 45,
+          "totalPlayers": 72,
+          "value": 50
+        },
+        "assistToTurnoverRatio": {
+          "rank": 28,
+          "totalPlayers": 46,
+          "value": 1
+        },
+        "offensiveRating": {
+          "rank": 60,
+          "totalPlayers": 72,
+          "value": 76.8
+        },
+        "defensiveRating": {
+          "rank": 38,
+          "totalPlayers": 63,
+          "value": 113.9
+        },
+        "netRating": {
+          "rank": 47,
+          "totalPlayers": 60,
+          "value": -37.1
+        },
+        "fieldGoalsMade": {
+          "rank": 57,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "fieldGoalsAttempted": {
+          "rank": 64,
+          "totalPlayers": 76,
+          "value": 2
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 44,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 45,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "freeThrowsMade": {
+          "rank": 41,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 45,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 45,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "defensiveRebounds": {
+          "rank": 68,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "totalRebounds": {
+          "rank": 72,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "totalAssists": {
+          "rank": 36,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "totalBlocks": {
+          "rank": 19,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 59,
+          "totalPlayers": 76,
+          "value": 13.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Eastern Washington",
+          "conference": "Big Sky",
+          "games": 29,
+          "gamesStarted": 16,
+          "seasonStats": {
+            "games": 29,
+            "minutes": 521,
+            "minutesPerGame": 18.0,
+            "points": 106,
+            "pointsPerGame": 3.7,
+            "assists": 25,
+            "assistsPerGame": 0.9,
+            "rebounds": {
+              "offensive": 28,
+              "defensive": 30,
+              "total": 58
+            },
+            "reboundsPerGame": 2.0,
+            "steals": 19,
+            "stealsPerGame": 0.7,
+            "blocks": 3,
+            "blocksPerGame": 0.1,
+            "turnovers": 15,
+            "turnoversPerGame": 0.5,
+            "fouls": 57,
+            "foulsPerGame": 2.0,
+            "fieldGoals": {
+              "made": 41,
+              "attempted": 106,
+              "pct": 38.7
+            },
+            "twoPointFieldGoals": {
+              "made": 25,
+              "attempted": 53,
+              "pct": 47.2
+            },
+            "threePointFieldGoals": {
+              "made": 16,
+              "attempted": 53,
+              "pct": 30.2
+            },
+            "freeThrows": {
+              "made": 8,
+              "attempted": 14,
+              "pct": 57.1
+            },
+            "offensiveRating": 102.1,
+            "defensiveRating": 116.4,
+            "netRating": -14.3,
+            "usage": 12.7,
+            "assistsTurnoverRatio": 1.67,
+            "effectiveFieldGoalPct": 46.2,
+            "trueShootingPct": 0.473,
+            "winShares": {
+              "offensive": 0.3,
+              "defensive": 0.1,
+              "total": 0.4,
+              "totalPer40": 0.031
+            }
+          }
+        },
+        {
+          "season": "2022-23",
+          "team": "Nevada",
+          "conference": "Mountain West",
+          "games": 32,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 32,
+            "minutes": 298,
+            "minutesPerGame": 9.3,
+            "points": 70,
+            "pointsPerGame": 2.2,
+            "assists": 9,
+            "assistsPerGame": 0.3,
+            "rebounds": {
+              "offensive": 7,
+              "defensive": 26,
+              "total": 33
+            },
+            "reboundsPerGame": 1.0,
+            "steals": 5,
+            "stealsPerGame": 0.2,
+            "blocks": 1,
+            "blocksPerGame": 0.0,
+            "turnovers": 12,
+            "turnoversPerGame": 0.4,
+            "fouls": 29,
+            "foulsPerGame": 0.9,
+            "fieldGoals": {
+              "made": 25,
+              "attempted": 64,
+              "pct": 39.1
+            },
+            "twoPointFieldGoals": {
+              "made": 10,
+              "attempted": 25,
+              "pct": 40
+            },
+            "threePointFieldGoals": {
+              "made": 15,
+              "attempted": 39,
+              "pct": 38.5
+            },
+            "freeThrows": {
+              "made": 5,
+              "attempted": 9,
+              "pct": 55.6
+            },
+            "offensiveRating": 93.8,
+            "defensiveRating": 105.9,
+            "netRating": -12.1,
+            "usage": 15.2,
+            "assistsTurnoverRatio": 0.75,
+            "effectiveFieldGoalPct": 50.8,
+            "trueShootingPct": 0.515,
+            "winShares": {
+              "offensive": 0,
+              "defensive": 0.3,
+              "total": 0.3,
+              "totalPer40": 0.04
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Elijah Thomas",
+      "jerseyNumber": "5",
+      "position": "Guard",
+      "height": "6-6",
+      "class": "SO",
+      "isFreshman": false,
+      "hometown": "Surprise, AZ",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 0,
+        "minutes": 5,
+        "mpg": 5.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 0,
+        "steals": 1,
+        "spg": 1.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 2,
+          "percentage": 0.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 2,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "assistToTurnoverRatio": 0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T03:30:00.000Z",
+          "opponent": "UCLA",
+          "isHome": false,
+          "conferenceGame": false,
+          "starter": false,
+          "minutes": 5,
+          "points": 0,
+          "rebounds": {
+            "offensive": 0,
+            "defensive": 0
+          },
+          "assists": 0,
+          "turnovers": 0,
+          "steals": 1,
+          "blocks": 0,
+          "fouls": 0,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 0,
+            "attempted": 2
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 2
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 0
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 80,
+        "team": "Eastern Washington",
+        "conference": "Big Sky",
+        "athleteId": 6696,
+        "athleteSourceId": "5241164",
+        "name": "Elijah Thomas",
+        "position": "G",
+        "games": 1,
+        "starts": 0,
+        "minutes": 5,
+        "points": 0,
+        "turnovers": 0,
+        "fouls": 0,
+        "assists": 0,
+        "steals": 1,
+        "blocks": 0,
+        "offensiveRating": 0,
+        "defensiveRating": 99.3,
+        "netRating": -99.3,
+        "PORPAG": -1.5,
+        "usage": 21,
+        "assistsTurnoverRatio": null,
+        "offensiveReboundPct": null,
+        "freeThrowRate": 0,
+        "effectiveFieldGoalPct": 0,
+        "trueShootingPct": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 2,
+          "pct": 0
+        },
+        "twoPointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 2,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "winShares": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0,
+          "totalPer40": 0
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 72,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "assistsPerGame": {
+          "rank": 69,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "reboundsPerGame": {
+          "rank": 74,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "stealsPerGame": {
+          "rank": 24,
+          "totalPlayers": 76,
+          "value": 1.0
+        },
+        "blocksPerGame": {
+          "rank": 53,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 72,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "threePointPct": {
+          "rank": 63,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 60,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 71,
+          "totalPlayers": 72,
+          "value": 0
+        },
+        "offensiveRating": {
+          "rank": 72,
+          "totalPlayers": 72,
+          "value": 0
+        },
+        "defensiveRating": {
+          "rank": 25,
+          "totalPlayers": 63,
+          "value": 99.3
+        },
+        "netRating": {
+          "rank": 58,
+          "totalPlayers": 60,
+          "value": -99.3
+        },
+        "fieldGoalsMade": {
+          "rank": 72,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "fieldGoalsAttempted": {
+          "rank": 66,
+          "totalPlayers": 76,
+          "value": 2
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 63,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 38,
+          "totalPlayers": 76,
+          "value": 2
+        },
+        "freeThrowsMade": {
+          "rank": 60,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 62,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 65,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "defensiveRebounds": {
+          "rank": 72,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "totalRebounds": {
+          "rank": 74,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "totalAssists": {
+          "rank": 69,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "totalBlocks": {
+          "rank": 53,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 70,
+          "totalPlayers": 76,
+          "value": 5.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Eastern Washington",
+          "conference": "Big Sky",
+          "games": 26,
+          "gamesStarted": 5,
+          "seasonStats": {
+            "games": 26,
+            "minutes": 382,
+            "minutesPerGame": 14.7,
+            "points": 89,
+            "pointsPerGame": 3.4,
+            "assists": 14,
+            "assistsPerGame": 0.5,
+            "rebounds": {
+              "offensive": 12,
+              "defensive": 20,
+              "total": 32
+            },
+            "reboundsPerGame": 1.2,
+            "steals": 11,
+            "stealsPerGame": 0.4,
+            "blocks": 12,
+            "blocksPerGame": 0.5,
+            "turnovers": 9,
+            "turnoversPerGame": 0.3,
+            "fouls": 32,
+            "foulsPerGame": 1.2,
+            "fieldGoals": {
+              "made": 28,
+              "attempted": 75,
+              "pct": 37.3
+            },
+            "twoPointFieldGoals": {
+              "made": 10,
+              "attempted": 16,
+              "pct": 62.5
+            },
+            "threePointFieldGoals": {
+              "made": 18,
+              "attempted": 59,
+              "pct": 30.5
+            },
+            "freeThrows": {
+              "made": 15,
+              "attempted": 22,
+              "pct": 68.2
+            },
+            "offensiveRating": 109.2,
+            "defensiveRating": 118.7,
+            "netRating": -9.5,
+            "usage": 12.9,
+            "assistsTurnoverRatio": 1.56,
+            "effectiveFieldGoalPct": 49.3,
+            "trueShootingPct": 0.526,
+            "winShares": {
+              "offensive": 0.4,
+              "defensive": 0,
+              "total": 0.4,
+              "totalPer40": 0.042
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cole Scherer",
+      "jerseyNumber": "11",
+      "position": "Guard",
+      "height": "6-2",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Littleton, CO",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 0,
+        "minutes": 3,
+        "mpg": 3.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 1,
+          "total": 1
+        },
+        "rpg": 1.0,
+        "assists": 1,
+        "apg": 1.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "assistToTurnoverRatio": 0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T03:30:00.000Z",
+          "opponent": "UCLA",
+          "isHome": false,
+          "conferenceGame": false,
+          "starter": false,
+          "minutes": 3,
+          "points": 0,
+          "rebounds": {
+            "offensive": 0,
+            "defensive": 1
+          },
+          "assists": 1,
+          "turnovers": 0,
+          "steals": 0,
+          "blocks": 0,
+          "fouls": 0,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 0,
+            "attempted": 0
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 0
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 0
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 80,
+        "team": "Eastern Washington",
+        "conference": "Big Sky",
+        "athleteId": 199079,
+        "athleteSourceId": "5313110",
+        "name": "Cole Scherer",
+        "position": "G",
+        "games": 1,
+        "starts": 0,
+        "minutes": 3,
+        "points": 0,
+        "turnovers": 0,
+        "fouls": 0,
+        "assists": 1,
+        "steals": 0,
+        "blocks": 0,
+        "offensiveRating": null,
+        "defensiveRating": 109.4,
+        "netRating": null,
+        "PORPAG": null,
+        "usage": 0,
+        "assistsTurnoverRatio": null,
+        "offensiveReboundPct": 0,
+        "freeThrowRate": null,
+        "effectiveFieldGoalPct": null,
+        "trueShootingPct": null,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "twoPointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 1,
+          "total": 1
+        },
+        "winShares": {
+          "offensive": null,
+          "defensive": 0,
+          "total": null,
+          "totalPer40": null
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 74,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "assistsPerGame": {
+          "rank": 50,
+          "totalPlayers": 76,
+          "value": 1.0
+        },
+        "reboundsPerGame": {
+          "rank": 68,
+          "totalPlayers": 76,
+          "value": 1.0
+        },
+        "stealsPerGame": {
+          "rank": 66,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 59,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 74,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "threePointPct": {
+          "rank": 69,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 66,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "defensiveRating": {
+          "rank": 28,
+          "totalPlayers": 63,
+          "value": 109.4
+        },
+        "fieldGoalsMade": {
+          "rank": 74,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "fieldGoalsAttempted": {
+          "rank": 74,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 69,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 71,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "freeThrowsMade": {
+          "rank": 66,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 68,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 67,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "defensiveRebounds": {
+          "rank": 62,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "totalRebounds": {
+          "rank": 68,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "totalAssists": {
+          "rank": 50,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "totalBlocks": {
+          "rank": 59,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 74,
+          "totalPlayers": 76,
+          "value": 3.0
+        }
+      }
+    },
+    {
+      "name": "Shaumba Ngoyi",
+      "jerseyNumber": "35",
+      "position": "Forward",
+      "height": "6-9",
+      "class": "SO",
+      "isFreshman": false,
+      "hometown": "Kinshasa, CGO",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 0,
+        "minutes": 3,
+        "mpg": 3.0,
+        "points": 2,
+        "ppg": 2.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 1,
+          "total": 1
+        },
+        "rpg": 1.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 1,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 1,
+          "attempted": 1,
+          "percentage": 100.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "assistToTurnoverRatio": 0.0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T03:30:00.000Z",
+          "opponent": "UCLA",
+          "isHome": false,
+          "conferenceGame": false,
+          "starter": false,
+          "minutes": 3,
+          "points": 2,
+          "rebounds": {
+            "offensive": 0,
+            "defensive": 1
+          },
+          "assists": 0,
+          "turnovers": 1,
+          "steals": 0,
+          "blocks": 0,
+          "fouls": 0,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 1,
+            "attempted": 1
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 0
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 0
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 80,
+        "team": "Eastern Washington",
+        "conference": "Big Sky",
+        "athleteId": 6693,
+        "athleteSourceId": "5107196",
+        "name": "Shaumba Ngoyi",
+        "position": "F",
+        "games": 1,
+        "starts": 0,
+        "minutes": 3,
+        "points": 2,
+        "turnovers": 1,
+        "fouls": 0,
+        "assists": 0,
+        "steals": 0,
+        "blocks": 0,
+        "offensiveRating": 46.2,
+        "defensiveRating": 109.4,
+        "netRating": -63.2,
+        "PORPAG": -0.7,
+        "usage": 35,
+        "assistsTurnoverRatio": 0,
+        "offensiveReboundPct": 0,
+        "freeThrowRate": 0,
+        "effectiveFieldGoalPct": 100,
+        "trueShootingPct": 1,
+        "fieldGoals": {
+          "made": 1,
+          "attempted": 1,
+          "pct": 100
+        },
+        "twoPointFieldGoals": {
+          "made": 1,
+          "attempted": 1,
+          "pct": 100
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 1,
+          "total": 1
+        },
+        "winShares": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0,
+          "totalPer40": 0
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 64,
+          "totalPlayers": 76,
+          "value": 2.0
+        },
+        "assistsPerGame": {
+          "rank": 59,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "reboundsPerGame": {
+          "rank": 62,
+          "totalPlayers": 76,
+          "value": 1.0
+        },
+        "stealsPerGame": {
+          "rank": 40,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 27,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 4,
+          "totalPlayers": 76,
+          "value": 100
+        },
+        "threePointPct": {
+          "rank": 51,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 47,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 6,
+          "totalPlayers": 72,
+          "value": 100
+        },
+        "assistToTurnoverRatio": {
+          "rank": 11,
+          "totalPlayers": 46,
+          "value": 0
+        },
+        "offensiveRating": {
+          "rank": 68,
+          "totalPlayers": 72,
+          "value": 46.2
+        },
+        "defensiveRating": {
+          "rank": 30,
+          "totalPlayers": 63,
+          "value": 109.4
+        },
+        "netRating": {
+          "rank": 56,
+          "totalPlayers": 60,
+          "value": -63.2
+        },
+        "fieldGoalsMade": {
+          "rank": 60,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "fieldGoalsAttempted": {
+          "rank": 69,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 51,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 63,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "freeThrowsMade": {
+          "rank": 47,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 50,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 49,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "defensiveRebounds": {
+          "rank": 56,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "totalRebounds": {
+          "rank": 62,
+          "totalPlayers": 76,
+          "value": 1
+        },
+        "totalAssists": {
+          "rank": 59,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "totalBlocks": {
+          "rank": 27,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 72,
+          "totalPlayers": 76,
+          "value": 3.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Eastern Washington",
+          "conference": "Big Sky",
+          "games": 13,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 13,
+            "minutes": 55,
+            "minutesPerGame": 4.2,
+            "points": 7,
+            "pointsPerGame": 0.5,
+            "assists": 0,
+            "assistsPerGame": 0.0,
+            "rebounds": {
+              "offensive": 1,
+              "defensive": 6,
+              "total": 7
+            },
+            "reboundsPerGame": 0.5,
+            "steals": 0,
+            "stealsPerGame": 0.0,
+            "blocks": 0,
+            "blocksPerGame": 0.0,
+            "turnovers": 2,
+            "turnoversPerGame": 0.2,
+            "fouls": 6,
+            "foulsPerGame": 0.5,
+            "fieldGoals": {
+              "made": 1,
+              "attempted": 6,
+              "pct": 16.7
+            },
+            "twoPointFieldGoals": {
+              "made": 1,
+              "attempted": 3,
+              "pct": 33.3
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 3,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 5,
+              "attempted": 6,
+              "pct": 83.3
+            },
+            "offensiveRating": 78.7,
+            "defensiveRating": 121.7,
+            "netRating": -43,
+            "usage": 9.6,
+            "assistsTurnoverRatio": 0,
+            "effectiveFieldGoalPct": 16.7,
+            "trueShootingPct": 0.405,
+            "winShares": {
+              "offensive": 0,
+              "defensive": 0,
+              "total": 0,
+              "totalPer40": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Angelo Winkel",
+      "jerseyNumber": "0",
+      "position": "Forward",
+      "height": "6-8",
+      "class": "SO",
+      "isFreshman": false,
+      "hometown": "Algona, IA",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 0,
+        "minutes": 2,
+        "mpg": 2.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "assistToTurnoverRatio": 0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T03:30:00.000Z",
+          "opponent": "UCLA",
+          "isHome": false,
+          "conferenceGame": false,
+          "starter": false,
+          "minutes": 2,
+          "points": 0,
+          "rebounds": {
+            "offensive": 0,
+            "defensive": 0
+          },
+          "assists": 0,
+          "turnovers": 0,
+          "steals": 0,
+          "blocks": 0,
+          "fouls": 0,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 0,
+            "attempted": 0
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 0
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 0
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 80,
+        "team": "Eastern Washington",
+        "conference": "Big Sky",
+        "athleteId": 6690,
+        "athleteSourceId": "5241162",
+        "name": "Angelo Winkel",
+        "position": "F",
+        "games": 1,
+        "starts": 0,
+        "minutes": 2,
+        "points": 0,
+        "turnovers": 0,
+        "fouls": 0,
+        "assists": 0,
+        "steals": 0,
+        "blocks": 0,
+        "offensiveRating": null,
+        "defensiveRating": 124.5,
+        "netRating": null,
+        "PORPAG": null,
+        "usage": 0,
+        "assistsTurnoverRatio": null,
+        "offensiveReboundPct": null,
+        "freeThrowRate": null,
+        "effectiveFieldGoalPct": null,
+        "trueShootingPct": null,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "twoPointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "winShares": {
+          "offensive": null,
+          "defensive": 0,
+          "total": null,
+          "totalPer40": null
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 75,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "assistsPerGame": {
+          "rank": 75,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "reboundsPerGame": {
+          "rank": 76,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "stealsPerGame": {
+          "rank": 74,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 74,
+          "totalPlayers": 76,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 75,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "threePointPct": {
+          "rank": 75,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 74,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "defensiveRating": {
+          "rank": 60,
+          "totalPlayers": 63,
+          "value": 124.5
+        },
+        "fieldGoalsMade": {
+          "rank": 75,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "fieldGoalsAttempted": {
+          "rank": 75,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 75,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 75,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "freeThrowsMade": {
+          "rank": 74,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 74,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 75,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "defensiveRebounds": {
+          "rank": 76,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "totalRebounds": {
+          "rank": 76,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "totalAssists": {
+          "rank": 75,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "totalBlocks": {
+          "rank": 74,
+          "totalPlayers": 76,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 76,
+          "totalPlayers": 76,
+          "value": 2.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Eastern Washington",
+          "conference": "Big Sky",
+          "games": 22,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 22,
+            "minutes": 185,
+            "minutesPerGame": 8.4,
+            "points": 60,
+            "pointsPerGame": 2.7,
+            "assists": 7,
+            "assistsPerGame": 0.3,
+            "rebounds": {
+              "offensive": 15,
+              "defensive": 21,
+              "total": 36
+            },
+            "reboundsPerGame": 1.6,
+            "steals": 3,
+            "stealsPerGame": 0.1,
+            "blocks": 10,
+            "blocksPerGame": 0.5,
+            "turnovers": 17,
+            "turnoversPerGame": 0.8,
+            "fouls": 30,
+            "foulsPerGame": 1.4,
+            "fieldGoals": {
+              "made": 24,
+              "attempted": 43,
+              "pct": 55.8
+            },
+            "twoPointFieldGoals": {
+              "made": 24,
+              "attempted": 42,
+              "pct": 57.1
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 1,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 12,
+              "attempted": 15,
+              "pct": 80
+            },
+            "offensiveRating": 99.1,
+            "defensiveRating": 110.2,
+            "netRating": -11.1,
+            "usage": 19.3,
+            "assistsTurnoverRatio": 0.41,
+            "effectiveFieldGoalPct": 55.8,
+            "trueShootingPct": 0.605,
+            "winShares": {
+              "offensive": 0.1,
+              "defensive": 0.1,
+              "total": 0.2,
+              "totalPer40": 0.043
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "teamGameStats": [
+    {
+      "gameId": 209766,
+      "season": 2026,
+      "seasonLabel": "20252026",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-11-04T03:30:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 80,
+      "team": "Eastern Washington",
+      "conference": "Big Sky",
+      "teamSeed": null,
+      "opponentId": 313,
+      "opponent": "UCLA",
+      "opponentConference": "Big Ten",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": false,
+      "conferenceGame": false,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 70,
+      "teamStats": {
+        "possessions": 70,
+        "assists": 22,
+        "steals": 5,
+        "blocks": 2,
+        "trueShooting": 61.5,
+        "rating": 105.7,
+        "gameScore": 57.8,
+        "points": {
+          "total": 74,
+          "byPeriod": [
+            33,
+            41
+          ],
+          "largestLead": 3,
+          "fastBreak": 6,
+          "inPaint": 38,
+          "offTurnovers": 11
+        },
+        "twoPointFieldGoals": {
+          "made": 22,
+          "attempted": 29,
+          "pct": 75.9
+        },
+        "threePointFieldGoals": {
+          "made": 7,
+          "attempted": 25,
+          "pct": 28
+        },
+        "freeThrows": {
+          "made": 9,
+          "attempted": 14,
+          "pct": 64.3
+        },
+        "fieldGoals": {
+          "made": 29,
+          "attempted": 54,
+          "pct": 53.7
+        },
+        "turnovers": {
+          "total": 16,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 6,
+          "defensive": 24,
+          "total": 30
+        },
+        "fouls": {
+          "total": 13,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 60.2,
+          "freeThrowRate": 25.9,
+          "turnoverRatio": 22.9,
+          "offensiveReboundPct": 20
+        }
+      },
+      "opponentStats": {
+        "possessions": 70,
+        "assists": 19,
+        "steals": 7,
+        "blocks": 3,
+        "trueShooting": 53.8,
+        "rating": 114.3,
+        "gameScore": 67.5,
+        "points": {
+          "total": 80,
+          "byPeriod": [
+            40,
+            40
+          ],
+          "largestLead": 15,
+          "fastBreak": 12,
+          "inPaint": 38,
+          "offTurnovers": 13
+        },
+        "twoPointFieldGoals": {
+          "made": 25,
+          "attempted": 44,
+          "pct": 56.8
+        },
+        "threePointFieldGoals": {
+          "made": 8,
+          "attempted": 26,
+          "pct": 30.8
+        },
+        "freeThrows": {
+          "made": 6,
+          "attempted": 10,
+          "pct": 60
+        },
+        "fieldGoals": {
+          "made": 33,
+          "attempted": 70,
+          "pct": 47.1
+        },
+        "turnovers": {
+          "total": 8,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 12,
+          "defensive": 23,
+          "total": 35
+        },
+        "fouls": {
+          "total": 12,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 52.9,
+          "freeThrowRate": 14.3,
+          "turnoverRatio": 11.4,
+          "offensiveReboundPct": 34.3
+        }
+      }
+    }
+  ],
+  "teamSeasonStats": {
+    "season": 2026,
+    "seasonLabel": "20252026",
+    "teamId": 80,
+    "team": "Eastern Washington",
+    "conference": "Big Sky",
+    "games": 1,
+    "wins": 0,
+    "losses": 1,
+    "totalMinutes": 40,
+    "pace": 70,
+    "teamStats": {
+      "assists": 22,
+      "blocks": 2,
+      "steals": 5,
+      "possessions": 70,
+      "trueShooting": 61.5,
+      "rating": 105.7,
+      "fieldGoals": {
+        "made": 29,
+        "attempted": 54,
+        "pct": 53.7
+      },
+      "twoPointFieldGoals": {
+        "made": 22,
+        "attempted": 29,
+        "pct": 75.9
+      },
+      "threePointFieldGoals": {
+        "made": 7,
+        "attempted": 25,
+        "pct": 28
+      },
+      "freeThrows": {
+        "made": 9,
+        "attempted": 14,
+        "pct": 64.3
+      },
+      "rebounds": {
+        "offensive": 6,
+        "defensive": 24,
+        "total": 30
+      },
+      "turnovers": {
+        "total": 16,
+        "teamTotal": 0
+      },
+      "fouls": {
+        "total": 13,
+        "technical": 0,
+        "flagrant": 0
+      },
+      "points": {
+        "total": 74,
+        "inPaint": 38,
+        "offTurnovers": 11,
+        "fastBreak": 6
+      },
+      "fourFactors": {
+        "effectiveFieldGoalPct": 60.2,
+        "turnoverRatio": 0.23,
+        "offensiveReboundPct": 20,
+        "freeThrowRate": 25.9
+      }
+    },
+    "opponentStats": {
+      "assists": 19,
+      "blocks": 3,
+      "steals": 7,
+      "possessions": 70,
+      "trueShooting": 53.8,
+      "rating": 114.3,
+      "fieldGoals": {
+        "made": 33,
+        "attempted": 70,
+        "pct": 47.1
+      },
+      "twoPointFieldGoals": {
+        "made": 25,
+        "attempted": 44,
+        "pct": 56.8
+      },
+      "threePointFieldGoals": {
+        "made": 8,
+        "attempted": 26,
+        "pct": 30.8
+      },
+      "freeThrows": {
+        "made": 6,
+        "attempted": 10,
+        "pct": 60
+      },
+      "rebounds": {
+        "offensive": 12,
+        "defensive": 23,
+        "total": 35
+      },
+      "turnovers": {
+        "total": 8,
+        "teamTotal": 0
+      },
+      "fouls": {
+        "total": 12,
+        "technical": 0,
+        "flagrant": 0
+      },
+      "points": {
+        "total": 80,
+        "inPaint": 38,
+        "offTurnovers": 13,
+        "fastBreak": 12
+      },
+      "fourFactors": {
+        "effectiveFieldGoalPct": 52.9,
+        "turnoverRatio": 0.11,
+        "offensiveReboundPct": 34.3,
+        "freeThrowRate": 14.3
+      }
+    },
+    "perGameStats": {
+      "teamStats": {
+        "threePointFieldGoalsMadePerGame": 7.0,
+        "threePointFieldGoalsAttemptedPerGame": 25.0,
+        "offensiveReboundsPerGame": 6.0,
+        "turnoversPerGame": 16.0,
+        "assistsPerGame": 22.0,
+        "freeThrowsMadePerGame": 9.0,
+        "freeThrowsAttemptedPerGame": 14.0,
+        "foulsPerGame": 13.0,
+        "defensiveReboundsPerGame": 24.0,
+        "stealsPerGame": 5.0,
+        "blocksPerGame": 2.0,
+        "freeThrowPct": 64.3
+      },
+      "opponentStats": {
+        "pointsPerGame": 80.0,
+        "fieldGoalPct": 47.1,
+        "threePointPct": 30.8,
+        "turnoversForcedPerGame": 8.0
+      },
+      "margins": {
+        "pointMargin": -6.0,
+        "reboundMargin": -5.0,
+        "turnoverMargin": -8.0
+      },
+      "ratios": {
+        "assistToTurnoverRatio": 1.38
+      }
+    }
+  },
+  "conferenceRankings": {
+    "conference": "Big Sky",
+    "team": "Eastern Washington",
+    "rankings": {
+      "pointsPerGame": {
+        "rank": 6,
+        "totalTeams": 7,
+        "value": 74.0
+      },
+      "assistsPerGame": {
+        "rank": 3,
+        "totalTeams": 7,
+        "value": 22.0
+      },
+      "reboundsPerGame": {
+        "rank": 6,
+        "totalTeams": 7,
+        "value": 30.0
+      },
+      "stealsPerGame": {
+        "rank": 4,
+        "totalTeams": 7,
+        "value": 5.0
+      },
+      "blocksPerGame": {
+        "rank": 4,
+        "totalTeams": 7,
+        "value": 2.0
+      },
+      "fieldGoalPct": {
+        "rank": 2,
+        "totalTeams": 7,
+        "value": 53.7
+      },
+      "threePointPct": {
+        "rank": 6,
+        "totalTeams": 7,
+        "value": 28
+      },
+      "freeThrowPct": {
+        "rank": 6,
+        "totalTeams": 7,
+        "value": 64.3
+      },
+      "effectiveFieldGoalPct": {
+        "rank": 3,
+        "totalTeams": 7,
+        "value": 60.2
+      },
+      "offensiveReboundPct": {
+        "rank": 7,
+        "totalTeams": 7,
+        "value": 20
+      },
+      "opponentPointsPerGame": {
+        "rank": 5,
+        "totalTeams": 7,
+        "value": 80.0
+      },
+      "threePointFieldGoalsMadePerGame": {
+        "rank": 7,
+        "totalTeams": 7,
+        "value": 7.0
+      },
+      "threePointFieldGoalsAttemptedPerGame": {
+        "rank": 5,
+        "totalTeams": 7,
+        "value": 25.0
+      },
+      "offensiveReboundsPerGame": {
+        "rank": 7,
+        "totalTeams": 7,
+        "value": 6.0
+      },
+      "turnoversPerGame": {
+        "rank": 7,
+        "totalTeams": 7,
+        "value": 16.0
+      },
+      "freeThrowsMadePerGame": {
+        "rank": 5,
+        "totalTeams": 7,
+        "value": 9.0
+      },
+      "freeThrowsAttemptedPerGame": {
+        "rank": 5,
+        "totalTeams": 7,
+        "value": 14.0
+      },
+      "foulsPerGame": {
+        "rank": 2,
+        "totalTeams": 7,
+        "value": 13.0
+      },
+      "defensiveReboundsPerGame": {
+        "rank": 6,
+        "totalTeams": 7,
+        "value": 24.0
+      },
+      "opponentFieldGoalPct": {
+        "rank": 6,
+        "totalTeams": 7,
+        "value": 47.1
+      },
+      "opponentThreePointPct": {
+        "rank": 5,
+        "totalTeams": 7,
+        "value": 30.8
+      },
+      "turnoversForcedPerGame": {
+        "rank": 2,
+        "totalTeams": 7,
+        "value": 8.0
+      },
+      "pointMargin": {
+        "rank": 7,
+        "totalTeams": 7,
+        "value": -6.0
+      },
+      "reboundMargin": {
+        "rank": 5,
+        "totalTeams": 7,
+        "value": -5.0
+      },
+      "turnoverMargin": {
+        "rank": 7,
+        "totalTeams": 7,
+        "value": -8.0
+      },
+      "assistToTurnoverRatio": {
+        "rank": 5,
+        "totalTeams": 7,
+        "value": 1.375
+      }
+    }
+  },
+  "d1Rankings": {
+    "level": "Division 1",
+    "team": "Eastern Washington",
+    "rankings": {}
+  },
+  "metadata": {
+    "totalPlayers": 12,
+    "apiCalls": 44
+  }
+}
