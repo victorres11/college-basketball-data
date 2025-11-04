@@ -2,7 +2,7 @@
   "team": "UCLA",
   "season": "2025-26",
   "seasonType": "Regular",
-  "dataGenerated": "2025-11-04T16:58:49.234074",
+  "dataGenerated": "2025-11-04T17:15:19.607013",
   "players": [
     {
       "name": "Donovan Dent",
@@ -3703,6 +3703,635 @@
           "value": 4.0
         }
       }
+    },
+    {
+      "name": "Anthony Peoples Jr.",
+      "jerseyNumber": "23",
+      "position": "Forward",
+      "height": "6-9",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Corona, CA",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 0,
+        "gamesStarted": 0,
+        "minutes": 0,
+        "mpg": 0.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "assistToTurnoverRatio": 0.0
+      },
+      "gameByGame": [],
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "North Carolina Central",
+          "conference": "MEAC",
+          "games": 8,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 8,
+            "minutes": 97,
+            "minutesPerGame": 12.1,
+            "points": 40,
+            "pointsPerGame": 5.0,
+            "assists": 4,
+            "assistsPerGame": 0.5,
+            "rebounds": {
+              "offensive": 12,
+              "defensive": 7,
+              "total": 19
+            },
+            "reboundsPerGame": 2.4,
+            "steals": 1,
+            "stealsPerGame": 0.1,
+            "blocks": 2,
+            "blocksPerGame": 0.2,
+            "turnovers": 3,
+            "turnoversPerGame": 0.4,
+            "fouls": 14,
+            "foulsPerGame": 1.8,
+            "fieldGoals": {
+              "made": 16,
+              "attempted": 32,
+              "pct": 50
+            },
+            "twoPointFieldGoals": {
+              "made": 14,
+              "attempted": 24,
+              "pct": 58.3
+            },
+            "threePointFieldGoals": {
+              "made": 2,
+              "attempted": 8,
+              "pct": 25
+            },
+            "freeThrows": {
+              "made": 6,
+              "attempted": 9,
+              "pct": 66.7
+            },
+            "offensiveRating": 125.9,
+            "defensiveRating": 103.7,
+            "netRating": 22.2,
+            "usage": 18.9,
+            "assistsTurnoverRatio": 1.33,
+            "effectiveFieldGoalPct": 53.1,
+            "trueShootingPct": 0.556,
+            "winShares": {
+              "offensive": 0.3,
+              "defensive": 0.1,
+              "total": 0.4,
+              "totalPer40": 0.165
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Christian Horry",
+      "jerseyNumber": "7",
+      "position": "Guard",
+      "height": "6-2",
+      "class": "SO",
+      "isFreshman": false,
+      "hometown": "La Canada, CA",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 0,
+        "gamesStarted": 0,
+        "minutes": 0,
+        "mpg": 0.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "assistToTurnoverRatio": 0.0
+      },
+      "gameByGame": []
+    },
+    {
+      "name": "Eric Dailey Jr.",
+      "jerseyNumber": "3",
+      "position": "Guard",
+      "height": "6-8",
+      "class": "SO",
+      "isFreshman": false,
+      "hometown": "Palmetto, FL",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 0,
+        "gamesStarted": 0,
+        "minutes": 0,
+        "mpg": 0.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "assistToTurnoverRatio": 0.0
+      },
+      "gameByGame": [],
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "UCLA",
+          "conference": "Big Ten",
+          "games": 31,
+          "gamesStarted": 31,
+          "seasonStats": {
+            "games": 31,
+            "minutes": 741,
+            "minutesPerGame": 23.9,
+            "points": 360,
+            "pointsPerGame": 11.6,
+            "assists": 44,
+            "assistsPerGame": 1.4,
+            "rebounds": {
+              "offensive": 38,
+              "defensive": 88,
+              "total": 126
+            },
+            "reboundsPerGame": 4.1,
+            "steals": 40,
+            "stealsPerGame": 1.3,
+            "blocks": 5,
+            "blocksPerGame": 0.2,
+            "turnovers": 30,
+            "turnoversPerGame": 1.0,
+            "fouls": 83,
+            "foulsPerGame": 2.7,
+            "fieldGoals": {
+              "made": 134,
+              "attempted": 260,
+              "pct": 51.5
+            },
+            "twoPointFieldGoals": {
+              "made": 100,
+              "attempted": 175,
+              "pct": 57.1
+            },
+            "threePointFieldGoals": {
+              "made": 34,
+              "attempted": 85,
+              "pct": 40
+            },
+            "freeThrows": {
+              "made": 58,
+              "attempted": 82,
+              "pct": 70.7
+            },
+            "offensiveRating": 123.1,
+            "defensiveRating": 98.6,
+            "netRating": 24.5,
+            "usage": 22.9,
+            "assistsTurnoverRatio": 1.47,
+            "effectiveFieldGoalPct": 58.1,
+            "trueShootingPct": 0.608,
+            "winShares": {
+              "offensive": 2.3,
+              "defensive": 1.4,
+              "total": 3.7,
+              "totalPer40": 0.2
+            }
+          }
+        },
+        {
+          "season": "2023-24",
+          "team": "Oklahoma State",
+          "conference": "Big 12",
+          "games": 32,
+          "gamesStarted": 16,
+          "seasonStats": {
+            "games": 32,
+            "minutes": 715,
+            "minutesPerGame": 22.3,
+            "points": 299,
+            "pointsPerGame": 9.3,
+            "assists": 49,
+            "assistsPerGame": 1.5,
+            "rebounds": {
+              "offensive": 48,
+              "defensive": 107,
+              "total": 155
+            },
+            "reboundsPerGame": 4.8,
+            "steals": 24,
+            "stealsPerGame": 0.8,
+            "blocks": 4,
+            "blocksPerGame": 0.1,
+            "turnovers": 35,
+            "turnoversPerGame": 1.1,
+            "fouls": 64,
+            "foulsPerGame": 2.0,
+            "fieldGoals": {
+              "made": 112,
+              "attempted": 226,
+              "pct": 49.6
+            },
+            "twoPointFieldGoals": {
+              "made": 93,
+              "attempted": 169,
+              "pct": 55
+            },
+            "threePointFieldGoals": {
+              "made": 19,
+              "attempted": 57,
+              "pct": 33.3
+            },
+            "freeThrows": {
+              "made": 56,
+              "attempted": 93,
+              "pct": 60.2
+            },
+            "offensiveRating": 112.5,
+            "defensiveRating": 105.6,
+            "netRating": 6.9,
+            "usage": 22.6,
+            "assistsTurnoverRatio": 1.4,
+            "effectiveFieldGoalPct": 53.8,
+            "trueShootingPct": 0.56,
+            "winShares": {
+              "offensive": 1.5,
+              "defensive": 0.8,
+              "total": 2.3,
+              "totalPer40": 0.129
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Evan Manjikian",
+      "jerseyNumber": "21",
+      "position": "Forward",
+      "height": "6-8",
+      "class": "SR",
+      "isFreshman": false,
+      "hometown": "Glendale, CA",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 0,
+        "gamesStarted": 0,
+        "minutes": 0,
+        "mpg": 0.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "assistToTurnoverRatio": 0.0
+      },
+      "gameByGame": [],
+      "previousSeasons": [
+        {
+          "season": "2022-23",
+          "team": "UCLA",
+          "conference": "Pac-12",
+          "games": 2,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 2,
+            "minutes": 3,
+            "minutesPerGame": 1.5,
+            "points": 3,
+            "pointsPerGame": 1.5,
+            "assists": 0,
+            "assistsPerGame": 0.0,
+            "rebounds": {
+              "offensive": 0,
+              "defensive": 1,
+              "total": 1
+            },
+            "reboundsPerGame": 0.5,
+            "steals": 0,
+            "stealsPerGame": 0.0,
+            "blocks": 0,
+            "blocksPerGame": 0.0,
+            "turnovers": 0,
+            "turnoversPerGame": 0.0,
+            "fouls": 0,
+            "foulsPerGame": 0.0,
+            "fieldGoals": {
+              "made": 1,
+              "attempted": 2,
+              "pct": 50
+            },
+            "twoPointFieldGoals": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "threePointFieldGoals": {
+              "made": 1,
+              "attempted": 2,
+              "pct": 50
+            },
+            "freeThrows": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "offensiveRating": 151,
+            "defensiveRating": 80.2,
+            "netRating": 70.8,
+            "usage": 30.8,
+            "assistsTurnoverRatio": null,
+            "effectiveFieldGoalPct": 75,
+            "trueShootingPct": 0.75,
+            "winShares": {
+              "offensive": 0,
+              "defensive": 0,
+              "total": 0,
+              "totalPer40": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Jack Seidler",
+      "jerseyNumber": "30",
+      "position": "Guard",
+      "height": "6-4",
+      "class": "SR",
+      "isFreshman": false,
+      "hometown": "Marlboro, NJ",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 0,
+        "gamesStarted": 0,
+        "minutes": 0,
+        "mpg": 0.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "assistToTurnoverRatio": 0.0
+      },
+      "gameByGame": [],
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "UCLA",
+          "conference": "Big Ten",
+          "games": 6,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 6,
+            "minutes": 13,
+            "minutesPerGame": 2.2,
+            "points": 2,
+            "pointsPerGame": 0.3,
+            "assists": 0,
+            "assistsPerGame": 0.0,
+            "rebounds": {
+              "offensive": 0,
+              "defensive": 1,
+              "total": 1
+            },
+            "reboundsPerGame": 0.2,
+            "steals": 0,
+            "stealsPerGame": 0.0,
+            "blocks": 0,
+            "blocksPerGame": 0.0,
+            "turnovers": 0,
+            "turnoversPerGame": 0.0,
+            "fouls": 0,
+            "foulsPerGame": 0.0,
+            "fieldGoals": {
+              "made": 1,
+              "attempted": 4,
+              "pct": 25
+            },
+            "twoPointFieldGoals": {
+              "made": 1,
+              "attempted": 2,
+              "pct": 50
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 2,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "offensiveRating": 64.4,
+            "defensiveRating": 91.8,
+            "netRating": -27.4,
+            "usage": 15.4,
+            "assistsTurnoverRatio": null,
+            "effectiveFieldGoalPct": 25,
+            "trueShootingPct": 0.25,
+            "winShares": {
+              "offensive": 0,
+              "defensive": 0,
+              "total": 0,
+              "totalPer40": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Markell Alston",
+      "jerseyNumber": "10",
+      "position": "Guard",
+      "height": "6-1",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Queensbridge, NY",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 0,
+        "gamesStarted": 0,
+        "minutes": 0,
+        "mpg": 0.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "assistToTurnoverRatio": 0.0
+      },
+      "gameByGame": []
     }
   ],
   "teamGameStats": [
@@ -4143,7 +4772,7 @@
     "rankings": {}
   },
   "metadata": {
-    "totalPlayers": 9,
-    "apiCalls": 35
+    "totalPlayers": 15,
+    "apiCalls": 53
   }
 }

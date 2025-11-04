@@ -525,13 +525,24 @@ def generate_ucla_data_json_2026():
                     break
     
     # Get all unique players from game data
-    unique_players = set()
+    players_with_game_data = set()
     for game in game_data:
         if 'players' in game:
             for player in game['players']:
                 player_name = player.get('name', '')
                 if player_name:
-                    unique_players.add(player_name)
+                    players_with_game_data.add(player_name.lower())
+    
+    # Get all players from roster (to include those without game data)
+    all_roster_players = set()
+    if roster_data and len(roster_data) > 0 and 'players' in roster_data[0]:
+        for player in roster_data[0]['players']:
+            player_name = player.get('name', '')
+            if player_name:
+                all_roster_players.add(player_name.lower())
+    
+    # Combine: use roster players as base, ensure all are included
+    all_players_to_process = all_roster_players | players_with_game_data
     
     # Build consolidated data structure
     team_data = {
@@ -568,17 +579,69 @@ def generate_ucla_data_json_2026():
             if player_name:
                 player_stats_lookup[player_name.lower()] = player
     
-    # Process each player
-    for player_name in sorted(unique_players):
+    # Process each player from roster
+    for player_name_lower in sorted(all_players_to_process):
+        # Get the actual player name (with proper casing) from roster
+        player_roster_data = roster_lookup.get(player_name_lower, {})
+        
+        # Get player name - prefer from roster, fallback to title case
+        if player_roster_data:
+            player_name = player_roster_data.get('name', player_name_lower.title())
+        else:
+            # Try to find the name from the original roster data
+            player_name = None
+            if roster_data and len(roster_data) > 0 and 'players' in roster_data[0]:
+                for p in roster_data[0]['players']:
+                    if p.get('name', '').lower() == player_name_lower:
+                        player_name = p.get('name')
+                        player_roster_data = p
+                        break
+            
+            # If still not found, use title case
+            if not player_name:
+                player_name = player_name_lower.title()
+        
         print(f"Processing {player_name}...")
         
-        # Calculate stats
+        # Calculate stats (will return None if no game data)
         stats = calculate_regular_season_stats(player_name, game_data)
-        if not stats:
-            continue
         
-        # Get roster data
-        player_roster_data = roster_lookup.get(player_name.lower(), {})
+        # If no stats (player didn't play), create empty stats structure
+        if not stats:
+            print(f"  No game data for {player_name}, creating empty stats entry")
+            stats = {
+                'games': 0,
+                'starts': 0,
+                'minutes': 0,
+                'mpg': 0.0,
+                'points': 0,
+                'ppg': 0.0,
+                'total_reb': 0,
+                'rpg': 0.0,
+                'assists': 0,
+                'apg': 0.0,
+                'turnovers': 0,
+                'steals': 0,
+                'spg': 0.0,
+                'blocks': 0,
+                'bpg': 0.0,
+                'fouls': 0,
+                'foulOuts': 0,
+                'ejections': 0,
+                'fgm': 0,
+                'fga': 0,
+                'fg_pct': 0.0,
+                'three_pm': 0,
+                'three_pa': 0,
+                'three_pct': 0.0,
+                'ftm': 0,
+                'fta': 0,
+                'ft_pct': 0.0,
+                'or_reb': 0,
+                'dr_reb': 0,
+                'ratio': 0.0,
+                'game_by_game': []
+            }
         
         # Get jersey number from roster or use "N/A"
         jersey_number = "N/A"
