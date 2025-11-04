@@ -7,7 +7,7 @@ function GET_TEAM_META(url) {
       var response = UrlFetchApp.fetch(url);
       var data = JSON.parse(response.getContentText());
       
-      return [
+      var table = [
         ["Field", "Value"],
         ["Team", data.team],
         ["Season", data.season],
@@ -16,6 +16,28 @@ function GET_TEAM_META(url) {
         ["Total Players", data.metadata.totalPlayers],
         ["API Calls", data.metadata.apiCalls]
       ];
+      
+      // Add total record if available
+      if (data.totalRecord) {
+        table.push([""]);
+        table.push(["=== RECORD ==="]);
+        table.push(["Total Record", data.totalRecord.wins + "-" + data.totalRecord.losses + " (" + data.totalRecord.games + " games)"]);
+        table.push(["Total Wins", data.totalRecord.wins]);
+        table.push(["Total Losses", data.totalRecord.losses]);
+        table.push(["Total Games", data.totalRecord.games]);
+      }
+      
+      // Add conference record if available
+      if (data.conferenceRecord) {
+        table.push([""]);
+        table.push(["=== CONFERENCE RECORD ==="]);
+        table.push(["Conference Record", data.conferenceRecord.wins + "-" + data.conferenceRecord.losses + " (" + data.conferenceRecord.games + " games)"]);
+        table.push(["Conference Wins", data.conferenceRecord.wins]);
+        table.push(["Conference Losses", data.conferenceRecord.losses]);
+        table.push(["Conference Games", data.conferenceRecord.games]);
+      }
+      
+      return table;
     } catch (e) {
       return [["Error: " + e.message]];
     }
