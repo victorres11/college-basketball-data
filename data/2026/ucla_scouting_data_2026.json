@@ -2,7 +2,7 @@
   "team": "UCLA",
   "season": "2025-26",
   "seasonType": "Regular",
-  "dataGenerated": "2025-11-04T17:39:26.028630",
+  "dataGenerated": "2025-11-04T18:00:31.494779",
   "players": [
     {
       "name": "Donovan Dent",
@@ -4901,6 +4901,16 @@
         "value": 2.375
       }
     }
+  },
+  "totalRecord": {
+    "wins": 1,
+    "losses": 0,
+    "games": 1
+  },
+  "conferenceRecord": {
+    "wins": 0,
+    "losses": 0,
+    "games": 0
   },
   "metadata": {
     "totalPlayers": 15,

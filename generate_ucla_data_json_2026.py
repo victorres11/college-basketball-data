@@ -572,6 +572,43 @@ def generate_ucla_data_json_2026():
         team_data['conferenceRankings'] = conference_rankings['conference']
         team_data['d1Rankings'] = conference_rankings['d1']
     
+    # Add total record from team season stats
+    if team_season_stats and len(team_season_stats) > 0:
+        season_stats = team_season_stats[0]
+        team_data['totalRecord'] = {
+            'wins': season_stats.get('wins', 0),
+            'losses': season_stats.get('losses', 0),
+            'games': season_stats.get('games', 0)
+        }
+    
+    # Calculate conference record from game data
+    if team_game_stats:
+        conference_games = [game for game in team_game_stats if game.get('conferenceGame') == True]
+        conference_wins = 0
+        conference_losses = 0
+        
+        for game in conference_games:
+            # Determine win/loss by comparing team points vs opponent points
+            team_points = game.get('teamStats', {}).get('points', {}).get('total', 0)
+            opponent_points = game.get('opponentStats', {}).get('points', {}).get('total', 0)
+            
+            if team_points > opponent_points:
+                conference_wins += 1
+            elif opponent_points > team_points:
+                conference_losses += 1
+        
+        team_data['conferenceRecord'] = {
+            'wins': conference_wins,
+            'losses': conference_losses,
+            'games': len(conference_games)
+        }
+    else:
+        team_data['conferenceRecord'] = {
+            'wins': 0,
+            'losses': 0,
+            'games': 0
+        }
+    
     # Create lookup for player season stats (for rankings)
     player_stats_lookup = {}
     if player_season_stats:
