@@ -1,0 +1,150 @@
+{
+  "school": "Iowa",
+  "mascot": "Hawkeyes",
+  "season": "2025-26",
+  "lastUpdated": "2025-11-07T21:45:25Z",
+  "source": "scraped",
+  "playerCount": 14,
+  "players": [
+    {
+      "name": "Cam Manyawu",
+      "jersey": "3",
+      "position": "",
+      "height": "69",
+      "year": "JR",
+      "hometown": "Kansas City, Mo.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Peyton McCollum",
+      "jersey": "5",
+      "position": "",
+      "height": "62",
+      "year": "FR",
+      "hometown": "Maryville, Mo.",
+      "high_school": "Waukee Northwest (Iowa)",
+      "previousSchool": ""
+    },
+    {
+      "name": "Tavion Banks",
+      "jersey": "6",
+      "position": "",
+      "height": "67",
+      "year": "SR",
+      "hometown": "Kansas City, Mo.",
+      "high_school": "Minnesota Prep",
+      "previousSchool": ""
+    },
+    {
+      "name": "Alvaro Folgueiras",
+      "jersey": "7",
+      "position": "",
+      "height": "610",
+      "year": "JR",
+      "hometown": "M\u00e1laga, Spain",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Cooper Koch",
+      "jersey": "8",
+      "position": "",
+      "height": "68",
+      "year": "RS Fr.",
+      "hometown": "Peoria, Ill.",
+      "high_school": "Metamora Township",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jacob Koch",
+      "jersey": "10",
+      "position": "",
+      "height": "62",
+      "year": "SO",
+      "hometown": "Iowa City, Iowa",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Kael Combs",
+      "jersey": "11",
+      "position": "",
+      "height": "64",
+      "year": "JR",
+      "hometown": "Nixa, Mo.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Bennett Stirtz",
+      "jersey": "14",
+      "position": "",
+      "height": "64",
+      "year": "SR",
+      "hometown": "Liberty, Mo.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Brendan Hausen",
+      "jersey": "15",
+      "position": "",
+      "height": "64",
+      "year": "SR",
+      "hometown": "Amarillo, Texas",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Trey Thompson",
+      "jersey": "20",
+      "position": "",
+      "height": "68",
+      "year": "FR",
+      "hometown": "Greeneville, Tenn.",
+      "high_school": "Greeneville",
+      "previousSchool": ""
+    },
+    {
+      "name": "Isaia Howard",
+      "jersey": "23",
+      "position": "",
+      "height": "65",
+      "year": "SO",
+      "hometown": "Plattsburg, Mo.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Tate Sage",
+      "jersey": "24",
+      "position": "",
+      "height": "67",
+      "year": "FR",
+      "hometown": "Weatherford, Okla.",
+      "high_school": "Weatherford",
+      "previousSchool": ""
+    },
+    {
+      "name": "Trevin Jirak",
+      "jersey": "27",
+      "position": "",
+      "height": "611",
+      "year": "FR",
+      "hometown": "West Des Moines, Iowa",
+      "high_school": "Valley",
+      "previousSchool": ""
+    },
+    {
+      "name": "Joey Matteoni",
+      "jersey": "44",
+      "position": "",
+      "height": "69",
+      "year": "RS Fr.",
+      "hometown": "Overland Park, Kan.",
+      "high_school": "Blue Valley Northwest",
+      "previousSchool": ""
+    }
+  ]
+}

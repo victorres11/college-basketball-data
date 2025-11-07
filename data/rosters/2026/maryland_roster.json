@@ -1,0 +1,170 @@
+{
+  "school": "Maryland",
+  "mascot": "Terrapins",
+  "season": "2025-26",
+  "lastUpdated": "2025-11-07T21:50:36Z",
+  "source": "scraped",
+  "playerCount": 16,
+  "players": [
+    {
+      "name": "Darius Adams",
+      "jersey": "1",
+      "position": "",
+      "height": "65",
+      "year": "FR",
+      "hometown": "Manchester, NJ",
+      "high_school": "La Lumiere School (IN)",
+      "previousSchool": ""
+    },
+    {
+      "name": "Myles Rice",
+      "jersey": "2",
+      "position": "",
+      "height": "63",
+      "year": "R-JR",
+      "hometown": "Columbia, SC",
+      "high_school": "",
+      "previousSchool": "Sandy Creek / Washington State / Indiana"
+    },
+    {
+      "name": "Rakease Passmore",
+      "jersey": "4",
+      "position": "",
+      "height": "65",
+      "year": "SO",
+      "hometown": "Palatka, FL",
+      "high_school": "",
+      "previousSchool": "Combine Academy / Kansas"
+    },
+    {
+      "name": "Andre Mills",
+      "jersey": "7",
+      "position": "",
+      "height": "64",
+      "year": "R-FR",
+      "hometown": "Boston, MA",
+      "high_school": "",
+      "previousSchool": "Brimmer and May School / Texas A&M"
+    },
+    {
+      "name": "David Coit",
+      "jersey": "8",
+      "position": "",
+      "height": "511",
+      "year": "Grad Student",
+      "hometown": "Columbus, NJ",
+      "high_school": "",
+      "previousSchool": "Scotland Campus Sports / Atlantic Cape CC / Northern Illinois / Kansas"
+    },
+    {
+      "name": "Solomon Washington",
+      "jersey": "9",
+      "position": "",
+      "height": "67",
+      "year": "SR",
+      "hometown": "New Orleans, LA",
+      "high_school": "",
+      "previousSchool": "Carver HS / Texas A&M"
+    },
+    {
+      "name": "George Turkson Jr.",
+      "jersey": "11",
+      "position": "",
+      "height": "67",
+      "year": "R-FR",
+      "hometown": "Lowell, MA",
+      "high_school": "",
+      "previousSchool": "Bradford Christian Academy / Texas A&M"
+    },
+    {
+      "name": "Isaiah Watts",
+      "jersey": "12",
+      "position": "",
+      "height": "63",
+      "year": "JR",
+      "hometown": "West Seattle, WA",
+      "high_school": "",
+      "previousSchool": "South Kent (CT) / Washington State"
+    },
+    {
+      "name": "Elijah Saunders",
+      "jersey": "13",
+      "position": "",
+      "height": "68",
+      "year": "SR",
+      "hometown": "Phoenix, AZ",
+      "high_school": "",
+      "previousSchool": "Sunnyslope / SDSU / Virginia"
+    },
+    {
+      "name": "Jaziah Harper",
+      "jersey": "15",
+      "position": "",
+      "height": "67",
+      "year": "FR",
+      "hometown": "Oak Park, IL",
+      "high_school": "",
+      "previousSchool": "Bosco Institute"
+    },
+    {
+      "name": "Guillermo Del Pino",
+      "jersey": "18",
+      "position": "",
+      "height": "65",
+      "year": "FR",
+      "hometown": "Cordoba, Spain",
+      "high_school": "Unicaja Malaga Academy",
+      "previousSchool": ""
+    },
+    {
+      "name": "Pharrel Payne",
+      "jersey": "21",
+      "position": "",
+      "height": "69",
+      "year": "SR",
+      "hometown": "Cottage Grove, MN",
+      "high_school": "",
+      "previousSchool": "Park HS / Minnesota / Texas A&M"
+    },
+    {
+      "name": "Aleks Alston",
+      "jersey": "24",
+      "position": "",
+      "height": "610",
+      "year": "FR",
+      "hometown": "Chicago, IL",
+      "high_school": "Kenwood Academy",
+      "previousSchool": ""
+    },
+    {
+      "name": "Nick Blake",
+      "jersey": "25",
+      "position": "",
+      "height": "62",
+      "year": "FR",
+      "hometown": "Orlando, FL",
+      "high_school": "Olympia",
+      "previousSchool": ""
+    },
+    {
+      "name": "Lukas Sotell",
+      "jersey": "30",
+      "position": "",
+      "height": "63",
+      "year": "JR",
+      "hometown": "Stamford, Conn.",
+      "high_school": "",
+      "previousSchool": "Stamford HS / Montverde Academy"
+    },
+    {
+      "name": "Collin Metcalf",
+      "jersey": "45",
+      "position": "",
+      "height": "69",
+      "year": "SR",
+      "hometown": "Nortorf, Germany",
+      "high_school": "",
+      "previousSchool": "Humphreys HS / Northeastern"
+    }
+  ]
+}

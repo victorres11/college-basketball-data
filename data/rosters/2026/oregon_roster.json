@@ -1,0 +1,180 @@
+{
+  "school": "Oregon",
+  "mascot": "Ducks",
+  "season": "2025-26",
+  "lastUpdated": "2025-11-07T21:45:25Z",
+  "source": "scraped",
+  "playerCount": 17,
+  "players": [
+    {
+      "name": "Efe Vatan",
+      "jersey": "0",
+      "position": "F",
+      "height": "6-10",
+      "year": "R-FR",
+      "hometown": "Istanbul, Turkey",
+      "high_school": "",
+      "previousSchool": "Galatasaray S.K."
+    },
+    {
+      "name": "Jackson Shelstad",
+      "jersey": "3",
+      "position": "G",
+      "height": "6-1",
+      "year": "JR",
+      "hometown": "West Linn, Ore.",
+      "high_school": "West Linn HS",
+      "previousSchool": ""
+    },
+    {
+      "name": "Dezdrick Lindsay",
+      "jersey": "4",
+      "position": "F",
+      "height": "6-6",
+      "year": "SR",
+      "hometown": "Louisville, Kent.",
+      "high_school": "Male HS",
+      "previousSchool": "Florida SW CC"
+    },
+    {
+      "name": "Takai Simpkins",
+      "jersey": "5",
+      "position": "G",
+      "height": "6-5",
+      "year": "SR",
+      "hometown": "Brooklyn, N.Y.",
+      "high_school": "Liberty Heights Christian",
+      "previousSchool": "Elon"
+    },
+    {
+      "name": "Oleksandr Kobzystyi",
+      "jersey": "6",
+      "position": "F",
+      "height": "6-8",
+      "year": "SR",
+      "hometown": "Kremenchuk, Ukraine",
+      "high_school": "",
+      "previousSchool": "KK Mega Basket"
+    },
+    {
+      "name": "Luke Johnson",
+      "jersey": "7",
+      "position": "F",
+      "height": "6-8",
+      "year": "SO",
+      "hometown": "Portland, Ore.",
+      "high_school": "Huntington High School",
+      "previousSchool": ""
+    },
+    {
+      "name": "Kwame Evans Jr.",
+      "jersey": "10",
+      "position": "F",
+      "height": "6-10",
+      "year": "JR",
+      "hometown": "Baltimore, M.d.",
+      "high_school": "Montverde Academy (Fla.)",
+      "previousSchool": ""
+    },
+    {
+      "name": "Drew Carter",
+      "jersey": "12",
+      "position": "G",
+      "height": "6-3",
+      "year": "SR",
+      "hometown": "Portland, Ore.",
+      "high_school": "Tigard HS",
+      "previousSchool": "Colorado / UC Davis"
+    },
+    {
+      "name": "Sean Stewart",
+      "jersey": "13",
+      "position": "F",
+      "height": "6-9",
+      "year": "JR",
+      "hometown": "Windermere, Fla.",
+      "high_school": "Montverde Academy (Fla.)",
+      "previousSchool": "Duke / Ohio State"
+    },
+    {
+      "name": "JJ Frakes",
+      "jersey": "14",
+      "position": "G",
+      "height": "6-5",
+      "year": "FR",
+      "hometown": "Berrien Springs, Mich.",
+      "high_school": "Berrien Springs HS",
+      "previousSchool": ""
+    },
+    {
+      "name": "Rian Gonzales",
+      "jersey": "15",
+      "position": "G",
+      "height": "6-3",
+      "year": "FR",
+      "hometown": "Albuquerque, New Mexico",
+      "high_school": "Volcano Vista",
+      "previousSchool": ""
+    },
+    {
+      "name": "Ege Demir",
+      "jersey": "16",
+      "position": "C",
+      "height": "6-11",
+      "year": "JR",
+      "hometown": "Kaduna, Nigeria",
+      "high_school": "",
+      "previousSchool": "Dar\u00fcssafaka Lassa (Turkey)"
+    },
+    {
+      "name": "Devon Pryor",
+      "jersey": "22",
+      "position": "F",
+      "height": "6-7",
+      "year": "JR",
+      "hometown": "Houston, Texas",
+      "high_school": "PSAT-XEA Academy",
+      "previousSchool": "Texas"
+    },
+    {
+      "name": "Wei Lin",
+      "jersey": "23",
+      "position": "G",
+      "height": "6-4",
+      "year": "SO",
+      "hometown": "Xiamen, Fujian, China",
+      "high_school": "",
+      "previousSchool": "Nanjing Monkey Kings (China)"
+    },
+    {
+      "name": "Jamari Phillips",
+      "jersey": "24",
+      "position": "G",
+      "height": "6-4",
+      "year": "SO",
+      "hometown": "Modesto, Calif.",
+      "high_school": "Dream City Christian (Ariz.)",
+      "previousSchool": ""
+    },
+    {
+      "name": "Nate Bittle",
+      "jersey": "32",
+      "position": "C",
+      "height": "7-0",
+      "year": "SR",
+      "hometown": "Central Point, Ore.",
+      "high_school": "Crater HS / Prolific Prep",
+      "previousSchool": ""
+    },
+    {
+      "name": "Miles Stewart",
+      "jersey": "35",
+      "position": "F",
+      "height": "6-8",
+      "year": "R-SR",
+      "hometown": "Windermere, Fla.",
+      "high_school": "Lake Highland Prep",
+      "previousSchool": "Howard"
+    }
+  ]
+}

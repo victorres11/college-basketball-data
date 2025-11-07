@@ -1,0 +1,164 @@
+{
+  "school": "Ohio State",
+  "mascot": "Buckeyes",
+  "season": "2025-26",
+  "lastUpdated": "2025-11-07T21:45:25Z",
+  "source": "scraped",
+  "playerCount": 14,
+  "players": [
+    {
+      "name": "John Mobley Jr.",
+      "jersey": "0",
+      "position": "G",
+      "height": "6-2",
+      "weight": "185",
+      "year": "SO",
+      "hometown": "Reynoldsburg, Ohio",
+      "high_school": "Bishop Gorman/Wasatch Acad.",
+      "previousSchool": ""
+    },
+    {
+      "name": "Amare Bynum",
+      "jersey": "1",
+      "position": "F",
+      "height": "6-8",
+      "weight": "240",
+      "year": "FR",
+      "hometown": "Omaha, Nebraska",
+      "high_school": "Link Academy",
+      "previousSchool": ""
+    },
+    {
+      "name": "Bruce Thornton",
+      "jersey": "2",
+      "position": "G",
+      "height": "6-2",
+      "weight": "215",
+      "year": "SR",
+      "hometown": "Fairburn, Ga.",
+      "high_school": "Milton",
+      "previousSchool": ""
+    },
+    {
+      "name": "Taison Chatman",
+      "jersey": "3",
+      "position": "G",
+      "height": "6-4",
+      "weight": "190",
+      "year": "R-SO",
+      "hometown": "Minneapolis, Minn.",
+      "high_school": "Totino-Grace",
+      "previousSchool": ""
+    },
+    {
+      "name": "Gabe Cupps",
+      "jersey": "4",
+      "position": "G",
+      "height": "6-2",
+      "weight": "180",
+      "year": "R-SO",
+      "hometown": "Dayton, Ohio",
+      "high_school": "Centerville",
+      "previousSchool": "Indiana"
+    },
+    {
+      "name": "Ivan Njegovan",
+      "jersey": "7",
+      "position": "C",
+      "height": "7-2",
+      "weight": "260",
+      "year": "SO",
+      "hometown": "Otocac, Croatia",
+      "high_school": "Gimnazija Vladimira-Nazora",
+      "previousSchool": ""
+    },
+    {
+      "name": "Myles Herro",
+      "jersey": "8",
+      "position": "G",
+      "height": "6-3",
+      "weight": "165",
+      "year": "FR",
+      "hometown": "Milwaukee, Wis.",
+      "high_school": "Whitnall",
+      "previousSchool": ""
+    },
+    {
+      "name": "Mathieu Grujicic",
+      "jersey": "9",
+      "position": "G",
+      "height": "6-7",
+      "weight": "210",
+      "year": "FR",
+      "hometown": "Arles, France",
+      "high_school": "Alba Berlin",
+      "previousSchool": "FC Barcelona"
+    },
+    {
+      "name": "Christoph Tilly",
+      "jersey": "13",
+      "position": "C",
+      "height": "7-0",
+      "weight": "240",
+      "year": "SR",
+      "hometown": "Berlin, Germany",
+      "high_school": "Alba Berlin",
+      "previousSchool": "Santa Clara"
+    },
+    {
+      "name": "Brandon Noel",
+      "jersey": "14",
+      "position": "F",
+      "height": "6-8",
+      "weight": "240",
+      "year": "SR",
+      "hometown": "Lucasville, Ohio",
+      "high_school": "Chillicothe",
+      "previousSchool": "Wright State"
+    },
+    {
+      "name": "Josh Ojianwuna",
+      "jersey": "17",
+      "position": "F",
+      "height": "6-10",
+      "weight": "270",
+      "year": "SR",
+      "hometown": "Asaba, Nigeria",
+      "high_school": "NBA Global Academy",
+      "previousSchool": "Baylor"
+    },
+    {
+      "name": "Colin White",
+      "jersey": "20",
+      "position": "F",
+      "height": "6-6",
+      "weight": "220",
+      "year": "SO",
+      "hometown": "Ottawa, Ohio",
+      "high_school": "Ottawa-Glandorf",
+      "previousSchool": ""
+    },
+    {
+      "name": "Devin Royal",
+      "jersey": "21",
+      "position": "F",
+      "height": "6-6",
+      "weight": "230",
+      "year": "JR",
+      "hometown": "Pickerington, Ohio",
+      "high_school": "Pickerington Central",
+      "previousSchool": ""
+    },
+    {
+      "name": "Braylen Nash",
+      "jersey": "55",
+      "position": "G",
+      "height": "6-4",
+      "weight": "190",
+      "year": "SO",
+      "hometown": "New Albany, Ohio",
+      "high_school": "New Albany",
+      "previousSchool": ""
+    }
+  ]
+}

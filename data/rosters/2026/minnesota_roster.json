@@ -1,0 +1,160 @@
+{
+  "school": "Minnesota",
+  "mascot": "Golden Gophers",
+  "season": "2025-26",
+  "lastUpdated": "2025-11-07T21:45:25Z",
+  "source": "scraped",
+  "playerCount": 15,
+  "players": [
+    {
+      "name": "Chansey Willis Jr.",
+      "jersey": "0",
+      "position": "",
+      "height": "6-2",
+      "year": "SR",
+      "hometown": "Detroit, Mich.",
+      "high_school": "Western Michigan",
+      "previousSchool": ""
+    },
+    {
+      "name": "Isaac Asuma",
+      "jersey": "1",
+      "position": "",
+      "height": "6-3",
+      "year": "SO",
+      "hometown": "Cherry, Minn.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Grayson Grove",
+      "jersey": "2",
+      "position": "",
+      "height": "6-9",
+      "year": "R-FR",
+      "hometown": "Alexandria, Minn.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Bobby Durkin",
+      "jersey": "3",
+      "position": "",
+      "height": "6-7",
+      "year": "JR",
+      "hometown": "Darien, Ill.",
+      "high_school": "Davidson",
+      "previousSchool": ""
+    },
+    {
+      "name": "Nehemiah Turner",
+      "jersey": "4",
+      "position": "",
+      "height": "6-10",
+      "year": "SO",
+      "hometown": "Auburndale, Fla",
+      "high_school": "Central Arkansas",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jaylen Crocker-Johnson",
+      "jersey": "5",
+      "position": "",
+      "height": "6-8",
+      "year": "JR",
+      "hometown": "San Antonio, Texas",
+      "high_school": "",
+      "previousSchool": "Colorado State"
+    },
+    {
+      "name": "Langston Reynolds",
+      "jersey": "6",
+      "position": "",
+      "height": "6-4",
+      "year": "SR",
+      "hometown": "Denver, Colo.",
+      "high_school": "Northern Colorado",
+      "previousSchool": ""
+    },
+    {
+      "name": "Max Lorenson",
+      "jersey": "8",
+      "position": "",
+      "height": "6-2",
+      "year": "FR",
+      "hometown": "Eden Prairie, Minn.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Kai Shinholster",
+      "jersey": "9",
+      "position": "",
+      "height": "6-5",
+      "year": "FR",
+      "hometown": "Woolwich, N.J.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Cade Tyson",
+      "jersey": "10",
+      "position": "",
+      "height": "6-7",
+      "year": "SR",
+      "hometown": "Monroe, N.C.",
+      "high_school": "North Carolina",
+      "previousSchool": ""
+    },
+    {
+      "name": "Maximus Gizzi",
+      "jersey": "11",
+      "position": "",
+      "height": "6-1",
+      "year": "SR",
+      "hometown": "New Palestine, Ind.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "RJ Spencer",
+      "jersey": "12",
+      "position": "",
+      "height": "6-3",
+      "year": "SR",
+      "hometown": "Blaine, Minn.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Chance Stephens",
+      "jersey": "13",
+      "position": "",
+      "height": "6-3",
+      "year": "R-JR",
+      "hometown": "Riverside, Calif.",
+      "high_school": "Maryland",
+      "previousSchool": ""
+    },
+    {
+      "name": "BJ Omot",
+      "jersey": "20",
+      "position": "",
+      "height": "6-8",
+      "year": "R-JR",
+      "hometown": "Mankato, Minn.",
+      "high_school": "California",
+      "previousSchool": ""
+    },
+    {
+      "name": "Robert Vaihola",
+      "jersey": "22",
+      "position": "",
+      "height": "6-8",
+      "year": "R-SR",
+      "hometown": "San Mateo, Calif.",
+      "high_school": "",
+      "previousSchool": "San Jose State"
+    }
+  ]
+}

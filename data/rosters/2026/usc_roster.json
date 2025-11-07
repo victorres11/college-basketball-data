@@ -1,0 +1,186 @@
+{
+  "school": "USC",
+  "mascot": "Trojans",
+  "season": "2025-26",
+  "lastUpdated": "2025-11-07T21:45:25Z",
+  "source": "scraped",
+  "playerCount": 16,
+  "players": [
+    {
+      "name": "Alijah Arenas",
+      "jersey": "0",
+      "position": "G",
+      "height": "6-6",
+      "weight": "199",
+      "year": "FR",
+      "hometown": "Woodland Hills, Calif.",
+      "high_school": "Chatsworth High School",
+      "previousSchool": ""
+    },
+    {
+      "name": "Rodney Rice",
+      "jersey": "1",
+      "position": "G",
+      "height": "6-5",
+      "weight": "199",
+      "year": "JR",
+      "hometown": "Clinton, Md.",
+      "high_school": "DeMatha Catholic",
+      "previousSchool": "Maryland"
+    },
+    {
+      "name": "Ezra Ausar",
+      "jersey": "2",
+      "position": "F",
+      "height": "6-9",
+      "weight": "253",
+      "year": "SR",
+      "hometown": "Atlanta, Ga.",
+      "high_school": "Liberty Heights Athletic Institute",
+      "previousSchool": "Utah"
+    },
+    {
+      "name": "Amarion Dickerson",
+      "jersey": "3",
+      "position": "G/F",
+      "height": "6-7",
+      "weight": "197",
+      "year": "SR",
+      "hometown": "Cleveland, Ohio",
+      "high_school": "Rhodes High School",
+      "previousSchool": "Robert Morris"
+    },
+    {
+      "name": "Chad Baker-Mazara",
+      "jersey": "4",
+      "position": "G/F",
+      "height": "6-7",
+      "weight": "172",
+      "year": "Gr.",
+      "hometown": "Santo Domingo, Dominican Republic",
+      "high_school": "Colonia (N.J.)",
+      "previousSchool": "Auburn"
+    },
+    {
+      "name": "Terrance Williams II",
+      "jersey": "5",
+      "position": "F",
+      "height": "6-7",
+      "weight": "235",
+      "year": "Gr.",
+      "hometown": "Clinton, Md.",
+      "high_school": "Gonzaga College High",
+      "previousSchool": "Michigan"
+    },
+    {
+      "name": "Jacob Cofie",
+      "jersey": "6",
+      "position": "F",
+      "height": "6-10",
+      "weight": "231",
+      "year": "SO",
+      "hometown": "Seattle, Wash.",
+      "high_school": "Eastside Catholic School",
+      "previousSchool": "Virginia"
+    },
+    {
+      "name": "Jordan Marsh",
+      "jersey": "7",
+      "position": "G",
+      "height": "5-11",
+      "weight": "146",
+      "year": "JR",
+      "hometown": "Monroe, N.C.",
+      "high_school": "Moravian Prep",
+      "previousSchool": "UNC Asheville"
+    },
+    {
+      "name": "Jerry Easter II",
+      "jersey": "8",
+      "position": "G",
+      "height": "6-5",
+      "weight": "193",
+      "year": "FR",
+      "hometown": "Toledo, Ohio",
+      "high_school": "Link Academy (Mo.)",
+      "previousSchool": ""
+    },
+    {
+      "name": "Ryan Cornish",
+      "jersey": "9",
+      "position": "G",
+      "height": "6-5",
+      "weight": "173",
+      "year": "Gr.",
+      "hometown": "Potomac, Md.",
+      "high_school": "Sidwell Friends School",
+      "previousSchool": "Dartmouth"
+    },
+    {
+      "name": "EJ Neal Jr.",
+      "jersey": "12",
+      "position": "G",
+      "height": "6-5",
+      "weight": "200",
+      "year": "Gr.",
+      "hometown": "San Francisco, Calif.",
+      "high_school": "Balboa High School",
+      "previousSchool": "Sacramento State"
+    },
+    {
+      "name": "Patrick O'Brien",
+      "jersey": "18",
+      "position": "G",
+      "height": "6-5",
+      "weight": "204",
+      "year": "FR",
+      "hometown": "San Diego, Calif.",
+      "high_school": "Cathedral Catholic HS",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jonah Goorin",
+      "jersey": "21",
+      "position": "G",
+      "height": "6-4",
+      "weight": "177",
+      "year": "SO",
+      "hometown": "San Francisco, Calif.",
+      "high_school": "Sacred Heart Cathedral",
+      "previousSchool": ""
+    },
+    {
+      "name": "Brit Burden",
+      "jersey": "22",
+      "position": "F",
+      "height": "6-7",
+      "weight": "210",
+      "year": "SO",
+      "hometown": "Piedmont, Calif.",
+      "high_school": "Piedmont High School",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jaden Brownell",
+      "jersey": "33",
+      "position": "F",
+      "height": "6-10",
+      "weight": "235",
+      "year": "Gr.",
+      "hometown": "Sandy, Utah",
+      "high_school": "Alta High School",
+      "previousSchool": "Samford"
+    },
+    {
+      "name": "Gabe Dynes",
+      "jersey": "45",
+      "position": "C",
+      "height": "7-5",
+      "weight": "214",
+      "year": "JR",
+      "hometown": "Independence, Ky.",
+      "high_school": "Simon Kenton High School",
+      "previousSchool": "Youngstown State"
+    }
+  ]
+}

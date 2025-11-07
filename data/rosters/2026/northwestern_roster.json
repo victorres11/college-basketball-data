@@ -1,0 +1,160 @@
+{
+  "school": "Northwestern",
+  "mascot": "Wildcats",
+  "season": "2025-26",
+  "lastUpdated": "2025-11-07T21:45:25Z",
+  "source": "scraped",
+  "playerCount": 15,
+  "players": [
+    {
+      "name": "Tyler Kropp",
+      "jersey": "1",
+      "position": "",
+      "height": "6-9",
+      "year": "Fy.",
+      "hometown": "Powell, Ohio",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Nick Martinelli",
+      "jersey": "2",
+      "position": "",
+      "height": "6-7",
+      "year": "SR",
+      "hometown": "Glenview, Ill.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jake West",
+      "jersey": "3",
+      "position": "",
+      "height": "6-3",
+      "year": "Fy.",
+      "hometown": "Philadelphia, Pa.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jayden Reid",
+      "jersey": "4",
+      "position": "",
+      "height": "5-10",
+      "year": "JR",
+      "hometown": "Westbury, N.Y.",
+      "high_school": "USF",
+      "previousSchool": ""
+    },
+    {
+      "name": "Tre Singleton",
+      "jersey": "8",
+      "position": "",
+      "height": "6-8",
+      "year": "Fy.",
+      "hometown": "Jeffersonville, Ind.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Max Green",
+      "jersey": "10",
+      "position": "",
+      "height": "6-6",
+      "year": "SO",
+      "hometown": "La Grange, Ky.",
+      "high_school": "Holy Cross",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jordan Clayton",
+      "jersey": "11",
+      "position": "",
+      "height": "6-2",
+      "year": "JR",
+      "hometown": "Medford, Mass.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Phoenix Gill",
+      "jersey": "13",
+      "position": "",
+      "height": "6-2",
+      "year": "Fy.",
+      "hometown": "Chicago, Ill.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Justin Mullins",
+      "jersey": "20",
+      "position": "",
+      "height": "6-6",
+      "year": "SR",
+      "hometown": "Oak Park, Ill.",
+      "high_school": "Denver",
+      "previousSchool": ""
+    },
+    {
+      "name": "Arrinten Page",
+      "jersey": "22",
+      "position": "",
+      "height": "6-11",
+      "year": "JR",
+      "hometown": "Atlanta, Ga.",
+      "high_school": "Cincinnati",
+      "previousSchool": ""
+    },
+    {
+      "name": "K.J. Windham",
+      "jersey": "24",
+      "position": "",
+      "height": "6-3",
+      "year": "SO",
+      "hometown": "Indianapolis, Ind.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Cade Bennerman",
+      "jersey": "35",
+      "position": "",
+      "height": "7-0",
+      "year": "Fy.",
+      "hometown": "Nashville, Tenn.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Blake Smith",
+      "jersey": "43",
+      "position": "",
+      "height": "6-6",
+      "year": "SR",
+      "hometown": "Blue Bell, Pa.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Angelo Ciaravino",
+      "jersey": "44",
+      "position": "",
+      "height": "6-6",
+      "year": "SO",
+      "hometown": "Chicago, Ill.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Gus Hurlburt",
+      "jersey": "54",
+      "position": "",
+      "height": "6-9",
+      "year": "R-JR",
+      "hometown": "Enderlin, N.D.",
+      "high_school": "",
+      "previousSchool": ""
+    }
+  ]
+}

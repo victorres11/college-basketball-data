@@ -1,0 +1,175 @@
+{
+  "school": "Washington",
+  "mascot": "Huskies",
+  "season": "2025-26",
+  "lastUpdated": "2025-11-07T21:45:25Z",
+  "source": "scraped",
+  "playerCount": 15,
+  "players": [
+    {
+      "name": "Quimari Peterson",
+      "jersey": "0",
+      "position": "Guard",
+      "height": "6-1",
+      "weight": "",
+      "year": "",
+      "hometown": "Gary, Ind.",
+      "high_school": "West Side HS",
+      "previousSchool": "Indiana State / John A. Logan College / ETSU"
+    },
+    {
+      "name": "Desmond Claude",
+      "jersey": "1",
+      "position": "Guard",
+      "height": "6-6",
+      "weight": "",
+      "year": "",
+      "hometown": "New Haven, Conn.",
+      "high_school": "Putnam Science Academy",
+      "previousSchool": "Xavier / USC"
+    },
+    {
+      "name": "BJ Roy",
+      "jersey": "3",
+      "position": "Guard",
+      "height": "6-2",
+      "weight": "",
+      "year": "",
+      "hometown": "Seattle, Wash.",
+      "high_school": "Garfield HS",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jasir Rencher",
+      "jersey": "4",
+      "position": "Forward",
+      "height": "6-5",
+      "weight": "",
+      "year": "",
+      "hometown": "Oakland, Calif.",
+      "high_school": "Archbishop Riordan HS",
+      "previousSchool": ""
+    },
+    {
+      "name": "Zoom Diallo",
+      "jersey": "5",
+      "position": "Guard",
+      "height": "6-4",
+      "weight": "",
+      "year": "",
+      "hometown": "Tacoma, Wash.",
+      "high_school": "Curtis HS",
+      "previousSchool": ""
+    },
+    {
+      "name": "Hannes Steinbach",
+      "jersey": "6",
+      "position": "Forward",
+      "height": "6-11",
+      "weight": "",
+      "year": "",
+      "hometown": "W\u00fcrzburg, Germany",
+      "high_school": "",
+      "previousSchool": "W\u00fcrzburg Baskets"
+    },
+    {
+      "name": "Christian Nitu",
+      "jersey": "7",
+      "position": "Forward",
+      "height": "6-11",
+      "weight": "",
+      "year": "",
+      "hometown": "Whitby, Ontario",
+      "high_school": "Fort Erie International Academy",
+      "previousSchool": "Florida State"
+    },
+    {
+      "name": "Bryson Tucker",
+      "jersey": "8",
+      "position": "Forward",
+      "height": "6-7",
+      "weight": "",
+      "year": "",
+      "hometown": "Bowie, Md.",
+      "high_school": "Bishop O'Connell HS",
+      "previousSchool": "Indiana"
+    },
+    {
+      "name": "Wesley Yates III",
+      "jersey": "9",
+      "position": "Guard",
+      "height": "6-4",
+      "weight": "",
+      "year": "",
+      "hometown": "Beaumont, Texas",
+      "high_school": "Beaumont United HS",
+      "previousSchool": "USC"
+    },
+    {
+      "name": "Franck Kepnang",
+      "jersey": "11",
+      "position": "Center",
+      "height": "6-11",
+      "weight": "",
+      "year": "",
+      "hometown": "Yaound\u00e9, Cameroon",
+      "high_school": "Westtown HS (Pa.)",
+      "previousSchool": "Oregon"
+    },
+    {
+      "name": "Mady Traore",
+      "jersey": "14",
+      "position": "Forward",
+      "height": "6-11",
+      "weight": "",
+      "year": "",
+      "hometown": "Drancy, France",
+      "high_school": "Believe Prep",
+      "previousSchool": "New Mexico State / Maryland / Frank Phillips College"
+    },
+    {
+      "name": "JJ Mandaquit",
+      "jersey": "23",
+      "position": "Guard",
+      "height": "6-1",
+      "weight": "",
+      "year": "",
+      "hometown": "Hilo, Hawaii",
+      "high_school": "Utah Prep",
+      "previousSchool": ""
+    },
+    {
+      "name": "Lathan Sommerville",
+      "jersey": "24",
+      "position": "Center",
+      "height": "6-10",
+      "weight": "",
+      "year": "",
+      "hometown": "Peoria, Ill.",
+      "high_school": "Richwoods HS",
+      "previousSchool": "Rutgers"
+    },
+    {
+      "name": "Courtland Muldrew",
+      "jersey": "30",
+      "position": "Guard",
+      "height": "6-3",
+      "weight": "",
+      "year": "",
+      "hometown": "Arlington, Texas",
+      "high_school": "Har Ber HS",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jacob Ognacevic",
+      "jersey": "41",
+      "position": "Forward",
+      "height": "6-8",
+      "weight": "",
+      "year": "",
+      "hometown": "Sheboygan, Wisc.",
+      "high_school": "Sheboygan Lutheran HS",
+      "previousSchool": "Valparaiso / Lipscomb"
+    }
+  ]
+}

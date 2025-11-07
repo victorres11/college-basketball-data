@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBB Data Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🏀 College Basketball Data Generator</h1>
+        <p class="subtitle">Generate comprehensive team statistics and player data</p>
+        
+        <div class="form-section">
+            <div class="form-group">
+                <label for="team-search">Search Team:</label>
+                <input 
+                    type="text" 
+                    id="team-search" 
+                    placeholder="Type to search (e.g., Oregon, Wisconsin, UCLA)"
+                    autocomplete="off"
+                >
+                <select id="team-select" size="10" style="display:none;">
+                    <!-- Teams loaded dynamically -->
+                </select>
+                <div id="selected-team" style="display:none;">
+                    <strong>Selected:</strong> <span id="selected-team-name"></span>
+                </div>
+            </div>
+            
+            <button id="generate-btn" onclick="generateData()" class="btn-primary">
+                Generate Data (2025-26 Season)
+            </button>
+        </div>
+        
+        <div id="status" style="display:none;" class="status-section">
+            <h3>Status:</h3>
+            <p id="status-message" class="status-message"></p>
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+                <span id="progress-text" class="progress-text">0%</span>
+            </div>
+            <div id="result" style="display:none;" class="result-section">
+                <p class="success-message">✅ Generation Complete!</p>
+                <p>Your data is available at:</p>
+                <a id="result-url" href="#" target="_blank" class="result-link"></a>
+            </div>
+            <div id="error" style="display:none;" class="error-section">
+                <p class="error-message">❌ Error occurred</p>
+                <p id="error-message"></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
+

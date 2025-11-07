@@ -1,0 +1,175 @@
+{
+  "school": "Michigan State",
+  "mascot": "Spartans",
+  "season": "2025-26",
+  "lastUpdated": "2025-11-07T21:45:25Z",
+  "source": "scraped",
+  "playerCount": 15,
+  "players": [
+    {
+      "name": "Jaxon Kohler",
+      "jersey": "0",
+      "position": "F",
+      "height": "6-10",
+      "weight": "245",
+      "year": "SR",
+      "hometown": "American Fork, Utah",
+      "high_school": "Southern California Academy",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jeremy Fears Jr.",
+      "jersey": "1",
+      "position": "G",
+      "height": "6-2",
+      "weight": "190",
+      "year": "R-SO",
+      "hometown": "Joliet, Ill.",
+      "high_school": "Joliet West",
+      "previousSchool": ""
+    },
+    {
+      "name": "Kur Teng",
+      "jersey": "2",
+      "position": "G",
+      "height": "6-5",
+      "weight": "200",
+      "year": "SO",
+      "hometown": "Manchester, N.H.",
+      "high_school": "Bradford Christian Academy (Mass.)",
+      "previousSchool": ""
+    },
+    {
+      "name": "Cam Ward",
+      "jersey": "3",
+      "position": "F",
+      "height": "6-9",
+      "weight": "230",
+      "year": "FR",
+      "hometown": "Upper Marlboro, Md.",
+      "high_school": "Largo",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jordan Scott",
+      "jersey": "6",
+      "position": "F",
+      "height": "6-8",
+      "weight": "200",
+      "year": "FR",
+      "hometown": "Reston, Va.",
+      "high_school": "South Lakes",
+      "previousSchool": ""
+    },
+    {
+      "name": "Kaleb Glenn",
+      "jersey": "8",
+      "position": "F",
+      "height": "6-7",
+      "weight": "215",
+      "year": "JR",
+      "hometown": "Louisville, Ky.",
+      "high_school": "La Lumiere (Ind.)",
+      "previousSchool": "Florida Atlantic"
+    },
+    {
+      "name": "Trey Fort",
+      "jersey": "9",
+      "position": "G",
+      "height": "6-4",
+      "weight": "200",
+      "year": "SR",
+      "hometown": "Florence, Miss.",
+      "high_school": "Madison-Ridgeland Academy",
+      "previousSchool": "Samford"
+    },
+    {
+      "name": "Denham Wojcik",
+      "jersey": "10",
+      "position": "G",
+      "height": "6-3",
+      "weight": "195",
+      "year": "Gr.",
+      "hometown": "Charleston, S.C.",
+      "high_school": "Porter-Gaud School",
+      "previousSchool": "Harvard"
+    },
+    {
+      "name": "Carson Cooper",
+      "jersey": "15",
+      "position": "C",
+      "height": "6-11",
+      "weight": "245",
+      "year": "SR",
+      "hometown": "Jackson, Mich.",
+      "high_school": "IMG Academy (Fla.)",
+      "previousSchool": ""
+    },
+    {
+      "name": "Nick Sanders",
+      "jersey": "20",
+      "position": "G",
+      "height": "5-11",
+      "weight": "185",
+      "year": "SR",
+      "hometown": "Franklin, Mich.",
+      "high_school": "Detroit Country Day",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jesse McCulloch",
+      "jersey": "35",
+      "position": "F",
+      "height": "6-11",
+      "weight": "245",
+      "year": "R-FR",
+      "hometown": "Cleveland, Ohio",
+      "high_school": "Lutheran East",
+      "previousSchool": ""
+    },
+    {
+      "name": "Brennan Walton",
+      "jersey": "40",
+      "position": "F",
+      "height": "6-8",
+      "weight": "230",
+      "year": "R-FR",
+      "hometown": "Okemos, Mich.",
+      "high_school": "Okemos",
+      "previousSchool": ""
+    },
+    {
+      "name": "Colin Walton",
+      "jersey": "43",
+      "position": "F",
+      "height": "6-8",
+      "weight": "230",
+      "year": "R-FR",
+      "hometown": "Okemos, Mich.",
+      "high_school": "Okemos",
+      "previousSchool": ""
+    },
+    {
+      "name": "Coen Carr",
+      "jersey": "55",
+      "position": "F",
+      "height": "6-6",
+      "weight": "230",
+      "year": "JR",
+      "hometown": "Stockbridge Ga.",
+      "high_school": "Legacy Early College (S.C.)",
+      "previousSchool": ""
+    },
+    {
+      "name": "Divine Ugochukwu",
+      "jersey": "99",
+      "position": "G",
+      "height": "6-3",
+      "weight": "195",
+      "year": "SO",
+      "hometown": "Sugar Land, Texas",
+      "high_school": "Clements",
+      "previousSchool": "Miami"
+    }
+  ]
+}

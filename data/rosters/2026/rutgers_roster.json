@@ -1,0 +1,160 @@
+{
+  "school": "Rutgers",
+  "mascot": "Scarlet Knights",
+  "season": "2025-26",
+  "lastUpdated": "2025-11-07T21:45:25Z",
+  "source": "scraped",
+  "playerCount": 15,
+  "players": [
+    {
+      "name": "Tariq Francis",
+      "jersey": "0",
+      "position": "",
+      "height": "61",
+      "year": "JR",
+      "hometown": "Pittsburgh, Pa.",
+      "high_school": "NJIT",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jamichael Davis",
+      "jersey": "1",
+      "position": "",
+      "height": "62",
+      "year": "JR",
+      "hometown": "Chattanooga, Tenn.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Lino Mark",
+      "jersey": "2",
+      "position": "",
+      "height": "62",
+      "year": "FR",
+      "hometown": "Los Angeles, Calif.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Kaden Powers",
+      "jersey": "3",
+      "position": "",
+      "height": "64",
+      "year": "FR",
+      "hometown": "Seattle, Wash.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Bryce Dortch",
+      "jersey": "4",
+      "position": "",
+      "height": "69",
+      "year": "SO",
+      "hometown": "Somerville, Mass.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Darren Buchanan Jr.",
+      "jersey": "5",
+      "position": "",
+      "height": "67",
+      "year": "R-JR",
+      "hometown": "Washington, DC",
+      "high_school": "",
+      "previousSchool": "George Washington / Virginia Tech"
+    },
+    {
+      "name": "Dylan Grant",
+      "jersey": "9",
+      "position": "",
+      "height": "68",
+      "year": "SO",
+      "hometown": "Mississauga, Canada",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Chris Nwuli",
+      "jersey": "11",
+      "position": "",
+      "height": "68",
+      "year": "FR",
+      "hometown": "North Las Vegas, Nev.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Harun Zrno",
+      "jersey": "13",
+      "position": "",
+      "height": "67",
+      "year": "FR",
+      "hometown": "Sarajevo, Bosnia and Herzegovina",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Gevonte Ware",
+      "jersey": "15",
+      "position": "",
+      "height": "69",
+      "year": "FR",
+      "hometown": "Roosevelt, N.Y.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Emmanuel Ogbole",
+      "jersey": "21",
+      "position": "",
+      "height": "610",
+      "year": "SR",
+      "hometown": "Aune-Adoka, Nigeria",
+      "high_school": "",
+      "previousSchool": "Monroe College"
+    },
+    {
+      "name": "Dorian Jones",
+      "jersey": "22",
+      "position": "",
+      "height": "64",
+      "year": "FR",
+      "hometown": "Cleveland, Ohio",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Max Fradkin",
+      "jersey": "24",
+      "position": "",
+      "height": "511",
+      "year": "SO",
+      "hometown": "Southbury, Conn.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Denis Badalau",
+      "jersey": "27",
+      "position": "",
+      "height": "68",
+      "year": "FR",
+      "hometown": "Giurgiu, Romania",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Baye Fall",
+      "jersey": "32",
+      "position": "",
+      "height": "611",
+      "year": "JR",
+      "hometown": "Gu\u00e9diawaye, Senegal",
+      "high_school": "",
+      "previousSchool": "Kansas State / Arkansas"
+    }
+  ]
+}

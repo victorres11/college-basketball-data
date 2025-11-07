@@ -1,0 +1,170 @@
+{
+  "school": "Nebraska",
+  "mascot": "Cornhuskers",
+  "season": "2025-26",
+  "lastUpdated": "2025-11-07T21:45:25Z",
+  "source": "scraped",
+  "playerCount": 16,
+  "players": [
+    {
+      "name": "Connor Essegian",
+      "jersey": "0",
+      "position": "",
+      "height": "6-4",
+      "year": "SR",
+      "hometown": "Fort Wayne, Ind.",
+      "high_school": "Wisconsin",
+      "previousSchool": ""
+    },
+    {
+      "name": "Sam Hoiberg",
+      "jersey": "1",
+      "position": "",
+      "height": "6-0",
+      "year": "SR",
+      "hometown": "Lincoln, Neb.",
+      "high_school": "Pius X",
+      "previousSchool": ""
+    },
+    {
+      "name": "Kendall Blue",
+      "jersey": "2",
+      "position": "",
+      "height": "6-6",
+      "year": "SR",
+      "hometown": "Woodbury, Minn.",
+      "high_school": "St. Thomas",
+      "previousSchool": ""
+    },
+    {
+      "name": "Braden Frager",
+      "jersey": "5",
+      "position": "",
+      "height": "6-7",
+      "year": "R-FR",
+      "hometown": "Lincoln, Neb.",
+      "high_school": "Lincoln Southwest",
+      "previousSchool": ""
+    },
+    {
+      "name": "Will Cooper",
+      "jersey": "6",
+      "position": "",
+      "height": "6-6",
+      "year": "SO",
+      "hometown": "Omaha, Neb.",
+      "high_school": "Air Force",
+      "previousSchool": ""
+    },
+    {
+      "name": "Justin Bolis",
+      "jersey": "7",
+      "position": "",
+      "height": "6-8",
+      "year": "SO",
+      "hometown": "Lincoln, Neb.",
+      "high_school": "",
+      "previousSchool": "Southeast Community College"
+    },
+    {
+      "name": "Berkay Yilmaz",
+      "jersey": "9",
+      "position": "",
+      "height": "6-10",
+      "year": "JR",
+      "hometown": "Bursa, T\u00fcrkiye",
+      "high_school": "UCLA",
+      "previousSchool": ""
+    },
+    {
+      "name": "Luis Rodriguez",
+      "jersey": "10",
+      "position": "",
+      "height": "6-3",
+      "year": "SR",
+      "hometown": "Plainfield, N.J.",
+      "high_school": "Rhode Island",
+      "previousSchool": ""
+    },
+    {
+      "name": "Tybo Rogers",
+      "jersey": "11",
+      "position": "",
+      "height": "6-6",
+      "year": "FR",
+      "hometown": "Las Vegas, Nev.",
+      "high_school": "Hillcrest Prep",
+      "previousSchool": ""
+    },
+    {
+      "name": "Mantas Rubstavicius",
+      "jersey": "13",
+      "position": "",
+      "height": "6-11",
+      "year": "SR",
+      "hometown": "Alytus, Lithuania",
+      "high_school": "Central Michigan",
+      "previousSchool": ""
+    },
+    {
+      "name": "Juwan Gary",
+      "jersey": "15",
+      "position": "",
+      "height": "6-8",
+      "year": "SR",
+      "hometown": "Houston, Texas",
+      "high_school": "Tulsa",
+      "previousSchool": ""
+    },
+    {
+      "name": "Ahron Ulis",
+      "jersey": "21",
+      "position": "",
+      "height": "6-7",
+      "year": "JR",
+      "hometown": "Waukee, Iowa",
+      "high_school": "Iowa",
+      "previousSchool": ""
+    },
+    {
+      "name": "Cale Jacobsen",
+      "jersey": "31",
+      "position": "",
+      "height": "6-4",
+      "year": "JR",
+      "hometown": "Ashland, Neb.",
+      "high_school": "Ashland-Greenwood",
+      "previousSchool": ""
+    },
+    {
+      "name": "Malte Thiemann",
+      "jersey": "33",
+      "position": "",
+      "height": "7-2",
+      "year": "FR",
+      "hometown": "Reykjavik, Iceland",
+      "high_school": "CATS Academy",
+      "previousSchool": ""
+    },
+    {
+      "name": "Henry Burt",
+      "jersey": "35",
+      "position": "",
+      "height": "6-7",
+      "year": "JR",
+      "hometown": "Omaha, Neb.",
+      "high_school": "Elkhorn South",
+      "previousSchool": ""
+    },
+    {
+      "name": "Rienk Mast",
+      "jersey": "51",
+      "position": "",
+      "height": "6-10",
+      "year": "SR",
+      "hometown": "Groningen, Netherlands",
+      "high_school": "Bradley",
+      "previousSchool": ""
+    }
+  ]
+}

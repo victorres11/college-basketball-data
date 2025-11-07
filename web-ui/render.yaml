@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: cbb-data-generator
+    env: python
+    buildCommand: cd web-ui && pip install -r requirements.txt
+    startCommand: cd web-ui && gunicorn app:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: CBB_API_KEY
+        sync: false
+      - key: FLASK_ENV
+        value: production
+      - key: GIT_USER_NAME
+        sync: false
+      - key: GIT_USER_EMAIL
+        sync: false
+

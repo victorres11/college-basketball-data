@@ -1,0 +1,21 @@
+# Ignore everything by default
+*
+
+# Only include these specific files
+!Code.gs
+!appsscript.json
+
+# Ignore directories (use absolute paths or patterns)
+**/venv/**
+**/__pycache__/**
+**/.git/**
+**/data/**
+
+# Ignore all other file types
+*.py
+*.html
+*.md
+*.pdf
+*.txt
+*.json
+!appsscript.json

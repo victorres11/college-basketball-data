@@ -1,0 +1,186 @@
+{
+  "school": "Purdue",
+  "mascot": "Boilermakers",
+  "season": "2025-26",
+  "lastUpdated": "2025-11-07T21:45:25Z",
+  "source": "scraped",
+  "playerCount": 16,
+  "players": [
+    {
+      "name": "C.J. Cox",
+      "jersey": "0",
+      "position": "Guard",
+      "height": "6-3",
+      "weight": "195",
+      "year": "SO",
+      "hometown": "Lexington, Mass.",
+      "high_school": "Milton Academy",
+      "previousSchool": ""
+    },
+    {
+      "name": "Antione West Jr.",
+      "jersey": "1",
+      "position": "Guard",
+      "height": "6-3",
+      "weight": "195",
+      "year": "FR",
+      "hometown": "Toledo, Ohio",
+      "high_school": "Whitmer",
+      "previousSchool": ""
+    },
+    {
+      "name": "Fletcher Loyer",
+      "jersey": "2",
+      "position": "Guard",
+      "height": "6-5",
+      "weight": "180",
+      "year": "SR",
+      "hometown": "Fort Wayne, Ind.",
+      "high_school": "Homestead",
+      "previousSchool": ""
+    },
+    {
+      "name": "Braden Smith",
+      "jersey": "3",
+      "position": "Guard",
+      "height": "6-0",
+      "weight": "170",
+      "year": "SR",
+      "hometown": "Westfield, Ind.",
+      "high_school": "Westfield",
+      "previousSchool": ""
+    },
+    {
+      "name": "Trey Kaufman-Renn",
+      "jersey": "4",
+      "position": "Forward",
+      "height": "6-9",
+      "weight": "240",
+      "year": "SR",
+      "hometown": "Sellersburg, Ind.",
+      "high_school": "Silver Creek",
+      "previousSchool": ""
+    },
+    {
+      "name": "Liam Murphy",
+      "jersey": "5",
+      "position": "Forward",
+      "height": "6-8",
+      "weight": "225",
+      "year": "SR",
+      "hometown": "Staten Island, N.Y.",
+      "high_school": "St. Peter's Boys School",
+      "previousSchool": "North Florida"
+    },
+    {
+      "name": "Aaron Fine",
+      "jersey": "6",
+      "position": "Guard",
+      "height": "6-2",
+      "weight": "190",
+      "year": "R-FR",
+      "hometown": "Noblesville, Ind.",
+      "high_school": "Noblesville",
+      "previousSchool": ""
+    },
+    {
+      "name": "Sam King",
+      "jersey": "7",
+      "position": "Forward",
+      "height": "6-9",
+      "weight": "230",
+      "year": "SR",
+      "hometown": "Columbus, Ind.",
+      "high_school": "Columbus North",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jack Lusk",
+      "jersey": "9",
+      "position": "Guard",
+      "height": "6-4",
+      "weight": "195",
+      "year": "JR",
+      "hometown": "Elkhorn, Neb.",
+      "high_school": "Elkhorn North",
+      "previousSchool": "Millikan"
+    },
+    {
+      "name": "Daniel Jacobsen",
+      "jersey": "12",
+      "position": "Center",
+      "height": "7-4",
+      "weight": "250",
+      "year": "SO",
+      "hometown": "Chicago, Ill.",
+      "high_school": "Brewster Academy (N.H.)",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jack Benter",
+      "jersey": "14",
+      "position": "Guard",
+      "height": "6-6",
+      "weight": "215",
+      "year": "R-FR",
+      "hometown": "Brownstown, Ind.",
+      "high_school": "Brownstown Central",
+      "previousSchool": ""
+    },
+    {
+      "name": "Omer Mayer",
+      "jersey": "17",
+      "position": "Guard",
+      "height": "6-4",
+      "weight": "215",
+      "year": "FR",
+      "hometown": "Tel Aviv, Israel",
+      "high_school": "Maccabi Tel Aviv",
+      "previousSchool": ""
+    },
+    {
+      "name": "Gicarri Harris",
+      "jersey": "24",
+      "position": "Guard",
+      "height": "6-3",
+      "weight": "210",
+      "year": "SO",
+      "hometown": "Atlanta, Ga.",
+      "high_school": "Grayson",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jace Rayl",
+      "jersey": "32",
+      "position": "Guard",
+      "height": "5-11",
+      "weight": "175",
+      "year": "JR",
+      "hometown": "Kokomo, Ind.",
+      "high_school": "Kokomo",
+      "previousSchool": ""
+    },
+    {
+      "name": "Raleigh Burgess",
+      "jersey": "34",
+      "position": "Forward",
+      "height": "6-11",
+      "weight": "245",
+      "year": "SO",
+      "hometown": "Cincinnati, Ohio",
+      "high_school": "Sycamore",
+      "previousSchool": ""
+    },
+    {
+      "name": "Oscar Cluff",
+      "jersey": "45",
+      "position": "Center",
+      "height": "6-11",
+      "weight": "255",
+      "year": "SR",
+      "hometown": "Sunshine Coast, Australia",
+      "high_school": "Kawana Waters",
+      "previousSchool": "South Dakota State"
+    }
+  ]
+}

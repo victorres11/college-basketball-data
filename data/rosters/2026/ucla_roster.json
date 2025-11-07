@@ -1,0 +1,160 @@
+{
+  "school": "UCLA",
+  "mascot": "Bruins",
+  "season": "2025-26",
+  "lastUpdated": "2025-11-07T21:45:25Z",
+  "source": "scraped",
+  "playerCount": 15,
+  "players": [
+    {
+      "name": "Trent Perry",
+      "jersey": "0",
+      "position": "",
+      "height": "6-4",
+      "year": "SO",
+      "hometown": "West Covina, Calif.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Xavier Booker",
+      "jersey": "1",
+      "position": "",
+      "height": "6-11",
+      "year": "JR",
+      "hometown": "Indianapolis, Ind.",
+      "high_school": "",
+      "previousSchool": "Michigan State University"
+    },
+    {
+      "name": "Donovan Dent",
+      "jersey": "2",
+      "position": "",
+      "height": "6-2",
+      "year": "SR",
+      "hometown": "Riverside, Calif.",
+      "high_school": "",
+      "previousSchool": "University of New Mexico"
+    },
+    {
+      "name": "Eric Dailey Jr.",
+      "jersey": "3",
+      "position": "",
+      "height": "6-8",
+      "year": "JR",
+      "hometown": "Palmetto, Fla.",
+      "high_school": "",
+      "previousSchool": "Oklahoma State University"
+    },
+    {
+      "name": "Jamar Brown",
+      "jersey": "4",
+      "position": "",
+      "height": "6-5",
+      "year": "SR",
+      "hometown": "Chandler, Ariz.",
+      "high_school": "",
+      "previousSchool": "University of Missouri-Kansas City"
+    },
+    {
+      "name": "Brandon Williams",
+      "jersey": "5",
+      "position": "",
+      "height": "6-7",
+      "year": "R-SO",
+      "hometown": "Queens, N.Y.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Christian Horry",
+      "jersey": "7",
+      "position": "",
+      "height": "6-2",
+      "year": "R-FR",
+      "hometown": "La Ca\u00f1ada, Calif.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Eric Freeny",
+      "jersey": "8",
+      "position": "",
+      "height": "6-4",
+      "year": "R-FR",
+      "hometown": "Corona, Calif.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Markell Alston",
+      "jersey": "10",
+      "position": "",
+      "height": "6-1",
+      "year": "FR",
+      "hometown": "Queensbridge, N.Y.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Evan Manjikian",
+      "jersey": "21",
+      "position": "",
+      "height": "6-8",
+      "year": "R-JR",
+      "hometown": "Glendale, Calif.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Anthony Peoples Jr.",
+      "jersey": "23",
+      "position": "",
+      "height": "6-9",
+      "year": "R-SR",
+      "hometown": "Corona, Calif.",
+      "high_school": "",
+      "previousSchool": "North Carolina Central University"
+    },
+    {
+      "name": "Steven Jamerson II",
+      "jersey": "24",
+      "position": "",
+      "height": "6-10",
+      "year": "R-SR",
+      "hometown": "Los Angeles, Calif.",
+      "high_school": "",
+      "previousSchool": "University of San Diego"
+    },
+    {
+      "name": "Jack Seidler",
+      "jersey": "30",
+      "position": "",
+      "height": "6-4",
+      "year": "R-JR",
+      "hometown": "Marlboro, N.J.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Tyler Bilodeau",
+      "jersey": "34",
+      "position": "",
+      "height": "6-9",
+      "year": "SR",
+      "hometown": "Kennewick, Wash.",
+      "high_school": "",
+      "previousSchool": "Oregon State University"
+    },
+    {
+      "name": "Skyy Clark",
+      "jersey": "55",
+      "position": "",
+      "height": "6-3",
+      "year": "SR",
+      "hometown": "Los Angeles, Calif.",
+      "high_school": "",
+      "previousSchool": "University of Louisville"
+    }
+  ]
+}

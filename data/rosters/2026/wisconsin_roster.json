@@ -1,0 +1,164 @@
+{
+  "school": "Wisconsin",
+  "mascot": "Badgers",
+  "season": "2025-26",
+  "lastUpdated": "2025-11-07T21:45:25Z",
+  "source": "scraped",
+  "playerCount": 14,
+  "players": [
+    {
+      "name": "Braeden Carrington",
+      "jersey": "0",
+      "position": "G",
+      "height": "6-5",
+      "weight": "197",
+      "year": "SR",
+      "hometown": "Brooklyn Park, Minn.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Nick Boyd",
+      "jersey": "2",
+      "position": "G",
+      "height": "6-3",
+      "weight": "177",
+      "year": "SR",
+      "hometown": "Garnerville, N.Y.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Zach Kinziger",
+      "jersey": "4",
+      "position": "G",
+      "height": "6-3",
+      "weight": "185",
+      "year": "FR",
+      "hometown": "De Pere, Wis.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jack Janicki",
+      "jersey": "5",
+      "position": "G",
+      "height": "6-5",
+      "weight": "200",
+      "year": "R-SO",
+      "hometown": "White Bear Lake, Minn.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Andrew Rohde",
+      "jersey": "7",
+      "position": "G",
+      "height": "6-6",
+      "weight": "195",
+      "year": "SR",
+      "hometown": "Brookfield, Wis.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jack Robison",
+      "jersey": "11",
+      "position": "F",
+      "height": "6-6",
+      "weight": "198",
+      "year": "SO",
+      "hometown": "Lakeville, Minn.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Hayden Jones",
+      "jersey": "13",
+      "position": "G",
+      "height": "6-6",
+      "weight": "198",
+      "year": "FR",
+      "hometown": "Nelson, New Zealand",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Isaac Gard",
+      "jersey": "15",
+      "position": "G",
+      "height": "6-3",
+      "weight": "170",
+      "year": "SR",
+      "hometown": "Oregon, Wis.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Riccardo Greppi",
+      "jersey": "18",
+      "position": "F",
+      "height": "6-10",
+      "weight": "255",
+      "year": "SO",
+      "hometown": "Lecco, Italy",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Austin Rapp",
+      "jersey": "22",
+      "position": "F",
+      "height": "6-10",
+      "weight": "238",
+      "year": "SO",
+      "hometown": "Melbourne, Australia",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Will Garlock",
+      "jersey": "23",
+      "position": "F",
+      "height": "7-0",
+      "weight": "243",
+      "year": "FR",
+      "hometown": "Middleton, Wis.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "John Blackwell",
+      "jersey": "25",
+      "position": "G",
+      "height": "6-4",
+      "weight": "203",
+      "year": "JR",
+      "hometown": "Bloomfield Hills, Mich.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Nolan Winter",
+      "jersey": "31",
+      "position": "F",
+      "height": "7-0",
+      "weight": "235",
+      "year": "JR",
+      "hometown": "Lakeville, Minn.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Aleksas Bieliauskas",
+      "jersey": "32",
+      "position": "F",
+      "height": "6-10",
+      "weight": "235",
+      "year": "FR",
+      "hometown": "Kaunas, Lithuania",
+      "high_school": "",
+      "previousSchool": ""
+    }
+  ]
+}

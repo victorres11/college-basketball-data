@@ -1,0 +1,153 @@
+{
+  "school": "Penn State",
+  "mascot": "Nittany Lions",
+  "season": "2025-26",
+  "lastUpdated": "2025-11-07T21:45:25Z",
+  "source": "scraped",
+  "playerCount": 13,
+  "players": [
+    {
+      "name": "Mason Blackwood",
+      "jersey": "1",
+      "position": "Forward",
+      "height": "6-7",
+      "weight": "230",
+      "year": "FR",
+      "hometown": "Rochester, N.Y.",
+      "high_school": "New Hampton Prep School (N.H.)",
+      "previousSchool": ""
+    },
+    {
+      "name": "Ivan Juri\u0107",
+      "jersey": "3",
+      "position": "Forward",
+      "height": "7-0",
+      "weight": "250",
+      "year": "FR",
+      "hometown": "Zagreb, Croatia",
+      "high_school": "Sunrise Christian Academy (Kans.)",
+      "previousSchool": ""
+    },
+    {
+      "name": "Kayden Mingo",
+      "jersey": "4",
+      "position": "Guard",
+      "height": "6-3",
+      "weight": "195",
+      "year": "FR",
+      "hometown": "Farmingdale, N.Y.",
+      "high_school": "Long Island Lutheran",
+      "previousSchool": ""
+    },
+    {
+      "name": "Freddie Dilione V",
+      "jersey": "5",
+      "position": "Guard",
+      "height": "6-5",
+      "weight": "195",
+      "year": "R-JR",
+      "hometown": "Fayetteville, N.C.",
+      "high_school": "Word of God Christian Academy",
+      "previousSchool": "Tennessee"
+    },
+    {
+      "name": "Dominick Stewart",
+      "jersey": "7",
+      "position": "Guard",
+      "height": "6-5",
+      "weight": "195",
+      "year": "SO",
+      "hometown": "Ocean Springs, Miss.",
+      "high_school": "Southern California Academy",
+      "previousSchool": ""
+    },
+    {
+      "name": "Melih Tunca",
+      "jersey": "9",
+      "position": "Guard",
+      "height": "6-5",
+      "weight": "195",
+      "year": "FR",
+      "hometown": "Istanbul, Turkey",
+      "high_school": "FMV Ayaza\u011fa I\u015f\u0131k High School",
+      "previousSchool": ""
+    },
+    {
+      "name": "Josh Reed",
+      "jersey": "10",
+      "position": "Forward",
+      "height": "6-8",
+      "weight": "230",
+      "year": "SR",
+      "hometown": "Atlanta, Ga.",
+      "high_school": "Pace Academy",
+      "previousSchool": "Cincinnati"
+    },
+    {
+      "name": "Eli Rice",
+      "jersey": "11",
+      "position": "Guard",
+      "height": "6-8",
+      "weight": "230",
+      "year": "R-SO",
+      "hometown": "Gallatin, Tenn.",
+      "high_school": "IMG Academy",
+      "previousSchool": "Nebraska"
+    },
+    {
+      "name": "Reggie Grodin",
+      "jersey": "12",
+      "position": "Guard",
+      "height": "6-5",
+      "weight": "200",
+      "year": "FR",
+      "hometown": "Larchmont, N.Y.",
+      "high_school": "Newman School (Mass.)",
+      "previousSchool": ""
+    },
+    {
+      "name": "Tibor Mirti\u010d",
+      "jersey": "16",
+      "position": "Forward",
+      "height": "6-9",
+      "weight": "255",
+      "year": "FR",
+      "hometown": "Ljubljana, Slovenia",
+      "high_school": "Gimnazija Moste",
+      "previousSchool": ""
+    },
+    {
+      "name": "Justin Houser",
+      "jersey": "21",
+      "position": "Forward",
+      "height": "7-0",
+      "weight": "235",
+      "year": "FR",
+      "hometown": "Camp Hill, Pa.",
+      "high_school": "Phelps School",
+      "previousSchool": ""
+    },
+    {
+      "name": "Sa\u0161a Ciani",
+      "jersey": "22",
+      "position": "Forward",
+      "height": "6-10",
+      "weight": "240",
+      "year": "JR",
+      "hometown": "Nova Gorica, Slovenia",
+      "high_school": "Koder School",
+      "previousSchool": "UIC/Xavier"
+    },
+    {
+      "name": "Chris Lotito",
+      "jersey": "30",
+      "position": "Forward",
+      "height": "6-7",
+      "weight": "215",
+      "year": "FR",
+      "hometown": "Upper Saddle River, N.J.",
+      "high_school": "Don Bosco Prep",
+      "previousSchool": ""
+    }
+  ]
+}

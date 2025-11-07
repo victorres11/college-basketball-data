@@ -1,0 +1,150 @@
+{
+  "school": "Illinois",
+  "mascot": "Fighting Illini",
+  "season": "2025-26",
+  "lastUpdated": "2025-11-07T21:45:25Z",
+  "source": "scraped",
+  "playerCount": 14,
+  "players": [
+    {
+      "name": "David Mirkovic",
+      "jersey": "0",
+      "position": "",
+      "height": "69",
+      "year": "FR",
+      "hometown": "Niksic, Montenegro",
+      "high_school": "SC Derby",
+      "previousSchool": ""
+    },
+    {
+      "name": "Brandon Lee",
+      "jersey": "1",
+      "position": "",
+      "height": "64",
+      "year": "FR",
+      "hometown": "San Juan, Puerto Rico",
+      "high_school": "The Patrick School (N.J.)",
+      "previousSchool": ""
+    },
+    {
+      "name": "Andrej Stojakovic",
+      "jersey": "2",
+      "position": "",
+      "height": "67",
+      "year": "JR",
+      "hometown": "Thessaloniki, Greece",
+      "high_school": "Jesuit Cal",
+      "previousSchool": ""
+    },
+    {
+      "name": "Ben Humrichous",
+      "jersey": "3",
+      "position": "",
+      "height": "69",
+      "year": "Graduate Student",
+      "hometown": "Tipton, Ind.",
+      "high_school": "Tipton Evansville",
+      "previousSchool": ""
+    },
+    {
+      "name": "Kylan Boswell",
+      "jersey": "4",
+      "position": "",
+      "height": "62",
+      "year": "SR",
+      "hometown": "Champaign Ill.",
+      "high_school": "AZ Compass Prep Arizona",
+      "previousSchool": ""
+    },
+    {
+      "name": "AJ Redd",
+      "jersey": "5",
+      "position": "",
+      "height": "63",
+      "year": "SR",
+      "hometown": "Chicago, Ill.",
+      "high_school": "St. Ignatius",
+      "previousSchool": ""
+    },
+    {
+      "name": "Blake Fagbemi",
+      "jersey": "8",
+      "position": "",
+      "height": "60",
+      "year": "FR",
+      "hometown": "Naperville, Ill.",
+      "high_school": "Benet Academy",
+      "previousSchool": ""
+    },
+    {
+      "name": "Tomislav Ivisic",
+      "jersey": "13",
+      "position": "",
+      "height": "71",
+      "year": "JR",
+      "hometown": "Vodice, Croatia",
+      "high_school": "SC Derby",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jake Davis",
+      "jersey": "15",
+      "position": "",
+      "height": "66",
+      "year": "JR",
+      "hometown": "McCordsville, Ind.",
+      "high_school": "Cathedral Mercer",
+      "previousSchool": ""
+    },
+    {
+      "name": "Ty Rodgers",
+      "jersey": "20",
+      "position": "",
+      "height": "66",
+      "year": "R-JR",
+      "hometown": "Saginaw, Mich.",
+      "high_school": "Thornton Township (Ill.)",
+      "previousSchool": ""
+    },
+    {
+      "name": "Keaton Wagler",
+      "jersey": "23",
+      "position": "",
+      "height": "66",
+      "year": "FR",
+      "hometown": "Shawnee, Kan.",
+      "high_school": "Shawnee Mission Northwest",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jason Jakstys",
+      "jersey": "31",
+      "position": "",
+      "height": "610",
+      "year": "R-FR",
+      "hometown": "Yorkville, Ill.",
+      "high_school": "Yorkville",
+      "previousSchool": ""
+    },
+    {
+      "name": "Zvonimir Ivisic",
+      "jersey": "44",
+      "position": "",
+      "height": "72",
+      "year": "JR",
+      "hometown": "Vodice, Croatia",
+      "high_school": "Arkansas",
+      "previousSchool": ""
+    },
+    {
+      "name": "Mihailo Petrovic",
+      "jersey": "77",
+      "position": "",
+      "height": "62",
+      "year": "SO",
+      "hometown": "Prokuplje, Serbia",
+      "high_school": "Mega Superbet",
+      "previousSchool": ""
+    }
+  ]
+}

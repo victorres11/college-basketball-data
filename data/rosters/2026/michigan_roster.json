@@ -1,0 +1,170 @@
+{
+  "school": "Michigan",
+  "mascot": "Wolverines",
+  "season": "2025-26",
+  "lastUpdated": "2025-11-07T21:45:25Z",
+  "source": "scraped",
+  "playerCount": 16,
+  "players": [
+    {
+      "name": "Ricky Liburd",
+      "jersey": "0",
+      "position": "",
+      "height": "6-4",
+      "year": "FR",
+      "hometown": "Hollywood, Fla.",
+      "high_school": "Sagemont Prep",
+      "previousSchool": ""
+    },
+    {
+      "name": "Trey McKenney",
+      "jersey": "1",
+      "position": "",
+      "height": "6-4",
+      "year": "FR",
+      "hometown": "Flint, Mich.",
+      "high_school": "Orchard Lake St. Mary's",
+      "previousSchool": ""
+    },
+    {
+      "name": "L.J. Cason",
+      "jersey": "2",
+      "position": "",
+      "height": "6-2",
+      "year": "SO",
+      "hometown": "Lakeland, Fla.",
+      "high_school": "Victory Christian Academy",
+      "previousSchool": ""
+    },
+    {
+      "name": "Elliot Cadeau",
+      "jersey": "3",
+      "position": "",
+      "height": "6-1",
+      "year": "JR",
+      "hometown": "West Orange, N.J.",
+      "high_school": "Link Academy (Mo.)",
+      "previousSchool": ""
+    },
+    {
+      "name": "Nimari Burnett",
+      "jersey": "4",
+      "position": "",
+      "height": "6-5",
+      "year": "Gr.",
+      "hometown": "Chicago, Ill.",
+      "high_school": "Prolific Prep (Calif.)",
+      "previousSchool": ""
+    },
+    {
+      "name": "Oscar Goodman",
+      "jersey": "5",
+      "position": "",
+      "height": "6-7",
+      "year": "R-FR",
+      "hometown": "Opunake, New Zealand",
+      "high_school": "NBA Global Academy",
+      "previousSchool": ""
+    },
+    {
+      "name": "Howard Eisley Jr.",
+      "jersey": "7",
+      "position": "",
+      "height": "6-0",
+      "year": "SO",
+      "hometown": "New York, N.Y.",
+      "high_school": "Archbishop Stepinac HS",
+      "previousSchool": ""
+    },
+    {
+      "name": "Winters Grady",
+      "jersey": "10",
+      "position": "",
+      "height": "6-6",
+      "year": "FR",
+      "hometown": "Tualatin, Ore.",
+      "high_school": "Prolific Prep (Calif.)",
+      "previousSchool": ""
+    },
+    {
+      "name": "Roddy Gayle Jr.",
+      "jersey": "11",
+      "position": "",
+      "height": "6-5",
+      "year": "SR",
+      "hometown": "Niagara Falls, N.Y.",
+      "high_school": "Lewiston-Porter HS",
+      "previousSchool": ""
+    },
+    {
+      "name": "Charlie May",
+      "jersey": "12",
+      "position": "",
+      "height": "6-5",
+      "year": "SR",
+      "hometown": "Boca Raton, Fla.",
+      "high_school": "Saint Andrew's School",
+      "previousSchool": ""
+    },
+    {
+      "name": "Harrison Hochberg",
+      "jersey": "13",
+      "position": "",
+      "height": "6-7",
+      "year": "JR",
+      "hometown": "New York, N.Y.",
+      "high_school": "Cushing Academy (Mass.)",
+      "previousSchool": ""
+    },
+    {
+      "name": "Aday Mara",
+      "jersey": "15",
+      "position": "",
+      "height": "7-3",
+      "year": "JR",
+      "hometown": "Zaragoza, Spain",
+      "high_school": "IES El Picarral",
+      "previousSchool": ""
+    },
+    {
+      "name": "Morez Johnson Jr.",
+      "jersey": "21",
+      "position": "",
+      "height": "6-9",
+      "year": "SO",
+      "hometown": "Riverdale, Ill.",
+      "high_school": "Thornton Township",
+      "previousSchool": ""
+    },
+    {
+      "name": "Yaxel Lendeborg",
+      "jersey": "23",
+      "position": "",
+      "height": "6-9",
+      "year": "Gr.",
+      "hometown": "Pennsauken, N.J.",
+      "high_school": "Pennsauken HS",
+      "previousSchool": ""
+    },
+    {
+      "name": "Malick Kordel",
+      "jersey": "32",
+      "position": "",
+      "height": "7-2",
+      "year": "FR",
+      "hometown": "Oberhausen, Germany",
+      "high_school": "Bertha-von-Suttner Gymnasium",
+      "previousSchool": ""
+    },
+    {
+      "name": "Will Tschetter",
+      "jersey": "42",
+      "position": "",
+      "height": "6-8",
+      "year": "Gr.",
+      "hometown": "Stewartville, Minn.",
+      "high_school": "Stewartville HS",
+      "previousSchool": ""
+    }
+  ]
+}

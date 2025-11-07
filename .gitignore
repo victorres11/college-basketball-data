@@ -1,7 +1,7 @@
 # Git ignore file for College Basketball Data API wrapper
 
 # API configuration files
-api_config.txt
+config/api_config.txt
 .env
 *.env
 
@@ -34,7 +34,7 @@ env/
 ENV/
 
 # Test results
-api_test_results.json
+config/api_test_results.json
 
 # IDE
 .vscode/
@@ -45,4 +45,14 @@ api_test_results.json
 # OS
 .DS_Store
 Thumbs.db
+
+# Output files (generated reports)
+output/*.html
+output/*.pdf
+
 # Note: data/ directories are tracked for GitHub Pages hosting
+# Note: apps-script/ files are tracked for clasp deployment
+
+# Google Apps Script clasp
+.clasp.json
+.appsscript.json

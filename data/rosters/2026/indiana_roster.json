@@ -1,0 +1,180 @@
+{
+  "school": "Indiana",
+  "mascot": "Hoosiers",
+  "season": "2025-26",
+  "lastUpdated": "2025-11-07T21:45:25Z",
+  "source": "scraped",
+  "playerCount": 17,
+  "players": [
+    {
+      "name": "Jasai Miles",
+      "jersey": "0",
+      "position": "",
+      "height": "6-6",
+      "year": "JR",
+      "hometown": "Miami, Fla.",
+      "high_school": "North Florida",
+      "previousSchool": ""
+    },
+    {
+      "name": "Reed Bailey",
+      "jersey": "1",
+      "position": "",
+      "height": "6-10",
+      "year": "SR",
+      "hometown": "Harvard, Mass.",
+      "high_school": "Davidson",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jason Drake",
+      "jersey": "2",
+      "position": "",
+      "height": "6-1",
+      "year": "JR",
+      "hometown": "Oak Park, Mich.",
+      "high_school": "Drexel",
+      "previousSchool": ""
+    },
+    {
+      "name": "Lamar Wilkerson",
+      "jersey": "3",
+      "position": "",
+      "height": "6-6",
+      "year": "SR",
+      "hometown": "Ashdown, Ark.",
+      "high_school": "",
+      "previousSchool": "Sam Houston State"
+    },
+    {
+      "name": "Sam Alexis",
+      "jersey": "4",
+      "position": "",
+      "height": "6-9",
+      "year": "SR",
+      "hometown": "Apopka, Fla.",
+      "high_school": "Florida",
+      "previousSchool": ""
+    },
+    {
+      "name": "Conor Enright",
+      "jersey": "5",
+      "position": "",
+      "height": "6-1",
+      "year": "R-SR",
+      "hometown": "Mundelein, Ill.",
+      "high_school": "DePaul",
+      "previousSchool": ""
+    },
+    {
+      "name": "Tayton Conerway",
+      "jersey": "6",
+      "position": "",
+      "height": "6-3",
+      "year": "R-SR",
+      "hometown": "Burleson, Texas",
+      "high_school": "Troy",
+      "previousSchool": ""
+    },
+    {
+      "name": "Nick Dorn",
+      "jersey": "7",
+      "position": "",
+      "height": "6-7",
+      "year": "JR",
+      "hometown": "Charlotte, N.C.",
+      "high_school": "Elon",
+      "previousSchool": ""
+    },
+    {
+      "name": "Josh Harris",
+      "jersey": "10",
+      "position": "",
+      "height": "6-8",
+      "year": "SO",
+      "hometown": "Pembroke Pines, Fla.",
+      "high_school": "North Florida",
+      "previousSchool": ""
+    },
+    {
+      "name": "Trent Sisley",
+      "jersey": "11",
+      "position": "",
+      "height": "6-8",
+      "year": "FR",
+      "hometown": "Santa Claus, Ind.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Tucker DeVries",
+      "jersey": "12",
+      "position": "",
+      "height": "6-7",
+      "year": "R-SR",
+      "hometown": "Waukee, Iowa",
+      "high_school": "West Virginia",
+      "previousSchool": ""
+    },
+    {
+      "name": "Aleksa Ristic",
+      "jersey": "13",
+      "position": "",
+      "height": "6-3",
+      "year": "FR",
+      "hometown": "Nis, Serbia",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Jordan Rayford",
+      "jersey": "14",
+      "position": "",
+      "height": "6-5",
+      "year": "R-JR",
+      "hometown": "Washington D.C.",
+      "high_school": "Air Force",
+      "previousSchool": ""
+    },
+    {
+      "name": "Andrej Acimovic",
+      "jersey": "15",
+      "position": "",
+      "height": "6-10",
+      "year": "FR",
+      "hometown": "Bijeljina, Bosnia",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Tryce Grensing",
+      "jersey": "18",
+      "position": "",
+      "height": "6-0",
+      "year": "FR",
+      "hometown": "Murfreesboro, Tenn.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Drew Snively",
+      "jersey": "21",
+      "position": "",
+      "height": "6-5",
+      "year": "FR",
+      "hometown": "Zionsville, Ind.",
+      "high_school": "",
+      "previousSchool": ""
+    },
+    {
+      "name": "Ian Stephens",
+      "jersey": "30",
+      "position": "",
+      "height": "6-5",
+      "year": "JR",
+      "hometown": "New Palestine, Ind.",
+      "high_school": "",
+      "previousSchool": ""
+    }
+  ]
+}
