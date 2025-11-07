@@ -49,6 +49,51 @@ def push_to_github(file_path, team_name, season):
             text=True
         )
         
+        # Check if remote is configured, if not, add it
+        # Get repo URL from environment or use default
+        repo_url = os.environ.get('GITHUB_REPO_URL', 'https://github.com/victorres11/college-basketball-data.git')
+        
+        # Check if origin remote exists
+        result = subprocess.run(
+            ['git', 'remote', 'get-url', 'origin'],
+            capture_output=True,
+            text=True
+        )
+        
+        if result.returncode != 0:
+            # No origin remote, add it
+            subprocess.run(
+                ['git', 'remote', 'add', 'origin', repo_url],
+                check=True,
+                capture_output=True,
+                text=True
+            )
+        else:
+            # Remote exists, but update it to ensure it's correct
+            subprocess.run(
+                ['git', 'remote', 'set-url', 'origin', repo_url],
+                check=True,
+                capture_output=True,
+                text=True
+            )
+        
+        # Ensure we're on the main branch
+        current_branch_result = subprocess.run(
+            ['git', 'rev-parse', '--abbrev-ref', 'HEAD'],
+            capture_output=True,
+            text=True
+        )
+        current_branch = current_branch_result.stdout.strip() if current_branch_result.returncode == 0 else 'main'
+        
+        if current_branch != 'main':
+            # Checkout main branch
+            subprocess.run(
+                ['git', 'checkout', '-b', 'main'] if current_branch_result.returncode != 0 else ['git', 'checkout', 'main'],
+                check=False,
+                capture_output=True,
+                text=True
+            )
+        
         # Add file
         subprocess.run(
             ['git', 'add', file_path],
@@ -66,9 +111,9 @@ def push_to_github(file_path, team_name, season):
             text=True
         )
         
-        # Push
+        # Push to origin main (explicit remote and branch)
         subprocess.run(
-            ['git', 'push'],
+            ['git', 'push', 'origin', 'main'],
             check=True,
             capture_output=True,
             text=True

@@ -8,7 +8,7 @@ import os
 import sys
 from datetime import datetime
 from generator import generate_team_data
-from github_handler import push_to_github
+from s3_handler import upload_to_s3
 
 # Load API key at startup
 config_path = os.path.join(os.path.dirname(__file__), '..', 'config', 'api_config.txt')
@@ -169,14 +169,19 @@ def run_generation(job_id, team_name, season):
         # Generate data (with progress updates)
         output_file = generate_team_data(team_name, season, jobs[job_id])
         
-        # Push to GitHub
-        jobs[job_id]['message'] = 'Pushing to GitHub...'
+        # Upload to S3
+        jobs[job_id]['message'] = 'Uploading to S3...'
         jobs[job_id]['progress'] = 95
         
-        github_url = push_to_github(output_file, team_name, season)
+        # Convert relative path to absolute path for S3 upload
+        if not os.path.isabs(output_file):
+            project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            output_file = os.path.join(project_root, output_file)
+        
+        s3_url = upload_to_s3(output_file, team_name, season)
         
         jobs[job_id]['status'] = 'completed'
-        jobs[job_id]['url'] = github_url
+        jobs[job_id]['url'] = s3_url
         jobs[job_id]['message'] = 'Complete!'
         jobs[job_id]['progress'] = 100
         

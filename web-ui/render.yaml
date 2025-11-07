@@ -9,8 +9,12 @@ services:
         sync: false
       - key: FLASK_ENV
         value: production
-      - key: GIT_USER_NAME
+      - key: S3_BUCKET_NAME
         sync: false
-      - key: GIT_USER_EMAIL
+      - key: AWS_ACCESS_KEY_ID
         sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: AWS_REGION
+        value: us-east-1
 
