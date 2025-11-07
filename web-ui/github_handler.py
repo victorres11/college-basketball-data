@@ -24,6 +24,31 @@ def push_to_github(file_path, team_name, season):
         # Change to project root
         os.chdir(project_root)
         
+        # Configure git if not already configured (needed for Render environment)
+        git_user_name = os.environ.get('GIT_USER_NAME')
+        git_user_email = os.environ.get('GIT_USER_EMAIL')
+        
+        if not git_user_name or not git_user_email:
+            raise Exception(
+                "Git user configuration missing. Please set GIT_USER_NAME and GIT_USER_EMAIL "
+                "environment variables in Render dashboard."
+            )
+        
+        # Configure git user
+        subprocess.run(
+            ['git', 'config', 'user.name', git_user_name],
+            check=True,
+            capture_output=True,
+            text=True
+        )
+        
+        subprocess.run(
+            ['git', 'config', 'user.email', git_user_email],
+            check=True,
+            capture_output=True,
+            text=True
+        )
+        
         # Add file
         subprocess.run(
             ['git', 'add', file_path],
