@@ -44,15 +44,21 @@ def upload_to_s3(file_path, team_name, season):
     
     try:
         # Upload file
+        # Note: ACLs are disabled on this bucket, public access is handled by bucket policy
         s3_client.upload_file(
             file_path,
             bucket_name,
             s3_key,
             ExtraArgs={
-                'ContentType': 'application/json',
-                'ACL': 'public-read'  # Make file publicly accessible
+                'ContentType': 'application/json'
             }
         )
+        
+        # Verify the file exists and is accessible
+        try:
+            s3_client.head_object(Bucket=bucket_name, Key=s3_key)
+        except ClientError as e:
+            print(f"Warning: Could not verify uploaded file: {e}")
         
         # Return public URL
         # Format: https://bucket-name.s3.region.amazonaws.com/key
