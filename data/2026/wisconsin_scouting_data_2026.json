@@ -1,0 +1,5684 @@
+{
+  "team": "Wisconsin",
+  "season": "2025-26",
+  "seasonType": "Regular",
+  "dataGenerated": "2025-11-07T10:37:37.714040",
+  "players": [
+    {
+      "name": "John Blackwell",
+      "jerseyNumber": "25",
+      "position": "Guard",
+      "height": "6-4",
+      "class": "JR",
+      "isFreshman": false,
+      "hometown": "Bloomfield Hills, MI",
+      "highSchool": "Brother Rice",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 1,
+        "minutes": 34,
+        "mpg": 34.0,
+        "points": 31,
+        "ppg": 31.0,
+        "rebounds": {
+          "offensive": 1,
+          "defensive": 3,
+          "total": 4
+        },
+        "rpg": 4.0,
+        "assists": 3,
+        "apg": 3.0,
+        "turnovers": 1,
+        "steals": 1,
+        "spg": 1.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 2,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 10,
+          "attempted": 19,
+          "percentage": 52.6
+        },
+        "threePointFieldGoals": {
+          "made": 6,
+          "attempted": 11,
+          "percentage": 54.5
+        },
+        "freeThrows": {
+          "made": 5,
+          "attempted": 5,
+          "percentage": 100.0
+        },
+        "assistToTurnoverRatio": 3.0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T01:00:00.000Z",
+          "opponent": "Campbell",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": true,
+          "minutes": 34,
+          "points": 31,
+          "rebounds": {
+            "offensive": 1,
+            "defensive": 3
+          },
+          "assists": 3,
+          "turnovers": 1,
+          "steals": 1,
+          "blocks": 0,
+          "fouls": 2,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 10,
+            "attempted": 19
+          },
+          "threePointFieldGoals": {
+            "made": 6,
+            "attempted": 11
+          },
+          "freeThrows": {
+            "made": 5,
+            "attempted": 5
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 355,
+        "team": "Wisconsin",
+        "conference": "Big Ten",
+        "athleteId": 5418,
+        "athleteSourceId": "5103630",
+        "name": "John Blackwell",
+        "position": "G",
+        "games": 1,
+        "starts": 1,
+        "minutes": 34,
+        "points": 31,
+        "turnovers": 1,
+        "fouls": 2,
+        "assists": 3,
+        "steals": 1,
+        "blocks": 0,
+        "offensiveRating": 157.3,
+        "defensiveRating": 96.3,
+        "netRating": 61,
+        "PORPAG": 12.1,
+        "usage": 31,
+        "assistsTurnoverRatio": 3,
+        "offensiveReboundPct": 25,
+        "freeThrowRate": 26.3,
+        "effectiveFieldGoalPct": 68.4,
+        "trueShootingPct": 0.731,
+        "fieldGoals": {
+          "made": 10,
+          "attempted": 19,
+          "pct": 52.6
+        },
+        "twoPointFieldGoals": {
+          "made": 4,
+          "attempted": 8,
+          "pct": 50
+        },
+        "threePointFieldGoals": {
+          "made": 6,
+          "attempted": 11,
+          "pct": 54.5
+        },
+        "freeThrows": {
+          "made": 5,
+          "attempted": 5,
+          "pct": 100
+        },
+        "rebounds": {
+          "offensive": 1,
+          "defensive": 3,
+          "total": 4
+        },
+        "winShares": {
+          "offensive": 0.3,
+          "defensive": 0.1,
+          "total": 0.4,
+          "totalPer40": 0.471
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 1,
+          "totalPlayers": 197,
+          "value": 31.0
+        },
+        "assistsPerGame": {
+          "rank": 40,
+          "totalPlayers": 197,
+          "value": 3.0
+        },
+        "reboundsPerGame": {
+          "rank": 74,
+          "totalPlayers": 197,
+          "value": 4.0
+        },
+        "stealsPerGame": {
+          "rank": 54,
+          "totalPlayers": 197,
+          "value": 1.0
+        },
+        "blocksPerGame": {
+          "rank": 113,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 71,
+          "totalPlayers": 197,
+          "value": 52.6
+        },
+        "threePointPct": {
+          "rank": 20,
+          "totalPlayers": 197,
+          "value": 54.5
+        },
+        "freeThrowPct": {
+          "rank": 22,
+          "totalPlayers": 197,
+          "value": 100
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 57,
+          "totalPlayers": 176,
+          "value": 68.4
+        },
+        "assistToTurnoverRatio": {
+          "rank": 100,
+          "totalPlayers": 120,
+          "value": 3
+        },
+        "offensiveRating": {
+          "rank": 35,
+          "totalPlayers": 176,
+          "value": 157.3
+        },
+        "defensiveRating": {
+          "rank": 130,
+          "totalPlayers": 197,
+          "value": 96.3
+        },
+        "netRating": {
+          "rank": 47,
+          "totalPlayers": 176,
+          "value": 61
+        },
+        "fieldGoalsMade": {
+          "rank": 4,
+          "totalPlayers": 197,
+          "value": 10
+        },
+        "fieldGoalsAttempted": {
+          "rank": 3,
+          "totalPlayers": 197,
+          "value": 19
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 4,
+          "totalPlayers": 197,
+          "value": 6
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 2,
+          "totalPlayers": 197,
+          "value": 11
+        },
+        "freeThrowsMade": {
+          "rank": 29,
+          "totalPlayers": 197,
+          "value": 5
+        },
+        "freeThrowsAttempted": {
+          "rank": 45,
+          "totalPlayers": 197,
+          "value": 5
+        },
+        "offensiveRebounds": {
+          "rank": 75,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "defensiveRebounds": {
+          "rank": 69,
+          "totalPlayers": 197,
+          "value": 3
+        },
+        "totalRebounds": {
+          "rank": 77,
+          "totalPlayers": 197,
+          "value": 4
+        },
+        "totalAssists": {
+          "rank": 42,
+          "totalPlayers": 197,
+          "value": 3
+        },
+        "totalBlocks": {
+          "rank": 113,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 7,
+          "totalPlayers": 197,
+          "value": 34.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Wisconsin",
+          "conference": "Big Ten",
+          "games": 35,
+          "gamesStarted": 35,
+          "seasonStats": {
+            "games": 35,
+            "minutes": 1083,
+            "minutesPerGame": 30.9,
+            "points": 546,
+            "pointsPerGame": 15.6,
+            "assists": 75,
+            "assistsPerGame": 2.1,
+            "rebounds": {
+              "offensive": 36,
+              "defensive": 143,
+              "total": 179
+            },
+            "reboundsPerGame": 5.1,
+            "steals": 30,
+            "stealsPerGame": 0.9,
+            "blocks": 2,
+            "blocksPerGame": 0.1,
+            "turnovers": 75,
+            "turnoversPerGame": 2.1,
+            "fouls": 91,
+            "foulsPerGame": 2.6,
+            "fieldGoals": {
+              "made": 191,
+              "attempted": 425,
+              "pct": 44.9
+            },
+            "twoPointFieldGoals": {
+              "made": 135,
+              "attempted": 254,
+              "pct": 53.1
+            },
+            "threePointFieldGoals": {
+              "made": 56,
+              "attempted": 171,
+              "pct": 32.7
+            },
+            "freeThrows": {
+              "made": 108,
+              "attempted": 133,
+              "pct": 81.2
+            },
+            "offensiveRating": 109.6,
+            "defensiveRating": 104,
+            "netRating": 5.6,
+            "usage": 26.9,
+            "assistsTurnoverRatio": 1,
+            "effectiveFieldGoalPct": 51.5,
+            "trueShootingPct": 0.565,
+            "winShares": {
+              "offensive": 2.3,
+              "defensive": 1.4,
+              "total": 3.7,
+              "totalPer40": 0.137
+            }
+          }
+        },
+        {
+          "season": "2023-24",
+          "team": "Wisconsin",
+          "conference": "Big Ten",
+          "games": 33,
+          "gamesStarted": 1,
+          "seasonStats": {
+            "games": 33,
+            "minutes": 606,
+            "minutesPerGame": 18.4,
+            "points": 268,
+            "pointsPerGame": 8.1,
+            "assists": 20,
+            "assistsPerGame": 0.6,
+            "rebounds": {
+              "offensive": 23,
+              "defensive": 83,
+              "total": 106
+            },
+            "reboundsPerGame": 3.2,
+            "steals": 15,
+            "stealsPerGame": 0.5,
+            "blocks": 2,
+            "blocksPerGame": 0.1,
+            "turnovers": 26,
+            "turnoversPerGame": 0.8,
+            "fouls": 59,
+            "foulsPerGame": 1.8,
+            "fieldGoals": {
+              "made": 82,
+              "attempted": 180,
+              "pct": 45.6
+            },
+            "twoPointFieldGoals": {
+              "made": 52,
+              "attempted": 116,
+              "pct": 44.8
+            },
+            "threePointFieldGoals": {
+              "made": 30,
+              "attempted": 64,
+              "pct": 46.9
+            },
+            "freeThrows": {
+              "made": 74,
+              "attempted": 90,
+              "pct": 82.2
+            },
+            "offensiveRating": 121.8,
+            "defensiveRating": 106.4,
+            "netRating": 15.4,
+            "usage": 22.1,
+            "assistsTurnoverRatio": 0.77,
+            "effectiveFieldGoalPct": 53.9,
+            "trueShootingPct": 0.61,
+            "winShares": {
+              "offensive": 1.8,
+              "defensive": 0.7,
+              "total": 2.5,
+              "totalPer40": 0.165
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Nolan Winter",
+      "jerseyNumber": "31",
+      "position": "Forward",
+      "height": "7-0",
+      "class": "JR",
+      "isFreshman": false,
+      "hometown": "Lakeville, MN",
+      "highSchool": "Lakeville North",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 1,
+        "minutes": 31,
+        "mpg": 31.0,
+        "points": 17,
+        "ppg": 17.0,
+        "rebounds": {
+          "offensive": 6,
+          "defensive": 6,
+          "total": 12
+        },
+        "rpg": 12.0,
+        "assists": 1,
+        "apg": 1.0,
+        "turnovers": 4,
+        "steals": 1,
+        "spg": 1.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 1,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 8,
+          "attempted": 12,
+          "percentage": 66.7
+        },
+        "threePointFieldGoals": {
+          "made": 1,
+          "attempted": 3,
+          "percentage": 33.3
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "assistToTurnoverRatio": 0.2
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T01:00:00.000Z",
+          "opponent": "Campbell",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": true,
+          "minutes": 31,
+          "points": 17,
+          "rebounds": {
+            "offensive": 6,
+            "defensive": 6
+          },
+          "assists": 1,
+          "turnovers": 4,
+          "steals": 1,
+          "blocks": 0,
+          "fouls": 1,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 8,
+            "attempted": 12
+          },
+          "threePointFieldGoals": {
+            "made": 1,
+            "attempted": 3
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 0
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 355,
+        "team": "Wisconsin",
+        "conference": "Big Ten",
+        "athleteId": 5416,
+        "athleteSourceId": "4895783",
+        "name": "Nolan Winter",
+        "position": "F",
+        "games": 1,
+        "starts": 1,
+        "minutes": 31,
+        "points": 17,
+        "turnovers": 4,
+        "fouls": 1,
+        "assists": 1,
+        "steals": 1,
+        "blocks": 0,
+        "offensiveRating": 115.3,
+        "defensiveRating": 91.5,
+        "netRating": 23.8,
+        "PORPAG": 3.4,
+        "usage": 24.5,
+        "assistsTurnoverRatio": 0.25,
+        "offensiveReboundPct": 50,
+        "freeThrowRate": 0,
+        "effectiveFieldGoalPct": 70.8,
+        "trueShootingPct": 0.708,
+        "fieldGoals": {
+          "made": 8,
+          "attempted": 12,
+          "pct": 66.7
+        },
+        "twoPointFieldGoals": {
+          "made": 7,
+          "attempted": 9,
+          "pct": 77.8
+        },
+        "threePointFieldGoals": {
+          "made": 1,
+          "attempted": 3,
+          "pct": 33.3
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 6,
+          "defensive": 6,
+          "total": 12
+        },
+        "winShares": {
+          "offensive": 0.1,
+          "defensive": 0.1,
+          "total": 0.2,
+          "totalPer40": 0.258
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 32,
+          "totalPlayers": 197,
+          "value": 17.0
+        },
+        "assistsPerGame": {
+          "rank": 97,
+          "totalPlayers": 197,
+          "value": 1.0
+        },
+        "reboundsPerGame": {
+          "rank": 5,
+          "totalPlayers": 197,
+          "value": 12.0
+        },
+        "stealsPerGame": {
+          "rank": 43,
+          "totalPlayers": 197,
+          "value": 1.0
+        },
+        "blocksPerGame": {
+          "rank": 89,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 39,
+          "totalPlayers": 197,
+          "value": 66.7
+        },
+        "threePointPct": {
+          "rank": 62,
+          "totalPlayers": 197,
+          "value": 33.3
+        },
+        "freeThrowPct": {
+          "rank": 116,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 49,
+          "totalPlayers": 176,
+          "value": 70.8
+        },
+        "assistToTurnoverRatio": {
+          "rank": 31,
+          "totalPlayers": 120,
+          "value": 0.25
+        },
+        "offensiveRating": {
+          "rank": 97,
+          "totalPlayers": 176,
+          "value": 115.3
+        },
+        "defensiveRating": {
+          "rank": 110,
+          "totalPlayers": 197,
+          "value": 91.5
+        },
+        "netRating": {
+          "rank": 99,
+          "totalPlayers": 176,
+          "value": 23.8
+        },
+        "fieldGoalsMade": {
+          "rank": 11,
+          "totalPlayers": 197,
+          "value": 8
+        },
+        "fieldGoalsAttempted": {
+          "rank": 17,
+          "totalPlayers": 197,
+          "value": 12
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 54,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 59,
+          "totalPlayers": 197,
+          "value": 3
+        },
+        "freeThrowsMade": {
+          "rank": 116,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 123,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 3,
+          "totalPlayers": 197,
+          "value": 6
+        },
+        "defensiveRebounds": {
+          "rank": 19,
+          "totalPlayers": 197,
+          "value": 6
+        },
+        "totalRebounds": {
+          "rank": 7,
+          "totalPlayers": 197,
+          "value": 12
+        },
+        "totalAssists": {
+          "rank": 97,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "totalBlocks": {
+          "rank": 89,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 14,
+          "totalPlayers": 197,
+          "value": 31.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Wisconsin",
+          "conference": "Big Ten",
+          "games": 35,
+          "gamesStarted": 35,
+          "seasonStats": {
+            "games": 35,
+            "minutes": 741,
+            "minutesPerGame": 21.2,
+            "points": 329,
+            "pointsPerGame": 9.4,
+            "assists": 37,
+            "assistsPerGame": 1.1,
+            "rebounds": {
+              "offensive": 62,
+              "defensive": 144,
+              "total": 206
+            },
+            "reboundsPerGame": 5.9,
+            "steals": 14,
+            "stealsPerGame": 0.4,
+            "blocks": 13,
+            "blocksPerGame": 0.4,
+            "turnovers": 26,
+            "turnoversPerGame": 0.7,
+            "fouls": 55,
+            "foulsPerGame": 1.6,
+            "fieldGoals": {
+              "made": 119,
+              "attempted": 213,
+              "pct": 55.9
+            },
+            "twoPointFieldGoals": {
+              "made": 87,
+              "attempted": 123,
+              "pct": 70.7
+            },
+            "threePointFieldGoals": {
+              "made": 32,
+              "attempted": 90,
+              "pct": 35.6
+            },
+            "freeThrows": {
+              "made": 59,
+              "attempted": 75,
+              "pct": 78.7
+            },
+            "offensiveRating": 133.8,
+            "defensiveRating": 101.4,
+            "netRating": 32.4,
+            "usage": 19.2,
+            "assistsTurnoverRatio": 1.42,
+            "effectiveFieldGoalPct": 63.4,
+            "trueShootingPct": 0.669,
+            "winShares": {
+              "offensive": 2.7,
+              "defensive": 1.2,
+              "total": 3.9,
+              "totalPer40": 0.211
+            }
+          }
+        },
+        {
+          "season": "2023-24",
+          "team": "Wisconsin",
+          "conference": "Big Ten",
+          "games": 35,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 35,
+            "minutes": 335,
+            "minutesPerGame": 9.6,
+            "points": 88,
+            "pointsPerGame": 2.5,
+            "assists": 12,
+            "assistsPerGame": 0.3,
+            "rebounds": {
+              "offensive": 16,
+              "defensive": 47,
+              "total": 63
+            },
+            "reboundsPerGame": 1.8,
+            "steals": 7,
+            "stealsPerGame": 0.2,
+            "blocks": 1,
+            "blocksPerGame": 0.0,
+            "turnovers": 10,
+            "turnoversPerGame": 0.3,
+            "fouls": 33,
+            "foulsPerGame": 0.9,
+            "fieldGoals": {
+              "made": 30,
+              "attempted": 71,
+              "pct": 42.3
+            },
+            "twoPointFieldGoals": {
+              "made": 18,
+              "attempted": 32,
+              "pct": 56.3
+            },
+            "threePointFieldGoals": {
+              "made": 12,
+              "attempted": 39,
+              "pct": 30.8
+            },
+            "freeThrows": {
+              "made": 16,
+              "attempted": 23,
+              "pct": 69.6
+            },
+            "offensiveRating": 113.2,
+            "defensiveRating": 106.8,
+            "netRating": 6.4,
+            "usage": 14.8,
+            "assistsTurnoverRatio": 1.2,
+            "effectiveFieldGoalPct": 50.7,
+            "trueShootingPct": 0.542,
+            "winShares": {
+              "offensive": 0.5,
+              "defensive": 0.4,
+              "total": 0.9,
+              "totalPer40": 0.107
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Austin Rapp",
+      "jerseyNumber": "22",
+      "position": "Forward",
+      "height": "6-10",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Melbourne, VIC",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 1,
+        "minutes": 29,
+        "mpg": 29.0,
+        "points": 13,
+        "ppg": 13.0,
+        "rebounds": {
+          "offensive": 1,
+          "defensive": 1,
+          "total": 2
+        },
+        "rpg": 2.0,
+        "assists": 4,
+        "apg": 4.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 3,
+          "attempted": 7,
+          "percentage": 42.9
+        },
+        "threePointFieldGoals": {
+          "made": 2,
+          "attempted": 4,
+          "percentage": 50.0
+        },
+        "freeThrows": {
+          "made": 5,
+          "attempted": 6,
+          "percentage": 83.3
+        },
+        "assistToTurnoverRatio": 0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T01:00:00.000Z",
+          "opponent": "Campbell",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": true,
+          "minutes": 29,
+          "points": 13,
+          "rebounds": {
+            "offensive": 1,
+            "defensive": 1
+          },
+          "assists": 4,
+          "turnovers": 0,
+          "steals": 0,
+          "blocks": 0,
+          "fouls": 0,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 3,
+            "attempted": 7
+          },
+          "threePointFieldGoals": {
+            "made": 2,
+            "attempted": 4
+          },
+          "freeThrows": {
+            "made": 5,
+            "attempted": 6
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 355,
+        "team": "Wisconsin",
+        "conference": "Big Ten",
+        "athleteId": 8421,
+        "athleteSourceId": "5240971",
+        "name": "Austin Rapp",
+        "position": "F",
+        "games": 1,
+        "starts": 1,
+        "minutes": 29,
+        "points": 13,
+        "turnovers": 0,
+        "fouls": 0,
+        "assists": 4,
+        "steals": 0,
+        "blocks": 0,
+        "offensiveRating": 168.5,
+        "defensiveRating": 102.5,
+        "netRating": 66,
+        "PORPAG": 6.1,
+        "usage": 15.8,
+        "assistsTurnoverRatio": null,
+        "offensiveReboundPct": 50,
+        "freeThrowRate": 85.7,
+        "effectiveFieldGoalPct": 57.1,
+        "trueShootingPct": 0.674,
+        "fieldGoals": {
+          "made": 3,
+          "attempted": 7,
+          "pct": 42.9
+        },
+        "twoPointFieldGoals": {
+          "made": 1,
+          "attempted": 3,
+          "pct": 33.3
+        },
+        "threePointFieldGoals": {
+          "made": 2,
+          "attempted": 4,
+          "pct": 50
+        },
+        "freeThrows": {
+          "made": 5,
+          "attempted": 6,
+          "pct": 83.3
+        },
+        "rebounds": {
+          "offensive": 1,
+          "defensive": 1,
+          "total": 2
+        },
+        "winShares": {
+          "offensive": 0.2,
+          "defensive": 0,
+          "total": 0.2,
+          "totalPer40": 0.276
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 54,
+          "totalPlayers": 197,
+          "value": 13.0
+        },
+        "assistsPerGame": {
+          "rank": 29,
+          "totalPlayers": 197,
+          "value": 4.0
+        },
+        "reboundsPerGame": {
+          "rank": 133,
+          "totalPlayers": 197,
+          "value": 2.0
+        },
+        "stealsPerGame": {
+          "rank": 192,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 190,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 104,
+          "totalPlayers": 197,
+          "value": 42.9
+        },
+        "threePointPct": {
+          "rank": 44,
+          "totalPlayers": 197,
+          "value": 50
+        },
+        "freeThrowPct": {
+          "rank": 48,
+          "totalPlayers": 197,
+          "value": 83.3
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 86,
+          "totalPlayers": 176,
+          "value": 57.1
+        },
+        "offensiveRating": {
+          "rank": 27,
+          "totalPlayers": 176,
+          "value": 168.5
+        },
+        "defensiveRating": {
+          "rank": 151,
+          "totalPlayers": 197,
+          "value": 102.5
+        },
+        "netRating": {
+          "rank": 42,
+          "totalPlayers": 176,
+          "value": 66
+        },
+        "fieldGoalsMade": {
+          "rank": 91,
+          "totalPlayers": 197,
+          "value": 3
+        },
+        "fieldGoalsAttempted": {
+          "rank": 84,
+          "totalPlayers": 197,
+          "value": 7
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 45,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 52,
+          "totalPlayers": 197,
+          "value": 4
+        },
+        "freeThrowsMade": {
+          "rank": 34,
+          "totalPlayers": 197,
+          "value": 5
+        },
+        "freeThrowsAttempted": {
+          "rank": 40,
+          "totalPlayers": 197,
+          "value": 6
+        },
+        "offensiveRebounds": {
+          "rank": 99,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "defensiveRebounds": {
+          "rank": 151,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "totalRebounds": {
+          "rank": 133,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "totalAssists": {
+          "rank": 31,
+          "totalPlayers": 197,
+          "value": 4
+        },
+        "totalBlocks": {
+          "rank": 190,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 31,
+          "totalPlayers": 197,
+          "value": 29.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Portland",
+          "conference": "WCC",
+          "games": 31,
+          "gamesStarted": 30,
+          "seasonStats": {
+            "games": 31,
+            "minutes": 1023,
+            "minutesPerGame": 33.0,
+            "points": 428,
+            "pointsPerGame": 13.8,
+            "assists": 76,
+            "assistsPerGame": 2.5,
+            "rebounds": {
+              "offensive": 18,
+              "defensive": 183,
+              "total": 201
+            },
+            "reboundsPerGame": 6.5,
+            "steals": 18,
+            "stealsPerGame": 0.6,
+            "blocks": 45,
+            "blocksPerGame": 1.5,
+            "turnovers": 82,
+            "turnoversPerGame": 2.6,
+            "fouls": 80,
+            "foulsPerGame": 2.6,
+            "fieldGoals": {
+              "made": 135,
+              "attempted": 340,
+              "pct": 39.7
+            },
+            "twoPointFieldGoals": {
+              "made": 52,
+              "attempted": 104,
+              "pct": 50
+            },
+            "threePointFieldGoals": {
+              "made": 83,
+              "attempted": 236,
+              "pct": 35.2
+            },
+            "freeThrows": {
+              "made": 75,
+              "attempted": 92,
+              "pct": 81.5
+            },
+            "offensiveRating": 100.3,
+            "defensiveRating": 118.2,
+            "netRating": -17.9,
+            "usage": 24.1,
+            "assistsTurnoverRatio": 0.93,
+            "effectiveFieldGoalPct": 51.9,
+            "trueShootingPct": 0.562,
+            "winShares": {
+              "offensive": 1,
+              "defensive": 0,
+              "total": 1,
+              "totalPer40": 0.039
+            }
+          }
+        },
+        {
+          "season": "2022-23",
+          "team": "La Verne",
+          "conference": null,
+          "games": 1,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 1,
+            "minutes": 10,
+            "minutesPerGame": 10.0,
+            "points": 3,
+            "pointsPerGame": 3.0,
+            "assists": 1,
+            "assistsPerGame": 1.0,
+            "rebounds": {
+              "offensive": 0,
+              "defensive": 2,
+              "total": 2
+            },
+            "reboundsPerGame": 2.0,
+            "steals": 0,
+            "stealsPerGame": 0.0,
+            "blocks": 0,
+            "blocksPerGame": 0.0,
+            "turnovers": 0,
+            "turnoversPerGame": 0.0,
+            "fouls": 1,
+            "foulsPerGame": 1.0,
+            "fieldGoals": {
+              "made": 1,
+              "attempted": 2,
+              "pct": 50
+            },
+            "twoPointFieldGoals": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "threePointFieldGoals": {
+              "made": 1,
+              "attempted": 2,
+              "pct": 50
+            },
+            "freeThrows": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "offensiveRating": 161.3,
+            "defensiveRating": 139.2,
+            "netRating": 22.1,
+            "usage": 8.7,
+            "assistsTurnoverRatio": null,
+            "effectiveFieldGoalPct": 75,
+            "trueShootingPct": 0.75,
+            "winShares": {
+              "offensive": 0,
+              "defensive": 0,
+              "total": 0,
+              "totalPer40": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Nick Boyd",
+      "jerseyNumber": "2",
+      "position": "Guard",
+      "height": "6-3",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Garnerville, NY",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 1,
+        "minutes": 28,
+        "mpg": 28.0,
+        "points": 21,
+        "ppg": 21.0,
+        "rebounds": {
+          "offensive": 2,
+          "defensive": 1,
+          "total": 3
+        },
+        "rpg": 3.0,
+        "assists": 4,
+        "apg": 4.0,
+        "turnovers": 1,
+        "steals": 2,
+        "spg": 2.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 2,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 7,
+          "attempted": 15,
+          "percentage": 46.7
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 2,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 7,
+          "attempted": 7,
+          "percentage": 100.0
+        },
+        "assistToTurnoverRatio": 4.0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T01:00:00.000Z",
+          "opponent": "Campbell",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": true,
+          "minutes": 28,
+          "points": 21,
+          "rebounds": {
+            "offensive": 2,
+            "defensive": 1
+          },
+          "assists": 4,
+          "turnovers": 1,
+          "steals": 2,
+          "blocks": 0,
+          "fouls": 2,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 7,
+            "attempted": 15
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 2
+          },
+          "freeThrows": {
+            "made": 7,
+            "attempted": 7
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 355,
+        "team": "Wisconsin",
+        "conference": "Big Ten",
+        "athleteId": 8458,
+        "athleteSourceId": "4702654",
+        "name": "Nick Boyd",
+        "position": "G",
+        "games": 1,
+        "starts": 1,
+        "minutes": 28,
+        "points": 21,
+        "turnovers": 1,
+        "fouls": 2,
+        "assists": 4,
+        "steals": 2,
+        "blocks": 0,
+        "offensiveRating": 138.5,
+        "defensiveRating": 93.4,
+        "netRating": 45.1,
+        "PORPAG": 7.5,
+        "usage": 32.3,
+        "assistsTurnoverRatio": 4,
+        "offensiveReboundPct": 66.7,
+        "freeThrowRate": 46.7,
+        "effectiveFieldGoalPct": 46.7,
+        "trueShootingPct": 0.581,
+        "fieldGoals": {
+          "made": 7,
+          "attempted": 15,
+          "pct": 46.7
+        },
+        "twoPointFieldGoals": {
+          "made": 7,
+          "attempted": 13,
+          "pct": 53.8
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 2,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 7,
+          "attempted": 7,
+          "pct": 100
+        },
+        "rebounds": {
+          "offensive": 2,
+          "defensive": 1,
+          "total": 3
+        },
+        "winShares": {
+          "offensive": 0.2,
+          "defensive": 0.1,
+          "total": 0.3,
+          "totalPer40": 0.429
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 15,
+          "totalPlayers": 197,
+          "value": 21.0
+        },
+        "assistsPerGame": {
+          "rank": 18,
+          "totalPlayers": 197,
+          "value": 4.0
+        },
+        "reboundsPerGame": {
+          "rank": 92,
+          "totalPlayers": 197,
+          "value": 3.0
+        },
+        "stealsPerGame": {
+          "rank": 17,
+          "totalPlayers": 197,
+          "value": 2.0
+        },
+        "blocksPerGame": {
+          "rank": 92,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 93,
+          "totalPlayers": 197,
+          "value": 46.7
+        },
+        "threePointPct": {
+          "rank": 110,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 16,
+          "totalPlayers": 197,
+          "value": 100
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 111,
+          "totalPlayers": 176,
+          "value": 46.7
+        },
+        "assistToTurnoverRatio": {
+          "rank": 111,
+          "totalPlayers": 120,
+          "value": 4
+        },
+        "offensiveRating": {
+          "rank": 59,
+          "totalPlayers": 176,
+          "value": 138.5
+        },
+        "defensiveRating": {
+          "rank": 121,
+          "totalPlayers": 197,
+          "value": 93.4
+        },
+        "netRating": {
+          "rank": 72,
+          "totalPlayers": 176,
+          "value": 45.1
+        },
+        "fieldGoalsMade": {
+          "rank": 21,
+          "totalPlayers": 197,
+          "value": 7
+        },
+        "fieldGoalsAttempted": {
+          "rank": 9,
+          "totalPlayers": 197,
+          "value": 15
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 110,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 76,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "freeThrowsMade": {
+          "rank": 15,
+          "totalPlayers": 197,
+          "value": 7
+        },
+        "freeThrowsAttempted": {
+          "rank": 21,
+          "totalPlayers": 197,
+          "value": 7
+        },
+        "offensiveRebounds": {
+          "rank": 43,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "defensiveRebounds": {
+          "rank": 131,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "totalRebounds": {
+          "rank": 93,
+          "totalPlayers": 197,
+          "value": 3
+        },
+        "totalAssists": {
+          "rank": 20,
+          "totalPlayers": 197,
+          "value": 4
+        },
+        "totalBlocks": {
+          "rank": 92,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 34,
+          "totalPlayers": 197,
+          "value": 28.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "San Diego State",
+          "conference": "Mountain West",
+          "games": 30,
+          "gamesStarted": 30,
+          "seasonStats": {
+            "games": 30,
+            "minutes": 895,
+            "minutesPerGame": 29.8,
+            "points": 402,
+            "pointsPerGame": 13.4,
+            "assists": 119,
+            "assistsPerGame": 4.0,
+            "rebounds": {
+              "offensive": 14,
+              "defensive": 101,
+              "total": 115
+            },
+            "reboundsPerGame": 3.8,
+            "steals": 30,
+            "stealsPerGame": 1.0,
+            "blocks": 0,
+            "blocksPerGame": 0.0,
+            "turnovers": 54,
+            "turnoversPerGame": 1.8,
+            "fouls": 49,
+            "foulsPerGame": 1.6,
+            "fieldGoals": {
+              "made": 130,
+              "attempted": 312,
+              "pct": 41.7
+            },
+            "twoPointFieldGoals": {
+              "made": 80,
+              "attempted": 172,
+              "pct": 46.5
+            },
+            "threePointFieldGoals": {
+              "made": 50,
+              "attempted": 140,
+              "pct": 35.7
+            },
+            "freeThrows": {
+              "made": 92,
+              "attempted": 123,
+              "pct": 74.8
+            },
+            "offensiveRating": 114,
+            "defensiveRating": 99.8,
+            "netRating": 14.2,
+            "usage": 25.2,
+            "assistsTurnoverRatio": 2.2,
+            "effectiveFieldGoalPct": 49.7,
+            "trueShootingPct": 0.549,
+            "winShares": {
+              "offensive": 2.4,
+              "defensive": 1.5,
+              "total": 3.9,
+              "totalPer40": 0.174
+            }
+          }
+        },
+        {
+          "season": "2023-24",
+          "team": "Florida Atlantic",
+          "conference": "American",
+          "games": 26,
+          "gamesStarted": 14,
+          "seasonStats": {
+            "games": 26,
+            "minutes": 628,
+            "minutesPerGame": 24.2,
+            "points": 247,
+            "pointsPerGame": 9.5,
+            "assists": 47,
+            "assistsPerGame": 1.8,
+            "rebounds": {
+              "offensive": 6,
+              "defensive": 66,
+              "total": 72
+            },
+            "reboundsPerGame": 2.8,
+            "steals": 23,
+            "stealsPerGame": 0.9,
+            "blocks": 1,
+            "blocksPerGame": 0.0,
+            "turnovers": 27,
+            "turnoversPerGame": 1.0,
+            "fouls": 43,
+            "foulsPerGame": 1.7,
+            "fieldGoals": {
+              "made": 79,
+              "attempted": 195,
+              "pct": 40.5
+            },
+            "twoPointFieldGoals": {
+              "made": 38,
+              "attempted": 76,
+              "pct": 50
+            },
+            "threePointFieldGoals": {
+              "made": 41,
+              "attempted": 119,
+              "pct": 34.5
+            },
+            "freeThrows": {
+              "made": 48,
+              "attempted": 57,
+              "pct": 84.2
+            },
+            "offensiveRating": 116.9,
+            "defensiveRating": 108.1,
+            "netRating": 8.8,
+            "usage": 20.4,
+            "assistsTurnoverRatio": 1.74,
+            "effectiveFieldGoalPct": 51,
+            "trueShootingPct": 0.561,
+            "winShares": {
+              "offensive": 1.5,
+              "defensive": 0.6,
+              "total": 2.1,
+              "totalPer40": 0.134
+            }
+          }
+        },
+        {
+          "season": "2022-23",
+          "team": "Florida Atlantic",
+          "conference": "CUSA",
+          "games": 33,
+          "gamesStarted": 32,
+          "seasonStats": {
+            "games": 33,
+            "minutes": 784,
+            "minutesPerGame": 23.8,
+            "points": 299,
+            "pointsPerGame": 9.1,
+            "assists": 81,
+            "assistsPerGame": 2.5,
+            "rebounds": {
+              "offensive": 24,
+              "defensive": 112,
+              "total": 136
+            },
+            "reboundsPerGame": 4.1,
+            "steals": 28,
+            "stealsPerGame": 0.8,
+            "blocks": 1,
+            "blocksPerGame": 0.0,
+            "turnovers": 35,
+            "turnoversPerGame": 1.1,
+            "fouls": 60,
+            "foulsPerGame": 1.8,
+            "fieldGoals": {
+              "made": 107,
+              "attempted": 231,
+              "pct": 46.3
+            },
+            "twoPointFieldGoals": {
+              "made": 49,
+              "attempted": 91,
+              "pct": 53.8
+            },
+            "threePointFieldGoals": {
+              "made": 58,
+              "attempted": 140,
+              "pct": 41.4
+            },
+            "freeThrows": {
+              "made": 27,
+              "attempted": 41,
+              "pct": 65.9
+            },
+            "offensiveRating": 122.8,
+            "defensiveRating": 95.2,
+            "netRating": 27.6,
+            "usage": 18.7,
+            "assistsTurnoverRatio": 2.31,
+            "effectiveFieldGoalPct": 58.9,
+            "trueShootingPct": 0.6,
+            "winShares": {
+              "offensive": 2.1,
+              "defensive": 1.7,
+              "total": 3.8,
+              "totalPer40": 0.194
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Andrew Rohde",
+      "jerseyNumber": "7",
+      "position": "Guard",
+      "height": "6-6",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Brookfield, WI",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 1,
+        "minutes": 22,
+        "mpg": 22.0,
+        "points": 5,
+        "ppg": 5.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 2,
+          "total": 2
+        },
+        "rpg": 2.0,
+        "assists": 2,
+        "apg": 2.0,
+        "turnovers": 1,
+        "steals": 3,
+        "spg": 3.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 3,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 2,
+          "attempted": 5,
+          "percentage": 40.0
+        },
+        "threePointFieldGoals": {
+          "made": 1,
+          "attempted": 4,
+          "percentage": 25.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "assistToTurnoverRatio": 2.0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T01:00:00.000Z",
+          "opponent": "Campbell",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": true,
+          "minutes": 22,
+          "points": 5,
+          "rebounds": {
+            "offensive": 0,
+            "defensive": 2
+          },
+          "assists": 2,
+          "turnovers": 1,
+          "steals": 3,
+          "blocks": 0,
+          "fouls": 3,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 2,
+            "attempted": 5
+          },
+          "threePointFieldGoals": {
+            "made": 1,
+            "attempted": 4
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 0
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 355,
+        "team": "Wisconsin",
+        "conference": "Big Ten",
+        "athleteId": 8192,
+        "athleteSourceId": "5109019",
+        "name": "Andrew Rohde",
+        "position": "G",
+        "games": 1,
+        "starts": 1,
+        "minutes": 22,
+        "points": 5,
+        "turnovers": 1,
+        "fouls": 3,
+        "assists": 2,
+        "steals": 3,
+        "blocks": 0,
+        "offensiveRating": 106.7,
+        "defensiveRating": 82.7,
+        "netRating": 24,
+        "PORPAG": 0.9,
+        "usage": 12.9,
+        "assistsTurnoverRatio": 2,
+        "offensiveReboundPct": 0,
+        "freeThrowRate": 0,
+        "effectiveFieldGoalPct": 50,
+        "trueShootingPct": 0.5,
+        "fieldGoals": {
+          "made": 2,
+          "attempted": 5,
+          "pct": 40
+        },
+        "twoPointFieldGoals": {
+          "made": 1,
+          "attempted": 1,
+          "pct": 100
+        },
+        "threePointFieldGoals": {
+          "made": 1,
+          "attempted": 4,
+          "pct": 25
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 2,
+          "total": 2
+        },
+        "winShares": {
+          "offensive": 0,
+          "defensive": 0.1,
+          "total": 0.1,
+          "totalPer40": 0.182
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 113,
+          "totalPlayers": 197,
+          "value": 5.0
+        },
+        "assistsPerGame": {
+          "rank": 82,
+          "totalPlayers": 197,
+          "value": 2.0
+        },
+        "reboundsPerGame": {
+          "rank": 134,
+          "totalPlayers": 197,
+          "value": 2.0
+        },
+        "stealsPerGame": {
+          "rank": 7,
+          "totalPlayers": 197,
+          "value": 3.0
+        },
+        "blocksPerGame": {
+          "rank": 191,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 119,
+          "totalPlayers": 197,
+          "value": 40
+        },
+        "threePointPct": {
+          "rank": 75,
+          "totalPlayers": 197,
+          "value": 25
+        },
+        "freeThrowPct": {
+          "rank": 191,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 108,
+          "totalPlayers": 176,
+          "value": 50
+        },
+        "assistToTurnoverRatio": {
+          "rank": 77,
+          "totalPlayers": 120,
+          "value": 2
+        },
+        "offensiveRating": {
+          "rank": 114,
+          "totalPlayers": 176,
+          "value": 106.7
+        },
+        "defensiveRating": {
+          "rank": 76,
+          "totalPlayers": 197,
+          "value": 82.7
+        },
+        "netRating": {
+          "rank": 98,
+          "totalPlayers": 176,
+          "value": 24
+        },
+        "fieldGoalsMade": {
+          "rank": 115,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "fieldGoalsAttempted": {
+          "rank": 112,
+          "totalPlayers": 197,
+          "value": 5
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 80,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 53,
+          "totalPlayers": 197,
+          "value": 4
+        },
+        "freeThrowsMade": {
+          "rank": 191,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 191,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 193,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "defensiveRebounds": {
+          "rank": 123,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "totalRebounds": {
+          "rank": 134,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "totalAssists": {
+          "rank": 83,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "totalBlocks": {
+          "rank": 191,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 78,
+          "totalPlayers": 197,
+          "value": 22.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Virginia",
+          "conference": "ACC",
+          "games": 30,
+          "gamesStarted": 26,
+          "seasonStats": {
+            "games": 30,
+            "minutes": 930,
+            "minutesPerGame": 31.0,
+            "points": 279,
+            "pointsPerGame": 9.3,
+            "assists": 129,
+            "assistsPerGame": 4.3,
+            "rebounds": {
+              "offensive": 8,
+              "defensive": 79,
+              "total": 87
+            },
+            "reboundsPerGame": 2.9,
+            "steals": 36,
+            "stealsPerGame": 1.2,
+            "blocks": 7,
+            "blocksPerGame": 0.2,
+            "turnovers": 55,
+            "turnoversPerGame": 1.8,
+            "fouls": 52,
+            "foulsPerGame": 1.7,
+            "fieldGoals": {
+              "made": 101,
+              "attempted": 234,
+              "pct": 43.2
+            },
+            "twoPointFieldGoals": {
+              "made": 58,
+              "attempted": 130,
+              "pct": 44.6
+            },
+            "threePointFieldGoals": {
+              "made": 43,
+              "attempted": 104,
+              "pct": 41.3
+            },
+            "freeThrows": {
+              "made": 34,
+              "attempted": 44,
+              "pct": 77.3
+            },
+            "offensiveRating": 107.1,
+            "defensiveRating": 110.9,
+            "netRating": -3.8,
+            "usage": 19.6,
+            "assistsTurnoverRatio": 2.35,
+            "effectiveFieldGoalPct": 52.4,
+            "trueShootingPct": 0.551,
+            "winShares": {
+              "offensive": 1.4,
+              "defensive": 0.6,
+              "total": 2,
+              "totalPer40": 0.086
+            }
+          }
+        },
+        {
+          "season": "2023-24",
+          "team": "Virginia",
+          "conference": "ACC",
+          "games": 32,
+          "gamesStarted": 27,
+          "seasonStats": {
+            "games": 32,
+            "minutes": 817,
+            "minutesPerGame": 25.5,
+            "points": 141,
+            "pointsPerGame": 4.4,
+            "assists": 89,
+            "assistsPerGame": 2.8,
+            "rebounds": {
+              "offensive": 1,
+              "defensive": 58,
+              "total": 59
+            },
+            "reboundsPerGame": 1.8,
+            "steals": 15,
+            "stealsPerGame": 0.5,
+            "blocks": 2,
+            "blocksPerGame": 0.1,
+            "turnovers": 36,
+            "turnoversPerGame": 1.1,
+            "fouls": 24,
+            "foulsPerGame": 0.8,
+            "fieldGoals": {
+              "made": 53,
+              "attempted": 179,
+              "pct": 29.6
+            },
+            "twoPointFieldGoals": {
+              "made": 25,
+              "attempted": 71,
+              "pct": 35.2
+            },
+            "threePointFieldGoals": {
+              "made": 28,
+              "attempted": 108,
+              "pct": 25.9
+            },
+            "freeThrows": {
+              "made": 7,
+              "attempted": 16,
+              "pct": 43.8
+            },
+            "offensiveRating": 83.2,
+            "defensiveRating": 103.3,
+            "netRating": -20.1,
+            "usage": 16.1,
+            "assistsTurnoverRatio": 2.47,
+            "effectiveFieldGoalPct": 37.4,
+            "trueShootingPct": 0.379,
+            "winShares": {
+              "offensive": -0.5,
+              "defensive": 1.1,
+              "total": 0.6,
+              "totalPer40": 0.029
+            }
+          }
+        },
+        {
+          "season": "2022-23",
+          "team": "St. Thomas-Minnesota",
+          "conference": "Summit",
+          "games": 31,
+          "gamesStarted": 31,
+          "seasonStats": {
+            "games": 31,
+            "minutes": 1022,
+            "minutesPerGame": 33.0,
+            "points": 531,
+            "pointsPerGame": 17.1,
+            "assists": 113,
+            "assistsPerGame": 3.6,
+            "rebounds": {
+              "offensive": 25,
+              "defensive": 91,
+              "total": 116
+            },
+            "reboundsPerGame": 3.7,
+            "steals": 52,
+            "stealsPerGame": 1.7,
+            "blocks": 3,
+            "blocksPerGame": 0.1,
+            "turnovers": 69,
+            "turnoversPerGame": 2.2,
+            "fouls": 67,
+            "foulsPerGame": 2.2,
+            "fieldGoals": {
+              "made": 189,
+              "attempted": 422,
+              "pct": 44.8
+            },
+            "twoPointFieldGoals": {
+              "made": 133,
+              "attempted": 247,
+              "pct": 53.8
+            },
+            "threePointFieldGoals": {
+              "made": 56,
+              "attempted": 175,
+              "pct": 32
+            },
+            "freeThrows": {
+              "made": 97,
+              "attempted": 119,
+              "pct": 81.5
+            },
+            "offensiveRating": 111.3,
+            "defensiveRating": 105.2,
+            "netRating": 6.1,
+            "usage": 28.1,
+            "assistsTurnoverRatio": 1.64,
+            "effectiveFieldGoalPct": 51.4,
+            "trueShootingPct": 0.56,
+            "winShares": {
+              "offensive": 2.6,
+              "defensive": 1.2,
+              "total": 3.8,
+              "totalPer40": 0.149
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Jack Janicki",
+      "jerseyNumber": "5",
+      "position": "Guard",
+      "height": "6-5",
+      "class": "JR",
+      "isFreshman": false,
+      "hometown": "White Bear Lake, MN",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 0,
+        "minutes": 17,
+        "mpg": 17.0,
+        "points": 3,
+        "ppg": 3.0,
+        "rebounds": {
+          "offensive": 1,
+          "defensive": 1,
+          "total": 2
+        },
+        "rpg": 2.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 1,
+        "steals": 4,
+        "spg": 4.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 2,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 1,
+          "attempted": 3,
+          "percentage": 33.3
+        },
+        "threePointFieldGoals": {
+          "made": 1,
+          "attempted": 2,
+          "percentage": 50.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "assistToTurnoverRatio": 0.0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T01:00:00.000Z",
+          "opponent": "Campbell",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": false,
+          "minutes": 17,
+          "points": 3,
+          "rebounds": {
+            "offensive": 1,
+            "defensive": 1
+          },
+          "assists": 0,
+          "turnovers": 1,
+          "steals": 4,
+          "blocks": 0,
+          "fouls": 2,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 1,
+            "attempted": 3
+          },
+          "threePointFieldGoals": {
+            "made": 1,
+            "attempted": 2
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 0
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 355,
+        "team": "Wisconsin",
+        "conference": "Big Ten",
+        "athleteId": 5428,
+        "athleteSourceId": "5174807",
+        "name": "Jack Janicki",
+        "position": "G",
+        "games": 1,
+        "starts": 0,
+        "minutes": 17,
+        "points": 3,
+        "turnovers": 1,
+        "fouls": 2,
+        "assists": 0,
+        "steals": 4,
+        "blocks": 0,
+        "offensiveRating": 89,
+        "defensiveRating": 71.8,
+        "netRating": 17.2,
+        "PORPAG": 0,
+        "usage": 11.2,
+        "assistsTurnoverRatio": 0,
+        "offensiveReboundPct": 50,
+        "freeThrowRate": 0,
+        "effectiveFieldGoalPct": 50,
+        "trueShootingPct": 0.5,
+        "fieldGoals": {
+          "made": 1,
+          "attempted": 3,
+          "pct": 33.3
+        },
+        "twoPointFieldGoals": {
+          "made": 0,
+          "attempted": 1,
+          "pct": 0
+        },
+        "threePointFieldGoals": {
+          "made": 1,
+          "attempted": 2,
+          "pct": 50
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 1,
+          "defensive": 1,
+          "total": 2
+        },
+        "winShares": {
+          "offensive": 0,
+          "defensive": 0.1,
+          "total": 0.1,
+          "totalPer40": 0.235
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 129,
+          "totalPlayers": 197,
+          "value": 3.0
+        },
+        "assistsPerGame": {
+          "rank": 165,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "reboundsPerGame": {
+          "rank": 120,
+          "totalPlayers": 197,
+          "value": 2.0
+        },
+        "stealsPerGame": {
+          "rank": 3,
+          "totalPlayers": 197,
+          "value": 4.0
+        },
+        "blocksPerGame": {
+          "rank": 129,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 129,
+          "totalPlayers": 197,
+          "value": 33.3
+        },
+        "threePointPct": {
+          "rank": 34,
+          "totalPlayers": 197,
+          "value": 50
+        },
+        "freeThrowPct": {
+          "rank": 148,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 100,
+          "totalPlayers": 176,
+          "value": 50
+        },
+        "assistToTurnoverRatio": {
+          "rank": 14,
+          "totalPlayers": 120,
+          "value": 0
+        },
+        "offensiveRating": {
+          "rank": 131,
+          "totalPlayers": 176,
+          "value": 89
+        },
+        "defensiveRating": {
+          "rank": 31,
+          "totalPlayers": 197,
+          "value": 71.8
+        },
+        "netRating": {
+          "rank": 112,
+          "totalPlayers": 176,
+          "value": 17.2
+        },
+        "fieldGoalsMade": {
+          "rank": 131,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "fieldGoalsAttempted": {
+          "rank": 129,
+          "totalPlayers": 197,
+          "value": 3
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 64,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 84,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "freeThrowsMade": {
+          "rank": 148,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 153,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 79,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "defensiveRebounds": {
+          "rank": 142,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "totalRebounds": {
+          "rank": 120,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "totalAssists": {
+          "rank": 165,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "totalBlocks": {
+          "rank": 129,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 125,
+          "totalPlayers": 197,
+          "value": 17.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Wisconsin",
+          "conference": "Big Ten",
+          "games": 35,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 35,
+            "minutes": 408,
+            "minutesPerGame": 11.7,
+            "points": 70,
+            "pointsPerGame": 2.0,
+            "assists": 30,
+            "assistsPerGame": 0.9,
+            "rebounds": {
+              "offensive": 10,
+              "defensive": 39,
+              "total": 49
+            },
+            "reboundsPerGame": 1.4,
+            "steals": 15,
+            "stealsPerGame": 0.4,
+            "blocks": 9,
+            "blocksPerGame": 0.3,
+            "turnovers": 8,
+            "turnoversPerGame": 0.2,
+            "fouls": 41,
+            "foulsPerGame": 1.2,
+            "fieldGoals": {
+              "made": 27,
+              "attempted": 69,
+              "pct": 39.1
+            },
+            "twoPointFieldGoals": {
+              "made": 14,
+              "attempted": 22,
+              "pct": 63.6
+            },
+            "threePointFieldGoals": {
+              "made": 13,
+              "attempted": 47,
+              "pct": 27.7
+            },
+            "freeThrows": {
+              "made": 3,
+              "attempted": 7,
+              "pct": 42.9
+            },
+            "offensiveRating": 111.3,
+            "defensiveRating": 103.1,
+            "netRating": 8.2,
+            "usage": 10.2,
+            "assistsTurnoverRatio": 3.75,
+            "effectiveFieldGoalPct": 48.6,
+            "trueShootingPct": 0.486,
+            "winShares": {
+              "offensive": 0.4,
+              "defensive": 0.6,
+              "total": 1,
+              "totalPer40": 0.098
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Braeden Carrington",
+      "jerseyNumber": "0",
+      "position": "Guard",
+      "height": "6-5",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Brooklyn Park, MN",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 0,
+        "minutes": 11,
+        "mpg": 11.0,
+        "points": 4,
+        "ppg": 4.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 1,
+        "apg": 1.0,
+        "turnovers": 1,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 2,
+          "attempted": 2,
+          "percentage": 100.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "assistToTurnoverRatio": 1.0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T01:00:00.000Z",
+          "opponent": "Campbell",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": false,
+          "minutes": 11,
+          "points": 4,
+          "rebounds": {
+            "offensive": 0,
+            "defensive": 0
+          },
+          "assists": 1,
+          "turnovers": 1,
+          "steals": 0,
+          "blocks": 0,
+          "fouls": 0,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 2,
+            "attempted": 2
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 0
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 0
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 355,
+        "team": "Wisconsin",
+        "conference": "Big Ten",
+        "athleteId": 4402,
+        "athleteSourceId": "5105820",
+        "name": "Braeden Carrington",
+        "position": "G",
+        "games": 1,
+        "starts": 0,
+        "minutes": 11,
+        "points": 4,
+        "turnovers": 1,
+        "fouls": 0,
+        "assists": 1,
+        "steals": 0,
+        "blocks": 0,
+        "offensiveRating": 125.6,
+        "defensiveRating": 104,
+        "netRating": 21.6,
+        "PORPAG": 0.9,
+        "usage": 12.9,
+        "assistsTurnoverRatio": 1,
+        "offensiveReboundPct": null,
+        "freeThrowRate": 0,
+        "effectiveFieldGoalPct": 100,
+        "trueShootingPct": 1,
+        "fieldGoals": {
+          "made": 2,
+          "attempted": 2,
+          "pct": 100
+        },
+        "twoPointFieldGoals": {
+          "made": 2,
+          "attempted": 2,
+          "pct": 100
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "winShares": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0,
+          "totalPer40": 0
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 120,
+          "totalPlayers": 197,
+          "value": 4.0
+        },
+        "assistsPerGame": {
+          "rank": 127,
+          "totalPlayers": 197,
+          "value": 1.0
+        },
+        "reboundsPerGame": {
+          "rank": 191,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "stealsPerGame": {
+          "rank": 187,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 182,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 14,
+          "totalPlayers": 197,
+          "value": 100
+        },
+        "threePointPct": {
+          "rank": 185,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 186,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 18,
+          "totalPlayers": 176,
+          "value": 100
+        },
+        "assistToTurnoverRatio": {
+          "rank": 50,
+          "totalPlayers": 120,
+          "value": 1
+        },
+        "offensiveRating": {
+          "rank": 86,
+          "totalPlayers": 176,
+          "value": 125.6
+        },
+        "defensiveRating": {
+          "rank": 157,
+          "totalPlayers": 197,
+          "value": 104
+        },
+        "netRating": {
+          "rank": 104,
+          "totalPlayers": 176,
+          "value": 21.6
+        },
+        "fieldGoalsMade": {
+          "rank": 112,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "fieldGoalsAttempted": {
+          "rank": 149,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 185,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 190,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsMade": {
+          "rank": 186,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 186,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 188,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "defensiveRebounds": {
+          "rank": 190,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "totalRebounds": {
+          "rank": 191,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "totalAssists": {
+          "rank": 129,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "totalBlocks": {
+          "rank": 182,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 147,
+          "totalPlayers": 197,
+          "value": 11.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Tulsa",
+          "conference": "American",
+          "games": 29,
+          "gamesStarted": 19,
+          "seasonStats": {
+            "games": 29,
+            "minutes": 776,
+            "minutesPerGame": 26.8,
+            "points": 216,
+            "pointsPerGame": 7.4,
+            "assists": 50,
+            "assistsPerGame": 1.7,
+            "rebounds": {
+              "offensive": 32,
+              "defensive": 106,
+              "total": 138
+            },
+            "reboundsPerGame": 4.8,
+            "steals": 32,
+            "stealsPerGame": 1.1,
+            "blocks": 14,
+            "blocksPerGame": 0.5,
+            "turnovers": 30,
+            "turnoversPerGame": 1.0,
+            "fouls": 44,
+            "foulsPerGame": 1.5,
+            "fieldGoals": {
+              "made": 60,
+              "attempted": 171,
+              "pct": 35.1
+            },
+            "twoPointFieldGoals": {
+              "made": 16,
+              "attempted": 40,
+              "pct": 40
+            },
+            "threePointFieldGoals": {
+              "made": 44,
+              "attempted": 131,
+              "pct": 33.6
+            },
+            "freeThrows": {
+              "made": 52,
+              "attempted": 71,
+              "pct": 73.2
+            },
+            "offensiveRating": 109.8,
+            "defensiveRating": 110,
+            "netRating": -0.2,
+            "usage": 15.6,
+            "assistsTurnoverRatio": 1.67,
+            "effectiveFieldGoalPct": 48,
+            "trueShootingPct": 0.534,
+            "winShares": {
+              "offensive": 1.1,
+              "defensive": 0.6,
+              "total": 1.7,
+              "totalPer40": 0.088
+            }
+          }
+        },
+        {
+          "season": "2023-24",
+          "team": "Minnesota",
+          "conference": "Big Ten",
+          "games": 27,
+          "gamesStarted": 10,
+          "seasonStats": {
+            "games": 27,
+            "minutes": 567,
+            "minutesPerGame": 21.0,
+            "points": 132,
+            "pointsPerGame": 4.9,
+            "assists": 29,
+            "assistsPerGame": 1.1,
+            "rebounds": {
+              "offensive": 21,
+              "defensive": 68,
+              "total": 89
+            },
+            "reboundsPerGame": 3.3,
+            "steals": 18,
+            "stealsPerGame": 0.7,
+            "blocks": 10,
+            "blocksPerGame": 0.4,
+            "turnovers": 24,
+            "turnoversPerGame": 0.9,
+            "fouls": 52,
+            "foulsPerGame": 1.9,
+            "fieldGoals": {
+              "made": 44,
+              "attempted": 124,
+              "pct": 35.5
+            },
+            "twoPointFieldGoals": {
+              "made": 27,
+              "attempted": 51,
+              "pct": 52.9
+            },
+            "threePointFieldGoals": {
+              "made": 17,
+              "attempted": 73,
+              "pct": 23.3
+            },
+            "freeThrows": {
+              "made": 27,
+              "attempted": 35,
+              "pct": 77.1
+            },
+            "offensiveRating": 98.2,
+            "defensiveRating": 107.7,
+            "netRating": -9.5,
+            "usage": 15.1,
+            "assistsTurnoverRatio": 1.21,
+            "effectiveFieldGoalPct": 42.3,
+            "trueShootingPct": 0.473,
+            "winShares": {
+              "offensive": 0.2,
+              "defensive": 0.6,
+              "total": 0.8,
+              "totalPer40": 0.056
+            }
+          }
+        },
+        {
+          "season": "2022-23",
+          "team": "Minnesota",
+          "conference": "Big Ten",
+          "games": 22,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 22,
+            "minutes": 439,
+            "minutesPerGame": 20.0,
+            "points": 130,
+            "pointsPerGame": 5.9,
+            "assists": 18,
+            "assistsPerGame": 0.8,
+            "rebounds": {
+              "offensive": 18,
+              "defensive": 61,
+              "total": 79
+            },
+            "reboundsPerGame": 3.6,
+            "steals": 11,
+            "stealsPerGame": 0.5,
+            "blocks": 5,
+            "blocksPerGame": 0.2,
+            "turnovers": 18,
+            "turnoversPerGame": 0.8,
+            "fouls": 34,
+            "foulsPerGame": 1.5,
+            "fieldGoals": {
+              "made": 37,
+              "attempted": 113,
+              "pct": 32.7
+            },
+            "twoPointFieldGoals": {
+              "made": 9,
+              "attempted": 29,
+              "pct": 31
+            },
+            "threePointFieldGoals": {
+              "made": 28,
+              "attempted": 84,
+              "pct": 33.3
+            },
+            "freeThrows": {
+              "made": 28,
+              "attempted": 39,
+              "pct": 71.8
+            },
+            "offensiveRating": 99.1,
+            "defensiveRating": 108.3,
+            "netRating": -9.2,
+            "usage": 18.7,
+            "assistsTurnoverRatio": 1,
+            "effectiveFieldGoalPct": 45.1,
+            "trueShootingPct": 0.499,
+            "winShares": {
+              "offensive": 0.3,
+              "defensive": 0.4,
+              "total": 0.7,
+              "totalPer40": 0.064
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Will Garlock",
+      "jerseyNumber": "23",
+      "position": "Forward",
+      "height": "7-0",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Middleton, WI",
+      "highSchool": "Middleton",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 0,
+        "minutes": 10,
+        "mpg": 10.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 1,
+          "total": 1
+        },
+        "rpg": 1.0,
+        "assists": 2,
+        "apg": 2.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 1,
+        "bpg": 1.0,
+        "fouls": 3,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 1,
+          "percentage": 0.0
+        },
+        "assistToTurnoverRatio": 0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T01:00:00.000Z",
+          "opponent": "Campbell",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": false,
+          "minutes": 10,
+          "points": 0,
+          "rebounds": {
+            "offensive": 0,
+            "defensive": 1
+          },
+          "assists": 2,
+          "turnovers": 0,
+          "steals": 0,
+          "blocks": 1,
+          "fouls": 3,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 0,
+            "attempted": 0
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 0
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 1
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 355,
+        "team": "Wisconsin",
+        "conference": "Big Ten",
+        "athleteId": 203456,
+        "athleteSourceId": "5215270",
+        "name": "Will Garlock",
+        "position": "F",
+        "games": 1,
+        "starts": 0,
+        "minutes": 10,
+        "points": 0,
+        "turnovers": 0,
+        "fouls": 3,
+        "assists": 2,
+        "steals": 0,
+        "blocks": 1,
+        "offensiveRating": null,
+        "defensiveRating": 93.3,
+        "netRating": null,
+        "PORPAG": null,
+        "usage": 2.1,
+        "assistsTurnoverRatio": null,
+        "offensiveReboundPct": 0,
+        "freeThrowRate": null,
+        "effectiveFieldGoalPct": null,
+        "trueShootingPct": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "twoPointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 1,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 1,
+          "total": 1
+        },
+        "winShares": {
+          "offensive": null,
+          "defensive": 0,
+          "total": null,
+          "totalPer40": null
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 155,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "assistsPerGame": {
+          "rank": 52,
+          "totalPlayers": 197,
+          "value": 2.0
+        },
+        "reboundsPerGame": {
+          "rank": 137,
+          "totalPlayers": 197,
+          "value": 1.0
+        },
+        "stealsPerGame": {
+          "rank": 94,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 16,
+          "totalPlayers": 197,
+          "value": 1.0
+        },
+        "fieldGoalPct": {
+          "rank": 147,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointPct": {
+          "rank": 83,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 95,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "defensiveRating": {
+          "rank": 119,
+          "totalPlayers": 197,
+          "value": 93.3
+        },
+        "fieldGoalsMade": {
+          "rank": 147,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "fieldGoalsAttempted": {
+          "rank": 177,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 83,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 130,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsMade": {
+          "rank": 95,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 97,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "offensiveRebounds": {
+          "rank": 106,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "defensiveRebounds": {
+          "rank": 125,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "totalRebounds": {
+          "rank": 137,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "totalAssists": {
+          "rank": 54,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "totalBlocks": {
+          "rank": 18,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "minutesPerGame": {
+          "rank": 148,
+          "totalPlayers": 197,
+          "value": 10.0
+        }
+      }
+    },
+    {
+      "name": "Aleksas Bieliauskas",
+      "jerseyNumber": "32",
+      "position": "Forward",
+      "height": "6-10",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Kaunas, Lithuania",
+      "highSchool": "Zalgiris II (NKL)",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 0,
+        "minutes": 7,
+        "mpg": 7.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 1,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 1,
+          "percentage": 0.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "assistToTurnoverRatio": 0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T01:00:00.000Z",
+          "opponent": "Campbell",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": false,
+          "minutes": 7,
+          "points": 0,
+          "rebounds": {
+            "offensive": 0,
+            "defensive": 0
+          },
+          "assists": 0,
+          "turnovers": 0,
+          "steals": 0,
+          "blocks": 0,
+          "fouls": 1,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 0,
+            "attempted": 1
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 0
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 0
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 355,
+        "team": "Wisconsin",
+        "conference": "Big Ten",
+        "athleteId": 203451,
+        "athleteSourceId": "5312048",
+        "name": "Aleksas Bieliauskas",
+        "position": "F",
+        "games": 1,
+        "starts": 0,
+        "minutes": 7,
+        "points": 0,
+        "turnovers": 0,
+        "fouls": 1,
+        "assists": 0,
+        "steals": 0,
+        "blocks": 0,
+        "offensiveRating": 0,
+        "defensiveRating": 103.6,
+        "netRating": -103.6,
+        "PORPAG": -0.7,
+        "usage": 6.8,
+        "assistsTurnoverRatio": null,
+        "offensiveReboundPct": null,
+        "freeThrowRate": 0,
+        "effectiveFieldGoalPct": 0,
+        "trueShootingPct": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 1,
+          "pct": 0
+        },
+        "twoPointFieldGoals": {
+          "made": 0,
+          "attempted": 1,
+          "pct": 0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "winShares": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0,
+          "totalPer40": 0
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 196,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "assistsPerGame": {
+          "rank": 195,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "reboundsPerGame": {
+          "rank": 195,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "stealsPerGame": {
+          "rank": 194,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 194,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 196,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointPct": {
+          "rank": 193,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 194,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 175,
+          "totalPlayers": 176,
+          "value": 0
+        },
+        "offensiveRating": {
+          "rank": 176,
+          "totalPlayers": 176,
+          "value": 0
+        },
+        "defensiveRating": {
+          "rank": 156,
+          "totalPlayers": 197,
+          "value": 103.6
+        },
+        "netRating": {
+          "rank": 174,
+          "totalPlayers": 176,
+          "value": -103.6
+        },
+        "fieldGoalsMade": {
+          "rank": 196,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "fieldGoalsAttempted": {
+          "rank": 174,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 193,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 194,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsMade": {
+          "rank": 194,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 194,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 195,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "defensiveRebounds": {
+          "rank": 194,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "totalRebounds": {
+          "rank": 195,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "totalAssists": {
+          "rank": 195,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "totalBlocks": {
+          "rank": 194,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 166,
+          "totalPlayers": 197,
+          "value": 7.0
+        }
+      }
+    },
+    {
+      "name": "Hayden Jones",
+      "jerseyNumber": "13",
+      "position": "Guard",
+      "height": "6-6",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Nelson, New Zealand",
+      "highSchool": null,
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 0,
+        "minutes": 6,
+        "mpg": 6.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 2,
+          "total": 2
+        },
+        "rpg": 2.0,
+        "assists": 1,
+        "apg": 1.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 2,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "assistToTurnoverRatio": 0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T01:00:00.000Z",
+          "opponent": "Campbell",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": false,
+          "minutes": 6,
+          "points": 0,
+          "rebounds": {
+            "offensive": 0,
+            "defensive": 2
+          },
+          "assists": 1,
+          "turnovers": 0,
+          "steals": 0,
+          "blocks": 0,
+          "fouls": 2,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 0,
+            "attempted": 0
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 0
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 0
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 355,
+        "team": "Wisconsin",
+        "conference": "Big Ten",
+        "athleteId": 203460,
+        "athleteSourceId": "5252600",
+        "name": "Hayden Jones",
+        "position": "G",
+        "games": 1,
+        "starts": 0,
+        "minutes": 6,
+        "points": 0,
+        "turnovers": 0,
+        "fouls": 2,
+        "assists": 1,
+        "steals": 0,
+        "blocks": 0,
+        "offensiveRating": null,
+        "defensiveRating": 88.5,
+        "netRating": null,
+        "PORPAG": null,
+        "usage": 0,
+        "assistsTurnoverRatio": null,
+        "offensiveReboundPct": 0,
+        "freeThrowRate": null,
+        "effectiveFieldGoalPct": null,
+        "trueShootingPct": null,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "twoPointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 2,
+          "total": 2
+        },
+        "winShares": {
+          "offensive": null,
+          "defensive": 0,
+          "total": null,
+          "totalPer40": null
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 177,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "assistsPerGame": {
+          "rank": 113,
+          "totalPlayers": 197,
+          "value": 1.0
+        },
+        "reboundsPerGame": {
+          "rank": 123,
+          "totalPlayers": 197,
+          "value": 2.0
+        },
+        "stealsPerGame": {
+          "rank": 151,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 136,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 176,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointPct": {
+          "rank": 149,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 155,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "defensiveRating": {
+          "rank": 99,
+          "totalPlayers": 197,
+          "value": 88.5
+        },
+        "fieldGoalsMade": {
+          "rank": 176,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "fieldGoalsAttempted": {
+          "rank": 189,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 149,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 164,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsMade": {
+          "rank": 155,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 160,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 162,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "defensiveRebounds": {
+          "rank": 105,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "totalRebounds": {
+          "rank": 123,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "totalAssists": {
+          "rank": 113,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "totalBlocks": {
+          "rank": 136,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 169,
+          "totalPlayers": 197,
+          "value": 6.0
+        }
+      }
+    },
+    {
+      "name": "Isaac Gard",
+      "jerseyNumber": "15",
+      "position": "Guard",
+      "height": "6-3",
+      "class": "SR",
+      "isFreshman": false,
+      "hometown": "Oregon, WI",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 0,
+        "minutes": 2,
+        "mpg": 2.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 1,
+          "total": 1
+        },
+        "rpg": 1.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 1,
+          "percentage": 0.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 1,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "assistToTurnoverRatio": 0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T01:00:00.000Z",
+          "opponent": "Campbell",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": false,
+          "minutes": 2,
+          "points": 0,
+          "rebounds": {
+            "offensive": 0,
+            "defensive": 1
+          },
+          "assists": 0,
+          "turnovers": 0,
+          "steals": 0,
+          "blocks": 0,
+          "fouls": 0,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 0,
+            "attempted": 1
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 1
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 0
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 355,
+        "team": "Wisconsin",
+        "conference": "Big Ten",
+        "athleteId": 5429,
+        "athleteSourceId": "5105863",
+        "name": "Isaac Gard",
+        "position": "G",
+        "games": 1,
+        "starts": 0,
+        "minutes": 2,
+        "points": 0,
+        "turnovers": 0,
+        "fouls": 0,
+        "assists": 0,
+        "steals": 0,
+        "blocks": 0,
+        "offensiveRating": 0,
+        "defensiveRating": 82.2,
+        "netRating": -82.2,
+        "PORPAG": -0.7,
+        "usage": 23.7,
+        "assistsTurnoverRatio": null,
+        "offensiveReboundPct": 0,
+        "freeThrowRate": 0,
+        "effectiveFieldGoalPct": 0,
+        "trueShootingPct": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 1,
+          "pct": 0
+        },
+        "twoPointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 1,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 1,
+          "total": 1
+        },
+        "winShares": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0,
+          "totalPer40": 0
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 176,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "assistsPerGame": {
+          "rank": 169,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "reboundsPerGame": {
+          "rank": 150,
+          "totalPlayers": 197,
+          "value": 1.0
+        },
+        "stealsPerGame": {
+          "rank": 149,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 134,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 174,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointPct": {
+          "rank": 146,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 153,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 163,
+          "totalPlayers": 176,
+          "value": 0
+        },
+        "offensiveRating": {
+          "rank": 171,
+          "totalPlayers": 176,
+          "value": 0
+        },
+        "defensiveRating": {
+          "rank": 71,
+          "totalPlayers": 197,
+          "value": 82.2
+        },
+        "netRating": {
+          "rank": 168,
+          "totalPlayers": 176,
+          "value": -82.2
+        },
+        "fieldGoalsMade": {
+          "rank": 174,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "fieldGoalsAttempted": {
+          "rank": 166,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 146,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 116,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "freeThrowsMade": {
+          "rank": 153,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 158,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 160,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "defensiveRebounds": {
+          "rank": 144,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "totalRebounds": {
+          "rank": 150,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "totalAssists": {
+          "rank": 169,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "totalBlocks": {
+          "rank": 134,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 190,
+          "totalPlayers": 197,
+          "value": 2.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Wisconsin",
+          "conference": "Big Ten",
+          "games": 12,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 12,
+            "minutes": 15,
+            "minutesPerGame": 1.2,
+            "points": 3,
+            "pointsPerGame": 0.2,
+            "assists": 1,
+            "assistsPerGame": 0.1,
+            "rebounds": {
+              "offensive": 0,
+              "defensive": 2,
+              "total": 2
+            },
+            "reboundsPerGame": 0.2,
+            "steals": 0,
+            "stealsPerGame": 0.0,
+            "blocks": 0,
+            "blocksPerGame": 0.0,
+            "turnovers": 0,
+            "turnoversPerGame": 0.0,
+            "fouls": 1,
+            "foulsPerGame": 0.1,
+            "fieldGoals": {
+              "made": 1,
+              "attempted": 1,
+              "pct": 100
+            },
+            "twoPointFieldGoals": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "threePointFieldGoals": {
+              "made": 1,
+              "attempted": 1,
+              "pct": 100
+            },
+            "freeThrows": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "offensiveRating": 280,
+            "defensiveRating": 100.5,
+            "netRating": 179.5,
+            "usage": 3.4,
+            "assistsTurnoverRatio": null,
+            "effectiveFieldGoalPct": 150,
+            "trueShootingPct": 1.5,
+            "winShares": {
+              "offensive": 0,
+              "defensive": 0,
+              "total": 0,
+              "totalPer40": 0
+            }
+          }
+        },
+        {
+          "season": "2023-24",
+          "team": "Wisconsin",
+          "conference": "Big Ten",
+          "games": 6,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 6,
+            "minutes": 5,
+            "minutesPerGame": 0.8,
+            "points": 0,
+            "pointsPerGame": 0.0,
+            "assists": 0,
+            "assistsPerGame": 0.0,
+            "rebounds": {
+              "offensive": 0,
+              "defensive": 0,
+              "total": 0
+            },
+            "reboundsPerGame": 0.0,
+            "steals": 0,
+            "stealsPerGame": 0.0,
+            "blocks": 0,
+            "blocksPerGame": 0.0,
+            "turnovers": 0,
+            "turnoversPerGame": 0.0,
+            "fouls": 1,
+            "foulsPerGame": 0.2,
+            "fieldGoals": {
+              "made": 0,
+              "attempted": 1,
+              "pct": 0
+            },
+            "twoPointFieldGoals": {
+              "made": 0,
+              "attempted": 1,
+              "pct": 0
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "offensiveRating": 0,
+            "defensiveRating": 102.9,
+            "netRating": -102.9,
+            "usage": 10.8,
+            "assistsTurnoverRatio": null,
+            "effectiveFieldGoalPct": 0,
+            "trueShootingPct": 0,
+            "winShares": {
+              "offensive": 0,
+              "defensive": 0,
+              "total": 0,
+              "totalPer40": 0
+            }
+          }
+        },
+        {
+          "season": "2022-23",
+          "team": "Wisconsin",
+          "conference": "Big Ten",
+          "games": 4,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 4,
+            "minutes": 4,
+            "minutesPerGame": 1.0,
+            "points": 0,
+            "pointsPerGame": 0.0,
+            "assists": 0,
+            "assistsPerGame": 0.0,
+            "rebounds": {
+              "offensive": 0,
+              "defensive": 0,
+              "total": 0
+            },
+            "reboundsPerGame": 0.0,
+            "steals": 0,
+            "stealsPerGame": 0.0,
+            "blocks": 0,
+            "blocksPerGame": 0.0,
+            "turnovers": 0,
+            "turnoversPerGame": 0.0,
+            "fouls": 0,
+            "foulsPerGame": 0.0,
+            "fieldGoals": {
+              "made": 0,
+              "attempted": 1,
+              "pct": 0
+            },
+            "twoPointFieldGoals": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 1,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "offensiveRating": 0,
+            "defensiveRating": 105.4,
+            "netRating": -105.4,
+            "usage": 14.3,
+            "assistsTurnoverRatio": null,
+            "effectiveFieldGoalPct": 0,
+            "trueShootingPct": 0,
+            "winShares": {
+              "offensive": 0,
+              "defensive": 0,
+              "total": 0,
+              "totalPer40": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Riccardo Greppi",
+      "jerseyNumber": "18",
+      "position": "Forward",
+      "height": "6-10",
+      "class": "SO",
+      "isFreshman": false,
+      "hometown": "Lecco, ITA",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 0,
+        "minutes": 2,
+        "mpg": 2.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 1,
+        "apg": 1.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 1,
+          "percentage": 0.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 1,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "assistToTurnoverRatio": 0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T01:00:00.000Z",
+          "opponent": "Campbell",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": false,
+          "minutes": 2,
+          "points": 0,
+          "rebounds": {
+            "offensive": 0,
+            "defensive": 0
+          },
+          "assists": 1,
+          "turnovers": 0,
+          "steals": 0,
+          "blocks": 0,
+          "fouls": 0,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 0,
+            "attempted": 1
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 1
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 0
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 355,
+        "team": "Wisconsin",
+        "conference": "Big Ten",
+        "athleteId": 5421,
+        "athleteSourceId": "5239655",
+        "name": "Riccardo Greppi",
+        "position": "F",
+        "games": 1,
+        "starts": 0,
+        "minutes": 2,
+        "points": 0,
+        "turnovers": 0,
+        "fouls": 0,
+        "assists": 1,
+        "steals": 0,
+        "blocks": 0,
+        "offensiveRating": 73.8,
+        "defensiveRating": 104,
+        "netRating": -30.2,
+        "PORPAG": -0.1,
+        "usage": 23.7,
+        "assistsTurnoverRatio": null,
+        "offensiveReboundPct": null,
+        "freeThrowRate": 0,
+        "effectiveFieldGoalPct": 0,
+        "trueShootingPct": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 1,
+          "pct": 0
+        },
+        "twoPointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 1,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "winShares": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0,
+          "totalPer40": 0
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 161,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "assistsPerGame": {
+          "rank": 94,
+          "totalPlayers": 197,
+          "value": 1.0
+        },
+        "reboundsPerGame": {
+          "rank": 166,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "stealsPerGame": {
+          "rank": 113,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 79,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 155,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointPct": {
+          "rank": 101,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 112,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 153,
+          "totalPlayers": 176,
+          "value": 0
+        },
+        "offensiveRating": {
+          "rank": 141,
+          "totalPlayers": 176,
+          "value": 73.8
+        },
+        "defensiveRating": {
+          "rank": 160,
+          "totalPlayers": 197,
+          "value": 104
+        },
+        "netRating": {
+          "rank": 151,
+          "totalPlayers": 176,
+          "value": -30.2
+        },
+        "fieldGoalsMade": {
+          "rank": 155,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "fieldGoalsAttempted": {
+          "rank": 157,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 101,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 101,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "freeThrowsMade": {
+          "rank": 112,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 119,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 123,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "defensiveRebounds": {
+          "rank": 158,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "totalRebounds": {
+          "rank": 166,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "totalAssists": {
+          "rank": 94,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "totalBlocks": {
+          "rank": 79,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 187,
+          "totalPlayers": 197,
+          "value": 2.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Wisconsin",
+          "conference": "Big Ten",
+          "games": 8,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 8,
+            "minutes": 20,
+            "minutesPerGame": 2.5,
+            "points": 8,
+            "pointsPerGame": 1.0,
+            "assists": 1,
+            "assistsPerGame": 0.1,
+            "rebounds": {
+              "offensive": 4,
+              "defensive": 5,
+              "total": 9
+            },
+            "reboundsPerGame": 1.1,
+            "steals": 0,
+            "stealsPerGame": 0.0,
+            "blocks": 1,
+            "blocksPerGame": 0.1,
+            "turnovers": 1,
+            "turnoversPerGame": 0.1,
+            "fouls": 3,
+            "foulsPerGame": 0.4,
+            "fieldGoals": {
+              "made": 2,
+              "attempted": 3,
+              "pct": 66.7
+            },
+            "twoPointFieldGoals": {
+              "made": 2,
+              "attempted": 2,
+              "pct": 100
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 1,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 4,
+              "attempted": 6,
+              "pct": 66.7
+            },
+            "offensiveRating": 142.7,
+            "defensiveRating": 86.6,
+            "netRating": 56.1,
+            "usage": 16.9,
+            "assistsTurnoverRatio": 1,
+            "effectiveFieldGoalPct": 66.7,
+            "trueShootingPct": 0.709,
+            "winShares": {
+              "offensive": 0.1,
+              "defensive": 0.1,
+              "total": 0.2,
+              "totalPer40": 0.4
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Jack Robison",
+      "jerseyNumber": "11",
+      "position": "Forward",
+      "height": "6-6",
+      "class": "SO",
+      "isFreshman": false,
+      "hometown": "Lakeville, MN",
+      "highSchool": "Lakeville North",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 0,
+        "minutes": 1,
+        "mpg": 1.0,
+        "points": 2,
+        "ppg": 2.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 1,
+          "attempted": 1,
+          "percentage": 100.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "assistToTurnoverRatio": 0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-04T01:00:00.000Z",
+          "opponent": "Campbell",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": false,
+          "minutes": 1,
+          "points": 2,
+          "rebounds": {
+            "offensive": 0,
+            "defensive": 0
+          },
+          "assists": 0,
+          "turnovers": 0,
+          "steals": 0,
+          "blocks": 0,
+          "fouls": 0,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 1,
+            "attempted": 1
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 0
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 0
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 355,
+        "team": "Wisconsin",
+        "conference": "Big Ten",
+        "athleteId": 5422,
+        "athleteSourceId": "5110430",
+        "name": "Jack Robison",
+        "position": "F",
+        "games": 1,
+        "starts": 0,
+        "minutes": 1,
+        "points": 2,
+        "turnovers": 0,
+        "fouls": 0,
+        "assists": 0,
+        "steals": 0,
+        "blocks": 0,
+        "offensiveRating": 200,
+        "defensiveRating": 104,
+        "netRating": 96,
+        "PORPAG": 0.9,
+        "usage": 47.4,
+        "assistsTurnoverRatio": null,
+        "offensiveReboundPct": null,
+        "freeThrowRate": 0,
+        "effectiveFieldGoalPct": 100,
+        "trueShootingPct": 1,
+        "fieldGoals": {
+          "made": 1,
+          "attempted": 1,
+          "pct": 100
+        },
+        "twoPointFieldGoals": {
+          "made": 1,
+          "attempted": 1,
+          "pct": 100
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "winShares": {
+          "offensive": 0.1,
+          "defensive": 0,
+          "total": 0.1,
+          "totalPer40": 4
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 145,
+          "totalPlayers": 197,
+          "value": 2.0
+        },
+        "assistsPerGame": {
+          "rank": 163,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "reboundsPerGame": {
+          "rank": 179,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "stealsPerGame": {
+          "rank": 144,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 127,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 7,
+          "totalPlayers": 197,
+          "value": 100
+        },
+        "threePointPct": {
+          "rank": 141,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 146,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 13,
+          "totalPlayers": 176,
+          "value": 100
+        },
+        "offensiveRating": {
+          "rank": 9,
+          "totalPlayers": 176,
+          "value": 200
+        },
+        "defensiveRating": {
+          "rank": 159,
+          "totalPlayers": 197,
+          "value": 104
+        },
+        "netRating": {
+          "rank": 13,
+          "totalPlayers": 176,
+          "value": 96
+        },
+        "fieldGoalsMade": {
+          "rank": 130,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "fieldGoalsAttempted": {
+          "rank": 164,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 141,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 159,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsMade": {
+          "rank": 146,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 151,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 155,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "defensiveRebounds": {
+          "rank": 172,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "totalRebounds": {
+          "rank": 179,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "totalAssists": {
+          "rank": 163,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "totalBlocks": {
+          "rank": 127,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 194,
+          "totalPlayers": 197,
+          "value": 1.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Wisconsin",
+          "conference": "Big Ten",
+          "games": 13,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 13,
+            "minutes": 16,
+            "minutesPerGame": 1.2,
+            "points": 6,
+            "pointsPerGame": 0.5,
+            "assists": 1,
+            "assistsPerGame": 0.1,
+            "rebounds": {
+              "offensive": 2,
+              "defensive": 2,
+              "total": 4
+            },
+            "reboundsPerGame": 0.3,
+            "steals": 0,
+            "stealsPerGame": 0.0,
+            "blocks": 0,
+            "blocksPerGame": 0.0,
+            "turnovers": 0,
+            "turnoversPerGame": 0.0,
+            "fouls": 1,
+            "foulsPerGame": 0.1,
+            "fieldGoals": {
+              "made": 2,
+              "attempted": 4,
+              "pct": 50
+            },
+            "twoPointFieldGoals": {
+              "made": 0,
+              "attempted": 2,
+              "pct": 0
+            },
+            "threePointFieldGoals": {
+              "made": 2,
+              "attempted": 2,
+              "pct": 100
+            },
+            "freeThrows": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "offensiveRating": 170,
+            "defensiveRating": 100.2,
+            "netRating": 69.8,
+            "usage": 12.8,
+            "assistsTurnoverRatio": null,
+            "effectiveFieldGoalPct": 75,
+            "trueShootingPct": 0.75,
+            "winShares": {
+              "offensive": 0.1,
+              "defensive": 0,
+              "total": 0.1,
+              "totalPer40": 0.25
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Elijah Gray",
+      "jerseyNumber": "6",
+      "position": "Forward",
+      "height": "6-9",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Charlotte, NC",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 0,
+        "gamesStarted": 0,
+        "minutes": 0,
+        "mpg": 0.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "assistToTurnoverRatio": 0.0
+      },
+      "gameByGame": [],
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Temple",
+          "conference": "American",
+          "games": 25,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 25,
+            "minutes": 492,
+            "minutesPerGame": 19.7,
+            "points": 225,
+            "pointsPerGame": 9.0,
+            "assists": 15,
+            "assistsPerGame": 0.6,
+            "rebounds": {
+              "offensive": 28,
+              "defensive": 66,
+              "total": 94
+            },
+            "reboundsPerGame": 3.8,
+            "steals": 10,
+            "stealsPerGame": 0.4,
+            "blocks": 8,
+            "blocksPerGame": 0.3,
+            "turnovers": 39,
+            "turnoversPerGame": 1.6,
+            "fouls": 70,
+            "foulsPerGame": 2.8,
+            "fieldGoals": {
+              "made": 77,
+              "attempted": 160,
+              "pct": 48.1
+            },
+            "twoPointFieldGoals": {
+              "made": 63,
+              "attempted": 114,
+              "pct": 55.3
+            },
+            "threePointFieldGoals": {
+              "made": 14,
+              "attempted": 46,
+              "pct": 30.4
+            },
+            "freeThrows": {
+              "made": 57,
+              "attempted": 76,
+              "pct": 75
+            },
+            "offensiveRating": 107.7,
+            "defensiveRating": 111.3,
+            "netRating": -3.6,
+            "usage": 24.5,
+            "assistsTurnoverRatio": 0.38,
+            "effectiveFieldGoalPct": 52.5,
+            "trueShootingPct": 0.582,
+            "winShares": {
+              "offensive": 0.9,
+              "defensive": 0.3,
+              "total": 1.2,
+              "totalPer40": 0.098
+            }
+          }
+        },
+        {
+          "season": "2023-24",
+          "team": "Fordham",
+          "conference": "A-10",
+          "games": 32,
+          "gamesStarted": 9,
+          "seasonStats": {
+            "games": 32,
+            "minutes": 580,
+            "minutesPerGame": 18.1,
+            "points": 268,
+            "pointsPerGame": 8.4,
+            "assists": 27,
+            "assistsPerGame": 0.8,
+            "rebounds": {
+              "offensive": 37,
+              "defensive": 80,
+              "total": 117
+            },
+            "reboundsPerGame": 3.7,
+            "steals": 11,
+            "stealsPerGame": 0.3,
+            "blocks": 14,
+            "blocksPerGame": 0.4,
+            "turnovers": 47,
+            "turnoversPerGame": 1.5,
+            "fouls": 83,
+            "foulsPerGame": 2.6,
+            "fieldGoals": {
+              "made": 94,
+              "attempted": 224,
+              "pct": 42
+            },
+            "twoPointFieldGoals": {
+              "made": 70,
+              "attempted": 140,
+              "pct": 50
+            },
+            "threePointFieldGoals": {
+              "made": 24,
+              "attempted": 84,
+              "pct": 28.6
+            },
+            "freeThrows": {
+              "made": 56,
+              "attempted": 73,
+              "pct": 76.7
+            },
+            "offensiveRating": 100.5,
+            "defensiveRating": 111,
+            "netRating": -10.5,
+            "usage": 26.3,
+            "assistsTurnoverRatio": 0.57,
+            "effectiveFieldGoalPct": 47.3,
+            "trueShootingPct": 0.523,
+            "winShares": {
+              "offensive": 0.6,
+              "defensive": 0.4,
+              "total": 1,
+              "totalPer40": 0.069
+            }
+          }
+        },
+        {
+          "season": "2022-23",
+          "team": "Fordham",
+          "conference": "A-10",
+          "games": 29,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 29,
+            "minutes": 224,
+            "minutesPerGame": 7.7,
+            "points": 79,
+            "pointsPerGame": 2.7,
+            "assists": 0,
+            "assistsPerGame": 0.0,
+            "rebounds": {
+              "offensive": 17,
+              "defensive": 41,
+              "total": 58
+            },
+            "reboundsPerGame": 2.0,
+            "steals": 7,
+            "stealsPerGame": 0.2,
+            "blocks": 5,
+            "blocksPerGame": 0.2,
+            "turnovers": 15,
+            "turnoversPerGame": 0.5,
+            "fouls": 57,
+            "foulsPerGame": 2.0,
+            "fieldGoals": {
+              "made": 27,
+              "attempted": 75,
+              "pct": 36
+            },
+            "twoPointFieldGoals": {
+              "made": 22,
+              "attempted": 43,
+              "pct": 51.2
+            },
+            "threePointFieldGoals": {
+              "made": 5,
+              "attempted": 32,
+              "pct": 15.6
+            },
+            "freeThrows": {
+              "made": 20,
+              "attempted": 33,
+              "pct": 60.6
+            },
+            "offensiveRating": 85.5,
+            "defensiveRating": 94.1,
+            "netRating": -8.6,
+            "usage": 23.7,
+            "assistsTurnoverRatio": 0,
+            "effectiveFieldGoalPct": 39.3,
+            "trueShootingPct": 0.441,
+            "winShares": {
+              "offensive": -0.1,
+              "defensive": 0.5,
+              "total": 0.4,
+              "totalPer40": 0.071
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Zach Kinziger",
+      "jerseyNumber": "4",
+      "position": "Guard",
+      "height": "6-3",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "De Pere, WI",
+      "highSchool": "De Pere",
+      "seasonTotals": {
+        "games": 0,
+        "gamesStarted": 0,
+        "minutes": 0,
+        "mpg": 0.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "assistToTurnoverRatio": 0.0
+      },
+      "gameByGame": []
+    }
+  ],
+  "teamGameStats": [
+    {
+      "gameId": 212727,
+      "season": 2026,
+      "seasonLabel": "20252026",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-11-04T01:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 355,
+      "team": "Wisconsin",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 41,
+      "opponent": "Campbell",
+      "opponentConference": "CAA",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": true,
+      "conferenceGame": false,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 70,
+      "teamStats": {
+        "possessions": 70,
+        "assists": 19,
+        "steals": 11,
+        "blocks": 1,
+        "trueShooting": 63.7,
+        "rating": 137.1,
+        "gameScore": 86.89999999999999,
+        "points": {
+          "total": 96,
+          "byPeriod": [
+            48,
+            48
+          ],
+          "largestLead": 32,
+          "fastBreak": 13,
+          "inPaint": 46,
+          "offTurnovers": 31
+        },
+        "twoPointFieldGoals": {
+          "made": 23,
+          "attempted": 39,
+          "pct": 59
+        },
+        "threePointFieldGoals": {
+          "made": 11,
+          "attempted": 28,
+          "pct": 39.3
+        },
+        "freeThrows": {
+          "made": 17,
+          "attempted": 19,
+          "pct": 89.5
+        },
+        "fieldGoals": {
+          "made": 34,
+          "attempted": 67,
+          "pct": 50.7
+        },
+        "turnovers": {
+          "total": 9,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 13,
+          "defensive": 21,
+          "total": 34
+        },
+        "fouls": {
+          "total": 16,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 59,
+          "freeThrowRate": 28.4,
+          "turnoverRatio": 12.9,
+          "offensiveReboundPct": 38.2
+        }
+      },
+      "opponentStats": {
+        "possessions": 70,
+        "assists": 7,
+        "steals": 8,
+        "blocks": 2,
+        "trueShooting": 53.8,
+        "rating": 91.4,
+        "gameScore": 34.699999999999996,
+        "points": {
+          "total": 64,
+          "byPeriod": [
+            38,
+            26
+          ],
+          "largestLead": 7,
+          "fastBreak": 13,
+          "inPaint": 32,
+          "offTurnovers": 14
+        },
+        "twoPointFieldGoals": {
+          "made": 18,
+          "attempted": 33,
+          "pct": 54.5
+        },
+        "threePointFieldGoals": {
+          "made": 5,
+          "attempted": 19,
+          "pct": 26.3
+        },
+        "freeThrows": {
+          "made": 13,
+          "attempted": 17,
+          "pct": 76.5
+        },
+        "fieldGoals": {
+          "made": 23,
+          "attempted": 52,
+          "pct": 44.2
+        },
+        "turnovers": {
+          "total": 19,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 9,
+          "defensive": 21,
+          "total": 30
+        },
+        "fouls": {
+          "total": 21,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 49,
+          "freeThrowRate": 32.7,
+          "turnoverRatio": 27.1,
+          "offensiveReboundPct": 30
+        }
+      }
+    }
+  ],
+  "teamSeasonStats": {
+    "season": 2026,
+    "seasonLabel": "20252026",
+    "teamId": 355,
+    "team": "Wisconsin",
+    "conference": "Big Ten",
+    "games": 1,
+    "wins": 1,
+    "losses": 0,
+    "totalMinutes": 40,
+    "pace": 70,
+    "teamStats": {
+      "assists": 19,
+      "blocks": 1,
+      "steals": 11,
+      "possessions": 70,
+      "trueShooting": 63.7,
+      "rating": 137.1,
+      "fieldGoals": {
+        "made": 34,
+        "attempted": 67,
+        "pct": 50.7
+      },
+      "twoPointFieldGoals": {
+        "made": 23,
+        "attempted": 39,
+        "pct": 59
+      },
+      "threePointFieldGoals": {
+        "made": 11,
+        "attempted": 28,
+        "pct": 39.3
+      },
+      "freeThrows": {
+        "made": 17,
+        "attempted": 19,
+        "pct": 89.5
+      },
+      "rebounds": {
+        "offensive": 13,
+        "defensive": 21,
+        "total": 34
+      },
+      "turnovers": {
+        "total": 9,
+        "teamTotal": 0
+      },
+      "fouls": {
+        "total": 16,
+        "technical": 0,
+        "flagrant": 0
+      },
+      "points": {
+        "total": 96,
+        "inPaint": 46,
+        "offTurnovers": 31,
+        "fastBreak": 13
+      },
+      "fourFactors": {
+        "effectiveFieldGoalPct": 59,
+        "turnoverRatio": 0.13,
+        "offensiveReboundPct": 38.2,
+        "freeThrowRate": 28.4
+      }
+    },
+    "opponentStats": {
+      "assists": 7,
+      "blocks": 2,
+      "steals": 8,
+      "possessions": 70,
+      "trueShooting": 53.8,
+      "rating": 91.4,
+      "fieldGoals": {
+        "made": 23,
+        "attempted": 52,
+        "pct": 44.2
+      },
+      "twoPointFieldGoals": {
+        "made": 18,
+        "attempted": 33,
+        "pct": 54.5
+      },
+      "threePointFieldGoals": {
+        "made": 5,
+        "attempted": 19,
+        "pct": 26.3
+      },
+      "freeThrows": {
+        "made": 13,
+        "attempted": 17,
+        "pct": 76.5
+      },
+      "rebounds": {
+        "offensive": 9,
+        "defensive": 21,
+        "total": 30
+      },
+      "turnovers": {
+        "total": 19,
+        "teamTotal": 0
+      },
+      "fouls": {
+        "total": 21,
+        "technical": 0,
+        "flagrant": 0
+      },
+      "points": {
+        "total": 64,
+        "inPaint": 32,
+        "offTurnovers": 14,
+        "fastBreak": 13
+      },
+      "fourFactors": {
+        "effectiveFieldGoalPct": 49,
+        "turnoverRatio": 0.27,
+        "offensiveReboundPct": 30,
+        "freeThrowRate": 32.7
+      }
+    },
+    "perGameStats": {
+      "teamStats": {
+        "threePointFieldGoalsMadePerGame": 11.0,
+        "threePointFieldGoalsAttemptedPerGame": 28.0,
+        "offensiveReboundsPerGame": 13.0,
+        "turnoversPerGame": 9.0,
+        "assistsPerGame": 19.0,
+        "freeThrowsMadePerGame": 17.0,
+        "freeThrowsAttemptedPerGame": 19.0,
+        "foulsPerGame": 16.0,
+        "defensiveReboundsPerGame": 21.0,
+        "stealsPerGame": 11.0,
+        "blocksPerGame": 1.0,
+        "freeThrowPct": 89.5
+      },
+      "opponentStats": {
+        "pointsPerGame": 64.0,
+        "fieldGoalPct": 44.2,
+        "threePointPct": 26.3,
+        "turnoversForcedPerGame": 19.0
+      },
+      "margins": {
+        "pointMargin": 32.0,
+        "reboundMargin": 4.0,
+        "turnoverMargin": 10.0
+      },
+      "ratios": {
+        "assistToTurnoverRatio": 2.11
+      }
+    }
+  },
+  "conferenceRankings": {
+    "conference": "Big Ten",
+    "team": "Wisconsin",
+    "rankings": {
+      "pointsPerGame": {
+        "rank": 6,
+        "totalTeams": 18,
+        "value": 96.0
+      },
+      "assistsPerGame": {
+        "rank": 10,
+        "totalTeams": 18,
+        "value": 19.0
+      },
+      "reboundsPerGame": {
+        "rank": 16,
+        "totalTeams": 18,
+        "value": 34.0
+      },
+      "stealsPerGame": {
+        "rank": 1,
+        "totalTeams": 18,
+        "value": 11.0
+      },
+      "blocksPerGame": {
+        "rank": 15,
+        "totalTeams": 18,
+        "value": 1.0
+      },
+      "fieldGoalPct": {
+        "rank": 7,
+        "totalTeams": 18,
+        "value": 50.7
+      },
+      "threePointPct": {
+        "rank": 6,
+        "totalTeams": 18,
+        "value": 39.3
+      },
+      "freeThrowPct": {
+        "rank": 4,
+        "totalTeams": 18,
+        "value": 89.5
+      },
+      "effectiveFieldGoalPct": {
+        "rank": 7,
+        "totalTeams": 18,
+        "value": 59
+      },
+      "offensiveReboundPct": {
+        "rank": 4,
+        "totalTeams": 18,
+        "value": 38.2
+      },
+      "opponentPointsPerGame": {
+        "rank": 12,
+        "totalTeams": 18,
+        "value": 64.0
+      },
+      "threePointFieldGoalsMadePerGame": {
+        "rank": 4,
+        "totalTeams": 18,
+        "value": 11.0
+      },
+      "threePointFieldGoalsAttemptedPerGame": {
+        "rank": 6,
+        "totalTeams": 18,
+        "value": 28.0
+      },
+      "offensiveReboundsPerGame": {
+        "rank": 8,
+        "totalTeams": 18,
+        "value": 13.0
+      },
+      "turnoversPerGame": {
+        "rank": 7,
+        "totalTeams": 18,
+        "value": 9.0
+      },
+      "freeThrowsMadePerGame": {
+        "rank": 10,
+        "totalTeams": 18,
+        "value": 17.0
+      },
+      "freeThrowsAttemptedPerGame": {
+        "rank": 14,
+        "totalTeams": 18,
+        "value": 19.0
+      },
+      "foulsPerGame": {
+        "rank": 12,
+        "totalTeams": 18,
+        "value": 16.0
+      },
+      "defensiveReboundsPerGame": {
+        "rank": 17,
+        "totalTeams": 18,
+        "value": 21.0
+      },
+      "opponentFieldGoalPct": {
+        "rank": 14,
+        "totalTeams": 18,
+        "value": 44.2
+      },
+      "opponentThreePointPct": {
+        "rank": 8,
+        "totalTeams": 18,
+        "value": 26.3
+      },
+      "turnoversForcedPerGame": {
+        "rank": 15,
+        "totalTeams": 18,
+        "value": 19.0
+      },
+      "pointMargin": {
+        "rank": 5,
+        "totalTeams": 18,
+        "value": 32.0
+      },
+      "reboundMargin": {
+        "rank": 13,
+        "totalTeams": 18,
+        "value": 4.0
+      },
+      "turnoverMargin": {
+        "rank": 2,
+        "totalTeams": 18,
+        "value": 10.0
+      },
+      "assistToTurnoverRatio": {
+        "rank": 5,
+        "totalTeams": 18,
+        "value": 2.111111111111111
+      }
+    }
+  },
+  "d1Rankings": {
+    "level": "Division 1",
+    "team": "Wisconsin",
+    "rankings": {
+      "pointsPerGame": {
+        "rank": 68,
+        "totalTeams": 354,
+        "value": 96.0
+      },
+      "assistsPerGame": {
+        "rank": 91,
+        "totalTeams": 354,
+        "value": 19.0
+      },
+      "reboundsPerGame": {
+        "rank": 263,
+        "totalTeams": 354,
+        "value": 34.0
+      },
+      "stealsPerGame": {
+        "rank": 64,
+        "totalTeams": 354,
+        "value": 11.0
+      },
+      "blocksPerGame": {
+        "rank": 306,
+        "totalTeams": 354,
+        "value": 1.0
+      },
+      "fieldGoalPct": {
+        "rank": 98,
+        "totalTeams": 354,
+        "value": 50.7
+      },
+      "threePointPct": {
+        "rank": 87,
+        "totalTeams": 354,
+        "value": 39.3
+      },
+      "freeThrowPct": {
+        "rank": 14,
+        "totalTeams": 354,
+        "value": 89.5
+      },
+      "effectiveFieldGoalPct": {
+        "rank": 81,
+        "totalTeams": 354,
+        "value": 59
+      },
+      "offensiveReboundPct": {
+        "rank": 59,
+        "totalTeams": 354,
+        "value": 38.2
+      },
+      "opponentPointsPerGame": {
+        "rank": 128,
+        "totalTeams": 354,
+        "value": 64.0
+      },
+      "threePointFieldGoalsMadePerGame": {
+        "rank": 48,
+        "totalTeams": 354,
+        "value": 11.0
+      },
+      "threePointFieldGoalsAttemptedPerGame": {
+        "rank": 94,
+        "totalTeams": 354,
+        "value": 28.0
+      },
+      "offensiveReboundsPerGame": {
+        "rank": 146,
+        "totalTeams": 354,
+        "value": 13.0
+      },
+      "turnoversPerGame": {
+        "rank": 72,
+        "totalTeams": 354,
+        "value": 9.0
+      },
+      "freeThrowsMadePerGame": {
+        "rank": 146,
+        "totalTeams": 354,
+        "value": 17.0
+      },
+      "freeThrowsAttemptedPerGame": {
+        "rank": 240,
+        "totalTeams": 354,
+        "value": 19.0
+      },
+      "foulsPerGame": {
+        "rank": 131,
+        "totalTeams": 354,
+        "value": 16.0
+      },
+      "defensiveReboundsPerGame": {
+        "rank": 303,
+        "totalTeams": 354,
+        "value": 21.0
+      },
+      "opponentFieldGoalPct": {
+        "rank": 229,
+        "totalTeams": 354,
+        "value": 44.2
+      },
+      "opponentThreePointPct": {
+        "rank": 118,
+        "totalTeams": 354,
+        "value": 26.3
+      },
+      "turnoversForcedPerGame": {
+        "rank": 305,
+        "totalTeams": 354,
+        "value": 19.0
+      },
+      "pointMargin": {
+        "rank": 69,
+        "totalTeams": 354,
+        "value": 32.0
+      },
+      "reboundMargin": {
+        "rank": 184,
+        "totalTeams": 354,
+        "value": 4.0
+      },
+      "turnoverMargin": {
+        "rank": 32,
+        "totalTeams": 354,
+        "value": 10.0
+      },
+      "assistToTurnoverRatio": {
+        "rank": 60,
+        "totalTeams": 354,
+        "value": 2.111111111111111
+      }
+    }
+  },
+  "totalRecord": {
+    "wins": 1,
+    "losses": 0,
+    "games": 1
+  },
+  "conferenceRecord": {
+    "wins": 0,
+    "losses": 0,
+    "games": 0
+  },
+  "metadata": {
+    "totalPlayers": 15,
+    "apiCalls": 53
+  }
+}

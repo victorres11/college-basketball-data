@@ -1,0 +1,4982 @@
+{
+  "team": "Oregon",
+  "season": "2025-26",
+  "seasonType": "Regular",
+  "dataGenerated": "2025-11-07T11:12:27.376663",
+  "players": [
+    {
+      "name": "Takai Simpkins",
+      "jerseyNumber": "5",
+      "position": "Guard",
+      "height": "6-4",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Brooklyn, NY",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 1,
+        "minutes": 35,
+        "mpg": 35.0,
+        "points": 18,
+        "ppg": 18.0,
+        "rebounds": {
+          "offensive": 1,
+          "defensive": 2,
+          "total": 3
+        },
+        "rpg": 3.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 1,
+        "steals": 2,
+        "spg": 2.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 1,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 7,
+          "attempted": 12,
+          "percentage": 58.3
+        },
+        "threePointFieldGoals": {
+          "made": 1,
+          "attempted": 6,
+          "percentage": 16.7
+        },
+        "freeThrows": {
+          "made": 3,
+          "attempted": 6,
+          "percentage": 50.0
+        },
+        "assistToTurnoverRatio": 0.0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-05T03:30:00.000Z",
+          "opponent": "Hawai'i",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": true,
+          "minutes": 35,
+          "points": 18,
+          "rebounds": {
+            "offensive": 1,
+            "defensive": 2
+          },
+          "assists": 0,
+          "turnovers": 1,
+          "steals": 2,
+          "blocks": 0,
+          "fouls": 1,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 7,
+            "attempted": 12
+          },
+          "threePointFieldGoals": {
+            "made": 1,
+            "attempted": 6
+          },
+          "freeThrows": {
+            "made": 3,
+            "attempted": 6
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 223,
+        "team": "Oregon",
+        "conference": "Big Ten",
+        "athleteId": 221,
+        "athleteSourceId": "5174937",
+        "name": "Takai Simpkins",
+        "position": "G",
+        "games": 1,
+        "starts": 1,
+        "minutes": 35,
+        "points": 18,
+        "turnovers": 1,
+        "fouls": 1,
+        "assists": 0,
+        "steals": 2,
+        "blocks": 0,
+        "offensiveRating": 125.6,
+        "defensiveRating": 83.3,
+        "netRating": 42.3,
+        "PORPAG": 4.3,
+        "usage": 19.8,
+        "assistsTurnoverRatio": 0,
+        "offensiveReboundPct": 33.3,
+        "freeThrowRate": 50,
+        "effectiveFieldGoalPct": 62.5,
+        "trueShootingPct": 0.615,
+        "fieldGoals": {
+          "made": 7,
+          "attempted": 12,
+          "pct": 58.3
+        },
+        "twoPointFieldGoals": {
+          "made": 6,
+          "attempted": 6,
+          "pct": 100
+        },
+        "threePointFieldGoals": {
+          "made": 1,
+          "attempted": 6,
+          "pct": 16.7
+        },
+        "freeThrows": {
+          "made": 3,
+          "attempted": 6,
+          "pct": 50
+        },
+        "rebounds": {
+          "offensive": 1,
+          "defensive": 2,
+          "total": 3
+        },
+        "winShares": {
+          "offensive": 0.1,
+          "defensive": 0.1,
+          "total": 0.2,
+          "totalPer40": 0.229
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 26,
+          "totalPlayers": 197,
+          "value": 18.0
+        },
+        "assistsPerGame": {
+          "rank": 141,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "reboundsPerGame": {
+          "rank": 91,
+          "totalPlayers": 197,
+          "value": 3.0
+        },
+        "stealsPerGame": {
+          "rank": 15,
+          "totalPlayers": 197,
+          "value": 2.0
+        },
+        "blocksPerGame": {
+          "rank": 69,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 58,
+          "totalPlayers": 197,
+          "value": 58.3
+        },
+        "threePointPct": {
+          "rank": 77,
+          "totalPlayers": 197,
+          "value": 16.7
+        },
+        "freeThrowPct": {
+          "rank": 76,
+          "totalPlayers": 197,
+          "value": 50
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 69,
+          "totalPlayers": 176,
+          "value": 62.5
+        },
+        "assistToTurnoverRatio": {
+          "rank": 24,
+          "totalPlayers": 120,
+          "value": 0
+        },
+        "offensiveRating": {
+          "rank": 85,
+          "totalPlayers": 176,
+          "value": 125.6
+        },
+        "defensiveRating": {
+          "rank": 81,
+          "totalPlayers": 197,
+          "value": 83.3
+        },
+        "netRating": {
+          "rank": 75,
+          "totalPlayers": 176,
+          "value": 42.3
+        },
+        "fieldGoalsMade": {
+          "rank": 19,
+          "totalPlayers": 197,
+          "value": 7
+        },
+        "fieldGoalsAttempted": {
+          "rank": 15,
+          "totalPlayers": 197,
+          "value": 12
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 48,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 22,
+          "totalPlayers": 197,
+          "value": 6
+        },
+        "freeThrowsMade": {
+          "rank": 51,
+          "totalPlayers": 197,
+          "value": 3
+        },
+        "freeThrowsAttempted": {
+          "rank": 29,
+          "totalPlayers": 197,
+          "value": 6
+        },
+        "offensiveRebounds": {
+          "rank": 64,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "defensiveRebounds": {
+          "rank": 85,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "totalRebounds": {
+          "rank": 92,
+          "totalPlayers": 197,
+          "value": 3
+        },
+        "totalAssists": {
+          "rank": 141,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "totalBlocks": {
+          "rank": 69,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 3,
+          "totalPlayers": 197,
+          "value": 35.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Elon",
+          "conference": "CAA",
+          "games": 27,
+          "gamesStarted": 24,
+          "seasonStats": {
+            "games": 27,
+            "minutes": 807,
+            "minutesPerGame": 29.9,
+            "points": 443,
+            "pointsPerGame": 16.4,
+            "assists": 70,
+            "assistsPerGame": 2.6,
+            "rebounds": {
+              "offensive": 19,
+              "defensive": 66,
+              "total": 85
+            },
+            "reboundsPerGame": 3.1,
+            "steals": 30,
+            "stealsPerGame": 1.1,
+            "blocks": 9,
+            "blocksPerGame": 0.3,
+            "turnovers": 67,
+            "turnoversPerGame": 2.5,
+            "fouls": 42,
+            "foulsPerGame": 1.6,
+            "fieldGoals": {
+              "made": 146,
+              "attempted": 345,
+              "pct": 42.3
+            },
+            "twoPointFieldGoals": {
+              "made": 88,
+              "attempted": 187,
+              "pct": 47.1
+            },
+            "threePointFieldGoals": {
+              "made": 58,
+              "attempted": 158,
+              "pct": 36.7
+            },
+            "freeThrows": {
+              "made": 93,
+              "attempted": 123,
+              "pct": 75.6
+            },
+            "offensiveRating": 111.7,
+            "defensiveRating": 108.2,
+            "netRating": 3.5,
+            "usage": 30.1,
+            "assistsTurnoverRatio": 1.04,
+            "effectiveFieldGoalPct": 50.7,
+            "trueShootingPct": 0.555,
+            "winShares": {
+              "offensive": 2.1,
+              "defensive": 0.7,
+              "total": 2.8,
+              "totalPer40": 0.139
+            }
+          }
+        },
+        {
+          "season": "2023-24",
+          "team": "Elon",
+          "conference": "CAA",
+          "games": 29,
+          "gamesStarted": 25,
+          "seasonStats": {
+            "games": 29,
+            "minutes": 787,
+            "minutesPerGame": 27.1,
+            "points": 399,
+            "pointsPerGame": 13.8,
+            "assists": 90,
+            "assistsPerGame": 3.1,
+            "rebounds": {
+              "offensive": 25,
+              "defensive": 110,
+              "total": 135
+            },
+            "reboundsPerGame": 4.7,
+            "steals": 45,
+            "stealsPerGame": 1.6,
+            "blocks": 9,
+            "blocksPerGame": 0.3,
+            "turnovers": 67,
+            "turnoversPerGame": 2.3,
+            "fouls": 37,
+            "foulsPerGame": 1.3,
+            "fieldGoals": {
+              "made": 123,
+              "attempted": 296,
+              "pct": 41.6
+            },
+            "twoPointFieldGoals": {
+              "made": 98,
+              "attempted": 209,
+              "pct": 46.9
+            },
+            "threePointFieldGoals": {
+              "made": 25,
+              "attempted": 87,
+              "pct": 28.7
+            },
+            "freeThrows": {
+              "made": 128,
+              "attempted": 173,
+              "pct": 74
+            },
+            "offensiveRating": 107.7,
+            "defensiveRating": 112.2,
+            "netRating": -4.5,
+            "usage": 28.8,
+            "assistsTurnoverRatio": 1.34,
+            "effectiveFieldGoalPct": 45.8,
+            "trueShootingPct": 0.536,
+            "winShares": {
+              "offensive": 1.8,
+              "defensive": 0.4,
+              "total": 2.2,
+              "totalPer40": 0.112
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Nate Bittle",
+      "jerseyNumber": "32",
+      "position": "Center",
+      "height": "7-0",
+      "class": "SR",
+      "isFreshman": false,
+      "hometown": "Central Point, OR",
+      "highSchool": "Prolific Prep",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 1,
+        "minutes": 31,
+        "mpg": 31.0,
+        "points": 12,
+        "ppg": 12.0,
+        "rebounds": {
+          "offensive": 3,
+          "defensive": 11,
+          "total": 14
+        },
+        "rpg": 14.0,
+        "assists": 1,
+        "apg": 1.0,
+        "turnovers": 2,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 4,
+        "bpg": 4.0,
+        "fouls": 2,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 3,
+          "attempted": 8,
+          "percentage": 37.5
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 1,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 6,
+          "attempted": 6,
+          "percentage": 100.0
+        },
+        "assistToTurnoverRatio": 0.5
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-05T03:30:00.000Z",
+          "opponent": "Hawai'i",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": true,
+          "minutes": 31,
+          "points": 12,
+          "rebounds": {
+            "offensive": 3,
+            "defensive": 11
+          },
+          "assists": 1,
+          "turnovers": 2,
+          "steals": 0,
+          "blocks": 4,
+          "fouls": 2,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 3,
+            "attempted": 8
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 1
+          },
+          "freeThrows": {
+            "made": 6,
+            "attempted": 6
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 223,
+        "team": "Oregon",
+        "conference": "Big Ten",
+        "athleteId": 7241,
+        "athleteSourceId": "4432586",
+        "name": "Nate Bittle",
+        "position": "C",
+        "games": 1,
+        "starts": 1,
+        "minutes": 31,
+        "points": 12,
+        "turnovers": 2,
+        "fouls": 2,
+        "assists": 1,
+        "steals": 0,
+        "blocks": 4,
+        "offensiveRating": 115,
+        "defensiveRating": 67.6,
+        "netRating": 47.4,
+        "PORPAG": 2.5,
+        "usage": 18,
+        "assistsTurnoverRatio": 0.5,
+        "offensiveReboundPct": 21.4,
+        "freeThrowRate": 75,
+        "effectiveFieldGoalPct": 37.5,
+        "trueShootingPct": 0.564,
+        "fieldGoals": {
+          "made": 3,
+          "attempted": 8,
+          "pct": 37.5
+        },
+        "twoPointFieldGoals": {
+          "made": 3,
+          "attempted": 7,
+          "pct": 42.9
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 1,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 6,
+          "attempted": 6,
+          "pct": 100
+        },
+        "rebounds": {
+          "offensive": 3,
+          "defensive": 11,
+          "total": 14
+        },
+        "winShares": {
+          "offensive": 0.1,
+          "defensive": 0.1,
+          "total": 0.2,
+          "totalPer40": 0.258
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 58,
+          "totalPlayers": 197,
+          "value": 12.0
+        },
+        "assistsPerGame": {
+          "rank": 99,
+          "totalPlayers": 197,
+          "value": 1.0
+        },
+        "reboundsPerGame": {
+          "rank": 2,
+          "totalPlayers": 197,
+          "value": 14.0
+        },
+        "stealsPerGame": {
+          "rank": 123,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 2,
+          "totalPlayers": 197,
+          "value": 4.0
+        },
+        "fieldGoalPct": {
+          "rank": 121,
+          "totalPlayers": 197,
+          "value": 37.5
+        },
+        "threePointPct": {
+          "rank": 112,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 17,
+          "totalPlayers": 197,
+          "value": 100
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 130,
+          "totalPlayers": 176,
+          "value": 37.5
+        },
+        "assistToTurnoverRatio": {
+          "rank": 40,
+          "totalPlayers": 120,
+          "value": 0.5
+        },
+        "offensiveRating": {
+          "rank": 100,
+          "totalPlayers": 176,
+          "value": 115
+        },
+        "defensiveRating": {
+          "rank": 18,
+          "totalPlayers": 197,
+          "value": 67.6
+        },
+        "netRating": {
+          "rank": 63,
+          "totalPlayers": 176,
+          "value": 47.4
+        },
+        "fieldGoalsMade": {
+          "rank": 78,
+          "totalPlayers": 197,
+          "value": 3
+        },
+        "fieldGoalsAttempted": {
+          "rank": 60,
+          "totalPlayers": 197,
+          "value": 8
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 112,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 103,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "freeThrowsMade": {
+          "rank": 19,
+          "totalPlayers": 197,
+          "value": 6
+        },
+        "freeThrowsAttempted": {
+          "rank": 31,
+          "totalPlayers": 197,
+          "value": 6
+        },
+        "offensiveRebounds": {
+          "rank": 18,
+          "totalPlayers": 197,
+          "value": 3
+        },
+        "defensiveRebounds": {
+          "rank": 3,
+          "totalPlayers": 197,
+          "value": 11
+        },
+        "totalRebounds": {
+          "rank": 4,
+          "totalPlayers": 197,
+          "value": 14
+        },
+        "totalAssists": {
+          "rank": 99,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "totalBlocks": {
+          "rank": 2,
+          "totalPlayers": 197,
+          "value": 4
+        },
+        "minutesPerGame": {
+          "rank": 15,
+          "totalPlayers": 197,
+          "value": 31.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Oregon",
+          "conference": "Big Ten",
+          "games": 33,
+          "gamesStarted": 33,
+          "seasonStats": {
+            "games": 33,
+            "minutes": 913,
+            "minutesPerGame": 27.7,
+            "points": 466,
+            "pointsPerGame": 14.1,
+            "assists": 63,
+            "assistsPerGame": 1.9,
+            "rebounds": {
+              "offensive": 60,
+              "defensive": 184,
+              "total": 244
+            },
+            "reboundsPerGame": 7.4,
+            "steals": 25,
+            "stealsPerGame": 0.8,
+            "blocks": 73,
+            "blocksPerGame": 2.2,
+            "turnovers": 51,
+            "turnoversPerGame": 1.5,
+            "fouls": 86,
+            "foulsPerGame": 2.6,
+            "fieldGoals": {
+              "made": 172,
+              "attempted": 337,
+              "pct": 51
+            },
+            "twoPointFieldGoals": {
+              "made": 138,
+              "attempted": 235,
+              "pct": 58.7
+            },
+            "threePointFieldGoals": {
+              "made": 34,
+              "attempted": 102,
+              "pct": 33.3
+            },
+            "freeThrows": {
+              "made": 88,
+              "attempted": 107,
+              "pct": 82.2
+            },
+            "offensiveRating": 120.6,
+            "defensiveRating": 96.8,
+            "netRating": 23.8,
+            "usage": 25.1,
+            "assistsTurnoverRatio": 1.24,
+            "effectiveFieldGoalPct": 56.1,
+            "trueShootingPct": 0.607,
+            "winShares": {
+              "offensive": 2.9,
+              "defensive": 1.8,
+              "total": 4.7,
+              "totalPer40": 0.206
+            }
+          }
+        },
+        {
+          "season": "2023-24",
+          "team": "Oregon",
+          "conference": "Pac-12",
+          "games": 5,
+          "gamesStarted": 5,
+          "seasonStats": {
+            "games": 5,
+            "minutes": 85,
+            "minutesPerGame": 17.0,
+            "points": 50,
+            "pointsPerGame": 10.0,
+            "assists": 4,
+            "assistsPerGame": 0.8,
+            "rebounds": {
+              "offensive": 7,
+              "defensive": 15,
+              "total": 22
+            },
+            "reboundsPerGame": 4.4,
+            "steals": 3,
+            "stealsPerGame": 0.6,
+            "blocks": 5,
+            "blocksPerGame": 1.0,
+            "turnovers": 3,
+            "turnoversPerGame": 0.6,
+            "fouls": 10,
+            "foulsPerGame": 2.0,
+            "fieldGoals": {
+              "made": 19,
+              "attempted": 39,
+              "pct": 48.7
+            },
+            "twoPointFieldGoals": {
+              "made": 15,
+              "attempted": 27,
+              "pct": 55.6
+            },
+            "threePointFieldGoals": {
+              "made": 4,
+              "attempted": 12,
+              "pct": 33.3
+            },
+            "freeThrows": {
+              "made": 8,
+              "attempted": 11,
+              "pct": 72.7
+            },
+            "offensiveRating": 120,
+            "defensiveRating": 92.4,
+            "netRating": 27.6,
+            "usage": 26.6,
+            "assistsTurnoverRatio": 1.33,
+            "effectiveFieldGoalPct": 53.8,
+            "trueShootingPct": 0.57,
+            "winShares": {
+              "offensive": 0.3,
+              "defensive": 0.2,
+              "total": 0.5,
+              "totalPer40": 0.235
+            }
+          }
+        },
+        {
+          "season": "2022-23",
+          "team": "Oregon",
+          "conference": "Pac-12",
+          "games": 25,
+          "gamesStarted": 19,
+          "seasonStats": {
+            "games": 25,
+            "minutes": 439,
+            "minutesPerGame": 17.6,
+            "points": 160,
+            "pointsPerGame": 6.4,
+            "assists": 14,
+            "assistsPerGame": 0.6,
+            "rebounds": {
+              "offensive": 25,
+              "defensive": 95,
+              "total": 120
+            },
+            "reboundsPerGame": 4.8,
+            "steals": 10,
+            "stealsPerGame": 0.4,
+            "blocks": 29,
+            "blocksPerGame": 1.2,
+            "turnovers": 20,
+            "turnoversPerGame": 0.8,
+            "fouls": 53,
+            "foulsPerGame": 2.1,
+            "fieldGoals": {
+              "made": 58,
+              "attempted": 118,
+              "pct": 49.2
+            },
+            "twoPointFieldGoals": {
+              "made": 42,
+              "attempted": 66,
+              "pct": 63.6
+            },
+            "threePointFieldGoals": {
+              "made": 16,
+              "attempted": 52,
+              "pct": 30.8
+            },
+            "freeThrows": {
+              "made": 28,
+              "attempted": 42,
+              "pct": 66.7
+            },
+            "offensiveRating": 114,
+            "defensiveRating": 96.7,
+            "netRating": 17.3,
+            "usage": 18.9,
+            "assistsTurnoverRatio": 0.7,
+            "effectiveFieldGoalPct": 55.9,
+            "trueShootingPct": 0.586,
+            "winShares": {
+              "offensive": 0.8,
+              "defensive": 0.9,
+              "total": 1.7,
+              "totalPer40": 0.155
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Devon Pryor",
+      "jerseyNumber": "22",
+      "position": "Forward",
+      "height": "6-7",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Houston, TX",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 1,
+        "minutes": 30,
+        "mpg": 30.0,
+        "points": 9,
+        "ppg": 9.0,
+        "rebounds": {
+          "offensive": 4,
+          "defensive": 1,
+          "total": 5
+        },
+        "rpg": 5.0,
+        "assists": 2,
+        "apg": 2.0,
+        "turnovers": 2,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 2,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 3,
+          "attempted": 5,
+          "percentage": 60.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "freeThrows": {
+          "made": 3,
+          "attempted": 6,
+          "percentage": 50.0
+        },
+        "assistToTurnoverRatio": 1.0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-05T03:30:00.000Z",
+          "opponent": "Hawai'i",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": true,
+          "minutes": 30,
+          "points": 9,
+          "rebounds": {
+            "offensive": 4,
+            "defensive": 1
+          },
+          "assists": 2,
+          "turnovers": 2,
+          "steals": 0,
+          "blocks": 0,
+          "fouls": 2,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 3,
+            "attempted": 5
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 0
+          },
+          "freeThrows": {
+            "made": 3,
+            "attempted": 6
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 223,
+        "team": "Oregon",
+        "conference": "Big Ten",
+        "athleteId": 441,
+        "athleteSourceId": "5152761",
+        "name": "Devon Pryor",
+        "position": "F",
+        "games": 1,
+        "starts": 1,
+        "minutes": 30,
+        "points": 9,
+        "turnovers": 2,
+        "fouls": 2,
+        "assists": 2,
+        "steals": 0,
+        "blocks": 0,
+        "offensiveRating": 106.7,
+        "defensiveRating": 91,
+        "netRating": 15.7,
+        "PORPAG": 1.3,
+        "usage": 14.2,
+        "assistsTurnoverRatio": 1,
+        "offensiveReboundPct": 80,
+        "freeThrowRate": 120,
+        "effectiveFieldGoalPct": 60,
+        "trueShootingPct": 0.589,
+        "fieldGoals": {
+          "made": 3,
+          "attempted": 5,
+          "pct": 60
+        },
+        "twoPointFieldGoals": {
+          "made": 3,
+          "attempted": 5,
+          "pct": 60
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 3,
+          "attempted": 6,
+          "pct": 50
+        },
+        "rebounds": {
+          "offensive": 4,
+          "defensive": 1,
+          "total": 5
+        },
+        "winShares": {
+          "offensive": 0,
+          "defensive": 0.1,
+          "total": 0.1,
+          "totalPer40": 0.133
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 84,
+          "totalPlayers": 197,
+          "value": 9.0
+        },
+        "assistsPerGame": {
+          "rank": 72,
+          "totalPlayers": 197,
+          "value": 2.0
+        },
+        "reboundsPerGame": {
+          "rank": 55,
+          "totalPlayers": 197,
+          "value": 5.0
+        },
+        "stealsPerGame": {
+          "rank": 169,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 156,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 55,
+          "totalPlayers": 197,
+          "value": 60
+        },
+        "threePointPct": {
+          "rank": 168,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 85,
+          "totalPlayers": 197,
+          "value": 50
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 80,
+          "totalPlayers": 176,
+          "value": 60
+        },
+        "assistToTurnoverRatio": {
+          "rank": 55,
+          "totalPlayers": 120,
+          "value": 1
+        },
+        "offensiveRating": {
+          "rank": 113,
+          "totalPlayers": 176,
+          "value": 106.7
+        },
+        "defensiveRating": {
+          "rank": 104,
+          "totalPlayers": 197,
+          "value": 91
+        },
+        "netRating": {
+          "rank": 114,
+          "totalPlayers": 176,
+          "value": 15.7
+        },
+        "fieldGoalsMade": {
+          "rank": 85,
+          "totalPlayers": 197,
+          "value": 3
+        },
+        "fieldGoalsAttempted": {
+          "rank": 107,
+          "totalPlayers": 197,
+          "value": 5
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 168,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 177,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsMade": {
+          "rank": 57,
+          "totalPlayers": 197,
+          "value": 3
+        },
+        "freeThrowsAttempted": {
+          "rank": 37,
+          "totalPlayers": 197,
+          "value": 6
+        },
+        "offensiveRebounds": {
+          "rank": 13,
+          "totalPlayers": 197,
+          "value": 4
+        },
+        "defensiveRebounds": {
+          "rank": 148,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "totalRebounds": {
+          "rank": 61,
+          "totalPlayers": 197,
+          "value": 5
+        },
+        "totalAssists": {
+          "rank": 73,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "totalBlocks": {
+          "rank": 156,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 22,
+          "totalPlayers": 197,
+          "value": 30.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Texas",
+          "conference": "SEC",
+          "games": 23,
+          "gamesStarted": 2,
+          "seasonStats": {
+            "games": 23,
+            "minutes": 278,
+            "minutesPerGame": 12.1,
+            "points": 74,
+            "pointsPerGame": 3.2,
+            "assists": 11,
+            "assistsPerGame": 0.5,
+            "rebounds": {
+              "offensive": 18,
+              "defensive": 27,
+              "total": 45
+            },
+            "reboundsPerGame": 2.0,
+            "steals": 6,
+            "stealsPerGame": 0.3,
+            "blocks": 2,
+            "blocksPerGame": 0.1,
+            "turnovers": 8,
+            "turnoversPerGame": 0.3,
+            "fouls": 24,
+            "foulsPerGame": 1.0,
+            "fieldGoals": {
+              "made": 29,
+              "attempted": 56,
+              "pct": 51.8
+            },
+            "twoPointFieldGoals": {
+              "made": 26,
+              "attempted": 40,
+              "pct": 65
+            },
+            "threePointFieldGoals": {
+              "made": 3,
+              "attempted": 16,
+              "pct": 18.8
+            },
+            "freeThrows": {
+              "made": 13,
+              "attempted": 16,
+              "pct": 81.3
+            },
+            "offensiveRating": 121.7,
+            "defensiveRating": 108.5,
+            "netRating": 13.2,
+            "usage": 13.5,
+            "assistsTurnoverRatio": 1.38,
+            "effectiveFieldGoalPct": 54.5,
+            "trueShootingPct": 0.587,
+            "winShares": {
+              "offensive": 0.5,
+              "defensive": 0.2,
+              "total": 0.7,
+              "totalPer40": 0.101
+            }
+          }
+        },
+        {
+          "season": "2023-24",
+          "team": "Texas",
+          "conference": "Big 12",
+          "games": 7,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 7,
+            "minutes": 25,
+            "minutesPerGame": 3.6,
+            "points": 5,
+            "pointsPerGame": 0.7,
+            "assists": 0,
+            "assistsPerGame": 0.0,
+            "rebounds": {
+              "offensive": 5,
+              "defensive": 2,
+              "total": 7
+            },
+            "reboundsPerGame": 1.0,
+            "steals": 0,
+            "stealsPerGame": 0.0,
+            "blocks": 0,
+            "blocksPerGame": 0.0,
+            "turnovers": 0,
+            "turnoversPerGame": 0.0,
+            "fouls": 3,
+            "foulsPerGame": 0.4,
+            "fieldGoals": {
+              "made": 2,
+              "attempted": 9,
+              "pct": 22.2
+            },
+            "twoPointFieldGoals": {
+              "made": 1,
+              "attempted": 4,
+              "pct": 25
+            },
+            "threePointFieldGoals": {
+              "made": 1,
+              "attempted": 5,
+              "pct": 20
+            },
+            "freeThrows": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "offensiveRating": 92,
+            "defensiveRating": 92.2,
+            "netRating": -0.2,
+            "usage": 18.2,
+            "assistsTurnoverRatio": null,
+            "effectiveFieldGoalPct": 27.8,
+            "trueShootingPct": 0.278,
+            "winShares": {
+              "offensive": 0,
+              "defensive": 0.1,
+              "total": 0.1,
+              "totalPer40": 0.16
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sean Stewart",
+      "jerseyNumber": "13",
+      "position": "Forward",
+      "height": "6-9",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Windermere, FL",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 0,
+        "minutes": 21,
+        "mpg": 21.0,
+        "points": 8,
+        "ppg": 8.0,
+        "rebounds": {
+          "offensive": 3,
+          "defensive": 4,
+          "total": 7
+        },
+        "rpg": 7.0,
+        "assists": 1,
+        "apg": 1.0,
+        "turnovers": 1,
+        "steals": 1,
+        "spg": 1.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 3,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 3,
+          "attempted": 8,
+          "percentage": 37.5
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "freeThrows": {
+          "made": 2,
+          "attempted": 4,
+          "percentage": 50.0
+        },
+        "assistToTurnoverRatio": 1.0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-05T03:30:00.000Z",
+          "opponent": "Hawai'i",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": false,
+          "minutes": 21,
+          "points": 8,
+          "rebounds": {
+            "offensive": 3,
+            "defensive": 4
+          },
+          "assists": 1,
+          "turnovers": 1,
+          "steals": 1,
+          "blocks": 0,
+          "fouls": 3,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 3,
+            "attempted": 8
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 0
+          },
+          "freeThrows": {
+            "made": 2,
+            "attempted": 4
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 223,
+        "team": "Oregon",
+        "conference": "Big Ten",
+        "athleteId": 417,
+        "athleteSourceId": "4869739",
+        "name": "Sean Stewart",
+        "position": "F",
+        "games": 1,
+        "starts": 0,
+        "minutes": 21,
+        "points": 8,
+        "turnovers": 1,
+        "fouls": 3,
+        "assists": 1,
+        "steals": 1,
+        "blocks": 0,
+        "offensiveRating": 93.9,
+        "defensiveRating": 75.8,
+        "netRating": 18.1,
+        "PORPAG": 0.5,
+        "usage": 22.7,
+        "assistsTurnoverRatio": 1,
+        "offensiveReboundPct": 42.9,
+        "freeThrowRate": 50,
+        "effectiveFieldGoalPct": 37.5,
+        "trueShootingPct": 0.41,
+        "fieldGoals": {
+          "made": 3,
+          "attempted": 8,
+          "pct": 37.5
+        },
+        "twoPointFieldGoals": {
+          "made": 3,
+          "attempted": 8,
+          "pct": 37.5
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 2,
+          "attempted": 4,
+          "pct": 50
+        },
+        "rebounds": {
+          "offensive": 3,
+          "defensive": 4,
+          "total": 7
+        },
+        "winShares": {
+          "offensive": 0,
+          "defensive": 0.1,
+          "total": 0.1,
+          "totalPer40": 0.19
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 85,
+          "totalPlayers": 197,
+          "value": 8.0
+        },
+        "assistsPerGame": {
+          "rank": 91,
+          "totalPlayers": 197,
+          "value": 1.0
+        },
+        "reboundsPerGame": {
+          "rank": 25,
+          "totalPlayers": 197,
+          "value": 7.0
+        },
+        "stealsPerGame": {
+          "rank": 38,
+          "totalPlayers": 197,
+          "value": 1.0
+        },
+        "blocksPerGame": {
+          "rank": 73,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 120,
+          "totalPlayers": 197,
+          "value": 37.5
+        },
+        "threePointPct": {
+          "rank": 96,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 77,
+          "totalPlayers": 197,
+          "value": 50
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 129,
+          "totalPlayers": 176,
+          "value": 37.5
+        },
+        "assistToTurnoverRatio": {
+          "rank": 67,
+          "totalPlayers": 120,
+          "value": 1
+        },
+        "offensiveRating": {
+          "rank": 126,
+          "totalPlayers": 176,
+          "value": 93.9
+        },
+        "defensiveRating": {
+          "rank": 43,
+          "totalPlayers": 197,
+          "value": 75.8
+        },
+        "netRating": {
+          "rank": 108,
+          "totalPlayers": 176,
+          "value": 18.1
+        },
+        "fieldGoalsMade": {
+          "rank": 74,
+          "totalPlayers": 197,
+          "value": 3
+        },
+        "fieldGoalsAttempted": {
+          "rank": 57,
+          "totalPlayers": 197,
+          "value": 8
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 96,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 136,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsMade": {
+          "rank": 65,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "freeThrowsAttempted": {
+          "rank": 53,
+          "totalPlayers": 197,
+          "value": 4
+        },
+        "offensiveRebounds": {
+          "rank": 17,
+          "totalPlayers": 197,
+          "value": 3
+        },
+        "defensiveRebounds": {
+          "rank": 46,
+          "totalPlayers": 197,
+          "value": 4
+        },
+        "totalRebounds": {
+          "rank": 28,
+          "totalPlayers": 197,
+          "value": 7
+        },
+        "totalAssists": {
+          "rank": 91,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "totalBlocks": {
+          "rank": 73,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 80,
+          "totalPlayers": 197,
+          "value": 21.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Ohio State",
+          "conference": "Big Ten",
+          "games": 30,
+          "gamesStarted": 30,
+          "seasonStats": {
+            "games": 30,
+            "minutes": 552,
+            "minutesPerGame": 18.4,
+            "points": 170,
+            "pointsPerGame": 5.7,
+            "assists": 19,
+            "assistsPerGame": 0.6,
+            "rebounds": {
+              "offensive": 46,
+              "defensive": 128,
+              "total": 174
+            },
+            "reboundsPerGame": 5.8,
+            "steals": 21,
+            "stealsPerGame": 0.7,
+            "blocks": 27,
+            "blocksPerGame": 0.9,
+            "turnovers": 32,
+            "turnoversPerGame": 1.1,
+            "fouls": 103,
+            "foulsPerGame": 3.4,
+            "fieldGoals": {
+              "made": 71,
+              "attempted": 131,
+              "pct": 54.2
+            },
+            "twoPointFieldGoals": {
+              "made": 70,
+              "attempted": 129,
+              "pct": 54.3
+            },
+            "threePointFieldGoals": {
+              "made": 1,
+              "attempted": 2,
+              "pct": 50
+            },
+            "freeThrows": {
+              "made": 27,
+              "attempted": 54,
+              "pct": 50
+            },
+            "offensiveRating": 103.7,
+            "defensiveRating": 98,
+            "netRating": 5.7,
+            "usage": 18.2,
+            "assistsTurnoverRatio": 0.59,
+            "effectiveFieldGoalPct": 54.6,
+            "trueShootingPct": 0.549,
+            "winShares": {
+              "offensive": 0.6,
+              "defensive": 1,
+              "total": 1.6,
+              "totalPer40": 0.116
+            }
+          }
+        },
+        {
+          "season": "2023-24",
+          "team": "Duke",
+          "conference": "ACC",
+          "games": 29,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 29,
+            "minutes": 241,
+            "minutesPerGame": 8.3,
+            "points": 79,
+            "pointsPerGame": 2.7,
+            "assists": 6,
+            "assistsPerGame": 0.2,
+            "rebounds": {
+              "offensive": 41,
+              "defensive": 51,
+              "total": 92
+            },
+            "reboundsPerGame": 3.2,
+            "steals": 16,
+            "stealsPerGame": 0.6,
+            "blocks": 14,
+            "blocksPerGame": 0.5,
+            "turnovers": 11,
+            "turnoversPerGame": 0.4,
+            "fouls": 44,
+            "foulsPerGame": 1.5,
+            "fieldGoals": {
+              "made": 33,
+              "attempted": 60,
+              "pct": 55
+            },
+            "twoPointFieldGoals": {
+              "made": 33,
+              "attempted": 60,
+              "pct": 55
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 13,
+              "attempted": 24,
+              "pct": 54.2
+            },
+            "offensiveRating": 116.8,
+            "defensiveRating": 89.4,
+            "netRating": 27.4,
+            "usage": 17.4,
+            "assistsTurnoverRatio": 0.55,
+            "effectiveFieldGoalPct": 55,
+            "trueShootingPct": 0.56,
+            "winShares": {
+              "offensive": 0.5,
+              "defensive": 0.6,
+              "total": 1.1,
+              "totalPer40": 0.183
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Drew Carter",
+      "jerseyNumber": "12",
+      "position": "Guard",
+      "height": "6-3",
+      "class": "SO",
+      "isFreshman": false,
+      "hometown": "Portland, OR",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 0,
+        "minutes": 19,
+        "mpg": 19.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 1,
+        "apg": 1.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 1,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 4,
+          "percentage": 0.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 2,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "assistToTurnoverRatio": 0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-05T03:30:00.000Z",
+          "opponent": "Hawai'i",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": false,
+          "minutes": 19,
+          "points": 0,
+          "rebounds": {
+            "offensive": 0,
+            "defensive": 0
+          },
+          "assists": 1,
+          "turnovers": 0,
+          "steals": 0,
+          "blocks": 0,
+          "fouls": 1,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 0,
+            "attempted": 4
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 2
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 0
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 223,
+        "team": "Oregon",
+        "conference": "Big Ten",
+        "athleteId": 7253,
+        "athleteSourceId": "5176387",
+        "name": "Drew Carter",
+        "position": "G",
+        "games": 1,
+        "starts": 0,
+        "minutes": 19,
+        "points": 0,
+        "turnovers": 0,
+        "fouls": 1,
+        "assists": 1,
+        "steals": 0,
+        "blocks": 0,
+        "offensiveRating": 16,
+        "defensiveRating": 93,
+        "netRating": -77,
+        "PORPAG": -2.1,
+        "usage": 9.3,
+        "assistsTurnoverRatio": null,
+        "offensiveReboundPct": null,
+        "freeThrowRate": 0,
+        "effectiveFieldGoalPct": 0,
+        "trueShootingPct": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 4,
+          "pct": 0
+        },
+        "twoPointFieldGoals": {
+          "made": 0,
+          "attempted": 2,
+          "pct": 0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 2,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "winShares": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0,
+          "totalPer40": 0
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 185,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "assistsPerGame": {
+          "rank": 118,
+          "totalPlayers": 197,
+          "value": 1.0
+        },
+        "reboundsPerGame": {
+          "rank": 185,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "stealsPerGame": {
+          "rank": 165,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 153,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 185,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointPct": {
+          "rank": 165,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 169,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 169,
+          "totalPlayers": 176,
+          "value": 0
+        },
+        "offensiveRating": {
+          "rank": 164,
+          "totalPlayers": 176,
+          "value": 16
+        },
+        "defensiveRating": {
+          "rank": 117,
+          "totalPlayers": 197,
+          "value": 93
+        },
+        "netRating": {
+          "rank": 164,
+          "totalPlayers": 176,
+          "value": -77
+        },
+        "fieldGoalsMade": {
+          "rank": 185,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "fieldGoalsAttempted": {
+          "rank": 121,
+          "totalPlayers": 197,
+          "value": 4
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 165,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 87,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "freeThrowsMade": {
+          "rank": 169,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 172,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 172,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "defensiveRebounds": {
+          "rank": 180,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "totalRebounds": {
+          "rank": 185,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "totalAssists": {
+          "rank": 119,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "totalBlocks": {
+          "rank": 153,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 108,
+          "totalPlayers": 197,
+          "value": 19.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Oregon",
+          "conference": "Big Ten",
+          "games": 3,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 3,
+            "minutes": 3,
+            "minutesPerGame": 1.0,
+            "points": 0,
+            "pointsPerGame": 0.0,
+            "assists": 0,
+            "assistsPerGame": 0.0,
+            "rebounds": {
+              "offensive": 0,
+              "defensive": 0,
+              "total": 0
+            },
+            "reboundsPerGame": 0.0,
+            "steals": 0,
+            "stealsPerGame": 0.0,
+            "blocks": 0,
+            "blocksPerGame": 0.0,
+            "turnovers": 0,
+            "turnoversPerGame": 0.0,
+            "fouls": 1,
+            "foulsPerGame": 0.3,
+            "fieldGoals": {
+              "made": 0,
+              "attempted": 1,
+              "pct": 0
+            },
+            "twoPointFieldGoals": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 1,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "offensiveRating": 0,
+            "defensiveRating": 86.8,
+            "netRating": -86.8,
+            "usage": 16.8,
+            "assistsTurnoverRatio": null,
+            "effectiveFieldGoalPct": 0,
+            "trueShootingPct": 0,
+            "winShares": {
+              "offensive": 0,
+              "defensive": 0,
+              "total": 0,
+              "totalPer40": 0
+            }
+          }
+        },
+        {
+          "season": "2023-24",
+          "team": "UC Davis",
+          "conference": "Big West",
+          "games": 9,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 9,
+            "minutes": 22,
+            "minutesPerGame": 2.4,
+            "points": 11,
+            "pointsPerGame": 1.2,
+            "assists": 1,
+            "assistsPerGame": 0.1,
+            "rebounds": {
+              "offensive": 2,
+              "defensive": 0,
+              "total": 2
+            },
+            "reboundsPerGame": 0.2,
+            "steals": 1,
+            "stealsPerGame": 0.1,
+            "blocks": 0,
+            "blocksPerGame": 0.0,
+            "turnovers": 1,
+            "turnoversPerGame": 0.1,
+            "fouls": 3,
+            "foulsPerGame": 0.3,
+            "fieldGoals": {
+              "made": 4,
+              "attempted": 6,
+              "pct": 66.7
+            },
+            "twoPointFieldGoals": {
+              "made": 1,
+              "attempted": 3,
+              "pct": 33.3
+            },
+            "threePointFieldGoals": {
+              "made": 3,
+              "attempted": 3,
+              "pct": 100
+            },
+            "freeThrows": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "offensiveRating": 151.8,
+            "defensiveRating": 112.5,
+            "netRating": 39.3,
+            "usage": 16.3,
+            "assistsTurnoverRatio": 1,
+            "effectiveFieldGoalPct": 91.7,
+            "trueShootingPct": 0.917,
+            "winShares": {
+              "offensive": 0.1,
+              "defensive": 0,
+              "total": 0.1,
+              "totalPer40": 0.182
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Kwame Evans Jr.",
+      "jerseyNumber": "10",
+      "position": "Forward",
+      "height": "6-10",
+      "class": "JR",
+      "isFreshman": false,
+      "hometown": "Baltimore, MD",
+      "highSchool": "Montverde Academy",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 1,
+        "minutes": 18,
+        "mpg": 18.0,
+        "points": 7,
+        "ppg": 7.0,
+        "rebounds": {
+          "offensive": 1,
+          "defensive": 2,
+          "total": 3
+        },
+        "rpg": 3.0,
+        "assists": 3,
+        "apg": 3.0,
+        "turnovers": 3,
+        "steals": 2,
+        "spg": 2.0,
+        "blocks": 2,
+        "bpg": 2.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 3,
+          "attempted": 6,
+          "percentage": 50.0
+        },
+        "threePointFieldGoals": {
+          "made": 1,
+          "attempted": 3,
+          "percentage": 33.3
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 2,
+          "percentage": 0.0
+        },
+        "assistToTurnoverRatio": 1.0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-05T03:30:00.000Z",
+          "opponent": "Hawai'i",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": true,
+          "minutes": 18,
+          "points": 7,
+          "rebounds": {
+            "offensive": 1,
+            "defensive": 2
+          },
+          "assists": 3,
+          "turnovers": 3,
+          "steals": 2,
+          "blocks": 2,
+          "fouls": 0,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 3,
+            "attempted": 6
+          },
+          "threePointFieldGoals": {
+            "made": 1,
+            "attempted": 3
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 2
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 223,
+        "team": "Oregon",
+        "conference": "Big Ten",
+        "athleteId": 7239,
+        "athleteSourceId": "4683769",
+        "name": "Kwame Evans Jr.",
+        "position": "F",
+        "games": 1,
+        "starts": 1,
+        "minutes": 18,
+        "points": 7,
+        "turnovers": 3,
+        "fouls": 0,
+        "assists": 3,
+        "steals": 2,
+        "blocks": 2,
+        "offensiveRating": 83.6,
+        "defensiveRating": 70.2,
+        "netRating": 13.4,
+        "PORPAG": -0.3,
+        "usage": 24.3,
+        "assistsTurnoverRatio": 1,
+        "offensiveReboundPct": 33.3,
+        "freeThrowRate": 33.3,
+        "effectiveFieldGoalPct": 58.3,
+        "trueShootingPct": 0.509,
+        "fieldGoals": {
+          "made": 3,
+          "attempted": 6,
+          "pct": 50
+        },
+        "twoPointFieldGoals": {
+          "made": 2,
+          "attempted": 3,
+          "pct": 66.7
+        },
+        "threePointFieldGoals": {
+          "made": 1,
+          "attempted": 3,
+          "pct": 33.3
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 2,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 1,
+          "defensive": 2,
+          "total": 3
+        },
+        "winShares": {
+          "offensive": 0,
+          "defensive": 0.1,
+          "total": 0.1,
+          "totalPer40": 0.222
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 91,
+          "totalPlayers": 197,
+          "value": 7.0
+        },
+        "assistsPerGame": {
+          "rank": 38,
+          "totalPlayers": 197,
+          "value": 3.0
+        },
+        "reboundsPerGame": {
+          "rank": 95,
+          "totalPlayers": 197,
+          "value": 3.0
+        },
+        "stealsPerGame": {
+          "rank": 21,
+          "totalPlayers": 197,
+          "value": 2.0
+        },
+        "blocksPerGame": {
+          "rank": 8,
+          "totalPlayers": 197,
+          "value": 2.0
+        },
+        "fieldGoalPct": {
+          "rank": 79,
+          "totalPlayers": 197,
+          "value": 50
+        },
+        "threePointPct": {
+          "rank": 65,
+          "totalPlayers": 197,
+          "value": 33.3
+        },
+        "freeThrowPct": {
+          "rank": 126,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 84,
+          "totalPlayers": 176,
+          "value": 58.3
+        },
+        "assistToTurnoverRatio": {
+          "rank": 63,
+          "totalPlayers": 120,
+          "value": 1
+        },
+        "offensiveRating": {
+          "rank": 137,
+          "totalPlayers": 176,
+          "value": 83.6
+        },
+        "defensiveRating": {
+          "rank": 21,
+          "totalPlayers": 197,
+          "value": 70.2
+        },
+        "netRating": {
+          "rank": 118,
+          "totalPlayers": 176,
+          "value": 13.4
+        },
+        "fieldGoalsMade": {
+          "rank": 79,
+          "totalPlayers": 197,
+          "value": 3
+        },
+        "fieldGoalsAttempted": {
+          "rank": 87,
+          "totalPlayers": 197,
+          "value": 6
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 59,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 62,
+          "totalPlayers": 197,
+          "value": 3
+        },
+        "freeThrowsMade": {
+          "rank": 126,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 82,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "offensiveRebounds": {
+          "rank": 71,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "defensiveRebounds": {
+          "rank": 95,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "totalRebounds": {
+          "rank": 96,
+          "totalPlayers": 197,
+          "value": 3
+        },
+        "totalAssists": {
+          "rank": 40,
+          "totalPlayers": 197,
+          "value": 3
+        },
+        "totalBlocks": {
+          "rank": 10,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "minutesPerGame": {
+          "rank": 115,
+          "totalPlayers": 197,
+          "value": 18.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Oregon",
+          "conference": "Big Ten",
+          "games": 33,
+          "gamesStarted": 3,
+          "seasonStats": {
+            "games": 33,
+            "minutes": 531,
+            "minutesPerGame": 16.1,
+            "points": 202,
+            "pointsPerGame": 6.1,
+            "assists": 23,
+            "assistsPerGame": 0.7,
+            "rebounds": {
+              "offensive": 52,
+              "defensive": 92,
+              "total": 144
+            },
+            "reboundsPerGame": 4.4,
+            "steals": 13,
+            "stealsPerGame": 0.4,
+            "blocks": 19,
+            "blocksPerGame": 0.6,
+            "turnovers": 35,
+            "turnoversPerGame": 1.1,
+            "fouls": 61,
+            "foulsPerGame": 1.8,
+            "fieldGoals": {
+              "made": 62,
+              "attempted": 132,
+              "pct": 47
+            },
+            "twoPointFieldGoals": {
+              "made": 48,
+              "attempted": 82,
+              "pct": 58.5
+            },
+            "threePointFieldGoals": {
+              "made": 14,
+              "attempted": 50,
+              "pct": 28
+            },
+            "freeThrows": {
+              "made": 64,
+              "attempted": 87,
+              "pct": 73.6
+            },
+            "offensiveRating": 113.6,
+            "defensiveRating": 101.1,
+            "netRating": 12.5,
+            "usage": 20.4,
+            "assistsTurnoverRatio": 0.66,
+            "effectiveFieldGoalPct": 52.3,
+            "trueShootingPct": 0.593,
+            "winShares": {
+              "offensive": 1.1,
+              "defensive": 0.8,
+              "total": 1.9,
+              "totalPer40": 0.143
+            }
+          }
+        },
+        {
+          "season": "2023-24",
+          "team": "Oregon",
+          "conference": "Pac-12",
+          "games": 34,
+          "gamesStarted": 27,
+          "seasonStats": {
+            "games": 34,
+            "minutes": 744,
+            "minutesPerGame": 21.9,
+            "points": 254,
+            "pointsPerGame": 7.5,
+            "assists": 38,
+            "assistsPerGame": 1.1,
+            "rebounds": {
+              "offensive": 50,
+              "defensive": 116,
+              "total": 166
+            },
+            "reboundsPerGame": 4.9,
+            "steals": 43,
+            "stealsPerGame": 1.3,
+            "blocks": 34,
+            "blocksPerGame": 1.0,
+            "turnovers": 26,
+            "turnoversPerGame": 0.8,
+            "fouls": 82,
+            "foulsPerGame": 2.4,
+            "fieldGoals": {
+              "made": 88,
+              "attempted": 196,
+              "pct": 44.9
+            },
+            "twoPointFieldGoals": {
+              "made": 68,
+              "attempted": 123,
+              "pct": 55.3
+            },
+            "threePointFieldGoals": {
+              "made": 20,
+              "attempted": 73,
+              "pct": 27.4
+            },
+            "freeThrows": {
+              "made": 58,
+              "attempted": 74,
+              "pct": 78.4
+            },
+            "offensiveRating": 116.6,
+            "defensiveRating": 99,
+            "netRating": 17.6,
+            "usage": 17.7,
+            "assistsTurnoverRatio": 1.46,
+            "effectiveFieldGoalPct": 50,
+            "trueShootingPct": 0.556,
+            "winShares": {
+              "offensive": 1.5,
+              "defensive": 1.3,
+              "total": 2.8,
+              "totalPer40": 0.151
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Wei Lin",
+      "jerseyNumber": "23",
+      "position": "Guard",
+      "height": "6-4",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Xiamen, China",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 1,
+        "minutes": 17,
+        "mpg": 17.0,
+        "points": 2,
+        "ppg": 2.0,
+        "rebounds": {
+          "offensive": 1,
+          "defensive": 2,
+          "total": 3
+        },
+        "rpg": 3.0,
+        "assists": 1,
+        "apg": 1.0,
+        "turnovers": 4,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 1,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 7,
+          "percentage": 0.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 4,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 2,
+          "attempted": 2,
+          "percentage": 100.0
+        },
+        "assistToTurnoverRatio": 0.2
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-05T03:30:00.000Z",
+          "opponent": "Hawai'i",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": true,
+          "minutes": 17,
+          "points": 2,
+          "rebounds": {
+            "offensive": 1,
+            "defensive": 2
+          },
+          "assists": 1,
+          "turnovers": 4,
+          "steals": 0,
+          "blocks": 0,
+          "fouls": 1,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 0,
+            "attempted": 7
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 4
+          },
+          "freeThrows": {
+            "made": 2,
+            "attempted": 2
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 223,
+        "team": "Oregon",
+        "conference": "Big Ten",
+        "athleteId": 201361,
+        "athleteSourceId": "5312019",
+        "name": "Wei Lin",
+        "position": "G",
+        "games": 1,
+        "starts": 1,
+        "minutes": 17,
+        "points": 2,
+        "turnovers": 4,
+        "fouls": 1,
+        "assists": 1,
+        "steals": 0,
+        "blocks": 0,
+        "offensiveRating": 27.1,
+        "defensiveRating": 86.1,
+        "netRating": -59,
+        "PORPAG": -5.3,
+        "usage": 30.9,
+        "assistsTurnoverRatio": 0.25,
+        "offensiveReboundPct": 33.3,
+        "freeThrowRate": 28.6,
+        "effectiveFieldGoalPct": 0,
+        "trueShootingPct": 0.127,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 7,
+          "pct": 0
+        },
+        "twoPointFieldGoals": {
+          "made": 0,
+          "attempted": 3,
+          "pct": 0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 4,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 2,
+          "attempted": 2,
+          "pct": 100
+        },
+        "rebounds": {
+          "offensive": 1,
+          "defensive": 2,
+          "total": 3
+        },
+        "winShares": {
+          "offensive": -0.1,
+          "defensive": 0.1,
+          "total": 0,
+          "totalPer40": 0
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 135,
+          "totalPlayers": 197,
+          "value": 2.0
+        },
+        "assistsPerGame": {
+          "rank": 86,
+          "totalPlayers": 197,
+          "value": 1.0
+        },
+        "reboundsPerGame": {
+          "rank": 87,
+          "totalPlayers": 197,
+          "value": 3.0
+        },
+        "stealsPerGame": {
+          "rank": 95,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 52,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 148,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointPct": {
+          "rank": 84,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 4,
+          "totalPlayers": 197,
+          "value": 100
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 147,
+          "totalPlayers": 176,
+          "value": 0
+        },
+        "assistToTurnoverRatio": {
+          "rank": 32,
+          "totalPlayers": 120,
+          "value": 0.25
+        },
+        "offensiveRating": {
+          "rank": 160,
+          "totalPlayers": 176,
+          "value": 27.1
+        },
+        "defensiveRating": {
+          "rank": 91,
+          "totalPlayers": 197,
+          "value": 86.1
+        },
+        "netRating": {
+          "rank": 160,
+          "totalPlayers": 176,
+          "value": -59
+        },
+        "fieldGoalsMade": {
+          "rank": 148,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "fieldGoalsAttempted": {
+          "rank": 66,
+          "totalPlayers": 197,
+          "value": 7
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 84,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 42,
+          "totalPlayers": 197,
+          "value": 4
+        },
+        "freeThrowsMade": {
+          "rank": 62,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "freeThrowsAttempted": {
+          "rank": 73,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "offensiveRebounds": {
+          "rank": 61,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "defensiveRebounds": {
+          "rank": 80,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "totalRebounds": {
+          "rank": 88,
+          "totalPlayers": 197,
+          "value": 3
+        },
+        "totalAssists": {
+          "rank": 86,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "totalBlocks": {
+          "rank": 52,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 122,
+          "totalPlayers": 197,
+          "value": 17.0
+        }
+      }
+    },
+    {
+      "name": "Dezdrick Lindsay",
+      "jerseyNumber": "4",
+      "position": "Forward",
+      "height": "6-6",
+      "class": "SO",
+      "isFreshman": false,
+      "hometown": "Louisville, KY",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 0,
+        "minutes": 15,
+        "mpg": 15.0,
+        "points": 2,
+        "ppg": 2.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 3,
+          "total": 3
+        },
+        "rpg": 3.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 3,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 1,
+        "bpg": 1.0,
+        "fouls": 3,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 1,
+          "attempted": 6,
+          "percentage": 16.7
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "assistToTurnoverRatio": 0.0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-05T03:30:00.000Z",
+          "opponent": "Hawai'i",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": false,
+          "minutes": 15,
+          "points": 2,
+          "rebounds": {
+            "offensive": 0,
+            "defensive": 3
+          },
+          "assists": 0,
+          "turnovers": 3,
+          "steals": 0,
+          "blocks": 1,
+          "fouls": 3,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 1,
+            "attempted": 6
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 0
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 0
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 223,
+        "team": "Oregon",
+        "conference": "Big Ten",
+        "athleteId": 7248,
+        "athleteSourceId": "5239600",
+        "name": "Dezdrick Lindsay",
+        "position": "F",
+        "games": 1,
+        "starts": 0,
+        "minutes": 15,
+        "points": 2,
+        "turnovers": 3,
+        "fouls": 3,
+        "assists": 0,
+        "steals": 0,
+        "blocks": 1,
+        "offensiveRating": 26.6,
+        "defensiveRating": 77.9,
+        "netRating": -51.3,
+        "PORPAG": -4,
+        "usage": 26.5,
+        "assistsTurnoverRatio": 0,
+        "offensiveReboundPct": 0,
+        "freeThrowRate": 0,
+        "effectiveFieldGoalPct": 16.7,
+        "trueShootingPct": 0.167,
+        "fieldGoals": {
+          "made": 1,
+          "attempted": 6,
+          "pct": 16.7
+        },
+        "twoPointFieldGoals": {
+          "made": 1,
+          "attempted": 6,
+          "pct": 16.7
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 3,
+          "total": 3
+        },
+        "winShares": {
+          "offensive": -0.1,
+          "defensive": 0.1,
+          "total": 0,
+          "totalPer40": 0
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 151,
+          "totalPlayers": 197,
+          "value": 2.0
+        },
+        "assistsPerGame": {
+          "rank": 183,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "reboundsPerGame": {
+          "rank": 102,
+          "totalPlayers": 197,
+          "value": 3.0
+        },
+        "stealsPerGame": {
+          "rank": 168,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 39,
+          "totalPlayers": 197,
+          "value": 1.0
+        },
+        "fieldGoalPct": {
+          "rank": 144,
+          "totalPlayers": 197,
+          "value": 16.7
+        },
+        "threePointPct": {
+          "rank": 167,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 172,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 144,
+          "totalPlayers": 176,
+          "value": 16.7
+        },
+        "assistToTurnoverRatio": {
+          "rank": 6,
+          "totalPlayers": 120,
+          "value": 0
+        },
+        "offensiveRating": {
+          "rank": 161,
+          "totalPlayers": 176,
+          "value": 26.6
+        },
+        "defensiveRating": {
+          "rank": 51,
+          "totalPlayers": 197,
+          "value": 77.9
+        },
+        "netRating": {
+          "rank": 158,
+          "totalPlayers": 176,
+          "value": -51.3
+        },
+        "fieldGoalsMade": {
+          "rank": 138,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "fieldGoalsAttempted": {
+          "rank": 93,
+          "totalPlayers": 197,
+          "value": 6
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 167,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 176,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsMade": {
+          "rank": 172,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 174,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 176,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "defensiveRebounds": {
+          "rank": 75,
+          "totalPlayers": 197,
+          "value": 3
+        },
+        "totalRebounds": {
+          "rank": 102,
+          "totalPlayers": 197,
+          "value": 3
+        },
+        "totalAssists": {
+          "rank": 183,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "totalBlocks": {
+          "rank": 41,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "minutesPerGame": {
+          "rank": 129,
+          "totalPlayers": 197,
+          "value": 15.0
+        }
+      }
+    },
+    {
+      "name": "Ege Demir",
+      "jerseyNumber": "16",
+      "position": "Center",
+      "height": "6-11",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Kaduna, Nigeria",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 0,
+        "minutes": 7,
+        "mpg": 7.0,
+        "points": 2,
+        "ppg": 2.0,
+        "rebounds": {
+          "offensive": 2,
+          "defensive": 2,
+          "total": 4
+        },
+        "rpg": 4.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 4,
+        "steals": 3,
+        "spg": 3.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 2,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 1,
+          "attempted": 2,
+          "percentage": 50.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "assistToTurnoverRatio": 0.0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-05T03:30:00.000Z",
+          "opponent": "Hawai'i",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": false,
+          "minutes": 7,
+          "points": 2,
+          "rebounds": {
+            "offensive": 2,
+            "defensive": 2
+          },
+          "assists": 0,
+          "turnovers": 4,
+          "steals": 3,
+          "blocks": 0,
+          "fouls": 2,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 1,
+            "attempted": 2
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 0
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 0
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 223,
+        "team": "Oregon",
+        "conference": "Big Ten",
+        "athleteId": 201355,
+        "athleteSourceId": "5312018",
+        "name": "Ege Demir",
+        "position": "C",
+        "games": 1,
+        "starts": 0,
+        "minutes": 7,
+        "points": 2,
+        "turnovers": 4,
+        "fouls": 2,
+        "assists": 0,
+        "steals": 3,
+        "blocks": 0,
+        "offensiveRating": 34.6,
+        "defensiveRating": 25.7,
+        "netRating": 8.9,
+        "PORPAG": -2.3,
+        "usage": 37.9,
+        "assistsTurnoverRatio": 0,
+        "offensiveReboundPct": 50,
+        "freeThrowRate": 0,
+        "effectiveFieldGoalPct": 50,
+        "trueShootingPct": 0.5,
+        "fieldGoals": {
+          "made": 1,
+          "attempted": 2,
+          "pct": 50
+        },
+        "twoPointFieldGoals": {
+          "made": 1,
+          "attempted": 2,
+          "pct": 50
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 2,
+          "defensive": 2,
+          "total": 4
+        },
+        "winShares": {
+          "offensive": -0.1,
+          "defensive": 0.1,
+          "total": 0,
+          "totalPer40": 0
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 150,
+          "totalPlayers": 197,
+          "value": 2.0
+        },
+        "assistsPerGame": {
+          "rank": 178,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "reboundsPerGame": {
+          "rank": 80,
+          "totalPlayers": 197,
+          "value": 4.0
+        },
+        "stealsPerGame": {
+          "rank": 6,
+          "totalPlayers": 197,
+          "value": 3.0
+        },
+        "blocksPerGame": {
+          "rank": 150,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 86,
+          "totalPlayers": 197,
+          "value": 50
+        },
+        "threePointPct": {
+          "rank": 161,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 166,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "effectiveFieldGoalPct": {
+          "rank": 103,
+          "totalPlayers": 176,
+          "value": 50
+        },
+        "assistToTurnoverRatio": {
+          "rank": 9,
+          "totalPlayers": 120,
+          "value": 0
+        },
+        "offensiveRating": {
+          "rank": 157,
+          "totalPlayers": 176,
+          "value": 34.6
+        },
+        "defensiveRating": {
+          "rank": 2,
+          "totalPlayers": 197,
+          "value": 25.7
+        },
+        "netRating": {
+          "rank": 122,
+          "totalPlayers": 176,
+          "value": 8.9
+        },
+        "fieldGoalsMade": {
+          "rank": 137,
+          "totalPlayers": 197,
+          "value": 1
+        },
+        "fieldGoalsAttempted": {
+          "rank": 146,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 161,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 174,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsMade": {
+          "rank": 166,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 169,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 53,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "defensiveRebounds": {
+          "rank": 109,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "totalRebounds": {
+          "rank": 83,
+          "totalPlayers": 197,
+          "value": 4
+        },
+        "totalAssists": {
+          "rank": 178,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "totalBlocks": {
+          "rank": 150,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 164,
+          "totalPlayers": 197,
+          "value": 7.0
+        }
+      }
+    },
+    {
+      "name": "Oleksandr Kobzystyi",
+      "jerseyNumber": "6",
+      "position": "Forward",
+      "height": "6-8",
+      "class": "SO",
+      "isFreshman": false,
+      "hometown": "Kremenchuk, UKR",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 1,
+        "gamesStarted": 0,
+        "minutes": 7,
+        "mpg": 7.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 2,
+          "total": 2
+        },
+        "rpg": 2.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 1,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 1,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0
+        },
+        "assistToTurnoverRatio": 0.0
+      },
+      "gameByGame": [
+        {
+          "date": "2025-11-05T03:30:00.000Z",
+          "opponent": "Hawai'i",
+          "isHome": true,
+          "conferenceGame": false,
+          "starter": false,
+          "minutes": 7,
+          "points": 0,
+          "rebounds": {
+            "offensive": 0,
+            "defensive": 2
+          },
+          "assists": 0,
+          "turnovers": 1,
+          "steals": 0,
+          "blocks": 0,
+          "fouls": 1,
+          "ejected": false,
+          "fieldGoals": {
+            "made": 0,
+            "attempted": 0
+          },
+          "threePointFieldGoals": {
+            "made": 0,
+            "attempted": 0
+          },
+          "freeThrows": {
+            "made": 0,
+            "attempted": 0
+          }
+        }
+      ],
+      "seasonStatsWithRankings": {
+        "season": 2026,
+        "seasonLabel": "20252026",
+        "teamId": 223,
+        "team": "Oregon",
+        "conference": "Big Ten",
+        "athleteId": 9387,
+        "athleteSourceId": "5234300",
+        "name": "Oleksandr Kobzystyi",
+        "position": "F",
+        "games": 1,
+        "starts": 0,
+        "minutes": 7,
+        "points": 0,
+        "turnovers": 1,
+        "fouls": 1,
+        "assists": 0,
+        "steals": 0,
+        "blocks": 0,
+        "offensiveRating": null,
+        "defensiveRating": 75.7,
+        "netRating": null,
+        "PORPAG": null,
+        "usage": 6.3,
+        "assistsTurnoverRatio": 0,
+        "offensiveReboundPct": 0,
+        "freeThrowRate": null,
+        "effectiveFieldGoalPct": null,
+        "trueShootingPct": null,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "twoPointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "pct": 0
+        },
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 2,
+          "total": 2
+        },
+        "winShares": {
+          "offensive": null,
+          "defensive": 0,
+          "total": null,
+          "totalPer40": null
+        }
+      },
+      "conferenceRankings": {
+        "pointsPerGame": {
+          "rank": 163,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "assistsPerGame": {
+          "rank": 148,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "reboundsPerGame": {
+          "rank": 112,
+          "totalPlayers": 197,
+          "value": 2.0
+        },
+        "stealsPerGame": {
+          "rank": 120,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "blocksPerGame": {
+          "rank": 88,
+          "totalPlayers": 197,
+          "value": 0.0
+        },
+        "fieldGoalPct": {
+          "rank": 159,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointPct": {
+          "rank": 109,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowPct": {
+          "rank": 115,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "assistToTurnoverRatio": {
+          "rank": 19,
+          "totalPlayers": 120,
+          "value": 0
+        },
+        "defensiveRating": {
+          "rank": 42,
+          "totalPlayers": 197,
+          "value": 75.7
+        },
+        "fieldGoalsMade": {
+          "rank": 159,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "fieldGoalsAttempted": {
+          "rank": 179,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointFieldGoalsMade": {
+          "rank": 109,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "threePointFieldGoalsAttempted": {
+          "rank": 144,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsMade": {
+          "rank": 115,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "freeThrowsAttempted": {
+          "rank": 122,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "offensiveRebounds": {
+          "rank": 129,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "defensiveRebounds": {
+          "rank": 91,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "totalRebounds": {
+          "rank": 112,
+          "totalPlayers": 197,
+          "value": 2
+        },
+        "totalAssists": {
+          "rank": 148,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "totalBlocks": {
+          "rank": 88,
+          "totalPlayers": 197,
+          "value": 0
+        },
+        "minutesPerGame": {
+          "rank": 159,
+          "totalPlayers": 197,
+          "value": 7.0
+        }
+      },
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Oregon",
+          "conference": "Big Ten",
+          "games": 2,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 2,
+            "minutes": 8,
+            "minutesPerGame": 4.0,
+            "points": 0,
+            "pointsPerGame": 0.0,
+            "assists": 0,
+            "assistsPerGame": 0.0,
+            "rebounds": {
+              "offensive": 1,
+              "defensive": 0,
+              "total": 1
+            },
+            "reboundsPerGame": 0.5,
+            "steals": 0,
+            "stealsPerGame": 0.0,
+            "blocks": 0,
+            "blocksPerGame": 0.0,
+            "turnovers": 2,
+            "turnoversPerGame": 1.0,
+            "fouls": 2,
+            "foulsPerGame": 1.0,
+            "fieldGoals": {
+              "made": 0,
+              "attempted": 2,
+              "pct": 0
+            },
+            "twoPointFieldGoals": {
+              "made": 0,
+              "attempted": 1,
+              "pct": 0
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 1,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "offensiveRating": 13.1,
+            "defensiveRating": 129.3,
+            "netRating": -116.2,
+            "usage": 23.5,
+            "assistsTurnoverRatio": 0,
+            "effectiveFieldGoalPct": 0,
+            "trueShootingPct": 0,
+            "winShares": {
+              "offensive": -0.1,
+              "defensive": 0,
+              "total": -0.1,
+              "totalPer40": -0.5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Efe Vatan",
+      "jerseyNumber": "0",
+      "position": "Forward",
+      "height": "6-10",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Istanbul, Turkey",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 0,
+        "gamesStarted": 0,
+        "minutes": 0,
+        "mpg": 0.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "assistToTurnoverRatio": 0.0
+      },
+      "gameByGame": []
+    },
+    {
+      "name": "Jackson Shelstad",
+      "jerseyNumber": "3",
+      "position": "Guard",
+      "height": "6-1",
+      "class": "JR",
+      "isFreshman": false,
+      "hometown": "West Linn, OR",
+      "highSchool": "West Linn",
+      "seasonTotals": {
+        "games": 0,
+        "gamesStarted": 0,
+        "minutes": 0,
+        "mpg": 0.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "assistToTurnoverRatio": 0.0
+      },
+      "gameByGame": [],
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Oregon",
+          "conference": "Big Ten",
+          "games": 33,
+          "gamesStarted": 33,
+          "seasonStats": {
+            "games": 33,
+            "minutes": 1091,
+            "minutesPerGame": 33.1,
+            "points": 437,
+            "pointsPerGame": 13.2,
+            "assists": 88,
+            "assistsPerGame": 2.7,
+            "rebounds": {
+              "offensive": 13,
+              "defensive": 83,
+              "total": 96
+            },
+            "reboundsPerGame": 2.9,
+            "steals": 33,
+            "stealsPerGame": 1.0,
+            "blocks": 1,
+            "blocksPerGame": 0.0,
+            "turnovers": 49,
+            "turnoversPerGame": 1.5,
+            "fouls": 33,
+            "foulsPerGame": 1.0,
+            "fieldGoals": {
+              "made": 155,
+              "attempted": 354,
+              "pct": 43.8
+            },
+            "twoPointFieldGoals": {
+              "made": 95,
+              "attempted": 190,
+              "pct": 50
+            },
+            "threePointFieldGoals": {
+              "made": 60,
+              "attempted": 164,
+              "pct": 36.6
+            },
+            "freeThrows": {
+              "made": 67,
+              "attempted": 79,
+              "pct": 84.8
+            },
+            "offensiveRating": 114.6,
+            "defensiveRating": 107.4,
+            "netRating": 7.2,
+            "usage": 21.1,
+            "assistsTurnoverRatio": 1.8,
+            "effectiveFieldGoalPct": 52.3,
+            "trueShootingPct": 0.562,
+            "winShares": {
+              "offensive": 2.3,
+              "defensive": 1.1,
+              "total": 3.4,
+              "totalPer40": 0.125
+            }
+          }
+        },
+        {
+          "season": "2023-24",
+          "team": "Oregon",
+          "conference": "Pac-12",
+          "games": 30,
+          "gamesStarted": 28,
+          "seasonStats": {
+            "games": 30,
+            "minutes": 970,
+            "minutesPerGame": 32.3,
+            "points": 393,
+            "pointsPerGame": 13.1,
+            "assists": 84,
+            "assistsPerGame": 2.8,
+            "rebounds": {
+              "offensive": 13,
+              "defensive": 72,
+              "total": 85
+            },
+            "reboundsPerGame": 2.8,
+            "steals": 19,
+            "stealsPerGame": 0.6,
+            "blocks": 7,
+            "blocksPerGame": 0.2,
+            "turnovers": 51,
+            "turnoversPerGame": 1.7,
+            "fouls": 45,
+            "foulsPerGame": 1.5,
+            "fieldGoals": {
+              "made": 151,
+              "attempted": 332,
+              "pct": 45.5
+            },
+            "twoPointFieldGoals": {
+              "made": 104,
+              "attempted": 197,
+              "pct": 52.8
+            },
+            "threePointFieldGoals": {
+              "made": 47,
+              "attempted": 135,
+              "pct": 34.8
+            },
+            "freeThrows": {
+              "made": 44,
+              "attempted": 52,
+              "pct": 84.6
+            },
+            "offensiveRating": 109.8,
+            "defensiveRating": 112.1,
+            "netRating": -2.3,
+            "usage": 21.8,
+            "assistsTurnoverRatio": 1.65,
+            "effectiveFieldGoalPct": 52.6,
+            "trueShootingPct": 0.554,
+            "winShares": {
+              "offensive": 1.7,
+              "defensive": 0.5,
+              "total": 2.2,
+              "totalPer40": 0.091
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Jamari Phillips",
+      "jerseyNumber": "24",
+      "position": "Guard",
+      "height": "6-4",
+      "class": "SO",
+      "isFreshman": false,
+      "hometown": "Modesto, CA",
+      "highSchool": "Dream City Christian",
+      "seasonTotals": {
+        "games": 0,
+        "gamesStarted": 0,
+        "minutes": 0,
+        "mpg": 0.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "assistToTurnoverRatio": 0.0
+      },
+      "gameByGame": [],
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Oregon",
+          "conference": "Big Ten",
+          "games": 13,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 13,
+            "minutes": 69,
+            "minutesPerGame": 5.3,
+            "points": 19,
+            "pointsPerGame": 1.5,
+            "assists": 3,
+            "assistsPerGame": 0.2,
+            "rebounds": {
+              "offensive": 1,
+              "defensive": 7,
+              "total": 8
+            },
+            "reboundsPerGame": 0.6,
+            "steals": 1,
+            "stealsPerGame": 0.1,
+            "blocks": 0,
+            "blocksPerGame": 0.0,
+            "turnovers": 6,
+            "turnoversPerGame": 0.5,
+            "fouls": 13,
+            "foulsPerGame": 1.0,
+            "fieldGoals": {
+              "made": 5,
+              "attempted": 20,
+              "pct": 25
+            },
+            "twoPointFieldGoals": {
+              "made": 1,
+              "attempted": 6,
+              "pct": 16.7
+            },
+            "threePointFieldGoals": {
+              "made": 4,
+              "attempted": 14,
+              "pct": 28.6
+            },
+            "freeThrows": {
+              "made": 5,
+              "attempted": 7,
+              "pct": 71.4
+            },
+            "offensiveRating": 77.8,
+            "defensiveRating": 103.5,
+            "netRating": -25.7,
+            "usage": 21.6,
+            "assistsTurnoverRatio": 0.5,
+            "effectiveFieldGoalPct": 35,
+            "trueShootingPct": 0.412,
+            "winShares": {
+              "offensive": -0.1,
+              "defensive": 0.1,
+              "total": 0,
+              "totalPer40": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "JJ Frakes",
+      "jerseyNumber": "14",
+      "position": "Guard",
+      "height": "6-5",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Berrien Springs, MI",
+      "highSchool": "Berrien Springs",
+      "seasonTotals": {
+        "games": 0,
+        "gamesStarted": 0,
+        "minutes": 0,
+        "mpg": 0.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "assistToTurnoverRatio": 0.0
+      },
+      "gameByGame": []
+    },
+    {
+      "name": "Luke Johnson",
+      "jerseyNumber": "7",
+      "position": "Forward",
+      "height": "6-8",
+      "class": "SO",
+      "isFreshman": false,
+      "hometown": "Portland, OR",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 0,
+        "gamesStarted": 0,
+        "minutes": 0,
+        "mpg": 0.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "assistToTurnoverRatio": 0.0
+      },
+      "gameByGame": [],
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Oregon",
+          "conference": "Big Ten",
+          "games": 2,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 2,
+            "minutes": 1,
+            "minutesPerGame": 0.5,
+            "points": 0,
+            "pointsPerGame": 0.0,
+            "assists": 0,
+            "assistsPerGame": 0.0,
+            "rebounds": {
+              "offensive": 0,
+              "defensive": 0,
+              "total": 0
+            },
+            "reboundsPerGame": 0.0,
+            "steals": 0,
+            "stealsPerGame": 0.0,
+            "blocks": 0,
+            "blocksPerGame": 0.0,
+            "turnovers": 0,
+            "turnoversPerGame": 0.0,
+            "fouls": 0,
+            "foulsPerGame": 0.0,
+            "fieldGoals": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "twoPointFieldGoals": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 0,
+              "attempted": 0,
+              "pct": 0
+            },
+            "offensiveRating": null,
+            "defensiveRating": 89.4,
+            "netRating": null,
+            "usage": 0,
+            "assistsTurnoverRatio": null,
+            "effectiveFieldGoalPct": null,
+            "trueShootingPct": null,
+            "winShares": {
+              "offensive": null,
+              "defensive": 0,
+              "total": null,
+              "totalPer40": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Miles Stewart",
+      "jerseyNumber": "35",
+      "position": "Forward",
+      "height": "6-8",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Windermere, FL",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 0,
+        "gamesStarted": 0,
+        "minutes": 0,
+        "mpg": 0.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "assistToTurnoverRatio": 0.0
+      },
+      "gameByGame": [],
+      "previousSeasons": [
+        {
+          "season": "2024-25",
+          "team": "Howard",
+          "conference": "MEAC",
+          "games": 31,
+          "gamesStarted": 5,
+          "seasonStats": {
+            "games": 31,
+            "minutes": 326,
+            "minutesPerGame": 10.5,
+            "points": 107,
+            "pointsPerGame": 3.5,
+            "assists": 24,
+            "assistsPerGame": 0.8,
+            "rebounds": {
+              "offensive": 25,
+              "defensive": 49,
+              "total": 74
+            },
+            "reboundsPerGame": 2.4,
+            "steals": 10,
+            "stealsPerGame": 0.3,
+            "blocks": 10,
+            "blocksPerGame": 0.3,
+            "turnovers": 29,
+            "turnoversPerGame": 0.9,
+            "fouls": 53,
+            "foulsPerGame": 1.7,
+            "fieldGoals": {
+              "made": 41,
+              "attempted": 69,
+              "pct": 59.4
+            },
+            "twoPointFieldGoals": {
+              "made": 40,
+              "attempted": 68,
+              "pct": 58.8
+            },
+            "threePointFieldGoals": {
+              "made": 1,
+              "attempted": 1,
+              "pct": 100
+            },
+            "freeThrows": {
+              "made": 24,
+              "attempted": 38,
+              "pct": 63.2
+            },
+            "offensiveRating": 104.8,
+            "defensiveRating": 108.5,
+            "netRating": -3.7,
+            "usage": 17.7,
+            "assistsTurnoverRatio": 0.83,
+            "effectiveFieldGoalPct": 60.1,
+            "trueShootingPct": 0.624,
+            "winShares": {
+              "offensive": 0.4,
+              "defensive": 0.3,
+              "total": 0.7,
+              "totalPer40": 0.086
+            }
+          }
+        },
+        {
+          "season": "2023-24",
+          "team": "Howard",
+          "conference": "MEAC",
+          "games": 24,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 24,
+            "minutes": 125,
+            "minutesPerGame": 5.2,
+            "points": 19,
+            "pointsPerGame": 0.8,
+            "assists": 2,
+            "assistsPerGame": 0.1,
+            "rebounds": {
+              "offensive": 7,
+              "defensive": 21,
+              "total": 28
+            },
+            "reboundsPerGame": 1.2,
+            "steals": 6,
+            "stealsPerGame": 0.2,
+            "blocks": 4,
+            "blocksPerGame": 0.2,
+            "turnovers": 10,
+            "turnoversPerGame": 0.4,
+            "fouls": 14,
+            "foulsPerGame": 0.6,
+            "fieldGoals": {
+              "made": 9,
+              "attempted": 19,
+              "pct": 47.4
+            },
+            "twoPointFieldGoals": {
+              "made": 9,
+              "attempted": 17,
+              "pct": 52.9
+            },
+            "threePointFieldGoals": {
+              "made": 0,
+              "attempted": 2,
+              "pct": 0
+            },
+            "freeThrows": {
+              "made": 1,
+              "attempted": 3,
+              "pct": 33.3
+            },
+            "offensiveRating": 71.6,
+            "defensiveRating": 101.2,
+            "netRating": -29.6,
+            "usage": 12.3,
+            "assistsTurnoverRatio": 0.2,
+            "effectiveFieldGoalPct": 47.4,
+            "trueShootingPct": 0.468,
+            "winShares": {
+              "offensive": -0.1,
+              "defensive": 0.2,
+              "total": 0.1,
+              "totalPer40": 0.032
+            }
+          }
+        },
+        {
+          "season": "2022-23",
+          "team": "Howard",
+          "conference": "MEAC",
+          "games": 21,
+          "gamesStarted": 0,
+          "seasonStats": {
+            "games": 21,
+            "minutes": 164,
+            "minutesPerGame": 7.8,
+            "points": 44,
+            "pointsPerGame": 2.1,
+            "assists": 3,
+            "assistsPerGame": 0.1,
+            "rebounds": {
+              "offensive": 11,
+              "defensive": 34,
+              "total": 45
+            },
+            "reboundsPerGame": 2.1,
+            "steals": 5,
+            "stealsPerGame": 0.2,
+            "blocks": 7,
+            "blocksPerGame": 0.3,
+            "turnovers": 8,
+            "turnoversPerGame": 0.4,
+            "fouls": 22,
+            "foulsPerGame": 1.0,
+            "fieldGoals": {
+              "made": 19,
+              "attempted": 37,
+              "pct": 51.4
+            },
+            "twoPointFieldGoals": {
+              "made": 17,
+              "attempted": 24,
+              "pct": 70.8
+            },
+            "threePointFieldGoals": {
+              "made": 2,
+              "attempted": 13,
+              "pct": 15.4
+            },
+            "freeThrows": {
+              "made": 4,
+              "attempted": 8,
+              "pct": 50
+            },
+            "offensiveRating": 100.3,
+            "defensiveRating": 102.4,
+            "netRating": -2.1,
+            "usage": 14.3,
+            "assistsTurnoverRatio": 0.38,
+            "effectiveFieldGoalPct": 54.1,
+            "trueShootingPct": 0.543,
+            "winShares": {
+              "offensive": 0.1,
+              "defensive": 0.2,
+              "total": 0.3,
+              "totalPer40": 0.073
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Rian Gonzales",
+      "jerseyNumber": "15",
+      "position": "Guard",
+      "height": "6-3",
+      "class": "FR",
+      "isFreshman": true,
+      "hometown": "Albuquerque, NM",
+      "highSchool": "N/A",
+      "seasonTotals": {
+        "games": 0,
+        "gamesStarted": 0,
+        "minutes": 0,
+        "mpg": 0.0,
+        "points": 0,
+        "ppg": 0.0,
+        "rebounds": {
+          "offensive": 0,
+          "defensive": 0,
+          "total": 0
+        },
+        "rpg": 0.0,
+        "assists": 0,
+        "apg": 0.0,
+        "turnovers": 0,
+        "steals": 0,
+        "spg": 0.0,
+        "blocks": 0,
+        "bpg": 0.0,
+        "fouls": 0,
+        "foulOuts": 0,
+        "ejections": 0,
+        "fieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "threePointFieldGoals": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "freeThrows": {
+          "made": 0,
+          "attempted": 0,
+          "percentage": 0.0
+        },
+        "assistToTurnoverRatio": 0.0
+      },
+      "gameByGame": []
+    }
+  ],
+  "teamGameStats": [
+    {
+      "gameId": 212827,
+      "season": 2026,
+      "seasonLabel": "20252026",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-11-05T03:30:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 223,
+      "team": "Oregon",
+      "conference": "Big Ten",
+      "teamSeed": null,
+      "opponentId": 108,
+      "opponent": "Hawai'i",
+      "opponentConference": "Big West",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": true,
+      "conferenceGame": false,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 75.5,
+      "teamStats": {
+        "possessions": 75,
+        "assists": 9,
+        "steals": 8,
+        "blocks": 7,
+        "trueShooting": 43.2,
+        "rating": 80,
+        "gameScore": 36.50000000000001,
+        "points": {
+          "total": 60,
+          "byPeriod": [
+            33,
+            27
+          ],
+          "largestLead": 14,
+          "fastBreak": 4,
+          "inPaint": 36,
+          "offTurnovers": 13
+        },
+        "twoPointFieldGoals": {
+          "made": 19,
+          "attempted": 42,
+          "pct": 45.2
+        },
+        "threePointFieldGoals": {
+          "made": 2,
+          "attempted": 16,
+          "pct": 12.5
+        },
+        "freeThrows": {
+          "made": 16,
+          "attempted": 26,
+          "pct": 61.5
+        },
+        "fieldGoals": {
+          "made": 21,
+          "attempted": 58,
+          "pct": 36.2
+        },
+        "turnovers": {
+          "total": 21,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 17,
+          "defensive": 30,
+          "total": 47
+        },
+        "fouls": {
+          "total": 16,
+          "technical": 0,
+          "flagrant": 1
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 37.9,
+          "freeThrowRate": 44.8,
+          "turnoverRatio": 28,
+          "offensiveReboundPct": 36.2
+        }
+      },
+      "opponentStats": {
+        "possessions": 76,
+        "assists": 8,
+        "steals": 12,
+        "blocks": 5,
+        "trueShooting": 40.2,
+        "rating": 77.6,
+        "gameScore": 32.900000000000006,
+        "points": {
+          "total": 59,
+          "byPeriod": [
+            26,
+            33
+          ],
+          "largestLead": 5,
+          "fastBreak": 9,
+          "inPaint": 30,
+          "offTurnovers": 23
+        },
+        "twoPointFieldGoals": {
+          "made": 16,
+          "attempted": 38,
+          "pct": 42.1
+        },
+        "threePointFieldGoals": {
+          "made": 5,
+          "attempted": 27,
+          "pct": 18.5
+        },
+        "freeThrows": {
+          "made": 12,
+          "attempted": 19,
+          "pct": 63.2
+        },
+        "fieldGoals": {
+          "made": 21,
+          "attempted": 65,
+          "pct": 32.3
+        },
+        "turnovers": {
+          "total": 18,
+          "teamTotal": 3
+        },
+        "rebounds": {
+          "offensive": 15,
+          "defensive": 26,
+          "total": 41
+        },
+        "fouls": {
+          "total": 19,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 36.2,
+          "freeThrowRate": 29.2,
+          "turnoverRatio": 23.7,
+          "offensiveReboundPct": 36.6
+        }
+      }
+    }
+  ],
+  "teamSeasonStats": {
+    "season": 2026,
+    "seasonLabel": "20252026",
+    "teamId": 223,
+    "team": "Oregon",
+    "conference": "Big Ten",
+    "games": 1,
+    "wins": 1,
+    "losses": 0,
+    "totalMinutes": 40,
+    "pace": 75.5,
+    "teamStats": {
+      "assists": 9,
+      "blocks": 7,
+      "steals": 8,
+      "possessions": 75,
+      "trueShooting": 43.2,
+      "rating": 80,
+      "fieldGoals": {
+        "made": 21,
+        "attempted": 58,
+        "pct": 36.2
+      },
+      "twoPointFieldGoals": {
+        "made": 19,
+        "attempted": 42,
+        "pct": 45.2
+      },
+      "threePointFieldGoals": {
+        "made": 2,
+        "attempted": 16,
+        "pct": 12.5
+      },
+      "freeThrows": {
+        "made": 16,
+        "attempted": 26,
+        "pct": 61.5
+      },
+      "rebounds": {
+        "offensive": 17,
+        "defensive": 30,
+        "total": 47
+      },
+      "turnovers": {
+        "total": 21,
+        "teamTotal": 0
+      },
+      "fouls": {
+        "total": 16,
+        "technical": 0,
+        "flagrant": 1
+      },
+      "points": {
+        "total": 60,
+        "inPaint": 36,
+        "offTurnovers": 13,
+        "fastBreak": 4
+      },
+      "fourFactors": {
+        "effectiveFieldGoalPct": 37.9,
+        "turnoverRatio": 0.28,
+        "offensiveReboundPct": 36.2,
+        "freeThrowRate": 44.8
+      }
+    },
+    "opponentStats": {
+      "assists": 8,
+      "blocks": 5,
+      "steals": 12,
+      "possessions": 76,
+      "trueShooting": 40.2,
+      "rating": 77.6,
+      "fieldGoals": {
+        "made": 21,
+        "attempted": 65,
+        "pct": 32.3
+      },
+      "twoPointFieldGoals": {
+        "made": 16,
+        "attempted": 38,
+        "pct": 42.1
+      },
+      "threePointFieldGoals": {
+        "made": 5,
+        "attempted": 27,
+        "pct": 18.5
+      },
+      "freeThrows": {
+        "made": 12,
+        "attempted": 19,
+        "pct": 63.2
+      },
+      "rebounds": {
+        "offensive": 15,
+        "defensive": 26,
+        "total": 41
+      },
+      "turnovers": {
+        "total": 18,
+        "teamTotal": 3
+      },
+      "fouls": {
+        "total": 19,
+        "technical": 0,
+        "flagrant": 0
+      },
+      "points": {
+        "total": 59,
+        "inPaint": 30,
+        "offTurnovers": 23,
+        "fastBreak": 9
+      },
+      "fourFactors": {
+        "effectiveFieldGoalPct": 36.2,
+        "turnoverRatio": 0.24,
+        "offensiveReboundPct": 36.6,
+        "freeThrowRate": 29.2
+      }
+    },
+    "perGameStats": {
+      "teamStats": {
+        "threePointFieldGoalsMadePerGame": 2.0,
+        "threePointFieldGoalsAttemptedPerGame": 16.0,
+        "offensiveReboundsPerGame": 17.0,
+        "turnoversPerGame": 21.0,
+        "assistsPerGame": 9.0,
+        "freeThrowsMadePerGame": 16.0,
+        "freeThrowsAttemptedPerGame": 26.0,
+        "foulsPerGame": 16.0,
+        "defensiveReboundsPerGame": 30.0,
+        "stealsPerGame": 8.0,
+        "blocksPerGame": 7.0,
+        "freeThrowPct": 61.5
+      },
+      "opponentStats": {
+        "pointsPerGame": 59.0,
+        "fieldGoalPct": 32.3,
+        "threePointPct": 18.5,
+        "turnoversForcedPerGame": 18.0
+      },
+      "margins": {
+        "pointMargin": 1.0,
+        "reboundMargin": 6.0,
+        "turnoverMargin": -3.0
+      },
+      "ratios": {
+        "assistToTurnoverRatio": 0.43
+      }
+    }
+  },
+  "conferenceRankings": {
+    "conference": "Big Ten",
+    "team": "Oregon",
+    "rankings": {
+      "pointsPerGame": {
+        "rank": 18,
+        "totalTeams": 18,
+        "value": 60.0
+      },
+      "assistsPerGame": {
+        "rank": 18,
+        "totalTeams": 18,
+        "value": 9.0
+      },
+      "reboundsPerGame": {
+        "rank": 5,
+        "totalTeams": 18,
+        "value": 47.0
+      },
+      "stealsPerGame": {
+        "rank": 7,
+        "totalTeams": 18,
+        "value": 8.0
+      },
+      "blocksPerGame": {
+        "rank": 2,
+        "totalTeams": 18,
+        "value": 7.0
+      },
+      "fieldGoalPct": {
+        "rank": 18,
+        "totalTeams": 18,
+        "value": 36.2
+      },
+      "threePointPct": {
+        "rank": 18,
+        "totalTeams": 18,
+        "value": 12.5
+      },
+      "freeThrowPct": {
+        "rank": 16,
+        "totalTeams": 18,
+        "value": 61.5
+      },
+      "effectiveFieldGoalPct": {
+        "rank": 18,
+        "totalTeams": 18,
+        "value": 37.9
+      },
+      "offensiveReboundPct": {
+        "rank": 5,
+        "totalTeams": 18,
+        "value": 36.2
+      },
+      "opponentPointsPerGame": {
+        "rank": 7,
+        "totalTeams": 18,
+        "value": 59.0
+      },
+      "threePointFieldGoalsMadePerGame": {
+        "rank": 18,
+        "totalTeams": 18,
+        "value": 2.0
+      },
+      "threePointFieldGoalsAttemptedPerGame": {
+        "rank": 17,
+        "totalTeams": 18,
+        "value": 16.0
+      },
+      "offensiveReboundsPerGame": {
+        "rank": 4,
+        "totalTeams": 18,
+        "value": 17.0
+      },
+      "turnoversPerGame": {
+        "rank": 18,
+        "totalTeams": 18,
+        "value": 21.0
+      },
+      "freeThrowsMadePerGame": {
+        "rank": 11,
+        "totalTeams": 18,
+        "value": 16.0
+      },
+      "freeThrowsAttemptedPerGame": {
+        "rank": 8,
+        "totalTeams": 18,
+        "value": 26.0
+      },
+      "foulsPerGame": {
+        "rank": 11,
+        "totalTeams": 18,
+        "value": 16.0
+      },
+      "defensiveReboundsPerGame": {
+        "rank": 10,
+        "totalTeams": 18,
+        "value": 30.0
+      },
+      "opponentFieldGoalPct": {
+        "rank": 6,
+        "totalTeams": 18,
+        "value": 32.3
+      },
+      "opponentThreePointPct": {
+        "rank": 5,
+        "totalTeams": 18,
+        "value": 18.5
+      },
+      "turnoversForcedPerGame": {
+        "rank": 14,
+        "totalTeams": 18,
+        "value": 18.0
+      },
+      "pointMargin": {
+        "rank": 18,
+        "totalTeams": 18,
+        "value": 1.0
+      },
+      "reboundMargin": {
+        "rank": 10,
+        "totalTeams": 18,
+        "value": 6.0
+      },
+      "turnoverMargin": {
+        "rank": 17,
+        "totalTeams": 18,
+        "value": -3.0
+      },
+      "assistToTurnoverRatio": {
+        "rank": 18,
+        "totalTeams": 18,
+        "value": 0.42857142857142855
+      }
+    }
+  },
+  "d1Rankings": {
+    "level": "Division 1",
+    "team": "Oregon",
+    "rankings": {
+      "pointsPerGame": {
+        "rank": 288,
+        "totalTeams": 354,
+        "value": 67.0
+      },
+      "assistsPerGame": {
+        "rank": 238,
+        "totalTeams": 354,
+        "value": 13.0
+      },
+      "reboundsPerGame": {
+        "rank": 68,
+        "totalTeams": 354,
+        "value": 47.0
+      },
+      "stealsPerGame": {
+        "rank": 162,
+        "totalTeams": 354,
+        "value": 8.0
+      },
+      "blocksPerGame": {
+        "rank": 32,
+        "totalTeams": 354,
+        "value": 7.0
+      },
+      "fieldGoalPct": {
+        "rank": 209,
+        "totalTeams": 354,
+        "value": 44.4
+      },
+      "threePointPct": {
+        "rank": 127,
+        "totalTeams": 354,
+        "value": 36.4
+      },
+      "freeThrowPct": {
+        "rank": 142,
+        "totalTeams": 354,
+        "value": 73.1
+      },
+      "effectiveFieldGoalPct": {
+        "rank": 163,
+        "totalTeams": 354,
+        "value": 53.3
+      },
+      "offensiveReboundPct": {
+        "rank": 90,
+        "totalTeams": 354,
+        "value": 36.2
+      },
+      "opponentPointsPerGame": {
+        "rank": 80,
+        "totalTeams": 354,
+        "value": 59.0
+      },
+      "threePointFieldGoalsMadePerGame": {
+        "rank": 169,
+        "totalTeams": 354,
+        "value": 8.0
+      },
+      "threePointFieldGoalsAttemptedPerGame": {
+        "rank": 232,
+        "totalTeams": 354,
+        "value": 22.0
+      },
+      "offensiveReboundsPerGame": {
+        "rank": 64,
+        "totalTeams": 354,
+        "value": 17.0
+      },
+      "turnoversPerGame": {
+        "rank": 163,
+        "totalTeams": 354,
+        "value": 12.0
+      },
+      "freeThrowsMadePerGame": {
+        "rank": 120,
+        "totalTeams": 354,
+        "value": 19.0
+      },
+      "freeThrowsAttemptedPerGame": {
+        "rank": 122,
+        "totalTeams": 354,
+        "value": 26.0
+      },
+      "foulsPerGame": {
+        "rank": 60,
+        "totalTeams": 354,
+        "value": 14.0
+      },
+      "defensiveReboundsPerGame": {
+        "rank": 104,
+        "totalTeams": 354,
+        "value": 30.0
+      },
+      "opponentFieldGoalPct": {
+        "rank": 49,
+        "totalTeams": 354,
+        "value": 32.3
+      },
+      "opponentThreePointPct": {
+        "rank": 36,
+        "totalTeams": 354,
+        "value": 18.5
+      },
+      "turnoversForcedPerGame": {
+        "rank": 15,
+        "totalTeams": 354,
+        "value": 7.0
+      },
+      "pointMargin": {
+        "rank": 233,
+        "totalTeams": 354,
+        "value": 2.0
+      },
+      "reboundMargin": {
+        "rank": 165,
+        "totalTeams": 354,
+        "value": 6.0
+      },
+      "turnoverMargin": {
+        "rank": 275,
+        "totalTeams": 354,
+        "value": -3.0
+      },
+      "assistToTurnoverRatio": {
+        "rank": 213,
+        "totalTeams": 354,
+        "value": 1.0833333333333333
+      }
+    }
+  },
+  "totalRecord": {
+    "wins": 1,
+    "losses": 0,
+    "games": 1
+  },
+  "conferenceRecord": {
+    "wins": 0,
+    "losses": 0,
+    "games": 0
+  },
+  "metadata": {
+    "totalPlayers": 17,
+    "apiCalls": 59
+  }
+}
