@@ -152,32 +152,45 @@ function pollStatus(jobId) {
                 if (data.error) {
                     clearInterval(interval);
                     showError(data.error);
-                    document.getElementById('generate-btn').disabled = false;
+                    const btn = document.getElementById('generate-btn');
+                    if (btn) btn.disabled = false;
                     return;
                 }
                 
-                // Update status message
-                document.getElementById('status-message').textContent = data.message;
+                // Update status message (with null check)
+                const statusMessage = document.getElementById('status-message');
+                if (statusMessage && data.message) {
+                    statusMessage.textContent = data.message;
+                }
                 
-                // Update progress
+                // Update progress (with null checks)
                 const progress = data.progress || 0;
-                document.getElementById('progress-bar').style.width = progress + '%';
-                document.getElementById('progress-text').textContent = progress + '%';
+                const progressBar = document.getElementById('progress-bar');
+                const progressText = document.getElementById('progress-text');
+                if (progressBar) {
+                    progressBar.style.width = progress + '%';
+                }
+                if (progressText) {
+                    progressText.textContent = progress + '%';
+                }
                 
                 if (data.status === 'completed') {
                     clearInterval(interval);
                     showResult(data.url, data.gameDates || []);
-                    document.getElementById('generate-btn').disabled = false;
+                    const btn = document.getElementById('generate-btn');
+                    if (btn) btn.disabled = false;
                 } else if (data.status === 'failed') {
                     clearInterval(interval);
                     showError(data.error || 'Generation failed');
-                    document.getElementById('generate-btn').disabled = false;
+                    const btn = document.getElementById('generate-btn');
+                    if (btn) btn.disabled = false;
                 }
             })
             .catch(err => {
                 clearInterval(interval);
                 showError('Failed to check status: ' + err.message);
-                document.getElementById('generate-btn').disabled = false;
+                const btn = document.getElementById('generate-btn');
+                if (btn) btn.disabled = false;
             });
     }, 2000); // Poll every 2 seconds
 }
@@ -185,39 +198,44 @@ function pollStatus(jobId) {
 function showResult(url, gameDates) {
     const result = document.getElementById('result');
     const error = document.getElementById('error');
-    
-    error.style.display = 'none';
-    result.style.display = 'block';
-    document.getElementById('result-url').href = url;
-    document.getElementById('result-url').textContent = url;
-    
-    // Display game dates
+    const resultUrl = document.getElementById('result-url');
     const gameList = document.getElementById('game-list');
     const gameCount = document.getElementById('game-count');
     
+    if (error) error.style.display = 'none';
+    if (result) result.style.display = 'block';
+    if (resultUrl) {
+        resultUrl.href = url;
+        resultUrl.textContent = url;
+    }
+    
+    // Display game dates
     if (gameDates && gameDates.length > 0) {
-        gameCount.textContent = gameDates.length;
-        gameList.innerHTML = '<table style="width: 100%; border-collapse: collapse;"><thead><tr><th style="text-align: left; padding: 5px; border-bottom: 1px solid #ddd;">Date</th><th style="text-align: left; padding: 5px; border-bottom: 1px solid #ddd;">Opponent</th><th style="text-align: left; padding: 5px; border-bottom: 1px solid #ddd;">Type</th></tr></thead><tbody>';
-        
-        gameDates.forEach(game => {
-            const type = game.conferenceGame ? 'Conference' : 'Non-Conference';
-            const location = game.isHome ? ' (Home)' : ' (Away)';
-            gameList.innerHTML += `<tr><td style="padding: 5px; border-bottom: 1px solid #eee;">${game.date}</td><td style="padding: 5px; border-bottom: 1px solid #eee;">${game.opponent}${location}</td><td style="padding: 5px; border-bottom: 1px solid #eee;">${type}</td></tr>`;
-        });
-        
-        gameList.innerHTML += '</tbody></table>';
+        if (gameCount) gameCount.textContent = gameDates.length;
+        if (gameList) {
+            gameList.innerHTML = '<table style="width: 100%; border-collapse: collapse;"><thead><tr><th style="text-align: left; padding: 5px; border-bottom: 1px solid #ddd;">Date</th><th style="text-align: left; padding: 5px; border-bottom: 1px solid #ddd;">Opponent</th><th style="text-align: left; padding: 5px; border-bottom: 1px solid #ddd;">Type</th></tr></thead><tbody>';
+            
+            gameDates.forEach(game => {
+                const type = game.conferenceGame ? 'Conference' : 'Non-Conference';
+                const location = game.isHome ? ' (Home)' : ' (Away)';
+                gameList.innerHTML += `<tr><td style="padding: 5px; border-bottom: 1px solid #eee;">${game.date}</td><td style="padding: 5px; border-bottom: 1px solid #eee;">${game.opponent}${location}</td><td style="padding: 5px; border-bottom: 1px solid #eee;">${type}</td></tr>`;
+            });
+            
+            gameList.innerHTML += '</tbody></table>';
+        }
     } else {
-        gameCount.textContent = '0';
-        gameList.innerHTML = '<p style="color: #666; font-style: italic;">No games detected in the data.</p>';
+        if (gameCount) gameCount.textContent = '0';
+        if (gameList) gameList.innerHTML = '<p style="color: #666; font-style: italic;">No games detected in the data.</p>';
     }
 }
 
 function showError(message) {
     const result = document.getElementById('result');
     const error = document.getElementById('error');
+    const errorMessage = document.getElementById('error-message');
     
-    result.style.display = 'none';
-    error.style.display = 'block';
-    document.getElementById('error-message').textContent = message;
+    if (result) result.style.display = 'none';
+    if (error) error.style.display = 'block';
+    if (errorMessage) errorMessage.textContent = message;
 }
 
