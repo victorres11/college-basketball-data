@@ -113,11 +113,13 @@ function generateData() {
     
     // Reset UI
     btn.disabled = true;
-    status.style.display = 'block';
-    result.style.display = 'none';
-    error.style.display = 'none';
-    document.getElementById('progress-bar').style.width = '0%';
-    document.getElementById('progress-text').textContent = '0%';
+    if (status) status.style.display = 'block';
+    if (result) result.style.display = 'none';
+    if (error) error.style.display = 'none';
+    const progressBar = document.getElementById('progress-bar');
+    const progressText = document.getElementById('progress-text');
+    if (progressBar) progressBar.style.width = '0%';
+    if (progressText) progressText.textContent = '0%';
     
     // Start generation
     fetch('/api/generate', {
@@ -145,12 +147,30 @@ function generateData() {
 }
 
 function pollStatus(jobId) {
+    let isCompleted = false; // Flag to prevent race conditions
     const interval = setInterval(() => {
+        // Don't poll if already completed
+        if (isCompleted) {
+            clearInterval(interval);
+            return;
+        }
+        
         fetch(`/api/status/${jobId}`)
-            .then(res => res.json())
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error(`HTTP ${res.status}`);
+                }
+                return res.json();
+            })
             .then(data => {
+                // Don't process if already completed
+                if (isCompleted) {
+                    return;
+                }
+                
                 if (data.error) {
                     clearInterval(interval);
+                    isCompleted = true;
                     showError(data.error);
                     const btn = document.getElementById('generate-btn');
                     if (btn) btn.disabled = false;
@@ -176,21 +196,28 @@ function pollStatus(jobId) {
                 
                 if (data.status === 'completed') {
                     clearInterval(interval);
+                    isCompleted = true;
                     showResult(data.url, data.gameDates || []);
                     const btn = document.getElementById('generate-btn');
                     if (btn) btn.disabled = false;
                 } else if (data.status === 'failed') {
                     clearInterval(interval);
+                    isCompleted = true;
                     showError(data.error || 'Generation failed');
                     const btn = document.getElementById('generate-btn');
                     if (btn) btn.disabled = false;
                 }
             })
             .catch(err => {
-                clearInterval(interval);
-                showError('Failed to check status: ' + err.message);
-                const btn = document.getElementById('generate-btn');
-                if (btn) btn.disabled = false;
+                // Only show error if not already completed
+                if (!isCompleted) {
+                    clearInterval(interval);
+                    isCompleted = true;
+                    const errorMsg = err.message || String(err);
+                    showError('Failed to check status: ' + errorMsg);
+                    const btn = document.getElementById('generate-btn');
+                    if (btn) btn.disabled = false;
+                }
             });
     }, 2000); // Poll every 2 seconds
 }
@@ -201,10 +228,14 @@ function showResult(url, gameDates) {
     const resultUrl = document.getElementById('result-url');
     const gameList = document.getElementById('game-list');
     const gameCount = document.getElementById('game-count');
+    const statusMessage = document.getElementById('status-message');
     
     if (error) error.style.display = 'none';
     if (result) result.style.display = 'block';
-    if (resultUrl) {
+    if (statusMessage && statusMessage.textContent !== 'Complete!') {
+        statusMessage.textContent = 'Complete!';
+    }
+    if (resultUrl && url) {
         resultUrl.href = url;
         resultUrl.textContent = url;
     }
