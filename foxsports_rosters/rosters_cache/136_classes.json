@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Rob Brown III",
+    "jersey": "2",
+    "class": "GS"
+  },
+  {
+    "name": "Jonah Butler",
+    "jersey": "5",
+    "class": "FR"
+  },
+  {
+    "name": "Liam Dagostino",
+    "jersey": "6",
+    "class": "FR"
+  },
+  {
+    "name": "Jake Harbatkin",
+    "jersey": "11",
+    "class": "FR"
+  },
+  {
+    "name": "Collin O'Connor",
+    "jersey": "13",
+    "class": "SO"
+  },
+  {
+    "name": "Toby Onyekonwu",
+    "jersey": "4",
+    "class": "SR"
+  },
+  {
+    "name": "Erik Pratt",
+    "jersey": "1",
+    "class": "GS"
+  },
+  {
+    "name": "Andrej Shoshkikj",
+    "jersey": "29",
+    "class": "FR"
+  },
+  {
+    "name": "Ethan Simmon",
+    "jersey": "7",
+    "class": "SR"
+  },
+  {
+    "name": "Richard Goods",
+    "jersey": "12",
+    "class": "SO"
+  },
+  {
+    "name": "Quin Gorman",
+    "jersey": "15",
+    "class": "SO"
+  },
+  {
+    "name": "Oleg Kojenets",
+    "jersey": "17",
+    "class": "GS"
+  },
+  {
+    "name": "Leon Nahar",
+    "jersey": "33",
+    "class": "JR"
+  },
+  {
+    "name": "Andrew Okafor",
+    "jersey": "10",
+    "class": "FR"
+  },
+  {
+    "name": "Tomas Valentiny",
+    "jersey": "21",
+    "class": "FR"
+  }
+]

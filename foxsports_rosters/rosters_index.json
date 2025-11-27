@@ -1,0 +1,2192 @@
+{
+  "53": {
+    "name": "Boston College Eagles",
+    "conference": "ACC",
+    "player_count": 16,
+    "cached_at": 1764192915.654591
+  },
+  "222": {
+    "name": "California Golden Bears",
+    "conference": "ACC",
+    "player_count": 18,
+    "cached_at": 1764192916.536521
+  },
+  "22": {
+    "name": "Clemson Tigers",
+    "conference": "ACC",
+    "player_count": 13,
+    "cached_at": 1764192917.257235
+  },
+  "23": {
+    "name": "Duke Blue Devils",
+    "conference": "ACC",
+    "player_count": 13,
+    "cached_at": 1764192919.507922
+  },
+  "24": {
+    "name": "Florida State Seminoles",
+    "conference": "ACC",
+    "player_count": 14,
+    "cached_at": 1764192920.344939
+  },
+  "25": {
+    "name": "Georgia Tech Yellow Jackets",
+    "conference": "ACC",
+    "player_count": 14,
+    "cached_at": 1764192921.089443
+  },
+  "121": {
+    "name": "Louisville Cardinals",
+    "conference": "ACC",
+    "player_count": 15,
+    "cached_at": 1764192921.869462
+  },
+  "55": {
+    "name": "Miami (FL) Hurricanes",
+    "conference": "ACC",
+    "player_count": 13,
+    "cached_at": 1764192922.681545
+  },
+  "28": {
+    "name": "North Carolina State Wolfpack",
+    "conference": "ACC",
+    "player_count": 15,
+    "cached_at": 1764192923.4082298
+  },
+  "27": {
+    "name": "North Carolina Tar Heels",
+    "conference": "ACC",
+    "player_count": 16,
+    "cached_at": 1764192924.1299741
+  },
+  "61": {
+    "name": "Notre Dame Fighting Irish",
+    "conference": "ACC",
+    "player_count": 15,
+    "cached_at": 1764192924.886129
+  },
+  "62": {
+    "name": "Pittsburgh Panthers",
+    "conference": "ACC",
+    "player_count": 15,
+    "cached_at": 1764192926.6465678
+  },
+  "316": {
+    "name": "SMU Mustangs",
+    "conference": "ACC",
+    "player_count": 15,
+    "cached_at": 1764192927.365695
+  },
+  "226": {
+    "name": "Stanford Cardinal",
+    "conference": "ACC",
+    "player_count": 17,
+    "cached_at": 1764192928.0852091
+  },
+  "65": {
+    "name": "Syracuse Orange",
+    "conference": "ACC",
+    "player_count": 14,
+    "cached_at": 1764192928.823783
+  },
+  "29": {
+    "name": "Virginia Cavaliers",
+    "conference": "ACC",
+    "player_count": 15,
+    "cached_at": 1764192929.598752
+  },
+  "59": {
+    "name": "Virginia Tech Hokies",
+    "conference": "ACC",
+    "player_count": 14,
+    "cached_at": 1764192930.724868
+  },
+  "30": {
+    "name": "Wake Forest Demon Deacons",
+    "conference": "ACC",
+    "player_count": 15,
+    "cached_at": 1764192931.453564
+  },
+  "221": {
+    "name": "Arizona State Sun Devils",
+    "conference": "Big 12",
+    "player_count": 16,
+    "cached_at": 1764192932.209892
+  },
+  "220": {
+    "name": "Arizona Wildcats",
+    "conference": "Big 12",
+    "player_count": 16,
+    "cached_at": 1764192933.009143
+  },
+  "192": {
+    "name": "BYU Cougars",
+    "conference": "Big 12",
+    "player_count": 15,
+    "cached_at": 1764192933.747723
+  },
+  "41": {
+    "name": "Baylor Bears",
+    "conference": "Big 12",
+    "player_count": 15,
+    "cached_at": 1764192934.495987
+  },
+  "119": {
+    "name": "Cincinnati Bearcats",
+    "conference": "Big 12",
+    "player_count": 15,
+    "cached_at": 1764192935.2330382
+  },
+  "42": {
+    "name": "Colorado Buffaloes",
+    "conference": "Big 12",
+    "player_count": 15,
+    "cached_at": 1764192936.003621
+  },
+  "113": {
+    "name": "Houston Cougars",
+    "conference": "Big 12",
+    "player_count": 14,
+    "cached_at": 1764192936.7130828
+  },
+  "43": {
+    "name": "Iowa State Cyclones",
+    "conference": "Big 12",
+    "player_count": 14,
+    "cached_at": 1764192938.103859
+  },
+  "44": {
+    "name": "Kansas Jayhawks",
+    "conference": "Big 12",
+    "player_count": 16,
+    "cached_at": 1764192939.0125492
+  },
+  "45": {
+    "name": "Kansas State Wildcats",
+    "conference": "Big 12",
+    "player_count": 14,
+    "cached_at": 1764192939.744094
+  },
+  "49": {
+    "name": "Oklahoma State Cowboys",
+    "conference": "Big 12",
+    "player_count": 15,
+    "cached_at": 1764192940.757043
+  },
+  "317": {
+    "name": "TCU Horned Frogs",
+    "conference": "Big 12",
+    "player_count": 16,
+    "cached_at": 1764192941.811818
+  },
+  "52": {
+    "name": "Texas Tech Red Raiders",
+    "conference": "Big 12",
+    "player_count": 14,
+    "cached_at": 1764192942.5186
+  },
+  "32": {
+    "name": "UCF Knights",
+    "conference": "Big 12",
+    "player_count": 15,
+    "cached_at": 1764192943.2415302
+  },
+  "197": {
+    "name": "Utah Runnin' Utes",
+    "conference": "Big 12",
+    "player_count": 15,
+    "cached_at": 1764192943.996971
+  },
+  "66": {
+    "name": "West Virginia Mountaineers",
+    "conference": "Big 12",
+    "player_count": 15,
+    "cached_at": 1764192944.73858
+  },
+  "125": {
+    "name": "Butler Bulldogs",
+    "conference": "Big East",
+    "player_count": 15,
+    "cached_at": 1764192945.915398
+  },
+  "182": {
+    "name": "Creighton Bluejays",
+    "conference": "Big East",
+    "player_count": 16,
+    "cached_at": 1764192946.6333811
+  },
+  "120": {
+    "name": "DePaul Blue Demons",
+    "conference": "Big East",
+    "player_count": 16,
+    "cached_at": 1764192947.3679218
+  },
+  "60": {
+    "name": "Georgetown Hoyas",
+    "conference": "Big East",
+    "player_count": 16,
+    "cached_at": 1764192948.093784
+  },
+  "122": {
+    "name": "Marquette Golden Eagles",
+    "conference": "Big East",
+    "player_count": 17,
+    "cached_at": 1764192949.280148
+  },
+  "56": {
+    "name": "Providence Friars",
+    "conference": "Big East",
+    "player_count": 15,
+    "cached_at": 1764192950.553419
+  },
+  "64": {
+    "name": "Seton Hall Pirates",
+    "conference": "Big East",
+    "player_count": 15,
+    "cached_at": 1764192951.380245
+  },
+  "57": {
+    "name": "St. John's Red Storm",
+    "conference": "Big East",
+    "player_count": 15,
+    "cached_at": 1764192952.3372958
+  },
+  "54": {
+    "name": "UConn Huskies",
+    "conference": "Big East",
+    "player_count": 15,
+    "cached_at": 1764192953.089888
+  },
+  "58": {
+    "name": "Villanova Wildcats",
+    "conference": "Big East",
+    "player_count": 14,
+    "cached_at": 1764192954.425983
+  },
+  "20": {
+    "name": "Xavier Musketeers",
+    "conference": "Big East",
+    "player_count": 16,
+    "cached_at": 1764192955.166825
+  },
+  "84": {
+    "name": "Illinois Fighting Illini",
+    "conference": "Big Ten",
+    "player_count": 14,
+    "cached_at": 1764192956.08426
+  },
+  "85": {
+    "name": "Indiana Hoosiers",
+    "conference": "Big Ten",
+    "player_count": 17,
+    "cached_at": 1764192956.9937012
+  },
+  "86": {
+    "name": "Iowa Hawkeyes",
+    "conference": "Big Ten",
+    "player_count": 14,
+    "cached_at": 1764192957.7233338
+  },
+  "26": {
+    "name": "Maryland Terrapins",
+    "conference": "Big Ten",
+    "player_count": 16,
+    "cached_at": 1764192958.818385
+  },
+  "88": {
+    "name": "Michigan State Spartans",
+    "conference": "Big Ten",
+    "player_count": 15,
+    "cached_at": 1764192959.7093172
+  },
+  "87": {
+    "name": "Michigan Wolverines",
+    "conference": "Big Ten",
+    "player_count": 16,
+    "cached_at": 1764192960.779188
+  },
+  "89": {
+    "name": "Minnesota Golden Gophers",
+    "conference": "Big Ten",
+    "player_count": 15,
+    "cached_at": 1764192961.618912
+  },
+  "47": {
+    "name": "Nebraska Cornhuskers",
+    "conference": "Big Ten",
+    "player_count": 16,
+    "cached_at": 1764192962.436127
+  },
+  "90": {
+    "name": "Northwestern Wildcats",
+    "conference": "Big Ten",
+    "player_count": 15,
+    "cached_at": 1764192963.8608088
+  },
+  "91": {
+    "name": "Ohio State Buckeyes",
+    "conference": "Big Ten",
+    "player_count": 14,
+    "cached_at": 1764192965.0674958
+  },
+  "223": {
+    "name": "Oregon Ducks",
+    "conference": "Big Ten",
+    "player_count": 17,
+    "cached_at": 1764192966.366519
+  },
+  "92": {
+    "name": "Penn State Nittany Lions",
+    "conference": "Big Ten",
+    "player_count": 13,
+    "cached_at": 1764192967.757322
+  },
+  "93": {
+    "name": "Purdue Boilermakers",
+    "conference": "Big Ten",
+    "player_count": 16,
+    "cached_at": 1764192968.543209
+  },
+  "63": {
+    "name": "Rutgers Scarlet Knights",
+    "conference": "Big Ten",
+    "player_count": 15,
+    "cached_at": 1764192969.402427
+  },
+  "227": {
+    "name": "UCLA Bruins",
+    "conference": "Big Ten",
+    "player_count": 15,
+    "cached_at": 1764192970.186302
+  },
+  "225": {
+    "name": "USC Trojans",
+    "conference": "Big Ten",
+    "player_count": 16,
+    "cached_at": 1764192970.9128242
+  },
+  "228": {
+    "name": "Washington Huskies",
+    "conference": "Big Ten",
+    "player_count": 15,
+    "cached_at": 1764192972.2312288
+  },
+  "94": {
+    "name": "Wisconsin Badgers",
+    "conference": "Big Ten",
+    "player_count": 15,
+    "cached_at": 1764192973.358266
+  },
+  "243": {
+    "name": "Alabama Crimson Tide",
+    "conference": "SEC",
+    "player_count": 17,
+    "cached_at": 1764192974.0864
+  },
+  "244": {
+    "name": "Arkansas Razorbacks",
+    "conference": "SEC",
+    "player_count": 15,
+    "cached_at": 1764192975.302913
+  },
+  "245": {
+    "name": "Auburn Tigers",
+    "conference": "SEC",
+    "player_count": 18,
+    "cached_at": 1764192976.2420192
+  },
+  "237": {
+    "name": "Florida Gators",
+    "conference": "SEC",
+    "player_count": 15,
+    "cached_at": 1764192977.0237088
+  },
+  "238": {
+    "name": "Georgia Bulldogs",
+    "conference": "SEC",
+    "player_count": 15,
+    "cached_at": 1764192978.5450711
+  },
+  "239": {
+    "name": "Kentucky Wildcats",
+    "conference": "SEC",
+    "player_count": 16,
+    "cached_at": 1764192979.700223
+  },
+  "246": {
+    "name": "LSU Tigers",
+    "conference": "SEC",
+    "player_count": 14,
+    "cached_at": 1764192980.486775
+  },
+  "248": {
+    "name": "Mississippi State Bulldogs",
+    "conference": "SEC",
+    "player_count": 15,
+    "cached_at": 1764192981.422647
+  },
+  "46": {
+    "name": "Missouri Tigers",
+    "conference": "SEC",
+    "player_count": 14,
+    "cached_at": 1764192982.145563
+  },
+  "48": {
+    "name": "Oklahoma Sooners",
+    "conference": "SEC",
+    "player_count": 15,
+    "cached_at": 1764192983.021847
+  },
+  "247": {
+    "name": "Ole Miss Rebels",
+    "conference": "SEC",
+    "player_count": 16,
+    "cached_at": 1764192984.1335099
+  },
+  "240": {
+    "name": "South Carolina Gamecocks",
+    "conference": "SEC",
+    "player_count": 15,
+    "cached_at": 1764192985.152734
+  },
+  "241": {
+    "name": "Tennessee Volunteers",
+    "conference": "SEC",
+    "player_count": 16,
+    "cached_at": 1764192985.858979
+  },
+  "51": {
+    "name": "Texas A&M Aggies",
+    "conference": "SEC",
+    "player_count": 15,
+    "cached_at": 1764192987.025385
+  },
+  "50": {
+    "name": "Texas Longhorns",
+    "conference": "SEC",
+    "player_count": 15,
+    "cached_at": 1764192987.781064
+  },
+  "242": {
+    "name": "Vanderbilt Commodores",
+    "conference": "SEC",
+    "player_count": 16,
+    "cached_at": 1764192988.4805398
+  },
+  "256": {
+    "name": "Davidson Wildcats",
+    "conference": "A 10",
+    "player_count": 16,
+    "cached_at": 1764192989.68799
+  },
+  "21": {
+    "name": "Dayton Flyers",
+    "conference": "A 10",
+    "player_count": 15,
+    "cached_at": 1764192990.402804
+  },
+  "11": {
+    "name": "Duquesne Dukes",
+    "conference": "A 10",
+    "player_count": 18,
+    "cached_at": 1764192991.109073
+  },
+  "12": {
+    "name": "Fordham Rams",
+    "conference": "A 10",
+    "player_count": 17,
+    "cached_at": 1764192992.4411361
+  },
+  "106": {
+    "name": "George Mason Patriots",
+    "conference": "A 10",
+    "player_count": 16,
+    "cached_at": 1764192993.806038
+  },
+  "13": {
+    "name": "George Washington Revolutionaries",
+    "conference": "A 10",
+    "player_count": 15,
+    "cached_at": 1764192994.9164958
+  },
+  "14": {
+    "name": "La Salle Explorers",
+    "conference": "A 10",
+    "player_count": 17,
+    "cached_at": 1764192996.2634602
+  },
+  "129": {
+    "name": "Loyola Chicago Ramblers",
+    "conference": "A 10",
+    "player_count": 16,
+    "cached_at": 1764192997.2022521
+  },
+  "16": {
+    "name": "Rhode Island Rams",
+    "conference": "A 10",
+    "player_count": 16,
+    "cached_at": 1764192998.321831
+  },
+  "110": {
+    "name": "Richmond Spiders",
+    "conference": "A 10",
+    "player_count": 16,
+    "cached_at": 1764192999.550317
+  },
+  "18": {
+    "name": "Saint Joseph's Hawks",
+    "conference": "A 10",
+    "player_count": 16,
+    "cached_at": 1764193000.5379698
+  },
+  "124": {
+    "name": "Saint Louis Billikens",
+    "conference": "A 10",
+    "player_count": 17,
+    "cached_at": 1764193001.604565
+  },
+  "17": {
+    "name": "St. Bonaventure Bonnies",
+    "conference": "A 10",
+    "player_count": 15,
+    "cached_at": 1764193002.681173
+  },
+  "111": {
+    "name": "VCU Rams",
+    "conference": "A 10",
+    "player_count": 14,
+    "cached_at": 1764193003.7512362
+  },
+  "211": {
+    "name": "Austin Peay Governors",
+    "conference": "A-Sun",
+    "player_count": 13,
+    "cached_at": 1764193004.96262
+  },
+  "908": {
+    "name": "Bellarmine Knights",
+    "conference": "A-Sun",
+    "player_count": 16,
+    "cached_at": 1764193006.059922
+  },
+  "465": {
+    "name": "Central Arkansas Bears",
+    "conference": "A-Sun",
+    "player_count": 17,
+    "cached_at": 1764193007.0160909
+  },
+  "213": {
+    "name": "Eastern Kentucky Colonels",
+    "conference": "A-Sun",
+    "player_count": 15,
+    "cached_at": 1764193007.7229812
+  },
+  "892": {
+    "name": "Florida Gulf Coast Eagles",
+    "conference": "A-Sun",
+    "player_count": 16,
+    "cached_at": 1764193008.451584
+  },
+  "35": {
+    "name": "Jacksonville Dolphins",
+    "conference": "A-Sun",
+    "player_count": 17,
+    "cached_at": 1764193009.175596
+  },
+  "731": {
+    "name": "Lipscomb Bisons",
+    "conference": "A-Sun",
+    "player_count": 16,
+    "cached_at": 1764193009.9338508
+  },
+  "828": {
+    "name": "North Alabama Lions",
+    "conference": "A-Sun",
+    "player_count": 14,
+    "cached_at": 1764193011.326402
+  },
+  "394": {
+    "name": "North Florida Ospreys",
+    "conference": "A-Sun",
+    "player_count": 14,
+    "cached_at": 1764193012.545302
+  },
+  "403": {
+    "name": "Queens University Royals",
+    "conference": "A-Sun",
+    "player_count": 19,
+    "cached_at": 1764193013.863755
+  },
+  "39": {
+    "name": "Stetson Hatters",
+    "conference": "A-Sun",
+    "player_count": 15,
+    "cached_at": 1764193014.962212
+  },
+  "442": {
+    "name": "West Georgia Wolves",
+    "conference": "A-Sun",
+    "player_count": 16,
+    "cached_at": 1764193016.949942
+  },
+  "123": {
+    "name": "Charlotte 49ers",
+    "conference": "AAC",
+    "player_count": 16,
+    "cached_at": 1764193018.588853
+  },
+  "105": {
+    "name": "East Carolina Pirates",
+    "conference": "AAC",
+    "player_count": 16,
+    "cached_at": 1764193019.664834
+  },
+  "33": {
+    "name": "Florida Atlantic Owls",
+    "conference": "AAC",
+    "player_count": 15,
+    "cached_at": 1764193020.783333
+  },
+  "114": {
+    "name": "Memphis Tigers",
+    "conference": "AAC",
+    "player_count": 15,
+    "cached_at": 1764193021.840061
+  },
+  "301": {
+    "name": "North Texas Mean Green",
+    "conference": "AAC",
+    "player_count": 12,
+    "cached_at": 1764193023.1527739
+  },
+  "314": {
+    "name": "Rice Owls",
+    "conference": "AAC",
+    "player_count": 17,
+    "cached_at": 1764193024.1776881
+  },
+  "115": {
+    "name": "South Florida Bulls",
+    "conference": "AAC",
+    "player_count": 15,
+    "cached_at": 1764193025.816174
+  },
+  "19": {
+    "name": "Temple Owls",
+    "conference": "AAC",
+    "player_count": 15,
+    "cached_at": 1764193027.703118
+  },
+  "117": {
+    "name": "Tulane Green Wave",
+    "conference": "AAC",
+    "player_count": 16,
+    "cached_at": 1764193028.655931
+  },
+  "318": {
+    "name": "Tulsa Golden Hurricane",
+    "conference": "AAC",
+    "player_count": 15,
+    "cached_at": 1764193029.4323761
+  },
+  "118": {
+    "name": "UAB Blazers",
+    "conference": "AAC",
+    "player_count": 15,
+    "cached_at": 1764193030.31126
+  },
+  "271": {
+    "name": "UTSA Roadrunners",
+    "conference": "AAC",
+    "player_count": 15,
+    "cached_at": 1764193031.7762182
+  },
+  "190": {
+    "name": "Wichita State Shockers",
+    "conference": "AAC",
+    "player_count": 15,
+    "cached_at": 1764193032.7197618
+  },
+  "478": {
+    "name": "Binghamton Bearcats",
+    "conference": "Am. East",
+    "player_count": 14,
+    "cached_at": 1764193033.6231291
+  },
+  "820": {
+    "name": "Bryant Bulldogs",
+    "conference": "Am. East",
+    "player_count": 20,
+    "cached_at": 1764193034.500937
+  },
+  "6": {
+    "name": "Maine Black Bears",
+    "conference": "Am. East",
+    "player_count": 16,
+    "cached_at": 1764193035.775746
+  },
+  "388": {
+    "name": "NJIT Highlanders",
+    "conference": "Am. East",
+    "player_count": 15,
+    "cached_at": 1764193037.4323158
+  },
+  "7": {
+    "name": "New Hampshire Wildcats",
+    "conference": "Am. East",
+    "player_count": 14,
+    "cached_at": 1764193038.556798
+  },
+  "202": {
+    "name": "UMBC Retrievers",
+    "conference": "Am. East",
+    "player_count": 15,
+    "cached_at": 1764193039.7030442
+  },
+  "970": {
+    "name": "UMass Lowell River Hawks",
+    "conference": "Am. East",
+    "player_count": 13,
+    "cached_at": 1764193041.22464
+  },
+  "133": {
+    "name": "University at Albany Great Danes",
+    "conference": "Am. East",
+    "player_count": 16,
+    "cached_at": 1764193042.525702
+  },
+  "10": {
+    "name": "Vermont Catamounts",
+    "conference": "Am. East",
+    "player_count": 16,
+    "cached_at": 1764193043.740745
+  },
+  "68": {
+    "name": "Eastern Washington Eagles",
+    "conference": "Big Sky",
+    "player_count": 15,
+    "cached_at": 1764193045.3492422
+  },
+  "69": {
+    "name": "Idaho State Bengals",
+    "conference": "Big Sky",
+    "player_count": 15,
+    "cached_at": 1764193046.7510211
+  },
+  "98": {
+    "name": "Idaho Vandals",
+    "conference": "Big Sky",
+    "player_count": 16,
+    "cached_at": 1764193047.78106
+  },
+  "70": {
+    "name": "Montana Grizzlies",
+    "conference": "Big Sky",
+    "player_count": 14,
+    "cached_at": 1764193048.96821
+  },
+  "71": {
+    "name": "Montana State Bobcats",
+    "conference": "Big Sky",
+    "player_count": 15,
+    "cached_at": 1764193050.3435268
+  },
+  "72": {
+    "name": "Northern Arizona Lumberjacks",
+    "conference": "Big Sky",
+    "player_count": 14,
+    "cached_at": 1764193051.295671
+  },
+  "395": {
+    "name": "Northern Colorado Bears",
+    "conference": "Big Sky",
+    "player_count": 16,
+    "cached_at": 1764193052.623523
+  },
+  "73": {
+    "name": "Portland State Vikings",
+    "conference": "Big Sky",
+    "player_count": 17,
+    "cached_at": 1764193053.8256261
+  },
+  "74": {
+    "name": "Sacramento State Hornets",
+    "conference": "Big Sky",
+    "player_count": 14,
+    "cached_at": 1764193055.1296482
+  },
+  "75": {
+    "name": "Weber State Wildcats",
+    "conference": "Big Sky",
+    "player_count": 15,
+    "cached_at": 1764193056.005824
+  },
+  "76": {
+    "name": "Charleston Southern Buccaneers",
+    "conference": "Big South",
+    "player_count": 16,
+    "cached_at": 1764193057.119416
+  },
+  "456": {
+    "name": "Gardner-Webb Runnin' Bulldogs",
+    "conference": "Big South",
+    "player_count": 16,
+    "cached_at": 1764193057.898946
+  },
+  "79": {
+    "name": "High Point Panthers",
+    "conference": "Big South",
+    "player_count": 19,
+    "cached_at": 1764193059.6672158
+  },
+  "376": {
+    "name": "Longwood Lancers",
+    "conference": "Big South",
+    "player_count": 15,
+    "cached_at": 1764193061.162186
+  },
+  "402": {
+    "name": "Presbyterian Blue Hose",
+    "conference": "Big South",
+    "player_count": 13,
+    "cached_at": 1764193062.418071
+  },
+  "82": {
+    "name": "Radford Highlanders",
+    "conference": "Big South",
+    "player_count": 14,
+    "cached_at": 1764193063.5368068
+  },
+  "81": {
+    "name": "UNC Asheville Bulldogs",
+    "conference": "Big South",
+    "player_count": 16,
+    "cached_at": 1764193065.146824
+  },
+  "415": {
+    "name": "USC Upstate Spartans",
+    "conference": "Big South",
+    "player_count": 14,
+    "cached_at": 1764193065.8924859
+  },
+  "83": {
+    "name": "Winthrop Eagles",
+    "conference": "Big South",
+    "player_count": 15,
+    "cached_at": 1764193067.237529
+  },
+  "96": {
+    "name": "Cal Poly Mustangs",
+    "conference": "Big West",
+    "player_count": 16,
+    "cached_at": 1764193068.9575732
+  },
+  "335": {
+    "name": "Cal State Bakersfield Roadrunners",
+    "conference": "Big West",
+    "player_count": 14,
+    "cached_at": 1764193069.81292
+  },
+  "97": {
+    "name": "Cal State Fullerton Titans",
+    "conference": "Big West",
+    "player_count": 16,
+    "cached_at": 1764193071.344255
+  },
+  "67": {
+    "name": "Cal State Northridge Matadors",
+    "conference": "Big West",
+    "player_count": 17,
+    "cached_at": 1764193072.557281
+  },
+  "312": {
+    "name": "Hawai'i Rainbow Warriors",
+    "conference": "Big West",
+    "player_count": 13,
+    "cached_at": 1764193073.632864
+  },
+  "99": {
+    "name": "Long Beach State Beach",
+    "conference": "Big West",
+    "player_count": 15,
+    "cached_at": 1764193074.719573
+  },
+  "341": {
+    "name": "UC Davis Aggies",
+    "conference": "Big West",
+    "player_count": 14,
+    "cached_at": 1764193075.7438872
+  },
+  "101": {
+    "name": "UC Irvine Anteaters",
+    "conference": "Big West",
+    "player_count": 18,
+    "cached_at": 1764193077.4052732
+  },
+  "476": {
+    "name": "UC Riverside Highlanders",
+    "conference": "Big West",
+    "player_count": 15,
+    "cached_at": 1764193078.537549
+  },
+  "610": {
+    "name": "UC San Diego Tritons",
+    "conference": "Big West",
+    "player_count": 16,
+    "cached_at": 1764193079.4354408
+  },
+  "102": {
+    "name": "UC Santa Barbara Gauchos",
+    "conference": "Big West",
+    "player_count": 17,
+    "cached_at": 1764193080.6521149
+  },
+  "2": {
+    "name": "Delaware Fightin' Blue Hens",
+    "conference": "C-USA",
+    "player_count": 15,
+    "cached_at": 1764193082.182975
+  },
+  "293": {
+    "name": "Florida International Panthers",
+    "conference": "C-USA",
+    "player_count": 15,
+    "cached_at": 1764193083.211862
+  },
+  "36": {
+    "name": "Jacksonville State Gamecocks",
+    "conference": "C-USA",
+    "player_count": 15,
+    "cached_at": 1764193084.094296
+  },
+  "858": {
+    "name": "Kennesaw State Owls",
+    "conference": "C-USA",
+    "player_count": 19,
+    "cached_at": 1764193084.9855402
+  },
+  "80": {
+    "name": "Liberty Flames",
+    "conference": "C-USA",
+    "player_count": 15,
+    "cached_at": 1764193086.07394
+  },
+  "294": {
+    "name": "Louisiana Tech Bulldogs",
+    "conference": "C-USA",
+    "player_count": 15,
+    "cached_at": 1764193086.9829938
+  },
+  "295": {
+    "name": "Middle Tennessee Blue Raiders",
+    "conference": "C-USA",
+    "player_count": 15,
+    "cached_at": 1764193087.6965709
+  },
+  "189": {
+    "name": "Missouri State Bears",
+    "conference": "C-USA",
+    "player_count": 14,
+    "cached_at": 1764193088.8003159
+  },
+  "299": {
+    "name": "New Mexico State Aggies",
+    "conference": "C-USA",
+    "player_count": 15,
+    "cached_at": 1764193089.9257128
+  },
+  "266": {
+    "name": "Sam Houston Bearkats",
+    "conference": "C-USA",
+    "player_count": 15,
+    "cached_at": 1764193090.917588
+  },
+  "319": {
+    "name": "UTEP Miners",
+    "conference": "C-USA",
+    "player_count": 14,
+    "cached_at": 1764193091.942584
+  },
+  "296": {
+    "name": "Western Kentucky Hilltoppers",
+    "conference": "C-USA",
+    "player_count": 16,
+    "cached_at": 1764193092.7008588
+  },
+  "31": {
+    "name": "Campbell Fighting Camels",
+    "conference": "CAA",
+    "player_count": 13,
+    "cached_at": 1764193093.889258
+  },
+  "249": {
+    "name": "Charleston Cougars",
+    "conference": "CAA",
+    "player_count": 16,
+    "cached_at": 1764193094.926611
+  },
+  "3": {
+    "name": "Drexel Dragons",
+    "conference": "CAA",
+    "player_count": 15,
+    "cached_at": 1764193095.9183629
+  },
+  "78": {
+    "name": "Elon Phoenix",
+    "conference": "CAA",
+    "player_count": 16,
+    "cached_at": 1764193098.033591
+  },
+  "174": {
+    "name": "Hampton Pirates",
+    "conference": "CAA",
+    "player_count": 16,
+    "cached_at": 1764193099.0245361
+  },
+  "5": {
+    "name": "Hofstra Pride",
+    "conference": "CAA",
+    "player_count": 15,
+    "cached_at": 1764193100.629
+  },
+  "203": {
+    "name": "Monmouth Hawks",
+    "conference": "CAA",
+    "player_count": 16,
+    "cached_at": 1764193101.865578
+  },
+  "179": {
+    "name": "North Carolina A&T Aggies",
+    "conference": "CAA",
+    "player_count": 16,
+    "cached_at": 1764193103.262757
+  },
+  "8": {
+    "name": "Northeastern Huskies",
+    "conference": "CAA",
+    "player_count": 14,
+    "cached_at": 1764193104.32675
+  },
+  "136": {
+    "name": "Stony Brook Seawolves",
+    "conference": "CAA",
+    "player_count": 15,
+    "cached_at": 1764193105.5280561
+  },
+  "9": {
+    "name": "Towson Tigers",
+    "conference": "CAA",
+    "player_count": 15,
+    "cached_at": 1764193106.492814
+  },
+  "108": {
+    "name": "UNC Wilmington Seahawks",
+    "conference": "CAA",
+    "player_count": 15,
+    "cached_at": 1764193107.881841
+  },
+  "112": {
+    "name": "William & Mary Tribe",
+    "conference": "CAA",
+    "player_count": 15,
+    "cached_at": 1764193108.996619
+  },
+  "126": {
+    "name": "Cleveland State Vikings",
+    "conference": "Horizon",
+    "player_count": 15,
+    "cached_at": 1764193110.0578072
+  },
+  "127": {
+    "name": "Detroit Mercy Titans",
+    "conference": "Horizon",
+    "player_count": 14,
+    "cached_at": 1764193111.0173068
+  },
+  "130": {
+    "name": "Green Bay Phoenix",
+    "conference": "Horizon",
+    "player_count": 16,
+    "cached_at": 1764193112.044909
+  },
+  "283": {
+    "name": "IU Indy Jaguars",
+    "conference": "Horizon",
+    "player_count": 15,
+    "cached_at": 1764193113.387993
+  },
+  "131": {
+    "name": "Milwaukee Panthers",
+    "conference": "Horizon",
+    "player_count": 15,
+    "cached_at": 1764193114.515775
+  },
+  "981": {
+    "name": "Northern Kentucky Norse",
+    "conference": "Horizon",
+    "player_count": 14,
+    "cached_at": 1764193115.5647502
+  },
+  "285": {
+    "name": "Oakland Golden Grizzlies",
+    "conference": "Horizon",
+    "player_count": 14,
+    "cached_at": 1764193116.628803
+  },
+  "463": {
+    "name": "Purdue Fort Wayne Mastodons",
+    "conference": "Horizon",
+    "player_count": 15,
+    "cached_at": 1764193117.9090502
+  },
+  "206": {
+    "name": "Robert Morris Colonials",
+    "conference": "Horizon",
+    "player_count": 16,
+    "cached_at": 1764193119.719382
+  },
+  "132": {
+    "name": "Wright State Raiders",
+    "conference": "Horizon",
+    "player_count": 14,
+    "cached_at": 1764193120.729985
+  },
+  "290": {
+    "name": "Youngstown State Penguins",
+    "conference": "Horizon",
+    "player_count": 15,
+    "cached_at": 1764193122.069399
+  },
+  "139": {
+    "name": "Brown Bears",
+    "conference": "Ivy",
+    "player_count": 15,
+    "cached_at": 1764193123.108317
+  },
+  "140": {
+    "name": "Columbia Lions",
+    "conference": "Ivy",
+    "player_count": 17,
+    "cached_at": 1764193124.2026181
+  },
+  "141": {
+    "name": "Cornell Big Red",
+    "conference": "Ivy",
+    "player_count": 20,
+    "cached_at": 1764193125.349996
+  },
+  "142": {
+    "name": "Dartmouth Big Green",
+    "conference": "Ivy",
+    "player_count": 14,
+    "cached_at": 1764193126.8769321
+  },
+  "143": {
+    "name": "Harvard Crimson",
+    "conference": "Ivy",
+    "player_count": 17,
+    "cached_at": 1764193127.944126
+  },
+  "144": {
+    "name": "Penn Quakers",
+    "conference": "Ivy",
+    "player_count": 19,
+    "cached_at": 1764193129.130965
+  },
+  "145": {
+    "name": "Princeton Tigers",
+    "conference": "Ivy",
+    "player_count": 16,
+    "cached_at": 1764193130.453401
+  },
+  "146": {
+    "name": "Yale Bulldogs",
+    "conference": "Ivy",
+    "player_count": 14,
+    "cached_at": 1764193131.758285
+  },
+  "147": {
+    "name": "Canisius Golden Griffins",
+    "conference": "MAA",
+    "player_count": 16,
+    "cached_at": 1764193132.8356962
+  },
+  "148": {
+    "name": "Fairfield Stags",
+    "conference": "MAA",
+    "player_count": 19,
+    "cached_at": 1764193133.879648
+  },
+  "149": {
+    "name": "Iona Gaels",
+    "conference": "MAA",
+    "player_count": 16,
+    "cached_at": 1764193135.124583
+  },
+  "151": {
+    "name": "Manhattan Jaspers",
+    "conference": "MAA",
+    "player_count": 19,
+    "cached_at": 1764193136.179967
+  },
+  "152": {
+    "name": "Marist Red Foxes",
+    "conference": "MAA",
+    "player_count": 14,
+    "cached_at": 1764193137.3433778
+  },
+  "972": {
+    "name": "Merrimack Warriors",
+    "conference": "MAA",
+    "player_count": 15,
+    "cached_at": 1764193138.866453
+  },
+  "204": {
+    "name": "Mount St. Mary's Mountaineers",
+    "conference": "MAA",
+    "player_count": 16,
+    "cached_at": 1764193140.035997
+  },
+  "153": {
+    "name": "Niagara Purple Eagles",
+    "conference": "MAA",
+    "player_count": 13,
+    "cached_at": 1764193141.0584488
+  },
+  "205": {
+    "name": "Quinnipiac Bobcats",
+    "conference": "MAA",
+    "player_count": 15,
+    "cached_at": 1764193142.0763981
+  },
+  "154": {
+    "name": "Rider Broncs",
+    "conference": "MAA",
+    "player_count": 15,
+    "cached_at": 1764193143.6154969
+  },
+  "207": {
+    "name": "Sacred Heart Pioneers",
+    "conference": "MAA",
+    "player_count": 16,
+    "cached_at": 1764193144.9601269
+  },
+  "156": {
+    "name": "Saint Peter's Peacocks",
+    "conference": "MAA",
+    "player_count": 13,
+    "cached_at": 1764193146.2433228
+  },
+  "155": {
+    "name": "Siena Saints",
+    "conference": "MAA",
+    "player_count": 17,
+    "cached_at": 1764193147.598912
+  },
+  "157": {
+    "name": "Akron Zips",
+    "conference": "MAC",
+    "player_count": 16,
+    "cached_at": 1764193148.413602
+  },
+  "164": {
+    "name": "Ball State Cardinals",
+    "conference": "MAC",
+    "player_count": 15,
+    "cached_at": 1764193149.647407
+  },
+  "158": {
+    "name": "Bowling Green Falcons",
+    "conference": "MAC",
+    "player_count": 17,
+    "cached_at": 1764193151.102685
+  },
+  "159": {
+    "name": "Buffalo Bulls",
+    "conference": "MAC",
+    "player_count": 14,
+    "cached_at": 1764193152.1247869
+  },
+  "165": {
+    "name": "Central Michigan Chippewas",
+    "conference": "MAC",
+    "player_count": 15,
+    "cached_at": 1764193153.251895
+  },
+  "166": {
+    "name": "Eastern Michigan Eagles",
+    "conference": "MAC",
+    "player_count": 14,
+    "cached_at": 1764193154.007138
+  },
+  "160": {
+    "name": "Kent State Golden Flashes",
+    "conference": "MAC",
+    "player_count": 17,
+    "cached_at": 1764193155.06436
+  },
+  "162": {
+    "name": "Miami (OH) RedHawks",
+    "conference": "MAC",
+    "player_count": 17,
+    "cached_at": 1764193156.6279979
+  },
+  "167": {
+    "name": "Northern Illinois Huskies",
+    "conference": "MAC",
+    "player_count": 16,
+    "cached_at": 1764193157.776275
+  },
+  "163": {
+    "name": "Ohio Bobcats",
+    "conference": "MAC",
+    "player_count": 15,
+    "cached_at": 1764193158.9084558
+  },
+  "168": {
+    "name": "Toledo Rockets",
+    "conference": "MAC",
+    "player_count": 13,
+    "cached_at": 1764193159.6226969
+  },
+  "15": {
+    "name": "UMass Minutemen",
+    "conference": "MAC",
+    "player_count": 15,
+    "cached_at": 1764193161.686408
+  },
+  "169": {
+    "name": "Western Michigan Broncos",
+    "conference": "MAC",
+    "player_count": 15,
+    "cached_at": 1764193163.230041
+  },
+  "171": {
+    "name": "Coppin State Eagles",
+    "conference": "MEastern",
+    "player_count": 17,
+    "cached_at": 1764193164.421539
+  },
+  "172": {
+    "name": "Delaware State Hornets",
+    "conference": "MEastern",
+    "player_count": 15,
+    "cached_at": 1764193165.756234
+  },
+  "175": {
+    "name": "Howard Bison",
+    "conference": "MEastern",
+    "player_count": 16,
+    "cached_at": 1764193166.667027
+  },
+  "176": {
+    "name": "Maryland-Eastern Shore Hawks",
+    "conference": "MEastern",
+    "player_count": 15,
+    "cached_at": 1764193168.193805
+  },
+  "177": {
+    "name": "Morgan State Bears",
+    "conference": "MEastern",
+    "player_count": 15,
+    "cached_at": 1764193170.073704
+  },
+  "178": {
+    "name": "Norfolk State Spartans",
+    "conference": "MEastern",
+    "player_count": 15,
+    "cached_at": 1764193171.777556
+  },
+  "393": {
+    "name": "North Carolina Central Eagles",
+    "conference": "MEastern",
+    "player_count": 15,
+    "cached_at": 1764193173.009718
+  },
+  "180": {
+    "name": "South Carolina State Bulldogs",
+    "conference": "MEastern",
+    "player_count": 14,
+    "cached_at": 1764193173.791279
+  },
+  "134": {
+    "name": "Belmont Bruins",
+    "conference": "MVC",
+    "player_count": 15,
+    "cached_at": 1764193175.842261
+  },
+  "181": {
+    "name": "Bradley Braves",
+    "conference": "MVC",
+    "player_count": 15,
+    "cached_at": 1764193176.939092
+  },
+  "183": {
+    "name": "Drake Bulldogs",
+    "conference": "MVC",
+    "player_count": 13,
+    "cached_at": 1764193178.254753
+  },
+  "184": {
+    "name": "Evansville Purple Aces",
+    "conference": "MVC",
+    "player_count": 15,
+    "cached_at": 1764193179.284698
+  },
+  "185": {
+    "name": "Illinois State Redbirds",
+    "conference": "MVC",
+    "player_count": 14,
+    "cached_at": 1764193180.449899
+  },
+  "186": {
+    "name": "Indiana State Sycamores",
+    "conference": "MVC",
+    "player_count": 16,
+    "cached_at": 1764193181.1658208
+  },
+  "215": {
+    "name": "Murray State Racers",
+    "conference": "MVC",
+    "player_count": 15,
+    "cached_at": 1764193182.471663
+  },
+  "187": {
+    "name": "Northern Iowa Panthers",
+    "conference": "MVC",
+    "player_count": 17,
+    "cached_at": 1764193183.2711968
+  },
+  "188": {
+    "name": "Southern Illinois Salukis",
+    "conference": "MVC",
+    "player_count": 14,
+    "cached_at": 1764193184.0325692
+  },
+  "128": {
+    "name": "UIC Flames",
+    "conference": "MVC",
+    "player_count": 15,
+    "cached_at": 1764193185.0023072
+  },
+  "288": {
+    "name": "Valparaiso Beacons",
+    "conference": "MVC",
+    "player_count": 17,
+    "cached_at": 1764193185.995685
+  },
+  "191": {
+    "name": "Air Force Falcons",
+    "conference": "MWC",
+    "player_count": 17,
+    "cached_at": 1764193186.764519
+  },
+  "95": {
+    "name": "Boise State Broncos",
+    "conference": "MWC",
+    "player_count": 15,
+    "cached_at": 1764193187.985614
+  },
+  "193": {
+    "name": "Colorado State Rams",
+    "conference": "MWC",
+    "player_count": 14,
+    "cached_at": 1764193188.7793741
+  },
+  "311": {
+    "name": "Fresno State Bulldogs",
+    "conference": "MWC",
+    "player_count": 15,
+    "cached_at": 1764193190.7918668
+  },
+  "362": {
+    "name": "Grand Canyon Lopes",
+    "conference": "MWC",
+    "player_count": 15,
+    "cached_at": 1764193191.960744
+  },
+  "313": {
+    "name": "Nevada Wolf Pack",
+    "conference": "MWC",
+    "player_count": 14,
+    "cached_at": 1764193193.1655529
+  },
+  "194": {
+    "name": "New Mexico Lobos",
+    "conference": "MWC",
+    "player_count": 14,
+    "cached_at": 1764193194.306619
+  },
+  "195": {
+    "name": "San Diego State Aztecs",
+    "conference": "MWC",
+    "player_count": 15,
+    "cached_at": 1764193195.354251
+  },
+  "315": {
+    "name": "San Jose State Spartans",
+    "conference": "MWC",
+    "player_count": 16,
+    "cached_at": 1764193196.351758
+  },
+  "196": {
+    "name": "UNLV Runnin' Rebels",
+    "conference": "MWC",
+    "player_count": 15,
+    "cached_at": 1764193197.377472
+  },
+  "103": {
+    "name": "Utah State Aggies",
+    "conference": "MWC",
+    "player_count": 15,
+    "cached_at": 1764193198.9670029
+  },
+  "198": {
+    "name": "Wyoming Cowboys",
+    "conference": "MWC",
+    "player_count": 15,
+    "cached_at": 1764193199.756254
+  },
+  "199": {
+    "name": "Central Connecticut State Blue Devils",
+    "conference": "NEC",
+    "player_count": 16,
+    "cached_at": 1764193201.3428109
+  },
+  "282": {
+    "name": "Chicago State Cougars",
+    "conference": "NEC",
+    "player_count": 17,
+    "cached_at": 1764193202.776022
+  },
+  "200": {
+    "name": "FDU Knights",
+    "conference": "NEC",
+    "player_count": 16,
+    "cached_at": 1764193204.0587049
+  },
+  "1468": {
+    "name": "LIU Sharks",
+    "conference": "NEC",
+    "player_count": 15,
+    "cached_at": 1764193205.475522
+  },
+  "966": {
+    "name": "Le Moyne Dolphins",
+    "conference": "NEC",
+    "player_count": 15,
+    "cached_at": 1764193206.940464
+  },
+  "459": {
+    "name": "Mercyhurst Lakers",
+    "conference": "NEC",
+    "player_count": 15,
+    "cached_at": 1764193208.2918222
+  },
+  "390": {
+    "name": "New Haven Chargers",
+    "conference": "NEC",
+    "player_count": 21,
+    "cached_at": 1764193209.581567
+  },
+  "209": {
+    "name": "St. Francis (PA) Red Flash",
+    "conference": "NEC",
+    "player_count": 18,
+    "cached_at": 1764193210.8907251
+  },
+  "904": {
+    "name": "Stonehill Skyhawks",
+    "conference": "NEC",
+    "player_count": 16,
+    "cached_at": 1764193212.433249
+  },
+  "210": {
+    "name": "Wagner Seahawks",
+    "conference": "NEC",
+    "player_count": 13,
+    "cached_at": 1764193213.4157178
+  },
+  "212": {
+    "name": "Eastern Illinois Panthers",
+    "conference": "OVC",
+    "player_count": 14,
+    "cached_at": 1764193214.30951
+  },
+  "1130": {
+    "name": "Lindenwood Lions",
+    "conference": "OVC",
+    "player_count": 15,
+    "cached_at": 1764193215.227479
+  },
+  "292": {
+    "name": "Little Rock Trojans",
+    "conference": "OVC",
+    "player_count": 15,
+    "cached_at": 1764193216.532834
+  },
+  "214": {
+    "name": "Morehead State Eagles",
+    "conference": "OVC",
+    "player_count": 15,
+    "cached_at": 1764193217.5727592
+  },
+  "411": {
+    "name": "SIU Edwardsville Cougars",
+    "conference": "OVC",
+    "player_count": 15,
+    "cached_at": 1764193219.050466
+  },
+  "216": {
+    "name": "Southeast Missouri State Redhawks",
+    "conference": "OVC",
+    "player_count": 14,
+    "cached_at": 1764193220.6344981
+  },
+  "990": {
+    "name": "Southern Indiana Screaming Eagles",
+    "conference": "OVC",
+    "player_count": 15,
+    "cached_at": 1764193221.530306
+  },
+  "217": {
+    "name": "Tennessee State Tigers",
+    "conference": "OVC",
+    "player_count": 16,
+    "cached_at": 1764193222.98251
+  },
+  "218": {
+    "name": "Tennessee Tech Golden Eagles",
+    "conference": "OVC",
+    "player_count": 16,
+    "cached_at": 1764193224.0083358
+  },
+  "219": {
+    "name": "Tennessee-Martin Skyhawks",
+    "conference": "OVC",
+    "player_count": 19,
+    "cached_at": 1764193225.699612
+  },
+  "289": {
+    "name": "Western Illinois Leathernecks",
+    "conference": "OVC",
+    "player_count": 15,
+    "cached_at": 1764193227.530079
+  },
+  "104": {
+    "name": "American Eagles",
+    "conference": "Patriot",
+    "player_count": 19,
+    "cached_at": 1764193229.039294
+  },
+  "230": {
+    "name": "Army Black Knights",
+    "conference": "Patriot",
+    "player_count": 18,
+    "cached_at": 1764193229.99239
+  },
+  "1": {
+    "name": "Boston University Terriers",
+    "conference": "Patriot",
+    "player_count": 16,
+    "cached_at": 1764193231.100478
+  },
+  "231": {
+    "name": "Bucknell Bison",
+    "conference": "Patriot",
+    "player_count": 15,
+    "cached_at": 1764193232.008956
+  },
+  "232": {
+    "name": "Colgate Raiders",
+    "conference": "Patriot",
+    "player_count": 16,
+    "cached_at": 1764193233.2266822
+  },
+  "233": {
+    "name": "Holy Cross Crusaders",
+    "conference": "Patriot",
+    "player_count": 16,
+    "cached_at": 1764193234.230953
+  },
+  "234": {
+    "name": "Lafayette Leopards",
+    "conference": "Patriot",
+    "player_count": 15,
+    "cached_at": 1764193235.510509
+  },
+  "235": {
+    "name": "Lehigh Mountain Hawks",
+    "conference": "Patriot",
+    "player_count": 15,
+    "cached_at": 1764193237.5285382
+  },
+  "150": {
+    "name": "Loyola Maryland Greyhounds",
+    "conference": "Patriot",
+    "player_count": 15,
+    "cached_at": 1764193239.1353118
+  },
+  "236": {
+    "name": "Navy Midshipmen",
+    "conference": "Patriot",
+    "player_count": 25,
+    "cached_at": 1764193239.882093
+  },
+  "854": {
+    "name": "East Texas A&M Lions",
+    "conference": "SLC",
+    "player_count": 16,
+    "cached_at": 1764193241.144448
+  },
+  "662": {
+    "name": "Houston Christian Huskies",
+    "conference": "SLC",
+    "player_count": 15,
+    "cached_at": 1764193242.4669251
+  },
+  "962": {
+    "name": "Incarnate Word Cardinals",
+    "conference": "SLC",
+    "player_count": 15,
+    "cached_at": 1764193243.237314
+  },
+  "261": {
+    "name": "Lamar Cardinals",
+    "conference": "SLC",
+    "player_count": 15,
+    "cached_at": 1764193244.388331
+  },
+  "263": {
+    "name": "McNeese Cowboys",
+    "conference": "SLC",
+    "player_count": 15,
+    "cached_at": 1764193245.51294
+  },
+  "300": {
+    "name": "New Orleans Privateers",
+    "conference": "SLC",
+    "player_count": 15,
+    "cached_at": 1764193246.6589131
+  },
+  "264": {
+    "name": "Nicholls State Colonels",
+    "conference": "SLC",
+    "player_count": 14,
+    "cached_at": 1764193247.706888
+  },
+  "265": {
+    "name": "Northwestern State Demons",
+    "conference": "SLC",
+    "player_count": 14,
+    "cached_at": 1764193248.463984
+  },
+  "267": {
+    "name": "Southeastern Louisiana Lions",
+    "conference": "SLC",
+    "player_count": 15,
+    "cached_at": 1764193249.512981
+  },
+  "269": {
+    "name": "Stephen F. Austin Lumberjacks",
+    "conference": "SLC",
+    "player_count": 15,
+    "cached_at": 1764193250.836661
+  },
+  "137": {
+    "name": "Texas A&M-Corpus Christi Islanders",
+    "conference": "SLC",
+    "player_count": 17,
+    "cached_at": 1764193252.857171
+  },
+  "138": {
+    "name": "UT Rio Grande Valley Vaqueros",
+    "conference": "SLC",
+    "player_count": 15,
+    "cached_at": 1764193253.9210482
+  },
+  "272": {
+    "name": "Alabama A&M Bulldogs",
+    "conference": "SWAC",
+    "player_count": 16,
+    "cached_at": 1764193254.695924
+  },
+  "323": {
+    "name": "Alabama State Hornets",
+    "conference": "SWAC",
+    "player_count": 16,
+    "cached_at": 1764193255.87671
+  },
+  "274": {
+    "name": "Alcorn State Braves",
+    "conference": "SWAC",
+    "player_count": 13,
+    "cached_at": 1764193257.083817
+  },
+  "275": {
+    "name": "Arkansas-Pine Bluff Golden Lions",
+    "conference": "SWAC",
+    "player_count": 15,
+    "cached_at": 1764193258.641113
+  },
+  "170": {
+    "name": "Bethune-Cookman Wildcats",
+    "conference": "SWAC",
+    "player_count": 16,
+    "cached_at": 1764193260.2677279
+  },
+  "173": {
+    "name": "Florida A&M Rattlers",
+    "conference": "SWAC",
+    "player_count": 14,
+    "cached_at": 1764193261.280479
+  },
+  "276": {
+    "name": "Grambling State Tigers",
+    "conference": "SWAC",
+    "player_count": 14,
+    "cached_at": 1764193262.4072618
+  },
+  "277": {
+    "name": "Jackson State Tigers",
+    "conference": "SWAC",
+    "player_count": 16,
+    "cached_at": 1764193263.4694982
+  },
+  "278": {
+    "name": "Mississippi Valley State Delta Devils",
+    "conference": "SWAC",
+    "player_count": 14,
+    "cached_at": 1764193265.323329
+  },
+  "279": {
+    "name": "Prairie View A&M Panthers",
+    "conference": "SWAC",
+    "player_count": 15,
+    "cached_at": 1764193266.342418
+  },
+  "280": {
+    "name": "Southern University Jaguars",
+    "conference": "SWAC",
+    "player_count": 18,
+    "cached_at": 1764193267.627054
+  },
+  "281": {
+    "name": "Texas Southern Tigers",
+    "conference": "SWAC",
+    "player_count": 17,
+    "cached_at": 1764193268.787838
+  },
+  "250": {
+    "name": "Chattanooga Mocs",
+    "conference": "Southern",
+    "player_count": 17,
+    "cached_at": 1764193269.9660742
+  },
+  "257": {
+    "name": "East Tennessee State Buccaneers",
+    "conference": "Southern",
+    "player_count": 15,
+    "cached_at": 1764193270.930827
+  },
+  "252": {
+    "name": "Furman Paladins",
+    "conference": "Southern",
+    "player_count": 15,
+    "cached_at": 1764193272.0617979
+  },
+  "37": {
+    "name": "Mercer Bears",
+    "conference": "Southern",
+    "player_count": 16,
+    "cached_at": 1764193273.198632
+  },
+  "38": {
+    "name": "Samford Bulldogs",
+    "conference": "Southern",
+    "player_count": 17,
+    "cached_at": 1764193274.2237241
+  },
+  "251": {
+    "name": "The Citadel Bulldogs",
+    "conference": "Southern",
+    "player_count": 18,
+    "cached_at": 1764193275.266936
+  },
+  "258": {
+    "name": "UNC Greensboro Spartans",
+    "conference": "Southern",
+    "player_count": 15,
+    "cached_at": 1764193277.235334
+  },
+  "259": {
+    "name": "VMI Keydets",
+    "conference": "Southern",
+    "player_count": 15,
+    "cached_at": 1764193278.590261
+  },
+  "260": {
+    "name": "Western Carolina Catamounts",
+    "conference": "Southern",
+    "player_count": 16,
+    "cached_at": 1764193279.76123
+  },
+  "254": {
+    "name": "Wofford Terriers",
+    "conference": "Southern",
+    "player_count": 15,
+    "cached_at": 1764193280.7301812
+  },
+  "297": {
+    "name": "Denver Pioneers",
+    "conference": "Summit",
+    "player_count": 15,
+    "cached_at": 1764193282.15892
+  },
+  "284": {
+    "name": "Kansas City Roos",
+    "conference": "Summit",
+    "player_count": 15,
+    "cached_at": 1764193283.925177
+  },
+  "489": {
+    "name": "North Dakota Fighting Hawks",
+    "conference": "Summit",
+    "player_count": 15,
+    "cached_at": 1764193285.0973032
+  },
+  "490": {
+    "name": "North Dakota State Bison",
+    "conference": "Summit",
+    "player_count": 14,
+    "cached_at": 1764193287.041766
+  },
+  "826": {
+    "name": "Omaha Mavericks",
+    "conference": "Summit",
+    "player_count": 16,
+    "cached_at": 1764193288.3212328
+  },
+  "286": {
+    "name": "Oral Roberts Golden Eagles",
+    "conference": "Summit",
+    "player_count": 14,
+    "cached_at": 1764193290.488704
+  },
+  "416": {
+    "name": "South Dakota Coyotes",
+    "conference": "Summit",
+    "player_count": 17,
+    "cached_at": 1764193291.490347
+  },
+  "417": {
+    "name": "South Dakota State Jackrabbits",
+    "conference": "Summit",
+    "player_count": 14,
+    "cached_at": 1764193293.6407082
+  },
+  "573": {
+    "name": "St. Thomas Tommies",
+    "conference": "Summit",
+    "player_count": 16,
+    "cached_at": 1764193295.239168
+  },
+  "255": {
+    "name": "Appalachian State Mountaineers",
+    "conference": "Sun Belt",
+    "player_count": 16,
+    "cached_at": 1764193296.632041
+  },
+  "291": {
+    "name": "Arkansas State Red Wolves",
+    "conference": "Sun Belt",
+    "player_count": 15,
+    "cached_at": 1764193298.9908469
+  },
+  "77": {
+    "name": "Coastal Carolina Chanticleers",
+    "conference": "Sun Belt",
+    "player_count": 16,
+    "cached_at": 1764193300.031677
+  },
+  "253": {
+    "name": "Georgia Southern Eagles",
+    "conference": "Sun Belt",
+    "player_count": 17,
+    "cached_at": 1764193301.43507
+  },
+  "34": {
+    "name": "Georgia State Panthers",
+    "conference": "Sun Belt",
+    "player_count": 15,
+    "cached_at": 1764193302.755851
+  },
+  "107": {
+    "name": "James Madison Dukes",
+    "conference": "Sun Belt",
+    "player_count": 15,
+    "cached_at": 1764193303.758569
+  },
+  "298": {
+    "name": "Louisiana Ragin' Cajuns",
+    "conference": "Sun Belt",
+    "player_count": 18,
+    "cached_at": 1764193304.9180748
+  },
+  "262": {
+    "name": "Louisiana-Monroe Warhawks",
+    "conference": "Sun Belt",
+    "player_count": 13,
+    "cached_at": 1764193305.992681
+  },
+  "161": {
+    "name": "Marshall Thundering Herd",
+    "conference": "Sun Belt",
+    "player_count": 15,
+    "cached_at": 1764193306.820569
+  },
+  "109": {
+    "name": "Old Dominion Monarchs",
+    "conference": "Sun Belt",
+    "player_count": 16,
+    "cached_at": 1764193307.974974
+  },
+  "302": {
+    "name": "South Alabama Jaguars",
+    "conference": "Sun Belt",
+    "player_count": 13,
+    "cached_at": 1764193309.103658
+  },
+  "116": {
+    "name": "Southern Miss Golden Eagles",
+    "conference": "Sun Belt",
+    "player_count": 18,
+    "cached_at": 1764193310.395873
+  },
+  "268": {
+    "name": "Texas State Bobcats",
+    "conference": "Sun Belt",
+    "player_count": 15,
+    "cached_at": 1764193311.479444
+  },
+  "40": {
+    "name": "Troy Trojans",
+    "conference": "Sun Belt",
+    "player_count": 15,
+    "cached_at": 1764193312.5831292
+  },
+  "320": {
+    "name": "Abilene Christian Wildcats",
+    "conference": "WAC",
+    "player_count": 13,
+    "cached_at": 1764193313.8495958
+  },
+  "648": {
+    "name": "California Baptist Lancers",
+    "conference": "WAC",
+    "player_count": 16,
+    "cached_at": 1764193314.965703
+  },
+  "287": {
+    "name": "Southern Utah Thunderbirds",
+    "conference": "WAC",
+    "player_count": 16,
+    "cached_at": 1764193316.350583
+  },
+  "432": {
+    "name": "Tarleton State Texans",
+    "conference": "WAC",
+    "player_count": 19,
+    "cached_at": 1764193317.602939
+  },
+  "270": {
+    "name": "UT Arlington Mavericks",
+    "conference": "WAC",
+    "player_count": 14,
+    "cached_at": 1764193318.736747
+  },
+  "1181": {
+    "name": "Utah Tech Trailblazers",
+    "conference": "WAC",
+    "player_count": 14,
+    "cached_at": 1764193319.3722858
+  },
+  "437": {
+    "name": "Utah Valley Wolverines",
+    "conference": "WAC",
+    "player_count": 15,
+    "cached_at": 1764193320.332625
+  },
+  "303": {
+    "name": "Gonzaga Bulldogs",
+    "conference": "WCC",
+    "player_count": 16,
+    "cached_at": 1764193321.1601799
+  },
+  "304": {
+    "name": "Loyola Marymount Lions",
+    "conference": "WCC",
+    "player_count": 16,
+    "cached_at": 1764193322.515626
+  },
+  "224": {
+    "name": "Oregon State Beavers",
+    "conference": "WCC",
+    "player_count": 15,
+    "cached_at": 1764193324.204355
+  },
+  "100": {
+    "name": "Pacific Tigers",
+    "conference": "WCC",
+    "player_count": 18,
+    "cached_at": 1764193325.33091
+  },
+  "305": {
+    "name": "Pepperdine Waves",
+    "conference": "WCC",
+    "player_count": 16,
+    "cached_at": 1764193326.477205
+  },
+  "306": {
+    "name": "Portland Pilots",
+    "conference": "WCC",
+    "player_count": 15,
+    "cached_at": 1764193327.5574348
+  },
+  "307": {
+    "name": "Saint Mary's Gaels",
+    "conference": "WCC",
+    "player_count": 15,
+    "cached_at": 1764193328.558764
+  },
+  "308": {
+    "name": "San Diego Toreros",
+    "conference": "WCC",
+    "player_count": 20,
+    "cached_at": 1764193329.6044002
+  },
+  "309": {
+    "name": "San Francisco Dons",
+    "conference": "WCC",
+    "player_count": 15,
+    "cached_at": 1764193330.52571
+  },
+  "310": {
+    "name": "Santa Clara Broncos",
+    "conference": "WCC",
+    "player_count": 17,
+    "cached_at": 1764193331.588573
+  },
+  "693": {
+    "name": "Seattle Redhawks",
+    "conference": "WCC",
+    "player_count": 15,
+    "cached_at": 1764193332.6504378
+  },
+  "229": {
+    "name": "Washington State Cougars",
+    "conference": "WCC",
+    "player_count": 14,
+    "cached_at": 1764193333.780104
+  }
+}

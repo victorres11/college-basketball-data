@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Darrius Bolden",
+    "jersey": "22",
+    "class": "SR"
+  },
+  {
+    "name": "Tommy Clark",
+    "jersey": "0",
+    "class": "FR"
+  },
+  {
+    "name": "Tyler Doyle",
+    "jersey": "2",
+    "class": "SO"
+  },
+  {
+    "name": "Kenyon Goodin",
+    "jersey": "8",
+    "class": "SO"
+  },
+  {
+    "name": "Ant McAfee",
+    "jersey": "1",
+    "class": "FR"
+  },
+  {
+    "name": "Grant Neal",
+    "jersey": "4",
+    "class": "FR"
+  },
+  {
+    "name": "Myles Watkins",
+    "jersey": "5",
+    "class": "SR"
+  },
+  {
+    "name": "Grant Whitaker",
+    "jersey": "10",
+    "class": "SO"
+  },
+  {
+    "name": "Luke Anderson",
+    "jersey": "15",
+    "class": "SO"
+  },
+  {
+    "name": "Sam Donald",
+    "jersey": "23",
+    "class": "FR"
+  },
+  {
+    "name": "Donovan Hunter",
+    "jersey": "7",
+    "class": "JR"
+  },
+  {
+    "name": "Jack Karasinski",
+    "jersey": "32",
+    "class": "SR"
+  },
+  {
+    "name": "Dominique Murphy",
+    "jersey": "14",
+    "class": "FR"
+  },
+  {
+    "name": "Brian Waddell",
+    "jersey": "11",
+    "class": "SR"
+  },
+  {
+    "name": "Michael Wilson Jr.",
+    "jersey": "24",
+    "class": "SO"
+  },
+  {
+    "name": "Jacob Wassler",
+    "jersey": "44",
+    "class": "FR"
+  }
+]

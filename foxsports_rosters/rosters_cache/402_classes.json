@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Luke Allison",
+    "jersey": "1",
+    "class": "SO"
+  },
+  {
+    "name": "Amare Anderson",
+    "jersey": "10",
+    "class": "FR"
+  },
+  {
+    "name": "JD Bowden",
+    "jersey": "3",
+    "class": "FR"
+  },
+  {
+    "name": "Khalon Hudson",
+    "jersey": "2",
+    "class": "SO"
+  },
+  {
+    "name": "Iverson King",
+    "jersey": "0",
+    "class": "SO"
+  },
+  {
+    "name": "Carl Parrish",
+    "jersey": "12",
+    "class": "JR"
+  },
+  {
+    "name": "Josh Pickett",
+    "jersey": "4",
+    "class": "SO"
+  },
+  {
+    "name": "Erik Taylor",
+    "jersey": "11",
+    "class": "SO"
+  },
+  {
+    "name": "Triston Wilson",
+    "jersey": "7",
+    "class": "SO"
+  },
+  {
+    "name": "Augustine Ayelyine",
+    "jersey": "13",
+    "class": "FR"
+  },
+  {
+    "name": "Chidi Chiakwelu",
+    "jersey": "6",
+    "class": "FR"
+  },
+  {
+    "name": "Jaylen Peterson",
+    "jersey": "42",
+    "class": "JR"
+  },
+  {
+    "name": "Jonah Pierce",
+    "jersey": "15",
+    "class": "SR"
+  }
+]

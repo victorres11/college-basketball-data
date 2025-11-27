@@ -1,0 +1,77 @@
+[
+  {
+    "name": "John Blackwell",
+    "jersey": "25",
+    "class": "JR"
+  },
+  {
+    "name": "Nick Boyd",
+    "jersey": "2",
+    "class": "SR"
+  },
+  {
+    "name": "Braeden Carrington",
+    "jersey": "0",
+    "class": "SR"
+  },
+  {
+    "name": "Isaac Gard",
+    "jersey": "15",
+    "class": "SR"
+  },
+  {
+    "name": "Jack Janicki",
+    "jersey": "5",
+    "class": "SO"
+  },
+  {
+    "name": "Hayden Jones",
+    "jersey": "13",
+    "class": "FR"
+  },
+  {
+    "name": "Zach Kinziger",
+    "jersey": "4",
+    "class": "FR"
+  },
+  {
+    "name": "Andrew Rohde",
+    "jersey": "7",
+    "class": "SR"
+  },
+  {
+    "name": "Aleksas Bieliauskas",
+    "jersey": "32",
+    "class": "FR"
+  },
+  {
+    "name": "Will Garlock",
+    "jersey": "23",
+    "class": "FR"
+  },
+  {
+    "name": "Elijah Gray",
+    "jersey": "6",
+    "class": "SR"
+  },
+  {
+    "name": "Riccardo Greppi",
+    "jersey": "18",
+    "class": "SO"
+  },
+  {
+    "name": "Austin Rapp",
+    "jersey": "22",
+    "class": "SO"
+  },
+  {
+    "name": "Jack Robison",
+    "jersey": "11",
+    "class": "SO"
+  },
+  {
+    "name": "Nolan Winter",
+    "jersey": "31",
+    "class": "JR"
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Chris Ashby",
+    "jersey": "11",
+    "class": "GS"
+  },
+  {
+    "name": "Yoav Berman",
+    "jersey": "24",
+    "class": "SO"
+  },
+  {
+    "name": "Jacob Brandly",
+    "jersey": "25",
+    "class": "FR"
+  },
+  {
+    "name": "Danzelle Bullock Coles",
+    "jersey": "2",
+    "class": "FR"
+  },
+  {
+    "name": "Colby Christiansen",
+    "jersey": "35",
+    "class": "FR"
+  },
+  {
+    "name": "Kam Clark",
+    "jersey": "5",
+    "class": "JR"
+  },
+  {
+    "name": "Tyler Crider",
+    "jersey": "12",
+    "class": "FR"
+  },
+  {
+    "name": "Isaiah Henry",
+    "jersey": "3",
+    "class": "FR"
+  },
+  {
+    "name": "Maban Jabriel",
+    "jersey": "9",
+    "class": "SO"
+  },
+  {
+    "name": "Jimma James",
+    "jersey": "8",
+    "class": "JR"
+  },
+  {
+    "name": "Nasir Mann",
+    "jersey": "1",
+    "class": "SR"
+  },
+  {
+    "name": "Matthew Walter",
+    "jersey": "23",
+    "class": "FR"
+  },
+  {
+    "name": "Jordan Watford",
+    "jersey": "0",
+    "class": "FR"
+  },
+  {
+    "name": "Seamus Wilson",
+    "jersey": "15",
+    "class": "FR"
+  },
+  {
+    "name": "Saif-Allah Zatari",
+    "jersey": "13",
+    "class": "FR"
+  },
+  {
+    "name": "Reid Celestin",
+    "jersey": "4",
+    "class": "JR"
+  },
+  {
+    "name": "Gus Larson",
+    "jersey": "7",
+    "class": "GS"
+  },
+  {
+    "name": "Avantae Parker",
+    "jersey": "6",
+    "class": "JR"
+  },
+  {
+    "name": "Carson Schwieger",
+    "jersey": "22",
+    "class": "SO"
+  }
+]

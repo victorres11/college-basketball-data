@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Drake Allen",
+    "jersey": "8",
+    "class": "GS"
+  },
+  {
+    "name": "Jordy Barnes",
+    "jersey": "5",
+    "class": "SO"
+  },
+  {
+    "name": "Brayden Boe",
+    "jersey": "4",
+    "class": "FR"
+  },
+  {
+    "name": "MJ Collins Jr.",
+    "jersey": "2",
+    "class": "SR"
+  },
+  {
+    "name": "Mason Falslev",
+    "jersey": "12",
+    "class": "JR"
+  },
+  {
+    "name": "Kolby King",
+    "jersey": "7",
+    "class": "SR"
+  },
+  {
+    "name": "Elijah Perryman",
+    "jersey": "1",
+    "class": "FR"
+  },
+  {
+    "name": "Tucker Anderson",
+    "jersey": "3",
+    "class": "JR"
+  },
+  {
+    "name": "Garry Clark",
+    "jersey": "11",
+    "class": "SR"
+  },
+  {
+    "name": "Adlan Elamin",
+    "jersey": "35",
+    "class": "FR"
+  },
+  {
+    "name": "David Iweze",
+    "jersey": "13",
+    "class": "FR"
+  },
+  {
+    "name": "Luke Kearney",
+    "jersey": "20",
+    "class": "JR"
+  },
+  {
+    "name": "Zach Keller",
+    "jersey": "32",
+    "class": "SR"
+  },
+  {
+    "name": "Karson Templin",
+    "jersey": "22",
+    "class": "JR"
+  },
+  {
+    "name": "Kingston Tosi",
+    "jersey": "24",
+    "class": "FR"
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Corey Boston",
+    "jersey": "2",
+    "class": "GS"
+  },
+  {
+    "name": "Matt Compas",
+    "jersey": "15",
+    "class": "SR"
+  },
+  {
+    "name": "Kyler D'Augustino",
+    "jersey": "12",
+    "class": "JR"
+  },
+  {
+    "name": "Micah Davis",
+    "jersey": "4",
+    "class": "SO"
+  },
+  {
+    "name": "JP Dragas",
+    "jersey": "5",
+    "class": "SO"
+  },
+  {
+    "name": "Jaxon Edwards",
+    "jersey": "0",
+    "class": "SR"
+  },
+  {
+    "name": "Ajay Holubar",
+    "jersey": "22",
+    "class": "SR"
+  },
+  {
+    "name": "Maguire Mitchell",
+    "jersey": "13",
+    "class": "FR"
+  },
+  {
+    "name": "Garrett Sever",
+    "jersey": "11",
+    "class": "FR"
+  },
+  {
+    "name": "Lav Cvetkovic",
+    "jersey": "10",
+    "class": "GS"
+  },
+  {
+    "name": "Reece Hagy",
+    "jersey": "1",
+    "class": "FR"
+  },
+  {
+    "name": "Aiden Miller",
+    "jersey": "23",
+    "class": "SO"
+  },
+  {
+    "name": "Gabe Stewart",
+    "jersey": "24",
+    "class": "FR"
+  },
+  {
+    "name": "Kameron Tinsley",
+    "jersey": "20",
+    "class": "SO"
+  },
+  {
+    "name": "Finley Woodward",
+    "jersey": "7",
+    "class": "SR"
+  }
+]

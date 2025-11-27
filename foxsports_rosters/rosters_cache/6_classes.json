@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Isaac Bonilla",
+    "jersey": "5",
+    "class": "JR"
+  },
+  {
+    "name": "Logan Carey",
+    "jersey": "0",
+    "class": "JR"
+  },
+  {
+    "name": "Caleb Crawford",
+    "jersey": "4",
+    "class": "SO"
+  },
+  {
+    "name": "Mekhi Gray",
+    "jersey": "24",
+    "class": "SR"
+  },
+  {
+    "name": "Darius Lopes",
+    "jersey": "8",
+    "class": "SO"
+  },
+  {
+    "name": "Ryan Mabrey",
+    "jersey": "3",
+    "class": "SR"
+  },
+  {
+    "name": "Bashir N'Galang",
+    "jersey": "2",
+    "class": "FR"
+  },
+  {
+    "name": "Amare Allen",
+    "jersey": "14",
+    "class": "SO"
+  },
+  {
+    "name": "Yanis Bamba",
+    "jersey": "6",
+    "class": "JR"
+  },
+  {
+    "name": "TJ Biel",
+    "jersey": "1",
+    "class": "GS"
+  },
+  {
+    "name": "Emmitt Byther",
+    "jersey": "12",
+    "class": "FR"
+  },
+  {
+    "name": "Ace Flagg",
+    "jersey": "11",
+    "class": "FR"
+  },
+  {
+    "name": "Killian Gribben",
+    "jersey": "10",
+    "class": "SR"
+  },
+  {
+    "name": "Joshua Ojuri",
+    "jersey": "21",
+    "class": "FR"
+  },
+  {
+    "name": "John Shea",
+    "jersey": "15",
+    "class": "SR"
+  },
+  {
+    "name": "Keelan Steele",
+    "jersey": "25",
+    "class": "SR"
+  }
+]

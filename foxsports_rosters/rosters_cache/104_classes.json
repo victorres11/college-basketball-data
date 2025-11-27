@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Jack Anderson",
+    "jersey": "8",
+    "class": "FR"
+  },
+  {
+    "name": "Matthew Casey",
+    "jersey": "9",
+    "class": "FR"
+  },
+  {
+    "name": "Madden Collins",
+    "jersey": "2",
+    "class": "FR"
+  },
+  {
+    "name": "Dean Hogans",
+    "jersey": "3",
+    "class": "FR"
+  },
+  {
+    "name": "Wyatt Nausadis",
+    "jersey": "7",
+    "class": "SO"
+  },
+  {
+    "name": "Shane O'Reilly",
+    "jersey": "22",
+    "class": "SO"
+  },
+  {
+    "name": "Kamran Prince",
+    "jersey": "1",
+    "class": "FR"
+  },
+  {
+    "name": "Adrian Samuels",
+    "jersey": "10",
+    "class": "SR"
+  },
+  {
+    "name": "Kade Sebastian",
+    "jersey": "4",
+    "class": "FR"
+  },
+  {
+    "name": "Geoff Sprouse",
+    "jersey": "12",
+    "class": "SR"
+  },
+  {
+    "name": "Luke Brown",
+    "jersey": "16",
+    "class": "FR"
+  },
+  {
+    "name": "Gibraltar Coleman",
+    "jersey": "14",
+    "class": "JR"
+  },
+  {
+    "name": "Chris Eagan",
+    "jersey": "35",
+    "class": "FR"
+  },
+  {
+    "name": "Julen Iturbe",
+    "jersey": "32",
+    "class": "SO"
+  },
+  {
+    "name": "Greg Jones",
+    "jersey": "23",
+    "class": "JR"
+  },
+  {
+    "name": "Noah Jones",
+    "jersey": "21",
+    "class": "SR"
+  },
+  {
+    "name": "Matt Mayock",
+    "jersey": "33",
+    "class": "JR"
+  },
+  {
+    "name": "Carson McDonald",
+    "jersey": "13",
+    "class": "FR"
+  },
+  {
+    "name": "Eric Michaels",
+    "jersey": "25",
+    "class": "SO"
+  }
+]

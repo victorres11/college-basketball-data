@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Kellan Boylan",
+    "jersey": "23",
+    "class": "SR"
+  },
+  {
+    "name": "Ross Candelino",
+    "jersey": "30",
+    "class": "JR"
+  },
+  {
+    "name": "Luke Carter",
+    "jersey": "12",
+    "class": "JR"
+  },
+  {
+    "name": "Ethan Duncan",
+    "jersey": "7",
+    "class": "JR"
+  },
+  {
+    "name": "Mateo Esmeraldo",
+    "jersey": "1",
+    "class": "JR"
+  },
+  {
+    "name": "Logan Suber",
+    "jersey": "11",
+    "class": "SO"
+  },
+  {
+    "name": "Miles White",
+    "jersey": "5",
+    "class": "SR"
+  },
+  {
+    "name": "Or Ashkenazi",
+    "jersey": "6",
+    "class": "FR"
+  },
+  {
+    "name": "Grant Asman",
+    "jersey": "35",
+    "class": "GS"
+  },
+  {
+    "name": "Luke Jack",
+    "jersey": "0",
+    "class": "FR"
+  },
+  {
+    "name": "Devyn Martin",
+    "jersey": "2",
+    "class": "FR"
+  },
+  {
+    "name": "Cole Middleton",
+    "jersey": "24",
+    "class": "GS"
+  },
+  {
+    "name": "Kennedy Okpara",
+    "jersey": "3",
+    "class": "FR"
+  },
+  {
+    "name": "Titas Sargiunas",
+    "jersey": "26",
+    "class": "JR"
+  },
+  {
+    "name": "Josh Scott",
+    "jersey": "15",
+    "class": "FR"
+  },
+  {
+    "name": "Charlie Williams",
+    "jersey": "33",
+    "class": "SR"
+  }
+]

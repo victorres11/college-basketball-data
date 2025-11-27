@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Eren Banks",
+    "jersey": "4",
+    "class": "JR"
+  },
+  {
+    "name": "Jacari Brim",
+    "jersey": "6",
+    "class": "FR"
+  },
+  {
+    "name": "Jason Clarke Jr.",
+    "jersey": "5",
+    "class": "SO"
+  },
+  {
+    "name": "Alonzo Dodd",
+    "jersey": "2",
+    "class": "SR"
+  },
+  {
+    "name": "Kasen Jennings",
+    "jersey": "13",
+    "class": "GS"
+  },
+  {
+    "name": "Luke Ledford",
+    "jersey": "32",
+    "class": "JR"
+  },
+  {
+    "name": "Ted Neal",
+    "jersey": "7",
+    "class": "FR"
+  },
+  {
+    "name": "Cameron O'Kelley",
+    "jersey": "14",
+    "class": "SO"
+  },
+  {
+    "name": "Jalen Tot",
+    "jersey": "9",
+    "class": "GS"
+  },
+  {
+    "name": "KJ Vasser",
+    "jersey": "0",
+    "class": "JR"
+  },
+  {
+    "name": "Grant Clayton",
+    "jersey": "33",
+    "class": "FR"
+  },
+  {
+    "name": "Michael Marcus Jr.",
+    "jersey": "44",
+    "class": "SO"
+  },
+  {
+    "name": "Tre McKinnon",
+    "jersey": "8",
+    "class": "FR"
+  },
+  {
+    "name": "Chad Moodie",
+    "jersey": "23",
+    "class": "JR"
+  },
+  {
+    "name": "Andrin Njock",
+    "jersey": "21",
+    "class": "FR"
+  },
+  {
+    "name": "Luke Wilson",
+    "jersey": "3",
+    "class": "SO"
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Jake Dykstra",
+    "jersey": "23",
+    "class": "SR"
+  },
+  {
+    "name": "Cooper Haynes",
+    "jersey": "13",
+    "class": "FR"
+  },
+  {
+    "name": "Jabez Jenkins",
+    "jersey": "10",
+    "class": "FR"
+  },
+  {
+    "name": "Tyler Lundblade",
+    "jersey": "8",
+    "class": "GS"
+  },
+  {
+    "name": "Nic McClain",
+    "jersey": "1",
+    "class": "GS"
+  },
+  {
+    "name": "Win Miller",
+    "jersey": "0",
+    "class": "JR"
+  },
+  {
+    "name": "Keith Robbins",
+    "jersey": "24",
+    "class": "SR"
+  },
+  {
+    "name": "Jack Smiley",
+    "jersey": "2",
+    "class": "FR"
+  },
+  {
+    "name": "Isaiah West",
+    "jersey": "3",
+    "class": "JR"
+  },
+  {
+    "name": "Eoin Dillon",
+    "jersey": "5",
+    "class": "FR"
+  },
+  {
+    "name": "Graydon Lemke",
+    "jersey": "7",
+    "class": "FR"
+  },
+  {
+    "name": "Aidan Noyes",
+    "jersey": "4",
+    "class": "SR"
+  },
+  {
+    "name": "Sam Orme",
+    "jersey": "14",
+    "class": "SO"
+  },
+  {
+    "name": "Brigham Rogers",
+    "jersey": "12",
+    "class": "JR"
+  },
+  {
+    "name": "Drew Scharnowski",
+    "jersey": "11",
+    "class": "SO"
+  }
+]

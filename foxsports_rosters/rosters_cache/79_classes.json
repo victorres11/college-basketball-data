@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Vincent Brady II",
+    "jersey": "2",
+    "class": "SR"
+  },
+  {
+    "name": "Liam Carney",
+    "jersey": "16",
+    "class": "JR"
+  },
+  {
+    "name": "Babacar Diallo",
+    "jersey": "4",
+    "class": "GS"
+  },
+  {
+    "name": "David Fonville",
+    "jersey": "35",
+    "class": "SO"
+  },
+  {
+    "name": "Dorian Grosber",
+    "jersey": "10",
+    "class": "FR"
+  },
+  {
+    "name": "Chase Johnston",
+    "jersey": "99",
+    "class": "GS"
+  },
+  {
+    "name": "Kasen Krueger",
+    "jersey": "23",
+    "class": "FR"
+  },
+  {
+    "name": "Rob Martin",
+    "jersey": "3",
+    "class": "SR"
+  },
+  {
+    "name": "Conrad Martinez",
+    "jersey": "9",
+    "class": "JR"
+  },
+  {
+    "name": "Mavrick Miller",
+    "jersey": "33",
+    "class": "SO"
+  },
+  {
+    "name": "Scotty Washington",
+    "jersey": "12",
+    "class": "SR"
+  },
+  {
+    "name": "Terry Anderson",
+    "jersey": "5",
+    "class": "GS"
+  },
+  {
+    "name": "Owen Aquino",
+    "jersey": "8",
+    "class": "SR"
+  },
+  {
+    "name": "Cam'Ron Fletcher",
+    "jersey": "11",
+    "class": "GS"
+  },
+  {
+    "name": "Braden Hausen",
+    "jersey": "15",
+    "class": "SO"
+  },
+  {
+    "name": "Josh Ibukunoluwa",
+    "jersey": "19",
+    "class": "SO"
+  },
+  {
+    "name": "Birgir Irving",
+    "jersey": "14",
+    "class": "SO"
+  },
+  {
+    "name": "Caden Miller",
+    "jersey": "7",
+    "class": "FR"
+  },
+  {
+    "name": "Youssouf Singare",
+    "jersey": "24",
+    "class": "JR"
+  }
+]

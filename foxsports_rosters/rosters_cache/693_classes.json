@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Miles Amos",
+    "jersey": "2",
+    "class": "JR"
+  },
+  {
+    "name": "Maleek Arington",
+    "jersey": "1",
+    "class": "SR"
+  },
+  {
+    "name": "John Christofilis",
+    "jersey": "11",
+    "class": "SR"
+  },
+  {
+    "name": "Jeremiah Harshman",
+    "jersey": "7",
+    "class": "FR"
+  },
+  {
+    "name": "Brayden Maldonado",
+    "jersey": "0",
+    "class": "SR"
+  },
+  {
+    "name": "Jojo Murphy",
+    "jersey": "5",
+    "class": "SR"
+  },
+  {
+    "name": "JT White",
+    "jersey": "14",
+    "class": "SR"
+  },
+  {
+    "name": "Ray Adams",
+    "jersey": "10",
+    "class": "FR"
+  },
+  {
+    "name": "Brock Felder",
+    "jersey": "33",
+    "class": "JR"
+  },
+  {
+    "name": "Will Heimbrodt",
+    "jersey": "15",
+    "class": "SO"
+  },
+  {
+    "name": "Yuto Kawashima",
+    "jersey": "25",
+    "class": "FR"
+  },
+  {
+    "name": "Stratos Papastavrou",
+    "jersey": "9",
+    "class": "FR"
+  },
+  {
+    "name": "Junseok Yeo",
+    "jersey": "21",
+    "class": "SR"
+  },
+  {
+    "name": "Houran Dan",
+    "jersey": "6",
+    "class": "SO"
+  },
+  {
+    "name": "Austin Maurer",
+    "jersey": "34",
+    "class": "SO"
+  }
+]

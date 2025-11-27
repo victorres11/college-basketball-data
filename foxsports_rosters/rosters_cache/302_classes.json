@@ -1,0 +1,67 @@
+[
+  {
+    "name": "John Broom",
+    "jersey": "14",
+    "class": "SO"
+  },
+  {
+    "name": "Jayden Cooper",
+    "jersey": "1",
+    "class": "JR"
+  },
+  {
+    "name": "Chaze Harris",
+    "jersey": "2",
+    "class": "SR"
+  },
+  {
+    "name": "Brian Hawthorne",
+    "jersey": "7",
+    "class": "JR"
+  },
+  {
+    "name": "Maxwell Land",
+    "jersey": "10",
+    "class": "SR"
+  },
+  {
+    "name": "Hantz Louis-Jeune",
+    "jersey": "4",
+    "class": "GS"
+  },
+  {
+    "name": "Samuel Shoptaw",
+    "jersey": "0",
+    "class": "FR"
+  },
+  {
+    "name": "JJ Wheat",
+    "jersey": "6",
+    "class": "SR"
+  },
+  {
+    "name": "Desmond Williams",
+    "jersey": "8",
+    "class": "FR"
+  },
+  {
+    "name": "Randy Brady",
+    "jersey": "34",
+    "class": "SR"
+  },
+  {
+    "name": "Peyton Law",
+    "jersey": "9",
+    "class": "SR"
+  },
+  {
+    "name": "Adam Olsen",
+    "jersey": "12",
+    "class": "JR"
+  },
+  {
+    "name": "Stephen Williams",
+    "jersey": "3",
+    "class": "SO"
+  }
+]

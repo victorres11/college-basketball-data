@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Cade Bennett",
+    "jersey": "22",
+    "class": "JR"
+  },
+  {
+    "name": "Liam Campbell",
+    "jersey": "33",
+    "class": "FR"
+  },
+  {
+    "name": "Joshua Dent",
+    "jersey": "7",
+    "class": "SO"
+  },
+  {
+    "name": "Tony Duckett",
+    "jersey": "2",
+    "class": "SO"
+  },
+  {
+    "name": "Rory Hawke",
+    "jersey": "8",
+    "class": "FR"
+  },
+  {
+    "name": "Mantas Juzenas",
+    "jersey": "6",
+    "class": "FR"
+  },
+  {
+    "name": "Mikey Lewis",
+    "jersey": "0",
+    "class": "SO"
+  },
+  {
+    "name": "Dillan Shaw",
+    "jersey": "11",
+    "class": "FR"
+  },
+  {
+    "name": "Oliver Faubert",
+    "jersey": "14",
+    "class": "FR"
+  },
+  {
+    "name": "Kevin Gad",
+    "jersey": "24",
+    "class": "JR"
+  },
+  {
+    "name": "Jazz Gardner",
+    "jersey": "32",
+    "class": "JR"
+  },
+  {
+    "name": "Trent MacLean",
+    "jersey": "42",
+    "class": "FR"
+  },
+  {
+    "name": "Paulius Murauskas",
+    "jersey": "23",
+    "class": "JR"
+  },
+  {
+    "name": "Andrew McKeever",
+    "jersey": "45",
+    "class": "SO"
+  },
+  {
+    "name": "Harry Wessels",
+    "jersey": "1",
+    "class": "SR"
+  }
+]

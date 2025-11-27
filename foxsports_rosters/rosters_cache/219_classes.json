@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Andrija Bukumirovic",
+    "jersey": "0",
+    "class": "JR"
+  },
+  {
+    "name": "AJ Hopkins",
+    "jersey": "11",
+    "class": "SR"
+  },
+  {
+    "name": "Will Hopkins",
+    "jersey": "1",
+    "class": "SO"
+  },
+  {
+    "name": "Charlie King",
+    "jersey": "6",
+    "class": "JR"
+  },
+  {
+    "name": "Damien King",
+    "jersey": "5",
+    "class": "FR"
+  },
+  {
+    "name": "Dragos Lungu",
+    "jersey": "7",
+    "class": "SO"
+  },
+  {
+    "name": "Enrique Moya",
+    "jersey": "2",
+    "class": "FR"
+  },
+  {
+    "name": "Filip Petkovski",
+    "jersey": "32",
+    "class": "FR"
+  },
+  {
+    "name": "Ty Price",
+    "jersey": "22",
+    "class": "FR"
+  },
+  {
+    "name": "Filip Radakovic",
+    "jersey": "33",
+    "class": "SO"
+  },
+  {
+    "name": "Pedro Santos",
+    "jersey": "9",
+    "class": "FR"
+  },
+  {
+    "name": "Afan Trnka",
+    "jersey": "4",
+    "class": "JR"
+  },
+  {
+    "name": "Lucas Williams",
+    "jersey": "23",
+    "class": "SO"
+  },
+  {
+    "name": "James Bass",
+    "jersey": "3",
+    "class": "FR"
+  },
+  {
+    "name": "Luca Colceag",
+    "jersey": "77",
+    "class": "SR"
+  },
+  {
+    "name": "Matas Deniusas",
+    "jersey": "44",
+    "class": "FR"
+  },
+  {
+    "name": "Vladimir Khryapa",
+    "jersey": "24",
+    "class": "FR"
+  },
+  {
+    "name": "Lamine Niang",
+    "jersey": "34",
+    "class": "JR"
+  },
+  {
+    "name": "Ama Sow",
+    "jersey": "10",
+    "class": "FR"
+  }
+]

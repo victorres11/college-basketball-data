@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Miles Byrd",
+    "jersey": "21",
+    "class": "JR"
+  },
+  {
+    "name": "BJ Davis",
+    "jersey": "10",
+    "class": "JR"
+  },
+  {
+    "name": "Latrell Davis",
+    "jersey": "6",
+    "class": "JR"
+  },
+  {
+    "name": "Taj DeGourville",
+    "jersey": "24",
+    "class": "SO"
+  },
+  {
+    "name": "Reese Dixon-Waters",
+    "jersey": "39",
+    "class": "SR"
+  },
+  {
+    "name": "Raymar Gonzales",
+    "jersey": "9",
+    "class": "FR"
+  },
+  {
+    "name": "Elzie Harrington",
+    "jersey": "3",
+    "class": "FR"
+  },
+  {
+    "name": "Cam Lawin",
+    "jersey": "7",
+    "class": "JR"
+  },
+  {
+    "name": "Sean Newman Jr.",
+    "jersey": "4",
+    "class": "SR"
+  },
+  {
+    "name": "Pharaoh Compton",
+    "jersey": "5",
+    "class": "SO"
+  },
+  {
+    "name": "Magoon Gwath",
+    "jersey": "0",
+    "class": "SO"
+  },
+  {
+    "name": "Miles Heide",
+    "jersey": "40",
+    "class": "JR"
+  },
+  {
+    "name": "Thokbor Majak",
+    "jersey": "33",
+    "class": "FR"
+  },
+  {
+    "name": "Jeremiah Oden",
+    "jersey": "25",
+    "class": "SR"
+  },
+  {
+    "name": "Tae Simmons",
+    "jersey": "8",
+    "class": "FR"
+  }
+]

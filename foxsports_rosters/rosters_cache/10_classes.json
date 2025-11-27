@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Sean Blake",
+    "jersey": "5",
+    "class": "SO"
+  },
+  {
+    "name": "Sincere Clemons",
+    "jersey": "25",
+    "class": "FR"
+  },
+  {
+    "name": "TJ Hurley",
+    "jersey": "3",
+    "class": "SR"
+  },
+  {
+    "name": "Ben Johnson",
+    "jersey": "24",
+    "class": "GS"
+  },
+  {
+    "name": "Chris Kuzemka",
+    "jersey": "13",
+    "class": "GS"
+  },
+  {
+    "name": "TJ Long",
+    "jersey": "20",
+    "class": "GS"
+  },
+  {
+    "name": "Lucas Mari",
+    "jersey": "21",
+    "class": "FR"
+  },
+  {
+    "name": "Momo Nkugwa",
+    "jersey": "1",
+    "class": "FR"
+  },
+  {
+    "name": "Ben Wesson",
+    "jersey": "12",
+    "class": "FR"
+  },
+  {
+    "name": "Noah Barnett",
+    "jersey": "34",
+    "class": "SO"
+  },
+  {
+    "name": "Drew Bessette",
+    "jersey": "15",
+    "class": "FR"
+  },
+  {
+    "name": "Ben Michaels",
+    "jersey": "2",
+    "class": "SO"
+  },
+  {
+    "name": "David Simon",
+    "jersey": "0",
+    "class": "SO"
+  },
+  {
+    "name": "Jackson Skipper",
+    "jersey": "4",
+    "class": "JR"
+  },
+  {
+    "name": "Trey Woodyard",
+    "jersey": "32",
+    "class": "GS"
+  },
+  {
+    "name": "Gus Yalden",
+    "jersey": "19",
+    "class": "SO"
+  }
+]

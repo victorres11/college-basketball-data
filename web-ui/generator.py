@@ -10,6 +10,17 @@ from cbb_api_wrapper import CollegeBasketballAPI
 import json
 from datetime import datetime
 
+# Import FoxSports roster cache
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+foxsports_path = os.path.join(project_root, 'foxsports_rosters')
+sys.path.insert(0, foxsports_path)
+try:
+    from roster_cache_reader import RosterCache
+    FOXSPORTS_CACHE_AVAILABLE = True
+except ImportError:
+    FOXSPORTS_CACHE_AVAILABLE = False
+    print("Warning: FoxSports roster cache not available")
+
 # Import helper functions - we'll need to import from a shared location
 # For now, we'll import from one of the existing generators
 # In production, these should be in a shared utilities module
@@ -26,6 +37,21 @@ calculate_player_conference_rankings_from_list = generator_utils.calculate_playe
 calculate_conference_rankings = generator_utils.calculate_conference_rankings
 calculate_per_game_stats = generator_utils.calculate_per_game_stats
 calculate_regular_season_stats = generator_utils.calculate_regular_season_stats
+
+
+def normalize_jersey(jersey):
+    """
+    Normalize jersey number for matching.
+    - Strip whitespace
+    - Keep leading zeros (00 stays 00, 0 stays 0)
+    - Handle None/"N/A"/empty strings
+    """
+    if not jersey or jersey == "N/A":
+        return None
+    normalized = str(jersey).strip()
+    if not normalized:  # Empty string after stripping
+        return None
+    return normalized
 
 
 def load_cached_roster(team_name, season):
@@ -163,6 +189,45 @@ def generate_team_data(team_name, season, progress_callback=None):
     # Fetch all conference players for individual player rankings
     all_conference_players = api.get_player_season_stats(season, season_type='regular')
     
+    # Get CBB API teamId for FoxSports cache lookup
+    cbb_team_id = None
+    if team_season_stats and len(team_season_stats) > 0:
+        cbb_team_id = team_season_stats[0].get('teamId')
+    
+    # Load FoxSports roster cache for player classes
+    foxsports_team_id = None
+    player_classes_by_jersey = {}
+    
+    if FOXSPORTS_CACHE_AVAILABLE and cbb_team_id:
+        try:
+            # Load CBB → FoxSports mapping
+            mapping_path = os.path.join(foxsports_path, 'cbb_to_foxsports_team_mapping.json')
+            if os.path.exists(mapping_path):
+                with open(mapping_path, 'r') as f:
+                    cbb_to_fox_mapping = json.load(f)
+                
+                # Map CBB ID to FoxSports ID
+                cbb_id_str = str(cbb_team_id)
+                # Check direct mapping first
+                if cbb_id_str in cbb_to_fox_mapping:
+                    foxsports_team_id = cbb_to_fox_mapping[cbb_id_str]
+                # Check mismatches
+                elif 'MISMATCHES' in cbb_to_fox_mapping and cbb_id_str in cbb_to_fox_mapping['MISMATCHES']:
+                    foxsports_team_id = cbb_to_fox_mapping['MISMATCHES'][cbb_id_str]
+                
+                # Get player classes from FoxSports cache
+                if foxsports_team_id:
+                    cache = RosterCache(cache_dir=os.path.join(foxsports_path, 'rosters_cache'))
+                    cached_players = cache.get_player_classes(foxsports_team_id)
+                    
+                    # Create lookup by normalized jersey number
+                    for player in cached_players:
+                        jersey = normalize_jersey(player.get('jersey'))
+                        if jersey:
+                            player_classes_by_jersey[jersey] = player.get('class')
+        except Exception as e:
+            print(f"Warning: Could not load FoxSports roster cache: {e}")
+    
     # Load cached roster if available (for better class/year and high school data)
     cached_roster_lookup = load_cached_roster(team_name, season)
     
@@ -190,16 +255,9 @@ def generate_team_data(team_name, season, progress_callback=None):
                     player_data['highSchool'] = recruit_data.get('school', 'N/A')
                     break
     
-    # Get all unique players from game data
-    players_with_game_data = set()
-    for game in game_data:
-        if 'players' in game:
-            for player in game['players']:
-                player_name = player.get('name', '')
-                if player_name:
-                    players_with_game_data.add(player_name.lower())
-    
-    # Get all players from roster (to include those without game data)
+    # Get all players from roster - this is the SOURCE OF TRUTH
+    # The roster endpoint determines who is on the team
+    # Game data is only used for stats, not for discovering players
     all_roster_players = set()
     if roster_data and len(roster_data) > 0 and 'players' in roster_data[0]:
         for player in roster_data[0]['players']:
@@ -207,8 +265,9 @@ def generate_team_data(team_name, season, progress_callback=None):
             if player_name:
                 all_roster_players.add(player_name.lower())
     
-    # Combine: use roster players as base, ensure all are included
-    all_players_to_process = all_roster_players | players_with_game_data
+    # Use ONLY roster players - game data is only for stats, not roster discovery
+    # This ensures we only process players from the target team, not opponents
+    all_players_to_process = all_roster_players
     
     if progress_callback:
         progress_callback['message'] = f'Processing {len(all_players_to_process)} players...'
@@ -308,10 +367,14 @@ def generate_team_data(team_name, season, progress_callback=None):
     # Process each player from roster
     total_players = len(all_players_to_process)
     for idx, player_name_lower in enumerate(sorted(all_players_to_process)):
+        # Get the actual player name (with proper casing) from roster for progress message
+        player_roster_data_temp = roster_lookup.get(player_name_lower, {})
+        player_name_for_progress = player_roster_data_temp.get('name', player_name_lower.title()) if player_roster_data_temp else player_name_lower.title()
+        
         if progress_callback:
             progress_pct = 80 + int((idx / total_players) * 15)
             progress_callback['progress'] = progress_pct
-            progress_callback['message'] = f'Processing player {idx + 1}/{total_players}...'
+            progress_callback['message'] = f'Processing {player_name_for_progress} ({idx + 1}/{total_players})...'
         
         # Get the actual player name (with proper casing) from roster
         player_roster_data = roster_lookup.get(player_name_lower, {})
@@ -398,6 +461,9 @@ def generate_team_data(team_name, season, progress_callback=None):
         if player_roster_data:
             jersey_number = str(player_roster_data.get('jersey', 'N/A'))
         
+        # Normalize jersey for matching
+        normalized_jersey = normalize_jersey(jersey_number)
+        
         # Determine if freshman
         is_freshman = False
         start_season = player_roster_data.get('startSeason')
@@ -422,22 +488,21 @@ def generate_team_data(team_name, season, progress_callback=None):
         if city and state:
             hometown_str = f"{city}, {state}"
         
-        # Class year - prefer cached (already normalized), fallback to calculated
-        class_year_str = cached_player.get('year')  # Already normalized to FR/SO/JR/SR/R-FR/etc.
+        # Class year - Priority: FoxSports cache (by jersey) → cached roster file → "N/A"
+        # The API doesn't provide year/class, and calculation doesn't account for redshirts
+        class_year_str = "N/A"
+        
+        # Try FoxSports cache first (by normalized jersey number)
+        if normalized_jersey and foxsports_team_id:
+            class_year_str = player_classes_by_jersey.get(normalized_jersey)
+        
+        # Fallback to cached roster file
+        if not class_year_str or class_year_str == "N/A":
+            class_year_str = cached_player.get('year')  # Already normalized to FR/SO/JR/SR/R-FR/etc.
+        
+        # Final fallback
         if not class_year_str:
-            # Fallback to calculated (existing logic)
-            if start_season and end_season:
-                years_at_school = end_season - start_season + 1
-                if years_at_school == 1:
-                    class_year_str = "FR"
-                elif years_at_school == 2:
-                    class_year_str = "SO"
-                elif years_at_school == 3:
-                    class_year_str = "JR"
-                else:
-                    class_year_str = "SR"
-            else:
-                class_year_str = "N/A"
+            class_year_str = "N/A"
         
         # High School - prefer cached, fallback to API/recruiting
         high_school_str = cached_player.get('high_school') or player_roster_data.get('highSchool', 'N/A')
@@ -511,6 +576,9 @@ def generate_team_data(team_name, season, progress_callback=None):
                 player_record['conferenceRankings'] = player_conference_rankings
         
         # Get player's historical season stats from previous schools
+        # This can be slow as it makes multiple API calls per player (3 seasons × all players)
+        if progress_callback:
+            progress_callback['message'] = f'Fetching historical stats for {player_name} ({idx + 1}/{total_players})...'
         historical_seasons = get_player_career_season_stats(api, player_name, team_slug)
         if historical_seasons:
             player_record['previousSeasons'] = historical_seasons
@@ -530,6 +598,37 @@ def generate_team_data(team_name, season, progress_callback=None):
         progress_callback['message'] = 'Saving JSON file...'
         progress_callback['progress'] = 95
     
+    # Extract game dates for UI display
+    game_dates = []
+    if team_data.get('teamGameStats'):
+        for game in team_data['teamGameStats']:
+            start_date = game.get('startDate', '')
+            opponent = game.get('opponent', 'Unknown')
+            if start_date:
+                # Parse date and format for display
+                try:
+                    # Parse ISO format date
+                    date_obj = datetime.fromisoformat(start_date.replace('Z', '+00:00'))
+                    # Format as readable date
+                    formatted_date = date_obj.strftime('%Y-%m-%d')
+                    game_dates.append({
+                        'date': formatted_date,
+                        'opponent': opponent,
+                        'isHome': game.get('isHome', False),
+                        'conferenceGame': game.get('conferenceGame', False)
+                    })
+                except:
+                    # Fallback to raw date string
+                    game_dates.append({
+                        'date': start_date.split('T')[0] if 'T' in start_date else start_date,
+                        'opponent': opponent,
+                        'isHome': game.get('isHome', False),
+                        'conferenceGame': game.get('conferenceGame', False)
+                    })
+    
+    # Sort by date (most recent first)
+    game_dates.sort(key=lambda x: x['date'], reverse=True)
+    
     # Save to JSON file (relative to project root)
     project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     output_dir = os.path.join(project_root, 'data', str(season))
@@ -546,6 +645,8 @@ def generate_team_data(team_name, season, progress_callback=None):
     if progress_callback:
         progress_callback['progress'] = 100
         progress_callback['message'] = 'Complete!'
+        # Add game dates to progress callback for UI display
+        progress_callback['gameDates'] = game_dates
     
     return relative_path
 

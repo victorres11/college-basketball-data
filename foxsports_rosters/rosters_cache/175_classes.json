@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Isaiah Brown",
+    "jersey": "0",
+    "class": "SO"
+  },
+  {
+    "name": "Alex Cotton",
+    "jersey": "4",
+    "class": "JR"
+  },
+  {
+    "name": "Shane Frazier",
+    "jersey": "5",
+    "class": "FR"
+  },
+  {
+    "name": "Cam Gillus",
+    "jersey": "2",
+    "class": "JR"
+  },
+  {
+    "name": "Bryce Harris",
+    "jersey": "34",
+    "class": "GS"
+  },
+  {
+    "name": "Ed Holland III",
+    "jersey": "23",
+    "class": "SR"
+  },
+  {
+    "name": "Jeremiah Johnson",
+    "jersey": "10",
+    "class": "FR"
+  },
+  {
+    "name": "Ose Okojie",
+    "jersey": "11",
+    "class": "SR"
+  },
+  {
+    "name": "BJ Powell",
+    "jersey": "3",
+    "class": "FR"
+  },
+  {
+    "name": "River Smith",
+    "jersey": "9",
+    "class": "FR"
+  },
+  {
+    "name": "Cedric Taylor III",
+    "jersey": "12",
+    "class": "JR"
+  },
+  {
+    "name": "Travelle Bryson",
+    "jersey": "32",
+    "class": "SO"
+  },
+  {
+    "name": "Stefan Isailovic",
+    "jersey": "1",
+    "class": "FR"
+  },
+  {
+    "name": "Julian Johnson",
+    "jersey": "7",
+    "class": "FR"
+  },
+  {
+    "name": "Calvin Robins Jr.",
+    "jersey": "21",
+    "class": "SO"
+  },
+  {
+    "name": "Danas Kazakevicius",
+    "jersey": "13",
+    "class": "FR"
+  }
+]

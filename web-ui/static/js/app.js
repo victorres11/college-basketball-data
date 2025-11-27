@@ -166,7 +166,7 @@ function pollStatus(jobId) {
                 
                 if (data.status === 'completed') {
                     clearInterval(interval);
-                    showResult(data.url);
+                    showResult(data.url, data.gameDates || []);
                     document.getElementById('generate-btn').disabled = false;
                 } else if (data.status === 'failed') {
                     clearInterval(interval);
@@ -182,7 +182,7 @@ function pollStatus(jobId) {
     }, 2000); // Poll every 2 seconds
 }
 
-function showResult(url) {
+function showResult(url, gameDates) {
     const result = document.getElementById('result');
     const error = document.getElementById('error');
     
@@ -190,6 +190,26 @@ function showResult(url) {
     result.style.display = 'block';
     document.getElementById('result-url').href = url;
     document.getElementById('result-url').textContent = url;
+    
+    // Display game dates
+    const gameList = document.getElementById('game-list');
+    const gameCount = document.getElementById('game-count');
+    
+    if (gameDates && gameDates.length > 0) {
+        gameCount.textContent = gameDates.length;
+        gameList.innerHTML = '<table style="width: 100%; border-collapse: collapse;"><thead><tr><th style="text-align: left; padding: 5px; border-bottom: 1px solid #ddd;">Date</th><th style="text-align: left; padding: 5px; border-bottom: 1px solid #ddd;">Opponent</th><th style="text-align: left; padding: 5px; border-bottom: 1px solid #ddd;">Type</th></tr></thead><tbody>';
+        
+        gameDates.forEach(game => {
+            const type = game.conferenceGame ? 'Conference' : 'Non-Conference';
+            const location = game.isHome ? ' (Home)' : ' (Away)';
+            gameList.innerHTML += `<tr><td style="padding: 5px; border-bottom: 1px solid #eee;">${game.date}</td><td style="padding: 5px; border-bottom: 1px solid #eee;">${game.opponent}${location}</td><td style="padding: 5px; border-bottom: 1px solid #eee;">${type}</td></tr>`;
+        });
+        
+        gameList.innerHTML += '</tbody></table>';
+    } else {
+        gameCount.textContent = '0';
+        gameList.innerHTML = '<p style="color: #666; font-style: italic;">No games detected in the data.</p>';
+    }
 }
 
 function showError(message) {

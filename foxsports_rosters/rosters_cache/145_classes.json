@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Landon Clark",
+    "jersey": "8",
+    "class": "FR"
+  },
+  {
+    "name": "Dalen Davis",
+    "jersey": "22",
+    "class": "JR"
+  },
+  {
+    "name": "Jackson Hicke",
+    "jersey": "33",
+    "class": "JR"
+  },
+  {
+    "name": "Zio Kim",
+    "jersey": "5",
+    "class": "SO"
+  },
+  {
+    "name": "Ryan Mandes",
+    "jersey": "6",
+    "class": "FR"
+  },
+  {
+    "name": "Cooper Mueller",
+    "jersey": "66",
+    "class": "JR"
+  },
+  {
+    "name": "Peyton Seals",
+    "jersey": "2",
+    "class": "SO"
+  },
+  {
+    "name": "Jack Stanton",
+    "jersey": "21",
+    "class": "SO"
+  },
+  {
+    "name": "Jake Sussberg",
+    "jersey": "11",
+    "class": "FR"
+  },
+  {
+    "name": "Sebastian Whitfield",
+    "jersey": "23",
+    "class": "FR"
+  },
+  {
+    "name": "Malik Abdullahi",
+    "jersey": "7",
+    "class": "SO"
+  },
+  {
+    "name": "Jacob Hammond",
+    "jersey": "24",
+    "class": "FR"
+  },
+  {
+    "name": "CJ Happy",
+    "jersey": "4",
+    "class": "SO"
+  },
+  {
+    "name": "Jacob Huggins",
+    "jersey": "12",
+    "class": "JR"
+  },
+  {
+    "name": "Will Kutzler",
+    "jersey": "0",
+    "class": "JR"
+  },
+  {
+    "name": "Cash McSweeney",
+    "jersey": "15",
+    "class": "FR"
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Ryan Altman",
+    "jersey": "10",
+    "class": "FR"
+  },
+  {
+    "name": "Jay Jones",
+    "jersey": "4",
+    "class": "FR"
+  },
+  {
+    "name": "Payton Kamin",
+    "jersey": "21",
+    "class": "FR"
+  },
+  {
+    "name": "AJ Levine",
+    "jersey": "0",
+    "class": "SO"
+  },
+  {
+    "name": "Alex Massung",
+    "jersey": "11",
+    "class": "SO"
+  },
+  {
+    "name": "Niklas Polonowski",
+    "jersey": "35",
+    "class": "JR"
+  },
+  {
+    "name": "Ethan Roberts",
+    "jersey": "23",
+    "class": "SR"
+  },
+  {
+    "name": "Cam Thrower",
+    "jersey": "5",
+    "class": "SR"
+  },
+  {
+    "name": "Dylan Williams",
+    "jersey": "2",
+    "class": "SR"
+  },
+  {
+    "name": "Michael Zanoni",
+    "jersey": "7",
+    "class": "SR"
+  },
+  {
+    "name": "Bradyn Foster",
+    "jersey": "15",
+    "class": "SO"
+  },
+  {
+    "name": "Augustus Gerhart",
+    "jersey": "25",
+    "class": "JR"
+  },
+  {
+    "name": "William Kruse",
+    "jersey": "40",
+    "class": "FR"
+  },
+  {
+    "name": "Lucas Lueth",
+    "jersey": "30",
+    "class": "SO"
+  },
+  {
+    "name": "TJ Power",
+    "jersey": "12",
+    "class": "JR"
+  },
+  {
+    "name": "Dalton Scantlebury",
+    "jersey": "13",
+    "class": "FR"
+  },
+  {
+    "name": "Johnnie Walter",
+    "jersey": "3",
+    "class": "SR"
+  },
+  {
+    "name": "Michelangelo Oberti",
+    "jersey": "33",
+    "class": "SO"
+  },
+  {
+    "name": "Chris Ubochi",
+    "jersey": "34",
+    "class": "SR"
+  }
+]

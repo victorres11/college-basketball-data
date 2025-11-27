@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Andrew Ball",
+    "jersey": "4",
+    "class": "JR"
+  },
+  {
+    "name": "Jack Collins",
+    "jersey": "13",
+    "class": "SR"
+  },
+  {
+    "name": "Jinup Dobuol",
+    "jersey": "24",
+    "class": "SO"
+  },
+  {
+    "name": "Zubayr Griffin",
+    "jersey": "20",
+    "class": "FR"
+  },
+  {
+    "name": "Jack Leahy",
+    "jersey": "10",
+    "class": "JR"
+  },
+  {
+    "name": "Anthony Martinez",
+    "jersey": "3",
+    "class": "FR"
+  },
+  {
+    "name": "Kavion McClain",
+    "jersey": "2",
+    "class": "SR"
+  },
+  {
+    "name": "Corey Miller",
+    "jersey": "5",
+    "class": "JR"
+  },
+  {
+    "name": "Lucas Orchard",
+    "jersey": "9",
+    "class": "SO"
+  },
+  {
+    "name": "Justin Ray",
+    "jersey": "7",
+    "class": "SO"
+  },
+  {
+    "name": "Jason Rivera-Torres",
+    "jersey": "1",
+    "class": "JR"
+  },
+  {
+    "name": "O'Marion Harvey",
+    "jersey": "8",
+    "class": "FR"
+  },
+  {
+    "name": "Quinn Peters",
+    "jersey": "42",
+    "class": "JR"
+  },
+  {
+    "name": "Cornelius Robinson III",
+    "jersey": "23",
+    "class": "JR"
+  },
+  {
+    "name": "Stefanos Spartalis",
+    "jersey": "15",
+    "class": "FR"
+  },
+  {
+    "name": "Dok Muordar",
+    "jersey": "0",
+    "class": "SR"
+  }
+]

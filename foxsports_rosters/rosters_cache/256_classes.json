@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Hunter Adam",
+    "jersey": "12",
+    "class": "JR"
+  },
+  {
+    "name": "Roberts Blums",
+    "jersey": "45",
+    "class": "SO"
+  },
+  {
+    "name": "Devin Brown",
+    "jersey": "6",
+    "class": "FR"
+  },
+  {
+    "name": "Sam Brown",
+    "jersey": "11",
+    "class": "JR"
+  },
+  {
+    "name": "Nick Coval",
+    "jersey": "3",
+    "class": "FR"
+  },
+  {
+    "name": "Parker Friedrichsen",
+    "jersey": "5",
+    "class": "JR"
+  },
+  {
+    "name": "RJ Greer",
+    "jersey": "7",
+    "class": "FR"
+  },
+  {
+    "name": "Phillip Kavu",
+    "jersey": "14",
+    "class": "FR"
+  },
+  {
+    "name": "Brock Matheny",
+    "jersey": "51",
+    "class": "SR"
+  },
+  {
+    "name": "Josh Scovens",
+    "jersey": "4",
+    "class": "JR"
+  },
+  {
+    "name": "Joe Hurlburt",
+    "jersey": "8",
+    "class": "SR"
+  },
+  {
+    "name": "Manie Joses",
+    "jersey": "0",
+    "class": "SO"
+  },
+  {
+    "name": "Sean Logan",
+    "jersey": "15",
+    "class": "SR"
+  },
+  {
+    "name": "John Nowland",
+    "jersey": "50",
+    "class": "JR"
+  },
+  {
+    "name": "Ian Platteeuw",
+    "jersey": "16",
+    "class": "FR"
+  },
+  {
+    "name": "JaQualon Roberts",
+    "jersey": "24",
+    "class": "JR"
+  }
+]

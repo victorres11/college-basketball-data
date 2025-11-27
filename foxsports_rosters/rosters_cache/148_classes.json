@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Noah Best",
+    "jersey": "13",
+    "class": "JR"
+  },
+  {
+    "name": "Matt Curtis",
+    "jersey": "5",
+    "class": "JR"
+  },
+  {
+    "name": "Luke Davidson",
+    "jersey": "22",
+    "class": "SR"
+  },
+  {
+    "name": "Cam Estevez",
+    "jersey": "3",
+    "class": "JR"
+  },
+  {
+    "name": "Joe Ganton",
+    "jersey": "24",
+    "class": "JR"
+  },
+  {
+    "name": "Aidan May",
+    "jersey": "6",
+    "class": "JR"
+  },
+  {
+    "name": "Eric Mejia",
+    "jersey": "0",
+    "class": "SO"
+  },
+  {
+    "name": "Tanner Ostop",
+    "jersey": "21",
+    "class": "JR"
+  },
+  {
+    "name": "Halon Rawlins",
+    "jersey": "11",
+    "class": "FR"
+  },
+  {
+    "name": "Nasir Rodriguez",
+    "jersey": "2",
+    "class": "FR"
+  },
+  {
+    "name": "Michael Rogan",
+    "jersey": "25",
+    "class": "JR"
+  },
+  {
+    "name": "Braden Sparks",
+    "jersey": "4",
+    "class": "SR"
+  },
+  {
+    "name": "Deuce Turner",
+    "jersey": "1",
+    "class": "GS"
+  },
+  {
+    "name": "Tony Williams",
+    "jersey": "8",
+    "class": "FR"
+  },
+  {
+    "name": "Declan Wucherpfennig",
+    "jersey": "44",
+    "class": "FR"
+  },
+  {
+    "name": "Brandon Benjamin",
+    "jersey": "20",
+    "class": "FR"
+  },
+  {
+    "name": "Isaac Munkadi",
+    "jersey": "15",
+    "class": "SO"
+  },
+  {
+    "name": "Peyton Smith",
+    "jersey": "33",
+    "class": "JR"
+  },
+  {
+    "name": "Ryan Zan",
+    "jersey": "7",
+    "class": "JR"
+  }
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Evan Anderson",
+    "jersey": "10",
+    "class": "FR"
+  },
+  {
+    "name": "Isaac Bruns",
+    "jersey": "12",
+    "class": "JR"
+  },
+  {
+    "name": "Luke Bruns",
+    "jersey": "5",
+    "class": "FR"
+  },
+  {
+    "name": "Uzziah Buntyn",
+    "jersey": "1",
+    "class": "FR"
+  },
+  {
+    "name": "Vince Buzelis",
+    "jersey": "4",
+    "class": "FR"
+  },
+  {
+    "name": "Jordan Crawford",
+    "jersey": "0",
+    "class": "JR"
+  },
+  {
+    "name": "Josiah Dotzler",
+    "jersey": "13",
+    "class": "SO"
+  },
+  {
+    "name": "Shey Eberwein",
+    "jersey": "2",
+    "class": "SO"
+  },
+  {
+    "name": "Jalen Hayes",
+    "jersey": "25",
+    "class": "SO"
+  },
+  {
+    "name": "Porter Ihnen",
+    "jersey": "23",
+    "class": "FR"
+  },
+  {
+    "name": "Jesse McIntosh",
+    "jersey": "11",
+    "class": "FR"
+  },
+  {
+    "name": "Jake Brack",
+    "jersey": "34",
+    "class": "JR"
+  },
+  {
+    "name": "Jonah Funk",
+    "jersey": "14",
+    "class": "FR"
+  },
+  {
+    "name": "Caleb Kizer",
+    "jersey": "35",
+    "class": "SR"
+  },
+  {
+    "name": "Ethan Kizer",
+    "jersey": "21",
+    "class": "SO"
+  },
+  {
+    "name": "Ashton Smith",
+    "jersey": "32",
+    "class": "SR"
+  },
+  {
+    "name": "Cameron Fens",
+    "jersey": "54",
+    "class": "SR"
+  }
+]

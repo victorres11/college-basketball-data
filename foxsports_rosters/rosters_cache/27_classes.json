@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Luka Bogavac",
+    "jersey": "44",
+    "class": "JR"
+  },
+  {
+    "name": "Elijah Davis",
+    "jersey": "6",
+    "class": "SR"
+  },
+  {
+    "name": "Isaiah Denis",
+    "jersey": "5",
+    "class": "FR"
+  },
+  {
+    "name": "Derek Dixon",
+    "jersey": "3",
+    "class": "FR"
+  },
+  {
+    "name": "Kyan Evans",
+    "jersey": "0",
+    "class": "JR"
+  },
+  {
+    "name": "Jonathan Powell",
+    "jersey": "11",
+    "class": "SO"
+  },
+  {
+    "name": "Evan Smith",
+    "jersey": "32",
+    "class": "JR"
+  },
+  {
+    "name": "Seth Trimble",
+    "jersey": "7",
+    "class": "SR"
+  },
+  {
+    "name": "Jaydon Young",
+    "jersey": "4",
+    "class": "JR"
+  },
+  {
+    "name": "Zayden High",
+    "jersey": "1",
+    "class": "SO"
+  },
+  {
+    "name": "John Holbrook",
+    "jersey": "25",
+    "class": "SO"
+  },
+  {
+    "name": "Jarin Stevenson",
+    "jersey": "15",
+    "class": "JR"
+  },
+  {
+    "name": "Caleb Wilson",
+    "jersey": "8",
+    "class": "FR"
+  },
+  {
+    "name": "James Brown",
+    "jersey": "2",
+    "class": "SO"
+  },
+  {
+    "name": "Ivan Matlekovic",
+    "jersey": "40",
+    "class": "SO"
+  },
+  {
+    "name": "Henri Veesaar",
+    "jersey": "13",
+    "class": "JR"
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Jon Barton",
+    "jersey": "5",
+    "class": "FR"
+  },
+  {
+    "name": "Jaiden Cole",
+    "jersey": "2",
+    "class": "JR"
+  },
+  {
+    "name": "Ryan Conway",
+    "jersey": "0",
+    "class": "SR"
+  },
+  {
+    "name": "Jack Doumbia Jr.",
+    "jersey": "21",
+    "class": "GS"
+  },
+  {
+    "name": "Chike Ndefo",
+    "jersey": "13",
+    "class": "FR"
+  },
+  {
+    "name": "Tyler Schmidt",
+    "jersey": "1",
+    "class": "GS"
+  },
+  {
+    "name": "Ryan Skerry",
+    "jersey": "22",
+    "class": "JR"
+  },
+  {
+    "name": "Tyler Tejada",
+    "jersey": "15",
+    "class": "JR"
+  },
+  {
+    "name": "Dylan Williamson",
+    "jersey": "4",
+    "class": "JR"
+  },
+  {
+    "name": "Jaquan Womack",
+    "jersey": "24",
+    "class": "FR"
+  },
+  {
+    "name": "Tyler Coleman",
+    "jersey": "3",
+    "class": "SR"
+  },
+  {
+    "name": "Caleb Embeya",
+    "jersey": "23",
+    "class": "SO"
+  },
+  {
+    "name": "Brandon Holmes",
+    "jersey": "30",
+    "class": "FR"
+  },
+  {
+    "name": "Abdou Samb",
+    "jersey": "12",
+    "class": "SR"
+  },
+  {
+    "name": "Mor Seck",
+    "jersey": "41",
+    "class": "SR"
+  }
+]
