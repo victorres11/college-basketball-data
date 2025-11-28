@@ -103,7 +103,7 @@ def generate_team_data(team_name, season, progress_callback=None):
     
     if progress_callback:
         progress_callback['message'] = 'Initializing API...'
-        progress_callback['progress'] = 5
+        progress_callback['progress'] = 2
     
     api = CollegeBasketballAPI()
     
@@ -116,49 +116,49 @@ def generate_team_data(team_name, season, progress_callback=None):
     
     if progress_callback:
         progress_callback['message'] = 'Fetching game data...'
-        progress_callback['progress'] = 10
+        progress_callback['progress'] = 3
     
     # Fetch game data
     game_data = api.get_player_game_stats_by_date(start_date, end_date, team_slug)
     
     if progress_callback:
         progress_callback['message'] = 'Fetching roster data...'
-        progress_callback['progress'] = 20
+        progress_callback['progress'] = 4
     
     # Fetch roster data
     roster_data = api.get_team_roster(season, team_slug)
     
     if progress_callback:
         progress_callback['message'] = 'Fetching recruiting data...'
-        progress_callback['progress'] = 30
+        progress_callback['progress'] = 5
     
     # Fetch recruiting data
     recruiting_data = api.get_recruiting_players(team_name)
     
     if progress_callback:
         progress_callback['message'] = 'Fetching team game stats...'
-        progress_callback['progress'] = 40
+        progress_callback['progress'] = 6
     
     # Fetch team game stats
     team_game_stats = api.get_team_game_stats(season, start_date, end_date, team_slug, "regular")
     
     if progress_callback:
         progress_callback['message'] = 'Fetching player season stats...'
-        progress_callback['progress'] = 50
+        progress_callback['progress'] = 7
     
     # Fetch player season stats
     player_season_stats = api.get_player_season_stats(season, team_slug, "regular")
     
     if progress_callback:
         progress_callback['message'] = 'Fetching team season stats...'
-        progress_callback['progress'] = 60
+        progress_callback['progress'] = 8
     
     # Fetch team season stats
     team_season_stats = api.get_team_season_stats(season, team_slug, "regular")
     
     if progress_callback:
         progress_callback['message'] = 'Calculating conference rankings...'
-        progress_callback['progress'] = 70
+        progress_callback['progress'] = 9
     
     # Get conference name from team season stats
     conference_name = None
@@ -184,7 +184,7 @@ def generate_team_data(team_name, season, progress_callback=None):
     
     if progress_callback:
         progress_callback['message'] = 'Fetching all player stats for rankings...'
-        progress_callback['progress'] = 75
+        progress_callback['progress'] = 10
     
     # Fetch all conference players for individual player rankings
     all_conference_players = api.get_player_season_stats(season, season_type='regular')
@@ -271,7 +271,7 @@ def generate_team_data(team_name, season, progress_callback=None):
     
     if progress_callback:
         progress_callback['message'] = f'Processing {len(all_players_to_process)} players...'
-        progress_callback['progress'] = 80
+        progress_callback['progress'] = 10  # Start of player processing
     
     # Get mascot from cached roster if available
     mascot = None
@@ -366,15 +366,24 @@ def generate_team_data(team_name, season, progress_callback=None):
     
     # Process each player from roster
     total_players = len(all_players_to_process)
+    # Reserve 10% for initial setup, 10% for saving
+    # Player processing gets 80% of progress (10% to 90%)
+    player_progress_range = 80  # 80% of total progress for players
+    player_progress_start = 10   # Start player progress at 10%
+    
     for idx, player_name_lower in enumerate(sorted(all_players_to_process)):
         # Get the actual player name (with proper casing) from roster for progress message
         player_roster_data_temp = roster_lookup.get(player_name_lower, {})
         player_name_for_progress = player_roster_data_temp.get('name', player_name_lower.title()) if player_roster_data_temp else player_name_lower.title()
         
         if progress_callback:
-            progress_pct = 80 + int((idx / total_players) * 15)
+            # Calculate progress based on players completed
+            # For player 4 out of 15: (4/15) * 80 = 21.33%, plus 10% start = 31.33%
+            players_completed = idx + 1  # 1-indexed for display
+            player_progress = (players_completed / total_players) * player_progress_range
+            progress_pct = int(player_progress_start + player_progress)
             progress_callback['progress'] = progress_pct
-            progress_callback['message'] = f'Processing {player_name_for_progress} ({idx + 1}/{total_players})...'
+            progress_callback['message'] = f'Processing {player_name_for_progress} ({players_completed}/{total_players})...'
         
         # Get the actual player name (with proper casing) from roster
         player_roster_data = roster_lookup.get(player_name_lower, {})
@@ -578,7 +587,9 @@ def generate_team_data(team_name, season, progress_callback=None):
         # Get player's historical season stats from previous schools
         # This can be slow as it makes multiple API calls per player (3 seasons × all players)
         if progress_callback:
-            progress_callback['message'] = f'Fetching historical stats for {player_name} ({idx + 1}/{total_players})...'
+            players_completed = idx + 1  # 1-indexed for display
+            # Update progress message but keep same progress percentage (updated at start of loop)
+            progress_callback['message'] = f'Fetching historical stats for {player_name} ({players_completed}/{total_players})...'
         historical_seasons = get_player_career_season_stats(api, player_name, team_slug)
         if historical_seasons:
             player_record['previousSeasons'] = historical_seasons
