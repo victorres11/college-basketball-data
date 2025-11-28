@@ -236,8 +236,10 @@ function showResult(url, gameDates) {
         statusMessage.textContent = 'Complete!';
     }
     if (resultUrl && url) {
-        resultUrl.href = url;
-        resultUrl.textContent = url;
+        // Clean the URL - trim whitespace and ensure it's a valid URL
+        const cleanUrl = url.trim();
+        resultUrl.href = cleanUrl;
+        resultUrl.textContent = cleanUrl;
     }
     
     // Display game dates
@@ -284,5 +286,103 @@ function showError(message) {
     if (result) result.style.display = 'none';
     if (error) error.style.display = 'block';
     if (errorMessage) errorMessage.textContent = message;
+}
+
+function copyUrlToClipboard() {
+    const resultUrl = document.getElementById('result-url');
+    const copyFeedback = document.getElementById('copy-feedback');
+    const copyBtn = document.getElementById('copy-url-btn');
+    
+    if (!resultUrl || !resultUrl.href || resultUrl.href === '#') {
+        if (copyFeedback) {
+            copyFeedback.textContent = '❌ No URL available to copy';
+            copyFeedback.style.color = '#c62828';
+            copyFeedback.style.display = 'block';
+            setTimeout(() => {
+                copyFeedback.style.display = 'none';
+            }, 3000);
+        }
+        return;
+    }
+    
+    // Get the URL and trim any whitespace
+    const url = resultUrl.href.trim();
+    
+    // Use the Clipboard API
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(() => {
+            // Show success feedback
+            if (copyFeedback) {
+                copyFeedback.textContent = '✅ URL copied to clipboard!';
+                copyFeedback.style.color = '#2e7d32';
+                copyFeedback.style.display = 'block';
+            }
+            if (copyBtn) {
+                copyBtn.textContent = '✅ Copied!';
+                copyBtn.style.backgroundColor = '#2e7d32';
+                setTimeout(() => {
+                    copyBtn.textContent = '📋 Copy URL';
+                    copyBtn.style.backgroundColor = '#667eea';
+                }, 2000);
+            }
+            // Hide feedback after 3 seconds
+            setTimeout(() => {
+                if (copyFeedback) copyFeedback.style.display = 'none';
+            }, 3000);
+        }).catch(err => {
+            // Fallback for older browsers
+            fallbackCopyTextToClipboard(url);
+        });
+    } else {
+        // Fallback for browsers that don't support Clipboard API
+        fallbackCopyTextToClipboard(url);
+    }
+}
+
+function fallbackCopyTextToClipboard(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+        const successful = document.execCommand('copy');
+        const copyFeedback = document.getElementById('copy-feedback');
+        const copyBtn = document.getElementById('copy-url-btn');
+        
+        if (successful) {
+            if (copyFeedback) {
+                copyFeedback.textContent = '✅ URL copied to clipboard!';
+                copyFeedback.style.color = '#2e7d32';
+                copyFeedback.style.display = 'block';
+            }
+            if (copyBtn) {
+                copyBtn.textContent = '✅ Copied!';
+                copyBtn.style.backgroundColor = '#2e7d32';
+                setTimeout(() => {
+                    copyBtn.textContent = '📋 Copy URL';
+                    copyBtn.style.backgroundColor = '#667eea';
+                }, 2000);
+            }
+            setTimeout(() => {
+                if (copyFeedback) copyFeedback.style.display = 'none';
+            }, 3000);
+        } else {
+            throw new Error('Copy command failed');
+        }
+    } catch (err) {
+        const copyFeedback = document.getElementById('copy-feedback');
+        if (copyFeedback) {
+            copyFeedback.textContent = '❌ Failed to copy. Please copy manually.';
+            copyFeedback.style.color = '#c62828';
+            copyFeedback.style.display = 'block';
+        }
+    } finally {
+        document.body.removeChild(textArea);
+    }
 }
 

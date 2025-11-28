@@ -50,7 +50,13 @@
             <div id="result" style="display:none;" class="result-section">
                 <p class="success-message">✅ Generation Complete!</p>
                 <p>Your data is available at:</p>
-                <a id="result-url" href="#" target="_blank" class="result-link"></a>
+                <div style="display: flex; align-items: center; gap: 10px; margin-top: 10px;">
+                    <a id="result-url" href="#" target="_blank" class="result-link" style="flex: 1; word-break: break-all;"></a>
+                    <button id="copy-url-btn" onclick="copyUrlToClipboard()" style="padding: 8px 16px; background-color: #667eea; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600; white-space: nowrap;">
+                        📋 Copy URL
+                    </button>
+                </div>
+                <p id="copy-feedback" style="margin-top: 5px; color: #2e7d32; font-size: 0.9em; display: none;"></p>
                 
                 <div style="margin-top: 25px; padding: 20px; background-color: #fff3cd; border: 1px solid #ffc107; border-radius: 6px;">
                     <h4 style="margin-bottom: 15px; color: #856404;">📋 Instructions:</h4>
