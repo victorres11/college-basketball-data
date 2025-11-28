@@ -424,24 +424,31 @@ def generate_team_data(team_name, season, progress_callback=None):
             'games': len(conference_games)
         }
         
-        # Calculate home and away records
+        # Calculate home, away, and neutral site records
         home_wins = 0
         home_losses = 0
         away_wins = 0
         away_losses = 0
+        neutral_wins = 0
+        neutral_losses = 0
         
         for game in team_game_stats:
             is_home = game.get('isHome', False)
+            is_neutral = game.get('neutralSite', False)
             team_points = game.get('teamStats', {}).get('points', {}).get('total', 0)
             opponent_points = game.get('opponentStats', {}).get('points', {}).get('total', 0)
             
             if team_points > opponent_points:
-                if is_home:
+                if is_neutral:
+                    neutral_wins += 1
+                elif is_home:
                     home_wins += 1
                 else:
                     away_wins += 1
             elif opponent_points > team_points:
-                if is_home:
+                if is_neutral:
+                    neutral_losses += 1
+                elif is_home:
                     home_losses += 1
                 else:
                     away_losses += 1
@@ -456,6 +463,12 @@ def generate_team_data(team_name, season, progress_callback=None):
             'wins': away_wins,
             'losses': away_losses,
             'games': away_wins + away_losses
+        }
+        
+        team_data['neutralRecord'] = {
+            'wins': neutral_wins,
+            'losses': neutral_losses,
+            'games': neutral_wins + neutral_losses
         }
     else:
         team_data['conferenceRecord'] = {

@@ -237,10 +237,10 @@ function GET_TEAM_META(url) {
           "0-0")]);
       }
       
-      // Add home/away records at the end
-      if (data.homeRecord || data.awayRecord) {
+      // Add home/away/neutral records at the end
+      if (data.homeRecord || data.awayRecord || data.neutralRecord) {
         table.push([""]);
-        table.push(["=== HOME/AWAY RECORDS ==="]);
+        table.push(["=== HOME/AWAY/NEUTRAL RECORDS ==="]);
         if (data.homeRecord) {
           table.push(["Home Record", data.homeRecord.wins + "-" + data.homeRecord.losses]);
           table.push(["Home Wins", data.homeRecord.wins]);
@@ -252,6 +252,12 @@ function GET_TEAM_META(url) {
           table.push(["Away Wins", data.awayRecord.wins]);
           table.push(["Away Losses", data.awayRecord.losses]);
           table.push(["Away Games", data.awayRecord.games]);
+        }
+        if (data.neutralRecord) {
+          table.push(["Neutral Record", data.neutralRecord.wins + "-" + data.neutralRecord.losses]);
+          table.push(["Neutral Wins", data.neutralRecord.wins]);
+          table.push(["Neutral Losses", data.neutralRecord.losses]);
+          table.push(["Neutral Games", data.neutralRecord.games]);
         }
       }
       
