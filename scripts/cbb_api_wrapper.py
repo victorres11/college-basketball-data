@@ -30,19 +30,21 @@ class CollegeBasketballAPI:
         
         # Rate limiting
         self.last_request_time = 0
-        self.min_request_interval = 0.1  # 100ms between requests
+        self.min_request_interval = 0.2  # 200ms between requests (increased to avoid rate limits)
         
         # API call tracking
         self.api_call_count = 0
         self.api_calls_log = []  # List of (endpoint, timestamp, duration) tuples
     
-    def _make_request(self, endpoint: str, params: Optional[Dict] = None) -> Dict[str, Any]:
+    def _make_request(self, endpoint: str, params: Optional[Dict] = None, retry_count: int = 0) -> Dict[str, Any]:
         """
         Make a request to the API with proper error handling and rate limiting.
+        Includes retry logic with exponential backoff for rate limit errors.
         
         Args:
             endpoint: API endpoint to call
             params: Query parameters
+            retry_count: Internal counter for retries (max 3 retries)
             
         Returns:
             JSON response as dictionary
@@ -87,7 +89,14 @@ class CollegeBasketballAPI:
             elif response.status_code == 404:
                 raise requests.RequestException(f"Not Found: Endpoint {endpoint} not found")
             elif response.status_code == 429:
-                raise requests.RequestException("Rate Limited: Too many requests")
+                # Rate limited - retry with exponential backoff
+                if retry_count < 3:
+                    wait_time = (2 ** retry_count) * 2  # 2s, 4s, 8s
+                    print(f"Rate limited on {endpoint}. Retrying in {wait_time}s (attempt {retry_count + 1}/3)...")
+                    time.sleep(wait_time)
+                    return self._make_request(endpoint, params, retry_count + 1)
+                else:
+                    raise requests.RequestException("Rate Limited: Too many requests (max retries exceeded)")
             else:
                 response.raise_for_status()
                 
