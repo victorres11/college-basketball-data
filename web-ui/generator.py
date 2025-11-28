@@ -489,13 +489,9 @@ def generate_team_data(team_name, season, progress_callback=None):
         # Normalize jersey for matching
         normalized_jersey = normalize_jersey(jersey_number)
         
-        # Determine if freshman
+        # Determine if freshman - only from cache data, no calculation
         is_freshman = False
-        start_season = player_roster_data.get('startSeason')
-        end_season = player_roster_data.get('endSeason')
-        if start_season and end_season:
-            years_at_school = end_season - start_season + 1
-            is_freshman = (years_at_school == 1)
+        # We'll set this based on class from cache, not calculation
         
         # Extract height
         height_str = "N/A"
@@ -514,20 +510,24 @@ def generate_team_data(team_name, season, progress_callback=None):
             hometown_str = f"{city}, {state}"
         
         # Class year - Priority: FoxSports cache (by jersey) → cached roster file → "N/A"
-        # The API doesn't provide year/class, and calculation doesn't account for redshirts
+        # NO CALCULATION - only use cached data to avoid incorrect predictions
         class_year_str = "N/A"
         
         # Try FoxSports cache first (by normalized jersey number)
         if normalized_jersey and foxsports_team_id:
-            class_year_str = player_classes_by_jersey.get(normalized_jersey)
+            cached_class = player_classes_by_jersey.get(normalized_jersey)
+            if cached_class:
+                class_year_str = cached_class
         
-        # Fallback to cached roster file
-        if not class_year_str or class_year_str == "N/A":
-            class_year_str = cached_player.get('year')  # Already normalized to FR/SO/JR/SR/R-FR/etc.
+        # Fallback to cached roster file (only if FoxSports cache didn't have it)
+        if class_year_str == "N/A":
+            cached_year = cached_player.get('year')  # Already normalized to FR/SO/JR/SR/R-FR/etc.
+            if cached_year:
+                class_year_str = cached_year
         
-        # Final fallback
-        if not class_year_str:
-            class_year_str = "N/A"
+        # Set is_freshman based on class from cache (not calculation)
+        if class_year_str and class_year_str != "N/A":
+            is_freshman = class_year_str in ['FR', 'R-FR']
         
         # High School - prefer cached, fallback to API/recruiting
         high_school_str = cached_player.get('high_school') or player_roster_data.get('highSchool', 'N/A')
