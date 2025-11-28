@@ -57,10 +57,25 @@ class RosterCache:
         """
         class_file = os.path.join(self.cache_dir, f"{team_id}_classes.json")
         
+        if not os.path.exists(class_file):
+            print(f"Warning: Cache file not found: {class_file}")
+            print(f"  Cache dir: {self.cache_dir}")
+            print(f"  Team ID: {team_id}")
+            return []
+        
         try:
             with open(class_file, 'r') as f:
-                return json.load(f)
+                players = json.load(f)
+                print(f"Successfully loaded {len(players)} players from {class_file}")
+                return players
         except FileNotFoundError:
+            print(f"Error: Cache file not found: {class_file}")
+            return []
+        except json.JSONDecodeError as e:
+            print(f"Error: Invalid JSON in cache file {class_file}: {e}")
+            return []
+        except Exception as e:
+            print(f"Error loading cache file {class_file}: {e}")
             return []
     
     def get_class_by_jersey(self, team_id: str, jersey: str) -> Optional[str]:
