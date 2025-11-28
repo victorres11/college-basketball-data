@@ -237,6 +237,24 @@ function GET_TEAM_META(url) {
           "0-0")]);
       }
       
+      // Add home/away records at the end
+      if (data.homeRecord || data.awayRecord) {
+        table.push([""]);
+        table.push(["=== HOME/AWAY RECORDS ==="]);
+        if (data.homeRecord) {
+          table.push(["Home Record", data.homeRecord.wins + "-" + data.homeRecord.losses]);
+          table.push(["Home Wins", data.homeRecord.wins]);
+          table.push(["Home Losses", data.homeRecord.losses]);
+          table.push(["Home Games", data.homeRecord.games]);
+        }
+        if (data.awayRecord) {
+          table.push(["Away Record", data.awayRecord.wins + "-" + data.awayRecord.losses]);
+          table.push(["Away Wins", data.awayRecord.wins]);
+          table.push(["Away Losses", data.awayRecord.losses]);
+          table.push(["Away Games", data.awayRecord.games]);
+        }
+      }
+      
       return table;
     } catch (e) {
       return [["Error: " + e.message]];
