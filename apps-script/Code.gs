@@ -320,6 +320,17 @@ function GET_TEAM_META(url) {
   
   function GET_PLAYERS_FULL(url) {
     try {
+      // Validate URL parameter
+      if (!url || typeof url !== 'string') {
+        return [["Error: Invalid URL parameter"], ["URL must be a text string"], ["Example: =GET_PLAYERS_FULL(\"https://...\") or =GET_PLAYERS_FULL(A1)"]];
+      }
+      
+      // Trim whitespace and validate URL format
+      url = url.trim();
+      if (!url.startsWith('http://') && !url.startsWith('https://')) {
+        return [["Error: Invalid URL format"], ["URL must start with http:// or https://"], ["Received: " + url.substring(0, 50) + "..."]];
+      }
+      
       var response = UrlFetchApp.fetch(url);
       var data = JSON.parse(response.getContentText());
       
