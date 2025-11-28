@@ -423,6 +423,40 @@ def generate_team_data(team_name, season, progress_callback=None):
             'losses': conference_losses,
             'games': len(conference_games)
         }
+        
+        # Calculate home and away records
+        home_wins = 0
+        home_losses = 0
+        away_wins = 0
+        away_losses = 0
+        
+        for game in team_game_stats:
+            is_home = game.get('isHome', False)
+            team_points = game.get('teamStats', {}).get('points', {}).get('total', 0)
+            opponent_points = game.get('opponentStats', {}).get('points', {}).get('total', 0)
+            
+            if team_points > opponent_points:
+                if is_home:
+                    home_wins += 1
+                else:
+                    away_wins += 1
+            elif opponent_points > team_points:
+                if is_home:
+                    home_losses += 1
+                else:
+                    away_losses += 1
+        
+        team_data['homeRecord'] = {
+            'wins': home_wins,
+            'losses': home_losses,
+            'games': home_wins + home_losses
+        }
+        
+        team_data['awayRecord'] = {
+            'wins': away_wins,
+            'losses': away_losses,
+            'games': away_wins + away_losses
+        }
     else:
         team_data['conferenceRecord'] = {
             'wins': 0,
