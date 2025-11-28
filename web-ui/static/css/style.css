@@ -134,7 +134,7 @@ label {
 
 .progress-container {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .progress-bar {
@@ -146,13 +146,11 @@ label {
 }
 
 .progress-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+    text-align: center;
+    color: #333;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .result-section {
