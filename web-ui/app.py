@@ -169,10 +169,14 @@ def get_teams():
                 if isinstance(teams, list) and len(teams) > 0:
                     print(f"API failed, returning stale cache with {len(teams)} teams")
                     return jsonify(teams)
-            except:
-                pass
+            except Exception as cache_err:
+                print(f"Failed to read stale cache: {cache_err}")
         
-        return jsonify({'error': error_msg}), 500
+        # If we still don't have cache, return a helpful error message
+        return jsonify({
+            'error': error_msg,
+            'message': 'Unable to load teams. Please try again later or contact support.'
+        }), 500
 
 
 @app.route('/api/generate', methods=['POST'])
