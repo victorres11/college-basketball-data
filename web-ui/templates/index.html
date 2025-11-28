@@ -82,6 +82,12 @@
         </div>
     </div>
     
+    <footer style="margin-top: 40px; padding: 20px; text-align: center; color: #666; font-size: 0.85em; border-top: 1px solid #eee;">
+        <p style="margin: 0;">
+            Last updated: {{ git_info.timestamp }} {{ git_info.commit }}
+        </p>
+    </footer>
+    
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>
 </html>

@@ -6,6 +6,7 @@ import threading
 import json
 import os
 import sys
+import subprocess
 from datetime import datetime
 from generator import generate_team_data
 from s3_handler import upload_to_s3
@@ -33,10 +34,53 @@ app = Flask(__name__)
 jobs = {}
 
 
+def get_git_info():
+    """Get git commit hash and timestamp"""
+    try:
+        # Get the project root (parent of web-ui)
+        project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        
+        # Get commit hash
+        commit_hash = subprocess.check_output(
+            ['git', 'rev-parse', '--short', 'HEAD'],
+            cwd=project_root,
+            stderr=subprocess.DEVNULL
+        ).decode('utf-8').strip()
+        
+        # Get commit timestamp
+        commit_timestamp = subprocess.check_output(
+            ['git', 'log', '-1', '--format=%ci', 'HEAD'],
+            cwd=project_root,
+            stderr=subprocess.DEVNULL
+        ).decode('utf-8').strip()
+        
+        # Parse and format timestamp
+        if commit_timestamp:
+            try:
+                dt = datetime.strptime(commit_timestamp.split()[0] + ' ' + commit_timestamp.split()[1], '%Y-%m-%d %H:%M:%S')
+                formatted_time = dt.strftime('%Y-%m-%d %I:%M %p').lower().replace('am', 'am').replace('pm', 'pm')
+            except:
+                formatted_time = commit_timestamp.split()[0] + ' ' + commit_timestamp.split()[1]
+        else:
+            formatted_time = datetime.now().strftime('%Y-%m-%d %I:%M %p').lower()
+        
+        return {
+            'commit': commit_hash,
+            'timestamp': formatted_time
+        }
+    except Exception as e:
+        # Fallback if git is not available
+        return {
+            'commit': 'unknown',
+            'timestamp': datetime.now().strftime('%Y-%m-%d %I:%M %p').lower()
+        }
+
+
 @app.route('/')
 def index():
     """Main page"""
-    return render_template('index.html')
+    git_info = get_git_info()
+    return render_template('index.html', git_info=git_info)
 
 
 @app.route('/api/teams')
