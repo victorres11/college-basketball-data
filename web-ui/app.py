@@ -93,12 +93,20 @@ def get_teams():
         try:
             with open(cache_file, 'r') as f:
                 teams = json.load(f)
-            return jsonify(teams)
+            # Validate cache data
+            if isinstance(teams, list) and len(teams) > 0:
+                print(f"Returning {len(teams)} teams from cache")
+                return jsonify(teams)
+            else:
+                print(f"Cache file exists but is invalid (empty or wrong format)")
+        except json.JSONDecodeError as e:
+            print(f"Cache file is corrupted (invalid JSON): {e}")
         except Exception as e:
             print(f"Cache read error: {e}")
-            pass  # If cache is corrupted, fetch fresh
     
-    # Fetch from API and cache
+    # Only fetch from API if cache doesn't exist or is invalid
+    # But first, check if we have a backup/fallback
+    print("Cache not available, attempting to fetch from API...")
     try:
         # Add scripts directory to path
         scripts_path = os.path.join(os.path.dirname(__file__), '..', 'scripts')
@@ -152,6 +160,18 @@ def get_teams():
         print(f"Error in get_teams: {error_msg}")
         import traceback
         traceback.print_exc()
+        
+        # If API call fails (e.g., rate limit), try to return cached data even if it's old
+        if os.path.exists(cache_file):
+            try:
+                with open(cache_file, 'r') as f:
+                    teams = json.load(f)
+                if isinstance(teams, list) and len(teams) > 0:
+                    print(f"API failed, returning stale cache with {len(teams)} teams")
+                    return jsonify(teams)
+            except:
+                pass
+        
         return jsonify({'error': error_msg}), 500
 
 
