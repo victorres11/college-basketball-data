@@ -64,6 +64,10 @@ class CollegeBasketballAPI:
         
         url = f"{self.config.base_url}/{endpoint}"
         
+        # Log the request
+        params_str = f" with params {params}" if params else ""
+        print(f"[API] Requesting {endpoint}{params_str}")
+        
         try:
             response = self.session.get(url, params=params, timeout=30)
             self.last_request_time = time.time()
@@ -81,38 +85,53 @@ class CollegeBasketballAPI:
             
             # Handle different status codes
             if response.status_code == 200:
+                print(f"[API] Success: {endpoint} (took {duration:.2f}s)")
                 return response.json()
             elif response.status_code == 401:
-                raise requests.RequestException("Unauthorized: Invalid API key")
+                error_msg = f"Unauthorized: Invalid API key for endpoint {endpoint}"
+                print(f"[API] ERROR: {error_msg}")
+                raise requests.RequestException(error_msg)
             elif response.status_code == 403:
-                raise requests.RequestException("Forbidden: API key doesn't have permission")
+                error_msg = f"Forbidden: API key doesn't have permission for endpoint {endpoint}"
+                print(f"[API] ERROR: {error_msg}")
+                raise requests.RequestException(error_msg)
             elif response.status_code == 404:
-                raise requests.RequestException(f"Not Found: Endpoint {endpoint} not found")
+                error_msg = f"Not Found: Endpoint {endpoint} not found"
+                print(f"[API] ERROR: {error_msg}")
+                raise requests.RequestException(error_msg)
             elif response.status_code == 429:
                 # Rate limited - retry with exponential backoff
                 if retry_count < 3:
                     wait_time = (2 ** retry_count) * 2  # 2s, 4s, 8s
-                    print(f"Rate limited on {endpoint}. Retrying in {wait_time}s (attempt {retry_count + 1}/3)...")
+                    print(f"[API] Rate limited on {endpoint}. Retrying in {wait_time}s (attempt {retry_count + 1}/3)...")
                     time.sleep(wait_time)
                     return self._make_request(endpoint, params, retry_count + 1)
                 else:
-                    raise requests.RequestException("Rate Limited: Too many requests (max retries exceeded)")
+                    error_msg = f"Rate Limited: Too many requests on endpoint {endpoint} (max retries exceeded)"
+                    print(f"[API] ERROR: {error_msg}")
+                    raise requests.RequestException(error_msg)
             else:
+                error_msg = f"HTTP {response.status_code} error for endpoint {endpoint}"
+                print(f"[API] ERROR: {error_msg}")
                 response.raise_for_status()
                 
         except requests.exceptions.Timeout:
             self.api_call_count += 1
+            error_msg = f"Timeout error for endpoint {endpoint}"
+            print(f"[API] ERROR: {error_msg}")
             self.api_calls_log.append({
                 'endpoint': endpoint,
                 'params': params,
                 'timestamp': time.time(),
                 'duration': time.time() - start_time,
-                'status_code': None,
-                'error': 'timeout'
+                'status_code': 'timeout',
+                'error': error_msg
             })
-            raise requests.RequestException("Request timed out")
+            raise requests.RequestException(error_msg)
         except requests.exceptions.ConnectionError:
             self.api_call_count += 1
+            error_msg = f"Connection error for endpoint {endpoint}"
+            print(f"[API] ERROR: {error_msg}")
             self.api_calls_log.append({
                 'endpoint': endpoint,
                 'params': params,
@@ -121,9 +140,11 @@ class CollegeBasketballAPI:
                 'status_code': None,
                 'error': 'connection'
             })
-            raise requests.RequestException("Connection error")
+            raise requests.RequestException(error_msg)
         except json.JSONDecodeError:
             self.api_call_count += 1
+            error_msg = f"Invalid JSON response for endpoint {endpoint}"
+            print(f"[API] ERROR: {error_msg}")
             self.api_calls_log.append({
                 'endpoint': endpoint,
                 'params': params,
@@ -132,7 +153,7 @@ class CollegeBasketballAPI:
                 'status_code': None,
                 'error': 'json_decode'
             })
-            raise ValueError("Invalid JSON response")
+            raise ValueError(error_msg)
     
     def get_api_call_summary(self) -> Dict:
         """Get summary of API calls made."""
