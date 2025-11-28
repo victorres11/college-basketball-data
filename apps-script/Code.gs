@@ -128,16 +128,6 @@ function GET_TEAM_META(url) {
         ["Total Minutes", stats.totalMinutes],
         ["Pace", stats.pace],
         [""],
-        ["=== POSSESSION GAME RECORDS ==="],
-        ["1-Possession Games", 
-         (stats.possessionGameRecords && stats.possessionGameRecords.onePossession ? 
-          stats.possessionGameRecords.onePossession.wins + "-" + stats.possessionGameRecords.onePossession.losses : 
-          "N/A")],
-        ["2-Possession Games", 
-         (stats.possessionGameRecords && stats.possessionGameRecords.twoPossession ? 
-          stats.possessionGameRecords.twoPossession.wins + "-" + stats.possessionGameRecords.twoPossession.losses : 
-          "N/A")],
-        [""],
         ["=== TEAM STATS ===", "Team", "Opponent"],
         ["Possessions", stats.teamStats.possessions, stats.opponentStats.possessions],
         ["True Shooting %", stats.teamStats.trueShooting, stats.opponentStats.trueShooting],
@@ -231,6 +221,20 @@ function GET_TEAM_META(url) {
         table.push([""]);
         table.push(["--- Ratios ---"]);
         table.push(["A:TO Ratio", (pgRatios.assistToTurnoverRatio || 0).toFixed(2), ""]);
+      }
+      
+      // Add possession game records at the end
+      if (stats.possessionGameRecords) {
+        table.push([""]);
+        table.push(["=== POSSESSION GAME RECORDS ==="]);
+        table.push(["1-Possession Games", 
+         (stats.possessionGameRecords.onePossession ? 
+          stats.possessionGameRecords.onePossession.wins + "-" + stats.possessionGameRecords.onePossession.losses : 
+          "0-0")]);
+        table.push(["2-Possession Games", 
+         (stats.possessionGameRecords.twoPossession ? 
+          stats.possessionGameRecords.twoPossession.wins + "-" + stats.possessionGameRecords.twoPossession.losses : 
+          "0-0")]);
       }
       
       return table;
@@ -330,17 +334,6 @@ function GET_TEAM_META(url) {
   
   function GET_PLAYERS_FULL(url) {
     try {
-      // Validate URL parameter
-      if (!url || typeof url !== 'string') {
-        return [["Error: Invalid URL parameter"], ["URL must be a text string"], ["Example: =GET_PLAYERS_FULL(\"https://...\") or =GET_PLAYERS_FULL(A1)"]];
-      }
-      
-      // Trim whitespace and validate URL format
-      url = url.trim();
-      if (!url.startsWith('http://') && !url.startsWith('https://')) {
-        return [["Error: Invalid URL format"], ["URL must start with http:// or https://"], ["Received: " + url.substring(0, 50) + "..."]];
-      }
-      
       var response = UrlFetchApp.fetch(url);
       var data = JSON.parse(response.getContentText());
       
