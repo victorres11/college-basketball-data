@@ -244,19 +244,35 @@ function showResult(url, gameDates) {
     if (gameDates && gameDates.length > 0) {
         if (gameCount) gameCount.textContent = gameDates.length;
         if (gameList) {
-            gameList.innerHTML = '<table style="width: 100%; border-collapse: collapse;"><thead><tr><th style="text-align: left; padding: 5px; border-bottom: 1px solid #ddd;">Date</th><th style="text-align: left; padding: 5px; border-bottom: 1px solid #ddd;">Opponent</th><th style="text-align: left; padding: 5px; border-bottom: 1px solid #ddd;">Type</th></tr></thead><tbody>';
+            // Build table with proper structure
+            let tableHTML = '<table style="width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.9em;">';
+            tableHTML += '<thead>';
+            tableHTML += '<tr style="background-color: #f5f5f5;">';
+            tableHTML += '<th style="text-align: left; padding: 10px; border-bottom: 2px solid #ddd; font-weight: 600;">Date</th>';
+            tableHTML += '<th style="text-align: left; padding: 10px; border-bottom: 2px solid #ddd; font-weight: 600;">Opponent</th>';
+            tableHTML += '<th style="text-align: left; padding: 10px; border-bottom: 2px solid #ddd; font-weight: 600;">Type</th>';
+            tableHTML += '</tr>';
+            tableHTML += '</thead>';
+            tableHTML += '<tbody>';
             
-            gameDates.forEach(game => {
+            gameDates.forEach((game, index) => {
                 const type = game.conferenceGame ? 'Conference' : 'Non-Conference';
                 const location = game.isHome ? ' (Home)' : ' (Away)';
-                gameList.innerHTML += `<tr><td style="padding: 5px; border-bottom: 1px solid #eee;">${game.date}</td><td style="padding: 5px; border-bottom: 1px solid #eee;">${game.opponent}${location}</td><td style="padding: 5px; border-bottom: 1px solid #eee;">${type}</td></tr>`;
+                const rowColor = index % 2 === 0 ? '#ffffff' : '#fafafa';
+                tableHTML += `<tr style="background-color: ${rowColor};">`;
+                tableHTML += `<td style="padding: 10px; border-bottom: 1px solid #eee;">${game.date}</td>`;
+                tableHTML += `<td style="padding: 10px; border-bottom: 1px solid #eee;">${game.opponent}${location}</td>`;
+                tableHTML += `<td style="padding: 10px; border-bottom: 1px solid #eee;">${type}</td>`;
+                tableHTML += '</tr>';
             });
             
-            gameList.innerHTML += '</tbody></table>';
+            tableHTML += '</tbody>';
+            tableHTML += '</table>';
+            gameList.innerHTML = tableHTML;
         }
     } else {
         if (gameCount) gameCount.textContent = '0';
-        if (gameList) gameList.innerHTML = '<p style="color: #666; font-style: italic;">No games detected in the data.</p>';
+        if (gameList) gameList.innerHTML = '<p style="color: #666; font-style: italic; margin-top: 10px;">No games detected in the data.</p>';
     }
 }
 
