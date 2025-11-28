@@ -9,6 +9,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'scripts'))
 from cbb_api_wrapper import CollegeBasketballAPI
 import json
 from datetime import datetime
+import time
 
 # Import FoxSports roster cache
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -153,6 +154,10 @@ def generate_team_data(team_name, season, progress_callback=None):
         progress_callback['progress'] = 2
     
     api = CollegeBasketballAPI()
+    
+    # Add initial delay to help reset rate limit window if there were previous requests
+    print(f"[GENERATOR] Initial delay (1s) to help reset rate limit window...")
+    time.sleep(1)
     
     # Team name normalization (lowercase for API)
     team_slug = team_name.lower()

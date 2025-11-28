@@ -30,7 +30,7 @@ class CollegeBasketballAPI:
         
         # Rate limiting
         self.last_request_time = 0
-        self.min_request_interval = 0.2  # 200ms between requests (increased to avoid rate limits)
+        self.min_request_interval = 0.5  # 500ms between requests (increased to avoid rate limits)
         
         # API call tracking
         self.api_call_count = 0
@@ -102,7 +102,8 @@ class CollegeBasketballAPI:
             elif response.status_code == 429:
                 # Rate limited - retry with exponential backoff
                 if retry_count < 3:
-                    wait_time = (2 ** retry_count) * 2  # 2s, 4s, 8s
+                    # Longer delays: 10s, 20s, 40s to allow rate limit window to reset
+                    wait_time = (2 ** retry_count) * 10  # 10s, 20s, 40s
                     print(f"[API] Rate limited on {endpoint}. Retrying in {wait_time}s (attempt {retry_count + 1}/3)...")
                     time.sleep(wait_time)
                     return self._make_request(endpoint, params, retry_count + 1)
