@@ -202,7 +202,11 @@ def generate_team_data(team_name, season, progress_callback=None):
         try:
             # Load CBB → FoxSports mapping
             mapping_path = os.path.join(foxsports_path, 'cbb_to_foxsports_team_mapping.json')
-            if os.path.exists(mapping_path):
+            if not os.path.exists(mapping_path):
+                print(f"Warning: FoxSports mapping file not found at: {mapping_path}")
+                print(f"  Project root: {project_root}")
+                print(f"  FoxSports path: {foxsports_path}")
+            else:
                 with open(mapping_path, 'r') as f:
                     cbb_to_fox_mapping = json.load(f)
                 
@@ -217,16 +221,28 @@ def generate_team_data(team_name, season, progress_callback=None):
                 
                 # Get player classes from FoxSports cache
                 if foxsports_team_id:
-                    cache = RosterCache(cache_dir=os.path.join(foxsports_path, 'rosters_cache'))
-                    cached_players = cache.get_player_classes(foxsports_team_id)
-                    
-                    # Create lookup by normalized jersey number
-                    for player in cached_players:
-                        jersey = normalize_jersey(player.get('jersey'))
-                        if jersey:
-                            player_classes_by_jersey[jersey] = player.get('class')
+                    cache_dir = os.path.join(foxsports_path, 'rosters_cache')
+                    if not os.path.exists(cache_dir):
+                        print(f"Warning: FoxSports cache directory not found at: {cache_dir}")
+                    else:
+                        cache = RosterCache(cache_dir=cache_dir)
+                        cached_players = cache.get_player_classes(foxsports_team_id)
+                        
+                        if cached_players:
+                            # Create lookup by normalized jersey number
+                            for player in cached_players:
+                                jersey = normalize_jersey(player.get('jersey'))
+                                if jersey:
+                                    player_classes_by_jersey[jersey] = player.get('class')
+                            print(f"Loaded {len(player_classes_by_jersey)} players from FoxSports cache for team {foxsports_team_id}")
+                        else:
+                            print(f"Warning: No players found in FoxSports cache for team {foxsports_team_id}")
+                else:
+                    print(f"Warning: No FoxSports team ID found for CBB team ID {cbb_team_id}")
         except Exception as e:
-            print(f"Warning: Could not load FoxSports roster cache: {e}")
+            import traceback
+            print(f"Error loading FoxSports roster cache: {e}")
+            print(f"Traceback: {traceback.format_exc()}")
     
     # Load cached roster if available (for better class/year and high school data)
     cached_roster_lookup = load_cached_roster(team_name, season)

@@ -16,15 +16,33 @@ class RosterCache:
     """Efficient roster cache reader - no API calls."""
     
     def __init__(self, cache_dir: str = CACHE_DIR):
-        self.cache_dir = cache_dir
+        self.cache_dir = os.path.abspath(cache_dir) if cache_dir else os.path.abspath(CACHE_DIR)
         self.index = self._load_index()
     
     def _load_index(self) -> Dict:
         """Load the roster index."""
         try:
-            with open(ROSTERS_INDEX_FILE, 'r') as f:
+            # Try multiple possible locations for the index file
+            # 1. Same directory as cache_dir (parent of rosters_cache/)
+            index_path = os.path.join(os.path.dirname(self.cache_dir), ROSTERS_INDEX_FILE)
+            if not os.path.exists(index_path):
+                # 2. Inside cache_dir
+                index_path = os.path.join(self.cache_dir, ROSTERS_INDEX_FILE)
+            if not os.path.exists(index_path):
+                # 3. Current working directory
+                index_path = ROSTERS_INDEX_FILE
+            
+            if not os.path.exists(index_path):
+                print(f"Warning: rosters_index.json not found. Tried: {os.path.join(os.path.dirname(self.cache_dir), ROSTERS_INDEX_FILE)}")
+                return {}
+            
+            with open(index_path, 'r') as f:
                 return json.load(f)
-        except FileNotFoundError:
+        except FileNotFoundError as e:
+            print(f"Warning: Could not load roster index: {e}")
+            return {}
+        except Exception as e:
+            print(f"Warning: Error loading roster index: {e}")
             return {}
     
     def get_player_classes(self, team_id: str) -> List[Dict[str, str]]:
