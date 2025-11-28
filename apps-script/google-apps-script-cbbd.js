@@ -128,6 +128,16 @@ function GET_TEAM_META(url) {
         ["Total Minutes", stats.totalMinutes],
         ["Pace", stats.pace],
         [""],
+        ["=== POSSESSION GAME RECORDS ==="],
+        ["1-Possession Games", 
+         (stats.possessionGameRecords && stats.possessionGameRecords.onePossession ? 
+          stats.possessionGameRecords.onePossession.wins + "-" + stats.possessionGameRecords.onePossession.losses : 
+          "N/A")],
+        ["2-Possession Games", 
+         (stats.possessionGameRecords && stats.possessionGameRecords.twoPossession ? 
+          stats.possessionGameRecords.twoPossession.wins + "-" + stats.possessionGameRecords.twoPossession.losses : 
+          "N/A")],
+        [""],
         ["=== TEAM STATS ===", "Team", "Opponent"],
         ["Possessions", stats.teamStats.possessions, stats.opponentStats.possessions],
         ["True Shooting %", stats.teamStats.trueShooting, stats.opponentStats.trueShooting],

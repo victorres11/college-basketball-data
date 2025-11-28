@@ -39,6 +39,53 @@ calculate_per_game_stats = generator_utils.calculate_per_game_stats
 calculate_regular_season_stats = generator_utils.calculate_regular_season_stats
 
 
+def calculate_possession_game_records(team_game_stats):
+    """
+    Calculate win/loss records for 1-possession and 2-possession games.
+    
+    Rules:
+    - 1 possession: margin of 0-3 points (inclusive)
+    - 2 possession: margin of 4-6 points (inclusive)
+    
+    Args:
+        team_game_stats: List of game stat objects
+        
+    Returns:
+        Dictionary with 'onePossession' and 'twoPossession' records
+        Each record has 'wins' and 'losses'
+    """
+    one_possession = {'wins': 0, 'losses': 0}
+    two_possession = {'wins': 0, 'losses': 0}
+    
+    for game in team_game_stats:
+        team_points = game.get('teamStats', {}).get('points', {}).get('total', 0)
+        opponent_points = game.get('opponentStats', {}).get('points', {}).get('total', 0)
+        
+        # Calculate margin (always positive, we'll determine win/loss separately)
+        margin = abs(team_points - opponent_points)
+        
+        # Determine if it's a win or loss
+        is_win = team_points > opponent_points
+        is_loss = opponent_points > team_points
+        
+        # Categorize by margin
+        if 0 <= margin <= 3:  # 1 possession game
+            if is_win:
+                one_possession['wins'] += 1
+            elif is_loss:
+                one_possession['losses'] += 1
+        elif 4 <= margin <= 6:  # 2 possession game
+            if is_win:
+                two_possession['wins'] += 1
+            elif is_loss:
+                two_possession['losses'] += 1
+    
+    return {
+        'onePossession': one_possession,
+        'twoPossession': two_possession
+    }
+
+
 def normalize_jersey(jersey):
     """
     Normalize jersey number for matching.
@@ -193,6 +240,7 @@ def generate_team_data(team_name, season, progress_callback=None):
     cbb_team_id = None
     if team_season_stats and len(team_season_stats) > 0:
         cbb_team_id = team_season_stats[0].get('teamId')
+        print(f"DEBUG: Team '{team_name}' - CBB API teamId: {cbb_team_id}")
     
     # Load FoxSports roster cache for player classes
     foxsports_team_id = None
@@ -212,12 +260,17 @@ def generate_team_data(team_name, season, progress_callback=None):
                 
                 # Map CBB ID to FoxSports ID
                 cbb_id_str = str(cbb_team_id)
+                print(f"DEBUG: Looking up CBB ID '{cbb_id_str}' in mapping...")
                 # Check direct mapping first
                 if cbb_id_str in cbb_to_fox_mapping:
                     foxsports_team_id = cbb_to_fox_mapping[cbb_id_str]
+                    print(f"DEBUG: Found direct mapping: {cbb_id_str} -> {foxsports_team_id}")
                 # Check mismatches
                 elif 'MISMATCHES' in cbb_to_fox_mapping and cbb_id_str in cbb_to_fox_mapping['MISMATCHES']:
                     foxsports_team_id = cbb_to_fox_mapping['MISMATCHES'][cbb_id_str]
+                    print(f"DEBUG: Found mismatch mapping: {cbb_id_str} -> {foxsports_team_id}")
+                else:
+                    print(f"DEBUG: No mapping found for CBB ID '{cbb_id_str}'")
                 
                 # Get player classes from FoxSports cache
                 if foxsports_team_id:
@@ -330,6 +383,11 @@ def generate_team_data(team_name, season, progress_callback=None):
         per_game_stats = calculate_per_game_stats(team_data['teamSeasonStats'])
         if per_game_stats:
             team_data['teamSeasonStats']['perGameStats'] = per_game_stats
+        
+        # Calculate and add possession game records
+        if team_game_stats:
+            possession_records = calculate_possession_game_records(team_game_stats)
+            team_data['teamSeasonStats']['possessionGameRecords'] = possession_records
     
     # Add conference and D1 rankings if available
     if conference_rankings:
