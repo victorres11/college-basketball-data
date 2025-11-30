@@ -25,15 +25,23 @@ jobs:
 
       - name: Authenticate clasp
         run: |
-          mkdir -p ~/.config
+          # Create home directory structure
+          mkdir -p ~
+          
           # Write clasp credentials to the expected location
           echo "${{ secrets.CLASP_RC }}" > ~/.clasprc.json
-          # Also try the config directory location
-          mkdir -p ~/.config
-          echo "${{ secrets.CLASP_RC }}" > ~/.config/.clasprc.json
-          # Verify the file was created
-          ls -la ~/.clasprc.json || echo "Warning: ~/.clasprc.json not found"
-          cat ~/.clasprc.json | head -3 || echo "Warning: Could not read credentials"
+          
+          # Set proper permissions
+          chmod 600 ~/.clasprc.json
+          
+          # Verify the file was created and is readable
+          echo "Checking credentials file..."
+          ls -la ~/.clasprc.json
+          echo "File size: $(wc -c < ~/.clasprc.json) bytes"
+          echo "First 100 chars: $(head -c 100 ~/.clasprc.json)"
+          
+          # Verify JSON is valid
+          python3 -m json.tool ~/.clasprc.json > /dev/null && echo "✅ JSON is valid" || echo "❌ JSON is invalid"
         env:
           CLASP_RC: ${{ secrets.CLASP_RC }}
 
@@ -43,8 +51,13 @@ jobs:
           # Copy main script to Code.gs (clasp expects Code.gs)
           cp google-apps-script-cbbd.js Code.gs
           
-          # Verify clasp can see credentials
-          clasp login --status || echo "Note: Login status check"
+          # Set HOME explicitly to ensure clasp finds credentials
+          export HOME=$HOME
+          
+          # Verify clasp can find credentials
+          echo "HOME directory: $HOME"
+          echo "Looking for credentials in: $HOME/.clasprc.json"
+          ls -la $HOME/.clasprc.json || echo "Warning: Credentials file not found"
           
           # Push to Google Apps Script
           clasp push --force
