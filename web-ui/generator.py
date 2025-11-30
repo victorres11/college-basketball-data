@@ -22,6 +22,16 @@ except ImportError:
     FOXSPORTS_CACHE_AVAILABLE = False
     print("Warning: FoxSports roster cache not available")
 
+# Import quadrant scraper
+quadrants_path = os.path.join(project_root, 'quadrants')
+sys.path.insert(0, quadrants_path)
+try:
+    from quadrant_wins import get_quadrant_data
+    QUADRANT_SCRAPER_AVAILABLE = True
+except ImportError:
+    QUADRANT_SCRAPER_AVAILABLE = False
+    print("Warning: Quadrant scraper not available")
+
 # Import helper functions - we'll need to import from a shared location
 # For now, we'll import from one of the existing generators
 # In production, these should be in a shared utilities module
@@ -501,6 +511,41 @@ def generate_team_data(team_name, season, progress_callback=None):
             'losses': 0,
             'games': 0
         }
+    
+    # Fetch quadrant data from bballnet.com (optional)
+    if QUADRANT_SCRAPER_AVAILABLE:
+        if progress_callback:
+            progress_callback['message'] = 'Fetching quadrant records...'
+        print(f"[GENERATOR] Fetching quadrant data for {team_name}...")
+        try:
+            # Use team_slug for quadrant lookup (e.g., 'oregon', 'michigan-state')
+            quadrant_data = get_quadrant_data(team_slug)
+            
+            # Format quadrant data for JSON output
+            quadrant_records = {}
+            for quad_num in ['1', '2', '3', '4']:
+                quad_key = f'quad{quad_num}'
+                if quad_key in quadrant_data.get('quadrants', {}):
+                    quad_info = quadrant_data['quadrants'][quad_key]
+                    quadrant_records[f'quad{quad_num}'] = {
+                        'record': quad_info.get('record', '0-0'),
+                        'wins': quad_info.get('wins', 0),
+                        'losses': quad_info.get('losses', 0),
+                        'opponents': quad_info.get('opponents', [])
+                    }
+            
+            if quadrant_records:
+                team_data['quadrantRecords'] = quadrant_records
+                print(f"[GENERATOR] Successfully loaded quadrant data: {len(quadrant_records)} quadrants")
+            else:
+                print(f"[GENERATOR] WARNING: Quadrant data returned but no quadrants found")
+        except Exception as e:
+            print(f"[GENERATOR] WARNING: Failed to fetch quadrant data: {e}")
+            import traceback
+            traceback.print_exc()
+            # Don't fail the entire generation if quadrant scraping fails
+    else:
+        print(f"[GENERATOR] INFO: Quadrant scraper not available, skipping quadrant data")
     
     # Create lookup for player season stats (for rankings)
     player_stats_lookup = {}

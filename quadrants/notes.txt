@@ -1,0 +1,20 @@
+This site provides quadrant wins. Q1, Q2, Q3, Q4
+
+Example URL's: https://bballnet.com/teams/michigan-state, https://bballnet.com/teams/oregon
+
+
+The python script in this page I think can reliably pull this data.
+
+What I'd like to be include in the json data (along with all the other data that is generated) is the data that allows me to ouput these two items:
+
+Wins by quadrant
+Quad 1: Record: 0-2
+Quad 2: Record: 0-1
+Quad 3: Record: 2-0
+Quad 4: Record: 2-0
+
+Quadrant Win Opponents:
+Quad 1: [ucla, michigan_state, usc]
+Quad 2: [nevada, elon]
+Quad 3: []
+Quad 4: []

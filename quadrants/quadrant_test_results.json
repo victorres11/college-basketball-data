@@ -1,0 +1,1139 @@
+{
+  "success": [
+    "illinois",
+    "indiana",
+    "iowa",
+    "maryland",
+    "michigan-state",
+    "michigan",
+    "minnesota",
+    "nebraska",
+    "northwestern",
+    "ohio-state",
+    "oregon",
+    "penn-state",
+    "purdue",
+    "rutgers",
+    "ucla",
+    "washington",
+    "wisconsin"
+  ],
+  "failed": [
+    "usc"
+  ],
+  "partial": [],
+  "detailed": {
+    "illinois": {
+      "team": "illinois",
+      "team_name": "illinois",
+      "url": "https://bballnet.com/teams/illinois",
+      "quadrants": {
+        "quad1": {
+          "record": "1-2",
+          "wins": 1,
+          "losses": 2,
+          "opponents": [
+            "(6)",
+            "(32)"
+          ],
+          "games": [
+            {
+              "result": "L",
+              "score": "86-90 11/19/2025",
+              "location": "Neutral",
+              "opponent": "(6)"
+            },
+            {
+              "result": "L",
+              "score": "61-74 11/28/2025",
+              "location": "Neutral",
+              "opponent": "(32)"
+            }
+          ]
+        },
+        "quad2": {
+          "record": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad3": {
+          "record": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad4": {
+          "record": "5-0",
+          "wins": 5,
+          "losses": 0,
+          "opponents": [
+            "(173)",
+            "(247)",
+            "(280)",
+            "(251)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "113-70 11/07/2025",
+              "location": "Home",
+              "opponent": "(173)"
+            },
+            {
+              "result": "W",
+              "score": "84-65 11/14/2025",
+              "location": "Home",
+              "opponent": "(247)"
+            },
+            {
+              "result": "W",
+              "score": "98-58 11/22/2025",
+              "location": "Home",
+              "opponent": "(280)"
+            },
+            {
+              "result": "W",
+              "score": "87-73 11/24/2025",
+              "location": "Home",
+              "opponent": "(251)"
+            }
+          ]
+        }
+      }
+    },
+    "indiana": {
+      "team": "indiana",
+      "team_name": "indiana",
+      "url": "https://bballnet.com/teams/indiana",
+      "quadrants": {
+        "quad1": {
+          "record": "1-0",
+          "wins": 1,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad2": {
+          "record": "1-0",
+          "wins": 1,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad3": {
+          "record": "1-0",
+          "wins": 1,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad4": {
+          "record": "3-0",
+          "wins": 3,
+          "losses": 0,
+          "opponents": [
+            "(249)",
+            "(313)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "69-61 11/16/2025",
+              "location": "Home",
+              "opponent": "(249)"
+            },
+            {
+              "result": "W",
+              "score": "73-53 11/20/2025",
+              "location": "Home",
+              "opponent": "(313)"
+            }
+          ]
+        }
+      }
+    },
+    "iowa": {
+      "team": "iowa",
+      "team_name": "iowa",
+      "url": "https://bballnet.com/teams/iowa",
+      "quadrants": {
+        "quad1": {
+          "record": "1-0",
+          "wins": 1,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad2": {
+          "record": "2-0",
+          "wins": 2,
+          "losses": 0,
+          "opponents": [
+            "(92)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "59-46 11/26/2025",
+              "location": "Neutral",
+              "opponent": "(92)"
+            }
+          ]
+        },
+        "quad3": {
+          "record": "1-0",
+          "wins": 1,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad4": {
+          "record": "3-0",
+          "wins": 3,
+          "losses": 0,
+          "opponents": [
+            "(188)",
+            "(358)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "99-70 11/18/2025",
+              "location": "Home",
+              "opponent": "(188)"
+            },
+            {
+              "result": "W",
+              "score": "93-54 11/20/2025",
+              "location": "Home",
+              "opponent": "(358)"
+            }
+          ]
+        }
+      }
+    },
+    "maryland": {
+      "team": "maryland",
+      "team_name": "maryland",
+      "url": "https://bballnet.com/teams/maryland",
+      "quadrants": {
+        "quad1": {
+          "record": "1-2",
+          "wins": 1,
+          "losses": 2,
+          "opponents": [
+            "(8)",
+            "(6)"
+          ],
+          "games": [
+            {
+              "result": "L",
+              "score": "61-100 11/25/2025",
+              "location": "Neutral",
+              "opponent": "(8)"
+            },
+            {
+              "result": "L",
+              "score": "72-105 11/27/2025",
+              "location": "Neutral",
+              "opponent": "(6)"
+            }
+          ]
+        },
+        "quad2": {
+          "record": "1-0",
+          "wins": 1,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad3": {
+          "record": "0-1",
+          "wins": 0,
+          "losses": 1,
+          "opponents": [],
+          "games": []
+        },
+        "quad4": {
+          "record": "3-0",
+          "wins": 3,
+          "losses": 0,
+          "opponents": [
+            "(330)",
+            "(236)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "84-64 11/11/2025",
+              "location": "Home",
+              "opponent": "(330)"
+            },
+            {
+              "result": "W",
+              "score": "95-90* 11/19/2025",
+              "location": "Home",
+              "opponent": "(236)"
+            }
+          ]
+        }
+      }
+    },
+    "michigan-state": {
+      "team": "michigan-state",
+      "team_name": "michigan-state",
+      "url": "https://bballnet.com/teams/michigan-state",
+      "quadrants": {
+        "quad1": {
+          "record": "2-0",
+          "wins": 2,
+          "losses": 0,
+          "opponents": [
+            "(36)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "74-58 11/27/2025",
+              "location": "Neutral",
+              "opponent": "(36)"
+            }
+          ]
+        },
+        "quad2": {
+          "record": "1-0",
+          "wins": 1,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad3": {
+          "record": "1-0",
+          "wins": 1,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad4": {
+          "record": "3-0",
+          "wins": 3,
+          "losses": 0,
+          "opponents": [
+            "(175)",
+            "(329)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "79-60 11/13/2025",
+              "location": "Home",
+              "opponent": "(175)"
+            },
+            {
+              "result": "W",
+              "score": "84-56 11/21/2025",
+              "location": "Home",
+              "opponent": "(329)"
+            }
+          ]
+        }
+      }
+    },
+    "michigan": {
+      "team": "michigan",
+      "team_name": "michigan",
+      "url": "https://bballnet.com/teams/michigan",
+      "quadrants": {
+        "quad1": {
+          "record": "2-0",
+          "wins": 2,
+          "losses": 0,
+          "opponents": [
+            "(8)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "101-61 11/26/2025",
+              "location": "Neutral",
+              "opponent": "(8)"
+            }
+          ]
+        },
+        "quad2": {
+          "record": "3-0",
+          "wins": 3,
+          "losses": 0,
+          "opponents": [
+            "(78)",
+            "(52)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "67-63 11/14/2025",
+              "location": "Away",
+              "opponent": "(78)"
+            },
+            {
+              "result": "W",
+              "score": "94-54 11/24/2025",
+              "location": "Neutral",
+              "opponent": "(52)"
+            }
+          ]
+        },
+        "quad3": {
+          "record": "1-0",
+          "wins": 1,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad4": {
+          "record": "1-0",
+          "wins": 1,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        }
+      }
+    },
+    "minnesota": {
+      "team": "minnesota",
+      "team_name": "minnesota",
+      "url": "https://bballnet.com/teams/minnesota",
+      "quadrants": {
+        "quad1": {
+          "record": "0-1",
+          "wins": 0,
+          "losses": 1,
+          "opponents": [],
+          "games": []
+        },
+        "quad2": {
+          "record": "0-3",
+          "wins": 0,
+          "losses": 3,
+          "opponents": [
+            "(81)",
+            "(57)"
+          ],
+          "games": [
+            {
+              "result": "L",
+              "score": "68-72 11/27/2025",
+              "location": "Neutral",
+              "opponent": "(81)"
+            },
+            {
+              "result": "L",
+              "score": "75-86 11/28/2025",
+              "location": "Neutral",
+              "opponent": "(57)"
+            }
+          ]
+        },
+        "quad3": {
+          "record": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad4": {
+          "record": "4-0",
+          "wins": 4,
+          "losses": 0,
+          "opponents": [
+            "(330)",
+            "(338)",
+            "(358)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "95-50 11/08/2025",
+              "location": "Home",
+              "opponent": "(330)"
+            },
+            {
+              "result": "W",
+              "score": "72-65* 11/15/2025",
+              "location": "Home",
+              "opponent": "(338)"
+            },
+            {
+              "result": "W",
+              "score": "66-54 11/18/2025",
+              "location": "Home",
+              "opponent": "(358)"
+            }
+          ]
+        }
+      }
+    },
+    "nebraska": {
+      "team": "nebraska",
+      "team_name": "nebraska",
+      "url": "https://bballnet.com/teams/nebraska",
+      "quadrants": {
+        "quad1": {
+          "record": "2-0",
+          "wins": 2,
+          "losses": 0,
+          "opponents": [
+            "(42)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "84-72 11/20/2025",
+              "location": "Neutral",
+              "opponent": "(42)"
+            }
+          ]
+        },
+        "quad2": {
+          "record": "1-0",
+          "wins": 1,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad3": {
+          "record": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad4": {
+          "record": "4-0",
+          "wins": 4,
+          "losses": 0,
+          "opponents": [
+            "(260)",
+            "(361)",
+            "(163)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "96-66 11/08/2025",
+              "location": "Home",
+              "opponent": "(260)"
+            },
+            {
+              "result": "W",
+              "score": "69-50 11/11/2025",
+              "location": "Home",
+              "opponent": "(361)"
+            },
+            {
+              "result": "W",
+              "score": "80-73 11/25/2025",
+              "location": "Home",
+              "opponent": "(163)"
+            }
+          ]
+        }
+      }
+    },
+    "northwestern": {
+      "team": "northwestern",
+      "team_name": "northwestern",
+      "url": "https://bballnet.com/teams/northwestern",
+      "quadrants": {
+        "quad1": {
+          "record": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad2": {
+          "record": "2-1",
+          "wins": 2,
+          "losses": 1,
+          "opponents": [
+            "(87)",
+            "(95)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "79-77 11/23/2025",
+              "location": "Neutral",
+              "opponent": "(87)"
+            },
+            {
+              "result": "L",
+              "score": "81-86 11/27/2025",
+              "location": "Neutral",
+              "opponent": "(95)"
+            }
+          ]
+        },
+        "quad3": {
+          "record": "0-1",
+          "wins": 0,
+          "losses": 1,
+          "opponents": [],
+          "games": []
+        },
+        "quad4": {
+          "record": "3-0",
+          "wins": 3,
+          "losses": 0,
+          "opponents": [
+            "(290)",
+            "(174)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "76-52 11/07/2025",
+              "location": "Home",
+              "opponent": "(290)"
+            },
+            {
+              "result": "W",
+              "score": "110-63 11/10/2025",
+              "location": "Home",
+              "opponent": "(174)"
+            }
+          ]
+        }
+      }
+    },
+    "ohio-state": {
+      "team": "ohio-state",
+      "team_name": "ohio-state",
+      "url": "https://bballnet.com/teams/ohio-state",
+      "quadrants": {
+        "quad1": {
+          "record": "0-1",
+          "wins": 0,
+          "losses": 1,
+          "opponents": [],
+          "games": []
+        },
+        "quad2": {
+          "record": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad3": {
+          "record": "2-0",
+          "wins": 2,
+          "losses": 0,
+          "opponents": [
+            "(103)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "64-63 11/16/2025",
+              "location": "Home",
+              "opponent": "(103)"
+            }
+          ]
+        },
+        "quad4": {
+          "record": "4-0",
+          "wins": 4,
+          "losses": 0,
+          "opponents": [
+            "(170)",
+            "(279)",
+            "(236)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "75-53 11/11/2025",
+              "location": "Home",
+              "opponent": "(170)"
+            },
+            {
+              "result": "W",
+              "score": "91-58 11/20/2025",
+              "location": "Home",
+              "opponent": "(279)"
+            },
+            {
+              "result": "W",
+              "score": "113-60 11/25/2025",
+              "location": "Home",
+              "opponent": "(236)"
+            }
+          ]
+        }
+      }
+    },
+    "oregon": {
+      "team": "oregon",
+      "team_name": "oregon",
+      "url": "https://bballnet.com/teams/oregon",
+      "quadrants": {
+        "quad1": {
+          "record": "0-2",
+          "wins": 0,
+          "losses": 2,
+          "opponents": [
+            "(38)"
+          ],
+          "games": [
+            {
+              "result": "L",
+              "score": "66-76 11/27/2025",
+              "location": "Neutral",
+              "opponent": "(38)"
+            }
+          ]
+        },
+        "quad2": {
+          "record": "0-1",
+          "wins": 0,
+          "losses": 1,
+          "opponents": [],
+          "games": []
+        },
+        "quad3": {
+          "record": "2-0",
+          "wins": 2,
+          "losses": 0,
+          "opponents": [
+            "(85)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "87-75 11/17/2025",
+              "location": "Home",
+              "opponent": "(85)"
+            }
+          ]
+        },
+        "quad4": {
+          "record": "2-0",
+          "wins": 2,
+          "losses": 0,
+          "opponents": [
+            "(204)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "67-63 11/07/2025",
+              "location": "Home",
+              "opponent": "(204)"
+            }
+          ]
+        }
+      }
+    },
+    "penn-state": {
+      "team": "penn-state",
+      "team_name": "penn-state",
+      "url": "https://bballnet.com/teams/penn-state",
+      "quadrants": {
+        "quad1": {
+          "record": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad2": {
+          "record": "0-1",
+          "wins": 0,
+          "losses": 1,
+          "opponents": [],
+          "games": []
+        },
+        "quad3": {
+          "record": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad4": {
+          "record": "5-0",
+          "wins": 5,
+          "losses": 0,
+          "opponents": [
+            "(270)",
+            "(214)",
+            "(256)",
+            "(290)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "80-71 11/11/2025",
+              "location": "Home",
+              "opponent": "(270)"
+            },
+            {
+              "result": "W",
+              "score": "83-69 11/15/2025",
+              "location": "Neutral",
+              "opponent": "(214)"
+            },
+            {
+              "result": "W",
+              "score": "84-80 11/19/2025",
+              "location": "Home",
+              "opponent": "(256)"
+            },
+            {
+              "result": "W",
+              "score": "96-87 11/25/2025",
+              "location": "Home",
+              "opponent": "(290)"
+            }
+          ]
+        }
+      }
+    },
+    "purdue": {
+      "team": "purdue",
+      "team_name": "purdue",
+      "url": "https://bballnet.com/teams/purdue",
+      "quadrants": {
+        "quad1": {
+          "record": "3-0",
+          "wins": 3,
+          "losses": 0,
+          "opponents": [
+            "(49)",
+            "(7)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "80-71 11/20/2025",
+              "location": "Neutral",
+              "opponent": "(49)"
+            },
+            {
+              "result": "W",
+              "score": "86-56 11/21/2025",
+              "location": "Neutral",
+              "opponent": "(7)"
+            }
+          ]
+        },
+        "quad2": {
+          "record": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad3": {
+          "record": "1-0",
+          "wins": 1,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad4": {
+          "record": "3-0",
+          "wins": 3,
+          "losses": 0,
+          "opponents": [
+            "(193)",
+            "(318)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "87-77 11/07/2025",
+              "location": "Home",
+              "opponent": "(193)"
+            },
+            {
+              "result": "W",
+              "score": "109-62 11/28/2025",
+              "location": "Home",
+              "opponent": "(318)"
+            }
+          ]
+        }
+      }
+    },
+    "rutgers": {
+      "team": "rutgers",
+      "team_name": "rutgers",
+      "url": "https://bballnet.com/teams/rutgers",
+      "quadrants": {
+        "quad1": {
+          "record": "0-1",
+          "wins": 0,
+          "losses": 1,
+          "opponents": [],
+          "games": []
+        },
+        "quad2": {
+          "record": "1-0",
+          "wins": 1,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad3": {
+          "record": "0-1",
+          "wins": 0,
+          "losses": 1,
+          "opponents": [],
+          "games": []
+        },
+        "quad4": {
+          "record": "4-1",
+          "wins": 4,
+          "losses": 1,
+          "opponents": [
+            "(203)",
+            "(281)",
+            "(226)",
+            "(168)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "72-60 11/10/2025",
+              "location": "Home",
+              "opponent": "(203)"
+            },
+            {
+              "result": "W",
+              "score": "84-72 11/14/2025",
+              "location": "Home",
+              "opponent": "(281)"
+            },
+            {
+              "result": "W",
+              "score": "80-71 11/18/2025",
+              "location": "Home",
+              "opponent": "(226)"
+            },
+            {
+              "result": "L",
+              "score": "54-67 11/21/2025",
+              "location": "Home",
+              "opponent": "(168)"
+            }
+          ]
+        }
+      }
+    },
+    "ucla": {
+      "team": "ucla",
+      "team_name": "ucla",
+      "url": "https://bballnet.com/teams/ucla",
+      "quadrants": {
+        "quad1": {
+          "record": "0-1",
+          "wins": 0,
+          "losses": 1,
+          "opponents": [],
+          "games": []
+        },
+        "quad2": {
+          "record": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad3": {
+          "record": "0-1",
+          "wins": 0,
+          "losses": 1,
+          "opponents": [],
+          "games": []
+        },
+        "quad4": {
+          "record": "5-0",
+          "wins": 5,
+          "losses": 0,
+          "opponents": [
+            "(227)",
+            "(345)",
+            "(344)",
+            "(240)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "74-63 11/07/2025",
+              "location": "Home",
+              "opponent": "(227)"
+            },
+            {
+              "result": "W",
+              "score": "83-62 11/10/2025",
+              "location": "Home",
+              "opponent": "(345)"
+            },
+            {
+              "result": "W",
+              "score": "79-48 11/18/2025",
+              "location": "Home",
+              "opponent": "(344)"
+            },
+            {
+              "result": "W",
+              "score": "86-46 11/21/2025",
+              "location": "Home",
+              "opponent": "(240)"
+            }
+          ]
+        }
+      }
+    },
+    "washington": {
+      "team": "washington",
+      "team_name": "washington",
+      "url": "https://bballnet.com/teams/washington",
+      "quadrants": {
+        "quad1": {
+          "record": "0-1",
+          "wins": 0,
+          "losses": 1,
+          "opponents": [],
+          "games": []
+        },
+        "quad2": {
+          "record": "2-1",
+          "wins": 2,
+          "losses": 1,
+          "opponents": [
+            "(79)",
+            "(86)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "83-66 11/27/2025",
+              "location": "Neutral",
+              "opponent": "(79)"
+            },
+            {
+              "result": "L",
+              "score": "68-81 11/28/2025",
+              "location": "Neutral",
+              "opponent": "(86)"
+            }
+          ]
+        },
+        "quad3": {
+          "record": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad4": {
+          "record": "3-0",
+          "wins": 3,
+          "losses": 0,
+          "opponents": [
+            "(300)",
+            "(224)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "84-70 11/06/2025",
+              "location": "Home",
+              "opponent": "(300)"
+            },
+            {
+              "result": "W",
+              "score": "99-93* 11/18/2025",
+              "location": "Home",
+              "opponent": "(224)"
+            }
+          ]
+        }
+      }
+    },
+    "wisconsin": {
+      "team": "wisconsin",
+      "team_name": "wisconsin",
+      "url": "https://bballnet.com/teams/wisconsin",
+      "quadrants": {
+        "quad1": {
+          "record": "0-1",
+          "wins": 0,
+          "losses": 1,
+          "opponents": [],
+          "games": []
+        },
+        "quad2": {
+          "record": "1-1",
+          "wins": 1,
+          "losses": 1,
+          "opponents": [
+            "(78)"
+          ],
+          "games": [
+            {
+              "result": "L",
+              "score": "63-74 11/28/2025",
+              "location": "Neutral",
+              "opponent": "(78)"
+            }
+          ]
+        },
+        "quad3": {
+          "record": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "opponents": [],
+          "games": []
+        },
+        "quad4": {
+          "record": "4-0",
+          "wins": 4,
+          "losses": 0,
+          "opponents": [
+            "(354)",
+            "(276)",
+            "(216)"
+          ],
+          "games": [
+            {
+              "result": "W",
+              "score": "97-72 11/07/2025",
+              "location": "Home",
+              "opponent": "(354)"
+            },
+            {
+              "result": "W",
+              "score": "86-55 11/11/2025",
+              "location": "Home",
+              "opponent": "(276)"
+            },
+            {
+              "result": "W",
+              "score": "94-69 11/17/2025",
+              "location": "Home",
+              "opponent": "(216)"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

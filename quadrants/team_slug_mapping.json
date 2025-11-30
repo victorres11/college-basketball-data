@@ -1,0 +1,10 @@
+{
+  "team_slug_mapping": {
+    "usc": "southern-california",
+    "michigan-state": "michigan-state",
+    "ohio-state": "ohio-state",
+    "penn-state": "penn-state"
+  },
+  "notes": "Mapping from team names/slugs to bballnet.com slugs. Most teams use the same slug, but some need special mappings."
+}
+

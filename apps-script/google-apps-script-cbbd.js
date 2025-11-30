@@ -268,6 +268,72 @@ function GET_TEAM_META(url) {
   }
   
   // ========================================
+  // CATEGORY 3B: QUADRANT RECORDS
+  // ========================================
+  
+  function GET_QUADRANT_RECORDS(url) {
+    try {
+      var response = UrlFetchApp.fetch(url);
+      var data = JSON.parse(response.getContentText());
+      
+      // Check if quadrant records exist
+      if (!data.quadrantRecords) {
+        return [["Quadrant records not available"], ["Data may not have been generated with quadrant information"]];
+      }
+      
+      var table = [
+        ["=== QUADRANT RECORDS ==="],
+        [""],
+        ["Quadrant", "Record", "Wins", "Losses", "Opponents"]
+      ];
+      
+      // Process each quadrant (1-4)
+      for (var i = 1; i <= 4; i++) {
+        var quadKey = "quad" + i;
+        var quadData = data.quadrantRecords[quadKey];
+        
+        if (quadData) {
+          var record = quadData.record || "0-0";
+          var wins = quadData.wins || 0;
+          var losses = quadData.losses || 0;
+          var opponents = quadData.opponents || [];
+          
+          // Format opponents list
+          var opponentsStr = "";
+          if (opponents.length > 0) {
+            // Convert normalized names back to readable format
+            opponentsStr = opponents.map(function(opp) {
+              return opp.replace(/_/g, ' ').replace(/\b\w/g, function(l) { return l.toUpperCase(); });
+            }).join(", ");
+          } else {
+            opponentsStr = "None";
+          }
+          
+          table.push([
+            "Quad " + i,
+            record,
+            wins,
+            losses,
+            opponentsStr
+          ]);
+        } else {
+          table.push([
+            "Quad " + i,
+            "0-0",
+            0,
+            0,
+            "None"
+          ]);
+        }
+      }
+      
+      return table;
+    } catch (e) {
+      return [["Error: " + e.message]];
+    }
+  }
+  
+  // ========================================
   // CATEGORY 4: TEAM GAME-BY-GAME STATS
   // ========================================
   
