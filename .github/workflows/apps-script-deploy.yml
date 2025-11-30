@@ -26,7 +26,14 @@ jobs:
       - name: Authenticate clasp
         run: |
           mkdir -p ~/.config
+          # Write clasp credentials to the expected location
           echo "${{ secrets.CLASP_RC }}" > ~/.clasprc.json
+          # Also try the config directory location
+          mkdir -p ~/.config
+          echo "${{ secrets.CLASP_RC }}" > ~/.config/.clasprc.json
+          # Verify the file was created
+          ls -la ~/.clasprc.json || echo "Warning: ~/.clasprc.json not found"
+          cat ~/.clasprc.json | head -3 || echo "Warning: Could not read credentials"
         env:
           CLASP_RC: ${{ secrets.CLASP_RC }}
 
@@ -35,6 +42,9 @@ jobs:
         run: |
           # Copy main script to Code.gs (clasp expects Code.gs)
           cp google-apps-script-cbbd.js Code.gs
+          
+          # Verify clasp can see credentials
+          clasp login --status || echo "Note: Login status check"
           
           # Push to Google Apps Script
           clasp push --force
