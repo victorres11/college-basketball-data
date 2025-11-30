@@ -245,8 +245,3 @@ function DEBUG_JSON(url) {
 function TEST_FUNCTION() {
   return CBBData.TEST_FUNCTION();
 }
-
-// Test comment
-// Another test
-// Test deploy
-// Another test
