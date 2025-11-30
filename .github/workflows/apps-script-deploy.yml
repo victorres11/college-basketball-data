@@ -29,7 +29,8 @@ jobs:
           mkdir -p ~
           
           # Write clasp credentials to the expected location
-          echo "${{ secrets.CLASP_RC }}" > ~/.clasprc.json
+          # Use printf to avoid any shell interpretation issues
+          printf '%s\n' "${{ secrets.CLASP_RC }}" > ~/.clasprc.json
           
           # Set proper permissions
           chmod 600 ~/.clasprc.json
@@ -38,10 +39,9 @@ jobs:
           echo "Checking credentials file..."
           ls -la ~/.clasprc.json
           echo "File size: $(wc -c < ~/.clasprc.json) bytes"
-          echo "First 100 chars: $(head -c 100 ~/.clasprc.json)"
           
-          # Verify JSON is valid
-          python3 -m json.tool ~/.clasprc.json > /dev/null && echo "✅ JSON is valid" || echo "❌ JSON is invalid"
+          # Verify JSON is valid and show structure
+          python3 -c "import json; data=json.load(open('$HOME/.clasprc.json')); print('✅ JSON is valid'); print('Has tokens:', 'tokens' in data); print('Has default:', 'default' in data.get('tokens', {}))" || echo "❌ JSON is invalid"
         env:
           CLASP_RC: ${{ secrets.CLASP_RC }}
 
@@ -51,17 +51,17 @@ jobs:
           # Copy main script to Code.gs (clasp expects Code.gs)
           cp google-apps-script-cbbd.js Code.gs
           
-          # Use explicit auth file path with clasp
-          # Clasp can use --auth flag or clasp_config_auth env var
-          export clasp_config_auth="$HOME/.clasprc.json"
+          # Try using the directory path for --auth (clasp can take a directory)
+          # Set both the file and try directory approach
+          export clasp_config_auth="$HOME"
           
-          # Verify clasp can find credentials
+          # Verify credentials file exists
           echo "HOME directory: $HOME"
-          echo "Auth file: $clasp_config_auth"
-          ls -la $clasp_config_auth || echo "Warning: Credentials file not found"
+          echo "Auth file: $HOME/.clasprc.json"
+          ls -la $HOME/.clasprc.json
           
-          # Push to Google Apps Script with explicit auth
-          clasp push --force --auth "$HOME/.clasprc.json"
+          # Try pushing with directory as auth path (clasp looks for .clasprc.json in the directory)
+          clasp push --force --auth "$HOME"
           
           echo "✅ Script pushed to Google Apps Script successfully!"
 
