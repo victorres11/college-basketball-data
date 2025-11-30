@@ -51,16 +51,17 @@ jobs:
           # Copy main script to Code.gs (clasp expects Code.gs)
           cp google-apps-script-cbbd.js Code.gs
           
-          # Set HOME explicitly to ensure clasp finds credentials
-          export HOME=$HOME
+          # Use explicit auth file path with clasp
+          # Clasp can use --auth flag or clasp_config_auth env var
+          export clasp_config_auth="$HOME/.clasprc.json"
           
           # Verify clasp can find credentials
           echo "HOME directory: $HOME"
-          echo "Looking for credentials in: $HOME/.clasprc.json"
-          ls -la $HOME/.clasprc.json || echo "Warning: Credentials file not found"
+          echo "Auth file: $clasp_config_auth"
+          ls -la $clasp_config_auth || echo "Warning: Credentials file not found"
           
-          # Push to Google Apps Script
-          clasp push --force
+          # Push to Google Apps Script with explicit auth
+          clasp push --force --auth "$HOME/.clasprc.json"
           
           echo "✅ Script pushed to Google Apps Script successfully!"
 
