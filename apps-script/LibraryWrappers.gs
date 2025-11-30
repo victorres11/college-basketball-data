@@ -47,6 +47,16 @@ function GET_TEAM_SEASON_STATS(url) {
   return CBBData.GET_TEAM_SEASON_STATS(url);
 }
 
+/**
+ * Get quadrant records (Q1-Q4) with wins, losses, and opponents
+ * @param {string} url - URL to the JSON data file (typically in cell A1)
+ * @return {Array<Array>} Table with quadrant records for all 4 quadrants
+ * @customfunction
+ */
+function GET_QUADRANT_RECORDS(url) {
+  return CBBData.GET_QUADRANT_RECORDS(url);
+}
+
 // ========================================
 // CATEGORY 4: TEAM GAME-BY-GAME STATS
 // ========================================

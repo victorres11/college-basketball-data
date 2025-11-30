@@ -1,0 +1,43 @@
+name: Deploy Google Apps Script
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'apps-script/**'
+      - '.github/workflows/apps-script-deploy.yml'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install clasp
+        run: npm install -g @google/clasp
+
+      - name: Authenticate clasp
+        run: |
+          mkdir -p ~/.config
+          echo "${{ secrets.CLASP_RC }}" > ~/.clasprc.json
+        env:
+          CLASP_RC: ${{ secrets.CLASP_RC }}
+
+      - name: Push to Google Apps Script
+        working-directory: ./apps-script
+        run: |
+          # Copy main script to Code.gs (clasp expects Code.gs)
+          cp google-apps-script-cbbd.js Code.gs
+          
+          # Push to Google Apps Script
+          clasp push --force
+          
+          echo "✅ Script pushed to Google Apps Script successfully!"
+
