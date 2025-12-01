@@ -470,7 +470,13 @@ function GET_TEAM_META(url) {
         "FTM Rank", "FTA Rank", "OReb Rank", "DReb Rank", "TReb Rank",
         "Ast Rank", "Blk Rank",
         // Season Totals - Fouls/Ejections (moved to end)
-        "Fouls", "Foul Outs", "Ejections"
+        "Fouls", "Foul Outs", "Ejections",
+        // Shooting Breakdown (moved to end to preserve column positions)
+        "Dunks Att", "Dunks Made", "Dunks %",
+        "Layups Att", "Layups Made", "Layups %",
+        "Tip-Ins Att", "Tip-Ins Made", "Tip-Ins %",
+        "2PT Jumpers Att", "2PT Jumpers Made", "2PT Jumpers %",
+        "3PT Jumpers Att", "3PT Jumpers Made", "3PT Jumpers %"
       ]];
       
       // Sort players: Top 9 by MPG (then by jersey), rest by total minutes
