@@ -270,6 +270,15 @@ class CollegeBasketballAPI:
             params["team"] = team
         return self._make_request("stats/player/game", params)
     
+    def get_player_shooting_stats(self, season: int, team: Optional[str] = None, season_type: Optional[str] = None) -> List[Dict]:
+        """Get player shooting statistics including dunks, layups, jumpers, etc."""
+        params = {"season": season}
+        if team:
+            params["team"] = team
+        if season_type:
+            params["seasonType"] = season_type
+        return self._make_request("stats/player/shooting/season", params)
+    
     # Team statistics endpoints
     def get_team_season_stats(self, season: int, team: Optional[str] = None, season_type: Optional[str] = None) -> List[Dict]:
         """Get team season statistics."""

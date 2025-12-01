@@ -222,6 +222,15 @@ def generate_team_data(team_name, season, progress_callback=None):
     print(f"[GENERATOR] Retrieved {len(player_season_stats) if player_season_stats else 0} player season stats")
     
     if progress_callback:
+        progress_callback['message'] = 'Fetching player shooting stats...'
+        progress_callback['progress'] = 7.5
+    
+    # Fetch player shooting stats (includes dunks, layups, jumpers, etc.)
+    print(f"[GENERATOR] Fetching player shooting stats for {team_name} ({season})...")
+    player_shooting_stats = api.get_player_shooting_stats(season, team_slug, "regular")
+    print(f"[GENERATOR] Retrieved {len(player_shooting_stats) if player_shooting_stats else 0} player shooting stats")
+    
+    if progress_callback:
         progress_callback['message'] = 'Fetching team season stats...'
         progress_callback['progress'] = 8
     
@@ -555,6 +564,14 @@ def generate_team_data(team_name, season, progress_callback=None):
             if player_name:
                 player_stats_lookup[player_name.lower()] = player
     
+    # Create lookup for player shooting stats (dunks, layups, etc.)
+    player_shooting_lookup = {}
+    if player_shooting_stats:
+        for player in player_shooting_stats:
+            player_name = player.get('athleteName', '')
+            if player_name:
+                player_shooting_lookup[player_name.lower()] = player
+    
     # Process each player from roster
     total_players = len(all_players_to_process)
     # Reserve 10% for initial setup, 10% for saving
@@ -766,6 +783,24 @@ def generate_team_data(team_name, season, progress_callback=None):
         player_season_data = player_stats_lookup.get(player_name.lower())
         if player_season_data:
             player_record['seasonStatsWithRankings'] = player_season_data
+        
+        # Add player shooting stats (dunks, layups, jumpers, etc.) if available
+        player_shooting_data = player_shooting_lookup.get(player_name.lower())
+        if player_shooting_data:
+            # Extract just the shooting breakdown (dunks, layups, etc.)
+            shooting_breakdown = {
+                'dunks': player_shooting_data.get('dunks', {}),
+                'layups': player_shooting_data.get('layups', {}),
+                'tipIns': player_shooting_data.get('tipIns', {}),
+                'twoPointJumpers': player_shooting_data.get('twoPointJumpers', {}),
+                'threePointJumpers': player_shooting_data.get('threePointJumpers', {}),
+                'freeThrows': player_shooting_data.get('freeThrows', {}),
+                'trackedShots': player_shooting_data.get('trackedShots', 0),
+                'freeThrowRate': player_shooting_data.get('freeThrowRate', 0),
+                'assistedPct': player_shooting_data.get('assistedPct', 0),
+                'attemptsBreakdown': player_shooting_data.get('attemptsBreakdown', {})
+            }
+            player_record['shootingStats'] = shooting_breakdown
         
         # Calculate player's conference rankings (using cached conference players)
         if conference_name:

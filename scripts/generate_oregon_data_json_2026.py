@@ -546,8 +546,13 @@ def generate_oregon_data_json_2026():
             if player_name:
                 all_roster_players.add(player_name.lower())
     
+    # Filter game data players to only include those in the roster (excludes opponent players)
+    # The game data includes players from both teams, so we must filter by roster
+    players_with_game_data_filtered = players_with_game_data & all_roster_players
+    
     # Combine: use roster players as base, ensure all are included
-    all_players_to_process = all_roster_players | players_with_game_data
+    # This ensures we only process players from the target team, not opponents
+    all_players_to_process = all_roster_players | players_with_game_data_filtered
     
     # Build consolidated data structure
     team_data = {

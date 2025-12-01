@@ -45,14 +45,20 @@ def upload_to_s3(file_path, team_name, season):
     try:
         # Upload file
         # Note: ACLs are disabled on this bucket, public access is handled by bucket policy
+        # Set CORS headers to allow Google Sheets to fetch the file
         s3_client.upload_file(
             file_path,
             bucket_name,
             s3_key,
             ExtraArgs={
-                'ContentType': 'application/json'
+                'ContentType': 'application/json',
+                'CacheControl': 'public, max-age=3600'
             }
         )
+        
+        # Ensure CORS is configured on the bucket (this is a one-time setup)
+        # The bucket policy should allow GET requests from any origin
+        # This is typically done via AWS Console or CLI, not in code
         
         # Verify the file exists and is accessible
         try:
