@@ -28,9 +28,19 @@ sys.path.insert(0, quadrants_path)
 try:
     from quadrant_wins import get_quadrant_data
     QUADRANT_SCRAPER_AVAILABLE = True
+    print("[GENERATOR] Quadrant scraper import: OK")
 except ImportError:
     QUADRANT_SCRAPER_AVAILABLE = False
     print("Warning: Quadrant scraper not available")
+
+# Import NET rating scraper
+try:
+    from net_rating import get_net_rating
+    NET_RATING_SCRAPER_AVAILABLE = True
+    print("[GENERATOR] NET rating scraper import: OK")
+except ImportError:
+    NET_RATING_SCRAPER_AVAILABLE = False
+    print("Warning: NET rating scraper not available")
 
 # Import helper functions - we'll need to import from a shared location
 # For now, we'll import from one of the existing generators
@@ -555,6 +565,34 @@ def generate_team_data(team_name, season, progress_callback=None):
             # Don't fail the entire generation if quadrant scraping fails
     else:
         print(f"[GENERATOR] INFO: Quadrant scraper not available, skipping quadrant data")
+    
+    # Fetch NET rating from bballnet.com (optional)
+    if NET_RATING_SCRAPER_AVAILABLE:
+        if progress_callback:
+            progress_callback['message'] = 'Fetching NET rating...'
+        print(f"[GENERATOR] Searching for NET rating for {team_name}...")
+        try:
+            net_data = get_net_rating(team_name)
+            if net_data and net_data.get('net_rating') is not None:
+                team_data['netRating'] = {
+                    'rating': net_data['net_rating'],
+                    'previousRating': net_data.get('previous_rating'),
+                    'source': 'bballnet.com',
+                    'url': net_data.get('url')
+                }
+                found_name = net_data.get('team_name_found', team_name)
+                print(f"[GENERATOR] Found NET rating for {team_name} (matched as: {found_name})")
+                print(f"[GENERATOR] NET Rank: {net_data['net_rating']} (Previous: {net_data.get('previous_rating', 'N/A')})")
+            else:
+                error_msg = net_data.get('error', 'Unknown error') if net_data else 'No data returned'
+                print(f"[GENERATOR] WARNING: NET rating not found for {team_name}: {error_msg}")
+        except Exception as e:
+            print(f"[GENERATOR] WARNING: Failed to fetch NET rating for {team_name}: {e}")
+            import traceback
+            traceback.print_exc()
+            # Don't fail the entire generation if NET scraping fails
+    else:
+        print(f"[GENERATOR] INFO: NET rating scraper not available, skipping NET rating")
     
     # Create lookup for player season stats (for rankings)
     player_stats_lookup = {}
