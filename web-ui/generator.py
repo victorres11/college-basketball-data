@@ -822,7 +822,8 @@ def generate_team_data(team_name, season, progress_callback=None):
         if player_season_data:
             player_record['seasonStatsWithRankings'] = player_season_data
         
-        # Add player shooting stats (dunks, layups, jumpers, etc.) if available
+        # Add player shooting stats (dunks, layups, jumpers, etc.)
+        # Always add shootingStats field, even if player has no tracked shots (use zeros)
         player_shooting_data = player_shooting_lookup.get(player_name.lower())
         if player_shooting_data:
             # Extract just the shooting breakdown (dunks, layups, etc.)
@@ -838,7 +839,21 @@ def generate_team_data(team_name, season, progress_callback=None):
                 'assistedPct': player_shooting_data.get('assistedPct', 0),
                 'attemptsBreakdown': player_shooting_data.get('attemptsBreakdown', {})
             }
-            player_record['shootingStats'] = shooting_breakdown
+        else:
+            # Player not in shooting stats API (no tracked shots) - use zeros for consistency
+            shooting_breakdown = {
+                'dunks': {'attempted': 0, 'made': 0, 'pct': 0, 'assisted': 0, 'assistedPct': 0},
+                'layups': {'attempted': 0, 'made': 0, 'pct': 0, 'assisted': 0, 'assistedPct': 0},
+                'tipIns': {'attempted': 0, 'made': 0, 'pct': 0, 'assisted': 0, 'assistedPct': 0},
+                'twoPointJumpers': {'attempted': 0, 'made': 0, 'pct': 0, 'assisted': 0, 'assistedPct': 0},
+                'threePointJumpers': {'attempted': 0, 'made': 0, 'pct': 0, 'assisted': 0, 'assistedPct': 0},
+                'freeThrows': {'attempted': 0, 'made': 0, 'pct': 0},
+                'trackedShots': 0,
+                'freeThrowRate': 0,
+                'assistedPct': 0,
+                'attemptsBreakdown': {'dunks': 0, 'layups': 0, 'tipIns': 0, 'twoPointJumpers': 0, 'threePointJumpers': 0}
+            }
+        player_record['shootingStats'] = shooting_breakdown
         
         # Calculate player's conference rankings (using cached conference players)
         if conference_name:
