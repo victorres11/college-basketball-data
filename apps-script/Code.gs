@@ -42,6 +42,20 @@ function GET_TEAM_META(url) {
         table.push(["Conference Games", data.conferenceRecord.games]);
       }
       
+      // Add NET rating if available
+      if (data.netRating) {
+        table.push([""]);
+        table.push(["=== NET RATING ==="]);
+        table.push(["NET Rank", data.netRating.rating || "N/A"]);
+        if (data.netRating.previousRating) {
+          table.push(["Previous Rank", data.netRating.previousRating]);
+        }
+        table.push(["Source", data.netRating.source || "bballnet.com"]);
+        if (data.netRating.url) {
+          table.push(["URL", data.netRating.url]);
+        }
+      }
+      
       return table;
     } catch (e) {
       return [["Error: " + e.message]];
