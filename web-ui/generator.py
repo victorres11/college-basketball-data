@@ -191,6 +191,19 @@ def generate_team_data(team_name, season, progress_callback=None):
     # Team name normalization (lowercase for API)
     team_slug = team_name.lower()
     
+    # Helper function to get Sports Reference slug
+    def get_sports_ref_slug(team_name_lower):
+        """Convert team name to Sports Reference URL slug."""
+        # Most teams use the same slug, but some need special handling
+        sports_ref_mapping = {
+            'michigan state': 'michigan-state',
+            'ohio state': 'ohio-state',
+            'penn state': 'penn-state',
+            'usc': 'southern-california',
+            'southern california': 'southern-california',
+        }
+        return sports_ref_mapping.get(team_name_lower, team_name_lower)
+    
     # Calculate date range based on season
     start_date = f'{season-1}-11-04'
     end_date = f'{season}-03-17'
