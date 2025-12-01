@@ -457,12 +457,6 @@ function GET_TEAM_META(url) {
         // Season Totals - Shooting
         "FGM", "FGA", "FG%", "2PM", "2PA", "2P%",
         "3PM", "3PA", "3P%", "FTM", "FTA", "FT%",
-        // Shooting Breakdown
-        "Dunks Att", "Dunks Made", "Dunks %",
-        "Layups Att", "Layups Made", "Layups %",
-        "Tip-Ins Att", "Tip-Ins Made", "Tip-Ins %",
-        "2PT Jumpers Att", "2PT Jumpers Made", "2PT Jumpers %",
-        "3PT Jumpers Att", "3PT Jumpers Made", "3PT Jumpers %",
         // Advanced Stats
         "ORtg", "DRtg", "NetRtg", "PORPAG", "Usage%",
         "AST/TO", "OReb%", "FTR", "eFG%", "TS%",
@@ -572,22 +566,6 @@ function GET_TEAM_META(url) {
           safe(st, 'freeThrows.made', 0),
           safe(st, 'freeThrows.attempted', 0),
           safe(st, 'freeThrows.percentage', 0),
-          // Shooting Breakdown (from shootingStats)
-          safe(player, 'shootingStats.dunks.attempted', 0),
-          safe(player, 'shootingStats.dunks.made', 0),
-          safe(player, 'shootingStats.dunks.pct', 0),
-          safe(player, 'shootingStats.layups.attempted', 0),
-          safe(player, 'shootingStats.layups.made', 0),
-          safe(player, 'shootingStats.layups.pct', 0),
-          safe(player, 'shootingStats.tipIns.attempted', 0),
-          safe(player, 'shootingStats.tipIns.made', 0),
-          safe(player, 'shootingStats.tipIns.pct', 0),
-          safe(player, 'shootingStats.twoPointJumpers.attempted', 0),
-          safe(player, 'shootingStats.twoPointJumpers.made', 0),
-          safe(player, 'shootingStats.twoPointJumpers.pct', 0),
-          safe(player, 'shootingStats.threePointJumpers.attempted', 0),
-          safe(player, 'shootingStats.threePointJumpers.made', 0),
-          safe(player, 'shootingStats.threePointJumpers.pct', 0),
           // Advanced Stats (directly on player object)
           safe(player, 'offensiveRating', ""),
           safe(player, 'defensiveRating', ""),
@@ -633,7 +611,23 @@ function GET_TEAM_META(url) {
           // Season Totals - Fouls/Ejections (moved to end)
           safe(st, 'fouls', 0),
           safe(st, 'foulOuts', 0),
-          safe(st, 'ejections', 0)
+          safe(st, 'ejections', 0),
+          // Shooting Breakdown (from shootingStats) - moved to end to preserve column positions
+          safe(player, 'shootingStats.dunks.attempted', 0),
+          safe(player, 'shootingStats.dunks.made', 0),
+          safe(player, 'shootingStats.dunks.pct', 0),
+          safe(player, 'shootingStats.layups.attempted', 0),
+          safe(player, 'shootingStats.layups.made', 0),
+          safe(player, 'shootingStats.layups.pct', 0),
+          safe(player, 'shootingStats.tipIns.attempted', 0),
+          safe(player, 'shootingStats.tipIns.made', 0),
+          safe(player, 'shootingStats.tipIns.pct', 0),
+          safe(player, 'shootingStats.twoPointJumpers.attempted', 0),
+          safe(player, 'shootingStats.twoPointJumpers.made', 0),
+          safe(player, 'shootingStats.twoPointJumpers.pct', 0),
+          safe(player, 'shootingStats.threePointJumpers.attempted', 0),
+          safe(player, 'shootingStats.threePointJumpers.made', 0),
+          safe(player, 'shootingStats.threePointJumpers.pct', 0)
         ]);
       });
       
