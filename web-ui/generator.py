@@ -42,6 +42,15 @@ except ImportError:
     NET_RATING_SCRAPER_AVAILABLE = False
     print("Warning: NET rating scraper not available")
 
+# Import coach history scraper
+try:
+    from coach_history import get_coach_history
+    COACH_HISTORY_SCRAPER_AVAILABLE = True
+    print("[GENERATOR] Coach history scraper import: OK")
+except ImportError:
+    COACH_HISTORY_SCRAPER_AVAILABLE = False
+    print("Warning: Coach history scraper not available")
+
 # Import helper functions - we'll need to import from a shared location
 # For now, we'll import from one of the existing generators
 # In production, these should be in a shared utilities module
@@ -593,6 +602,39 @@ def generate_team_data(team_name, season, progress_callback=None):
             # Don't fail the entire generation if NET scraping fails
     else:
         print(f"[GENERATOR] INFO: NET rating scraper not available, skipping NET rating")
+    
+    # Fetch coach history from Sports Reference (optional)
+    if COACH_HISTORY_SCRAPER_AVAILABLE:
+        if progress_callback:
+            progress_callback['message'] = 'Fetching coach history...'
+        print(f"[GENERATOR] Searching for coach history for {team_name}...")
+        try:
+            sports_ref_slug = get_sports_ref_slug(team_slug)
+            print(f"[GENERATOR] Using Sports Reference slug: {sports_ref_slug}")
+            coach_history = get_coach_history(sports_ref_slug, years=6)
+            if coach_history and len(coach_history) > 0:
+                team_data['coachHistory'] = {
+                    'seasons': coach_history,
+                    'source': 'sports-reference.com',
+                    'url': f"https://www.sports-reference.com/cbb/schools/{sports_ref_slug}/men/"
+                }
+                print(f"[GENERATOR] Found coach history for {team_name}")
+                print(f"[GENERATOR] Retrieved {len(coach_history)} complete seasons (excluding current incomplete season)")
+                # Log first and last seasons
+                if len(coach_history) > 0:
+                    first = coach_history[0]
+                    last = coach_history[-1]
+                    print(f"[GENERATOR] Seasons: {first['season']} to {last['season']}")
+                    print(f"[GENERATOR] Current coach: {first['coach']}")
+            else:
+                print(f"[GENERATOR] WARNING: Coach history returned but no seasons found")
+        except Exception as e:
+            print(f"[GENERATOR] WARNING: Failed to fetch coach history for {team_name}: {e}")
+            import traceback
+            traceback.print_exc()
+            # Don't fail the entire generation if coach history scraping fails
+    else:
+        print(f"[GENERATOR] INFO: Coach history scraper not available, skipping coach history")
     
     # Create lookup for player season stats (for rankings)
     player_stats_lookup = {}

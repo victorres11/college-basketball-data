@@ -56,6 +56,33 @@ function GET_TEAM_META(url) {
         }
       }
       
+      // Add coach history if available (append to end)
+      if (data.coachHistory && data.coachHistory.seasons && data.coachHistory.seasons.length > 0) {
+        table.push([""]);
+        table.push(["=== COACH HISTORY (Last 6 Complete Seasons) ==="]);
+        table.push(["Season", "Conference", "Overall W-L", "Conf W-L", "NCAA Tournament", "Seed", "Coach"]);
+        
+        data.coachHistory.seasons.forEach(function(season) {
+          table.push([
+            season.season || "",
+            season.conference || "",
+            season.overallWL || "",
+            season.conferenceWL || "",
+            season.ncaaTournament || "",
+            season.seed || "",
+            season.coach || ""
+          ]);
+        });
+        
+        if (data.coachHistory.source) {
+          table.push([""]);
+          table.push(["Source", data.coachHistory.source]);
+        }
+        if (data.coachHistory.url) {
+          table.push(["URL", data.coachHistory.url]);
+        }
+      }
+      
       return table;
     } catch (e) {
       return [["Error: " + e.message]];
