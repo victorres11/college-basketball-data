@@ -23,8 +23,8 @@ except ImportError:
     print("Warning: FoxSports roster cache not available")
 
 # Import quadrant scraper
-quadrants_path = os.path.join(project_root, 'quadrants')
-sys.path.insert(0, quadrants_path)
+misc_data_sources_path = os.path.join(project_root, 'misc_data_sources')
+sys.path.insert(0, os.path.join(misc_data_sources_path, 'quadrants', 'scripts'))
 try:
     from quadrant_wins import get_quadrant_data
     QUADRANT_SCRAPER_AVAILABLE = True
@@ -34,6 +34,7 @@ except ImportError:
     print("Warning: Quadrant scraper not available")
 
 # Import NET rating scraper
+sys.path.insert(0, os.path.join(misc_data_sources_path, 'quadrants', 'scripts'))
 try:
     from net_rating import get_net_rating
     NET_RATING_SCRAPER_AVAILABLE = True
@@ -43,6 +44,7 @@ except ImportError:
     print("Warning: NET rating scraper not available")
 
 # Import coach history scraper
+sys.path.insert(0, os.path.join(misc_data_sources_path, 'coaching_history', 'scripts'))
 try:
     from coach_history import get_coach_history
     COACH_HISTORY_SCRAPER_AVAILABLE = True
@@ -50,6 +52,16 @@ try:
 except ImportError:
     COACH_HISTORY_SCRAPER_AVAILABLE = False
     print("Warning: Coach history scraper not available")
+
+# Import KenPom scraper
+sys.path.insert(0, os.path.join(misc_data_sources_path, 'kenpom', 'scripts'))
+try:
+    from kenpom_data import get_kenpom_team_data
+    KENPOM_SCRAPER_AVAILABLE = True
+    print("[GENERATOR] KenPom scraper import: OK")
+except ImportError as e:
+    KENPOM_SCRAPER_AVAILABLE = False
+    print(f"Warning: KenPom scraper not available: {e}")
 
 # Import helper functions - we'll need to import from a shared location
 # For now, we'll import from one of the existing generators
@@ -214,7 +226,7 @@ def generate_team_data(team_name, season, progress_callback=None):
         """Convert team name to Sports Reference URL slug."""
         # Load comprehensive mapping from auto-generated file
         import os
-        mapping_file = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'quadrants', 'sports_ref_team_mapping.json')
+        mapping_file = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'misc_data_sources', 'coaching_history', 'mappings', 'sports_ref_team_mapping.json')
         sports_ref_mapping = {}
         
         if os.path.exists(mapping_file):
@@ -772,6 +784,61 @@ def generate_team_data(team_name, season, progress_callback=None):
     else:
         print(f"[GENERATOR] INFO: Coach history scraper not available, skipping coach history")
         add_status('Coach History', 'skipped', 'Scraper not available')
+    
+    # Fetch KenPom data (optional)
+    if KENPOM_SCRAPER_AVAILABLE:
+        if progress_callback:
+            progress_callback['message'] = 'Fetching KenPom data...'
+        print(f"[GENERATOR] Fetching KenPom data for {team_name}...")
+        try:
+            # Use team_name for KenPom lookup (it handles normalization internally)
+            kenpom_result = get_kenpom_team_data(team_name)
+            
+            if kenpom_result and 'data' in kenpom_result:
+                kenpom_data = kenpom_result['data']
+                structured_report = kenpom_data.get('report_table_structured', {})
+                
+                if structured_report:
+                    team_data['kenpom'] = {
+                        'reportTable': structured_report,
+                        'source': 'kenpom.com',
+                        'url': kenpom_result.get('url'),
+                        'teamName': kenpom_result.get('team_name', team_name)
+                    }
+                    
+                    # Log key metrics
+                    if 'Adj. Efficiency' in structured_report:
+                        adj_eff = structured_report['Adj. Efficiency']
+                        offense = adj_eff.get('offense', 'N/A')
+                        defense = adj_eff.get('defense', 'N/A')
+                        offense_rank = adj_eff.get('offense_ranking', 'N/A')
+                        defense_rank = adj_eff.get('defense_ranking', 'N/A')
+                        print(f"[GENERATOR] KenPom Adj. Efficiency - Offense: {offense} (rank {offense_rank}), Defense: {defense} (rank {defense_rank})")
+                    
+                    if 'Adj. Tempo' in structured_report:
+                        tempo = structured_report['Adj. Tempo']
+                        combined = tempo.get('combined', 'N/A')
+                        tempo_rank = tempo.get('ranking', 'N/A')
+                        print(f"[GENERATOR] KenPom Adj. Tempo: {combined} (rank {tempo_rank})")
+                    
+                    categories_count = len([k for k in structured_report.keys() if structured_report[k]])
+                    print(f"[GENERATOR] Successfully loaded KenPom data: {categories_count} categories")
+                    add_status('KenPom Data', 'success', f'Retrieved {categories_count} categories')
+                else:
+                    print(f"[GENERATOR] WARNING: KenPom data returned but no report table found")
+                    add_status('KenPom Data', 'failed', 'No report table found')
+            else:
+                print(f"[GENERATOR] WARNING: KenPom data returned but no structured data found")
+                add_status('KenPom Data', 'failed', 'No structured data found')
+        except Exception as e:
+            print(f"[GENERATOR] WARNING: Failed to fetch KenPom data for {team_name}: {e}")
+            import traceback
+            traceback.print_exc()
+            add_status('KenPom Data', 'failed', str(e))
+            # Don't fail the entire generation if KenPom scraping fails
+    else:
+        print(f"[GENERATOR] INFO: KenPom scraper not available, skipping KenPom data")
+        add_status('KenPom Data', 'skipped', 'Scraper not available')
     
     # Create lookup for player season stats (for rankings)
     player_stats_lookup = {}

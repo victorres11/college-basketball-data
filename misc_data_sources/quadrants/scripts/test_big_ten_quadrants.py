@@ -223,7 +223,9 @@ if __name__ == '__main__':
     results = test_all_big_ten()
     
     # Save results to JSON
-    with open('quadrant_test_results.json', 'w') as f:
+    import os
+    output_file = os.path.join(os.path.dirname(__file__), '..', 'test_data', 'quadrant_test_results.json')
+    with open(output_file, 'w') as f:
         json.dump(results, f, indent=2)
-    print("\nResults saved to quadrant_test_results.json")
+    print(f"\nResults saved to {output_file}")
 

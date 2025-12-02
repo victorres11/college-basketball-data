@@ -862,23 +862,27 @@ function GET_TEAM_META(url) {
       if (!player) return "Player not found";
       if (!player.previousSeasons || player.previousSeasons.length === 0) return "-";
       
-      // Get most recent previous season (last element in array)
-      var prevSeason = player.previousSeasons[player.previousSeasons.length - 1];
+      // Get most recent previous season by finding the one with the highest season year
+      // Sort by season year descending and take the first one
+      var sortedSeasons = player.previousSeasons.slice().sort(function(a, b) {
+        return (b.season || 0) - (a.season || 0);
+      });
+      var prevSeason = sortedSeasons[0];
       var stats = prevSeason.seasonStats;
       
       // Format school name to uppercase
       var school = prevSeason.team.toUpperCase();
       
       // Get values with safe defaults
-      var gamesStarted = prevSeason.gamesStarted || 0;
+      var games = prevSeason.games || 0;
       var ppg = stats.pointsPerGame || 0;  // Changed from stats.ppg
       var rpg = stats.reboundsPerGame || 0;  // Changed from stats.rpg
       var threePct = stats.threePointFieldGoals ? stats.threePointFieldGoals.pct || 0 : 0;  // Changed from .percentage
       var ftPct = stats.freeThrows ? stats.freeThrows.pct || 0 : 0;  // Changed from .percentage
       
-      // Format: {School/team} {games_started}g, {season_avg_points}p, {season_avg_rebounds}r, {3p_percentage}% 3p, {ft_percentage}% FT
+      // Format: {School/team} {games}g, {season_avg_points}p, {season_avg_rebounds}r, {3p_percentage}% 3p, {ft_percentage}% FT
       var summary = school + " " +
-                    gamesStarted + "g, " +
+                    games + "g, " +
                     ppg + "p, " +
                     rpg + "r, " +
                     threePct + "% 3P, " +
@@ -1296,4 +1300,170 @@ function GET_TEAM_META(url) {
       [""],
       ["If you see this, the library is working correctly!"]
     ];
+  }
+  
+  
+  // ========================================
+  // CATEGORY: KENPOM DATA
+  // ========================================
+  
+  // Get full KenPom report table
+  function GET_KENPOM_REPORT_TABLE(url) {
+    try {
+      var response = UrlFetchApp.fetch(url);
+      var data = JSON.parse(response.getContentText());
+      
+      // Check if KenPom data exists
+      if (!data.kenpom || !data.kenpom.reportTable) {
+        return [["KenPom data not available"], ["Data may not have been generated with KenPom information"]];
+      }
+      
+      var reportTable = data.kenpom.reportTable;
+      var table = [
+        ["=== KENPOM REPORT TABLE ==="],
+        [""],
+        ["Category", "Offense", "Offense Rank", "Defense", "Defense Rank", "D-I Avg"]
+      ];
+      
+      // Process each category
+      for (var category in reportTable) {
+        var categoryData = reportTable[category];
+        
+        // Handle Adj. Tempo specially (has combined instead of offense/defense)
+        if (category === "Adj. Tempo") {
+          var combined = categoryData.combined || "";
+          var ranking = categoryData.ranking !== null ? categoryData.ranking : "";
+          var d1Avg = categoryData.d1_avg || "";
+          
+          table.push([
+            category,
+            combined,
+            ranking,
+            "", // No defense for tempo
+            "", // No defense rank
+            d1Avg
+          ]);
+        } else {
+          // Standard categories with offense/defense
+          var offense = categoryData.offense || "";
+          var offenseRank = categoryData.offense_ranking !== null ? categoryData.offense_ranking : "";
+          var defense = categoryData.defense || "";
+          var defenseRank = categoryData.defense_ranking !== null ? categoryData.defense_ranking : "";
+          var d1Avg = categoryData.d1_avg || "";
+          
+          // Skip empty categories (section headers)
+          if (!offense && !defense && !d1Avg) {
+            continue;
+          }
+          
+          table.push([
+            category,
+            offense,
+            offenseRank,
+            defense,
+            defenseRank,
+            d1Avg
+          ]);
+        }
+      }
+      
+      return table;
+    } catch (e) {
+      return [["Error: " + e.message]];
+    }
+  }
+  
+  // Get specific KenPom category
+  function GET_KENPOM_CATEGORY(url, categoryName) {
+    try {
+      var response = UrlFetchApp.fetch(url);
+      var data = JSON.parse(response.getContentText());
+      
+      if (!data.kenpom || !data.kenpom.reportTable) {
+        return [["KenPom data not available"]];
+      }
+      
+      var reportTable = data.kenpom.reportTable;
+      var categoryData = reportTable[categoryName];
+      
+      if (!categoryData) {
+        return [["Category not found: " + categoryName]];
+      }
+      
+      var table = [
+        ["=== " + categoryName.toUpperCase() + " ==="],
+        [""]
+      ];
+      
+      // Handle Adj. Tempo specially
+      if (categoryName === "Adj. Tempo") {
+        table.push(["Combined", categoryData.combined || "N/A"]);
+        table.push(["Ranking", categoryData.ranking !== null ? categoryData.ranking : "N/A"]);
+        table.push(["D-I Avg", categoryData.d1_avg || "N/A"]);
+      } else {
+        table.push(["Offense", categoryData.offense || "N/A"]);
+        table.push(["Offense Ranking", categoryData.offense_ranking !== null ? categoryData.offense_ranking : "N/A"]);
+        table.push(["Defense", categoryData.defense || "N/A"]);
+        table.push(["Defense Ranking", categoryData.defense_ranking !== null ? categoryData.defense_ranking : "N/A"]);
+        table.push(["D-I Avg", categoryData.d1_avg || "N/A"]);
+      }
+      
+      return table;
+    } catch (e) {
+      return [["Error: " + e.message]];
+    }
+  }
+  
+  // Get KenPom Adj. Efficiency (most commonly requested)
+  function GET_KENPOM_ADJ_EFFICIENCY(url) {
+    return GET_KENPOM_CATEGORY(url, "Adj. Efficiency");
+  }
+  
+  // Get KenPom Adj. Tempo
+  function GET_KENPOM_ADJ_TEMPO(url) {
+    return GET_KENPOM_CATEGORY(url, "Adj. Tempo");
+  }
+  
+  // Get KenPom Four Factors
+  function GET_KENPOM_FOUR_FACTORS(url) {
+    try {
+      var response = UrlFetchApp.fetch(url);
+      var data = JSON.parse(response.getContentText());
+      
+      if (!data.kenpom || !data.kenpom.reportTable) {
+        return [["KenPom data not available"]];
+      }
+      
+      var reportTable = data.kenpom.reportTable;
+      var fourFactors = [
+        "Effective FG%",
+        "Turnover %",
+        "Off. Reb. %",
+        "FTA/FGA"
+      ];
+      
+      var table = [
+        ["=== FOUR FACTORS ==="],
+        [""],
+        ["Category", "Offense", "Offense Rank", "Defense", "Defense Rank", "D-I Avg"]
+      ];
+      
+      fourFactors.forEach(function(category) {
+        var categoryData = reportTable[category];
+        if (categoryData) {
+          table.push([
+            category,
+            categoryData.offense || "",
+            categoryData.offense_ranking !== null ? categoryData.offense_ranking : "",
+            categoryData.defense || "",
+            categoryData.defense_ranking !== null ? categoryData.defense_ranking : "",
+            categoryData.d1_avg || ""
+          ]);
+        }
+      });
+      
+      return table;
+    } catch (e) {
+      return [["Error: " + e.message]];
+    }
   }

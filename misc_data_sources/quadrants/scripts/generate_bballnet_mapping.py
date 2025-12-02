@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """
-Scrape Sports Reference to generate a comprehensive team slug mapping.
+Scrape bballnet.com to generate a comprehensive team slug mapping.
 
-This script fetches the schools index page and extracts all team URLs to create
-a mapping from various team name formats to the correct Sports Reference slug.
+This script fetches the main page and extracts all team URLs to create
+a mapping from various team name formats to the correct bballnet.com slug.
 """
 
 import requests
 from bs4 import BeautifulSoup
 import json
 import re
+import os
 from collections import defaultdict
 
 def normalize_team_name(name):
@@ -22,24 +23,20 @@ def normalize_team_name(name):
     return name
 
 def extract_team_slug_from_url(url):
-    """Extract team slug from Sports Reference URL"""
-    # URL format: /cbb/schools/michigan-state/men/
-    match = re.search(r'/cbb/schools/([^/]+)/', url)
+    """Extract team slug from bballnet.com URL"""
+    # URL format: /teams/michigan-state
+    match = re.search(r'/teams/([^/"]+)', url)
     if match:
         return match.group(1)
     return None
 
-def scrape_sports_ref_teams():
-    """Scrape all team URLs from Sports Reference schools page"""
-    url = "https://www.sports-reference.com/cbb/schools/"
+def scrape_bballnet_teams():
+    """Scrape all team URLs from bballnet.com main page"""
+    url = "https://bballnet.com/"
     
     print(f"Fetching {url}...")
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-    }
-    
     try:
-        response = requests.get(url, headers=headers, timeout=15)
+        response = requests.get(url, timeout=15)
         response.raise_for_status()
     except Exception as e:
         print(f"Error fetching page: {e}")
@@ -47,9 +44,9 @@ def scrape_sports_ref_teams():
     
     soup = BeautifulSoup(response.text, 'html.parser')
     
-    # Find all team links - they're in <a> tags with href="/cbb/schools/.../men/"
+    # Find all team links - they're in <a> tags with href="/teams/..."
     team_mappings = {}
-    team_links = soup.find_all('a', href=re.compile(r'/cbb/schools/[^/]+/men/'))
+    team_links = soup.find_all('a', href=re.compile(r'/teams/'))
     
     print(f"Found {len(team_links)} team links")
     
@@ -77,61 +74,23 @@ def scrape_sports_ref_teams():
             if normalized and normalized != team_name.lower():
                 team_mappings[normalized] = slug
             
-            # 5. Common abbreviations and variations
+            # 5. Common abbreviations
             if 'Michigan St.' in team_name or 'Michigan State' in team_name:
                 team_mappings['michigan_state'] = slug
                 team_mappings['michigan-state'] = slug
                 team_mappings['michigan state'] = slug
-                team_mappings['michigan st'] = slug
-                team_mappings['michigan st.'] = slug
             if 'Ohio St.' in team_name or 'Ohio State' in team_name:
                 team_mappings['ohio_state'] = slug
                 team_mappings['ohio-state'] = slug
                 team_mappings['ohio state'] = slug
-                team_mappings['ohio st'] = slug
-                team_mappings['ohio st.'] = slug
             if 'Penn St.' in team_name or 'Penn State' in team_name:
                 team_mappings['penn_state'] = slug
                 team_mappings['penn-state'] = slug
                 team_mappings['penn state'] = slug
-                team_mappings['penn st'] = slug
-                team_mappings['penn st.'] = slug
             if 'Iowa St.' in team_name or 'Iowa State' in team_name:
                 team_mappings['iowa_state'] = slug
                 team_mappings['iowa-state'] = slug
                 team_mappings['iowa state'] = slug
-                team_mappings['iowa st'] = slug
-                team_mappings['iowa st.'] = slug
-            if 'Southern California' in team_name or 'USC' in team_name:
-                team_mappings['usc'] = slug
-                team_mappings['southern california'] = slug
-                team_mappings['southern-california'] = slug
-                team_mappings['southern_california'] = slug
-            if 'UConn' in team_name or 'Connecticut' in team_name:
-                team_mappings['uconn'] = slug
-                team_mappings['connecticut'] = slug
-            if 'LSU' in team_name or 'Louisiana State' in team_name:
-                team_mappings['lsu'] = slug
-                team_mappings['louisiana state'] = slug
-                team_mappings['louisiana-state'] = slug
-                team_mappings['louisiana_state'] = slug
-            if 'BYU' in team_name or 'Brigham Young' in team_name:
-                team_mappings['byu'] = slug
-                team_mappings['brigham young'] = slug
-                team_mappings['brigham-young'] = slug
-                team_mappings['brigham_young'] = slug
-            if 'North Carolina' in team_name and 'State' not in team_name:
-                team_mappings['unc'] = slug
-                team_mappings['north carolina'] = slug
-                team_mappings['north-carolina'] = slug
-                team_mappings['north_carolina'] = slug
-            if 'NC State' in team_name or 'North Carolina State' in team_name:
-                team_mappings['nc state'] = slug
-                team_mappings['nc-state'] = slug
-                team_mappings['nc_state'] = slug
-                team_mappings['north carolina state'] = slug
-                team_mappings['north-carolina-state'] = slug
-                team_mappings['north_carolina_state'] = slug
     
     # Remove duplicates and sort
     unique_mappings = {}
@@ -144,10 +103,10 @@ def scrape_sports_ref_teams():
 def main():
     """Main function to generate and save the mapping"""
     print("=" * 60)
-    print("Sports Reference Team Slug Mapping Generator")
+    print("bballnet.com Team Slug Mapping Generator")
     print("=" * 60)
     
-    mappings = scrape_sports_ref_teams()
+    mappings = scrape_bballnet_teams()
     
     if not mappings:
         print("Failed to generate mappings")
@@ -156,16 +115,16 @@ def main():
     # Create the output structure
     output = {
         "team_slug_mapping": mappings,
-        "notes": "Auto-generated mapping from Sports Reference. Maps various team name formats to the correct Sports Reference slug. Generated by scraping the schools index page.",
+        "notes": "Auto-generated mapping from bballnet.com. Maps various team name formats to the correct bballnet.com slug. Generated by scraping the main page.",
         "generated_count": len(mappings),
-        "source": "https://www.sports-reference.com/cbb/schools/"
+        "source": "https://bballnet.com/"
     }
     
     # Save to file
-    output_file = "quadrants/sports_ref_team_mapping.json"
+    output_file = os.path.join(os.path.dirname(__file__), '..', 'mappings', 'bballnet_team_mapping.json')
     with open(output_file, 'w') as f:
         json.dump(output, f, indent=2)
-    
+
     print(f"\n✅ Mapping saved to {output_file}")
     print(f"   Total mappings: {len(mappings)}")
     
@@ -180,17 +139,12 @@ def main():
     common_teams = {
         'michigan-state': 'Michigan State',
         'michigan_state': 'Michigan State (underscore)',
-        'michigan state': 'Michigan State (space)',
         'oregon': 'Oregon',
         'ucla': 'UCLA',
         'usc': 'USC',
         'southern-california': 'Southern California',
         'ohio-state': 'Ohio State',
-        'ohio_state': 'Ohio State (underscore)',
-        'uconn': 'UConn',
-        'connecticut': 'Connecticut',
-        'nc-state': 'NC State',
-        'north-carolina': 'North Carolina'
+        'ohio_state': 'Ohio State (underscore)'
     }
     
     for slug, description in common_teams.items():

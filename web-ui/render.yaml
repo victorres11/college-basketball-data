@@ -17,4 +17,8 @@ services:
         sync: false
       - key: AWS_REGION
         value: us-east-1
+      - key: KENPOM_USERNAME
+        sync: false
+      - key: KENPOM_PASSWORD
+        sync: false
 

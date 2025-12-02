@@ -8,8 +8,8 @@ import json
 import os
 
 # Load team slug mapping (prefer comprehensive auto-generated mapping)
-COMPREHENSIVE_MAPPING_FILE = os.path.join(os.path.dirname(__file__), 'bballnet_team_mapping.json')
-LEGACY_MAPPING_FILE = os.path.join(os.path.dirname(__file__), 'team_slug_mapping.json')
+COMPREHENSIVE_MAPPING_FILE = os.path.join(os.path.dirname(__file__), '..', 'mappings', 'bballnet_team_mapping.json')
+LEGACY_MAPPING_FILE = os.path.join(os.path.dirname(__file__), '..', 'mappings', 'team_slug_mapping.json')
 
 TEAM_SLUG_MAPPING = {}
 

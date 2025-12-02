@@ -56,3 +56,11 @@ output/*.pdf
 # Google Apps Script clasp
 .clasp.json
 .appsscript.json
+
+# Credentials files (keep .example files, ignore actual credentials)
+**/kenpom_credentials.json
+**/credentials.json
+
+# KenPom test output files
+misc_data_sources/kenpom/output/*.html
+misc_data_sources/kenpom/output/*_structured.json
