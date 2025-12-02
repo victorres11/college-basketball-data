@@ -194,21 +194,24 @@ def generate_team_data(team_name, season, progress_callback=None):
     # Helper function to get Sports Reference slug
     def get_sports_ref_slug(team_name_lower):
         """Convert team name to Sports Reference URL slug."""
-        # Most teams use the same slug, but some need special handling
-        sports_ref_mapping = {
-            'michigan state': 'michigan-state',
-            'michigan_state': 'michigan-state',  # Handle underscore format
-            'ohio state': 'ohio-state',
-            'ohio_state': 'ohio-state',  # Handle underscore format
-            'penn state': 'penn-state',
-            'penn_state': 'penn-state',  # Handle underscore format
-            'usc': 'southern-california',
-            'southern california': 'southern-california',
-        }
-        # First check explicit mapping
+        # Load comprehensive mapping from auto-generated file
+        import os
+        mapping_file = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'quadrants', 'sports_ref_team_mapping.json')
+        sports_ref_mapping = {}
+        
+        if os.path.exists(mapping_file):
+            try:
+                with open(mapping_file, 'r') as f:
+                    mapping_data = json.load(f)
+                    sports_ref_mapping = mapping_data.get('team_slug_mapping', {})
+            except Exception as e:
+                print(f"[GENERATOR] Warning: Could not load Sports Reference mapping: {e}")
+        
+        # First check comprehensive mapping
         if team_name_lower in sports_ref_mapping:
             return sports_ref_mapping[team_name_lower]
-        # If not in mapping, convert underscores to hyphens (Sports Reference uses hyphens)
+        
+        # Fallback: convert underscores to hyphens (Sports Reference uses hyphens)
         # e.g., "michigan_state" -> "michigan-state"
         return team_name_lower.replace('_', '-')
     
