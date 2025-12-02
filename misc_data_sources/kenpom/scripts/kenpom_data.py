@@ -17,8 +17,9 @@ def load_credentials():
     Load kenpom.com credentials from environment variables (production) or JSON file (local).
     
     Priority:
-    1. Environment variables (KENPOM_USERNAME, KENPOM_PASSWORD) - for production
-    2. JSON file (kenpom_credentials.json) - for local development
+    1. Cookie environment variable (KENPOM_PHPSESSID) - for production (bypasses login)
+    2. Username/password environment variables (KENPOM_USERNAME, KENPOM_PASSWORD) - for production
+    3. JSON file (kenpom_credentials.json) - for local development
     
     Expected format in kenpom_credentials.json:
     {
@@ -26,14 +27,26 @@ def load_credentials():
         "password": "your_password"
     }
     
-    OR (legacy format, still supported):
+    OR (cookie-based, recommended if login is blocked):
     {
         "cookies": {
             "PHPSESSID": "your_session_id"
         }
     }
     """
-    # First, try environment variables (for production)
+    # First, try cookie-based auth (bypasses login, avoids 403 errors)
+    phpsessid = os.environ.get('KENPOM_PHPSESSID')
+    if phpsessid:
+        phpsessid = phpsessid.strip()
+        if phpsessid:
+            print("[KENPOM] Using cookie-based authentication from environment variable")
+            return {
+                'cookies': {
+                    'PHPSESSID': phpsessid
+                }
+            }
+    
+    # Second, try username/password environment variables
     username = os.environ.get('KENPOM_USERNAME')
     password = os.environ.get('KENPOM_PASSWORD')
     
