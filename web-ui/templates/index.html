@@ -44,9 +44,14 @@
                 <div id="progress-bar" class="progress-bar"></div>
             </div>
             <div id="progress-text" class="progress-text">0%</div>
-            <p style="margin-top: 10px; color: #666; font-size: 0.9em; font-style: italic;">
-                ⏱️ Generation typically takes 2-3 minutes. Please keep this page open while processing.
-            </p>
+            <div style="display: flex; gap: 10px; margin-top: 15px; align-items: center;">
+                <button id="cancel-btn" onclick="cancelGeneration()" class="btn-cancel" style="display: none;">
+                    ❌ Cancel Generation
+                </button>
+                <p style="margin-top: 0; color: #666; font-size: 0.9em; font-style: italic; flex: 1;">
+                    ⏱️ Generation typically takes 2-3 minutes. Please keep this page open while processing.
+                </p>
+            </div>
             
             <!-- Data Request Status Table -->
             <div id="status-table-container" style="margin-top: 20px; display: none;">

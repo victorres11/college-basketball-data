@@ -203,7 +203,8 @@ def generate_data():
             'message': 'Job queued...',
             'url': None,
             'error': None,
-            'gameDates': None
+            'gameDates': None,
+            'cancelled': False  # Cancellation flag
         }
         
         # Start background thread
@@ -228,15 +229,52 @@ def get_status(job_id):
     return jsonify(jobs[job_id])
 
 
+@app.route('/api/cancel/<job_id>', methods=['POST'])
+def cancel_job(job_id):
+    """Cancel a running job"""
+    if job_id not in jobs:
+        return jsonify({'error': 'Job not found'}), 404
+    
+    job = jobs[job_id]
+    
+    # Only allow cancellation if job is queued or running
+    if job['status'] in ['queued', 'running']:
+        job['cancelled'] = True
+        job['status'] = 'cancelled'
+        job['message'] = 'Generation cancelled by user'
+        job['progress'] = 0
+        return jsonify({'success': True, 'message': 'Job cancelled'})
+    else:
+        return jsonify({'error': 'Job cannot be cancelled (already completed or failed)'}), 400
+
+
 def run_generation(job_id, team_name, season):
     """Background job runner"""
     try:
+        # Check if cancelled before starting
+        if jobs[job_id].get('cancelled', False):
+            jobs[job_id]['status'] = 'cancelled'
+            jobs[job_id]['message'] = 'Generation cancelled by user'
+            return
+        
         jobs[job_id]['status'] = 'running'
         jobs[job_id]['message'] = 'Starting data generation...'
         jobs[job_id]['progress'] = 0
         
+        # Check for cancellation before generating
+        if jobs[job_id].get('cancelled', False):
+            jobs[job_id]['status'] = 'cancelled'
+            jobs[job_id]['message'] = 'Generation cancelled by user'
+            return
+        
         # Generate data (with progress updates)
         output_file = generate_team_data(team_name, season, jobs[job_id])
+        
+        # Check for cancellation after generation
+        if jobs[job_id].get('cancelled', False):
+            jobs[job_id]['status'] = 'cancelled'
+            jobs[job_id]['message'] = 'Generation cancelled by user'
+            return
         
         # Upload to S3
         jobs[job_id]['message'] = 'Uploading to S3...'
@@ -249,6 +287,12 @@ def run_generation(job_id, team_name, season):
         
         s3_url = upload_to_s3(output_file, team_name, season)
         
+        # Final cancellation check
+        if jobs[job_id].get('cancelled', False):
+            jobs[job_id]['status'] = 'cancelled'
+            jobs[job_id]['message'] = 'Generation cancelled by user'
+            return
+        
         jobs[job_id]['status'] = 'completed'
         jobs[job_id]['url'] = s3_url
         jobs[job_id]['message'] = 'Complete!'
@@ -258,10 +302,12 @@ def run_generation(job_id, team_name, season):
         jobs[job_id]['gameDates'] = jobs[job_id].get('gameDates', [])
         
     except Exception as e:
-        jobs[job_id]['status'] = 'failed'
-        jobs[job_id]['error'] = str(e)
-        jobs[job_id]['message'] = f'Error: {str(e)}'
-        jobs[job_id]['progress'] = 0
+        # Don't set error if it was cancelled
+        if not jobs[job_id].get('cancelled', False):
+            jobs[job_id]['status'] = 'failed'
+            jobs[job_id]['error'] = str(e)
+            jobs[job_id]['message'] = f'Error: {str(e)}'
+            jobs[job_id]['progress'] = 0
 
 
 if __name__ == '__main__':

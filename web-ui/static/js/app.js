@@ -1,5 +1,6 @@
 let teams = [];
 let selectedTeam = null;
+let currentJobId = null;  // Track current job for cancellation
 
 // Load teams on page load
 window.addEventListener('DOMContentLoaded', () => {
@@ -118,8 +119,13 @@ function generateData() {
     if (error) error.style.display = 'none';
     const progressBar = document.getElementById('progress-bar');
     const progressText = document.getElementById('progress-text');
+    const cancelBtn = document.getElementById('cancel-btn');
     if (progressBar) progressBar.style.width = '0%';
     if (progressText) progressText.textContent = '0%';
+    if (cancelBtn) {
+        cancelBtn.style.display = 'block';
+        cancelBtn.disabled = false;
+    }
     
     // Start generation
     fetch('/api/generate', {
@@ -135,14 +141,17 @@ function generateData() {
         if (data.error) {
             showError(data.error);
             btn.disabled = false;
+            if (cancelBtn) cancelBtn.style.display = 'none';
             return;
         }
         const jobId = data.job_id;
+        currentJobId = jobId;  // Store for cancellation
         pollStatus(jobId);
     })
     .catch(err => {
         showError('Failed to start generation: ' + err.message);
         btn.disabled = false;
+        if (cancelBtn) cancelBtn.style.display = 'none';
     });
 }
 
@@ -202,13 +211,28 @@ function pollStatus(jobId) {
                     isCompleted = true;
                     showResult(data.url, data.gameDates || []);
                     const btn = document.getElementById('generate-btn');
+                    const cancelBtn = document.getElementById('cancel-btn');
                     if (btn) btn.disabled = false;
+                    if (cancelBtn) cancelBtn.style.display = 'none';
+                    currentJobId = null;
                 } else if (data.status === 'failed') {
                     clearInterval(interval);
                     isCompleted = true;
                     showError(data.error || 'Generation failed');
                     const btn = document.getElementById('generate-btn');
+                    const cancelBtn = document.getElementById('cancel-btn');
                     if (btn) btn.disabled = false;
+                    if (cancelBtn) cancelBtn.style.display = 'none';
+                    currentJobId = null;
+                } else if (data.status === 'cancelled') {
+                    clearInterval(interval);
+                    isCompleted = true;
+                    showError('Generation cancelled by user');
+                    const btn = document.getElementById('generate-btn');
+                    const cancelBtn = document.getElementById('cancel-btn');
+                    if (btn) btn.disabled = false;
+                    if (cancelBtn) cancelBtn.style.display = 'none';
+                    currentJobId = null;
                 }
             })
             .catch(err => {
@@ -219,7 +243,10 @@ function pollStatus(jobId) {
                     const errorMsg = err.message || String(err);
                     showError('Failed to check status: ' + errorMsg);
                     const btn = document.getElementById('generate-btn');
+                    const cancelBtn = document.getElementById('cancel-btn');
                     if (btn) btn.disabled = false;
+                    if (cancelBtn) cancelBtn.style.display = 'none';
+                    currentJobId = null;
                 }
             });
     }, 2000); // Poll every 2 seconds
@@ -285,10 +312,14 @@ function showError(message) {
     const result = document.getElementById('result');
     const error = document.getElementById('error');
     const errorMessage = document.getElementById('error-message');
+    const cancelBtn = document.getElementById('cancel-btn');
+    const btn = document.getElementById('generate-btn');
     
     if (result) result.style.display = 'none';
     if (error) error.style.display = 'block';
     if (errorMessage) errorMessage.textContent = message;
+    if (cancelBtn) cancelBtn.style.display = 'none';
+    if (btn) btn.disabled = false;
 }
 
 function updateStatusTable(statusList) {
@@ -403,6 +434,45 @@ function copyUrlToClipboard() {
         // Fallback for browsers that don't support Clipboard API
         fallbackCopyTextToClipboard(url);
     }
+}
+
+function cancelGeneration() {
+    if (!currentJobId) {
+        console.warn('No active job to cancel');
+        return;
+    }
+    
+    const cancelBtn = document.getElementById('cancel-btn');
+    if (cancelBtn) {
+        cancelBtn.disabled = true;
+        cancelBtn.textContent = 'Cancelling...';
+    }
+    
+    fetch(`/api/cancel/${currentJobId}`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'}
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.error) {
+            alert('Failed to cancel: ' + data.error);
+            if (cancelBtn) {
+                cancelBtn.disabled = false;
+                cancelBtn.textContent = '❌ Cancel Generation';
+            }
+        } else {
+            // Success - the status polling will detect the cancellation
+            console.log('Cancellation requested');
+        }
+    })
+    .catch(err => {
+        console.error('Error cancelling job:', err);
+        alert('Failed to cancel generation: ' + err.message);
+        if (cancelBtn) {
+            cancelBtn.disabled = false;
+            cancelBtn.textContent = '❌ Cancel Generation';
+        }
+    });
 }
 
 function fallbackCopyTextToClipboard(text) {

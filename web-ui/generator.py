@@ -176,12 +176,20 @@ def generate_team_data(team_name, season, progress_callback=None):
     
     Returns:
         Path to generated JSON file
+    
+    Raises:
+        Exception: If generation is cancelled
     """
     # Initialize status tracking
     # Use 'dataStatus' key to avoid conflict with 'status' key (which is 'queued', 'running', etc.)
     if progress_callback is not None:
         if 'dataStatus' not in progress_callback:
             progress_callback['dataStatus'] = []
+    
+    def check_cancelled():
+        """Check if generation has been cancelled"""
+        if progress_callback is not None and progress_callback.get('cancelled', False):
+            raise Exception('Generation cancelled by user')
     
     def add_status(name, status, message=None, details=None):
         """Helper to add status entry"""
@@ -212,11 +220,15 @@ def generate_team_data(team_name, season, progress_callback=None):
         progress_callback['message'] = 'Initializing API...'
         progress_callback['progress'] = 2
     
+    check_cancelled()
+    
     api = CollegeBasketballAPI()
     
     # Add initial delay to help reset rate limit window if there were previous requests
     print(f"[GENERATOR] Initial delay (1s) to help reset rate limit window...")
     time.sleep(1)
+    
+    check_cancelled()
     
     # Team name normalization (lowercase for API)
     team_slug = team_name.lower()
@@ -253,6 +265,8 @@ def generate_team_data(team_name, season, progress_callback=None):
         progress_callback['message'] = 'Fetching game data...'
         progress_callback['progress'] = 3
     
+    check_cancelled()
+    
     # Fetch game data
     print(f"[GENERATOR] Fetching game data for {team_name} ({season})...")
     try:
@@ -261,13 +275,18 @@ def generate_team_data(team_name, season, progress_callback=None):
         print(f"[GENERATOR] Retrieved {count} game records")
         add_status('Game Data', 'success', f'Retrieved {count} game records')
     except Exception as e:
+        check_cancelled()  # Check before reporting error (might be cancellation)
         print(f"[GENERATOR] ERROR: Failed to fetch game data: {e}")
         add_status('Game Data', 'failed', str(e))
         game_data = None
     
+    check_cancelled()
+    
     if progress_callback:
         progress_callback['message'] = 'Fetching roster data...'
         progress_callback['progress'] = 4
+    
+    check_cancelled()
     
     # Fetch roster data
     print(f"[GENERATOR] Fetching roster data for {team_name} ({season})...")
@@ -277,9 +296,12 @@ def generate_team_data(team_name, season, progress_callback=None):
         print(f"[GENERATOR] Retrieved roster data ({player_count} players)")
         add_status('Roster Data', 'success', f'Retrieved {player_count} players')
     except Exception as e:
+        check_cancelled()  # Check before reporting error
         print(f"[GENERATOR] ERROR: Failed to fetch roster data: {e}")
         add_status('Roster Data', 'failed', str(e))
         roster_data = None
+    
+    check_cancelled()
     
     if progress_callback:
         progress_callback['message'] = 'Fetching recruiting data...'
@@ -365,6 +387,8 @@ def generate_team_data(team_name, season, progress_callback=None):
         progress_callback['message'] = 'Calculating conference rankings...'
         progress_callback['progress'] = 9
     
+    check_cancelled()
+    
     # Get conference name from team season stats
     conference_name = None
     if team_season_stats and len(team_season_stats) > 0:
@@ -399,6 +423,8 @@ def generate_team_data(team_name, season, progress_callback=None):
         progress_callback['message'] = 'Fetching all player stats for rankings...'
         progress_callback['progress'] = 10
     
+    check_cancelled()
+    
     # Fetch all conference players for individual player rankings
     print(f"[GENERATOR] WARNING: Fetching ALL player season stats (large API call - no team filter)")
     print(f"[GENERATOR] This is needed for conference player rankings but may trigger rate limits")
@@ -408,9 +434,12 @@ def generate_team_data(team_name, season, progress_callback=None):
         print(f"[GENERATOR] Retrieved {count} total player records")
         add_status('All Player Stats (Rankings)', 'success', f'Retrieved {count} player records')
     except Exception as e:
+        check_cancelled()  # Check before reporting error
         print(f"[GENERATOR] ERROR: Failed to fetch all player stats: {e}")
         add_status('All Player Stats (Rankings)', 'failed', str(e))
         all_conference_players = []
+    
+    check_cancelled()
     
     # Get CBB API teamId for FoxSports cache lookup
     cbb_team_id = None
@@ -517,6 +546,8 @@ def generate_team_data(team_name, season, progress_callback=None):
     if progress_callback:
         progress_callback['message'] = f'Processing {len(all_players_to_process)} players...'
         progress_callback['progress'] = 10  # Start of player processing
+    
+    check_cancelled()
     
     # Get mascot from cached roster if available
     mascot = None
@@ -864,6 +895,10 @@ def generate_team_data(team_name, season, progress_callback=None):
     player_progress_start = 10   # Start player progress at 10%
     
     for idx, player_name_lower in enumerate(sorted(all_players_to_process)):
+        # Check for cancellation periodically (every 5 players to avoid overhead)
+        if idx % 5 == 0:
+            check_cancelled()
+        
         # Get the actual player name (with proper casing) from roster for progress message
         player_roster_data_temp = roster_lookup.get(player_name_lower, {})
         player_name_for_progress = player_roster_data_temp.get('name', player_name_lower.title()) if player_roster_data_temp else player_name_lower.title()
