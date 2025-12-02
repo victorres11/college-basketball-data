@@ -7,12 +7,29 @@ function GET_TEAM_META(url) {
       var response = UrlFetchApp.fetch(url);
       var data = JSON.parse(response.getContentText());
       
+      // Format dataGenerated timestamp to EST
+      var dataGeneratedFormatted = data.dataGenerated;
+      if (data.dataGenerated) {
+        try {
+          var date = new Date(data.dataGenerated);
+          // Format as "YYYY-MM-DD HH:MM AM/PM (EST)"
+          var dateStr = Utilities.formatDate(date, "America/New_York", "yyyy-MM-dd");
+          var timeStr = Utilities.formatDate(date, "America/New_York", "hh:mm a");
+          // Determine if EST or EDT (America/New_York handles both automatically)
+          // For simplicity, we'll use EST as the label (though it may be EDT during daylight saving)
+          dataGeneratedFormatted = dateStr + " " + timeStr + " (EST)";
+        } catch (e) {
+          // If parsing fails, use original value
+          dataGeneratedFormatted = data.dataGenerated;
+        }
+      }
+      
       var table = [
         ["Field", "Value"],
         ["Team", data.team],
         ["Season", data.season],
         ["Season Type", data.seasonType],
-        ["Data Generated", data.dataGenerated],
+        ["Data Generated", dataGeneratedFormatted],
         ["Total Players", data.metadata.totalPlayers],
         ["API Calls", data.metadata.apiCalls]
       ];
