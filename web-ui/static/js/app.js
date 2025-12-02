@@ -195,7 +195,7 @@ function pollStatus(jobId) {
                 }
                 
                 // Update status table if available
-                updateStatusTable(data.status || []);
+                updateStatusTable(data.dataStatus || []);
                 
                 if (data.status === 'completed') {
                     clearInterval(interval);

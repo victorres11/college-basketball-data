@@ -166,9 +166,10 @@ def generate_team_data(team_name, season, progress_callback=None):
         Path to generated JSON file
     """
     # Initialize status tracking
+    # Use 'dataStatus' key to avoid conflict with 'status' key (which is 'queued', 'running', etc.)
     if progress_callback is not None:
-        if 'status' not in progress_callback:
-            progress_callback['status'] = []
+        if 'dataStatus' not in progress_callback:
+            progress_callback['dataStatus'] = []
     
     def add_status(name, status, message=None, details=None):
         """Helper to add status entry"""
@@ -179,10 +180,9 @@ def generate_team_data(team_name, season, progress_callback=None):
                 'message': message or '',
                 'details': details or ''
             }
-            progress_callback['status'].append(status_entry)
-            # Also update the status list in real-time
-            if 'status_list' in progress_callback:
-                progress_callback['status_list'] = progress_callback['status'].copy()
+            if 'dataStatus' not in progress_callback:
+                progress_callback['dataStatus'] = []
+            progress_callback['dataStatus'].append(status_entry)
     # Load API key from config file before initializing API
     config_path = os.path.join(os.path.dirname(__file__), '..', 'config', 'api_config.txt')
     if os.path.exists(config_path):
