@@ -197,12 +197,20 @@ def generate_team_data(team_name, season, progress_callback=None):
         # Most teams use the same slug, but some need special handling
         sports_ref_mapping = {
             'michigan state': 'michigan-state',
+            'michigan_state': 'michigan-state',  # Handle underscore format
             'ohio state': 'ohio-state',
+            'ohio_state': 'ohio-state',  # Handle underscore format
             'penn state': 'penn-state',
+            'penn_state': 'penn-state',  # Handle underscore format
             'usc': 'southern-california',
             'southern california': 'southern-california',
         }
-        return sports_ref_mapping.get(team_name_lower, team_name_lower)
+        # First check explicit mapping
+        if team_name_lower in sports_ref_mapping:
+            return sports_ref_mapping[team_name_lower]
+        # If not in mapping, convert underscores to hyphens (Sports Reference uses hyphens)
+        # e.g., "michigan_state" -> "michigan-state"
+        return team_name_lower.replace('_', '-')
     
     # Calculate date range based on season
     start_date = f'{season-1}-11-04'
