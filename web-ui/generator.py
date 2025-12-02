@@ -8,7 +8,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'scripts'))
 
 from cbb_api_wrapper import CollegeBasketballAPI
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 import time
 
 # Import FoxSports roster cache
@@ -527,7 +527,7 @@ def generate_team_data(team_name, season, progress_callback=None):
         'team': team_name,
         'season': f'{season-1}-{str(season)[2:]}',
         'seasonType': 'Regular',
-        'dataGenerated': datetime.now().isoformat(),
+        'dataGenerated': datetime.now(timezone.utc).isoformat(),
         'players': []
     }
     

@@ -11,7 +11,15 @@ function GET_TEAM_META(url) {
       var dataGeneratedFormatted = data.dataGenerated;
       if (data.dataGenerated) {
         try {
-          var date = new Date(data.dataGenerated);
+          // Parse ISO timestamp (should be in UTC format like "2025-12-02T19:36:45.123456+00:00" or "2025-12-02T19:36:45.123456Z")
+          var isoString = data.dataGenerated;
+          // Ensure it's treated as UTC if no timezone specified
+          if (!isoString.includes('Z') && !isoString.match(/[+-]\d{2}:\d{2}$/)) {
+            // If no timezone info, assume UTC and append Z
+            isoString = isoString + 'Z';
+          }
+          var date = new Date(isoString);
+          
           // Format as "YYYY-MM-DD HH:MM AM/PM (EST)"
           var dateStr = Utilities.formatDate(date, "America/New_York", "yyyy-MM-dd");
           var timeStr = Utilities.formatDate(date, "America/New_York", "hh:mm a");
