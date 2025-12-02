@@ -7,11 +7,20 @@ from bs4 import BeautifulSoup
 import json
 import os
 
-# Load team slug mapping
-MAPPING_FILE = os.path.join(os.path.dirname(__file__), 'team_slug_mapping.json')
+# Load team slug mapping (prefer comprehensive auto-generated mapping)
+COMPREHENSIVE_MAPPING_FILE = os.path.join(os.path.dirname(__file__), 'bballnet_team_mapping.json')
+LEGACY_MAPPING_FILE = os.path.join(os.path.dirname(__file__), 'team_slug_mapping.json')
+
 TEAM_SLUG_MAPPING = {}
-if os.path.exists(MAPPING_FILE):
-    with open(MAPPING_FILE, 'r') as f:
+
+# First try comprehensive auto-generated mapping
+if os.path.exists(COMPREHENSIVE_MAPPING_FILE):
+    with open(COMPREHENSIVE_MAPPING_FILE, 'r') as f:
+        mapping_data = json.load(f)
+        TEAM_SLUG_MAPPING = mapping_data.get('team_slug_mapping', {})
+# Fallback to legacy mapping if comprehensive doesn't exist
+elif os.path.exists(LEGACY_MAPPING_FILE):
+    with open(LEGACY_MAPPING_FILE, 'r') as f:
         mapping_data = json.load(f)
         TEAM_SLUG_MAPPING = mapping_data.get('team_slug_mapping', {})
 
