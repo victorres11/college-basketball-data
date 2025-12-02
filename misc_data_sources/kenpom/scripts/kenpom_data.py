@@ -38,11 +38,21 @@ def load_credentials():
     password = os.environ.get('KENPOM_PASSWORD')
     
     if username and password:
-        print("[KENPOM] Using credentials from environment variables")
-        return {
-            'username': username,
-            'password': password
-        }
+        # Strip whitespace in case there are accidental spaces
+        username = username.strip()
+        password = password.strip()
+        
+        if not username or not password:
+            print("[KENPOM] WARNING: Environment variables found but are empty after stripping whitespace")
+        else:
+            print(f"[KENPOM] Using credentials from environment variables (username: {username[:3]}***)")
+            return {
+                'username': username,
+                'password': password
+            }
+    elif username or password:
+        # One is set but not both
+        print("[KENPOM] WARNING: Only one environment variable is set (both KENPOM_USERNAME and KENPOM_PASSWORD required)")
     
     # Fallback to JSON file (for local development)
     if os.path.exists(CREDENTIALS_FILE):
@@ -103,6 +113,7 @@ def login_to_kenpom(session, username, password):
         session.headers['Referer'] = 'https://kenpom.com/'
         
         # Submit login form
+        print(f"[KENPOM] Attempting login with username: {username[:3]}*** (hidden for security)")
         login_response = session.post(
             login_submit_url, 
             data=login_data, 
@@ -115,28 +126,52 @@ def login_to_kenpom(session, username, password):
             }
         )
         
+        print(f"[KENPOM] Login response status: {login_response.status_code}")
+        print(f"[KENPOM] Login response URL: {login_response.url}")
+        print(f"[KENPOM] Cookies after login: {list(session.cookies.keys())}")
+        
         # Check if login was successful
         # Successful login usually redirects or returns 200 with different content
         if login_response.status_code in [200, 302, 303]:
             # Check for error messages in response
             response_text = login_response.text.lower()
+            print(f"[KENPOM] Response text length: {len(response_text)}")
+            print(f"[KENPOM] Response preview (first 500 chars): {response_text[:500]}")
+            
             if 'invalid' in response_text or 'incorrect' in response_text or 'error' in response_text:
                 # Check if it's actually an error or just the word appearing elsewhere
                 if 'invalid email' in response_text or 'invalid password' in response_text or 'login error' in response_text:
+                    print(f"[KENPOM] Login failed: Invalid credentials detected in response")
                     return False
             
             # If we have cookies and we're not seeing error messages, verify by accessing a protected page
             if session.cookies:
+                print(f"[KENPOM] Verifying login by accessing protected page...")
                 # Try accessing a protected page to verify login worked
                 test_response = session.get('https://kenpom.com/team.php?team=UCLA', timeout=10)
+                print(f"[KENPOM] Test page status: {test_response.status_code}")
+                print(f"[KENPOM] Test page URL: {test_response.url}")
+                print(f"[KENPOM] Test page content length: {len(test_response.text)}")
+                
                 if test_response.status_code == 200:
                     # Check if we got actual content (not login page or error page)
                     if len(test_response.text) > 1000:  # Real pages are longer
                         # Check if we're not on a login/error page
                         test_text_lower = test_response.text.lower()
                         if 'login' not in test_response.url.lower() and 'sign-in' not in test_text_lower:
+                            print(f"[KENPOM] Login successful!")
                             return True
-            
+                        else:
+                            print(f"[KENPOM] Login failed: Redirected to login page")
+                    else:
+                        print(f"[KENPOM] Login failed: Response too short ({len(test_response.text)} chars)")
+                else:
+                    print(f"[KENPOM] Login failed: Test page returned status {test_response.status_code}")
+            else:
+                print(f"[KENPOM] Login failed: No cookies received")
+        else:
+            print(f"[KENPOM] Login failed: Unexpected status code {login_response.status_code}")
+        
         return False
         
     except requests.exceptions.HTTPError as e:
@@ -193,10 +228,17 @@ def create_authenticated_session(credentials=None):
     
     # Try username/password login first (preferred method)
     if 'username' in credentials and 'password' in credentials:
-        if login_to_kenpom(session, credentials['username'], credentials['password']):
+        username = credentials['username']
+        password = credentials['password']
+        
+        # Validate credentials are not empty
+        if not username or not password:
+            raise Exception("KenPom credentials are empty. Please set KENPOM_USERNAME and KENPOM_PASSWORD environment variables.")
+        
+        if login_to_kenpom(session, username, password):
             return session
         else:
-            raise Exception("Login failed. Check your username and password.")
+            raise Exception("Login failed. Check your username and password. Verify KENPOM_USERNAME and KENPOM_PASSWORD are set correctly in Render.com environment variables.")
     # Fallback to cookie-based auth (legacy support)
     elif 'cookies' in credentials:
         session.cookies.update(credentials['cookies'])
