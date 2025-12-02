@@ -165,6 +165,24 @@ def generate_team_data(team_name, season, progress_callback=None):
     Returns:
         Path to generated JSON file
     """
+    # Initialize status tracking
+    if progress_callback is not None:
+        if 'status' not in progress_callback:
+            progress_callback['status'] = []
+    
+    def add_status(name, status, message=None, details=None):
+        """Helper to add status entry"""
+        if progress_callback is not None:
+            status_entry = {
+                'name': name,
+                'status': status,  # 'success', 'failed', 'skipped', 'pending'
+                'message': message or '',
+                'details': details or ''
+            }
+            progress_callback['status'].append(status_entry)
+            # Also update the status list in real-time
+            if 'status_list' in progress_callback:
+                progress_callback['status_list'] = progress_callback['status'].copy()
     # Load API key from config file before initializing API
     config_path = os.path.join(os.path.dirname(__file__), '..', 'config', 'api_config.txt')
     if os.path.exists(config_path):
@@ -225,8 +243,15 @@ def generate_team_data(team_name, season, progress_callback=None):
     
     # Fetch game data
     print(f"[GENERATOR] Fetching game data for {team_name} ({season})...")
-    game_data = api.get_player_game_stats_by_date(start_date, end_date, team_slug)
-    print(f"[GENERATOR] Retrieved {len(game_data) if game_data else 0} game records")
+    try:
+        game_data = api.get_player_game_stats_by_date(start_date, end_date, team_slug)
+        count = len(game_data) if game_data else 0
+        print(f"[GENERATOR] Retrieved {count} game records")
+        add_status('Game Data', 'success', f'Retrieved {count} game records')
+    except Exception as e:
+        print(f"[GENERATOR] ERROR: Failed to fetch game data: {e}")
+        add_status('Game Data', 'failed', str(e))
+        game_data = None
     
     if progress_callback:
         progress_callback['message'] = 'Fetching roster data...'
@@ -234,8 +259,15 @@ def generate_team_data(team_name, season, progress_callback=None):
     
     # Fetch roster data
     print(f"[GENERATOR] Fetching roster data for {team_name} ({season})...")
-    roster_data = api.get_team_roster(season, team_slug)
-    print(f"[GENERATOR] Retrieved roster data")
+    try:
+        roster_data = api.get_team_roster(season, team_slug)
+        player_count = len(roster_data[0]['players']) if roster_data and len(roster_data) > 0 and 'players' in roster_data[0] else 0
+        print(f"[GENERATOR] Retrieved roster data ({player_count} players)")
+        add_status('Roster Data', 'success', f'Retrieved {player_count} players')
+    except Exception as e:
+        print(f"[GENERATOR] ERROR: Failed to fetch roster data: {e}")
+        add_status('Roster Data', 'failed', str(e))
+        roster_data = None
     
     if progress_callback:
         progress_callback['message'] = 'Fetching recruiting data...'
@@ -243,8 +275,15 @@ def generate_team_data(team_name, season, progress_callback=None):
     
     # Fetch recruiting data
     print(f"[GENERATOR] Fetching recruiting data for {team_name}...")
-    recruiting_data = api.get_recruiting_players(team_name)
-    print(f"[GENERATOR] Retrieved {len(recruiting_data) if recruiting_data else 0} recruiting records")
+    try:
+        recruiting_data = api.get_recruiting_players(team_name)
+        count = len(recruiting_data) if recruiting_data else 0
+        print(f"[GENERATOR] Retrieved {count} recruiting records")
+        add_status('Recruiting Data', 'success', f'Retrieved {count} records')
+    except Exception as e:
+        print(f"[GENERATOR] ERROR: Failed to fetch recruiting data: {e}")
+        add_status('Recruiting Data', 'failed', str(e))
+        recruiting_data = []
     
     if progress_callback:
         progress_callback['message'] = 'Fetching team game stats...'
@@ -252,8 +291,15 @@ def generate_team_data(team_name, season, progress_callback=None):
     
     # Fetch team game stats
     print(f"[GENERATOR] Fetching team game stats for {team_name} ({season})...")
-    team_game_stats = api.get_team_game_stats(season, start_date, end_date, team_slug, "regular")
-    print(f"[GENERATOR] Retrieved {len(team_game_stats) if team_game_stats else 0} team game stats")
+    try:
+        team_game_stats = api.get_team_game_stats(season, start_date, end_date, team_slug, "regular")
+        count = len(team_game_stats) if team_game_stats else 0
+        print(f"[GENERATOR] Retrieved {count} team game stats")
+        add_status('Team Game Stats', 'success', f'Retrieved {count} games')
+    except Exception as e:
+        print(f"[GENERATOR] ERROR: Failed to fetch team game stats: {e}")
+        add_status('Team Game Stats', 'failed', str(e))
+        team_game_stats = None
     
     if progress_callback:
         progress_callback['message'] = 'Fetching player season stats...'
@@ -261,8 +307,15 @@ def generate_team_data(team_name, season, progress_callback=None):
     
     # Fetch player season stats
     print(f"[GENERATOR] Fetching player season stats for {team_name} ({season})...")
-    player_season_stats = api.get_player_season_stats(season, team_slug, "regular")
-    print(f"[GENERATOR] Retrieved {len(player_season_stats) if player_season_stats else 0} player season stats")
+    try:
+        player_season_stats = api.get_player_season_stats(season, team_slug, "regular")
+        count = len(player_season_stats) if player_season_stats else 0
+        print(f"[GENERATOR] Retrieved {count} player season stats")
+        add_status('Player Season Stats', 'success', f'Retrieved {count} players')
+    except Exception as e:
+        print(f"[GENERATOR] ERROR: Failed to fetch player season stats: {e}")
+        add_status('Player Season Stats', 'failed', str(e))
+        player_season_stats = []
     
     if progress_callback:
         progress_callback['message'] = 'Fetching player shooting stats...'
@@ -270,8 +323,15 @@ def generate_team_data(team_name, season, progress_callback=None):
     
     # Fetch player shooting stats (includes dunks, layups, jumpers, etc.)
     print(f"[GENERATOR] Fetching player shooting stats for {team_name} ({season})...")
-    player_shooting_stats = api.get_player_shooting_stats(season, team_slug, "regular")
-    print(f"[GENERATOR] Retrieved {len(player_shooting_stats) if player_shooting_stats else 0} player shooting stats")
+    try:
+        player_shooting_stats = api.get_player_shooting_stats(season, team_slug, "regular")
+        count = len(player_shooting_stats) if player_shooting_stats else 0
+        print(f"[GENERATOR] Retrieved {count} player shooting stats")
+        add_status('Player Shooting Stats', 'success', f'Retrieved {count} players with tracked shots')
+    except Exception as e:
+        print(f"[GENERATOR] ERROR: Failed to fetch player shooting stats: {e}")
+        add_status('Player Shooting Stats', 'failed', str(e))
+        player_shooting_stats = []
     
     if progress_callback:
         progress_callback['message'] = 'Fetching team season stats...'
@@ -279,8 +339,15 @@ def generate_team_data(team_name, season, progress_callback=None):
     
     # Fetch team season stats
     print(f"[GENERATOR] Fetching team season stats for {team_name} ({season})...")
-    team_season_stats = api.get_team_season_stats(season, team_slug, "regular")
-    print(f"[GENERATOR] Retrieved {len(team_season_stats) if team_season_stats else 0} team season stats")
+    try:
+        team_season_stats = api.get_team_season_stats(season, team_slug, "regular")
+        count = len(team_season_stats) if team_season_stats else 0
+        print(f"[GENERATOR] Retrieved {count} team season stats")
+        add_status('Team Season Stats', 'success', f'Retrieved team stats')
+    except Exception as e:
+        print(f"[GENERATOR] ERROR: Failed to fetch team season stats: {e}")
+        add_status('Team Season Stats', 'failed', str(e))
+        team_season_stats = []
     
     if progress_callback:
         progress_callback['message'] = 'Calculating conference rankings...'
@@ -304,14 +371,17 @@ def generate_team_data(team_name, season, progress_callback=None):
             print(f"[GENERATOR] WARNING: This will fetch ALL team season stats (large API call)")
             conference_rankings = calculate_conference_rankings(api, team_name, conference_name or "Unknown")
             print(f"[GENERATOR] Conference rankings calculated")
+            add_status('Conference Rankings', 'success', f'Calculated rankings for {conference_name}')
         else:
             # For other seasons, create empty rankings for now
             conference_rankings = {'conference': {}, 'd1': {}}
+            add_status('Conference Rankings', 'skipped', 'Only available for 2026 season')
     except Exception as e:
         print(f"[GENERATOR] WARNING: Could not calculate rankings: {e}")
         import traceback
         traceback.print_exc()
         conference_rankings = {'conference': {}, 'd1': {}}
+        add_status('Conference Rankings', 'failed', str(e))
     
     if progress_callback:
         progress_callback['message'] = 'Fetching all player stats for rankings...'
@@ -320,8 +390,15 @@ def generate_team_data(team_name, season, progress_callback=None):
     # Fetch all conference players for individual player rankings
     print(f"[GENERATOR] WARNING: Fetching ALL player season stats (large API call - no team filter)")
     print(f"[GENERATOR] This is needed for conference player rankings but may trigger rate limits")
-    all_conference_players = api.get_player_season_stats(season, season_type='regular')
-    print(f"[GENERATOR] Retrieved {len(all_conference_players) if all_conference_players else 0} total player records")
+    try:
+        all_conference_players = api.get_player_season_stats(season, season_type='regular')
+        count = len(all_conference_players) if all_conference_players else 0
+        print(f"[GENERATOR] Retrieved {count} total player records")
+        add_status('All Player Stats (Rankings)', 'success', f'Retrieved {count} player records')
+    except Exception as e:
+        print(f"[GENERATOR] ERROR: Failed to fetch all player stats: {e}")
+        add_status('All Player Stats (Rankings)', 'failed', str(e))
+        all_conference_players = []
     
     # Get CBB API teamId for FoxSports cache lookup
     cbb_team_id = None
@@ -589,15 +666,19 @@ def generate_team_data(team_name, season, progress_callback=None):
             if quadrant_records:
                 team_data['quadrantRecords'] = quadrant_records
                 print(f"[GENERATOR] Successfully loaded quadrant data: {len(quadrant_records)} quadrants")
+                add_status('Quadrant Records', 'success', f'Retrieved {len(quadrant_records)} quadrants')
             else:
                 print(f"[GENERATOR] WARNING: Quadrant data returned but no quadrants found")
+                add_status('Quadrant Records', 'failed', 'No quadrants found in response')
         except Exception as e:
             print(f"[GENERATOR] WARNING: Failed to fetch quadrant data: {e}")
             import traceback
             traceback.print_exc()
+            add_status('Quadrant Records', 'failed', str(e))
             # Don't fail the entire generation if quadrant scraping fails
     else:
         print(f"[GENERATOR] INFO: Quadrant scraper not available, skipping quadrant data")
+        add_status('Quadrant Records', 'skipped', 'Scraper not available')
     
     # Fetch NET rating from bballnet.com (optional)
     if NET_RATING_SCRAPER_AVAILABLE:
@@ -616,16 +697,20 @@ def generate_team_data(team_name, season, progress_callback=None):
                 found_name = net_data.get('team_name_found', team_name)
                 print(f"[GENERATOR] Found NET rating for {team_name} (matched as: {found_name})")
                 print(f"[GENERATOR] NET Rank: {net_data['net_rating']} (Previous: {net_data.get('previous_rating', 'N/A')})")
+                add_status('NET Rating', 'success', f'Rank #{net_data["net_rating"]}')
             else:
                 error_msg = net_data.get('error', 'Unknown error') if net_data else 'No data returned'
                 print(f"[GENERATOR] WARNING: NET rating not found for {team_name}: {error_msg}")
+                add_status('NET Rating', 'failed', error_msg)
         except Exception as e:
             print(f"[GENERATOR] WARNING: Failed to fetch NET rating for {team_name}: {e}")
             import traceback
             traceback.print_exc()
+            add_status('NET Rating', 'failed', str(e))
             # Don't fail the entire generation if NET scraping fails
     else:
         print(f"[GENERATOR] INFO: NET rating scraper not available, skipping NET rating")
+        add_status('NET Rating', 'skipped', 'Scraper not available')
     
     # Fetch coach history from Sports Reference (optional)
     if COACH_HISTORY_SCRAPER_AVAILABLE:
@@ -650,15 +735,19 @@ def generate_team_data(team_name, season, progress_callback=None):
                     last = coach_history[-1]
                     print(f"[GENERATOR] Seasons: {first['season']} to {last['season']}")
                     print(f"[GENERATOR] Current coach: {first['coach']}")
+                    add_status('Coach History', 'success', f'{len(coach_history)} seasons ({first["season"]} to {last["season"]})')
             else:
                 print(f"[GENERATOR] WARNING: Coach history returned but no seasons found")
+                add_status('Coach History', 'failed', 'No seasons found')
         except Exception as e:
             print(f"[GENERATOR] WARNING: Failed to fetch coach history for {team_name}: {e}")
             import traceback
             traceback.print_exc()
+            add_status('Coach History', 'failed', str(e))
             # Don't fail the entire generation if coach history scraping fails
     else:
         print(f"[GENERATOR] INFO: Coach history scraper not available, skipping coach history")
+        add_status('Coach History', 'skipped', 'Scraper not available')
     
     # Create lookup for player season stats (for rankings)
     player_stats_lookup = {}
@@ -953,6 +1042,10 @@ def generate_team_data(team_name, season, progress_callback=None):
     
     print(f"[GENERATOR] Completed processing {len(team_data['players'])} players")
     print(f"[GENERATOR] Total API calls made: {total_api_calls}")
+    
+    # Add summary status for player historical stats
+    players_with_history = sum(1 for p in team_data['players'] if 'previousSeasons' in p and p['previousSeasons'])
+    add_status('Player Historical Stats', 'success', f'Retrieved history for {players_with_history}/{len(team_data["players"])} players')
     
     if progress_callback:
         progress_callback['message'] = 'Saving JSON file...'

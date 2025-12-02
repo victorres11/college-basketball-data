@@ -194,6 +194,9 @@ function pollStatus(jobId) {
                     progressText.textContent = progress + '%';
                 }
                 
+                // Update status table if available
+                updateStatusTable(data.status || []);
+                
                 if (data.status === 'completed') {
                     clearInterval(interval);
                     isCompleted = true;
@@ -286,6 +289,69 @@ function showError(message) {
     if (result) result.style.display = 'none';
     if (error) error.style.display = 'block';
     if (errorMessage) errorMessage.textContent = message;
+}
+
+function updateStatusTable(statusList) {
+    const container = document.getElementById('status-table-container');
+    const tableDiv = document.getElementById('status-table');
+    
+    if (!container || !tableDiv) return;
+    
+    if (!statusList || statusList.length === 0) {
+        container.style.display = 'none';
+        return;
+    }
+    
+    container.style.display = 'block';
+    
+    // Build table HTML
+    let tableHTML = '<table style="width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.9em; background-color: #fff; border: 1px solid #ddd; border-radius: 4px;">';
+    tableHTML += '<thead>';
+    tableHTML += '<tr style="background-color: #f5f5f5;">';
+    tableHTML += '<th style="text-align: left; padding: 12px; border-bottom: 2px solid #ddd; font-weight: 600; width: 40%;">Data Source</th>';
+    tableHTML += '<th style="text-align: center; padding: 12px; border-bottom: 2px solid #ddd; font-weight: 600; width: 15%;">Status</th>';
+    tableHTML += '<th style="text-align: left; padding: 12px; border-bottom: 2px solid #ddd; font-weight: 600; width: 45%;">Details</th>';
+    tableHTML += '</tr>';
+    tableHTML += '</thead>';
+    tableHTML += '<tbody>';
+    
+    statusList.forEach((item, index) => {
+        const status = item.status || 'pending';
+        const name = item.name || 'Unknown';
+        const message = item.message || '';
+        const details = item.details || '';
+        
+        // Determine status color and icon
+        let statusColor = '#666';
+        let statusIcon = '⏳';
+        let statusText = 'Pending';
+        
+        if (status === 'success') {
+            statusColor = '#2e7d32';
+            statusIcon = '✅';
+            statusText = 'Success';
+        } else if (status === 'failed') {
+            statusColor = '#c62828';
+            statusIcon = '❌';
+            statusText = 'Failed';
+        } else if (status === 'skipped') {
+            statusColor = '#f57c00';
+            statusIcon = '⏭️';
+            statusText = 'Skipped';
+        }
+        
+        const rowColor = index % 2 === 0 ? '#ffffff' : '#fafafa';
+        tableHTML += `<tr style="background-color: ${rowColor};">`;
+        tableHTML += `<td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: 500;">${name}</td>`;
+        tableHTML += `<td style="padding: 10px; border-bottom: 1px solid #eee; text-align: center; color: ${statusColor}; font-weight: 600;">${statusIcon} ${statusText}</td>`;
+        tableHTML += `<td style="padding: 10px; border-bottom: 1px solid #eee; color: #666; font-size: 0.9em;">${message || details || '—'}</td>`;
+        tableHTML += '</tr>';
+    });
+    
+    tableHTML += '</tbody>';
+    tableHTML += '</table>';
+    
+    tableDiv.innerHTML = tableHTML;
 }
 
 function copyUrlToClipboard() {

@@ -253,6 +253,7 @@ def run_generation(job_id, team_name, season):
         jobs[job_id]['url'] = s3_url
         jobs[job_id]['message'] = 'Complete!'
         jobs[job_id]['progress'] = 100
+        # Status list is already in jobs[job_id] from progress_callback
         # Get game dates from progress callback (set by generator)
         jobs[job_id]['gameDates'] = jobs[job_id].get('gameDates', [])
         
