@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 import json
 import os
 import re
+import time
 
 # Credentials file for kenpom.com authentication
 CREDENTIALS_FILE = os.path.join(os.path.dirname(__file__), '..', 'credentials', 'kenpom_credentials.json')
@@ -63,14 +64,32 @@ def login_to_kenpom(session, username, password):
     Returns:
         bool: True if login successful, False otherwise
     """
-    # KenPom login form uses handlers/login_handler.php
-    login_url = "https://kenpom.com/index.php"
     login_submit_url = "https://kenpom.com/handlers/login_handler.php"
     
     try:
-        # First, get the login page to establish session
-        response = session.get(login_url, timeout=10)
+        # First, visit the main page to establish session and get cookies
+        # This helps avoid 403 errors by making us look like a real browser
+        main_page_url = "https://kenpom.com/"
+        response = session.get(main_page_url, timeout=10)
         response.raise_for_status()
+        
+        # Small delay to mimic human behavior
+        time.sleep(0.5)
+        
+        # Now try to get the login page (index.php) if needed, but don't fail if it's protected
+        # Some sites protect index.php but allow login handler
+        try:
+            login_page_url = "https://kenpom.com/index.php"
+            session.get(login_page_url, timeout=10)
+            time.sleep(0.5)
+        except requests.exceptions.HTTPError as e:
+            # If index.php returns 403 or other error, that's okay - we'll try login handler directly
+            if e.response.status_code == 403:
+                print("[KENPOM] Note: index.php is protected (403), proceeding with login handler")
+            pass
+        except:
+            # Other errors are also okay - we'll try login handler directly
+            pass
         
         # Prepare login data - KenPom uses 'email', 'password', and 'submit' fields
         login_data = {
@@ -80,12 +99,25 @@ def login_to_kenpom(session, username, password):
             'remember': ''  # Optional remember checkbox
         }
         
+        # Update referer to the main page before submitting login
+        session.headers['Referer'] = 'https://kenpom.com/'
+        
         # Submit login form
-        login_response = session.post(login_submit_url, data=login_data, timeout=10, allow_redirects=True)
+        login_response = session.post(
+            login_submit_url, 
+            data=login_data, 
+            timeout=10, 
+            allow_redirects=True,
+            headers={
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Origin': 'https://kenpom.com',
+                'Referer': 'https://kenpom.com/'
+            }
+        )
         
         # Check if login was successful
-        # Successful login usually redirects back to index.php or shows different content
-        if login_response.status_code == 200:
+        # Successful login usually redirects or returns 200 with different content
+        if login_response.status_code in [200, 302, 303]:
             # Check for error messages in response
             response_text = login_response.text.lower()
             if 'invalid' in response_text or 'incorrect' in response_text or 'error' in response_text:
@@ -93,19 +125,35 @@ def login_to_kenpom(session, username, password):
                 if 'invalid email' in response_text or 'invalid password' in response_text or 'login error' in response_text:
                     return False
             
-            # If we have cookies and we're not seeing error messages, likely successful
+            # If we have cookies and we're not seeing error messages, verify by accessing a protected page
             if session.cookies:
-                # Try accessing a protected page to verify
+                # Try accessing a protected page to verify login worked
                 test_response = session.get('https://kenpom.com/team.php?team=UCLA', timeout=10)
-                if 'login' not in test_response.url.lower() and test_response.status_code == 200:
-                    # Check if we got actual content (not login page)
+                if test_response.status_code == 200:
+                    # Check if we got actual content (not login page or error page)
                     if len(test_response.text) > 1000:  # Real pages are longer
-                        return True
+                        # Check if we're not on a login/error page
+                        test_text_lower = test_response.text.lower()
+                        if 'login' not in test_response.url.lower() and 'sign-in' not in test_text_lower:
+                            return True
             
         return False
         
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 403:
+            print(f"[KENPOM] Warning: Login attempt failed: 403 Forbidden")
+            print(f"[KENPOM]   This may indicate:")
+            print(f"[KENPOM]   - IP address is blocked by KenPom")
+            print(f"[KENPOM]   - Site is detecting automated requests")
+            print(f"[KENPOM]   - Login endpoint may have changed")
+            print(f"[KENPOM]   Response URL: {e.response.url}")
+            print(f"[KENPOM]   Response headers: {dict(e.response.headers)}")
+        else:
+            print(f"[KENPOM] Warning: Login attempt failed: HTTP {e.response.status_code}")
+            print(f"[KENPOM]   Response URL: {e.response.url}")
+        return False
     except Exception as e:
-        print(f"Warning: Login attempt failed: {e}")
+        print(f"[KENPOM] Warning: Login attempt failed: {e}")
         import traceback
         traceback.print_exc()
         return False
@@ -126,15 +174,20 @@ def create_authenticated_session(credentials=None):
     
     session = requests.Session()
     
-    # Set headers to mimic a browser
+    # Set headers to mimic a modern browser (updated User-Agent)
     # Note: requests automatically handles gzip/deflate decompression
     session.headers.update({
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.5',
-        'Accept-Encoding': 'gzip, deflate',  # requests handles decompression automatically
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Accept-Encoding': 'gzip, deflate, br',  # requests handles decompression automatically
         'Connection': 'keep-alive',
         'Upgrade-Insecure-Requests': '1',
+        'Sec-Fetch-Dest': 'document',
+        'Sec-Fetch-Mode': 'navigate',
+        'Sec-Fetch-Site': 'none',
+        'Sec-Fetch-User': '?1',
+        'Cache-Control': 'max-age=0',
         'Referer': 'https://kenpom.com/'
     })
     
