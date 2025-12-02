@@ -1467,3 +1467,69 @@ function GET_TEAM_META(url) {
       return [["Error: " + e.message]];
     }
   }
+  
+  // ========================================
+  // CATEGORY: WIKIPEDIA DATA
+  // ========================================
+  
+  function GET_WIKIPEDIA_DATA(url) {
+    try {
+      var response = UrlFetchApp.fetch(url);
+      var data = JSON.parse(response.getContentText());
+      
+      if (!data.wikipedia) {
+        return [["Wikipedia data not available"]];
+      }
+      
+      var wiki = data.wikipedia;
+      var table = [
+        ["=== TEAM INFORMATION ==="],
+        ["University", wiki.universityName || "N/A"],
+        ["Head Coach", wiki.headCoach || "N/A"],
+        ["Conference", wiki.conference || "N/A"],
+        ["All-Time Record", wiki.allTimeRecord || "N/A"],
+        [""],
+        ["=== ARENA ==="],
+        ["Arena", wiki.arena || "N/A"],
+        ["Capacity", wiki.capacity ? wiki.capacity.toLocaleString() : "N/A"],
+        [""],
+        ["=== NCAA CHAMPIONSHIPS ==="],
+        ["NCAA Tournament Championships", wiki.championships.ncaaTournament ? wiki.championships.ncaaTournament.length + " titles" : "0 titles"],
+        ["Championship Years", wiki.championships.ncaaTournament ? wiki.championships.ncaaTournament.join(", ") : "None"],
+        [""],
+        ["=== NCAA RUNNER UP ==="],
+        ["Runner Up Appearances", wiki.championships.ncaaRunnerUp ? wiki.championships.ncaaRunnerUp.length + " times" : "0 times"],
+        ["Runner Up Years", wiki.championships.ncaaRunnerUp ? wiki.championships.ncaaRunnerUp.join(", ") : "None"],
+        [""],
+        ["=== TOURNAMENT APPEARANCES ==="],
+        ["NCAA Tournament", wiki.tournamentAppearances.ncaaTournament ? wiki.tournamentAppearances.ncaaTournament + " appearances" : "N/A"],
+        ["Recent NCAA Appearances (Last 5 Years)", wiki.tournamentAppearances.recentNcaaAppearances ? wiki.tournamentAppearances.recentNcaaAppearances.join(", ") : "None"],
+        [""],
+        ["Final Four", wiki.tournamentAppearances.finalFour ? wiki.tournamentAppearances.finalFour + " appearances" : "N/A"],
+        ["Recent Final Four (Last 5 Years)", wiki.tournamentAppearances.recentFinalFour ? wiki.tournamentAppearances.recentFinalFour.join(", ") : "None"],
+        [""],
+        ["Elite Eight", wiki.tournamentAppearances.eliteEight ? wiki.tournamentAppearances.eliteEight + " appearances" : "N/A"],
+        ["Recent Elite Eight (Last 5 Years)", wiki.tournamentAppearances.recentEliteEight ? wiki.tournamentAppearances.recentEliteEight.join(", ") : "None"],
+        [""],
+        ["Sweet Sixteen", wiki.tournamentAppearances.sweetSixteen ? wiki.tournamentAppearances.sweetSixteen + " appearances" : "N/A"],
+        ["Recent Sweet Sixteen (Last 5 Years)", wiki.tournamentAppearances.recentSweetSixteen ? wiki.tournamentAppearances.recentSweetSixteen.join(", ") : "None"],
+        [""],
+        ["=== CONFERENCE TOURNAMENT TITLES ==="],
+        ["Conference Tournament Championships", wiki.championships.conferenceTournament ? wiki.championships.conferenceTournament.length + " titles" : "0 titles"],
+        ["Championship Years", wiki.championships.conferenceTournament ? wiki.championships.conferenceTournament.join(", ") : "None"],
+        [""]
+      ];
+      
+      // Add source information
+      if (wiki.source) {
+        table.push(["Source", wiki.source]);
+      }
+      if (wiki.url) {
+        table.push(["URL", wiki.url]);
+      }
+      
+      return table;
+    } catch (e) {
+      return [["Error: " + e.message]];
+    }
+  }

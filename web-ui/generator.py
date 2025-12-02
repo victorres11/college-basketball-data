@@ -63,6 +63,17 @@ except ImportError as e:
     KENPOM_SCRAPER_AVAILABLE = False
     print(f"Warning: KenPom scraper not available: {e}")
 
+# Import Wikipedia scraper
+sys.path.insert(0, os.path.join(misc_data_sources_path, 'wikipedia', 'scripts'))
+try:
+    from wikipedia_data import get_wikipedia_team_data
+    from team_name_mapping import get_wikipedia_page_title_safe
+    WIKIPEDIA_SCRAPER_AVAILABLE = True
+    print("[GENERATOR] Wikipedia scraper import: OK")
+except ImportError as e:
+    WIKIPEDIA_SCRAPER_AVAILABLE = False
+    print(f"Warning: Wikipedia scraper not available: {e}")
+
 # Import helper functions - we'll need to import from a shared location
 # For now, we'll import from one of the existing generators
 # In production, these should be in a shared utilities module
@@ -870,6 +881,70 @@ def generate_team_data(team_name, season, progress_callback=None):
     else:
         print(f"[GENERATOR] INFO: KenPom scraper not available, skipping KenPom data")
         add_status('KenPom Data', 'skipped', 'Scraper not available')
+    
+    # Fetch Wikipedia data (optional)
+    if WIKIPEDIA_SCRAPER_AVAILABLE:
+        if progress_callback:
+            progress_callback['message'] = 'Fetching Wikipedia data...'
+        print(f"[GENERATOR] Fetching Wikipedia data for {team_name}...")
+        try:
+            # Get Wikipedia page title
+            wikipedia_page_title = get_wikipedia_page_title_safe(team_name)
+            if wikipedia_page_title:
+                print(f"[GENERATOR] Using Wikipedia page: {wikipedia_page_title}")
+                wikipedia_data = get_wikipedia_team_data(wikipedia_page_title)
+                
+                if wikipedia_data:
+                    # Add Wikipedia data to team_data
+                    team_data['wikipedia'] = {
+                        'universityName': wikipedia_data.get('university_name'),
+                        'headCoach': wikipedia_data.get('head_coach'),
+                        'conference': wikipedia_data.get('conference'),
+                        'arena': wikipedia_data.get('arena'),
+                        'capacity': wikipedia_data.get('capacity'),
+                        'allTimeRecord': wikipedia_data.get('all_time_record'),
+                        'championships': {
+                            'ncaaTournament': wikipedia_data.get('championships', {}).get('ncaa_tournament', []),
+                            'ncaaRunnerUp': wikipedia_data.get('championships', {}).get('ncaa_runner_up', []),
+                            'conferenceTournament': wikipedia_data.get('championships', {}).get('conference_tournament', []),
+                            'regularSeason': wikipedia_data.get('championships', {}).get('regular_season', [])
+                        },
+                        'tournamentAppearances': {
+                            'ncaaTournament': wikipedia_data.get('tournament_appearances', {}).get('ncaa_tournament'),
+                            'recentNcaaAppearances': wikipedia_data.get('tournament_appearances', {}).get('recent_ncaa_appearances', []),
+                            'finalFour': wikipedia_data.get('tournament_appearances', {}).get('final_four'),
+                            'recentFinalFour': wikipedia_data.get('tournament_appearances', {}).get('recent_final_four', []),
+                            'eliteEight': wikipedia_data.get('tournament_appearances', {}).get('elite_eight'),
+                            'recentEliteEight': wikipedia_data.get('tournament_appearances', {}).get('recent_elite_eight', []),
+                            'sweetSixteen': wikipedia_data.get('tournament_appearances', {}).get('sweet_sixteen'),
+                            'recentSweetSixteen': wikipedia_data.get('tournament_appearances', {}).get('recent_sweet_sixteen', [])
+                        },
+                        'source': 'wikipedia.org',
+                        'url': f"https://en.wikipedia.org/wiki/{wikipedia_page_title.replace(' ', '_')}",
+                        'pageTitle': wikipedia_data.get('page_title')
+                    }
+                    
+                    # Log key information
+                    ncaa_champs = len(wikipedia_data.get('championships', {}).get('ncaa_tournament', []))
+                    final_four_count = wikipedia_data.get('tournament_appearances', {}).get('final_four', 0)
+                    print(f"[GENERATOR] Wikipedia data retrieved successfully")
+                    print(f"[GENERATOR] NCAA Championships: {ncaa_champs}, Final Four appearances: {final_four_count}")
+                    add_status('Wikipedia Data', 'success', f'{ncaa_champs} NCAA titles, {final_four_count} Final Fours')
+                else:
+                    print(f"[GENERATOR] WARNING: Wikipedia data returned but is empty")
+                    add_status('Wikipedia Data', 'failed', 'No data returned')
+            else:
+                print(f"[GENERATOR] WARNING: Could not find Wikipedia page for {team_name}")
+                add_status('Wikipedia Data', 'failed', f'Page not found for {team_name}')
+        except Exception as e:
+            print(f"[GENERATOR] WARNING: Failed to fetch Wikipedia data for {team_name}: {e}")
+            import traceback
+            traceback.print_exc()
+            add_status('Wikipedia Data', 'failed', str(e))
+            # Don't fail the entire generation if Wikipedia scraping fails
+    else:
+        print(f"[GENERATOR] INFO: Wikipedia scraper not available, skipping Wikipedia data")
+        add_status('Wikipedia Data', 'skipped', 'Scraper not available')
     
     # Create lookup for player season stats (for rankings)
     player_stats_lookup = {}

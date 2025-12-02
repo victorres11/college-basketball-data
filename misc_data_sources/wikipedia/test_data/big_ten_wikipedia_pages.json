@@ -1,0 +1,190 @@
+{
+  "summary": {
+    "total": 18,
+    "found": 18,
+    "with_infobox": 17,
+    "not_found": 0
+  },
+  "results": [
+    {
+      "team_name": "Illinois",
+      "found": true,
+      "page_title": "Illinois Fighting Illini men's basketball",
+      "url": "https://en.wikipedia.org/wiki/Illinois_Fighting_Illini_men's_basketball",
+      "has_infobox": true,
+      "tried_titles": [
+        "Illinois_Fighting_Illini_men's_basketball"
+      ]
+    },
+    {
+      "team_name": "Indiana",
+      "found": true,
+      "page_title": "Indiana Hoosiers men's basketball",
+      "url": "https://en.wikipedia.org/wiki/Indiana_Hoosiers_men's_basketball",
+      "has_infobox": true,
+      "tried_titles": [
+        "Indiana_Hoosiers_men's_basketball"
+      ]
+    },
+    {
+      "team_name": "Iowa",
+      "found": true,
+      "page_title": "Iowa Hawkeyes men's basketball",
+      "url": "https://en.wikipedia.org/wiki/Iowa_Hawkeyes_men's_basketball",
+      "has_infobox": true,
+      "tried_titles": [
+        "Iowa_Hawkeyes_men's_basketball"
+      ]
+    },
+    {
+      "team_name": "Maryland",
+      "found": true,
+      "page_title": "Maryland Terrapins men's basketball",
+      "url": "https://en.wikipedia.org/wiki/Maryland_Terrapins_men's_basketball",
+      "has_infobox": true,
+      "tried_titles": [
+        "Maryland_Terrapins_men's_basketball"
+      ]
+    },
+    {
+      "team_name": "Michigan State",
+      "found": true,
+      "page_title": "Michigan State Spartans men's basketball",
+      "url": "https://en.wikipedia.org/wiki/Michigan_State_Spartans_men's_basketball",
+      "has_infobox": true,
+      "tried_titles": [
+        "Michigan_State_Spartans_men's_basketball"
+      ]
+    },
+    {
+      "team_name": "Michigan",
+      "found": true,
+      "page_title": "Michigan Wolverines men's basketball",
+      "url": "https://en.wikipedia.org/wiki/Michigan_Wolverines_men's_basketball",
+      "has_infobox": true,
+      "tried_titles": [
+        "Michigan_Wolverines_men's_basketball"
+      ]
+    },
+    {
+      "team_name": "Minnesota",
+      "found": true,
+      "page_title": "Minnesota Golden Gophers men's basketball",
+      "url": "https://en.wikipedia.org/wiki/Minnesota_Golden_Gophers_men's_basketball",
+      "has_infobox": true,
+      "tried_titles": [
+        "Minnesota_Golden_Gophers_men's_basketball"
+      ]
+    },
+    {
+      "team_name": "Nebraska",
+      "found": true,
+      "page_title": "Nebraska Cornhuskers men's basketball",
+      "url": "https://en.wikipedia.org/wiki/Nebraska_Cornhuskers_men's_basketball",
+      "has_infobox": true,
+      "tried_titles": [
+        "Nebraska_Cornhuskers_men's_basketball"
+      ]
+    },
+    {
+      "team_name": "Northwestern",
+      "found": true,
+      "page_title": "Northwestern Wildcats men's basketball",
+      "url": "https://en.wikipedia.org/wiki/Northwestern_Wildcats_men's_basketball",
+      "has_infobox": true,
+      "tried_titles": [
+        "Northwestern_Wildcats_men's_basketball"
+      ]
+    },
+    {
+      "team_name": "Ohio State",
+      "found": true,
+      "page_title": "Ohio State Buckeyes men's basketball",
+      "url": "https://en.wikipedia.org/wiki/Ohio_State_Buckeyes_men's_basketball",
+      "has_infobox": true,
+      "tried_titles": [
+        "Ohio_State_Buckeyes_men's_basketball"
+      ]
+    },
+    {
+      "team_name": "Oregon",
+      "found": true,
+      "page_title": "Oregon Ducks men's basketball",
+      "url": "https://en.wikipedia.org/wiki/Oregon_Ducks_men's_basketball",
+      "has_infobox": true,
+      "tried_titles": [
+        "Oregon_Ducks_men's_basketball"
+      ]
+    },
+    {
+      "team_name": "Penn State",
+      "found": true,
+      "page_title": "Penn State Nittany Lions men's basketball",
+      "url": "https://en.wikipedia.org/wiki/Penn_State_Nittany_Lions_men's_basketball",
+      "has_infobox": false,
+      "tried_titles": [
+        "Penn_State_Nittany_Lions_men's_basketball"
+      ]
+    },
+    {
+      "team_name": "Purdue",
+      "found": true,
+      "page_title": "Purdue Boilermakers men's basketball",
+      "url": "https://en.wikipedia.org/wiki/Purdue_Boilermakers_men's_basketball",
+      "has_infobox": true,
+      "tried_titles": [
+        "Purdue_Boilermakers_men's_basketball"
+      ]
+    },
+    {
+      "team_name": "Rutgers",
+      "found": true,
+      "page_title": "Rutgers Scarlet Knights men's basketball",
+      "url": "https://en.wikipedia.org/wiki/Rutgers_Scarlet_Knights_men's_basketball",
+      "has_infobox": true,
+      "tried_titles": [
+        "Rutgers_Scarlet_Knights_men's_basketball"
+      ]
+    },
+    {
+      "team_name": "UCLA",
+      "found": true,
+      "page_title": "UCLA Bruins men's basketball",
+      "url": "https://en.wikipedia.org/wiki/UCLA_Bruins_men's_basketball",
+      "has_infobox": true,
+      "tried_titles": [
+        "UCLA_Bruins_men's_basketball"
+      ]
+    },
+    {
+      "team_name": "USC",
+      "found": true,
+      "page_title": "USC Trojans men's basketball",
+      "url": "https://en.wikipedia.org/wiki/USC_Trojans_men's_basketball",
+      "has_infobox": true,
+      "tried_titles": [
+        "USC_Trojans_men's_basketball"
+      ]
+    },
+    {
+      "team_name": "Washington",
+      "found": true,
+      "page_title": "Washington Huskies men's basketball",
+      "url": "https://en.wikipedia.org/wiki/Washington_Huskies_men's_basketball",
+      "has_infobox": true,
+      "tried_titles": [
+        "Washington_Huskies_men's_basketball"
+      ]
+    },
+    {
+      "team_name": "Wisconsin",
+      "found": true,
+      "page_title": "Wisconsin Badgers men's basketball",
+      "url": "https://en.wikipedia.org/wiki/Wisconsin_Badgers_men's_basketball",
+      "has_infobox": true,
+      "tried_titles": [
+        "Wisconsin_Badgers_men's_basketball"
+      ]
+    }
+  ]
+}
