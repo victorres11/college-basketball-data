@@ -86,19 +86,34 @@ def login_to_kenpom(session, username, password):
         # Small delay to mimic human behavior
         time.sleep(0.5)
         
-        # Now try to get the login page (index.php) if needed, but don't fail if it's protected
+        # Try to get the login page to see if there are any hidden form fields or CSRF tokens
         # Some sites protect index.php but allow login handler
+        login_page_html = None
         try:
             login_page_url = "https://kenpom.com/index.php"
-            session.get(login_page_url, timeout=10)
+            login_page_response = session.get(login_page_url, timeout=10)
+            if login_page_response.status_code == 200:
+                login_page_html = login_page_response.text
+                print(f"[KENPOM] Successfully loaded login page (index.php)")
+                # Parse for any hidden form fields or CSRF tokens
+                from bs4 import BeautifulSoup
+                soup = BeautifulSoup(login_page_html, 'html.parser')
+                login_form = soup.find('form', {'action': lambda x: x and 'login' in x.lower()})
+                if login_form:
+                    print(f"[KENPOM] Found login form on page")
+                    # Check for hidden fields
+                    hidden_inputs = login_form.find_all('input', {'type': 'hidden'})
+                    if hidden_inputs:
+                        print(f"[KENPOM] Found {len(hidden_inputs)} hidden form fields")
             time.sleep(0.5)
         except requests.exceptions.HTTPError as e:
             # If index.php returns 403 or other error, that's okay - we'll try login handler directly
             if e.response.status_code == 403:
                 print("[KENPOM] Note: index.php is protected (403), proceeding with login handler")
             pass
-        except:
+        except Exception as e:
             # Other errors are also okay - we'll try login handler directly
+            print(f"[KENPOM] Note: Could not load login page: {e}")
             pass
         
         # Prepare login data - KenPom uses 'email', 'password', and 'submit' fields
@@ -109,26 +124,57 @@ def login_to_kenpom(session, username, password):
             'remember': ''  # Optional remember checkbox
         }
         
-        # Update referer to the main page before submitting login
-        session.headers['Referer'] = 'https://kenpom.com/'
+        # Update headers for the POST request to be more browser-like
+        # Don't override all headers, just update the ones needed for POST
+        post_headers = {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Origin': 'https://kenpom.com',
+            'Referer': 'https://kenpom.com/index.php',  # More realistic - coming from login page
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+            'Sec-Fetch-Dest': 'document',
+            'Sec-Fetch-Mode': 'navigate',
+            'Sec-Fetch-Site': 'same-origin',
+            'Sec-Fetch-User': '?1',
+            'Upgrade-Insecure-Requests': '1'
+        }
         
         # Submit login form
         print(f"[KENPOM] Attempting login with username: {username[:3]}*** (hidden for security)")
+        print(f"[KENPOM] Login URL: {login_submit_url}")
+        print(f"[KENPOM] Session cookies before POST: {list(session.cookies.keys())}")
+        
         login_response = session.post(
             login_submit_url, 
             data=login_data, 
-            timeout=10, 
-            allow_redirects=True,
-            headers={
-                'Content-Type': 'application/x-www-form-urlencoded',
-                'Origin': 'https://kenpom.com',
-                'Referer': 'https://kenpom.com/'
-            }
+            timeout=15,  # Increased timeout
+            allow_redirects=False,  # Don't auto-follow redirects, handle manually
+            headers=post_headers
         )
+        
+        # Handle redirects manually if needed
+        if login_response.status_code in [301, 302, 303, 307, 308]:
+            redirect_url = login_response.headers.get('Location', '')
+            print(f"[KENPOM] Login returned redirect {login_response.status_code} to: {redirect_url}")
+            if redirect_url:
+                # Follow redirect manually
+                if redirect_url.startswith('/'):
+                    redirect_url = 'https://kenpom.com' + redirect_url
+                login_response = session.get(redirect_url, timeout=15, allow_redirects=True)
         
         print(f"[KENPOM] Login response status: {login_response.status_code}")
         print(f"[KENPOM] Login response URL: {login_response.url}")
         print(f"[KENPOM] Cookies after login: {list(session.cookies.keys())}")
+        print(f"[KENPOM] Response headers: {dict(login_response.headers)}")
+        
+        # If we got 403, the site is likely blocking us
+        if login_response.status_code == 403:
+            print(f"[KENPOM] ERROR: Received 403 Forbidden from login handler")
+            print(f"[KENPOM] This typically means:")
+            print(f"[KENPOM]   1. IP address is blocked/rate-limited by KenPom")
+            print(f"[KENPOM]   2. Site is detecting automated requests")
+            print(f"[KENPOM]   3. Login endpoint requires additional authentication")
+            print(f"[KENPOM] Response text preview: {login_response.text[:500]}")
+            return False
         
         # Check if login was successful
         # Successful login usually redirects or returns 200 with different content
@@ -211,6 +257,7 @@ def create_authenticated_session(credentials=None):
     
     # Set headers to mimic a modern browser (updated User-Agent)
     # Note: requests automatically handles gzip/deflate decompression
+    # Use a more recent Chrome user agent
     session.headers.update({
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
@@ -223,6 +270,7 @@ def create_authenticated_session(credentials=None):
         'Sec-Fetch-Site': 'none',
         'Sec-Fetch-User': '?1',
         'Cache-Control': 'max-age=0',
+        'DNT': '1',  # Do Not Track
         'Referer': 'https://kenpom.com/'
     })
     
