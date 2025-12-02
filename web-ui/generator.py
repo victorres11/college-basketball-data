@@ -722,13 +722,37 @@ def generate_team_data(team_name, season, progress_callback=None):
             print(f"[GENERATOR] Using Sports Reference slug: {sports_ref_slug}")
             coach_history = get_coach_history(sports_ref_slug, years=6)
             if coach_history and len(coach_history) > 0:
+                # Calculate average wins (overall and conference) for the 6 seasons
+                total_overall_wins = 0
+                total_conference_wins = 0
+                seasons_counted = 0
+                
+                for season_data in coach_history:
+                    try:
+                        overall_w = int(season_data.get('overallW', 0))
+                        conf_w = int(season_data.get('conferenceW', 0))
+                        total_overall_wins += overall_w
+                        total_conference_wins += conf_w
+                        seasons_counted += 1
+                    except (ValueError, TypeError):
+                        # Skip seasons with invalid win data
+                        continue
+                
+                avg_overall_wins = round(total_overall_wins / seasons_counted, 1) if seasons_counted > 0 else 0
+                avg_conference_wins = round(total_conference_wins / seasons_counted, 1) if seasons_counted > 0 else 0
+                
                 team_data['coachHistory'] = {
                     'seasons': coach_history,
                     'source': 'sports-reference.com',
-                    'url': f"https://www.sports-reference.com/cbb/schools/{sports_ref_slug}/men/"
+                    'url': f"https://www.sports-reference.com/cbb/schools/{sports_ref_slug}/men/",
+                    'averageOverallWins': avg_overall_wins,
+                    'averageConferenceWins': avg_conference_wins,
+                    'seasonsCounted': seasons_counted
                 }
                 print(f"[GENERATOR] Found coach history for {team_name}")
                 print(f"[GENERATOR] Retrieved {len(coach_history)} complete seasons (excluding current incomplete season)")
+                print(f"[GENERATOR] Average overall wins: {avg_overall_wins:.1f}")
+                print(f"[GENERATOR] Average conference wins: {avg_conference_wins:.1f}")
                 # Log first and last seasons
                 if len(coach_history) > 0:
                     first = coach_history[0]

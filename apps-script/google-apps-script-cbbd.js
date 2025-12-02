@@ -74,6 +74,18 @@ function GET_TEAM_META(url) {
           ]);
         });
         
+        // Add average wins if available
+        if (data.coachHistory.averageOverallWins !== undefined || data.coachHistory.averageConferenceWins !== undefined) {
+          table.push([""]);
+          table.push(["=== AVERAGES (Last 6 Seasons) ==="]);
+          if (data.coachHistory.averageOverallWins !== undefined) {
+            table.push(["Average Overall Wins", data.coachHistory.averageOverallWins]);
+          }
+          if (data.coachHistory.averageConferenceWins !== undefined) {
+            table.push(["Average Conference Wins", data.coachHistory.averageConferenceWins]);
+          }
+        }
+        
         if (data.coachHistory.source) {
           table.push([""]);
           table.push(["Source", data.coachHistory.source]);
