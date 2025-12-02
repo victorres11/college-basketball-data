@@ -302,7 +302,10 @@ def create_authenticated_session(credentials=None):
             raise Exception("Login failed. Check your username and password. Verify KENPOM_USERNAME and KENPOM_PASSWORD are set correctly in Render.com environment variables.")
     # Fallback to cookie-based auth (legacy support)
     elif 'cookies' in credentials:
-        session.cookies.update(credentials['cookies'])
+        cookies = credentials['cookies']
+        if 'PHPSESSID' in cookies:
+            print(f"[KENPOM] Using cookie-based authentication (PHPSESSID: {cookies['PHPSESSID'][:10]}***)")
+        session.cookies.update(cookies)
         return session
     else:
         raise Exception("No credentials found. Provide either username/password or cookies in kenpom_credentials.json")
@@ -445,12 +448,27 @@ def get_kenpom_team_data(team_slug):
     session = create_authenticated_session(credentials)
     
     try:
+        print(f"[KENPOM] Fetching team page: {url}")
+        print(f"[KENPOM] Session cookies: {list(session.cookies.keys())}")
+        
         response = session.get(url, timeout=15)
+        
+        # Handle 403 errors specifically
+        if response.status_code == 403:
+            print(f"[KENPOM] ERROR: 403 Forbidden when accessing team page")
+            print(f"[KENPOM] This may indicate:")
+            print(f"[KENPOM]   1. Cookie is invalid or expired - extract a fresh PHPSESSID cookie")
+            print(f"[KENPOM]   2. IP address is blocked by KenPom")
+            print(f"[KENPOM]   3. Cookie-based auth is not set up - add KENPOM_PHPSESSID environment variable")
+            print(f"[KENPOM] Response URL: {response.url}")
+            print(f"[KENPOM] Response headers: {dict(response.headers)}")
+            raise Exception(f"403 Forbidden: KenPom is blocking access. This usually means the cookie is invalid/expired or IP is blocked. Check KENPOM_PHPSESSID environment variable and extract a fresh cookie from your browser.")
+        
         response.raise_for_status()
         
         # Check if we got redirected to login or blocked
         if 'login' in response.url.lower() or 'sign-in' in response.url.lower():
-            raise Exception(f"Authentication failed - redirected to login. Check credentials. Final URL: {response.url}")
+            raise Exception(f"Authentication failed - redirected to login. Cookie may be expired. Extract a fresh PHPSESSID cookie from your browser. Final URL: {response.url}")
         
         # Ensure response is properly decoded
         response_text = response.text
@@ -699,6 +717,15 @@ def get_kenpom_team_data(team_slug):
             'html': response_text  # Include for debugging
         }
         
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 403:
+            raise Exception(f"403 Forbidden: KenPom is blocking access to {team_slug}. This usually means:\n"
+                          f"  1. Cookie (KENPOM_PHPSESSID) is invalid or expired - extract a fresh cookie\n"
+                          f"  2. IP address is blocked by KenPom\n"
+                          f"  3. Cookie-based auth not set up - add KENPOM_PHPSESSID environment variable\n"
+                          f"See COOKIE_SETUP.md for instructions on extracting cookies.")
+        else:
+            raise Exception(f"Failed to fetch kenpom.com data for {team_slug}: HTTP {e.response.status_code} - {e}")
     except requests.exceptions.RequestException as e:
         raise Exception(f"Failed to fetch kenpom.com data for {team_slug}: {e}")
 
