@@ -35,37 +35,44 @@ def ensure_playwright_browsers():
     if not USE_PLAYWRIGHT:
         return False
     
-    try:
-        # Try to launch browser to see if it exists
-        with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
-            browser.close()
+    # Check if browsers exist by checking the file system (more reliable than launching)
+    browsers_path = os.environ.get('PLAYWRIGHT_BROWSERS_PATH', '/opt/render/project/playwright')
+    
+    # Check if any chromium browser exists
+    import glob
+    existing_browsers = glob.glob(os.path.join(browsers_path, 'chromium*', 'chrome-linux', 'headless_shell'))
+    
+    if existing_browsers:
+        print(f"[BARTTORVIK] Playwright browsers found at {existing_browsers[0]}")
         return True
-    except Exception as e:
-        # Browsers not installed, install them
-        print("[BARTTORVIK] Playwright browsers not found, installing at runtime...")
-        try:
-            # Set browsers path to persistent location if on Render
-            browsers_path = os.environ.get('PLAYWRIGHT_BROWSERS_PATH', '/opt/render/project/playwright')
-            if os.path.exists('/opt/render'):
-                os.environ['PLAYWRIGHT_BROWSERS_PATH'] = browsers_path
-                os.makedirs(browsers_path, exist_ok=True)
-            
-            # Install browsers
-            result = subprocess.run(
-                [sys.executable, "-m", "playwright", "install", "--with-deps", "chromium"],
-                check=True,
-                capture_output=True,
-                text=True
-            )
-            print("[BARTTORVIK] Playwright browsers installed successfully")
-            return True
-        except subprocess.CalledProcessError as install_error:
-            print(f"[BARTTORVIK] Failed to install browsers: {install_error.stderr}")
-            return False
-        except Exception as install_error:
-            print(f"[BARTTORVIK] Error installing browsers: {install_error}")
-            return False
+    
+    # Browsers not found, install them (without --with-deps since system deps are in build)
+    print("[BARTTORVIK] Playwright browsers not found, installing at runtime...")
+    try:
+        # Set browsers path to persistent location if on Render
+        if os.path.exists('/opt/render'):
+            os.environ['PLAYWRIGHT_BROWSERS_PATH'] = browsers_path
+            os.makedirs(browsers_path, exist_ok=True)
+        
+        # Install browsers WITHOUT --with-deps (system deps already installed in build)
+        result = subprocess.run(
+            [sys.executable, "-m", "playwright", "install", "chromium"],
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=300  # 5 minute timeout
+        )
+        print("[BARTTORVIK] Playwright browsers installed successfully")
+        return True
+    except subprocess.TimeoutExpired:
+        print("[BARTTORVIK] Browser installation timed out")
+        return False
+    except subprocess.CalledProcessError as install_error:
+        print(f"[BARTTORVIK] Failed to install browsers: {install_error.stderr}")
+        return False
+    except Exception as install_error:
+        print(f"[BARTTORVIK] Error installing browsers: {install_error}")
+        return False
 
 
 def normalize_team_name(team_name: str) -> str:
