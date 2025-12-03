@@ -2,6 +2,10 @@
 """
 Script to extract team sheets data from barttorvik.com
 """
+import subprocess
+import sys
+import os
+
 try:
     from playwright.sync_api import sync_playwright
     USE_PLAYWRIGHT = True
@@ -21,6 +25,47 @@ from bs4 import BeautifulSoup
 import json
 import re
 from typing import Dict, List, Optional
+
+
+def ensure_playwright_browsers():
+    """
+    Ensure Playwright browsers are installed at runtime.
+    This is necessary for Render.com where browsers may not persist from build.
+    """
+    if not USE_PLAYWRIGHT:
+        return False
+    
+    try:
+        # Try to launch browser to see if it exists
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            browser.close()
+        return True
+    except Exception as e:
+        # Browsers not installed, install them
+        print("[BARTTORVIK] Playwright browsers not found, installing at runtime...")
+        try:
+            # Set browsers path to persistent location if on Render
+            browsers_path = os.environ.get('PLAYWRIGHT_BROWSERS_PATH', '/opt/render/project/playwright')
+            if os.path.exists('/opt/render'):
+                os.environ['PLAYWRIGHT_BROWSERS_PATH'] = browsers_path
+                os.makedirs(browsers_path, exist_ok=True)
+            
+            # Install browsers
+            result = subprocess.run(
+                [sys.executable, "-m", "playwright", "install", "--with-deps", "chromium"],
+                check=True,
+                capture_output=True,
+                text=True
+            )
+            print("[BARTTORVIK] Playwright browsers installed successfully")
+            return True
+        except subprocess.CalledProcessError as install_error:
+            print(f"[BARTTORVIK] Failed to install browsers: {install_error.stderr}")
+            return False
+        except Exception as install_error:
+            print(f"[BARTTORVIK] Error installing browsers: {install_error}")
+            return False
 
 
 def normalize_team_name(team_name: str) -> str:
@@ -70,6 +115,9 @@ def get_teamsheets_data(year: int = 2026, conference: Optional[str] = None, sort
     
     try:
         if USE_PLAYWRIGHT:
+            # Ensure browsers are installed (runtime check for Render.com)
+            ensure_playwright_browsers()
+            
             # Use Playwright to handle JavaScript rendering
             with sync_playwright() as p:
                 browser = p.chromium.launch(headless=True)
