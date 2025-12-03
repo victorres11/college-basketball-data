@@ -233,6 +233,61 @@ function DEBUG_JSON(url) {
 }
 
 // ========================================
+// CATEGORY: KENPOM DATA
+// ========================================
+
+/**
+ * Get full KenPom report table with all categories
+ * @param {string} url - URL to the JSON data file (typically in cell A1)
+ * @return {Array<Array>} Table with all KenPom categories and statistics
+ * @customfunction
+ */
+function GET_KENPOM_REPORT_TABLE(url) {
+  return CBBData.GET_KENPOM_REPORT_TABLE(url);
+}
+
+/**
+ * Get specific KenPom category data
+ * @param {string} url - URL to the JSON data file (typically in cell A1)
+ * @param {string} categoryName - Name of the category (e.g., "Adj. Efficiency", "Adj. Tempo", "Effective FG%")
+ * @return {Array<Array>} Table with category-specific data
+ * @customfunction
+ */
+function GET_KENPOM_CATEGORY(url, categoryName) {
+  return CBBData.GET_KENPOM_CATEGORY(url, categoryName);
+}
+
+/**
+ * Get KenPom Adj. Efficiency (most commonly requested stat)
+ * @param {string} url - URL to the JSON data file (typically in cell A1)
+ * @return {Array<Array>} Table with Adj. Efficiency offense, defense, and rankings
+ * @customfunction
+ */
+function GET_KENPOM_ADJ_EFFICIENCY(url) {
+  return CBBData.GET_KENPOM_ADJ_EFFICIENCY(url);
+}
+
+/**
+ * Get KenPom Adj. Tempo
+ * @param {string} url - URL to the JSON data file (typically in cell A1)
+ * @return {Array<Array>} Table with Adj. Tempo combined value, ranking, and D-I avg
+ * @customfunction
+ */
+function GET_KENPOM_ADJ_TEMPO(url) {
+  return CBBData.GET_KENPOM_ADJ_TEMPO(url);
+}
+
+/**
+ * Get KenPom Four Factors (Effective FG%, Turnover %, Off. Reb. %, FTA/FGA)
+ * @param {string} url - URL to the JSON data file (typically in cell A1)
+ * @return {Array<Array>} Table with all Four Factors statistics
+ * @customfunction
+ */
+function GET_KENPOM_FOUR_FACTORS(url) {
+  return CBBData.GET_KENPOM_FOUR_FACTORS(url);
+}
+
+// ========================================
 // TEST FUNCTION
 // ========================================
 

@@ -53,15 +53,15 @@ except ImportError:
     COACH_HISTORY_SCRAPER_AVAILABLE = False
     print("Warning: Coach history scraper not available")
 
-# Import KenPom scraper
+# Import KenPom API client
 sys.path.insert(0, os.path.join(misc_data_sources_path, 'kenpom', 'scripts'))
 try:
-    from kenpom_data import get_kenpom_team_data
-    KENPOM_SCRAPER_AVAILABLE = True
-    print("[GENERATOR] KenPom scraper import: OK")
+    from kenpom_api import get_kenpom_team_data
+    KENPOM_API_AVAILABLE = True
+    print("[GENERATOR] KenPom API import: OK")
 except ImportError as e:
-    KENPOM_SCRAPER_AVAILABLE = False
-    print(f"Warning: KenPom scraper not available: {e}")
+    KENPOM_API_AVAILABLE = False
+    print(f"Warning: KenPom API not available: {e}")
 
 # Import Wikipedia scraper
 sys.path.insert(0, os.path.join(misc_data_sources_path, 'wikipedia', 'scripts'))
@@ -828,7 +828,7 @@ def generate_team_data(team_name, season, progress_callback=None):
         add_status('Coach History', 'skipped', 'Scraper not available')
     
     # Fetch KenPom data (optional)
-    if KENPOM_SCRAPER_AVAILABLE:
+    if KENPOM_API_AVAILABLE:
         if progress_callback:
             progress_callback['message'] = 'Fetching KenPom data...'
         print(f"[GENERATOR] Fetching KenPom data for {team_name}...")
