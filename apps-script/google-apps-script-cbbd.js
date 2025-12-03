@@ -1615,6 +1615,7 @@ function GET_TEAM_META(url) {
         ["University", wiki.universityName || "N/A"],
         ["Head Coach", wiki.headCoach || "N/A"],
         ["Conference", wiki.conference || "N/A"],
+        ["Location", wiki.location || "N/A"],
         ["All-Time Record", wiki.allTimeRecord || "N/A"],
         [""],
         ["=== ARENA ==="],

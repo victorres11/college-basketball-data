@@ -52,6 +52,13 @@ function setupSearch() {
     searchInput.addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase().trim();
         
+        // Clear selected team when user starts typing a new search
+        // This prevents using the old selectedTeam if user doesn't select from dropdown
+        if (selectedTeam && selectedTeam.name.toLowerCase() !== query) {
+            selectedTeam = null;
+            selectedDiv.style.display = 'none';
+        }
+        
         if (query.length === 0) {
             select.style.display = 'none';
             selectedDiv.style.display = 'none';
@@ -102,10 +109,24 @@ function setupSearch() {
 }
 
 function generateData() {
+    // Get current search input value to verify selection
+    const searchInput = document.getElementById('team-search');
+    const currentInput = searchInput ? searchInput.value.trim() : '';
+    
     if (!selectedTeam) {
         alert('Please select a team from the dropdown');
         return;
     }
+    
+    // Double-check: ensure the selected team name matches what's in the search box
+    // This prevents using stale selectedTeam if user typed something new but didn't select
+    if (currentInput && currentInput.toLowerCase() !== selectedTeam.name.toLowerCase()) {
+        console.warn(`Team mismatch: search input="${currentInput}", selectedTeam="${selectedTeam.name}"`);
+        alert(`Please select "${currentInput}" from the dropdown. Currently selected: "${selectedTeam.name}"`);
+        return;
+    }
+    
+    console.log(`Generating data for team: ${selectedTeam.name} (ID: ${selectedTeam.id})`);
     
     // Fixed to 2026 season
     const season = 2026;
@@ -304,6 +325,15 @@ function showResult(url, gameDates) {
             timerDisplay.style.color = '#2e7d32';
             timerDisplay.style.fontWeight = '600';
         }
+    }
+    
+    // Reset team selection UI after successful generation to allow new selection
+    // Don't clear selectedTeam itself, but reset the visual state
+    const searchInput = document.getElementById('team-search');
+    const selectedDiv = document.getElementById('selected-team');
+    if (searchInput) {
+        // Keep the team name in the search box so user knows what was generated
+        // But allow them to type a new team name
     }
     
     if (error) error.style.display = 'none';

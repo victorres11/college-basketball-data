@@ -967,6 +967,7 @@ def generate_team_data(team_name, season, progress_callback=None):
                         'universityName': wikipedia_data.get('university_name'),
                         'headCoach': wikipedia_data.get('head_coach'),
                         'conference': wikipedia_data.get('conference'),
+                        'location': wikipedia_data.get('location'),
                         'arena': wikipedia_data.get('arena'),
                         'capacity': wikipedia_data.get('capacity'),
                         'allTimeRecord': wikipedia_data.get('all_time_record'),

@@ -293,7 +293,7 @@ def extract_arena_info(template: mwparserfromhell.nodes.Template) -> Dict[str, A
     }
     
     # Try different parameter names for arena
-    arena_params = ['arena', 'stadium', 'venue', 'location']
+    arena_params = ['arena', 'stadium', 'venue']
     for param_name in arena_params:
         param = safe_get_template_param(template, param_name)
         if param:
@@ -417,6 +417,7 @@ def get_wikipedia_team_data(page_title: str) -> Dict[str, Any]:
         'university_name': None,
         'head_coach': None,
         'conference': None,
+        'location': None,
         'arena': None,
         'capacity': None,
         'all_time_record': None,
@@ -460,6 +461,16 @@ def get_wikipedia_team_data(page_title: str) -> Dict[str, Any]:
             value = clean_template_value(param.value)
             if value:
                 result['conference'] = value
+                break
+    
+    # Location (city)
+    location_params = ['location', 'city', 'city_location']
+    for param_name in location_params:
+        param = safe_get_template_param(template, param_name)
+        if param:
+            value = clean_template_value(param.value)
+            if value:
+                result['location'] = value
                 break
     
     # Arena info
