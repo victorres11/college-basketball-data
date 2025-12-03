@@ -190,30 +190,25 @@ def extract_championships(template: mwparserfromhell.nodes.Template) -> Dict[str
 def extract_tournament_appearances(template: mwparserfromhell.nodes.Template, championships: Dict[str, Any]) -> Dict[str, Any]:
     """
     Extract tournament appearance information.
-    Counts the number of years in comma-separated lists and extracts recent appearances.
+    Counts the number of years in comma-separated lists and extracts all appearance years.
     
     Args:
         template: The infobox template node
-        championships: Dictionary with championship years (for recent appearances)
+        championships: Dictionary with championship years (for extracting all years)
     
     Returns:
-        Dictionary with tournament appearance data including recent appearances
+        Dictionary with tournament appearance data including all appearance years
     """
     appearances = {
         'ncaa_tournament': None,
-        'recent_ncaa_appearances': [],
+        'ncaa_tournament_years': [],
         'final_four': None,
-        'recent_final_four': [],
+        'final_four_years': [],
         'elite_eight': None,
-        'recent_elite_eight': [],
+        'elite_eight_years': [],
         'sweet_sixteen': None,
-        'recent_sweet_sixteen': []
+        'sweet_sixteen_years': []
     }
-    
-    # Get current year for filtering
-    from datetime import datetime
-    current_year = datetime.now().year
-    cutoff_year = current_year - 5
     
     param_mappings = {
         'ncaa_tournament': ['NCAAtourneys', 'ncaa_tournament_appearances', 'ncaa_appearances', 'ncaa_tournament'],
@@ -231,20 +226,20 @@ def extract_tournament_appearances(template: mwparserfromhell.nodes.Template, ch
                     # Extract years in comma-separated list (full 4-digit years)
                     years = re.findall(r'\b(19\d{2}|20\d{2})\b', value)
                     if years:
-                        # Convert to integers and sort
+                        # Convert to integers and sort (most recent first)
                         year_ints = sorted([int(y) for y in set(years)], reverse=True)
                         appearances[key] = len(year_ints)
                         
-                        # Get recent appearances (last 5 years)
-                        recent_years = [str(y) for y in year_ints if y >= cutoff_year][:5]
+                        # Store all years (not just recent)
+                        all_years = [str(y) for y in year_ints]
                         if key == 'ncaa_tournament':
-                            appearances['recent_ncaa_appearances'] = recent_years
+                            appearances['ncaa_tournament_years'] = all_years
                         elif key == 'final_four':
-                            appearances['recent_final_four'] = recent_years
+                            appearances['final_four_years'] = all_years
                         elif key == 'elite_eight':
-                            appearances['recent_elite_eight'] = recent_years
+                            appearances['elite_eight_years'] = all_years
                         elif key == 'sweet_sixteen':
-                            appearances['recent_sweet_sixteen'] = recent_years
+                            appearances['sweet_sixteen_years'] = all_years
                     else:
                         # Try to extract number if it's just a number
                         numbers = re.findall(r'^\d+$', value.strip())
@@ -254,25 +249,25 @@ def extract_tournament_appearances(template: mwparserfromhell.nodes.Template, ch
                             appearances[key] = value
                     break
     
-    # Also extract recent appearances from championships data if available
-    # This ensures we get the most recent even if the count comes from a different source
+    # Also extract all years from championships data if available
+    # This ensures we get all years even if the count comes from a different source
     if championships.get('ncaa_final_four'):
         final_four_years = [int(y) for y in championships['ncaa_final_four'] if y.isdigit()]
-        recent_final_four = [str(y) for y in sorted(final_four_years, reverse=True) if y >= cutoff_year][:5]
-        if recent_final_four:
-            appearances['recent_final_four'] = recent_final_four
+        all_final_four = [str(y) for y in sorted(final_four_years, reverse=True)]
+        if all_final_four and not appearances.get('final_four_years'):
+            appearances['final_four_years'] = all_final_four
     
     if championships.get('ncaa_elite_eight'):
         elite_eight_years = [int(y) for y in championships['ncaa_elite_eight'] if y.isdigit()]
-        recent_elite_eight = [str(y) for y in sorted(elite_eight_years, reverse=True) if y >= cutoff_year][:5]
-        if recent_elite_eight:
-            appearances['recent_elite_eight'] = recent_elite_eight
+        all_elite_eight = [str(y) for y in sorted(elite_eight_years, reverse=True)]
+        if all_elite_eight and not appearances.get('elite_eight_years'):
+            appearances['elite_eight_years'] = all_elite_eight
     
     if championships.get('ncaa_sweet_sixteen'):
         sweet_sixteen_years = [int(y) for y in championships['ncaa_sweet_sixteen'] if y.isdigit()]
-        recent_sweet_sixteen = [str(y) for y in sorted(sweet_sixteen_years, reverse=True) if y >= cutoff_year][:5]
-        if recent_sweet_sixteen:
-            appearances['recent_sweet_sixteen'] = recent_sweet_sixteen
+        all_sweet_sixteen = [str(y) for y in sorted(sweet_sixteen_years, reverse=True)]
+        if all_sweet_sixteen and not appearances.get('sweet_sixteen_years'):
+            appearances['sweet_sixteen_years'] = all_sweet_sixteen
     
     return appearances
 

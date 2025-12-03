@@ -111,6 +111,33 @@ function GET_TEAM_META(url) {
           }
         }
         
+        // Add winningest coach if available
+        if (data.coachHistory.winningestCoach) {
+          var wc = data.coachHistory.winningestCoach;
+          table.push([""]);
+          table.push(["=== WINNINGEST COACH ==="]);
+          table.push(["Coach", wc.coach || ""]);
+          if (wc.from && wc.to) {
+            table.push(["Years", wc.from + " - " + wc.to]);
+          }
+          if (wc.years) {
+            table.push(["Seasons", wc.years]);
+          }
+          if (wc.record) {
+            table.push(["Record", wc.record]);
+          }
+          if (wc.wins && wc.losses) {
+            table.push(["Wins", wc.wins]);
+            table.push(["Losses", wc.losses]);
+          }
+          if (wc.winPercentage) {
+            table.push(["Win Percentage", wc.winPercentage]);
+          }
+          if (data.coachHistory.winningestCoachUrl) {
+            table.push(["URL", data.coachHistory.winningestCoachUrl]);
+          }
+        }
+        
         if (data.coachHistory.source) {
           table.push([""]);
           table.push(["Source", data.coachHistory.source]);
@@ -1642,16 +1669,16 @@ function GET_TEAM_META(url) {
         [""],
         ["=== TOURNAMENT APPEARANCES ==="],
         ["NCAA Tournament", tournamentAppearances.ncaaTournament ? tournamentAppearances.ncaaTournament + " appearances" : "N/A"],
-        ["Recent NCAA Appearances (Last 5 Years)", tournamentAppearances.recentNcaaAppearances && tournamentAppearances.recentNcaaAppearances.length ? tournamentAppearances.recentNcaaAppearances.join(", ") : "None"],
+        ["NCAA Tournament Years", tournamentAppearances.ncaaTournamentYears && tournamentAppearances.ncaaTournamentYears.length ? tournamentAppearances.ncaaTournamentYears.join(", ") : "None"],
         [""],
         ["Final Four", tournamentAppearances.finalFour ? tournamentAppearances.finalFour + " appearances" : "N/A"],
-        ["Recent Final Four (Last 5 Years)", tournamentAppearances.recentFinalFour && tournamentAppearances.recentFinalFour.length ? tournamentAppearances.recentFinalFour.join(", ") : "None"],
+        ["Final Four Years", tournamentAppearances.finalFourYears && tournamentAppearances.finalFourYears.length ? tournamentAppearances.finalFourYears.join(", ") : "None"],
         [""],
         ["Elite Eight", tournamentAppearances.eliteEight ? tournamentAppearances.eliteEight + " appearances" : "N/A"],
-        ["Recent Elite Eight (Last 5 Years)", tournamentAppearances.recentEliteEight && tournamentAppearances.recentEliteEight.length ? tournamentAppearances.recentEliteEight.join(", ") : "None"],
+        ["Elite Eight Years", tournamentAppearances.eliteEightYears && tournamentAppearances.eliteEightYears.length ? tournamentAppearances.eliteEightYears.join(", ") : "None"],
         [""],
         ["Sweet Sixteen", tournamentAppearances.sweetSixteen ? tournamentAppearances.sweetSixteen + " appearances" : "N/A"],
-        ["Recent Sweet Sixteen (Last 5 Years)", tournamentAppearances.recentSweetSixteen && tournamentAppearances.recentSweetSixteen.length ? tournamentAppearances.recentSweetSixteen.join(", ") : "None"],
+        ["Sweet Sixteen Years", tournamentAppearances.sweetSixteenYears && tournamentAppearances.sweetSixteenYears.length ? tournamentAppearances.sweetSixteenYears.join(", ") : "None"],
         [""],
         ["=== CONFERENCE TOURNAMENT TITLES ==="],
         ["Conference Tournament Championships", championships.conferenceTournament && championships.conferenceTournament.length ? championships.conferenceTournament.length + " titles" : "0 titles"],

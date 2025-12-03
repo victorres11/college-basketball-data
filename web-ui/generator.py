@@ -46,7 +46,7 @@ except ImportError:
 # Import coach history scraper
 sys.path.insert(0, os.path.join(misc_data_sources_path, 'coaching_history', 'scripts'))
 try:
-    from coach_history import get_coach_history
+    from coach_history import get_coach_history, get_winningest_coach
     COACH_HISTORY_SCRAPER_AVAILABLE = True
     print("[GENERATOR] Coach history scraper import: OK")
 except ImportError:
@@ -815,6 +815,15 @@ def generate_team_data(team_name, season, progress_callback=None):
                 avg_overall_wins = round(total_overall_wins / seasons_counted, 1) if seasons_counted > 0 else 0
                 avg_conference_wins = round(total_conference_wins / seasons_counted, 1) if seasons_counted > 0 else 0
                 
+                # Fetch winningest coach
+                winningest_coach = None
+                try:
+                    winningest_coach = get_winningest_coach(sports_ref_slug)
+                    if winningest_coach:
+                        print(f"[GENERATOR] Found winningest coach: {winningest_coach['coach']} ({winningest_coach['wins']}-{winningest_coach['losses']})")
+                except Exception as e:
+                    print(f"[GENERATOR] WARNING: Failed to fetch winningest coach: {e}")
+                
                 team_data['coachHistory'] = {
                     'seasons': coach_history,
                     'source': 'sports-reference.com',
@@ -823,6 +832,12 @@ def generate_team_data(team_name, season, progress_callback=None):
                     'averageConferenceWins': avg_conference_wins,
                     'seasonsCounted': seasons_counted
                 }
+                
+                # Add winningest coach if found
+                if winningest_coach:
+                    team_data['coachHistory']['winningestCoach'] = winningest_coach
+                    team_data['coachHistory']['winningestCoachUrl'] = f"https://www.sports-reference.com/cbb/schools/{sports_ref_slug}/men/coaches.html"
+                
                 print(f"[GENERATOR] Found coach history for {team_name}")
                 print(f"[GENERATOR] Retrieved {len(coach_history)} complete seasons (excluding current incomplete season)")
                 print(f"[GENERATOR] Average overall wins: {avg_overall_wins:.1f}")
@@ -980,13 +995,13 @@ def generate_team_data(team_name, season, progress_callback=None):
                         },
                         'tournamentAppearances': {
                             'ncaaTournament': wikipedia_data.get('tournament_appearances', {}).get('ncaa_tournament'),
-                            'recentNcaaAppearances': wikipedia_data.get('tournament_appearances', {}).get('recent_ncaa_appearances', []),
+                            'ncaaTournamentYears': wikipedia_data.get('tournament_appearances', {}).get('ncaa_tournament_years', []),
                             'finalFour': wikipedia_data.get('tournament_appearances', {}).get('final_four'),
-                            'recentFinalFour': wikipedia_data.get('tournament_appearances', {}).get('recent_final_four', []),
+                            'finalFourYears': wikipedia_data.get('tournament_appearances', {}).get('final_four_years', []),
                             'eliteEight': wikipedia_data.get('tournament_appearances', {}).get('elite_eight'),
-                            'recentEliteEight': wikipedia_data.get('tournament_appearances', {}).get('recent_elite_eight', []),
+                            'eliteEightYears': wikipedia_data.get('tournament_appearances', {}).get('elite_eight_years', []),
                             'sweetSixteen': wikipedia_data.get('tournament_appearances', {}).get('sweet_sixteen'),
-                            'recentSweetSixteen': wikipedia_data.get('tournament_appearances', {}).get('recent_sweet_sixteen', [])
+                            'sweetSixteenYears': wikipedia_data.get('tournament_appearances', {}).get('sweet_sixteen_years', [])
                         },
                         'source': 'wikipedia.org',
                         'url': f"https://en.wikipedia.org/wiki/{wikipedia_page_title.replace(' ', '_')}",
