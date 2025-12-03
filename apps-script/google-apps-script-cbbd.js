@@ -1313,12 +1313,17 @@ function GET_TEAM_META(url) {
       var response = UrlFetchApp.fetch(url);
       var data = JSON.parse(response.getContentText());
       
-      // Check if KenPom data exists
-      if (!data.kenpom || !data.kenpom.reportTable) {
-        return [["KenPom data not available"], ["Data may not have been generated with KenPom information"]];
+      // Check if KenPom data exists - handle both old and new structure
+      if (!data.kenpom) {
+        return [["KenPom data not available"], ["Data may not have been generated with KenPom information"], ["Note: Regenerate the data file to include KenPom API data"]];
       }
       
-      var reportTable = data.kenpom.reportTable;
+      // Check for reportTable (new API structure) or report_table_structured (old scraping structure)
+      var reportTable = data.kenpom.reportTable || data.kenpom.report_table_structured;
+      
+      if (!reportTable) {
+        return [["KenPom data not available"], ["KenPom object exists but reportTable is missing"], ["Available keys: " + Object.keys(data.kenpom).join(", ")]];
+      }
       var table = [
         ["=== KENPOM REPORT TABLE ==="],
         [""],
@@ -1379,11 +1384,16 @@ function GET_TEAM_META(url) {
       var response = UrlFetchApp.fetch(url);
       var data = JSON.parse(response.getContentText());
       
-      if (!data.kenpom || !data.kenpom.reportTable) {
-        return [["KenPom data not available"]];
+      if (!data.kenpom) {
+        return [["KenPom data not available"], ["Regenerate the data file to include KenPom API data"]];
       }
       
-      var reportTable = data.kenpom.reportTable;
+      // Check for reportTable (new API structure) or report_table_structured (old scraping structure)
+      var reportTable = data.kenpom.reportTable || data.kenpom.report_table_structured;
+      
+      if (!reportTable) {
+        return [["KenPom data not available"], ["reportTable missing from kenpom object"]];
+      }
       var categoryData = reportTable[categoryName];
       
       if (!categoryData) {
@@ -1430,11 +1440,16 @@ function GET_TEAM_META(url) {
       var response = UrlFetchApp.fetch(url);
       var data = JSON.parse(response.getContentText());
       
-      if (!data.kenpom || !data.kenpom.reportTable) {
-        return [["KenPom data not available"]];
+      if (!data.kenpom) {
+        return [["KenPom data not available"], ["Regenerate the data file to include KenPom API data"]];
       }
       
-      var reportTable = data.kenpom.reportTable;
+      // Check for reportTable (new API structure) or report_table_structured (old scraping structure)
+      var reportTable = data.kenpom.reportTable || data.kenpom.report_table_structured;
+      
+      if (!reportTable) {
+        return [["KenPom data not available"], ["reportTable missing from kenpom object"]];
+      }
       var fourFactors = [
         "Effective FG%",
         "Turnover %",
