@@ -405,6 +405,26 @@ function GET_TEAM_META(url) {
         }
       }
       
+      // Add upcoming games if available
+      if (data.upcomingGames && data.upcomingGames.length > 0) {
+        table.push([""]);
+        table.push(["=== UPCOMING GAMES ==="]);
+        table.push([""]);
+        table.push(["Quadrant", "Location", "Rank", "Opponent", "Date"]);
+        
+        for (var j = 0; j < data.upcomingGames.length; j++) {
+          var game = data.upcomingGames[j];
+          var rankStr = game.rank ? "(" + game.rank + ")" : "";
+          table.push([
+            game.quadrant || "",
+            game.location || "",
+            rankStr,
+            game.opponent || "",
+            game.date || ""
+          ]);
+        }
+      }
+      
       return table;
     } catch (e) {
       return [["Error: " + e.message]];

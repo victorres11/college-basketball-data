@@ -1,6 +1,8 @@
 let teams = [];
 let selectedTeam = null;
 let currentJobId = null;  // Track current job for cancellation
+let startTime = null;  // Track when generation started
+let timerInterval = null;  // Interval for updating timer
 
 // Load teams on page load
 window.addEventListener('DOMContentLoaded', () => {
@@ -120,12 +122,36 @@ function generateData() {
     const progressBar = document.getElementById('progress-bar');
     const progressText = document.getElementById('progress-text');
     const cancelBtn = document.getElementById('cancel-btn');
+    const timerDisplay = document.getElementById('timer-display');
+    const timerValue = document.getElementById('timer-value');
     if (progressBar) progressBar.style.width = '0%';
     if (progressText) progressText.textContent = '0%';
     if (cancelBtn) {
         cancelBtn.style.display = 'block';
         cancelBtn.disabled = false;
     }
+    
+    // Start timer
+    startTime = Date.now();
+    if (timerDisplay) timerDisplay.style.display = 'block';
+    if (timerValue) timerValue.textContent = '0:00';
+    
+    // Clear any existing timer interval
+    if (timerInterval) {
+        clearInterval(timerInterval);
+    }
+    
+    // Update timer every second
+    timerInterval = setInterval(() => {
+        if (startTime) {
+            const elapsed = Math.floor((Date.now() - startTime) / 1000);
+            const minutes = Math.floor(elapsed / 60);
+            const seconds = elapsed % 60;
+            if (timerValue) {
+                timerValue.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            }
+        }
+    }, 1000);
     
     // Start generation
     fetch('/api/generate', {
@@ -149,6 +175,7 @@ function generateData() {
         pollStatus(jobId);
     })
     .catch(err => {
+        stopTimer();
         showError('Failed to start generation: ' + err.message);
         btn.disabled = false;
         if (cancelBtn) cancelBtn.style.display = 'none';
@@ -209,6 +236,7 @@ function pollStatus(jobId) {
                 if (data.status === 'completed') {
                     clearInterval(interval);
                     isCompleted = true;
+                    stopTimer();
                     showResult(data.url, data.gameDates || []);
                     const btn = document.getElementById('generate-btn');
                     const cancelBtn = document.getElementById('cancel-btn');
@@ -218,6 +246,7 @@ function pollStatus(jobId) {
                 } else if (data.status === 'failed') {
                     clearInterval(interval);
                     isCompleted = true;
+                    stopTimer();
                     showError(data.error || 'Generation failed');
                     const btn = document.getElementById('generate-btn');
                     const cancelBtn = document.getElementById('cancel-btn');
@@ -227,6 +256,7 @@ function pollStatus(jobId) {
                 } else if (data.status === 'cancelled') {
                     clearInterval(interval);
                     isCompleted = true;
+                    stopTimer();
                     showError('Generation cancelled by user');
                     const btn = document.getElementById('generate-btn');
                     const cancelBtn = document.getElementById('cancel-btn');
@@ -240,6 +270,7 @@ function pollStatus(jobId) {
                 if (!isCompleted) {
                     clearInterval(interval);
                     isCompleted = true;
+                    stopTimer();
                     const errorMsg = err.message || String(err);
                     showError('Failed to check status: ' + errorMsg);
                     const btn = document.getElementById('generate-btn');
@@ -259,6 +290,21 @@ function showResult(url, gameDates) {
     const gameList = document.getElementById('game-list');
     const gameCount = document.getElementById('game-count');
     const statusMessage = document.getElementById('status-message');
+    const timerValue = document.getElementById('timer-value');
+    
+    // Calculate final elapsed time
+    if (startTime && timerValue) {
+        const elapsed = Math.floor((Date.now() - startTime) / 1000);
+        const minutes = Math.floor(elapsed / 60);
+        const seconds = elapsed % 60;
+        timerValue.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        // Make timer more prominent on completion
+        const timerDisplay = document.getElementById('timer-display');
+        if (timerDisplay) {
+            timerDisplay.style.color = '#2e7d32';
+            timerDisplay.style.fontWeight = '600';
+        }
+    }
     
     if (error) error.style.display = 'none';
     if (result) result.style.display = 'block';
@@ -308,12 +354,21 @@ function showResult(url, gameDates) {
     }
 }
 
+function stopTimer() {
+    if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+    }
+}
+
 function showError(message) {
     const result = document.getElementById('result');
     const error = document.getElementById('error');
     const errorMessage = document.getElementById('error-message');
     const cancelBtn = document.getElementById('cancel-btn');
     const btn = document.getElementById('generate-btn');
+    
+    stopTimer();
     
     if (result) result.style.display = 'none';
     if (error) error.style.display = 'block';

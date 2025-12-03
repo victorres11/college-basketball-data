@@ -168,6 +168,64 @@ def get_quadrant_data(team_slug):
             'games': games
         }
     
+    # Extract upcoming games from the "Upcoming" table
+    import re
+    upcoming_games = []
+    all_tables = soup.find_all('table')
+    
+    for table in all_tables:
+        rows = table.find_all('tr')
+        # Look for rows that start with Q1, Q2, Q3, Q4 in first column (upcoming games)
+        upcoming_rows = []
+        for row in rows:
+            cols = row.find_all('td')
+            if cols and len(cols) >= 4:
+                first_col = cols[0].get_text(strip=True)
+                if first_col.startswith('Q') and first_col[1].isdigit():
+                    upcoming_rows.append(row)
+        
+        if len(upcoming_rows) > 0:
+            # This is the upcoming table
+            for row in upcoming_rows:
+                cols = row.find_all('td')
+                if len(cols) >= 5:
+                    quadrant = cols[0].get_text(strip=True)  # Q1, Q2, Q3, Q4
+                    location = cols[1].get_text(strip=True)  # Away, Home, Neutral
+                    rank_text = cols[2].get_text(strip=True)  # (71) or (4)
+                    # Extract rank number from parentheses
+                    rank_match = re.search(r'\((\d+)\)', rank_text)
+                    rank = int(rank_match.group(1)) if rank_match else None
+                    
+                    # Opponent and date - find them in remaining columns
+                    opponent = ''
+                    date = ''
+                    
+                    # Find date (format: MM/DD/YYYY)
+                    for col in cols[3:]:
+                        text = col.get_text(strip=True)
+                        if re.match(r'\d{2}/\d{2}/\d{4}', text):
+                            date = text
+                            # Opponent should be in the column before date
+                            col_idx = cols.index(col)
+                            if col_idx > 0:
+                                opponent_cell = cols[col_idx - 1]
+                                opponent = opponent_cell.get_text(strip=True)
+                                # Clean up opponent name (remove leading numbers like "11Gonzaga" -> "Gonzaga")
+                                opponent = re.sub(r'^\d+\s*', '', opponent).strip()
+                            break
+                    
+                    if quadrant and location and opponent and date:
+                        upcoming_games.append({
+                            'quadrant': quadrant,
+                            'location': location,
+                            'rank': rank,
+                            'opponent': opponent,
+                            'date': date
+                        })
+            break  # Found the upcoming table, no need to check others
+    
+    data['upcoming_games'] = upcoming_games
+    
     return data
 
 if __name__ == '__main__':

@@ -734,6 +734,16 @@ def generate_team_data(team_name, season, progress_callback=None):
             else:
                 print(f"[GENERATOR] WARNING: Quadrant data returned but no quadrants found")
                 add_status('Quadrant Records', 'failed', 'No quadrants found in response')
+            
+            # Add upcoming games if available
+            upcoming_games = quadrant_data.get('upcoming_games', [])
+            if upcoming_games:
+                team_data['upcomingGames'] = upcoming_games
+                print(f"[GENERATOR] Successfully loaded upcoming games: {len(upcoming_games)} games")
+                add_status('Upcoming Games', 'success', f'Retrieved {len(upcoming_games)} upcoming games')
+            else:
+                print(f"[GENERATOR] INFO: No upcoming games found")
+                add_status('Upcoming Games', 'skipped', 'No upcoming games found')
         except Exception as e:
             print(f"[GENERATOR] WARNING: Failed to fetch quadrant data: {e}")
             import traceback

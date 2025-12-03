@@ -405,6 +405,26 @@ function GET_TEAM_META(url) {
         }
       }
       
+      // Add upcoming games if available
+      if (data.upcomingGames && data.upcomingGames.length > 0) {
+        table.push([""]);
+        table.push(["=== UPCOMING GAMES ==="]);
+        table.push([""]);
+        table.push(["Quadrant", "Location", "Rank", "Opponent", "Date"]);
+        
+        for (var j = 0; j < data.upcomingGames.length; j++) {
+          var game = data.upcomingGames[j];
+          var rankStr = game.rank ? "(" + game.rank + ")" : "";
+          table.push([
+            game.quadrant || "",
+            game.location || "",
+            rankStr,
+            game.opponent || "",
+            game.date || ""
+          ]);
+        }
+      }
+      
       return table;
     } catch (e) {
       return [["Error: " + e.message]];
@@ -1325,21 +1345,19 @@ function GET_TEAM_META(url) {
       
       // Check if KenPom data exists - handle both old and new structure
       if (!data.kenpom) {
-        table.push(["KenPom data not available"]);
-        table.push(["Data may not have been generated with KenPom information"]);
-        table.push(["Note: Regenerate the data file to include KenPom API data"]);
+        table.push([["KenPom data not available"], ["Data may not have been generated with KenPom information"], ["Note: Regenerate the data file to include KenPom API data"]]);
       } else {
         // Check for reportTable (new API structure) or report_table_structured (old scraping structure)
         var reportTable = data.kenpom.reportTable || data.kenpom.report_table_structured;
         
         if (!reportTable) {
-          table.push(["KenPom data not available"]);
-          table.push(["KenPom object exists but reportTable is missing"]);
-          table.push(["Available keys: " + Object.keys(data.kenpom).join(", ")]);
+          table.push([["KenPom data not available"], ["KenPom object exists but reportTable is missing"], ["Available keys: " + Object.keys(data.kenpom).join(", ")]]);
         } else {
-          table.push(["=== KENPOM REPORT TABLE ==="]);
-          table.push([""]);
-          table.push(["Category", "Offense", "Offense Rank", "Defense", "Defense Rank", "D-I Avg"]);
+          table.push(
+            ["=== KENPOM REPORT TABLE ==="],
+            [""],
+            ["Category", "Offense", "Offense Rank", "Defense", "Defense Rank", "D-I Avg"]
+          );
           
           // Process each category
           for (var category in reportTable) {
@@ -1405,9 +1423,7 @@ function GET_TEAM_META(url) {
       table.push([""]);
       
       if (!data.barttorvik) {
-        table.push(["Bart Torvik data not available"]);
-        table.push(["Data may not have been generated with Bart Torvik information"]);
-        table.push(["Note: Regenerate the data file to include Bart Torvik data"]);
+        table.push([["Bart Torvik data not available"], ["Data may not have been generated with Bart Torvik information"], ["Note: Regenerate the data file to include Bart Torvik data"]]);
       } else {
         var bt = data.barttorvik;
         
