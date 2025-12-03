@@ -5,15 +5,17 @@ Script to extract team sheets data from barttorvik.com
 try:
     from playwright.sync_api import sync_playwright
     USE_PLAYWRIGHT = True
-except ImportError:
+except ImportError as e:
     USE_PLAYWRIGHT = False
     try:
         import cloudscraper
         USE_CLOUDSCRAPER = True
+        print(f"[BARTTORVIK] Warning: playwright not available ({e}), using cloudscraper as fallback")
     except ImportError:
         import requests
         USE_CLOUDSCRAPER = False
-        print("Warning: playwright and cloudscraper not available, using requests (may not work with bot protection)")
+        print(f"[BARTTORVIK] Warning: playwright and cloudscraper not available, using requests (may not work with bot protection)")
+        print(f"[BARTTORVIK] ImportError details: {e}")
 
 from bs4 import BeautifulSoup
 import json
