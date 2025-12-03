@@ -1489,7 +1489,17 @@ function GET_TEAM_META(url) {
   
   function GET_WIKIPEDIA_DATA(url) {
     try {
-      var response = UrlFetchApp.fetch(url);
+      if (!url || url === "") {
+        return [["Error: URL is required"]];
+      }
+      
+      var response = UrlFetchApp.fetch(url, {'muteHttpExceptions': true});
+      var responseCode = response.getResponseCode();
+      
+      if (responseCode !== 200) {
+        return [["Error: Failed to fetch data (HTTP " + responseCode + ")"]];
+      }
+      
       var data = JSON.parse(response.getContentText());
       
       if (!data.wikipedia) {
