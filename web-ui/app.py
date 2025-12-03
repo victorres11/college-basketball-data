@@ -10,6 +10,7 @@ import subprocess
 from datetime import datetime
 from generator import generate_team_data
 from s3_handler import upload_to_s3
+from email_notifier import send_job_completion_email
 
 # Load API key at startup
 config_path = os.path.join(os.path.dirname(__file__), '..', 'config', 'api_config.txt')
@@ -301,6 +302,9 @@ def run_generation(job_id, team_name, season):
         # Get game dates from progress callback (set by generator)
         jobs[job_id]['gameDates'] = jobs[job_id].get('gameDates', [])
         
+        # Send email notification
+        send_job_completion_email(jobs[job_id])
+        
     except Exception as e:
         # Don't set error if it was cancelled
         if not jobs[job_id].get('cancelled', False):
@@ -308,6 +312,9 @@ def run_generation(job_id, team_name, season):
             jobs[job_id]['error'] = str(e)
             jobs[job_id]['message'] = f'Error: {str(e)}'
             jobs[job_id]['progress'] = 0
+            
+            # Send email notification for failures too
+            send_job_completion_email(jobs[job_id])
 
 
 if __name__ == '__main__':
