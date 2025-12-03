@@ -288,6 +288,25 @@ function GET_KENPOM_FOUR_FACTORS(url) {
 }
 
 // ========================================
+// CATEGORY: WIKIPEDIA DATA
+// ========================================
+
+/**
+ * Get Wikipedia infobox data including team information, arena, championships, and tournament appearances
+ * @param {string} url - URL to the JSON data file (typically in cell A1)
+ * @return {Array<Array>} Table with Wikipedia data including:
+ *   - Team information (university, head coach, conference, all-time record)
+ *   - Arena (name and capacity)
+ *   - NCAA Championships and Runner Up
+ *   - Tournament appearances (Final Four, Elite Eight, Sweet Sixteen) with recent 5-year data
+ *   - Conference tournament titles
+ * @customfunction
+ */
+function GET_WIKI_DATA(url) {
+  return CBBData.GET_WIKI_DATA(url);
+}
+
+// ========================================
 // TEST FUNCTION
 // ========================================
 
