@@ -60,6 +60,7 @@ output/*.pdf
 # Credentials files (keep .example files, ignore actual credentials)
 **/kenpom_credentials.json
 **/credentials.json
+**/kp_api_creds.txt
 
 # KenPom test output files
 misc_data_sources/kenpom/output/*.html
