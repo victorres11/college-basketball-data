@@ -72,9 +72,16 @@ def get_teamsheets_data(year: int = 2026, conference: Optional[str] = None, sort
             with sync_playwright() as p:
                 browser = p.chromium.launch(headless=True)
                 page = browser.new_page()
-                page.goto(url, wait_until='networkidle', timeout=30000)
-                # Wait a bit for any dynamic content
-                page.wait_for_timeout(2000)
+                # Try to wait for the table to be present instead of network idle
+                page.goto(url, wait_until='domcontentloaded', timeout=30000)
+                # Wait for table to appear (more efficient than networkidle)
+                try:
+                    page.wait_for_selector('table', timeout=10000)
+                    # Small wait for any final rendering
+                    page.wait_for_timeout(500)
+                except:
+                    # Fallback: if table not found quickly, wait a bit longer
+                    page.wait_for_timeout(1500)
                 html_content = page.content()
                 browser.close()
             soup = BeautifulSoup(html_content, 'html.parser')
