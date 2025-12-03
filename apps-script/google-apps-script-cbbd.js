@@ -1497,6 +1497,9 @@ function GET_TEAM_META(url) {
       }
       
       var wiki = data.wikipedia;
+      var championships = wiki.championships || {};
+      var tournamentAppearances = wiki.tournamentAppearances || {};
+      
       var table = [
         ["=== TEAM INFORMATION ==="],
         ["University", wiki.universityName || "N/A"],
@@ -1509,29 +1512,29 @@ function GET_TEAM_META(url) {
         ["Capacity", wiki.capacity ? wiki.capacity.toLocaleString() : "N/A"],
         [""],
         ["=== NCAA CHAMPIONSHIPS ==="],
-        ["NCAA Tournament Championships", wiki.championships.ncaaTournament ? wiki.championships.ncaaTournament.length + " titles" : "0 titles"],
-        ["Championship Years", wiki.championships.ncaaTournament ? wiki.championships.ncaaTournament.join(", ") : "None"],
+        ["NCAA Tournament Championships", championships.ncaaTournament && championships.ncaaTournament.length ? championships.ncaaTournament.length + " titles" : "0 titles"],
+        ["Championship Years", championships.ncaaTournament && championships.ncaaTournament.length ? championships.ncaaTournament.join(", ") : "None"],
         [""],
         ["=== NCAA RUNNER UP ==="],
-        ["Runner Up Appearances", wiki.championships.ncaaRunnerUp ? wiki.championships.ncaaRunnerUp.length + " times" : "0 times"],
-        ["Runner Up Years", wiki.championships.ncaaRunnerUp ? wiki.championships.ncaaRunnerUp.join(", ") : "None"],
+        ["Runner Up Appearances", championships.ncaaRunnerUp && championships.ncaaRunnerUp.length ? championships.ncaaRunnerUp.length + " times" : "0 times"],
+        ["Runner Up Years", championships.ncaaRunnerUp && championships.ncaaRunnerUp.length ? championships.ncaaRunnerUp.join(", ") : "None"],
         [""],
         ["=== TOURNAMENT APPEARANCES ==="],
-        ["NCAA Tournament", wiki.tournamentAppearances.ncaaTournament ? wiki.tournamentAppearances.ncaaTournament + " appearances" : "N/A"],
-        ["Recent NCAA Appearances (Last 5 Years)", wiki.tournamentAppearances.recentNcaaAppearances ? wiki.tournamentAppearances.recentNcaaAppearances.join(", ") : "None"],
+        ["NCAA Tournament", tournamentAppearances.ncaaTournament ? tournamentAppearances.ncaaTournament + " appearances" : "N/A"],
+        ["Recent NCAA Appearances (Last 5 Years)", tournamentAppearances.recentNcaaAppearances && tournamentAppearances.recentNcaaAppearances.length ? tournamentAppearances.recentNcaaAppearances.join(", ") : "None"],
         [""],
-        ["Final Four", wiki.tournamentAppearances.finalFour ? wiki.tournamentAppearances.finalFour + " appearances" : "N/A"],
-        ["Recent Final Four (Last 5 Years)", wiki.tournamentAppearances.recentFinalFour ? wiki.tournamentAppearances.recentFinalFour.join(", ") : "None"],
+        ["Final Four", tournamentAppearances.finalFour ? tournamentAppearances.finalFour + " appearances" : "N/A"],
+        ["Recent Final Four (Last 5 Years)", tournamentAppearances.recentFinalFour && tournamentAppearances.recentFinalFour.length ? tournamentAppearances.recentFinalFour.join(", ") : "None"],
         [""],
-        ["Elite Eight", wiki.tournamentAppearances.eliteEight ? wiki.tournamentAppearances.eliteEight + " appearances" : "N/A"],
-        ["Recent Elite Eight (Last 5 Years)", wiki.tournamentAppearances.recentEliteEight ? wiki.tournamentAppearances.recentEliteEight.join(", ") : "None"],
+        ["Elite Eight", tournamentAppearances.eliteEight ? tournamentAppearances.eliteEight + " appearances" : "N/A"],
+        ["Recent Elite Eight (Last 5 Years)", tournamentAppearances.recentEliteEight && tournamentAppearances.recentEliteEight.length ? tournamentAppearances.recentEliteEight.join(", ") : "None"],
         [""],
-        ["Sweet Sixteen", wiki.tournamentAppearances.sweetSixteen ? wiki.tournamentAppearances.sweetSixteen + " appearances" : "N/A"],
-        ["Recent Sweet Sixteen (Last 5 Years)", wiki.tournamentAppearances.recentSweetSixteen ? wiki.tournamentAppearances.recentSweetSixteen.join(", ") : "None"],
+        ["Sweet Sixteen", tournamentAppearances.sweetSixteen ? tournamentAppearances.sweetSixteen + " appearances" : "N/A"],
+        ["Recent Sweet Sixteen (Last 5 Years)", tournamentAppearances.recentSweetSixteen && tournamentAppearances.recentSweetSixteen.length ? tournamentAppearances.recentSweetSixteen.join(", ") : "None"],
         [""],
         ["=== CONFERENCE TOURNAMENT TITLES ==="],
-        ["Conference Tournament Championships", wiki.championships.conferenceTournament ? wiki.championships.conferenceTournament.length + " titles" : "0 titles"],
-        ["Championship Years", wiki.championships.conferenceTournament ? wiki.championships.conferenceTournament.join(", ") : "None"],
+        ["Conference Tournament Championships", championships.conferenceTournament && championships.conferenceTournament.length ? championships.conferenceTournament.length + " titles" : "0 titles"],
+        ["Championship Years", championships.conferenceTournament && championships.conferenceTournament.length ? championships.conferenceTournament.join(", ") : "None"],
         [""]
       ];
       
