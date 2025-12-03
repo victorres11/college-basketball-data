@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Trigger Render Deployment
         run: |
-          MESSAGE=$(echo '${{ github.event.head_commit.message }}' | jq -Rs .)
+          MESSAGE=$(echo "${{ github.event.head_commit.message }}" | jq -Rs .)
           curl -X POST "${{ secrets.RENDER_WEBHOOK_URL }}" \
             -H "Content-Type: application/json" \
             -d "{\"ref\": \"${{ github.ref }}\", \"commit\": \"${{ github.sha }}\", \"message\": $MESSAGE}" \
