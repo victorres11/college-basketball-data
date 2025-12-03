@@ -5,9 +5,9 @@ services:
     buildCommand: |
       cd web-ui && \
       pip install -r requirements.txt && \
-      python -m playwright install --with-deps chromium && \
+      export PLAYWRIGHT_BROWSERS_PATH=/opt/render/project/playwright && \
       mkdir -p /opt/render/project/playwright && \
-      cp -R $HOME/.cache/ms-playwright/* /opt/render/project/playwright/ 2>/dev/null || true
+      python -m playwright install --with-deps chromium
     startCommand: cd web-ui && gunicorn app:app --bind 0.0.0.0:$PORT
     envVars:
       - key: PLAYWRIGHT_BROWSERS_PATH
