@@ -304,10 +304,10 @@ def run_generation(job_id, team_name, season):
     except Exception as e:
         # Don't set error if it was cancelled
         if not jobs[job_id].get('cancelled', False):
-        jobs[job_id]['status'] = 'failed'
-        jobs[job_id]['error'] = str(e)
-        jobs[job_id]['message'] = f'Error: {str(e)}'
-        jobs[job_id]['progress'] = 0
+            jobs[job_id]['status'] = 'failed'
+            jobs[job_id]['error'] = str(e)
+            jobs[job_id]['message'] = f'Error: {str(e)}'
+            jobs[job_id]['progress'] = 0
 
 
 if __name__ == '__main__':
