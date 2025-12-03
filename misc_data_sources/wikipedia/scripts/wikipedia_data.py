@@ -381,6 +381,7 @@ def get_wikipedia_team_data(page_title: str) -> Dict[str, Any]:
         Dictionary containing extracted team data:
         - university_name: Name of the university
         - head_coach: Current head coach
+        - head_coach_seasons: Number of seasons for current head coach
         - conference: Conference name
         - arena: Arena name
         - capacity: Arena capacity
@@ -416,6 +417,7 @@ def get_wikipedia_team_data(page_title: str) -> Dict[str, Any]:
         'page_title': page_title.replace('_', ' '),
         'university_name': None,
         'head_coach': None,
+        'head_coach_seasons': None,
         'conference': None,
         'location': None,
         'arena': None,
@@ -451,6 +453,19 @@ def get_wikipedia_team_data(page_title: str) -> Dict[str, Any]:
             value = clean_template_value(param.value)
             if value:
                 result['head_coach'] = value
+                break
+    
+    # Head coach tenure (number of seasons)
+    tenure_params = ['tenure', 'coach_tenure', 'years']
+    for param_name in tenure_params:
+        param = safe_get_template_param(template, param_name)
+        if param:
+            value = clean_template_value(param.value)
+            if value:
+                # Extract number from tenure (e.g., "16th" -> 16, "5" -> 5)
+                numbers = re.findall(r'\d+', value)
+                if numbers:
+                    result['head_coach_seasons'] = int(numbers[0])
                 break
     
     # Conference

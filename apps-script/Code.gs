@@ -407,8 +407,17 @@ function GET_TEAM_META(url) {
       
       // Add upcoming games if available
       if (data.upcomingGames && data.upcomingGames.length > 0) {
+        // Count Q1 games
+        var q1Count = 0;
+        for (var k = 0; k < data.upcomingGames.length; k++) {
+          if (data.upcomingGames[k].quadrant === "Q1") {
+            q1Count++;
+          }
+        }
+        
         table.push([""]);
         table.push(["=== UPCOMING GAMES ==="]);
+        table.push(["Upcoming Q1 Games", q1Count]);
         table.push([""]);
         table.push(["Quadrant", "Location", "Rank", "Opponent", "Date"]);
         
@@ -1614,6 +1623,7 @@ function GET_TEAM_META(url) {
         ["=== TEAM INFORMATION ==="],
         ["University", wiki.universityName || "N/A"],
         ["Head Coach", wiki.headCoach || "N/A"],
+        ["Head Coach Seasons", wiki.headCoachSeasons ? wiki.headCoachSeasons + " seasons" : "N/A"],
         ["Conference", wiki.conference || "N/A"],
         ["Location", wiki.location || "N/A"],
         ["All-Time Record", wiki.allTimeRecord || "N/A"],
