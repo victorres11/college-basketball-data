@@ -1683,6 +1683,10 @@ function GET_TEAM_META(url) {
         ["=== CONFERENCE TOURNAMENT TITLES ==="],
         ["Conference Tournament Championships", championships.conferenceTournament && championships.conferenceTournament.length ? championships.conferenceTournament.length + " titles" : "0 titles"],
         ["Championship Years", championships.conferenceTournament && championships.conferenceTournament.length ? championships.conferenceTournament.join(", ") : "None"],
+        [""],
+        ["=== CONFERENCE REGULAR SEASON TITLES ==="],
+        ["Conference Regular Season Championships", championships.regularSeason && championships.regularSeason.length ? championships.regularSeason.length + " titles" : "0 titles"],
+        ["Championship Years", championships.regularSeason && championships.regularSeason.length ? championships.regularSeason.join(", ") : "None"],
         [""]
       ];
       
