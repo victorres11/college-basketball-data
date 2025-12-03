@@ -1307,6 +1307,14 @@ function GET_TEAM_META(url) {
   // CATEGORY: KENPOM DATA
   // ========================================
   
+  // Helper function to remove % from percentage values
+  function removePercent(value) {
+    if (typeof value === 'string' && value.endsWith('%')) {
+      return value.slice(0, -1); // Remove last character (%)
+    }
+    return value;
+  }
+  
   // Get full KenPom report table
   function GET_KENPOM_REPORT_TABLE(url) {
     try {
@@ -1336,9 +1344,9 @@ function GET_TEAM_META(url) {
         
         // Handle Adj. Tempo specially (has combined instead of offense/defense)
         if (category === "Adj. Tempo") {
-          var combined = categoryData.combined || "";
+          var combined = removePercent(categoryData.combined || "");
           var ranking = categoryData.ranking !== null ? categoryData.ranking : "";
-          var d1Avg = categoryData.d1_avg || "";
+          var d1Avg = removePercent(categoryData.d1_avg || "");
           
           table.push([
             category,
@@ -1348,13 +1356,27 @@ function GET_TEAM_META(url) {
             "", // No defense rank
             d1Avg
           ]);
+        } else if (categoryData.value !== undefined) {
+          // Handle categories with "value" field (Bench Minutes, D-1 Experience, etc.)
+          var value = removePercent(categoryData.value || "");
+          var ranking = categoryData.ranking !== null ? categoryData.ranking : "";
+          var d1Avg = removePercent(categoryData.d1_avg || "");
+          
+          table.push([
+            category,
+            value,
+            ranking,
+            "", // No defense for value-based categories
+            "", // No defense rank
+            d1Avg
+          ]);
         } else {
           // Standard categories with offense/defense
-          var offense = categoryData.offense || "";
+          var offense = removePercent(categoryData.offense || "");
           var offenseRank = categoryData.offense_ranking !== null ? categoryData.offense_ranking : "";
-          var defense = categoryData.defense || "";
+          var defense = removePercent(categoryData.defense || "");
           var defenseRank = categoryData.defense_ranking !== null ? categoryData.defense_ranking : "";
-          var d1Avg = categoryData.d1_avg || "";
+          var d1Avg = removePercent(categoryData.d1_avg || "");
           
           // Skip empty categories (section headers)
           if (!offense && !defense && !d1Avg) {
@@ -1407,15 +1429,20 @@ function GET_TEAM_META(url) {
       
       // Handle Adj. Tempo specially
       if (categoryName === "Adj. Tempo") {
-        table.push(["Combined", categoryData.combined || "N/A"]);
+        table.push(["Combined", removePercent(categoryData.combined || "N/A")]);
         table.push(["Ranking", categoryData.ranking !== null ? categoryData.ranking : "N/A"]);
-        table.push(["D-I Avg", categoryData.d1_avg || "N/A"]);
+        table.push(["D-I Avg", removePercent(categoryData.d1_avg || "N/A")]);
+      } else if (categoryData.value !== undefined) {
+        // Handle categories with "value" field (Bench Minutes, D-1 Experience, etc.)
+        table.push(["Value", removePercent(categoryData.value || "N/A")]);
+        table.push(["Ranking", categoryData.ranking !== null ? categoryData.ranking : "N/A"]);
+        table.push(["D-I Avg", removePercent(categoryData.d1_avg || "N/A")]);
       } else {
-        table.push(["Offense", categoryData.offense || "N/A"]);
+        table.push(["Offense", removePercent(categoryData.offense || "N/A")]);
         table.push(["Offense Ranking", categoryData.offense_ranking !== null ? categoryData.offense_ranking : "N/A"]);
-        table.push(["Defense", categoryData.defense || "N/A"]);
+        table.push(["Defense", removePercent(categoryData.defense || "N/A")]);
         table.push(["Defense Ranking", categoryData.defense_ranking !== null ? categoryData.defense_ranking : "N/A"]);
-        table.push(["D-I Avg", categoryData.d1_avg || "N/A"]);
+        table.push(["D-I Avg", removePercent(categoryData.d1_avg || "N/A")]);
       }
       
       return table;
@@ -1468,11 +1495,11 @@ function GET_TEAM_META(url) {
         if (categoryData) {
           table.push([
             category,
-            categoryData.offense || "",
+            removePercent(categoryData.offense || ""),
             categoryData.offense_ranking !== null ? categoryData.offense_ranking : "",
-            categoryData.defense || "",
+            removePercent(categoryData.defense || ""),
             categoryData.defense_ranking !== null ? categoryData.defense_ranking : "",
-            categoryData.d1_avg || ""
+            removePercent(categoryData.d1_avg || "")
           ]);
         }
       });
