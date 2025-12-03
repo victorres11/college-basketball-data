@@ -2,7 +2,7 @@ services:
   - type: web
     name: cbb-data-generator
     env: python
-    buildCommand: cd web-ui && pip install -r requirements.txt && python -m playwright install chromium
+    buildCommand: cd web-ui && pip install -r requirements.txt && python -m playwright install --with-deps chromium
     startCommand: cd web-ui && gunicorn app:app --bind 0.0.0.0:$PORT
     envVars:
       - key: CBB_API_KEY
