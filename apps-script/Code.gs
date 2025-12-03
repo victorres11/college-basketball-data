@@ -1322,7 +1322,7 @@ function GET_TEAM_META(url) {
       var reportTable = data.kenpom.reportTable || data.kenpom.report_table_structured;
       
       if (!reportTable) {
-        return [["KenPom data not available"], ["KenPom object exists but reportTable is missing"], ["Structure: " + JSON.stringify(Object.keys(data.kenpom))]];
+        return [["KenPom data not available"], ["KenPom object exists but reportTable is missing"], ["Available keys: " + Object.keys(data.kenpom).join(", ")]];
       }
       var table = [
         ["=== KENPOM REPORT TABLE ==="],
@@ -1489,17 +1489,7 @@ function GET_TEAM_META(url) {
   
   function GET_WIKIPEDIA_DATA(url) {
     try {
-      if (!url || url === "") {
-        return [["Error: URL is required"]];
-      }
-      
-      var response = UrlFetchApp.fetch(url, {'muteHttpExceptions': true});
-      var responseCode = response.getResponseCode();
-      
-      if (responseCode !== 200) {
-        return [["Error: Failed to fetch data (HTTP " + responseCode + ")"]];
-      }
-      
+      var response = UrlFetchApp.fetch(url);
       var data = JSON.parse(response.getContentText());
       
       if (!data.wikipedia) {
