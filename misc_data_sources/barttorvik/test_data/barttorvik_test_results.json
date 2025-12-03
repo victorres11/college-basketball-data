@@ -1,0 +1,902 @@
+[
+  {
+    "rank": 2,
+    "team": "Michigan",
+    "seed": 1,
+    "resume": {
+      "net": 1,
+      "kpi": 1,
+      "sor": 1,
+      "wab": 1,
+      "avg": 1.0
+    },
+    "quality": {
+      "bpi": 5,
+      "kenpom": 1,
+      "trk": 1,
+      "avg": 2.3
+    },
+    "quadrants": {
+      "q1a": {
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0
+      },
+      "q1": {
+        "record": "3-0",
+        "wins": 3,
+        "losses": 0
+      },
+      "q2": {
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0
+      },
+      "q1_and_q2": {
+        "record": "4-0",
+        "wins": 4,
+        "losses": 0
+      },
+      "q3": {
+        "record": "3-0",
+        "wins": 3,
+        "losses": 0
+      },
+      "q4": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      }
+    }
+  },
+  {
+    "rank": 4,
+    "team": "Purdue",
+    "seed": 1,
+    "resume": {
+      "net": 3,
+      "kpi": 4,
+      "sor": 3,
+      "wab": 2,
+      "avg": 3.0
+    },
+    "quality": {
+      "bpi": 8,
+      "kenpom": 2,
+      "trk": 5,
+      "avg": 5.0
+    },
+    "quadrants": {
+      "q1a": {
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0
+      },
+      "q1": {
+        "record": "2-0",
+        "wins": 2,
+        "losses": 0
+      },
+      "q2": {
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0
+      },
+      "q1_and_q2": {
+        "record": "3-0",
+        "wins": 3,
+        "losses": 0
+      },
+      "q3": {
+        "record": "2-0",
+        "wins": 2,
+        "losses": 0
+      },
+      "q4": {
+        "record": "2-0",
+        "wins": 2,
+        "losses": 0
+      }
+    }
+  },
+  {
+    "rank": 17,
+    "team": "Illinois",
+    "seed": 4,
+    "resume": {
+      "net": 24,
+      "kpi": 34,
+      "sor": 48,
+      "wab": 40,
+      "avg": 40.7
+    },
+    "quality": {
+      "bpi": 18,
+      "kenpom": 17,
+      "trk": 12,
+      "avg": 15.7
+    },
+    "quadrants": {
+      "q1a": {
+        "record": "0-2",
+        "wins": 0,
+        "losses": 2
+      },
+      "q1": {
+        "record": "0-2",
+        "wins": 0,
+        "losses": 2
+      },
+      "q2": {
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0
+      },
+      "q1_and_q2": {
+        "record": "1-2",
+        "wins": 1,
+        "losses": 2
+      },
+      "q3": {
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0
+      },
+      "q4": {
+        "record": "4-0",
+        "wins": 4,
+        "losses": 0
+      }
+    }
+  },
+  {
+    "rank": 18,
+    "team": "Michigan St.",
+    "seed": 2,
+    "resume": {
+      "net": 10,
+      "kpi": 9,
+      "sor": 5,
+      "wab": 5,
+      "avg": 6.3
+    },
+    "quality": {
+      "bpi": 21,
+      "kenpom": 15,
+      "trk": 14,
+      "avg": 16.7
+    },
+    "quadrants": {
+      "q1a": {
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0
+      },
+      "q1": {
+        "record": "3-0",
+        "wins": 3,
+        "losses": 0
+      },
+      "q2": {
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0
+      },
+      "q1_and_q2": {
+        "record": "4-0",
+        "wins": 4,
+        "losses": 0
+      },
+      "q3": {
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0
+      },
+      "q4": {
+        "record": "3-0",
+        "wins": 3,
+        "losses": 0
+      }
+    }
+  },
+  {
+    "rank": 19,
+    "team": "Indiana",
+    "seed": 5,
+    "resume": {
+      "net": 13,
+      "kpi": 25,
+      "sor": 23,
+      "wab": 34,
+      "avg": 27.3
+    },
+    "quality": {
+      "bpi": 13,
+      "kenpom": 19,
+      "trk": 20,
+      "avg": 17.3
+    },
+    "quadrants": {
+      "q1a": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q1": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q2": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q1_and_q2": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q3": {
+        "record": "2-0",
+        "wins": 2,
+        "losses": 0
+      },
+      "q4": {
+        "record": "5-0",
+        "wins": 5,
+        "losses": 0
+      }
+    }
+  },
+  {
+    "rank": 22,
+    "team": "UCLA",
+    "seed": 8,
+    "resume": {
+      "net": 72,
+      "kpi": 97,
+      "sor": 108,
+      "wab": 78,
+      "avg": 94.3
+    },
+    "quality": {
+      "bpi": 23,
+      "kenpom": 32,
+      "trk": 22,
+      "avg": 25.7
+    },
+    "quadrants": {
+      "q1a": {
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1
+      },
+      "q1": {
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1
+      },
+      "q2": {
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1
+      },
+      "q1_and_q2": {
+        "record": "0-2",
+        "wins": 0,
+        "losses": 2
+      },
+      "q3": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q4": {
+        "record": "5-0",
+        "wins": 5,
+        "losses": 0
+      }
+    }
+  },
+  {
+    "rank": 25,
+    "team": "Ohio St.",
+    "seed": 7,
+    "resume": {
+      "net": 62,
+      "kpi": 110,
+      "sor": 64,
+      "wab": 84,
+      "avg": 86.0
+    },
+    "quality": {
+      "bpi": 27,
+      "kenpom": 33,
+      "trk": 25,
+      "avg": 28.3
+    },
+    "quadrants": {
+      "q1a": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q1": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q2": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q1_and_q2": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q3": {
+        "record": "1-1",
+        "wins": 1,
+        "losses": 1
+      },
+      "q4": {
+        "record": "5-0",
+        "wins": 5,
+        "losses": 0
+      }
+    }
+  },
+  {
+    "rank": 26,
+    "team": "Wisconsin",
+    "seed": 10,
+    "resume": {
+      "net": 68,
+      "kpi": 87,
+      "sor": 68,
+      "wab": 77,
+      "avg": 77.3
+    },
+    "quality": {
+      "bpi": 25,
+      "kenpom": 27,
+      "trk": 35,
+      "avg": 29.0
+    },
+    "quadrants": {
+      "q1a": {
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1
+      },
+      "q1": {
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1
+      },
+      "q2": {
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1
+      },
+      "q1_and_q2": {
+        "record": "0-2",
+        "wins": 0,
+        "losses": 2
+      },
+      "q3": {
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0
+      },
+      "q4": {
+        "record": "4-0",
+        "wins": 4,
+        "losses": 0
+      }
+    }
+  },
+  {
+    "rank": 28,
+    "team": "Iowa",
+    "seed": 6,
+    "resume": {
+      "net": 16,
+      "kpi": 28,
+      "sor": 17,
+      "wab": 29,
+      "avg": 24.7
+    },
+    "quality": {
+      "bpi": 46,
+      "kenpom": 21,
+      "trk": 21,
+      "avg": 29.3
+    },
+    "quadrants": {
+      "q1a": {
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1
+      },
+      "q1": {
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1
+      },
+      "q2": {
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0
+      },
+      "q1_and_q2": {
+        "record": "1-1",
+        "wins": 1,
+        "losses": 1
+      },
+      "q3": {
+        "record": "2-0",
+        "wins": 2,
+        "losses": 0
+      },
+      "q4": {
+        "record": "4-0",
+        "wins": 4,
+        "losses": 0
+      }
+    }
+  },
+  {
+    "rank": 29,
+    "team": "USC",
+    "seed": 6,
+    "resume": {
+      "net": 23,
+      "kpi": 5,
+      "sor": 19,
+      "wab": 13,
+      "avg": 12.3
+    },
+    "quality": {
+      "bpi": 37,
+      "kenpom": 26,
+      "trk": 27,
+      "avg": 30.0
+    },
+    "quadrants": {
+      "q1a": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q1": {
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0
+      },
+      "q2": {
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0
+      },
+      "q1_and_q2": {
+        "record": "2-0",
+        "wins": 2,
+        "losses": 0
+      },
+      "q3": {
+        "record": "2-0",
+        "wins": 2,
+        "losses": 0
+      },
+      "q4": {
+        "record": "3-0",
+        "wins": 3,
+        "losses": 0
+      }
+    }
+  },
+  {
+    "rank": 47,
+    "team": "Nebraska",
+    "seed": 11,
+    "resume": {
+      "net": 32,
+      "kpi": 11,
+      "sor": 14,
+      "wab": 21,
+      "avg": 15.3
+    },
+    "quality": {
+      "bpi": 45,
+      "kenpom": 50,
+      "trk": 45,
+      "avg": 46.7
+    },
+    "quadrants": {
+      "q1a": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q1": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q2": {
+        "record": "2-0",
+        "wins": 2,
+        "losses": 0
+      },
+      "q1_and_q2": {
+        "record": "2-0",
+        "wins": 2,
+        "losses": 0
+      },
+      "q3": {
+        "record": "2-0",
+        "wins": 2,
+        "losses": 0
+      },
+      "q4": {
+        "record": "4-0",
+        "wins": 4,
+        "losses": 0
+      }
+    }
+  },
+  {
+    "rank": 53,
+    "team": "Northwestern",
+    "seed": null,
+    "resume": {
+      "net": 46,
+      "kpi": 55,
+      "sor": 78,
+      "wab": 82,
+      "avg": 71.7
+    },
+    "quality": {
+      "bpi": 52,
+      "kenpom": 53,
+      "trk": 55,
+      "avg": 53.3
+    },
+    "quadrants": {
+      "q1a": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q1": {
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1
+      },
+      "q2": {
+        "record": "1-1",
+        "wins": 1,
+        "losses": 1
+      },
+      "q1_and_q2": {
+        "record": "1-2",
+        "wins": 1,
+        "losses": 2
+      },
+      "q3": {
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0
+      },
+      "q4": {
+        "record": "3-0",
+        "wins": 3,
+        "losses": 0
+      }
+    }
+  },
+  {
+    "rank": 61,
+    "team": "Washington",
+    "seed": null,
+    "resume": {
+      "net": 74,
+      "kpi": 58,
+      "sor": 84,
+      "wab": 86,
+      "avg": 76.0
+    },
+    "quality": {
+      "bpi": 74,
+      "kenpom": 57,
+      "trk": 61,
+      "avg": 64.0
+    },
+    "quadrants": {
+      "q1a": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q1": {
+        "record": "0-2",
+        "wins": 0,
+        "losses": 2
+      },
+      "q2": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q1_and_q2": {
+        "record": "0-2",
+        "wins": 0,
+        "losses": 2
+      },
+      "q3": {
+        "record": "2-0",
+        "wins": 2,
+        "losses": 0
+      },
+      "q4": {
+        "record": "3-0",
+        "wins": 3,
+        "losses": 0
+      }
+    }
+  },
+  {
+    "rank": 77,
+    "team": "Oregon",
+    "seed": null,
+    "resume": {
+      "net": 192,
+      "kpi": 178,
+      "sor": 120,
+      "wab": 184,
+      "avg": 160.7
+    },
+    "quality": {
+      "bpi": 76,
+      "kenpom": 86,
+      "trk": 62,
+      "avg": 74.7
+    },
+    "quadrants": {
+      "q1a": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q1": {
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1
+      },
+      "q2": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q1_and_q2": {
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1
+      },
+      "q3": {
+        "record": "1-2",
+        "wins": 1,
+        "losses": 2
+      },
+      "q4": {
+        "record": "3-0",
+        "wins": 3,
+        "losses": 0
+      }
+    }
+  },
+  {
+    "rank": 83,
+    "team": "Maryland",
+    "seed": null,
+    "resume": {
+      "net": 203,
+      "kpi": 173,
+      "sor": 75,
+      "wab": 113,
+      "avg": 120.3
+    },
+    "quality": {
+      "bpi": 54,
+      "kenpom": 95,
+      "trk": 99,
+      "avg": 82.7
+    },
+    "quadrants": {
+      "q1a": {
+        "record": "0-2",
+        "wins": 0,
+        "losses": 2
+      },
+      "q1": {
+        "record": "0-2",
+        "wins": 0,
+        "losses": 2
+      },
+      "q2": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q1_and_q2": {
+        "record": "0-2",
+        "wins": 0,
+        "losses": 2
+      },
+      "q3": {
+        "record": "1-1",
+        "wins": 1,
+        "losses": 1
+      },
+      "q4": {
+        "record": "4-0",
+        "wins": 4,
+        "losses": 0
+      }
+    }
+  },
+  {
+    "rank": 93,
+    "team": "Penn St.",
+    "seed": null,
+    "resume": {
+      "net": 84,
+      "kpi": 73,
+      "sor": 77,
+      "wab": 98,
+      "avg": 82.7
+    },
+    "quality": {
+      "bpi": 88,
+      "kenpom": 98,
+      "trk": 92,
+      "avg": 92.7
+    },
+    "quadrants": {
+      "q1a": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q1": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q2": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q1_and_q2": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q3": {
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1
+      },
+      "q4": {
+        "record": "8-0",
+        "wins": 8,
+        "losses": 0
+      }
+    }
+  },
+  {
+    "rank": 102,
+    "team": "Minnesota",
+    "seed": null,
+    "resume": {
+      "net": 143,
+      "kpi": 195,
+      "sor": 201,
+      "wab": 207,
+      "avg": 201.0
+    },
+    "quality": {
+      "bpi": 93,
+      "kenpom": 115,
+      "trk": 100,
+      "avg": 102.7
+    },
+    "quadrants": {
+      "q1a": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q1": {
+        "record": "0-2",
+        "wins": 0,
+        "losses": 2
+      },
+      "q2": {
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1
+      },
+      "q1_and_q2": {
+        "record": "0-3",
+        "wins": 0,
+        "losses": 3
+      },
+      "q3": {
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1
+      },
+      "q4": {
+        "record": "4-0",
+        "wins": 4,
+        "losses": 0
+      }
+    }
+  },
+  {
+    "rank": 117,
+    "team": "Rutgers",
+    "seed": null,
+    "resume": {
+      "net": 184,
+      "kpi": 192,
+      "sor": 155,
+      "wab": 172,
+      "avg": 173.0
+    },
+    "quality": {
+      "bpi": 101,
+      "kenpom": 120,
+      "trk": 133,
+      "avg": 118.0
+    },
+    "quadrants": {
+      "q1a": {
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1
+      },
+      "q1": {
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1
+      },
+      "q2": {
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1
+      },
+      "q1_and_q2": {
+        "record": "0-2",
+        "wins": 0,
+        "losses": 2
+      },
+      "q3": {
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1
+      },
+      "q4": {
+        "record": "5-0",
+        "wins": 5,
+        "losses": 0
+      }
+    }
+  }
+]

@@ -1315,82 +1315,149 @@ function GET_TEAM_META(url) {
     return value;
   }
   
-  // Get full KenPom report table
+  // Get full KenPom report table (includes Bart Torvik data appended)
   function GET_KENPOM_REPORT_TABLE(url) {
     try {
       var response = UrlFetchApp.fetch(url);
       var data = JSON.parse(response.getContentText());
       
+      var table = [];
+      
       // Check if KenPom data exists - handle both old and new structure
       if (!data.kenpom) {
-        return [["KenPom data not available"], ["Data may not have been generated with KenPom information"], ["Note: Regenerate the data file to include KenPom API data"]];
-      }
-      
-      // Check for reportTable (new API structure) or report_table_structured (old scraping structure)
-      var reportTable = data.kenpom.reportTable || data.kenpom.report_table_structured;
-      
-      if (!reportTable) {
-        return [["KenPom data not available"], ["KenPom object exists but reportTable is missing"], ["Available keys: " + Object.keys(data.kenpom).join(", ")]];
-      }
-      var table = [
-        ["=== KENPOM REPORT TABLE ==="],
-        [""],
-        ["Category", "Offense", "Offense Rank", "Defense", "Defense Rank", "D-I Avg"]
-      ];
-      
-      // Process each category
-      for (var category in reportTable) {
-        var categoryData = reportTable[category];
+        table.push(["KenPom data not available"]);
+        table.push(["Data may not have been generated with KenPom information"]);
+        table.push(["Note: Regenerate the data file to include KenPom API data"]);
+      } else {
+        // Check for reportTable (new API structure) or report_table_structured (old scraping structure)
+        var reportTable = data.kenpom.reportTable || data.kenpom.report_table_structured;
         
-        // Handle Adj. Tempo specially (has combined instead of offense/defense)
-        if (category === "Adj. Tempo") {
-          var combined = removePercent(categoryData.combined || "");
-          var ranking = categoryData.ranking !== null ? categoryData.ranking : "";
-          var d1Avg = removePercent(categoryData.d1_avg || "");
-          
-          table.push([
-            category,
-            combined,
-            ranking,
-            "", // No defense for tempo
-            "", // No defense rank
-            d1Avg
-          ]);
-        } else if (categoryData.value !== undefined) {
-          // Handle categories with "value" field (Bench Minutes, D-1 Experience, etc.)
-          var value = removePercent(categoryData.value || "");
-          var ranking = categoryData.ranking !== null ? categoryData.ranking : "";
-          var d1Avg = removePercent(categoryData.d1_avg || "");
-          
-          table.push([
-            category,
-            value,
-            ranking,
-            "", // No defense for value-based categories
-            "", // No defense rank
-            d1Avg
-          ]);
+        if (!reportTable) {
+          table.push(["KenPom data not available"]);
+          table.push(["KenPom object exists but reportTable is missing"]);
+          table.push(["Available keys: " + Object.keys(data.kenpom).join(", ")]);
         } else {
-          // Standard categories with offense/defense
-          var offense = removePercent(categoryData.offense || "");
-          var offenseRank = categoryData.offense_ranking !== null ? categoryData.offense_ranking : "";
-          var defense = removePercent(categoryData.defense || "");
-          var defenseRank = categoryData.defense_ranking !== null ? categoryData.defense_ranking : "";
-          var d1Avg = removePercent(categoryData.d1_avg || "");
+          table.push(["=== KENPOM REPORT TABLE ==="]);
+          table.push([""]);
+          table.push(["Category", "Offense", "Offense Rank", "Defense", "Defense Rank", "D-I Avg"]);
           
-          // Skip empty categories (section headers)
-          if (!offense && !defense && !d1Avg) {
-            continue;
+          // Process each category
+          for (var category in reportTable) {
+            var categoryData = reportTable[category];
+            
+            // Handle Adj. Tempo specially (has combined instead of offense/defense)
+            if (category === "Adj. Tempo") {
+              var combined = removePercent(categoryData.combined || "");
+              var ranking = categoryData.ranking !== null ? categoryData.ranking : "";
+              var d1Avg = removePercent(categoryData.d1_avg || "");
+              
+              table.push([
+                category,
+                combined,
+                ranking,
+                "", // No defense for tempo
+                "", // No defense rank
+                d1Avg
+              ]);
+            } else if (categoryData.value !== undefined) {
+              // Handle categories with "value" field (Bench Minutes, D-1 Experience, etc.)
+              var value = removePercent(categoryData.value || "");
+              var ranking = categoryData.ranking !== null ? categoryData.ranking : "";
+              var d1Avg = removePercent(categoryData.d1_avg || "");
+              
+              table.push([
+                category,
+                value,
+                ranking,
+                "", // No defense for value-based categories
+                "", // No defense rank
+                d1Avg
+              ]);
+            } else {
+              // Standard categories with offense/defense
+              var offense = removePercent(categoryData.offense || "");
+              var offenseRank = categoryData.offense_ranking !== null ? categoryData.offense_ranking : "";
+              var defense = removePercent(categoryData.defense || "");
+              var defenseRank = categoryData.defense_ranking !== null ? categoryData.defense_ranking : "";
+              var d1Avg = removePercent(categoryData.d1_avg || "");
+              
+              // Skip empty categories (section headers)
+              if (!offense && !defense && !d1Avg) {
+                continue;
+              }
+              
+              table.push([
+                category,
+                offense,
+                offenseRank,
+                defense,
+                defenseRank,
+                d1Avg
+              ]);
+            }
           }
-          
-          table.push([
-            category,
-            offense,
-            offenseRank,
-            defense,
-            defenseRank,
-            d1Avg
-          ]);
+        }
+      }
+      
+      // Append Bart Torvik data
+      table.push([""]);
+      table.push(["=== BART TORVIK TEAMSHEET DATA ==="]);
+      table.push([""]);
+      
+      if (!data.barttorvik) {
+        table.push(["Bart Torvik data not available"]);
+        table.push(["Data may not have been generated with Bart Torvik information"]);
+        table.push(["Note: Regenerate the data file to include Bart Torvik data"]);
+      } else {
+        var bt = data.barttorvik;
+        
+        // Basic info
+        table.push(["Rank", bt.rank || "N/A"]);
+        table.push(["Seed", bt.seed || "N/A"]);
+        table.push([""]);
+        
+        // Resume metrics
+        if (bt.resume) {
+          table.push(["=== RESUME METRICS ==="]);
+          table.push(["NET", bt.resume.net || "N/A"]);
+          table.push(["KPI", bt.resume.kpi || "N/A"]);
+          table.push(["SOR", bt.resume.sor || "N/A"]);
+          table.push(["WAB", bt.resume.wab || "N/A"]);
+          table.push(["Avg", bt.resume.avg || "N/A"]);
+          table.push([""]);
+        }
+        
+        // Quality metrics
+        if (bt.quality) {
+          table.push(["=== QUALITY METRICS ==="]);
+          table.push(["BPI", bt.quality.bpi || "N/A"]);
+          table.push(["KenPom", bt.quality.kenpom || "N/A"]);
+          table.push(["TRK", bt.quality.trk || "N/A"]);
+          table.push(["Avg", bt.quality.avg || "N/A"]);
+          table.push([""]);
+        }
+        
+        // Quadrant records
+        if (bt.quadrants) {
+          table.push(["=== QUADRANT RECORDS ==="]);
+          if (bt.quadrants.q1a) {
+            table.push(["Q1A", bt.quadrants.q1a.record || "N/A", "(" + (bt.quadrants.q1a.wins || 0) + "-" + (bt.quadrants.q1a.losses || 0) + ")"]);
+          }
+          if (bt.quadrants.q1) {
+            table.push(["Q1", bt.quadrants.q1.record || "N/A", "(" + (bt.quadrants.q1.wins || 0) + "-" + (bt.quadrants.q1.losses || 0) + ")"]);
+          }
+          if (bt.quadrants.q2) {
+            table.push(["Q2", bt.quadrants.q2.record || "N/A", "(" + (bt.quadrants.q2.wins || 0) + "-" + (bt.quadrants.q2.losses || 0) + ")"]);
+          }
+          if (bt.quadrants.q1_and_q2) {
+            table.push(["Q1&2", bt.quadrants.q1_and_q2.record || "N/A", "(" + (bt.quadrants.q1_and_q2.wins || 0) + "-" + (bt.quadrants.q1_and_q2.losses || 0) + ")"]);
+          }
+          if (bt.quadrants.q3) {
+            table.push(["Q3", bt.quadrants.q3.record || "N/A", "(" + (bt.quadrants.q3.wins || 0) + "-" + (bt.quadrants.q3.losses || 0) + ")"]);
+          }
+          if (bt.quadrants.q4) {
+            table.push(["Q4", bt.quadrants.q4.record || "N/A", "(" + (bt.quadrants.q4.wins || 0) + "-" + (bt.quadrants.q4.losses || 0) + ")"]);
+          }
         }
       }
       

@@ -63,6 +63,16 @@ except ImportError as e:
     KENPOM_API_AVAILABLE = False
     print(f"Warning: KenPom API not available: {e}")
 
+# Import Bart Torvik teamsheets scraper
+sys.path.insert(0, os.path.join(misc_data_sources_path, 'barttorvik', 'scripts'))
+try:
+    from barttorvik_teamsheets import get_team_teamsheet_data
+    BARTTORVIK_SCRAPER_AVAILABLE = True
+    print("[GENERATOR] Bart Torvik scraper import: OK")
+except ImportError as e:
+    BARTTORVIK_SCRAPER_AVAILABLE = False
+    print(f"Warning: Bart Torvik scraper not available: {e}")
+
 # Import Wikipedia scraper
 sys.path.insert(0, os.path.join(misc_data_sources_path, 'wikipedia', 'scripts'))
 try:
@@ -881,6 +891,53 @@ def generate_team_data(team_name, season, progress_callback=None):
     else:
         print(f"[GENERATOR] INFO: KenPom scraper not available, skipping KenPom data")
         add_status('KenPom Data', 'skipped', 'Scraper not available')
+    
+    # Fetch Bart Torvik teamsheet data (optional)
+    if BARTTORVIK_SCRAPER_AVAILABLE:
+        if progress_callback:
+            progress_callback['message'] = 'Fetching Bart Torvik teamsheet data...'
+        print(f"[GENERATOR] Fetching Bart Torvik teamsheet data for {team_name}...")
+        try:
+            barttorvik_data = get_team_teamsheet_data(team_name, year=season)
+            
+            if barttorvik_data:
+                team_data['barttorvik'] = {
+                    'rank': barttorvik_data.get('rank'),
+                    'seed': barttorvik_data.get('seed'),
+                    'resume': barttorvik_data.get('resume', {}),
+                    'quality': barttorvik_data.get('quality', {}),
+                    'quadrants': barttorvik_data.get('quadrants', {}),
+                    'source': 'barttorvik.com',
+                    'url': f'https://barttorvik.com/teamsheets.php?conlimit=All&sort=8&year={season}'
+                }
+                
+                # Log key metrics
+                resume = barttorvik_data.get('resume', {})
+                quality = barttorvik_data.get('quality', {})
+                print(f"[GENERATOR] Bart Torvik - Rank: {barttorvik_data.get('rank', 'N/A')}, Seed: {barttorvik_data.get('seed', 'N/A')}")
+                print(f"[GENERATOR] Bart Torvik Resume - NET: {resume.get('net', 'N/A')}, KPI: {resume.get('kpi', 'N/A')}, Avg: {resume.get('avg', 'N/A')}")
+                print(f"[GENERATOR] Bart Torvik Quality - BPI: {quality.get('bpi', 'N/A')}, KenPom: {quality.get('kenpom', 'N/A')}, Avg: {quality.get('avg', 'N/A')}")
+                
+                # Log quadrant records
+                quadrants = barttorvik_data.get('quadrants', {})
+                if quadrants:
+                    q1_record = quadrants.get('q1', {}).get('record', 'N/A')
+                    q2_record = quadrants.get('q2', {}).get('record', 'N/A')
+                    print(f"[GENERATOR] Bart Torvik Quadrants - Q1: {q1_record}, Q2: {q2_record}")
+                
+                add_status('Bart Torvik Data', 'success', f'Retrieved teamsheet data (Rank: {barttorvik_data.get("rank", "N/A")})')
+            else:
+                print(f"[GENERATOR] WARNING: Bart Torvik data not found for {team_name}")
+                add_status('Bart Torvik Data', 'failed', 'Team not found in Bart Torvik data')
+        except Exception as e:
+            print(f"[GENERATOR] WARNING: Failed to fetch Bart Torvik data for {team_name}: {e}")
+            import traceback
+            traceback.print_exc()
+            add_status('Bart Torvik Data', 'failed', str(e))
+            # Don't fail the entire generation if Bart Torvik scraping fails
+    else:
+        print(f"[GENERATOR] INFO: Bart Torvik scraper not available, skipping Bart Torvik data")
+        add_status('Bart Torvik Data', 'skipped', 'Scraper not available')
     
     # Fetch Wikipedia data (optional)
     if WIKIPEDIA_SCRAPER_AVAILABLE:

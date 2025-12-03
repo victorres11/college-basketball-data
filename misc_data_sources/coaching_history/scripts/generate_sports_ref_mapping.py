@@ -166,7 +166,7 @@ def main():
     output_file = os.path.join(os.path.dirname(__file__), '..', 'mappings', 'sports_ref_team_mapping.json')
     with open(output_file, 'w') as f:
         json.dump(output, f, indent=2)
-
+    
     print(f"\n✅ Mapping saved to {output_file}")
     print(f"   Total mappings: {len(mappings)}")
     
