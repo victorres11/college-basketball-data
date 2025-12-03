@@ -1487,7 +1487,7 @@ function GET_TEAM_META(url) {
   // CATEGORY: WIKIPEDIA DATA
   // ========================================
   
-  function GET_WIKIPEDIA_DATA(url) {
+  function GET_WIKI_DATA(url) {
     try {
       var response = UrlFetchApp.fetch(url);
       var data = JSON.parse(response.getContentText());
