@@ -17,7 +17,7 @@ jobs:
         run: |
           curl -X POST "${{ secrets.RENDER_WEBHOOK_URL }}" \
             -H "Content-Type: application/json" \
-            -d '{"ref": "${{ github.ref }}", "commit": "${{ github.sha }}", "message": "${{ github.event.head_commit.message }}"}' \
+            -d "{\"ref\": \"${{ github.ref }}\", \"commit\": \"${{ github.sha }}\", \"message\": \"${{ github.event.head_commit.message }}\"}" \
             -f || echo "Webhook call failed"
         env:
           RENDER_WEBHOOK_URL: ${{ secrets.RENDER_WEBHOOK_URL }}
