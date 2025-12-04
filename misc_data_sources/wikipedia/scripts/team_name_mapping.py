@@ -80,6 +80,9 @@ TEAM_WIKIPEDIA_MAPPING = {
     'washington': "Washington Huskies men's basketball",
     'eastern washington': "Eastern Washington Eagles men's basketball",
     'msu': "Michigan State Spartans men's basketball",
+    'utsa': "UTSA Roadrunners men's basketball",
+    'texas-san antonio': "UTSA Roadrunners men's basketball",
+    'university of texas at san antonio': "UTSA Roadrunners men's basketball",
 }
 
 
