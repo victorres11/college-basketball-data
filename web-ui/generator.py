@@ -794,9 +794,9 @@ def generate_team_data(team_name, season, progress_callback=None):
         try:
             sports_ref_slug = get_sports_ref_slug(team_slug)
             print(f"[GENERATOR] Using Sports Reference slug: {sports_ref_slug}")
-            coach_history = get_coach_history(sports_ref_slug, years=6)
+            coach_history = get_coach_history(sports_ref_slug, years=None)  # Get all seasons
             if coach_history and len(coach_history) > 0:
-                # Calculate average wins (overall and conference) for the 6 seasons
+                # Calculate average wins (overall and conference) for all seasons
                 total_overall_wins = 0
                 total_conference_wins = 0
                 seasons_counted = 0
@@ -840,8 +840,8 @@ def generate_team_data(team_name, season, progress_callback=None):
                 
                 print(f"[GENERATOR] Found coach history for {team_name}")
                 print(f"[GENERATOR] Retrieved {len(coach_history)} complete seasons (excluding current incomplete season)")
-                print(f"[GENERATOR] Average overall wins: {avg_overall_wins:.1f}")
-                print(f"[GENERATOR] Average conference wins: {avg_conference_wins:.1f}")
+                print(f"[GENERATOR] Average overall wins (all seasons): {avg_overall_wins:.1f}")
+                print(f"[GENERATOR] Average conference wins (all seasons): {avg_conference_wins:.1f}")
                 # Log first and last seasons
                 if len(coach_history) > 0:
                     first = coach_history[0]
@@ -866,10 +866,11 @@ def generate_team_data(team_name, season, progress_callback=None):
     if KENPOM_API_AVAILABLE:
         if progress_callback:
             progress_callback['message'] = 'Fetching KenPom data...'
-        print(f"[GENERATOR] Fetching KenPom data for {team_name}...")
+        print(f"[GENERATOR] Fetching KenPom data for {team_name} (season {season})...")
         try:
             # Use team_name for KenPom lookup (it handles normalization internally)
-            kenpom_result = get_kenpom_team_data(team_name)
+            # Pass season parameter to ensure correct season data is fetched
+            kenpom_result = get_kenpom_team_data(team_name, season=season)
             
             if kenpom_result and 'data' in kenpom_result:
                 kenpom_data = kenpom_result['data']

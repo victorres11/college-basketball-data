@@ -19,6 +19,27 @@ function GET_TEAM_META(url) {
   return CBBData.GET_TEAM_META(url);
 }
 
+/**
+ * Get full school coaching history (all available seasons, excluding current incomplete season)
+ * @param {string} url - URL to the JSON data file (typically in cell A1)
+ * @return {Array<Array>} Table with all seasons of coaching history
+ * @customfunction
+ */
+function GET_SCHOOL_COACHING_HISTORY(url) {
+  return CBBData.GET_SCHOOL_COACHING_HISTORY(url);
+}
+
+/**
+ * Get the number of seasons the current coach has been with the team
+ * Counts consecutive seasons with the same coach (including current incomplete season)
+ * @param {string} url - URL to the JSON data file (typically in cell A1)
+ * @return {string} Number of seasons as a string (e.g., "3" if coach has 2 complete seasons + current season)
+ * @customfunction
+ */
+function GET_CURRENT_COACH_SEASON_COUNT(url) {
+  return CBBData.GET_CURRENT_COACH_SEASON_COUNT(url);
+}
+
 // ========================================
 // CATEGORY 2: TEAM RANKINGS
 // ========================================
@@ -83,6 +104,16 @@ function GET_TEAM_GAMES(url) {
  */
 function GET_PLAYERS_FULL(url) {
   return CBBData.GET_PLAYERS_FULL(url);
+}
+
+/**
+ * Get complete player roster with all season stats, rankings, and advanced metrics (sorted by jersey number)
+ * @param {string} url - URL to the JSON data file (typically in cell A1)
+ * @return {Array<Array>} Table with all players and comprehensive statistics, sorted by jersey number ascending
+ * @customfunction
+ */
+function GET_PLAYERS_FULL_NUMERIC(url) {
+  return CBBData.GET_PLAYERS_FULL_NUMERIC(url);
 }
 
 // ========================================

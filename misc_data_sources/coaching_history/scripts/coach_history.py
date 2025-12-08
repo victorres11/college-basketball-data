@@ -109,13 +109,13 @@ def get_winningest_coach(team_slug):
     
     return None
 
-def get_coach_history(team_slug, years=6):
+def get_coach_history(team_slug, years=None):
     """
     Fetch head coach history for a team from Sports Reference.
     
     Args:
         team_slug: Team identifier for Sports Reference URL (e.g., 'oregon')
-        years: Number of recent years to fetch (default: 6)
+        years: Number of recent years to fetch (default: None = all seasons)
     
     Returns:
         list: List of dictionaries with season data
@@ -167,9 +167,13 @@ def get_coach_history(team_slug, years=6):
     # Row 1 is the actual header with "Rk", "Season", etc.
     # Row 2 is the current/incomplete season (e.g., 2025-26)
     # Row 3+ are complete seasons
-    # Skip current season and get last N complete seasons (starting from row 3)
+    # Skip current season and get complete seasons (starting from row 3)
     start_row = 3  # Skip current incomplete season
-    end_row = start_row + years
+    # If years is None, get all seasons; otherwise limit to specified number
+    if years is None:
+        end_row = len(rows)  # Get all remaining rows
+    else:
+        end_row = start_row + years
     for row in rows[start_row:end_row]:
         cols = row.find_all(['td', 'th'])
         if len(cols) < 19:  # Need at least 19 columns

@@ -154,6 +154,98 @@ function GET_TEAM_META(url) {
   }
   
   // ========================================
+  // SCHOOL COACHING HISTORY
+  // ========================================
+  
+  function GET_SCHOOL_COACHING_HISTORY(url) {
+    try {
+      var response = UrlFetchApp.fetch(url);
+      var data = JSON.parse(response.getContentText());
+      
+      // Check if coach history exists
+      if (!data.coachHistory || !data.coachHistory.seasons || data.coachHistory.seasons.length === 0) {
+        return [["Coach history not available"], ["Data may not have been generated with coach history information"]];
+      }
+      
+      var table = [
+        ["=== SCHOOL COACHING HISTORY ==="],
+        [""],
+        ["Season", "Conference", "Overall W-L", "Conf W-L", "NCAA Tournament", "Seed", "Coach"]
+      ];
+      
+      // Get all seasons (full history, not just last 6)
+      data.coachHistory.seasons.forEach(function(season) {
+        table.push([
+          season.season || "",
+          season.conference || "",
+          season.overallWL || "",
+          season.conferenceWL || "",
+          season.ncaaTournament || "",
+          season.seed || "",
+          season.coach || ""
+        ]);
+      });
+      
+      // Add source information
+      if (data.coachHistory.source) {
+        table.push([""]);
+        table.push(["Source", data.coachHistory.source]);
+      }
+      if (data.coachHistory.url) {
+        table.push(["URL", data.coachHistory.url]);
+      }
+      
+      return table;
+    } catch (e) {
+      return [["Error: " + e.message]];
+    }
+  }
+  
+  // ========================================
+  // CURRENT COACH SEASON COUNT
+  // ========================================
+  
+  function GET_CURRENT_COACH_SEASON_COUNT(url) {
+    try {
+      var response = UrlFetchApp.fetch(url);
+      var data = JSON.parse(response.getContentText());
+      
+      // Check if coach history exists
+      if (!data.coachHistory || !data.coachHistory.seasons || data.coachHistory.seasons.length === 0) {
+        return "N/A";
+      }
+      
+      var seasons = data.coachHistory.seasons;
+      
+      // Get the current coach (most recent season, first in array)
+      var currentCoach = seasons[0].coach;
+      if (!currentCoach) {
+        return "N/A";
+      }
+      
+      // Count consecutive seasons with the same coach (starting from most recent)
+      var count = 0;
+      for (var i = 0; i < seasons.length; i++) {
+        if (seasons[i].coach === currentCoach) {
+          count++;
+        } else {
+          // Stop counting when we hit a different coach
+          break;
+        }
+      }
+      
+      // Add 1 for the current incomplete season (which is skipped in the data)
+      // The scraper skips the current incomplete season, so if the coach is still there,
+      // we add 1 to account for the current season
+      count = count + 1;
+      
+      return count.toString();
+    } catch (e) {
+      return "Error: " + e.message;
+    }
+  }
+  
+  // ========================================
   // CATEGORY 2: TEAM RANKINGS
   // ========================================
   
@@ -516,11 +608,11 @@ function GET_TEAM_META(url) {
           game.teamStats.points.total,
           game.opponentStats.points.total,
           game.teamStats.fieldGoals.made + "-" + game.teamStats.fieldGoals.attempted,
-          game.teamStats.fieldGoals.pct + "%",
+          (game.teamStats.fieldGoals.pct / 100).toFixed(3),
           game.teamStats.threePointFieldGoals.made + "-" + game.teamStats.threePointFieldGoals.attempted,
-          game.teamStats.threePointFieldGoals.pct + "%",
+          (game.teamStats.threePointFieldGoals.pct / 100).toFixed(3),
           game.teamStats.freeThrows.made + "-" + game.teamStats.freeThrows.attempted,
-          game.teamStats.freeThrows.pct + "%",
+          (game.teamStats.freeThrows.pct / 100).toFixed(3),
           game.teamStats.rebounds.offensive,
           game.teamStats.rebounds.defensive,
           game.teamStats.rebounds.total,
@@ -530,11 +622,11 @@ function GET_TEAM_META(url) {
           game.teamStats.turnovers.total,
           game.teamStats.fouls.total,
           game.opponentStats.fieldGoals.made + "-" + game.opponentStats.fieldGoals.attempted,
-          game.opponentStats.fieldGoals.pct + "%",
+          (game.opponentStats.fieldGoals.pct / 100).toFixed(3),
           game.opponentStats.threePointFieldGoals.made + "-" + game.opponentStats.threePointFieldGoals.attempted,
-          game.opponentStats.threePointFieldGoals.pct + "%",
+          (game.opponentStats.threePointFieldGoals.pct / 100).toFixed(3),
           game.opponentStats.freeThrows.made + "-" + game.opponentStats.freeThrows.attempted,
-          game.opponentStats.freeThrows.pct + "%",
+          (game.opponentStats.freeThrows.pct / 100).toFixed(3),
           game.opponentStats.rebounds.offensive,
           game.opponentStats.rebounds.defensive,
           game.opponentStats.rebounds.total,
@@ -629,6 +721,203 @@ function GET_TEAM_META(url) {
       
       // Combine: top 9 first, then rest
       var sortedPlayers = top9.concat(rest);
+      
+      // Helper function to safely get nested values
+      var safe = function(obj, path, defaultVal) {
+        if (!obj) return defaultVal || "";
+        var keys = path.split('.');
+        var val = obj;
+        for (var i = 0; i < keys.length; i++) {
+          if (val === null || val === undefined) return defaultVal || "";
+          val = val[keys[i]];
+        }
+        return val !== null && val !== undefined ? val : (defaultVal || "");
+      };
+      
+      sortedPlayers.forEach(function(player) {
+        var st = player.seasonTotals;
+        var cr = player.conferenceRankings;
+        
+        table.push([
+          // Basic Info
+          player.name || "",
+          player.jerseyNumber || "",
+          player.position || "",
+          player.height || "",
+          player.class || "",
+          player.isFreshman || false,
+          player.hometown || "",
+          player.highSchool || "",
+          // Season Totals - Playing Time
+          safe(st, 'games', 0),
+          safe(st, 'gamesStarted', 0),
+          safe(st, 'minutes', 0),
+          safe(st, 'mpg', 0),
+          // Season Totals - Scoring
+          safe(st, 'points', 0),
+          safe(st, 'ppg', 0),
+          // Season Totals - Rebounds
+          safe(st, 'rebounds.offensive', 0),
+          safe(st, 'rebounds.defensive', 0),
+          safe(st, 'rebounds.total', 0),
+          safe(st, 'rpg', 0),
+          // Season Totals - Playmaking
+          safe(st, 'assists', 0),
+          safe(st, 'apg', 0),
+          safe(st, 'turnovers', 0),
+          safe(st, 'assistToTurnoverRatio', 0),
+          // Season Totals - Defense
+          safe(st, 'steals', 0),
+          safe(st, 'spg', 0),
+          safe(st, 'blocks', 0),
+          safe(st, 'bpg', 0),
+          // Season Totals - Shooting
+          safe(st, 'fieldGoals.made', 0),
+          safe(st, 'fieldGoals.attempted', 0),
+          safe(st, 'fieldGoals.percentage', 0),
+          safe(player, 'twoPointFieldGoals.made', 0),
+          safe(player, 'twoPointFieldGoals.attempted', 0),
+          safe(player, 'twoPointFieldGoals.pct', 0),
+          safe(st, 'threePointFieldGoals.made', 0),
+          safe(st, 'threePointFieldGoals.attempted', 0),
+          safe(st, 'threePointFieldGoals.percentage', 0),
+          safe(st, 'freeThrows.made', 0),
+          safe(st, 'freeThrows.attempted', 0),
+          safe(st, 'freeThrows.percentage', 0),
+          // Advanced Stats (directly on player object)
+          safe(player, 'offensiveRating', ""),
+          safe(player, 'defensiveRating', ""),
+          safe(player, 'netRating', ""),
+          safe(player, 'PORPAG', ""),
+          safe(player, 'usage', ""),
+          safe(player, 'assistsTurnoverRatio', ""),
+          safe(player, 'offensiveReboundPct', ""),
+          safe(player, 'freeThrowRate', ""),
+          safe(player, 'effectiveFieldGoalPct', ""),
+          safe(player, 'trueShootingPct', ""),
+          safe(player, 'winShares.offensive', ""),
+          safe(player, 'winShares.defensive', ""),
+          safe(player, 'winShares.total', ""),
+          safe(player, 'winShares.totalPer40', ""),
+          // Conference Rankings - Original 13
+          cr && cr.pointsPerGame ? cr.pointsPerGame.rank + "/" + cr.pointsPerGame.totalPlayers : "",
+          cr && cr.assistsPerGame ? cr.assistsPerGame.rank + "/" + cr.assistsPerGame.totalPlayers : "",
+          cr && cr.reboundsPerGame ? cr.reboundsPerGame.rank + "/" + cr.reboundsPerGame.totalPlayers : "",
+          cr && cr.stealsPerGame ? cr.stealsPerGame.rank + "/" + cr.stealsPerGame.totalPlayers : "",
+          cr && cr.blocksPerGame ? cr.blocksPerGame.rank + "/" + cr.blocksPerGame.totalPlayers : "",
+          cr && cr.fieldGoalPct ? cr.fieldGoalPct.rank + "/" + cr.fieldGoalPct.totalPlayers : "",
+          cr && cr.threePointPct ? cr.threePointPct.rank + "/" + cr.threePointPct.totalPlayers : "",
+          cr && cr.freeThrowPct ? cr.freeThrowPct.rank + "/" + cr.freeThrowPct.totalPlayers : "",
+          cr && cr.effectiveFieldGoalPct ? cr.effectiveFieldGoalPct.rank + "/" + cr.effectiveFieldGoalPct.totalPlayers : "",
+          cr && cr.assistToTurnoverRatio ? cr.assistToTurnoverRatio.rank + "/" + cr.assistToTurnoverRatio.totalPlayers : "",
+          cr && cr.offensiveRating ? cr.offensiveRating.rank + "/" + cr.offensiveRating.totalPlayers : "",
+          cr && cr.defensiveRating ? cr.defensiveRating.rank + "/" + cr.defensiveRating.totalPlayers : "",
+          cr && cr.netRating ? cr.netRating.rank + "/" + cr.netRating.totalPlayers : "",
+          // Conference Rankings - New 12 (volume/total stats)
+          cr && cr.minutesPerGame ? cr.minutesPerGame.rank + "/" + cr.minutesPerGame.totalPlayers : "",
+          cr && cr.fieldGoalsMade ? cr.fieldGoalsMade.rank + "/" + cr.fieldGoalsMade.totalPlayers : "",
+          cr && cr.fieldGoalsAttempted ? cr.fieldGoalsAttempted.rank + "/" + cr.fieldGoalsAttempted.totalPlayers : "",
+          cr && cr.threePointFieldGoalsMade ? cr.threePointFieldGoalsMade.rank + "/" + cr.threePointFieldGoalsMade.totalPlayers : "",
+          cr && cr.threePointFieldGoalsAttempted ? cr.threePointFieldGoalsAttempted.rank + "/" + cr.threePointFieldGoalsAttempted.totalPlayers : "",
+          cr && cr.freeThrowsMade ? cr.freeThrowsMade.rank + "/" + cr.freeThrowsMade.totalPlayers : "",
+          cr && cr.freeThrowsAttempted ? cr.freeThrowsAttempted.rank + "/" + cr.freeThrowsAttempted.totalPlayers : "",
+          cr && cr.offensiveRebounds ? cr.offensiveRebounds.rank + "/" + cr.offensiveRebounds.totalPlayers : "",
+          cr && cr.defensiveRebounds ? cr.defensiveRebounds.rank + "/" + cr.defensiveRebounds.totalPlayers : "",
+          cr && cr.totalRebounds ? cr.totalRebounds.rank + "/" + cr.totalRebounds.totalPlayers : "",
+          cr && cr.totalAssists ? cr.totalAssists.rank + "/" + cr.totalAssists.totalPlayers : "",
+          cr && cr.totalBlocks ? cr.totalBlocks.rank + "/" + cr.totalBlocks.totalPlayers : "",
+          // Season Totals - Fouls/Ejections (moved to end)
+          safe(st, 'fouls', 0),
+          safe(st, 'foulOuts', 0),
+          safe(st, 'ejections', 0),
+          // Shooting Breakdown (from shootingStats) - moved to end to preserve column positions
+          safe(player, 'shootingStats.dunks.attempted', 0),
+          safe(player, 'shootingStats.dunks.made', 0),
+          safe(player, 'shootingStats.dunks.pct', 0),
+          safe(player, 'shootingStats.layups.attempted', 0),
+          safe(player, 'shootingStats.layups.made', 0),
+          safe(player, 'shootingStats.layups.pct', 0),
+          safe(player, 'shootingStats.tipIns.attempted', 0),
+          safe(player, 'shootingStats.tipIns.made', 0),
+          safe(player, 'shootingStats.tipIns.pct', 0),
+          safe(player, 'shootingStats.twoPointJumpers.attempted', 0),
+          safe(player, 'shootingStats.twoPointJumpers.made', 0),
+          safe(player, 'shootingStats.twoPointJumpers.pct', 0),
+          safe(player, 'shootingStats.threePointJumpers.attempted', 0),
+          safe(player, 'shootingStats.threePointJumpers.made', 0),
+          safe(player, 'shootingStats.threePointJumpers.pct', 0)
+        ]);
+      });
+      
+      return table;
+    } catch (e) {
+      return [["Error: " + e.message], ["Line: " + e.lineNumber]];
+    }
+  }
+  
+  // ========================================
+  // CATEGORY 5: INDIVIDUAL PLAYERS - ALL DATA (NUMERIC SORT)
+  // ========================================
+  
+  function GET_PLAYERS_FULL_NUMERIC(url) {
+    try {
+      var response = UrlFetchApp.fetch(url);
+      var data = JSON.parse(response.getContentText());
+      
+      var table = [[
+        // Basic Info
+        "Name", "Jersey", "Position", "Height", "Class", "Freshman", "Hometown", "High School",
+        // Season Totals - Playing Time
+        "Games", "GS", "Min", "MPG",
+        // Season Totals - Scoring
+        "Pts", "PPG",
+        // Season Totals - Rebounds
+        "OReb", "DReb", "TReb", "RPG",
+        // Season Totals - Playmaking
+        "Ast", "APG", "TO", "A/TO",
+        // Season Totals - Defense
+        "Stl", "SPG", "Blk", "BPG",
+        // Season Totals - Shooting
+        "FGM", "FGA", "FG%", "2PM", "2PA", "2P%",
+        "3PM", "3PA", "3P%", "FTM", "FTA", "FT%",
+        // Advanced Stats
+        "ORtg", "DRtg", "NetRtg", "PORPAG", "Usage%",
+        "AST/TO", "OReb%", "FTR", "eFG%", "TS%",
+        "WS Off", "WS Def", "WS Total", "WS/40",
+        // Conference Rankings - Per Game Stats (original 13)
+        "PPG Rank", "APG Rank", "RPG Rank", "SPG Rank", "BPG Rank",
+        "FG% Rank", "3P% Rank", "FT% Rank", "eFG% Rank",
+        "A/TO Rank", "ORtg Rank", "DRtg Rank", "NetRtg Rank",
+        // Conference Rankings - New Total/Volume Stats (12 new)
+        "MPG Rank", "FGM Rank", "FGA Rank", "3PM Rank", "3PA Rank",
+        "FTM Rank", "FTA Rank", "OReb Rank", "DReb Rank", "TReb Rank",
+        "Ast Rank", "Blk Rank",
+        // Season Totals - Fouls/Ejections (moved to end)
+        "Fouls", "Foul Outs", "Ejections",
+        // Shooting Breakdown (moved to end to preserve column positions)
+        "Dunks Att", "Dunks Made", "Dunks %",
+        "Layups Att", "Layups Made", "Layups %",
+        "Tip-Ins Att", "Tip-Ins Made", "Tip-Ins %",
+        "2PT Jumpers Att", "2PT Jumpers Made", "2PT Jumpers %",
+        "3PT Jumpers Att", "3PT Jumpers Made", "3PT Jumpers %"
+      ]];
+      
+      // Sort players by jersey number ascending
+      var playersCopy = data.players.slice(); // Make a copy to sort
+      
+      playersCopy.sort(function(a, b) {
+        var jerseyA = parseInt(a.jerseyNumber);
+        if (isNaN(jerseyA)) {
+          jerseyA = 9999; // Put non-numeric at end
+        }
+        var jerseyB = parseInt(b.jerseyNumber);
+        if (isNaN(jerseyB)) {
+          jerseyB = 9999; // Put non-numeric at end
+        }
+        return jerseyA - jerseyB; // Ascending
+      });
+      
+      var sortedPlayers = playersCopy;
       
       // Helper function to safely get nested values
       var safe = function(obj, path, defaultVal) {
