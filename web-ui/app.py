@@ -188,6 +188,7 @@ def generate_data():
         team_name = data.get('team_name')
         # Fixed to 2026 season
         season = 2026
+        include_historical_stats = data.get('include_historical_stats', True)  # Default to True for backward compatibility
         
         if not team_name:
             return jsonify({'error': 'Team name required'}), 400
@@ -211,7 +212,7 @@ def generate_data():
         # Start background thread
         thread = threading.Thread(
             target=run_generation,
-            args=(job_id, team_name, season)
+            args=(job_id, team_name, season, include_historical_stats)
         )
         thread.daemon = True
         thread.start()
@@ -249,7 +250,7 @@ def cancel_job(job_id):
         return jsonify({'error': 'Job cannot be cancelled (already completed or failed)'}), 400
 
 
-def run_generation(job_id, team_name, season):
+def run_generation(job_id, team_name, season, include_historical_stats=True):
     """Background job runner"""
     try:
         # Check if cancelled before starting
@@ -269,7 +270,7 @@ def run_generation(job_id, team_name, season):
             return
         
         # Generate data (with progress updates)
-        output_file = generate_team_data(team_name, season, jobs[job_id])
+        output_file = generate_team_data(team_name, season, jobs[job_id], include_historical_stats=include_historical_stats)
         
         # Check for cancellation after generation
         if jobs[job_id].get('cancelled', False):

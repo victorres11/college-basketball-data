@@ -186,7 +186,7 @@ def load_cached_roster(team_name, season):
     return {}
 
 
-def generate_team_data(team_name, season, progress_callback=None):
+def generate_team_data(team_name, season, progress_callback=None, include_historical_stats=True):
     """
     Generate team data JSON file for any team.
     
@@ -194,6 +194,7 @@ def generate_team_data(team_name, season, progress_callback=None):
         team_name: Team name (e.g., "Oregon", "Wisconsin", "UCLA")
         season: Season year (e.g., 2026)
         progress_callback: Optional dict to update progress
+        include_historical_stats: Whether to fetch historical stats (default: True)
     
     Returns:
         Path to generated JSON file
@@ -1327,13 +1328,18 @@ def generate_team_data(team_name, season, progress_callback=None):
         
         # Get player's historical season stats from previous schools
         # This can be slow as it makes multiple API calls per player (3 seasons × all players)
-        if progress_callback:
-            players_completed = idx + 1  # 1-indexed for display
-            # Update progress message but keep same progress percentage (updated at start of loop)
-            progress_callback['message'] = f'Fetching historical stats for {player_name} ({players_completed}/{total_players})...'
-        historical_seasons = get_player_career_season_stats(api, player_name, team_slug)
-        if historical_seasons:
-            player_record['previousSeasons'] = historical_seasons
+        if include_historical_stats:
+            if progress_callback:
+                players_completed = idx + 1  # 1-indexed for display
+                # Update progress message but keep same progress percentage (updated at start of loop)
+                progress_callback['message'] = f'Fetching historical stats for {player_name} ({players_completed}/{total_players})...'
+            historical_seasons = get_player_career_season_stats(api, player_name, team_slug)
+            if historical_seasons:
+                player_record['previousSeasons'] = historical_seasons
+        else:
+            # Skip historical stats for faster generation
+            if progress_callback and idx == 0:  # Only log once
+                progress_callback['message'] = 'Skipping historical stats (disabled)...'
         
         team_data['players'].append(player_record)
     
@@ -1359,8 +1365,11 @@ def generate_team_data(team_name, season, progress_callback=None):
     print(f"[GENERATOR] Total API calls made: {total_api_calls}")
     
     # Add summary status for player historical stats
-    players_with_history = sum(1 for p in team_data['players'] if 'previousSeasons' in p and p['previousSeasons'])
-    add_status('Player Historical Stats', 'success', f'Retrieved history for {players_with_history}/{len(team_data["players"])} players')
+    if include_historical_stats:
+        players_with_history = sum(1 for p in team_data['players'] if 'previousSeasons' in p and p['previousSeasons'])
+        add_status('Player Historical Stats', 'success', f'Retrieved history for {players_with_history}/{len(team_data["players"])} players')
+    else:
+        add_status('Player Historical Stats', 'skipped', 'Historical stats disabled by user')
     
     if progress_callback:
         progress_callback['message'] = 'Saving JSON file...'

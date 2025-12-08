@@ -174,13 +174,17 @@ function generateData() {
         }
     }, 1000);
     
+    // Get checkbox value
+    const includeHistorical = document.getElementById('include-historical-stats').checked;
+    
     // Start generation
     fetch('/api/generate', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
             team_name: selectedTeam.name,
-            season: season
+            season: season,
+            include_historical_stats: includeHistorical
         })
     })
     .then(res => res.json())

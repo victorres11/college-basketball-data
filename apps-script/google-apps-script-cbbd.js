@@ -81,13 +81,27 @@ function GET_TEAM_META(url) {
         }
       }
       
+      // Add AP Rankings if available
+      if (data.metadata && data.metadata.apRankings) {
+        table.push([""]);
+        table.push(["=== AP RANKINGS ==="]);
+        var currentRank = data.metadata.apRankings.current;
+        var highestRank = data.metadata.apRankings.highest;
+        table.push(["Current Rank", currentRank !== null && currentRank !== undefined ? "#" + currentRank : "Unranked"]);
+        table.push(["Highest Rank", highestRank !== null && highestRank !== undefined ? "#" + highestRank : "Unranked"]);
+      }
+      
       // Add coach history if available (append to end)
       if (data.coachHistory && data.coachHistory.seasons && data.coachHistory.seasons.length > 0) {
         table.push([""]);
         table.push(["=== COACH HISTORY (Last 6 Complete Seasons) ==="]);
         table.push(["Season", "Conference", "Overall W-L", "Conf W-L", "NCAA Tournament", "Seed", "Coach"]);
         
-        data.coachHistory.seasons.forEach(function(season) {
+        // Limit to last 6 seasons (assuming seasons are in reverse chronological order - newest first)
+        // If in chronological order, use .slice(-6) instead
+        var seasonsToShow = data.coachHistory.seasons.slice(0, 6);
+        
+        seasonsToShow.forEach(function(season) {
           table.push([
             season.season || "",
             season.conference || "",

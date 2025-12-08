@@ -33,6 +33,21 @@
                 </div>
             </div>
             
+            <div class="form-group" style="margin-top: 15px;">
+                <label style="display: flex; align-items: center; cursor: pointer;">
+                    <input 
+                        type="checkbox" 
+                        id="include-historical-stats" 
+                        checked
+                        style="margin-right: 8px; width: auto;"
+                    >
+                    <span>Include player historical stats (previous seasons)</span>
+                </label>
+                <p style="margin-top: 5px; margin-left: 24px; color: #666; font-size: 0.85em;">
+                    ⚠️ Unchecking this will significantly speed up generation (saves ~1-2 minutes)
+                </p>
+            </div>
+            
             <button id="generate-btn" onclick="generateData()" class="btn-primary">
                 Generate Data (2025-26 Season)
             </button>
