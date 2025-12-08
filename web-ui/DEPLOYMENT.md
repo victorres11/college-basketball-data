@@ -66,7 +66,22 @@ Add these in Render dashboard → Environment:
    - Your GitHub email
    - Example: `your-email@example.com`
 
-4. **FLASK_ENV** (Optional)
+4. **RESEND_API_KEY** (Required for email notifications)
+   - Your Resend API key
+   - Mark as "Secret"
+   - Used for sending email notifications when jobs complete
+
+5. **RESEND_SENDER_EMAIL** (Required for email notifications)
+   - Value: `vt@victorres.xyz` (or your verified domain email)
+   - This is the "from" address for all email notifications
+   - Already set in `render.yaml` to `vt@victorres.xyz`
+
+6. **NOTIFICATION_EMAIL** (Required for email notifications)
+   - Your email address to receive notifications
+   - Example: `victorres11@gmail.com`
+   - Mark as "Secret" (optional)
+
+7. **FLASK_ENV** (Optional)
    - Set to `production`
 
 ### Step 4: Git Configuration

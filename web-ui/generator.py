@@ -76,7 +76,7 @@ except ImportError as e:
 # Import Wikipedia scraper
 sys.path.insert(0, os.path.join(misc_data_sources_path, 'wikipedia', 'scripts'))
 try:
-    from wikipedia_data import get_wikipedia_team_data
+    from wikipedia_data import get_wikipedia_team_data, get_season_rankings
     from team_name_mapping import get_wikipedia_page_title_safe
     WIKIPEDIA_SCRAPER_AVAILABLE = True
     print("[GENERATOR] Wikipedia scraper import: OK")
@@ -1009,6 +1009,27 @@ def generate_team_data(team_name, season, progress_callback=None):
                         'pageTitle': wikipedia_data.get('page_title')
                     }
                     
+                    # Get season rankings (current and highest AP rankings)
+                    try:
+                        print(f"[GENERATOR] Fetching AP rankings for {team_name} ({season})...")
+                        season_rankings = get_season_rankings(team_name, season)
+                        if season_rankings:
+                            team_data['wikipedia']['apRankings'] = {
+                                'current': season_rankings.get('current_rank'),
+                                'highest': season_rankings.get('highest_rank')
+                            }
+                            current_str = f"#{season_rankings.get('current_rank')}" if season_rankings.get('current_rank') else "Unranked"
+                            highest_str = f"#{season_rankings.get('highest_rank')}" if season_rankings.get('highest_rank') else "Unranked"
+                            print(f"[GENERATOR] AP Rankings retrieved - Current: {current_str}, Highest: {highest_str}")
+                            add_status('AP Rankings', 'success', f'Current: {current_str}, Highest: {highest_str}')
+                        else:
+                            print(f"[GENERATOR] No AP rankings found for {team_name}")
+                            add_status('AP Rankings', 'skipped', 'No rankings available')
+                    except Exception as e:
+                        print(f"[GENERATOR] WARNING: Could not fetch season rankings: {e}")
+                        add_status('AP Rankings', 'failed', str(e))
+                        # Don't fail if rankings can't be fetched
+                    
                     # Log key information
                     ncaa_champs = len(wikipedia_data.get('championships', {}).get('ncaa_tournament', []))
                     final_four_count = wikipedia_data.get('tournament_appearances', {}).get('final_four', 0)
@@ -1325,6 +1346,14 @@ def generate_team_data(team_name, season, progress_callback=None):
         'totalPlayers': len(team_data['players']),
         'apiCalls': total_api_calls
     }
+    
+    # Add AP Rankings to metadata if available
+    if team_data.get('wikipedia', {}).get('apRankings'):
+        ap_rankings = team_data['wikipedia']['apRankings']
+        team_data['metadata']['apRankings'] = {
+            'current': ap_rankings.get('current'),
+            'highest': ap_rankings.get('highest')
+        }
     
     print(f"[GENERATOR] Completed processing {len(team_data['players'])} players")
     print(f"[GENERATOR] Total API calls made: {total_api_calls}")

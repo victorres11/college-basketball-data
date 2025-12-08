@@ -60,9 +60,25 @@ In Render dashboard → Your Service → Environment:
    - Mark as: **Secret** (optional, but recommended)
    - Used for git commits when pushing generated files
 
+4. **RESEND_API_KEY** (Required for email notifications)
+   - Value: Your Resend API key
+   - Mark as: **Secret** ✓
+   - Used for sending email notifications when jobs complete
+
+5. **RESEND_SENDER_EMAIL** (Required for email notifications)
+   - Value: `vt@victorres.xyz` (or your verified domain email)
+   - Mark as: **Not Secret** (can be public)
+   - This is the "from" address for all email notifications
+   - Already set in `render.yaml` to `vt@victorres.xyz`
+
+6. **NOTIFICATION_EMAIL** (Required for email notifications)
+   - Value: Your email address to receive notifications (e.g., `victorres11@gmail.com`)
+   - Mark as: **Secret** (optional, but recommended)
+   - This is where job completion emails will be sent
+
 **Optional Variables:**
 
-4. **FLASK_ENV**
+7. **FLASK_ENV**
    - Value: `production`
    - Already set in `render.yaml`, but you can override if needed
 

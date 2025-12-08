@@ -28,4 +28,10 @@ services:
         sync: false
       - key: KENPOM_PASSWORD
         sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: RESEND_SENDER_EMAIL
+        value: vt@victorres.xyz
+      - key: NOTIFICATION_EMAIL
+        sync: false
 

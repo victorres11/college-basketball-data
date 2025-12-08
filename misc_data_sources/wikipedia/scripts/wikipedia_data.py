@@ -500,6 +500,118 @@ def get_wikipedia_team_data(page_title: str) -> Dict[str, Any]:
     return result
 
 
+def get_season_rankings(team_name: str, season: int) -> Dict[str, Any]:
+    """
+    Extract current and highest AP rankings from a season-specific Wikipedia page.
+    
+    Args:
+        team_name: Team name (e.g., "UCLA", "Michigan State")
+        season: Season year (e.g., 2026)
+    
+    Returns:
+        Dictionary with 'current_rank' and 'highest_rank' (both can be None or int)
+    """
+    # Construct season page title
+    # Format: "2025–26 [Team Name] [Mascot] men's basketball team"
+    # We need to map team names to their season page format
+    # For now, try common patterns - this could be improved with a mapping
+    
+    # Try to construct the season page title
+    # Season format: "2025–26" for season 2026
+    season_str = f"{season-1}–{str(season)[2:]}"
+    
+    # Common team name to season page title mappings
+    # This is a simplified version - ideally we'd have a comprehensive mapping
+    team_season_mappings = {
+        'ucla': f"{season_str} UCLA Bruins men's basketball team",
+        'michigan': f"{season_str} Michigan Wolverines men's basketball team",
+        'michigan state': f"{season_str} Michigan State Spartans men's basketball team",
+        'msu': f"{season_str} Michigan State Spartans men's basketball team",
+        'purdue': f"{season_str} Purdue Boilermakers men's basketball team",
+        'ohio state': f"{season_str} Ohio State Buckeyes men's basketball team",
+        'indiana': f"{season_str} Indiana Hoosiers men's basketball team",
+        'wisconsin': f"{season_str} Wisconsin Badgers men's basketball team",
+        'illinois': f"{season_str} Illinois Fighting Illini men's basketball team",
+        'iowa': f"{season_str} Iowa Hawkeyes men's basketball team",
+        'maryland': f"{season_str} Maryland Terrapins men's basketball team",
+        'minnesota': f"{season_str} Minnesota Golden Gophers men's basketball team",
+        'nebraska': f"{season_str} Nebraska Cornhuskers men's basketball team",
+        'northwestern': f"{season_str} Northwestern Wildcats men's basketball team",
+        'penn state': f"{season_str} Penn State Nittany Lions basketball team",
+        'rutgers': f"{season_str} Rutgers Scarlet Knights men's basketball team",
+        'usc': f"{season_str} USC Trojans men's basketball team",
+        'southern california': f"{season_str} USC Trojans men's basketball team",
+        'washington': f"{season_str} Washington Huskies men's basketball team",
+        'oregon': f"{season_str} Oregon Ducks men's basketball team",
+        'utsa': f"{season_str} UTSA Roadrunners men's basketball team",
+        'texas-san antonio': f"{season_str} UTSA Roadrunners men's basketball team",
+        'university of texas at san antonio': f"{season_str} UTSA Roadrunners men's basketball team",
+    }
+    
+    team_key = team_name.lower().strip()
+    page_title = team_season_mappings.get(team_key)
+    
+    if not page_title:
+        # Try to construct from team name (fallback)
+        # This won't work for all teams but might work for some
+        return {'current_rank': None, 'highest_rank': None}
+    
+    try:
+        wikitext = get_wikitext(page_title)
+        if not wikitext:
+            return {'current_rank': None, 'highest_rank': None}
+        
+        # Extract current ranking from infobox
+        current_rank = None
+        template = extract_infobox_template(wikitext)
+        if template:
+            ranking_params = ['APRank', 'aprank', 'ap_rank', 'CoachRank', 'coachrank']
+            for param_name in ranking_params:
+                param = safe_get_template_param(template, param_name)
+                if param:
+                    value = clean_template_value(param.value)
+                    if value:
+                        num_match = re.search(r'(\d+)', value)
+                        if num_match:
+                            current_rank = int(num_match.group(1))
+                            break
+        
+        # Extract highest ranking from schedule entries
+        highest_rank = None
+        wikicode = mwparserfromhell.parse(wikitext)
+        rankings = []
+        
+        for template in wikicode.filter_templates():
+            template_name = str(template.name).strip().lower()
+            if 'cbb schedule entry' in template_name:
+                try:
+                    rank_param = template.get('rank')
+                    if rank_param:
+                        rank_value = str(rank_param.value).strip()
+                        rank_value = re.sub(r'\[\[[^\]]+\]\]', '', rank_value)
+                        rank_value = re.sub(r'\{\{[^}]+\}\}', '', rank_value)
+                        rank_value = rank_value.strip()
+                        
+                        if rank_value and rank_value.lower() not in ['', 'n/a', 'none', '—', '–', '-']:
+                            num_match = re.search(r'(\d+)', rank_value)
+                            if num_match:
+                                rankings.append(int(num_match.group(1)))
+                except ValueError:
+                    pass
+        
+        if rankings:
+            highest_rank = min(rankings)  # Lowest number = highest ranking
+        
+        return {
+            'current_rank': current_rank,
+            'highest_rank': highest_rank
+        }
+        
+    except Exception as e:
+        # Return None values on error
+        return {'current_rank': None, 'highest_rank': None}
+
+
 if __name__ == '__main__':
     # Example usage
     import sys
