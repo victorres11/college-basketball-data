@@ -10,6 +10,7 @@ from cbb_api_wrapper import CollegeBasketballAPI
 import json
 from datetime import datetime, timezone
 import time
+from s3_handler import load_historical_stats_from_s3
 
 # Import FoxSports roster cache
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -1076,6 +1077,21 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
     player_progress_range = 80  # 80% of total progress for players
     player_progress_start = 10   # Start player progress at 10%
     
+    # Load historical stats from existing S3 file if not fetching new ones
+    existing_historical_stats = None
+    if not include_historical_stats:
+        if progress_callback:
+            progress_callback['message'] = 'Loading historical stats from existing file...'
+        existing_historical_stats = load_historical_stats_from_s3(team_name, season)
+        if existing_historical_stats:
+            print(f"[Generator] Loaded historical stats for {len(existing_historical_stats)} players from existing S3 file")
+            if progress_callback:
+                add_status('Historical Stats (from S3)', 'success', f'Loaded from existing file for {len(existing_historical_stats)} players')
+        else:
+            print(f"[Generator] No existing historical stats found in S3")
+            if progress_callback:
+                add_status('Historical Stats (from S3)', 'skipped', 'No existing file found')
+    
     for idx, player_name_lower in enumerate(sorted(all_players_to_process)):
         # Check for cancellation periodically (every 5 players to avoid overhead)
         if idx % 5 == 0:
@@ -1337,9 +1353,15 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
             if historical_seasons:
                 player_record['previousSeasons'] = historical_seasons
         else:
-            # Skip historical stats for faster generation
-            if progress_callback and idx == 0:  # Only log once
-                progress_callback['message'] = 'Skipping historical stats (disabled)...'
+            # Try to load from existing S3 file
+            if existing_historical_stats:
+                # Match by player name (case-insensitive)
+                player_key = player_name.lower()
+                if player_key in existing_historical_stats:
+                    player_record['previousSeasons'] = existing_historical_stats[player_key]
+                    if progress_callback and idx == 0:  # Only log once
+                        progress_callback['message'] = 'Merging historical stats from existing file...'
+            # If no existing stats found, player_record won't have previousSeasons (which is fine)
         
         team_data['players'].append(player_record)
     
@@ -1369,7 +1391,12 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
         players_with_history = sum(1 for p in team_data['players'] if 'previousSeasons' in p and p['previousSeasons'])
         add_status('Player Historical Stats', 'success', f'Retrieved history for {players_with_history}/{len(team_data["players"])} players')
     else:
-        add_status('Player Historical Stats', 'skipped', 'Historical stats disabled by user')
+        # Check if we loaded any from S3
+        players_with_history = sum(1 for p in team_data['players'] if 'previousSeasons' in p and p['previousSeasons'])
+        if players_with_history > 0:
+            add_status('Player Historical Stats', 'success', f'Loaded from existing file for {players_with_history}/{len(team_data["players"])} players')
+        else:
+            add_status('Player Historical Stats', 'skipped', 'Historical stats disabled and no existing file found')
     
     if progress_callback:
         progress_callback['message'] = 'Saving JSON file...'
