@@ -983,6 +983,7 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
                     # Add Wikipedia data to team_data
                     team_data['wikipedia'] = {
                         'universityName': wikipedia_data.get('university_name'),
+                        'mascot': wikipedia_data.get('mascot'),
                         'headCoach': wikipedia_data.get('head_coach'),
                         'headCoachSeasons': wikipedia_data.get('head_coach_seasons'),
                         'conference': wikipedia_data.get('conference'),
@@ -1010,6 +1011,11 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
                         'url': f"https://en.wikipedia.org/wiki/{wikipedia_page_title.replace(' ', '_')}",
                         'pageTitle': wikipedia_data.get('page_title')
                     }
+
+                    # Set mascot from Wikipedia if not already set from FoxSports cache
+                    if not mascot and wikipedia_data.get('mascot'):
+                        team_data['mascot'] = wikipedia_data.get('mascot')
+                        print(f"[GENERATOR] Mascot set from Wikipedia: {wikipedia_data.get('mascot')}")
                     
                     # Get season rankings (current and highest AP rankings)
                     try:
