@@ -536,6 +536,7 @@ def get_season_rankings(team_name: str, season: int) -> Dict[str, Any]:
     # This is a simplified version - ideally we'd have a comprehensive mapping
     team_season_mappings = {
         'ucla': f"{season_str} UCLA Bruins men's basketball team",
+        'arizona': f"{season_str} Arizona Wildcats men's basketball team",
         'michigan': f"{season_str} Michigan Wolverines men's basketball team",
         'michigan state': f"{season_str} Michigan State Spartans men's basketball team",
         'msu': f"{season_str} Michigan State Spartans men's basketball team",
