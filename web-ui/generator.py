@@ -502,6 +502,7 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
                 
                 # Get player classes from FoxSports cache
                 if foxsports_team_id:
+                    print(f"[GENERATOR] Team mapping: {team_name} → CBB ID {cbb_team_id} → FoxSports ID {foxsports_team_id}")
                     cache_dir = os.path.join(foxsports_path, 'rosters_cache')
                     if not os.path.exists(cache_dir):
                         print(f"Warning: FoxSports cache directory not found at: {cache_dir}")
@@ -571,23 +572,7 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
         progress_callback['progress'] = 10  # Start of player processing
     
     check_cancelled()
-    
-    # Get mascot from cached roster if available
-    mascot = None
-    if cached_roster_lookup:
-        # Try to get mascot from first player's roster data structure
-        # Actually, we need to load the full roster file to get mascot
-        project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        team_slug = team_name.lower().replace(' ', '_')
-        roster_path = os.path.join(project_root, 'data', 'rosters', str(season), f'{team_slug}_roster.json')
-        if os.path.exists(roster_path):
-            try:
-                with open(roster_path, 'r') as f:
-                    roster_file_data = json.load(f)
-                    mascot = roster_file_data.get('mascot')
-            except:
-                pass
-    
+
     # Build consolidated data structure
     team_data = {
         'team': team_name,
@@ -596,10 +581,6 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
         'dataGenerated': datetime.now(timezone.utc).isoformat(),
         'players': []
     }
-    
-    # Add mascot if available
-    if mascot:
-        team_data['mascot'] = mascot
     
     # Add team game stats if available
     if team_game_stats:
@@ -1012,10 +993,12 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
                         'pageTitle': wikipedia_data.get('page_title')
                     }
 
-                    # Set mascot from Wikipedia if not already set from FoxSports cache
-                    if not mascot and wikipedia_data.get('mascot'):
+                    # Set mascot from Wikipedia (primary and only source)
+                    if wikipedia_data.get('mascot'):
                         team_data['mascot'] = wikipedia_data.get('mascot')
-                        print(f"[GENERATOR] Mascot set from Wikipedia: {wikipedia_data.get('mascot')}")
+                        print(f"[GENERATOR] Mascot: {wikipedia_data.get('mascot')}")
+                    else:
+                        print(f"[GENERATOR] WARNING: No mascot found in Wikipedia for {team_name}")
                     
                     # Get season rankings (current and highest AP rankings)
                     try:
