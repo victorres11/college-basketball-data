@@ -375,6 +375,7 @@ def get_wikipedia_team_data(page_title: str) -> Dict[str, Any]:
     Returns:
         Dictionary containing extracted team data:
         - university_name: Name of the university
+        - mascot: Team mascot/nickname (e.g., "Bruins", "Wildcats")
         - head_coach: Current head coach
         - head_coach_seasons: Number of seasons for current head coach
         - conference: Conference name
@@ -411,6 +412,7 @@ def get_wikipedia_team_data(page_title: str) -> Dict[str, Any]:
     result = {
         'page_title': page_title.replace('_', ' '),
         'university_name': None,
+        'mascot': None,
         'head_coach': None,
         'head_coach_seasons': None,
         'conference': None,
@@ -439,7 +441,17 @@ def get_wikipedia_team_data(page_title: str) -> Dict[str, Any]:
             if value:
                 result['university_name'] = value
                 break
-    
+
+    # Mascot / Nickname
+    mascot_params = ['nickname', 'mascot', 'team_name']
+    for param_name in mascot_params:
+        param = safe_get_template_param(template, param_name)
+        if param:
+            value = clean_template_value(param.value)
+            if value:
+                result['mascot'] = value
+                break
+
     # Head coach
     coach_params = ['coach', 'head_coach', 'headcoach']
     for param_name in coach_params:

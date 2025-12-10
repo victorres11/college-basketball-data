@@ -35,6 +35,7 @@ from misc_data_sources.wikipedia.scripts.wikipedia_data import get_wikipedia_tea
 data = get_wikipedia_team_data("UCLA_Bruins_men's_basketball")
 
 print(data['university_name'])  # University of California, Los Angeles
+print(data['mascot'])            # Bruins
 print(data['head_coach'])        # Mick Cronin
 print(data['conference'])        # Big Ten
 print(data['arena'])             # Pauley Pavilion
@@ -60,6 +61,7 @@ The function returns a dictionary with the following fields:
 
 - `page_title`: The Wikipedia page title
 - `university_name`: Name of the university
+- `mascot`: Team mascot/nickname (e.g., "Bruins", "Wildcats")
 - `head_coach`: Current head coach
 - `conference`: Conference name
 - `arena`: Arena name
@@ -100,6 +102,7 @@ The function includes error handling for:
 {
   "page_title": "UCLA Bruins men's basketball",
   "university_name": "University of California, Los Angeles",
+  "mascot": "Bruins",
   "head_coach": "Mick Cronin",
   "conference": "Big Ten",
   "arena": "Pauley Pavilion",
