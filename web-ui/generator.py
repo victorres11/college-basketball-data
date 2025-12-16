@@ -7,6 +7,15 @@ import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'scripts'))
 
 from cbb_api_wrapper import CollegeBasketballAPI
+
+# Import centralized team lookup
+try:
+    from team_lookup import get_team_lookup
+    TEAM_LOOKUP_AVAILABLE = True
+    print("[GENERATOR] Team lookup import: OK")
+except ImportError as e:
+    TEAM_LOOKUP_AVAILABLE = False
+    print(f"Warning: Team lookup not available: {e}")
 import json
 from datetime import datetime, timezone
 import time
@@ -694,8 +703,20 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
             progress_callback['message'] = 'Fetching quadrant records...'
         print(f"[GENERATOR] Fetching quadrant data for {team_name}...")
         try:
-            # Use team_slug for quadrant lookup (e.g., 'oregon', 'michigan-state')
-            quadrant_data = get_quadrant_data(team_slug)
+            # Use centralized team lookup for bballnet slug
+            bballnet_slug = None
+            if TEAM_LOOKUP_AVAILABLE:
+                lookup = get_team_lookup()
+                bballnet_slug = lookup.lookup(team_name, "bballnet")
+                if bballnet_slug:
+                    print(f"[GENERATOR] Using bballnet slug from registry: {bballnet_slug}")
+
+            # Fallback to team_slug if lookup fails
+            if not bballnet_slug:
+                bballnet_slug = team_slug
+                print(f"[GENERATOR] Using fallback slug: {bballnet_slug}")
+
+            quadrant_data = get_quadrant_data(bballnet_slug)
             
             # Format quadrant data for JSON output
             quadrant_records = {}
@@ -775,8 +796,18 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
             progress_callback['message'] = 'Fetching coach history...'
         print(f"[GENERATOR] Searching for coach history for {team_name}...")
         try:
-            sports_ref_slug = get_sports_ref_slug(team_slug)
-            print(f"[GENERATOR] Using Sports Reference slug: {sports_ref_slug}")
+            # Use centralized team lookup for sports reference slug
+            sports_ref_slug = None
+            if TEAM_LOOKUP_AVAILABLE:
+                lookup = get_team_lookup()
+                sports_ref_slug = lookup.lookup(team_name, "sports_reference")
+                if sports_ref_slug:
+                    print(f"[GENERATOR] Using sports_reference slug from registry: {sports_ref_slug}")
+
+            # Fallback to old method if lookup fails
+            if not sports_ref_slug:
+                sports_ref_slug = get_sports_ref_slug(team_slug)
+                print(f"[GENERATOR] Using fallback sports_ref_slug: {sports_ref_slug}")
             coach_history = get_coach_history(sports_ref_slug, years=None)  # Get all seasons
             if coach_history and len(coach_history) > 0:
                 # Calculate average wins (overall and conference) for all seasons

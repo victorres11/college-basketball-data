@@ -1,0 +1,89 @@
+name: Generator E2E Tests
+
+on:
+  # Manual trigger only (for on-demand testing)
+  workflow_dispatch:
+    inputs:
+      team:
+        description: 'Team to test (or "all" for all test teams)'
+        required: false
+        default: 'all'
+
+jobs:
+  test-generator:
+    name: End-to-End Generator Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -r web-ui/requirements.txt
+          pip install pytest pytest-timeout
+
+      - name: Create config directory
+        run: mkdir -p config
+
+      - name: Set up API key
+        env:
+          CBB_API_KEY: ${{ secrets.CBB_API_KEY }}
+        run: echo "$CBB_API_KEY" > config/api_config.txt
+
+      - name: Run E2E tests
+        run: |
+          pytest tests/test_generator_e2e.py -v \
+            --timeout=1800 \
+            --tb=short \
+            -m "e2e and integration"
+        timeout-minutes: 25
+
+      - name: Upload test artifacts
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-output
+          path: |
+            tests/output/*.json
+            data/2026/*_scouting_data_2026.json
+          retention-days: 7
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: pytest-results
+          path: |
+            pytest.log
+          retention-days: 7
+
+  validate-existing-data:
+    name: Validate Existing Data Files
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install pytest
+        run: pip install pytest
+
+      - name: Validate existing JSON files
+        run: |
+          pytest tests/test_schema_validation.py -v --timeout=60

@@ -5,6 +5,9 @@ config/api_config.txt
 .env
 *.env
 
+# direnv
+.envrc
+
 # Python
 __pycache__/
 *.py[cod]
@@ -65,3 +68,55 @@ output/*.pdf
 # KenPom test output files
 misc_data_sources/kenpom/output/*.html
 misc_data_sources/kenpom/output/*_structured.json
+
+# Test outputs
+tests/output/
+pytest.log
+.pytest_cache/
+
+# Temporary/generated files in root
+*.log
+*_output.log
+*_rerun.log
+*_generation.log
+temp_*.json
+all_d1_teams.json
+manual_wikipedia_mappings.json
+season_mappings_to_add.json
+season_page_mappings.json
+wikipedia_gap_mappings.json
+coach_history_mappings_generated.py
+
+# One-off scripts (not part of main codebase)
+add_manual_mappings.py
+add_season_mappings.py
+check_team_mappings.py
+fetch_all_d1_teams.py
+fix_wikipedia_gaps.py
+generate_coach_history_mappings.py
+generate_wikipedia_from_master_list.py
+generate_wikipedia_mappings.py
+generate_wikipedia_mappings_v2.py
+merge_wikipedia_mappings.py
+scrape_current_season_teams.py
+test_data_sources.py
+test_data_sources_comprehensive.py
+test_season_page_mappings.py
+test_wikipedia_quick.py
+update_mappings.py
+wikipedia_mappings_from_master_list.py
+quick_test.py
+
+# Misc temp files
+guy_face_crop.png
+bg-court.css
+test_kenpom_ucla.py
+test_results/
+misc_data_sources/wikipedia/scripts/wikipedia_gap_search.log
+
+# Documentation files (can add later if needed)
+DATA_SOURCE_TESTING.md
+SETUP.md
+TESTING_QUICK_START.md
+TEST_SUITE_SUMMARY.md
+WIKIPEDIA_INTEGRATION_VERIFICATION.md

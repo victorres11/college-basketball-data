@@ -1,61 +1,80 @@
 #!/usr/bin/env python3
 """
 Script to extract quadrant wins data from bballnet.com HTML
+
+RECOMMENDED: Use the centralized team lookup for getting bballnet slugs:
+    from scripts.team_lookup import get_team_lookup
+    lookup = get_team_lookup()
+    bballnet_slug = lookup.lookup("Western Kentucky", "bballnet")  # → "western-kentucky"
+    quadrant_data = get_quadrant_data(bballnet_slug)
+
+This script now expects the caller to pass the correct bballnet slug directly.
+Legacy mapping is still loaded as fallback but centralized lookup is preferred.
 """
 import requests
 from bs4 import BeautifulSoup
 import json
 import os
 
-# Load team slug mapping (prefer comprehensive auto-generated mapping)
+# DEPRECATED: Legacy team slug mapping (use centralized team_lookup.py instead)
+# These are kept for backwards compatibility when called directly
 COMPREHENSIVE_MAPPING_FILE = os.path.join(os.path.dirname(__file__), '..', 'mappings', 'bballnet_team_mapping.json')
 LEGACY_MAPPING_FILE = os.path.join(os.path.dirname(__file__), '..', 'mappings', 'team_slug_mapping.json')
 
 TEAM_SLUG_MAPPING = {}
 
-# First try comprehensive auto-generated mapping
+# Load legacy mappings for backwards compatibility
 if os.path.exists(COMPREHENSIVE_MAPPING_FILE):
     with open(COMPREHENSIVE_MAPPING_FILE, 'r') as f:
         mapping_data = json.load(f)
         TEAM_SLUG_MAPPING = mapping_data.get('team_slug_mapping', {})
-# Fallback to legacy mapping if comprehensive doesn't exist
 elif os.path.exists(LEGACY_MAPPING_FILE):
     with open(LEGACY_MAPPING_FILE, 'r') as f:
         mapping_data = json.load(f)
         TEAM_SLUG_MAPPING = mapping_data.get('team_slug_mapping', {})
 
 def get_bballnet_slug(team_slug):
-    """Get the bballnet.com slug for a team, using mapping if available."""
+    """
+    DEPRECATED: Use centralized team lookup instead.
+
+    Get the bballnet.com slug for a team, using mapping if available.
+    Prefer using scripts/team_lookup.py for new code.
+    """
     return TEAM_SLUG_MAPPING.get(team_slug, team_slug)
 
-def get_quadrant_data(team_slug):
+def get_quadrant_data(bballnet_slug):
     """
-    Fetch and parse quadrant data for a team
-    
+    Fetch and parse quadrant data for a team from bballnet.com
+
     Args:
-        team_slug: Team identifier (e.g., 'oregon')
-    
+        bballnet_slug: The bballnet.com URL slug (e.g., 'western-kentucky', 'ucla')
+                      Should be obtained from centralized team lookup:
+                      lookup.lookup("Western Kentucky", "bballnet")
+
     Returns:
         dict: Quadrant data including wins/losses and opponent names
     """
-    # Use mapped slug if available
-    bballnet_slug = get_bballnet_slug(team_slug)
+    # The caller should pass the correct bballnet slug directly
+    # Legacy fallback: try mapping if it looks like a team name not a slug
+    if ' ' in bballnet_slug or bballnet_slug != bballnet_slug.lower():
+        # Looks like a team name, try legacy mapping
+        bballnet_slug = get_bballnet_slug(bballnet_slug)
     url = f"https://bballnet.com/teams/{bballnet_slug}"
     
     try:
         response = requests.get(url, timeout=10)
         response.raise_for_status()
     except requests.exceptions.RequestException as e:
-        raise Exception(f"Failed to fetch data for {team_slug} (slug: {bballnet_slug}): {e}")
+        raise Exception(f"Failed to fetch data for {bballnet_slug}: {e}")
     
     soup = BeautifulSoup(response.text, 'html.parser')
     
     # Extract team info
     team_name_elem = soup.find('h1', class_='team-name')
-    team_name = team_name_elem.text.strip() if team_name_elem else team_slug
-    
+    team_name = team_name_elem.text.strip() if team_name_elem else bballnet_slug
+
     data = {
-        'team': team_slug,
+        'team': bballnet_slug,
         'team_name': team_name,
         'url': url,
         'quadrants': {}
