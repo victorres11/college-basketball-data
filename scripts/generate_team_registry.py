@@ -93,12 +93,16 @@ def extract_canonical_name(full_name: str) -> str:
     """
     # Common mascots to strip (order matters - longer/multi-word first)
     mascots = [
-        # Multi-word mascots (must come first)
-        "Golden Eagles", "Red Raiders", "Yellow Jackets", "Blue Devils",
+        # Multi-word mascots (must come first - longest first)
+        "Fightin' Blue Hens", "Runnin' Bulldogs", "Runnin' Utes",
+        "Golden Eagles", "Golden Lions", "Red Raiders", "Yellow Jackets", "Blue Devils",
         "Demon Deacons", "Golden Bears", "Sun Devils", "Red Storm",
         "Blue Demons", "Fighting Irish", "Crimson Tide", "Tar Heels",
         "Fighting Illini", "Nittany Lions", "Horned Frogs", "Wolf Pack",
         "Golden Flashes", "Golden Griffins", "Golden Grizzlies", "Golden Hurricane",
+        "Golden Gophers", "Scarlet Knights", "Black Bears", "River Hawks",
+        "Blue Hose", "Purple Eagles", "Black Knights", "Mountain Hawks",
+        "Fighting Hawks", "Screaming Eagles", "Delta Devils",
         "Red Wolves", "Red Foxes", "Red Flash", "Blue Raiders", "Blue Hens",
         "Big Red", "Big Green", "Mean Green", "Green Wave", "Great Danes",
         "Fighting Camels", "Purple Aces", "Ragin' Cajuns", "Runnin' Rebels",
@@ -108,7 +112,7 @@ def extract_canonical_name(full_name: str) -> str:
         "Badgers", "Beach", "Beacons", "Bearcats", "Bearkats", "Bears",
         "Beavers", "Bengals", "Billikens", "Bison", "Bisons", "Blazers",
         "Bluejays", "Bobcats", "Boilermakers", "Bonnies", "Braves", "Broncos",
-        "Broncs", "Bruins", "Buccaneers", "Buckeyes", "Buffaloes", "Bulls",
+        "Broncs", "Bruins", "Buccaneers", "Buckeyes", "Buffaloes", "Bulldogs", "Bulls",
         "Cajuns", "Camels", "Cardinal", "Cardinals", "Catamounts", "Cavaliers",
         "Chanticleers", "Chargers", "Chippewas", "Colonels", "Colonials",
         "Commodores", "Cornhuskers", "Cougars", "Cowboys", "Coyotes", "Crimson",
@@ -118,7 +122,7 @@ def extract_canonical_name(full_name: str) -> str:
         "Falcons", "Flames", "Flash", "Flashes", "Flyers", "Foxes", "Friars",
         "Gaels", "Gamecocks", "Gators", "Gauchos", "Gophers", "Governors",
         "Green", "Greyhounds", "Griffins", "Grizzlies",
-        "Hatters", "Hawkeyes", "Hawks", "Hens", "Herd", "Highlanders",
+        "Hatters", "Hawkeyes", "RedHawks", "Redhawks", "Hawks", "Hens", "Herd", "Highlanders",
         "Hilltoppers", "Hokies", "Hoosiers", "Hornets", "Hose", "Hoyas",
         "Hurricane", "Hurricanes", "Huskies", "Huskers",
         "Islanders",
@@ -134,7 +138,7 @@ def extract_canonical_name(full_name: str) -> str:
         "Phoenix", "Pilots", "Pioneers", "Pirates", "Pride", "Privateers",
         "Quakers",
         "Racers", "Raiders", "Ramblers", "Rams", "Rattlers", "Razorbacks",
-        "Rebels", "Red", "RedHawks", "Redbirds", "Redhawks", "Retrievers",
+        "Rebels", "Redbirds", "Red", "Retrievers",
         "Revolutionaries", "Roadrunners", "Rockets", "Roos", "Royals",
         "Saints", "Salukis", "Seahawks", "Seawolves", "Seminoles", "Sharks",
         "Shockers", "Skyhawks", "Sooners", "Spartans", "Spiders", "Stags",
@@ -252,6 +256,18 @@ def generate_name_variations(name: str) -> List[str]:
         variations.append(name.replace("Arkansas", "Ark."))
     if "Ark." in name:
         variations.append(name.replace("Ark.", "Arkansas"))
+
+    # State indicator variations - space vs no space: "(FL)" vs " (FL)"
+    import re
+    state_match = re.search(r'\(([A-Z]{2})\)', name)
+    if state_match:
+        # Add version with space before parenthesis
+        if not re.search(r'\s\([A-Z]{2}\)', name):
+            # Name has no space, add version with space
+            variations.append(re.sub(r'\(([A-Z]{2})\)', r' (\1)', name))
+        else:
+            # Name has space, add version without space
+            variations.append(re.sub(r'\s\(([A-Z]{2})\)', r'(\1)', name))
 
     return variations
 
