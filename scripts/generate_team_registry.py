@@ -91,21 +91,62 @@ def extract_canonical_name(full_name: str) -> str:
         "Miami (FL) Hurricanes" → "Miami"
         "St. John's Red Storm" → "St. John's"
     """
-    # Common mascots to strip (order matters - longer first)
+    # Common mascots to strip (order matters - longer/multi-word first)
     mascots = [
+        # Multi-word mascots (must come first)
         "Golden Eagles", "Red Raiders", "Yellow Jackets", "Blue Devils",
         "Demon Deacons", "Golden Bears", "Sun Devils", "Red Storm",
         "Blue Demons", "Fighting Irish", "Crimson Tide", "Tar Heels",
-        "Fighting Illini", "Nittany Lions", "Boilermakers", "Spartans",
-        "Wolverines", "Buckeyes", "Hoosiers", "Badgers", "Hawkeyes",
-        "Gophers", "Huskers", "Terrapins", "Wildcats", "Bulldogs",
-        "Tigers", "Bears", "Longhorns", "Aggies", "Cowboys", "Sooners",
-        "Jayhawks", "Cyclones", "Mountaineers", "Horned Frogs", "Cougars",
-        "Cardinals", "Bearcats", "Musketeers", "Friars", "Hoyas",
-        "Pirates", "Huskies", "Eagles", "Seminoles", "Wolfpack",
-        "Panthers", "Cavaliers", "Hokies", "Mustangs", "Knights",
-        "Utes", "Buffaloes", "Ducks", "Beavers", "Trojans", "Bruins",
-        "Hilltoppers", "Toppers", "Broncos"
+        "Fighting Illini", "Nittany Lions", "Horned Frogs", "Wolf Pack",
+        "Golden Flashes", "Golden Griffins", "Golden Grizzlies", "Golden Hurricane",
+        "Red Wolves", "Red Foxes", "Red Flash", "Blue Raiders", "Blue Hens",
+        "Big Red", "Big Green", "Mean Green", "Green Wave", "Great Danes",
+        "Fighting Camels", "Purple Aces", "Ragin' Cajuns", "Runnin' Rebels",
+        "Rainbow Warriors", "Thundering Herd",
+        # Single-word mascots (alphabetized for maintainability)
+        "49ers", "Aces", "Aggies", "Anteaters", "Aztecs",
+        "Badgers", "Beach", "Beacons", "Bearcats", "Bearkats", "Bears",
+        "Beavers", "Bengals", "Billikens", "Bison", "Bisons", "Blazers",
+        "Bluejays", "Bobcats", "Boilermakers", "Bonnies", "Braves", "Broncos",
+        "Broncs", "Bruins", "Buccaneers", "Buckeyes", "Buffaloes", "Bulls",
+        "Cajuns", "Camels", "Cardinal", "Cardinals", "Catamounts", "Cavaliers",
+        "Chanticleers", "Chargers", "Chippewas", "Colonels", "Colonials",
+        "Commodores", "Cornhuskers", "Cougars", "Cowboys", "Coyotes", "Crimson",
+        "Crusaders", "Cyclones",
+        "Danes", "Demons", "Devils", "Dolphins", "Dons", "Dragons", "Ducks", "Dukes",
+        "Eagles", "Explorers",
+        "Falcons", "Flames", "Flash", "Flashes", "Flyers", "Foxes", "Friars",
+        "Gaels", "Gamecocks", "Gators", "Gauchos", "Gophers", "Governors",
+        "Green", "Greyhounds", "Griffins", "Grizzlies",
+        "Hatters", "Hawkeyes", "Hawks", "Hens", "Herd", "Highlanders",
+        "Hilltoppers", "Hokies", "Hoosiers", "Hornets", "Hose", "Hoyas",
+        "Hurricane", "Hurricanes", "Huskies", "Huskers",
+        "Islanders",
+        "Jackrabbits", "Jaguars", "Jaspers", "Jayhawks",
+        "Keydets", "Knights",
+        "Lakers", "Lancers", "Leathernecks", "Leopards", "Lions", "Lobos", "Lopes",
+        "Longhorns", "Lumberjacks",
+        "Mastodons", "Matadors", "Mavericks", "Midshipmen", "Miners", "Minutemen",
+        "Mocs", "Monarchs", "Mountaineers", "Musketeers", "Mustangs",
+        "Norse",
+        "Orange", "Ospreys", "Owls",
+        "Pack", "Paladins", "Panthers", "Patriots", "Peacocks", "Penguins",
+        "Phoenix", "Pilots", "Pioneers", "Pirates", "Pride", "Privateers",
+        "Quakers",
+        "Racers", "Raiders", "Ramblers", "Rams", "Rattlers", "Razorbacks",
+        "Rebels", "Red", "RedHawks", "Redbirds", "Redhawks", "Retrievers",
+        "Revolutionaries", "Roadrunners", "Rockets", "Roos", "Royals",
+        "Saints", "Salukis", "Seahawks", "Seawolves", "Seminoles", "Sharks",
+        "Shockers", "Skyhawks", "Sooners", "Spartans", "Spiders", "Stags",
+        "Sycamores",
+        "Terrapins", "Terriers", "Texans", "Thunderbirds", "Tigers", "Titans",
+        "Tommies", "Toppers", "Toreros", "Trailblazers", "Tribe", "Tritons",
+        "Trojans",
+        "Utes",
+        "Vandals", "Vaqueros", "Vikings", "Volunteers",
+        "Warhawks", "Warriors", "Wave", "Waves", "Wildcats", "Wolfpack",
+        "Wolverines", "Wolves",
+        "Zips"
     ]
 
     name = full_name.strip()
