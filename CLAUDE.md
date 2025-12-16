@@ -47,6 +47,18 @@ python app.py
 # Access at http://localhost:5001
 ```
 
+### Running Tests
+```bash
+# Run all end-to-end tests (Oregon, Western Kentucky, Arizona State)
+pytest tests/test_generator_e2e.py -v
+
+# Run tests for a specific team
+pytest tests/test_generator_e2e.py -v -k "Oregon"
+
+# Validate existing data files
+pytest tests/test_schema_validation.py -v
+```
+
 ### Testing Data Sources
 ```bash
 # Test Wikipedia scraper
@@ -136,7 +148,14 @@ cbbd/
 ├── scripts/              # Python data generation scripts
 │   ├── cbb_api_wrapper.py          # Core API wrapper
 │   ├── generate_*_data_json_2026.py # Team-specific generators
+│   ├── team_lookup.py              # Centralized team name lookup library
+│   ├── generate_team_registry.py   # Registry generator script
 │   └── config.py                    # Configuration helper
+├── config/               # Configuration files
+│   └── team_registry.json          # Centralized team registry (365+ teams)
+├── tests/                # Automated tests
+│   ├── test_generator_e2e.py       # End-to-end generator tests
+│   └── test_schema_validation.py   # JSON schema validation
 ├── apps-script/          # Google Apps Script library
 │   ├── google-apps-script-cbbd.js   # Main library code
 │   ├── LibraryWrappers.gs           # Wrapper functions
@@ -159,8 +178,7 @@ cbbd/
 ├── data/                # Generated JSON files
 │   ├── 2025/                        # 2024-25 season
 │   └── 2026/                        # 2025-26 season
-├── docs/                # Documentation
-└── config/              # Configuration files
+└── docs/                # Documentation
 ```
 
 ## Working with Data Generators
@@ -184,10 +202,30 @@ cbbd/
 - JSON files use `_2026` suffix for current season
 - Previous season files have no suffix or `_2025` suffix
 
-### Team ID Mapping
+### Centralized Team Lookup
+The project uses a centralized team registry for resolving team names across all external services:
+
+- **Registry**: `config/team_registry.json` - Single source of truth with 365+ teams
+- **Lookup Library**: `scripts/team_lookup.py` - O(1) lookups from any team name variation
+- **Generator**: `scripts/generate_team_registry.py` - Rebuilds registry from source mappings
+
+Usage in code:
+```python
+from scripts.team_lookup import get_team_lookup
+
+lookup = get_team_lookup()
+bballnet_slug = lookup.lookup("Western Kentucky", "bballnet")  # → "western-kentucky"
+wiki_page = lookup.lookup("UCLA", "wikipedia_page")  # → "UCLA Bruins men's basketball"
+team_id = lookup.get_team_id("Arizona St.")  # → 221
+```
+
+Supported services: `bballnet`, `sports_reference`, `wikipedia_page`, `barttorvik`, `kenpom`
+
+### Team ID Mapping (Legacy)
 - College Basketball API uses numeric team IDs
 - FoxSports cache uses team names (e.g., "UCLA", "Oregon")
 - Mapping file: `foxsports_rosters/cbb_to_foxsports_team_mapping.json`
+- **Note**: Prefer using centralized `TeamLookup` for new code
 
 ### JSON Data Structure
 Each team JSON file contains:
