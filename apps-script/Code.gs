@@ -42,65 +42,61 @@ function GET_TEAM_META(url) {
         ["API Calls", data.metadata.apiCalls]
       ];
       
-      // Add mascot if available (from cached roster)
-      if (data.mascot) {
-        table.push(["Mascot", data.mascot]);
-      }
+      // Mascot - always include (use "N/A" if missing)
+      table.push(["Mascot", data.mascot || "N/A"]);
+
+      // Total record - always include section
+      table.push([""]);
+      table.push(["=== RECORD ==="]);
+      var totalWins = (data.totalRecord && data.totalRecord.wins !== undefined) ? data.totalRecord.wins : "N/A";
+      var totalLosses = (data.totalRecord && data.totalRecord.losses !== undefined) ? data.totalRecord.losses : "N/A";
+      var totalGames = (data.totalRecord && data.totalRecord.games !== undefined) ? data.totalRecord.games : "N/A";
+      var totalRecordStr = (totalWins !== "N/A" && totalLosses !== "N/A") ? totalWins + "-" + totalLosses : "N/A";
+      table.push(["Total Record", totalRecordStr]);
+      table.push(["Total Wins", totalWins]);
+      table.push(["Total Losses", totalLosses]);
+      table.push(["Total Games", totalGames]);
+
+      // Conference record - always include section
+      table.push([""]);
+      table.push(["=== CONFERENCE RECORD ==="]);
+      var confWins = (data.conferenceRecord && data.conferenceRecord.wins !== undefined) ? data.conferenceRecord.wins : "N/A";
+      var confLosses = (data.conferenceRecord && data.conferenceRecord.losses !== undefined) ? data.conferenceRecord.losses : "N/A";
+      var confGames = (data.conferenceRecord && data.conferenceRecord.games !== undefined) ? data.conferenceRecord.games : "N/A";
+      var confRecordStr = (confWins !== "N/A" && confLosses !== "N/A") ? confWins + "-" + confLosses : "N/A";
+      table.push(["Conference Record", confRecordStr]);
+      table.push(["Conference Wins", confWins]);
+      table.push(["Conference Losses", confLosses]);
+      table.push(["Conference Games", confGames]);
       
-      // Add total record if available
-      if (data.totalRecord) {
-        table.push([""]);
-        table.push(["=== RECORD ==="]);
-        table.push(["Total Record", data.totalRecord.wins + "-" + data.totalRecord.losses]);
-        table.push(["Total Wins", data.totalRecord.wins]);
-        table.push(["Total Losses", data.totalRecord.losses]);
-        table.push(["Total Games", data.totalRecord.games]);
-      }
+      // NET Rating - always include section
+      table.push([""]);
+      table.push(["=== NET RATING ==="]);
+      table.push(["NET Rank", (data.netRating && data.netRating.rating) || "N/A"]);
+      table.push(["Previous Rank", (data.netRating && data.netRating.previousRating) || "N/A"]);
+      table.push(["Source", (data.netRating && data.netRating.source) || "bballnet.com"]);
+      table.push(["URL", (data.netRating && data.netRating.url) || "N/A"]);
       
-      // Add conference record if available
-      if (data.conferenceRecord) {
-        table.push([""]);
-        table.push(["=== CONFERENCE RECORD ==="]);
-        table.push(["Conference Record", data.conferenceRecord.wins + "-" + data.conferenceRecord.losses]);
-        table.push(["Conference Wins", data.conferenceRecord.wins]);
-        table.push(["Conference Losses", data.conferenceRecord.losses]);
-        table.push(["Conference Games", data.conferenceRecord.games]);
-      }
+      // AP Rankings - always include section (use "-" for unranked)
+      table.push([""]);
+      table.push(["=== AP RANKINGS ==="]);
+      var currentRank = (data.metadata && data.metadata.apRankings && data.metadata.apRankings.current !== null && data.metadata.apRankings.current !== undefined)
+        ? "#" + data.metadata.apRankings.current
+        : "-";
+      var highestRank = (data.metadata && data.metadata.apRankings && data.metadata.apRankings.highest !== null && data.metadata.apRankings.highest !== undefined)
+        ? "#" + data.metadata.apRankings.highest
+        : "-";
+      table.push(["Current Rank", currentRank]);
+      table.push(["Highest Rank", highestRank]);
       
-      // Add NET rating if available
-      if (data.netRating) {
-        table.push([""]);
-        table.push(["=== NET RATING ==="]);
-        table.push(["NET Rank", data.netRating.rating || "N/A"]);
-        if (data.netRating.previousRating) {
-          table.push(["Previous Rank", data.netRating.previousRating]);
-        }
-        table.push(["Source", data.netRating.source || "bballnet.com"]);
-        if (data.netRating.url) {
-          table.push(["URL", data.netRating.url]);
-        }
-      }
-      
-      // Add AP Rankings if available
-      if (data.metadata && data.metadata.apRankings) {
-        table.push([""]);
-        table.push(["=== AP RANKINGS ==="]);
-        var currentRank = data.metadata.apRankings.current;
-        var highestRank = data.metadata.apRankings.highest;
-        table.push(["Current Rank", currentRank !== null && currentRank !== undefined ? "#" + currentRank : "Unranked"]);
-        table.push(["Highest Rank", highestRank !== null && highestRank !== undefined ? "#" + highestRank : "Unranked"]);
-      }
-      
-      // Add coach history if available (append to end)
+      // Coach History - always show section headers, variable 0-6 season rows
+      table.push([""]);
+      table.push(["=== COACH HISTORY (Last 6 Complete Seasons) ==="]);
+      table.push(["Season", "Conference", "Overall W-L", "Conf W-L", "NCAA Tournament", "Seed", "Coach"]);
+
+      // Add season rows (0-6 rows depending on data availability)
       if (data.coachHistory && data.coachHistory.seasons && data.coachHistory.seasons.length > 0) {
-        table.push([""]);
-        table.push(["=== COACH HISTORY (Last 6 Complete Seasons) ==="]);
-        table.push(["Season", "Conference", "Overall W-L", "Conf W-L", "NCAA Tournament", "Seed", "Coach"]);
-        
-        // Limit to last 6 seasons (assuming seasons are in reverse chronological order - newest first)
-        // If in chronological order, use .slice(-6) instead
         var seasonsToShow = data.coachHistory.seasons.slice(0, 6);
-        
         seasonsToShow.forEach(function(season) {
           table.push([
             season.season || "",
@@ -112,54 +108,32 @@ function GET_TEAM_META(url) {
             season.coach || ""
           ]);
         });
-        
-        // Add average wins if available
-        if (data.coachHistory.averageOverallWins !== undefined || data.coachHistory.averageConferenceWins !== undefined) {
-          table.push([""]);
-          table.push(["=== AVERAGES (Last 6 Seasons) ==="]);
-          if (data.coachHistory.averageOverallWins !== undefined) {
-            table.push(["Average Overall Wins", data.coachHistory.averageOverallWins]);
-          }
-          if (data.coachHistory.averageConferenceWins !== undefined) {
-            table.push(["Average Conference Wins", data.coachHistory.averageConferenceWins]);
-          }
-        }
-        
-        // Add winningest coach if available
-        if (data.coachHistory.winningestCoach) {
-          var wc = data.coachHistory.winningestCoach;
-          table.push([""]);
-          table.push(["=== WINNINGEST COACH ==="]);
-          table.push(["Coach", wc.coach || ""]);
-          if (wc.from && wc.to) {
-            table.push(["Years", wc.from + " - " + wc.to]);
-          }
-          if (wc.years) {
-            table.push(["Seasons", wc.years]);
-          }
-          if (wc.record) {
-            table.push(["Record", wc.record]);
-          }
-          if (wc.wins && wc.losses) {
-            table.push(["Wins", wc.wins]);
-            table.push(["Losses", wc.losses]);
-          }
-          if (wc.winPercentage) {
-            table.push(["Win Percentage", wc.winPercentage]);
-          }
-          if (data.coachHistory.winningestCoachUrl) {
-            table.push(["URL", data.coachHistory.winningestCoachUrl]);
-          }
-        }
-        
-        if (data.coachHistory.source) {
-          table.push([""]);
-          table.push(["Source", data.coachHistory.source]);
-        }
-        if (data.coachHistory.url) {
-          table.push(["URL", data.coachHistory.url]);
-        }
       }
+
+      // Averages section - always include
+      table.push([""]);
+      table.push(["=== AVERAGES (Last 6 Seasons) ==="]);
+      table.push(["Average Overall Wins", (data.coachHistory && data.coachHistory.averageOverallWins !== undefined) ? data.coachHistory.averageOverallWins : "N/A"]);
+      table.push(["Average Conference Wins", (data.coachHistory && data.coachHistory.averageConferenceWins !== undefined) ? data.coachHistory.averageConferenceWins : "N/A"]);
+
+      // Winningest coach section - always include
+      var wc = (data.coachHistory && data.coachHistory.winningestCoach) || {};
+      table.push([""]);
+      table.push(["=== WINNINGEST COACH ==="]);
+      table.push(["Coach", wc.coach || "N/A"]);
+      var yearsStr = (wc.from && wc.to) ? wc.from + " - " + wc.to : "N/A";
+      table.push(["Years", yearsStr]);
+      table.push(["Seasons", wc.years || "N/A"]);
+      table.push(["Record", wc.record || "N/A"]);
+      table.push(["Wins", (wc.wins !== undefined) ? wc.wins : "N/A"]);
+      table.push(["Losses", (wc.losses !== undefined) ? wc.losses : "N/A"]);
+      table.push(["Win Percentage", wc.winPercentage || "N/A"]);
+      table.push(["URL", (data.coachHistory && data.coachHistory.winningestCoachUrl) || "N/A"]);
+
+      // Source and URL - always include
+      table.push([""]);
+      table.push(["Source", (data.coachHistory && data.coachHistory.source) || "N/A"]);
+      table.push(["URL", (data.coachHistory && data.coachHistory.url) || "N/A"]);
       
       return table;
     } catch (e) {
@@ -395,82 +369,91 @@ function GET_TEAM_META(url) {
         ["Free Throw Rate", stats.teamStats.fourFactors.freeThrowRate + "%", stats.opponentStats.fourFactors.freeThrowRate + "%"]
       ];
       
-      // Add per-game stats if available
-      if (stats.perGameStats) {
-        var pg = stats.perGameStats;
-        var pgTeam = pg.teamStats || {};
-        var pgOpp = pg.opponentStats || {};
-        var pgMargins = pg.margins || {};
-        var pgRatios = pg.ratios || {};
-        
-        table.push([""]);
-        table.push(["--- Per Game Stats ---"]);
-        table.push(["", "Team", "Opponent"]);
-        table.push(["3PT FGM/G", (pgTeam.threePointFieldGoalsMadePerGame || 0).toFixed(2), ""]);
-        table.push(["3PT FGA/G", (pgTeam.threePointFieldGoalsAttemptedPerGame || 0).toFixed(2), ""]);
-        table.push(["Off Reb/G", (pgTeam.offensiveReboundsPerGame || 0).toFixed(2), ""]);
-        table.push(["TO/G", (pgTeam.turnoversPerGame || 0).toFixed(2), ""]);
-        table.push(["APG", (pgTeam.assistsPerGame || 0).toFixed(2), ""]);
-        table.push(["FTM/G", (pgTeam.freeThrowsMadePerGame || 0).toFixed(2), ""]);
-        table.push(["FTA/G", (pgTeam.freeThrowsAttemptedPerGame || 0).toFixed(2), ""]);
-        table.push(["FT%", (pgTeam.freeThrowPct || 0).toFixed(1) + "%", ""]);
-        table.push(["Fouls/G", (pgTeam.foulsPerGame || 0).toFixed(2), ""]);
-        table.push(["Def Rebs/G", (pgTeam.defensiveReboundsPerGame || 0).toFixed(2), ""]);
-        table.push(["SPG", (pgTeam.stealsPerGame || 0).toFixed(2), ""]);
-        table.push(["BPG", (pgTeam.blocksPerGame || 0).toFixed(2), ""]);
-        table.push([""]);
-        table.push(["--- Opponent Per Game Stats ---"]);
-        table.push(["Def. PPG", "", (pgOpp.pointsPerGame || 0).toFixed(2)]);
-        table.push(["Def. FG%", "", (pgOpp.fieldGoalPct || 0).toFixed(1) + "%"]);
-        table.push(["Def. 3P%", "", (pgOpp.threePointPct || 0).toFixed(1) + "%"]);
-        table.push(["TO Forced/G", "", (pgOpp.turnoversForcedPerGame || 0).toFixed(2)]);
-        table.push([""]);
-        table.push(["--- Margins (Per Game) ---"]);
-        table.push(["Point Margin", (pgMargins.pointMargin || 0).toFixed(2), ""]);
-        table.push(["Rebound Margin", (pgMargins.reboundMargin || 0).toFixed(2), ""]);
-        table.push(["TO Margin", (pgMargins.turnoverMargin || 0).toFixed(2), ""]);
-        table.push([""]);
-        table.push(["--- Ratios ---"]);
-        table.push(["A:TO Ratio", (pgRatios.assistToTurnoverRatio || 0).toFixed(2), ""]);
-      }
+      // Per-game stats section - always include (use safe defaults if missing)
+      var pg = stats.perGameStats || {};
+      var pgTeam = (pg && pg.teamStats) || {};
+      var pgOpp = (pg && pg.opponentStats) || {};
+      var pgMargins = (pg && pg.margins) || {};
+      var pgRatios = (pg && pg.ratios) || {};
+
+      table.push([""]);
+      table.push(["--- Per Game Stats ---"]);
+      table.push(["", "Team", "Opponent"]);
+      table.push(["3PT FGM/G", (pgTeam.threePointFieldGoalsMadePerGame || 0).toFixed(2), ""]);
+      table.push(["3PT FGA/G", (pgTeam.threePointFieldGoalsAttemptedPerGame || 0).toFixed(2), ""]);
+      table.push(["Off Reb/G", (pgTeam.offensiveReboundsPerGame || 0).toFixed(2), ""]);
+      table.push(["TO/G", (pgTeam.turnoversPerGame || 0).toFixed(2), ""]);
+      table.push(["APG", (pgTeam.assistsPerGame || 0).toFixed(2), ""]);
+      table.push(["FTM/G", (pgTeam.freeThrowsMadePerGame || 0).toFixed(2), ""]);
+      table.push(["FTA/G", (pgTeam.freeThrowsAttemptedPerGame || 0).toFixed(2), ""]);
+      table.push(["FT%", (pgTeam.freeThrowPct || 0).toFixed(1) + "%", ""]);
+      table.push(["Fouls/G", (pgTeam.foulsPerGame || 0).toFixed(2), ""]);
+      table.push(["Def Rebs/G", (pgTeam.defensiveReboundsPerGame || 0).toFixed(2), ""]);
+      table.push(["SPG", (pgTeam.stealsPerGame || 0).toFixed(2), ""]);
+      table.push(["BPG", (pgTeam.blocksPerGame || 0).toFixed(2), ""]);
+      table.push([""]);
+      table.push(["--- Opponent Per Game Stats ---"]);
+      table.push(["Def. PPG", "", (pgOpp.pointsPerGame || 0).toFixed(2)]);
+      table.push(["Def. FG%", "", (pgOpp.fieldGoalPct || 0).toFixed(1) + "%"]);
+      table.push(["Def. 3P%", "", (pgOpp.threePointPct || 0).toFixed(1) + "%"]);
+      table.push(["TO Forced/G", "", (pgOpp.turnoversForcedPerGame || 0).toFixed(2)]);
+      table.push([""]);
+      table.push(["--- Margins (Per Game) ---"]);
+      table.push(["Point Margin", (pgMargins.pointMargin || 0).toFixed(2), ""]);
+      table.push(["Rebound Margin", (pgMargins.reboundMargin || 0).toFixed(2), ""]);
+      table.push(["TO Margin", (pgMargins.turnoverMargin || 0).toFixed(2), ""]);
+      table.push([""]);
+      table.push(["--- Ratios ---"]);
+      table.push(["A:TO Ratio", (pgRatios.assistToTurnoverRatio || 0).toFixed(2), ""]);
       
-      // Add possession game records at the end
-      if (stats.possessionGameRecords) {
-        table.push([""]);
-        table.push(["=== POSSESSION GAME RECORDS ==="]);
-        table.push(["1-Possession Games", 
-         (stats.possessionGameRecords.onePossession ? 
-          stats.possessionGameRecords.onePossession.wins + "-" + stats.possessionGameRecords.onePossession.losses : 
-          "0-0")]);
-        table.push(["2-Possession Games", 
-         (stats.possessionGameRecords.twoPossession ? 
-          stats.possessionGameRecords.twoPossession.wins + "-" + stats.possessionGameRecords.twoPossession.losses : 
-          "0-0")]);
-      }
+      // Possession game records - always include (use defaults if missing)
+      table.push([""]);
+      table.push(["=== POSSESSION GAME RECORDS ==="]);
+      table.push(["1-Possession Games",
+       (stats.possessionGameRecords && stats.possessionGameRecords.onePossession ?
+        stats.possessionGameRecords.onePossession.wins + "-" + stats.possessionGameRecords.onePossession.losses :
+        "0-0")]);
+      table.push(["2-Possession Games",
+       (stats.possessionGameRecords && stats.possessionGameRecords.twoPossession ?
+        stats.possessionGameRecords.twoPossession.wins + "-" + stats.possessionGameRecords.twoPossession.losses :
+        "0-0")]);
       
-      // Add home/away/neutral records at the end
-      if (data.homeRecord || data.awayRecord || data.neutralRecord) {
-        table.push([""]);
-        table.push(["=== HOME/AWAY/NEUTRAL RECORDS ==="]);
-        if (data.homeRecord) {
-          table.push(["Home Record", data.homeRecord.wins + "-" + data.homeRecord.losses]);
-          table.push(["Home Wins", data.homeRecord.wins]);
-          table.push(["Home Losses", data.homeRecord.losses]);
-          table.push(["Home Games", data.homeRecord.games]);
-        }
-        if (data.awayRecord) {
-          table.push(["Away Record", data.awayRecord.wins + "-" + data.awayRecord.losses]);
-          table.push(["Away Wins", data.awayRecord.wins]);
-          table.push(["Away Losses", data.awayRecord.losses]);
-          table.push(["Away Games", data.awayRecord.games]);
-        }
-        if (data.neutralRecord) {
-          table.push(["Neutral Record", data.neutralRecord.wins + "-" + data.neutralRecord.losses]);
-          table.push(["Neutral Wins", data.neutralRecord.wins]);
-          table.push(["Neutral Losses", data.neutralRecord.losses]);
-          table.push(["Neutral Games", data.neutralRecord.games]);
-        }
-      }
+      // Home/Away/Neutral records - always include (use "N/A" if missing)
+      table.push([""]);
+      table.push(["=== HOME/AWAY/NEUTRAL RECORDS ==="]);
+
+      // Home records
+      var homeRecord = data.homeRecord || {};
+      var homeWins = homeRecord.wins !== undefined ? homeRecord.wins : "N/A";
+      var homeLosses = homeRecord.losses !== undefined ? homeRecord.losses : "N/A";
+      var homeGames = homeRecord.games !== undefined ? homeRecord.games : "N/A";
+      var homeRecordStr = (homeWins !== "N/A" && homeLosses !== "N/A") ? homeWins + "-" + homeLosses : "N/A";
+      table.push(["Home Record", homeRecordStr]);
+      table.push(["Home Wins", homeWins]);
+      table.push(["Home Losses", homeLosses]);
+      table.push(["Home Games", homeGames]);
+
+      // Away records
+      var awayRecord = data.awayRecord || {};
+      var awayWins = awayRecord.wins !== undefined ? awayRecord.wins : "N/A";
+      var awayLosses = awayRecord.losses !== undefined ? awayRecord.losses : "N/A";
+      var awayGames = awayRecord.games !== undefined ? awayRecord.games : "N/A";
+      var awayRecordStr = (awayWins !== "N/A" && awayLosses !== "N/A") ? awayWins + "-" + awayLosses : "N/A";
+      table.push(["Away Record", awayRecordStr]);
+      table.push(["Away Wins", awayWins]);
+      table.push(["Away Losses", awayLosses]);
+      table.push(["Away Games", awayGames]);
+
+      // Neutral records
+      var neutralRecord = data.neutralRecord || {};
+      var neutralWins = neutralRecord.wins !== undefined ? neutralRecord.wins : "N/A";
+      var neutralLosses = neutralRecord.losses !== undefined ? neutralRecord.losses : "N/A";
+      var neutralGames = neutralRecord.games !== undefined ? neutralRecord.games : "N/A";
+      var neutralRecordStr = (neutralWins !== "N/A" && neutralLosses !== "N/A") ? neutralWins + "-" + neutralLosses : "N/A";
+      table.push(["Neutral Record", neutralRecordStr]);
+      table.push(["Neutral Wins", neutralWins]);
+      table.push(["Neutral Losses", neutralLosses]);
+      table.push(["Neutral Games", neutralGames]);
       
       return table;
     } catch (e) {
@@ -538,22 +521,24 @@ function GET_TEAM_META(url) {
         }
       }
       
-      // Add upcoming games if available
+      // Upcoming games section - always show headers, variable 0-N data rows
+      var q1Count = 0;
       if (data.upcomingGames && data.upcomingGames.length > 0) {
-        // Count Q1 games
-        var q1Count = 0;
         for (var k = 0; k < data.upcomingGames.length; k++) {
           if (data.upcomingGames[k].quadrant === "Q1") {
             q1Count++;
           }
         }
-        
-        table.push([""]);
-        table.push(["=== UPCOMING GAMES ==="]);
-        table.push(["Upcoming Q1 Games", q1Count]);
-        table.push([""]);
-        table.push(["Quadrant", "Location", "Rank", "Opponent", "Date"]);
-        
+      }
+
+      table.push([""]);
+      table.push(["=== UPCOMING GAMES ==="]);
+      table.push(["Upcoming Q1 Games", q1Count]);
+      table.push([""]);
+      table.push(["Quadrant", "Location", "Rank", "Opponent", "Date"]);
+
+      // Add game rows (0-N rows depending on data availability)
+      if (data.upcomingGames && data.upcomingGames.length > 0) {
         for (var j = 0; j < data.upcomingGames.length; j++) {
           var game = data.upcomingGames[j];
           var rankStr = game.rank ? "(" + game.rank + ")" : "";
@@ -1173,6 +1158,7 @@ function GET_TEAM_META(url) {
   }
   
   // Get player's last game as compact summary string
+  // Shows stats from team's most recent game (even if player didn't play)
   function GET_PLAYER_LAST_GAME_SUMMARY(url, playerName) {
     try {
       var response = UrlFetchApp.fetch(url);
@@ -1183,23 +1169,51 @@ function GET_TEAM_META(url) {
       });
       
       if (!player) return "Player not found";
-      if (!player.gameByGame || player.gameByGame.length === 0) return "No games found";
       
-      // Get last game
-      var game = player.gameByGame[player.gameByGame.length - 1];
-      var totalReb = game.rebounds.offensive + game.rebounds.defensive;
+      // Get team's most recent game
+      if (!data.teamGameStats || data.teamGameStats.length === 0) {
+        return "No team games found";
+      }
+      
+      // Sort team games by date (most recent first)
+      var sortedTeamGames = data.teamGameStats.slice().sort(function(a, b) {
+        return new Date(b.startDate) - new Date(a.startDate);
+      });
+      
+      var mostRecentTeamGame = sortedTeamGames[0];
+      
+      // Find player's stats for this specific game
+      var playerGame = null;
+      if (player.gameByGame && player.gameByGame.length > 0) {
+        // Match by date and opponent
+        var teamGameDate = new Date(mostRecentTeamGame.startDate).toISOString().split('T')[0]; // Get YYYY-MM-DD
+        
+        playerGame = player.gameByGame.find(function(pg) {
+          var playerGameDate = new Date(pg.date).toISOString().split('T')[0];
+          return playerGameDate === teamGameDate && 
+                 pg.opponent === mostRecentTeamGame.opponent;
+        });
+      }
+      
+      // If player didn't play in the most recent game, return "-"
+      if (!playerGame) {
+        return "-";
+      }
+      
+      // Player did play - format stats
+      var totalReb = playerGame.rebounds.offensive + playerGame.rebounds.defensive;
       
       // Format: {points}p, {rebounds}r, {assists}a, {turnovers}to, {steals}s, {blocks}b, {fgm}-{fga}fg, {ftm}-{fta}ft, ({3pmade}-{3pa})3p, [{minutes}]
-      var summary = game.points + "p, " +
+      var summary = playerGame.points + "p, " +
                     totalReb + "r, " +
-                    game.assists + "a, " +
-                    game.turnovers + "to, " +
-                    game.steals + "s, " +
-                    game.blocks + "b, " +
-                    game.fieldGoals.made + "-" + game.fieldGoals.attempted + "fg, " +
-                    game.freeThrows.made + "-" + game.freeThrows.attempted + "ft, " +
-                    "(" + game.threePointFieldGoals.made + "-" + game.threePointFieldGoals.attempted + ")3p, " +
-                    "[" + game.minutes + "]";
+                    playerGame.assists + "a, " +
+                    playerGame.turnovers + "to, " +
+                    playerGame.steals + "s, " +
+                    playerGame.blocks + "b, " +
+                    playerGame.fieldGoals.made + "-" + playerGame.fieldGoals.attempted + "fg, " +
+                    playerGame.freeThrows.made + "-" + playerGame.freeThrows.attempted + "ft, " +
+                    "(" + playerGame.threePointFieldGoals.made + "-" + playerGame.threePointFieldGoals.attempted + ")3p, " +
+                    "[" + playerGame.minutes + "]";
       
       return summary;
     } catch (e) {
@@ -1681,140 +1695,122 @@ function GET_TEAM_META(url) {
       var data = JSON.parse(response.getContentText());
       
       var table = [];
-      
-      // Check if KenPom data exists - handle both old and new structure
-      if (!data.kenpom) {
-        table.push([["KenPom data not available"], ["Data may not have been generated with KenPom information"], ["Note: Regenerate the data file to include KenPom API data"]]);
-      } else {
-        // Check for reportTable (new API structure) or report_table_structured (old scraping structure)
-        var reportTable = data.kenpom.reportTable || data.kenpom.report_table_structured;
-        
-        if (!reportTable) {
-          table.push([["KenPom data not available"], ["KenPom object exists but reportTable is missing"], ["Available keys: " + Object.keys(data.kenpom).join(", ")]]);
-        } else {
-          table.push(
-            ["=== KENPOM REPORT TABLE ==="],
-            [""],
-            ["Category", "Offense", "Offense Rank", "Defense", "Defense Rank", "D-I Avg"]
-          );
-          
-          // Process each category
-          for (var category in reportTable) {
-            var categoryData = reportTable[category];
-            
-            // Handle Adj. Tempo specially (has combined instead of offense/defense)
-            if (category === "Adj. Tempo") {
-              var combined = removePercent(categoryData.combined || "");
-              var ranking = categoryData.ranking !== null ? categoryData.ranking : "";
-              var d1Avg = removePercent(categoryData.d1_avg || "");
-              
-              table.push([
-                category,
-                combined,
-                ranking,
-                "", // No defense for tempo
-                "", // No defense rank
-                d1Avg
-              ]);
-            } else if (categoryData.value !== undefined) {
-              // Handle categories with "value" field (Bench Minutes, D-1 Experience, etc.)
-              var value = removePercent(categoryData.value || "");
-              var ranking = categoryData.ranking !== null ? categoryData.ranking : "";
-              var d1Avg = removePercent(categoryData.d1_avg || "");
-              
-              table.push([
-                category,
-                value,
-                ranking,
-                "", // No defense for value-based categories
-                "", // No defense rank
-                d1Avg
-              ]);
-            } else {
-              // Standard categories with offense/defense
-              var offense = removePercent(categoryData.offense || "");
-              var offenseRank = categoryData.offense_ranking !== null ? categoryData.offense_ranking : "";
-              var defense = removePercent(categoryData.defense || "");
-              var defenseRank = categoryData.defense_ranking !== null ? categoryData.defense_ranking : "";
-              var d1Avg = removePercent(categoryData.d1_avg || "");
-              
-              // Skip empty categories (section headers)
-              if (!offense && !defense && !d1Avg) {
-                continue;
-              }
-              
-              table.push([
-                category,
-                offense,
-                offenseRank,
-                defense,
-                defenseRank,
-                d1Avg
-              ]);
+
+      // KenPom Report Table - always show headers
+      table.push(
+        ["=== KENPOM REPORT TABLE ==="],
+        [""],
+        ["Category", "Offense", "Offense Rank", "Defense", "Defense Rank", "D-I Avg"]
+      );
+
+      // Check if KenPom data exists and process it
+      var reportTable = (data.kenpom && (data.kenpom.reportTable || data.kenpom.report_table_structured)) || null;
+
+      if (reportTable) {
+        // Process each category
+        for (var category in reportTable) {
+          var categoryData = reportTable[category];
+
+          // Handle Adj. Tempo specially (has combined instead of offense/defense)
+          if (category === "Adj. Tempo") {
+            var combined = removePercent(categoryData.combined || "");
+            var ranking = categoryData.ranking !== null ? categoryData.ranking : "";
+            var d1Avg = removePercent(categoryData.d1_avg || "");
+
+            table.push([
+              category,
+              combined,
+              ranking,
+              "", // No defense for tempo
+              "", // No defense rank
+              d1Avg
+            ]);
+          } else if (categoryData.value !== undefined) {
+            // Handle categories with "value" field (Bench Minutes, D-1 Experience, etc.)
+            var value = removePercent(categoryData.value || "");
+            var ranking = categoryData.ranking !== null ? categoryData.ranking : "";
+            var d1Avg = removePercent(categoryData.d1_avg || "");
+
+            table.push([
+              category,
+              value,
+              ranking,
+              "", // No defense for value-based categories
+              "", // No defense rank
+              d1Avg
+            ]);
+          } else {
+            // Standard categories with offense/defense
+            var offense = removePercent(categoryData.offense || "");
+            var offenseRank = categoryData.offense_ranking !== null ? categoryData.offense_ranking : "";
+            var defense = removePercent(categoryData.defense || "");
+            var defenseRank = categoryData.defense_ranking !== null ? categoryData.defense_ranking : "";
+            var d1Avg = removePercent(categoryData.d1_avg || "");
+
+            // Skip empty categories (section headers)
+            if (!offense && !defense && !d1Avg) {
+              continue;
             }
+
+            table.push([
+              category,
+              offense,
+              offenseRank,
+              defense,
+              defenseRank,
+              d1Avg
+            ]);
           }
         }
+      } else {
+        // No KenPom data - show "N/A" row
+        table.push(["KenPom data not available", "N/A", "N/A", "N/A", "N/A", "N/A"]);
       }
       
-      // Append Bart Torvik data
+      // Bart Torvik data section - always show all subsections
       table.push([""]);
       table.push(["=== BART TORVIK TEAMSHEET DATA ==="]);
       table.push([""]);
-      
-      if (!data.barttorvik) {
-        table.push([["Bart Torvik data not available"], ["Data may not have been generated with Bart Torvik information"], ["Note: Regenerate the data file to include Bart Torvik data"]]);
-      } else {
-        var bt = data.barttorvik;
-        
-        // Basic info
-        table.push(["Rank", bt.rank || "N/A"]);
-        table.push(["Seed", bt.seed || "N/A"]);
-        table.push([""]);
-        
-        // Resume metrics
-        if (bt.resume) {
-          table.push(["=== RESUME METRICS ==="]);
-          table.push(["NET", bt.resume.net || "N/A"]);
-          table.push(["KPI", bt.resume.kpi || "N/A"]);
-          table.push(["SOR", bt.resume.sor || "N/A"]);
-          table.push(["WAB", bt.resume.wab || "N/A"]);
-          table.push(["Avg", bt.resume.avg || "N/A"]);
-          table.push([""]);
-        }
-        
-        // Quality metrics
-        if (bt.quality) {
-          table.push(["=== QUALITY METRICS ==="]);
-          table.push(["BPI", bt.quality.bpi || "N/A"]);
-          table.push(["KenPom", bt.quality.kenpom || "N/A"]);
-          table.push(["TRK", bt.quality.trk || "N/A"]);
-          table.push(["Avg", bt.quality.avg || "N/A"]);
-          table.push([""]);
-        }
-        
-        // Quadrant records
-        if (bt.quadrants) {
-          table.push(["=== QUADRANT RECORDS ==="]);
-          if (bt.quadrants.q1a) {
-            table.push(["Q1A", bt.quadrants.q1a.record || "N/A", "(" + (bt.quadrants.q1a.wins || 0) + "-" + (bt.quadrants.q1a.losses || 0) + ")"]);
-          }
-          if (bt.quadrants.q1) {
-            table.push(["Q1", bt.quadrants.q1.record || "N/A", "(" + (bt.quadrants.q1.wins || 0) + "-" + (bt.quadrants.q1.losses || 0) + ")"]);
-          }
-          if (bt.quadrants.q2) {
-            table.push(["Q2", bt.quadrants.q2.record || "N/A", "(" + (bt.quadrants.q2.wins || 0) + "-" + (bt.quadrants.q2.losses || 0) + ")"]);
-          }
-          if (bt.quadrants.q1_and_q2) {
-            table.push(["Q1&2", bt.quadrants.q1_and_q2.record || "N/A", "(" + (bt.quadrants.q1_and_q2.wins || 0) + "-" + (bt.quadrants.q1_and_q2.losses || 0) + ")"]);
-          }
-          if (bt.quadrants.q3) {
-            table.push(["Q3", bt.quadrants.q3.record || "N/A", "(" + (bt.quadrants.q3.wins || 0) + "-" + (bt.quadrants.q3.losses || 0) + ")"]);
-          }
-          if (bt.quadrants.q4) {
-            table.push(["Q4", bt.quadrants.q4.record || "N/A", "(" + (bt.quadrants.q4.wins || 0) + "-" + (bt.quadrants.q4.losses || 0) + ")"]);
-          }
-        }
-      }
+
+      var bt = data.barttorvik || {};
+
+      // Basic info - always include
+      table.push(["Rank", bt.rank || "N/A"]);
+      table.push(["Seed", bt.seed || "N/A"]);
+      table.push([""]);
+
+      // Resume metrics - always include section
+      table.push(["=== RESUME METRICS ==="]);
+      table.push(["NET", (bt.resume && bt.resume.net) || "N/A"]);
+      table.push(["KPI", (bt.resume && bt.resume.kpi) || "N/A"]);
+      table.push(["SOR", (bt.resume && bt.resume.sor) || "N/A"]);
+      table.push(["WAB", (bt.resume && bt.resume.wab) || "N/A"]);
+      table.push(["Avg", (bt.resume && bt.resume.avg) || "N/A"]);
+      table.push([""]);
+
+      // Quality metrics - always include section
+      table.push(["=== QUALITY METRICS ==="]);
+      table.push(["BPI", (bt.quality && bt.quality.bpi) || "N/A"]);
+      table.push(["KenPom", (bt.quality && bt.quality.kenpom) || "N/A"]);
+      table.push(["TRK", (bt.quality && bt.quality.trk) || "N/A"]);
+      table.push(["Avg", (bt.quality && bt.quality.avg) || "N/A"]);
+      table.push([""]);
+
+      // Quadrant records - always include section with all quadrants
+      table.push(["=== QUADRANT RECORDS ==="]);
+      var q1a = (bt.quadrants && bt.quadrants.q1a) || {};
+      var q1 = (bt.quadrants && bt.quadrants.q1) || {};
+      var q2 = (bt.quadrants && bt.quadrants.q2) || {};
+      var q1_and_q2 = (bt.quadrants && bt.quadrants.q1_and_q2) || {};
+      var q3 = (bt.quadrants && bt.quadrants.q3) || {};
+      var q4 = (bt.quadrants && bt.quadrants.q4) || {};
+
+      table.push(["Q1A", q1a.record || "N/A", "(" + (q1a.wins || 0) + "-" + (q1a.losses || 0) + ")"]);
+      table.push(["Q1", q1.record || "N/A", "(" + (q1.wins || 0) + "-" + (q1.losses || 0) + ")"]);
+      table.push(["Q2", q2.record || "N/A", "(" + (q2.wins || 0) + "-" + (q2.losses || 0) + ")"]);
+      table.push(["Q1&2", q1_and_q2.record || "N/A", "(" + (q1_and_q2.wins || 0) + "-" + (q1_and_q2.losses || 0) + ")"]);
+      table.push(["Q3", q3.record || "N/A", "(" + (q3.wins || 0) + "-" + (q3.losses || 0) + ")"]);
+      table.push(["Q4", q4.record || "N/A", "(" + (q4.wins || 0) + "-" + (q4.losses || 0) + ")"]);
       
       return table;
     } catch (e) {
@@ -1993,13 +1989,9 @@ function GET_TEAM_META(url) {
         [""]
       ];
       
-      // Add source information
-      if (wiki.source) {
-        table.push(["Source", wiki.source]);
-      }
-      if (wiki.url) {
-        table.push(["URL", wiki.url]);
-      }
+      // Add source information (always include, use "N/A" if missing)
+      table.push(["Source", wiki.source || "N/A"]);
+      table.push(["URL", wiki.url || "N/A"]);
       
       return table;
     } catch (e) {

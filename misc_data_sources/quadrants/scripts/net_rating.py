@@ -53,6 +53,20 @@ TEAM_NAME_MAPPING = {
     'florida state': 'Florida St.',
     'north carolina state': 'NC State',
     'nc state': 'NC State',
+
+    # Additional mappings for teams with special formatting
+    # (based on exact display names in bballnet.com rankings table)
+    'albany': 'UAlbany',  # Shown as "UAlbany" not "Albany"
+    'bethune cookman': 'Bethune-Cookman',
+    'connecticut': 'UConn',  # Shown as "UConn" not "Connecticut"
+    'uconn': 'UConn',
+    'gardner webb': 'Gardner-Webb',
+    'siu edwardsville': 'SIUE',  # Shown as "SIUE" not "SIU Edwardsville"
+    'umkc': 'Kansas City',  # Shown as "Kansas City"
+    'missouri kansas city': 'Kansas City',
+    'kansas city': 'Kansas City',
+    'fairleigh dickinson': 'FDU',  # Shown as "FDU" not full name
+    'incarnate word': 'UIW',  # Shown as "UIW" (University of the Incarnate Word)
 }
 
 def get_net_rating(team_name):

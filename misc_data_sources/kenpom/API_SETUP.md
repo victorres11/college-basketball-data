@@ -97,3 +97,4 @@ All data from the original scraping is available via the API:
 - ✅ Structured JSON responses
 - ✅ No HTML parsing required
 
+

@@ -1,0 +1,710 @@
+{
+  "team": "Eastern Oregon",
+  "season": "2025-26",
+  "seasonType": "Regular",
+  "dataGenerated": "2025-12-04T02:47:49.977894+00:00",
+  "players": [],
+  "teamGameStats": [
+    {
+      "gameId": 213248,
+      "season": 2026,
+      "seasonLabel": "20252026",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-11-18T03:30:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 822,
+      "team": "Eastern Oregon",
+      "conference": null,
+      "teamSeed": null,
+      "opponentId": 80,
+      "opponent": "Eastern Washington",
+      "opponentConference": "Big Sky",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": false,
+      "conferenceGame": false,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 73,
+      "teamStats": {
+        "possessions": 73,
+        "assists": 15,
+        "steals": 10,
+        "blocks": 1,
+        "trueShooting": 51.6,
+        "rating": 100,
+        "gameScore": 52.80000000000001,
+        "points": {
+          "total": 73,
+          "byPeriod": [
+            37,
+            36
+          ],
+          "largestLead": 0,
+          "fastBreak": 16,
+          "inPaint": 40,
+          "offTurnovers": 18
+        },
+        "twoPointFieldGoals": {
+          "made": 23,
+          "attempted": 48,
+          "pct": 47.9
+        },
+        "threePointFieldGoals": {
+          "made": 8,
+          "attempted": 21,
+          "pct": 38
+        },
+        "freeThrows": {
+          "made": 3,
+          "attempted": 4,
+          "pct": 75
+        },
+        "fieldGoals": {
+          "made": 31,
+          "attempted": 69,
+          "pct": 45
+        },
+        "turnovers": {
+          "total": 12,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 9,
+          "defensive": 22,
+          "total": 31
+        },
+        "fouls": {
+          "total": 15,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 50.7,
+          "freeThrowRate": 5.8,
+          "turnoverRatio": 16.4,
+          "offensiveReboundPct": 29
+        }
+      },
+      "opponentStats": {
+        "possessions": 73,
+        "assists": 17,
+        "steals": 7,
+        "blocks": 3,
+        "trueShooting": 61.1,
+        "rating": 124.7,
+        "gameScore": 79.89999999999998,
+        "points": {
+          "total": 91,
+          "byPeriod": [
+            44,
+            47
+          ],
+          "largestLead": 22,
+          "fastBreak": 16,
+          "inPaint": 44,
+          "offTurnovers": 16
+        },
+        "twoPointFieldGoals": {
+          "made": 27,
+          "attempted": 43,
+          "pct": 62.8
+        },
+        "threePointFieldGoals": {
+          "made": 8,
+          "attempted": 24,
+          "pct": 33
+        },
+        "freeThrows": {
+          "made": 13,
+          "attempted": 17,
+          "pct": 76
+        },
+        "fieldGoals": {
+          "made": 35,
+          "attempted": 67,
+          "pct": 52
+        },
+        "turnovers": {
+          "total": 11,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 13,
+          "defensive": 29,
+          "total": 42
+        },
+        "fouls": {
+          "total": 11,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 58.2,
+          "freeThrowRate": 25.4,
+          "turnoverRatio": 15.1,
+          "offensiveReboundPct": 31
+        }
+      }
+    },
+    {
+      "gameId": 213416,
+      "season": 2026,
+      "seasonLabel": "20252026",
+      "seasonType": "regular",
+      "tournament": null,
+      "startDate": "2025-11-23T02:00:00.000Z",
+      "startTimeTbd": false,
+      "teamId": 822,
+      "team": "Eastern Oregon",
+      "conference": null,
+      "teamSeed": null,
+      "opponentId": 117,
+      "opponent": "Idaho",
+      "opponentConference": "Big Sky",
+      "opponentSeed": null,
+      "neutralSite": false,
+      "isHome": false,
+      "conferenceGame": false,
+      "gameType": "STD",
+      "notes": null,
+      "gameMinutes": 40,
+      "pace": 71.5,
+      "teamStats": {
+        "possessions": 71,
+        "assists": 9,
+        "steals": 7,
+        "blocks": 1,
+        "trueShooting": 48.5,
+        "rating": 95.8,
+        "gameScore": 39.89999999999999,
+        "points": {
+          "total": 68,
+          "byPeriod": [
+            41,
+            27
+          ],
+          "largestLead": 2,
+          "fastBreak": 3,
+          "inPaint": 20,
+          "offTurnovers": 7
+        },
+        "twoPointFieldGoals": {
+          "made": 14,
+          "attempted": 40,
+          "pct": 35
+        },
+        "threePointFieldGoals": {
+          "made": 10,
+          "attempted": 24,
+          "pct": 42
+        },
+        "freeThrows": {
+          "made": 10,
+          "attempted": 14,
+          "pct": 71
+        },
+        "fieldGoals": {
+          "made": 24,
+          "attempted": 64,
+          "pct": 38
+        },
+        "turnovers": {
+          "total": 13,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 12,
+          "defensive": 23,
+          "total": 35
+        },
+        "fouls": {
+          "total": 19,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 45.3,
+          "freeThrowRate": 21.9,
+          "turnoverRatio": 18.3,
+          "offensiveReboundPct": 34.3
+        }
+      },
+      "opponentStats": {
+        "possessions": 72,
+        "assists": 17,
+        "steals": 8,
+        "blocks": 3,
+        "trueShooting": 65.6,
+        "rating": 134.7,
+        "gameScore": 85.80000000000001,
+        "points": {
+          "total": 97,
+          "byPeriod": [
+            53,
+            44
+          ],
+          "largestLead": 31,
+          "fastBreak": 4,
+          "inPaint": 44,
+          "offTurnovers": 23
+        },
+        "twoPointFieldGoals": {
+          "made": 23,
+          "attempted": 35,
+          "pct": 65.7
+        },
+        "threePointFieldGoals": {
+          "made": 13,
+          "attempted": 31,
+          "pct": 42
+        },
+        "freeThrows": {
+          "made": 12,
+          "attempted": 18,
+          "pct": 67
+        },
+        "fieldGoals": {
+          "made": 36,
+          "attempted": 66,
+          "pct": 55
+        },
+        "turnovers": {
+          "total": 8,
+          "teamTotal": 0
+        },
+        "rebounds": {
+          "offensive": 10,
+          "defensive": 28,
+          "total": 38
+        },
+        "fouls": {
+          "total": 16,
+          "technical": 0,
+          "flagrant": 0
+        },
+        "fourFactors": {
+          "effectiveFieldGoalPct": 64.4,
+          "freeThrowRate": 27.3,
+          "turnoverRatio": 11.1,
+          "offensiveReboundPct": 26.3
+        }
+      }
+    }
+  ],
+  "teamSeasonStats": {
+    "season": 2026,
+    "seasonLabel": "20252026",
+    "teamId": 822,
+    "team": "Eastern Oregon",
+    "conference": null,
+    "games": 2,
+    "wins": 0,
+    "losses": 2,
+    "totalMinutes": 80,
+    "pace": 72.3,
+    "teamStats": {
+      "assists": 24,
+      "blocks": 2,
+      "steals": 17,
+      "possessions": 144,
+      "trueShooting": 50,
+      "rating": 97.9,
+      "fieldGoals": {
+        "made": 55,
+        "attempted": 133,
+        "pct": 41.4
+      },
+      "twoPointFieldGoals": {
+        "made": 37,
+        "attempted": 88,
+        "pct": 42
+      },
+      "threePointFieldGoals": {
+        "made": 18,
+        "attempted": 45,
+        "pct": 40
+      },
+      "freeThrows": {
+        "made": 13,
+        "attempted": 18,
+        "pct": 72.2
+      },
+      "rebounds": {
+        "offensive": 21,
+        "defensive": 45,
+        "total": 66
+      },
+      "turnovers": {
+        "total": 25,
+        "teamTotal": 0
+      },
+      "fouls": {
+        "total": 34,
+        "technical": 0,
+        "flagrant": 0
+      },
+      "points": {
+        "total": 141,
+        "inPaint": 60,
+        "offTurnovers": 25,
+        "fastBreak": 19
+      },
+      "fourFactors": {
+        "effectiveFieldGoalPct": 48.1,
+        "turnoverRatio": 0.17,
+        "offensiveReboundPct": 31.8,
+        "freeThrowRate": 13.5
+      }
+    },
+    "opponentStats": {
+      "assists": 34,
+      "blocks": 6,
+      "steals": 15,
+      "possessions": 145,
+      "trueShooting": 63.3,
+      "rating": 129.7,
+      "fieldGoals": {
+        "made": 71,
+        "attempted": 133,
+        "pct": 53.4
+      },
+      "twoPointFieldGoals": {
+        "made": 50,
+        "attempted": 78,
+        "pct": 64.1
+      },
+      "threePointFieldGoals": {
+        "made": 21,
+        "attempted": 55,
+        "pct": 38.2
+      },
+      "freeThrows": {
+        "made": 25,
+        "attempted": 35,
+        "pct": 71.4
+      },
+      "rebounds": {
+        "offensive": 23,
+        "defensive": 57,
+        "total": 80
+      },
+      "turnovers": {
+        "total": 19,
+        "teamTotal": 0
+      },
+      "fouls": {
+        "total": 27,
+        "technical": 0,
+        "flagrant": 0
+      },
+      "points": {
+        "total": 188,
+        "inPaint": 88,
+        "offTurnovers": 39,
+        "fastBreak": 20
+      },
+      "fourFactors": {
+        "effectiveFieldGoalPct": 61.3,
+        "turnoverRatio": 0.13,
+        "offensiveReboundPct": 28.8,
+        "freeThrowRate": 26.3
+      }
+    },
+    "perGameStats": {
+      "teamStats": {
+        "threePointFieldGoalsMadePerGame": 9.0,
+        "threePointFieldGoalsAttemptedPerGame": 22.5,
+        "offensiveReboundsPerGame": 10.5,
+        "turnoversPerGame": 12.5,
+        "assistsPerGame": 12.0,
+        "freeThrowsMadePerGame": 6.5,
+        "freeThrowsAttemptedPerGame": 9.0,
+        "foulsPerGame": 17.0,
+        "defensiveReboundsPerGame": 22.5,
+        "stealsPerGame": 8.5,
+        "blocksPerGame": 1.0,
+        "freeThrowPct": 72.2
+      },
+      "opponentStats": {
+        "pointsPerGame": 94.0,
+        "fieldGoalPct": 53.4,
+        "threePointPct": 38.2,
+        "turnoversForcedPerGame": 9.5
+      },
+      "margins": {
+        "pointMargin": -23.5,
+        "reboundMargin": -7.0,
+        "turnoverMargin": -3.0
+      },
+      "ratios": {
+        "assistToTurnoverRatio": 0.96
+      }
+    },
+    "possessionGameRecords": {
+      "onePossession": {
+        "wins": 0,
+        "losses": 0
+      },
+      "twoPossession": {
+        "wins": 0,
+        "losses": 0
+      }
+    }
+  },
+  "conferenceRankings": {},
+  "d1Rankings": {},
+  "totalRecord": {
+    "wins": 0,
+    "losses": 2,
+    "games": 2
+  },
+  "conferenceRecord": {
+    "wins": 0,
+    "losses": 0,
+    "games": 0
+  },
+  "homeRecord": {
+    "wins": 0,
+    "losses": 0,
+    "games": 0
+  },
+  "awayRecord": {
+    "wins": 0,
+    "losses": 2,
+    "games": 2
+  },
+  "neutralRecord": {
+    "wins": 0,
+    "losses": 0,
+    "games": 0
+  },
+  "netRating": {
+    "rating": 195,
+    "previousRating": 192,
+    "source": "bballnet.com",
+    "url": "https://bballnet.com/"
+  },
+  "kenpom": {
+    "reportTable": {
+      "Adj. Efficiency": {
+        "offense": "112.454",
+        "offense_ranking": 92,
+        "defense": "103.149",
+        "defense_ranking": 90,
+        "d1_avg": "107.5"
+      },
+      "Adj. Tempo": {
+        "combined": "68.9734",
+        "ranking": 175,
+        "d1_avg": "68.8"
+      },
+      "Avg. Poss. Length": {
+        "offense": "16.96",
+        "offense_ranking": 154,
+        "defense": "17.29",
+        "defense_ranking": 212,
+        "d1_avg": "17.2"
+      },
+      "Strength of Schedule": {
+        "overall": "5.7618",
+        "overall_ranking": 55,
+        "non_conference": "3.9856",
+        "non_conference_ranking": 79
+      },
+      "Strength of Schedule Components": {
+        "overall": "5.7618",
+        "overall_ranking": 55,
+        "offense": "110.886",
+        "offense_ranking": 58,
+        "defense": "105.124",
+        "defense_ranking": 75
+      },
+      "Effective FG%": {
+        "offense": "48.1%",
+        "offense_ranking": 262,
+        "defense": "51.5%",
+        "defense_ranking": 194,
+        "d1_avg": null
+      },
+      "Turnover %": {
+        "offense": "19.2%",
+        "offense_ranking": 263,
+        "defense": "17.2%",
+        "defense_ranking": 199,
+        "d1_avg": null
+      },
+      "Off. Reb. %": {
+        "offense": "38.0%",
+        "offense_ranking": 29,
+        "defense": "30.6%",
+        "defense_ranking": 169,
+        "d1_avg": null
+      },
+      "FTA/FGA": {
+        "offense": "42.8",
+        "offense_ranking": 65,
+        "defense": "30.8",
+        "defense_ranking": 84,
+        "d1_avg": null
+      },
+      "3P%": {
+        "offense": "31.9%",
+        "offense_ranking": 232,
+        "defense": "32.4%",
+        "defense_ranking": 159,
+        "d1_avg": null
+      },
+      "2P%": {
+        "offense": "48.3%",
+        "offense_ranking": 262,
+        "defense": "53.3%",
+        "defense_ranking": 216,
+        "d1_avg": null
+      },
+      "FT%": {
+        "offense": "70.1%",
+        "offense_ranking": 219,
+        "defense": "77.6%",
+        "defense_ranking": 337,
+        "d1_avg": null
+      },
+      "Block%": {
+        "offense": "12.5%",
+        "offense_ranking": 64,
+        "defense": "8.7%",
+        "defense_ranking": 137,
+        "d1_avg": null
+      },
+      "Steal%": {
+        "offense": "0.1%",
+        "offense_ranking": 269,
+        "defense": "0.1%",
+        "defense_ranking": 267,
+        "d1_avg": null
+      },
+      "Non-Stl TO%": {
+        "offense": "8.2%",
+        "offense_ranking": 216,
+        "defense": "9.0%",
+        "defense_ranking": 87,
+        "d1_avg": null
+      },
+      "3PA/FGA": {
+        "offense": "44.0%",
+        "offense_ranking": 99,
+        "defense": "39.4%",
+        "defense_ranking": 175,
+        "d1_avg": null
+      },
+      "A/FGM": {
+        "offense": "57.0%",
+        "offense_ranking": 95,
+        "defense": "47.0%",
+        "defense_ranking": 77,
+        "d1_avg": null
+      },
+      "3-Pointers": {
+        "offense": "33.4%",
+        "offense_ranking": 130,
+        "defense": "30.2%",
+        "defense_ranking": 214,
+        "d1_avg": null
+      },
+      "2-Pointers": {
+        "offense": "42.8%",
+        "offense_ranking": 313,
+        "defense": "50.9%",
+        "defense_ranking": 109,
+        "d1_avg": null
+      },
+      "Free Throws": {
+        "offense": "23.8%",
+        "offense_ranking": 66,
+        "defense": "18.8%",
+        "defense_ranking": 242,
+        "d1_avg": null
+      },
+      "Bench Minutes": {
+        "value": "33.4%",
+        "ranking": 166,
+        "d1_avg": null
+      },
+      "D-1 Experience": {
+        "value": "1.78 yrs",
+        "ranking": 102,
+        "d1_avg": null
+      },
+      "Minutes Continuity": {
+        "value": "36.1%",
+        "ranking": 94,
+        "d1_avg": null
+      },
+      "Average Height": {
+        "value": "6'6\"",
+        "ranking": 20,
+        "d1_avg": null
+      }
+    },
+    "source": "kenpom.com",
+    "url": "https://kenpom.com/team.php?team=Eastern Oregon",
+    "teamName": "Oregon"
+  },
+  "barttorvik": {
+    "rank": 77,
+    "seed": null,
+    "resume": {
+      "net": 195,
+      "kpi": 179,
+      "sor": 144,
+      "wab": 211,
+      "avg": 178.0
+    },
+    "quality": {
+      "bpi": 76,
+      "kenpom": 87,
+      "trk": 64,
+      "avg": 75.7
+    },
+    "quadrants": {
+      "q1a": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q1": {
+        "record": "0-2",
+        "wins": 0,
+        "losses": 2
+      },
+      "q2": {
+        "record": "0-0",
+        "wins": 0,
+        "losses": 0
+      },
+      "q1_and_q2": {
+        "record": "0-2",
+        "wins": 0,
+        "losses": 2
+      },
+      "q3": {
+        "record": "1-2",
+        "wins": 1,
+        "losses": 2
+      },
+      "q4": {
+        "record": "3-0",
+        "wins": 3,
+        "losses": 0
+      }
+    },
+    "source": "barttorvik.com",
+    "url": "https://barttorvik.com/teamsheets.php?conlimit=All&sort=8&year=2026"
+  },
+  "metadata": {
+    "totalPlayers": 0,
+    "apiCalls": 9
+  }
+}

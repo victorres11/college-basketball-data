@@ -120,3 +120,10 @@ SETUP.md
 TESTING_QUICK_START.md
 TEST_SUITE_SUMMARY.md
 WIKIPEDIA_INTEGRATION_VERIFICATION.md
+
+# One-off Wikipedia scripts
+misc_data_sources/wikipedia/scripts/get_big_ten_rankings*.py
+misc_data_sources/wikipedia/scripts/test_*.py
+
+# Test utilities
+web-ui/test_email.py

@@ -75,6 +75,13 @@ def ensure_playwright_browsers():
         return False
 
 
+# Team name mapping for special cases where fuzzy matching fails
+BARTTORVIK_TEAM_MAPPING = {
+    'ole miss': 'Mississippi',
+    'mississippi rebels': 'Mississippi',
+}
+
+
 def normalize_team_name(team_name: str) -> str:
     """
     Normalize team name for matching (remove common suffixes, lowercase, etc.)
@@ -381,7 +388,12 @@ def get_team_teamsheet_data(team_name: str, year: int = 2026, sort: int = 8) -> 
     """
     # Fetch all teams
     all_teams = get_teamsheets_data_structured(year=year, conference='All', sort=sort)
-    
+
+    # Check if team name has a direct mapping
+    team_name_lower = team_name.lower()
+    if team_name_lower in BARTTORVIK_TEAM_MAPPING:
+        team_name = BARTTORVIK_TEAM_MAPPING[team_name_lower]
+
     # Normalize the search team name
     normalized_search = normalize_team_name(team_name)
     

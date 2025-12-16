@@ -1,0 +1,21 @@
+# Example .envrc for Python projects
+# Copy this to .envrc and customize for your project
+# Then run: direnv allow
+
+# Activate Python virtual environment
+# Default location: venv/
+source venv/bin/activate
+
+# Load environment variables from .env file
+# Uncomment if you have a .env file:
+# dotenv .env
+
+# Or load from a subdirectory:
+# dotenv web-ui/.env
+
+# Add custom PATH entries if needed:
+# PATH_add bin
+
+# Set project-specific environment variables:
+# export PROJECT_NAME="cbbd"
+# export PYTHONPATH="${PWD}"
