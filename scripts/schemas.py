@@ -112,6 +112,36 @@ class Player(BaseModel):
     class_: str = Field(alias='class')
     isFreshman: bool
 
+    @field_validator('jerseyNumber')
+    @classmethod
+    def validate_jersey_number(cls, v: str) -> str:
+        """Validate jersey number is not N/A."""
+        if v == 'N/A':
+            raise ValueError(
+                "Jersey number 'N/A' is not valid. Check roster data source."
+            )
+        return v
+
+    @field_validator('position')
+    @classmethod
+    def validate_position(cls, v: str) -> str:
+        """Validate position is not N/A."""
+        if v == 'N/A':
+            raise ValueError(
+                "Position 'N/A' is not valid. Check roster data source."
+            )
+        return v
+
+    @field_validator('height')
+    @classmethod
+    def validate_height(cls, v: str) -> str:
+        """Validate height is not N/A."""
+        if v == 'N/A':
+            raise ValueError(
+                "Height 'N/A' is not valid. Check roster data source."
+            )
+        return v
+
     @field_validator('class_')
     @classmethod
     def validate_class_year(cls, v: str) -> str:
@@ -125,6 +155,7 @@ class Player(BaseModel):
         if v not in VALID_CLASS_YEARS:
             raise ValueError(f"Invalid class year '{v}'. Must be one of: {VALID_CLASS_YEARS}")
         return v
+
     hometown: str
     highSchool: str
     seasonTotals: PlayerSeasonTotals
@@ -379,15 +410,23 @@ def check_data_quality(data: dict, strict: bool = False) -> List[DataQualityWarn
                 severity="warning"
             ))
 
-    # Check 5: N/A class values (should be caught by schema, but check for pre-validation data)
-    na_players = [p.get('name') for p in players if p.get('class') == 'N/A']
-    if na_players:
-        warnings.append(DataQualityWarning(
-            field="class",
-            message=f"{len(na_players)} players have 'N/A' class: {', '.join(na_players[:3])}{'...' if len(na_players) > 3 else ''}. "
-                    "This indicates a FoxSports team ID mapping issue.",
-            severity="error"
-        ))
+    # Check 5: N/A values for required fields (should be caught by schema, but check for pre-validation data)
+    na_fields = {
+        'class': 'FoxSports team ID mapping issue',
+        'jerseyNumber': 'roster data source issue',
+        'position': 'roster data source issue',
+        'height': 'roster data source issue',
+    }
+
+    for field, issue in na_fields.items():
+        na_players = [p.get('name') for p in players if p.get(field) == 'N/A']
+        if na_players:
+            warnings.append(DataQualityWarning(
+                field=field,
+                message=f"{len(na_players)} players have 'N/A' {field}: {', '.join(na_players[:3])}{'...' if len(na_players) > 3 else ''}. "
+                        f"This indicates a {issue}.",
+                severity="error"
+            ))
 
     # If strict mode, raise on errors
     if strict:
