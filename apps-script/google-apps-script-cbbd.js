@@ -566,20 +566,16 @@ function GET_TEAM_META(url) {
     try {
       var response = UrlFetchApp.fetch(url);
       var data = JSON.parse(response.getContentText());
-      
+
       // Check if teamGameStats exists
       if (!data.teamGameStats) {
         return [["Error: teamGameStats data not found in JSON"], ["Run DEBUG_JSON to check structure"]];
       }
-      
+
       if (!Array.isArray(data.teamGameStats)) {
         return [["Error: teamGameStats is not an array"], ["Type: " + typeof data.teamGameStats]];
       }
-      
-      if (data.teamGameStats.length === 0) {
-        return [["Error: teamGameStats array is empty"]];
-      }
-      
+
       var table = [[
         "Date", "Opponent", "Home/Away", "Conference", "Result",
         "Score", "Opp Score",
@@ -588,55 +584,125 @@ function GET_TEAM_META(url) {
         "Opp FGM-FGA", "Opp FG%", "Opp 3PM-3PA", "Opp 3P%", "Opp FTM-FTA", "Opp FT%",
         "Opp OReb", "Opp DReb", "Opp TReb", "Opp Ast", "Opp Stl", "Opp Blk", "Opp TO", "Opp Fouls"
       ]];
-      
+
+      // Collect all games with sortable dates
+      var allGames = [];
+
+      // Process played games
       data.teamGameStats.forEach(function(game) {
         var result = game.teamStats.points.total > game.opponentStats.points.total ? "W" : "L";
-        
+
         // Format date from '2024-11-05T03:30:00.000Z' to '11/5'
         var dateObj = new Date(game.startDate);
         var month = dateObj.getMonth() + 1; // getMonth() returns 0-11
         var day = dateObj.getDate();
         var formattedDate = month + "/" + day;
-        
-        table.push([
-          formattedDate,
-          game.opponent,
-          game.isHome ? "Home" : "Away",
-          game.conferenceGame ? "Conf" : "Non-Conf",
-          result,
-          game.teamStats.points.total,
-          game.opponentStats.points.total,
-          game.teamStats.fieldGoals.made + "-" + game.teamStats.fieldGoals.attempted,
-          (game.teamStats.fieldGoals.pct / 100).toFixed(3),
-          game.teamStats.threePointFieldGoals.made + "-" + game.teamStats.threePointFieldGoals.attempted,
-          (game.teamStats.threePointFieldGoals.pct / 100).toFixed(3),
-          game.teamStats.freeThrows.made + "-" + game.teamStats.freeThrows.attempted,
-          (game.teamStats.freeThrows.pct / 100).toFixed(3),
-          game.teamStats.rebounds.offensive,
-          game.teamStats.rebounds.defensive,
-          game.teamStats.rebounds.total,
-          game.teamStats.assists,
-          game.teamStats.steals,
-          game.teamStats.blocks,
-          game.teamStats.turnovers.total,
-          game.teamStats.fouls.total,
-          game.opponentStats.fieldGoals.made + "-" + game.opponentStats.fieldGoals.attempted,
-          (game.opponentStats.fieldGoals.pct / 100).toFixed(3),
-          game.opponentStats.threePointFieldGoals.made + "-" + game.opponentStats.threePointFieldGoals.attempted,
-          (game.opponentStats.threePointFieldGoals.pct / 100).toFixed(3),
-          game.opponentStats.freeThrows.made + "-" + game.opponentStats.freeThrows.attempted,
-          (game.opponentStats.freeThrows.pct / 100).toFixed(3),
-          game.opponentStats.rebounds.offensive,
-          game.opponentStats.rebounds.defensive,
-          game.opponentStats.rebounds.total,
-          game.opponentStats.assists,
-          game.opponentStats.steals,
-          game.opponentStats.blocks,
-          game.opponentStats.turnovers.total,
-          game.opponentStats.fouls.total
-        ]);
+
+        allGames.push({
+          sortDate: dateObj,
+          row: [
+            formattedDate,
+            game.opponent,
+            game.isHome ? "Home" : "Away",
+            game.conferenceGame ? "Conf" : "Non-Conf",
+            result,
+            game.teamStats.points.total,
+            game.opponentStats.points.total,
+            game.teamStats.fieldGoals.made + "-" + game.teamStats.fieldGoals.attempted,
+            (game.teamStats.fieldGoals.pct / 100).toFixed(3),
+            game.teamStats.threePointFieldGoals.made + "-" + game.teamStats.threePointFieldGoals.attempted,
+            (game.teamStats.threePointFieldGoals.pct / 100).toFixed(3),
+            game.teamStats.freeThrows.made + "-" + game.teamStats.freeThrows.attempted,
+            (game.teamStats.freeThrows.pct / 100).toFixed(3),
+            game.teamStats.rebounds.offensive,
+            game.teamStats.rebounds.defensive,
+            game.teamStats.rebounds.total,
+            game.teamStats.assists,
+            game.teamStats.steals,
+            game.teamStats.blocks,
+            game.teamStats.turnovers.total,
+            game.teamStats.fouls.total,
+            game.opponentStats.fieldGoals.made + "-" + game.opponentStats.fieldGoals.attempted,
+            (game.opponentStats.fieldGoals.pct / 100).toFixed(3),
+            game.opponentStats.threePointFieldGoals.made + "-" + game.opponentStats.threePointFieldGoals.attempted,
+            (game.opponentStats.threePointFieldGoals.pct / 100).toFixed(3),
+            game.opponentStats.freeThrows.made + "-" + game.opponentStats.freeThrows.attempted,
+            (game.opponentStats.freeThrows.pct / 100).toFixed(3),
+            game.opponentStats.rebounds.offensive,
+            game.opponentStats.rebounds.defensive,
+            game.opponentStats.rebounds.total,
+            game.opponentStats.assists,
+            game.opponentStats.steals,
+            game.opponentStats.blocks,
+            game.opponentStats.turnovers.total,
+            game.opponentStats.fouls.total
+          ]
+        });
       });
-      
+
+      // Process upcoming games (if available)
+      if (data.upcomingGames && data.upcomingGames.length > 0) {
+        data.upcomingGames.forEach(function(game) {
+          // Parse date from 'MM/DD/YYYY' format (e.g., '12/17/2025')
+          var dateParts = game.date.split('/');
+          var upcomingDateObj = new Date(dateParts[2], dateParts[0] - 1, dateParts[1]);
+          var month = upcomingDateObj.getMonth() + 1;
+          var day = upcomingDateObj.getDate();
+          var formattedDate = month + "/" + day;
+
+          allGames.push({
+            sortDate: upcomingDateObj,
+            row: [
+              formattedDate,
+              game.opponent || "",
+              game.location || "",
+              "",  // Conference - empty for upcoming
+              "",  // Result - empty for upcoming
+              "",  // Score
+              "",  // Opp Score
+              "",  // FGM-FGA
+              "",  // FG%
+              "",  // 3PM-3PA
+              "",  // 3P%
+              "",  // FTM-FTA
+              "",  // FT%
+              "",  // OReb
+              "",  // DReb
+              "",  // TReb
+              "",  // Ast
+              "",  // Stl
+              "",  // Blk
+              "",  // TO
+              "",  // Fouls
+              "",  // Opp FGM-FGA
+              "",  // Opp FG%
+              "",  // Opp 3PM-3PA
+              "",  // Opp 3P%
+              "",  // Opp FTM-FTA
+              "",  // Opp FT%
+              "",  // Opp OReb
+              "",  // Opp DReb
+              "",  // Opp TReb
+              "",  // Opp Ast
+              "",  // Opp Stl
+              "",  // Opp Blk
+              "",  // Opp TO
+              ""   // Opp Fouls
+            ]
+          });
+        });
+      }
+
+      // Sort all games chronologically
+      allGames.sort(function(a, b) {
+        return a.sortDate - b.sortDate;
+      });
+
+      // Build final table
+      allGames.forEach(function(game) {
+        table.push(game.row);
+      });
+
       return table;
     } catch (e) {
       return [["Error: " + e.message], ["Check the data structure with DEBUG_JSON"]];

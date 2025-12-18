@@ -42,6 +42,7 @@ def send_job_completion_email(job_data):
         error = job_data.get('error')
         message = job_data.get('message', '')
         data_status = job_data.get('dataStatus', [])
+        validation_errors = job_data.get('validationErrors')
         
         # Build email subject
         subject = f'CBB Data Generator - {team_name} ({season}) - {status.upper()}'
@@ -60,7 +61,11 @@ def send_job_completion_email(job_data):
         
         if error:
             html_body_lines.append(f"<p style='color: red;'><strong>Error:</strong> {error}</p>")
-        
+
+        if validation_errors:
+            html_body_lines.append(f"<p style='color: orange;'><strong>⚠️ Schema Validation Warnings:</strong></p>")
+            html_body_lines.append(f"<pre style='background: #fff3cd; padding: 10px; overflow-x: auto;'>{validation_errors}</pre>")
+
         if data_status:
             html_body_lines.append("<h3>Data Collection Status</h3>")
             html_body_lines.append("<table border='1' cellpadding='5' cellspacing='0' style='border-collapse: collapse;'>")
@@ -99,7 +104,13 @@ def send_job_completion_email(job_data):
         if error:
             text_body_lines.append(f"Error: {error}")
             text_body_lines.append("")
-        
+
+        if validation_errors:
+            text_body_lines.append("⚠️ Schema Validation Warnings:")
+            text_body_lines.append("-" * 40)
+            text_body_lines.append(validation_errors)
+            text_body_lines.append("")
+
         if data_status:
             text_body_lines.append("Data Collection Status:")
             text_body_lines.append("-" * 40)

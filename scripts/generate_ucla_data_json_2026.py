@@ -12,6 +12,13 @@ from cbb_api_wrapper import CollegeBasketballAPI
 import json
 from datetime import datetime
 
+# Import Pydantic schema validation
+try:
+    from schemas import validate_team_data
+    SCHEMA_VALIDATION_AVAILABLE = True
+except ImportError:
+    SCHEMA_VALIDATION_AVAILABLE = False
+
 
 def get_player_career_season_stats(api, player_name, current_team):
     """
@@ -811,6 +818,15 @@ def generate_ucla_data_json_2026():
         'apiCalls': api.api_call_count if hasattr(api, 'api_call_count') else 0
     }
     
+    # Validate data before writing
+    if SCHEMA_VALIDATION_AVAILABLE:
+        try:
+            validate_team_data(team_data)
+            print("✅ Schema validation passed")
+        except Exception as e:
+            print(f"⚠️ Schema validation warning: {e}")
+            # Continue with writing - validation is non-blocking
+
     # Save to JSON file
     import os
     os.makedirs('data/2026', exist_ok=True)

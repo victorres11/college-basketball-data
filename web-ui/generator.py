@@ -94,6 +94,15 @@ except ImportError as e:
     WIKIPEDIA_SCRAPER_AVAILABLE = False
     print(f"Warning: Wikipedia scraper not available: {e}")
 
+# Import Pydantic schema validation
+try:
+    from schemas import validate_team_data
+    SCHEMA_VALIDATION_AVAILABLE = True
+    print("[GENERATOR] Schema validation import: OK")
+except ImportError as e:
+    SCHEMA_VALIDATION_AVAILABLE = False
+    print(f"Warning: Schema validation not available: {e}")
+
 # Import helper functions - we'll need to import from a shared location
 # For now, we'll import from one of the existing generators
 # In production, these should be in a shared utilities module
@@ -1455,11 +1464,35 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
     
     # Save to JSON file (relative to project root)
     project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+    # Validate data before writing
+    validation_errors = None
+    if SCHEMA_VALIDATION_AVAILABLE:
+        try:
+            validate_team_data(team_data)
+            print("✅ Schema validation passed")
+        except Exception as e:
+            validation_errors = str(e)
+            print(f"⚠️ Schema validation warning: {e}")
+
+            # Log to file
+            log_dir = os.path.join(project_root, 'logs')
+            os.makedirs(log_dir, exist_ok=True)
+            log_file = os.path.join(log_dir, 'validation_errors.log')
+            with open(log_file, 'a') as f:
+                f.write(f"\n{'='*60}\n")
+                f.write(f"Timestamp: {datetime.now(timezone.utc).isoformat()}\n")
+                f.write(f"Team: {team_name}\n")
+                f.write(f"Season: {season}\n")
+                f.write(f"Errors:\n{validation_errors}\n")
+            print(f"📝 Validation errors logged to {log_file}")
+            # Continue with writing - validation is non-blocking
+
     output_dir = os.path.join(project_root, 'data', str(season))
     os.makedirs(output_dir, exist_ok=True)
     filename = f'{team_slug.replace(" ", "_")}_scouting_data_{season}.json'
     output_path = os.path.join(output_dir, filename)
-    
+
     with open(output_path, 'w') as f:
         json.dump(team_data, f, indent=2)
     
@@ -1468,9 +1501,12 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
     
     if progress_callback:
         progress_callback['progress'] = 100
-        progress_callback['message'] = 'Complete!'
+        progress_callback['message'] = 'Complete!' if not validation_errors else 'Complete with validation warnings'
         # Add game dates to progress callback for UI display
         progress_callback['gameDates'] = game_dates
-    
+        # Add validation status
+        if validation_errors:
+            progress_callback['validationErrors'] = validation_errors
+
     return relative_path
 

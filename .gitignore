@@ -127,3 +127,6 @@ misc_data_sources/wikipedia/scripts/test_*.py
 
 # Test utilities
 web-ui/test_email.py
+
+# Logs directory
+logs/
