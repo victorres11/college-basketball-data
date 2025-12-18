@@ -23,6 +23,56 @@ def normalize_team_name(name):
     # Remove extra spaces
     return " ".join(name.split())
 
+def extract_school_name(full_name):
+    """
+    Extract just the school name from a full team name (e.g., "UTSA Roadrunners" -> "UTSA").
+    Removes mascot suffixes.
+    """
+    # Common mascots to remove
+    mascots = [
+        'Roadrunners', 'Wildcats', 'Tigers', 'Bears', 'Eagles', 'Bulldogs', 'Lions',
+        'Panthers', 'Cougars', 'Hornets', 'Warriors', 'Knights', 'Spartans', 'Wolverines',
+        'Buckeyes', 'Badgers', 'Hoosiers', 'Boilermakers', 'Nittany Lions', 'Fighting Illini',
+        'Golden Gophers', 'Cornhuskers', 'Scarlet Knights', 'Bruins', 'Trojans', 'Huskies',
+        'Ducks', 'Beavers', 'Cardinals', 'Jayhawks', 'Cyclones', 'Red Raiders', 'Longhorns',
+        'Aggies', 'Mustangs', 'Horned Frogs', 'Mountaineers', 'Volunteers', 'Crimson Tide',
+        'Razorbacks', 'Gators', 'Gamecocks', 'Commodores', 'Rebels', 'Golden Eagles',
+        'Blue Devils', 'Tar Heels', 'Wolfpack', 'Seminoles', 'Yellow Jackets', 'Cavaliers',
+        'Hokies', 'Demon Deacons', 'Orange', 'Sun Devils', 'Buffaloes', 'Bearcats',
+        'Musketeers', 'Golden Griffins', 'Stags', 'Gaels', 'Jaspers', 'Red Foxes',
+        'Mountaineers', 'Purple Eagles', 'Bobcats', 'Broncs', 'Pioneers', 'Peacocks',
+        'Saints', 'Zips', 'Falcons', 'Bulls', 'Chippewas', 'Golden Flashes', 'RedHawks',
+        'Rockets', 'Broncos', 'Minutemen', 'Seahawks', 'Anteaters', 'Gauchos', 'Tritons',
+        'Highlanders', 'Beach', 'Titans', 'Matadors', 'Rainbow Warriors', 'Catamounts',
+        'Big Green', 'Big Red', 'Crimson', 'Quakers', 'Billikens', 'Bonnies', 'Rams',
+        'Spiders', 'Hawks', 'Flyers', 'Dukes', 'Patriots', 'Revolutionaries', 'Explorers',
+        'Ramblers', 'Colonials', 'Retrievers', 'River Hawks', 'Great Danes', 'Seawolves',
+        'Pride', 'Phoenix', 'Pirates', 'Tribe', 'Dragons', 'Blue Hose', 'Lancers',
+        'Highlanders', 'Red Flash', 'Dolphins', 'Royals', 'Hatters', 'Wolves', 'Owls',
+        'Mean Green', 'Green Wave', 'Golden Hurricane', 'Blazers', 'Shockers', 'Bearcats',
+        'Buccaneers', 'Paladins', 'Mocs', 'Terriers', 'Keydets', 'Fighting Hawks',
+        'Bison', 'Mavericks', 'Coyotes', 'Jackrabbits', 'Tommies', 'Red Wolves',
+        'Chanticleers', 'Jaguars', 'Ragin Cajuns', 'Warhawks', 'Thundering Herd',
+        'Monarchs', 'Texans', 'Trailblazers', 'Pilots', 'Toreros', 'Dons', 'Redhawks',
+        'Flames', 'Hilltoppers', 'Gamecocks', 'Blue Raiders', 'Colonels', 'Privateers',
+        'Lumberjacks', 'Demons', 'Lions', 'Islanders', 'Vaqueros', 'Governors', 'Sycamores',
+        'Racers', 'Salukis', 'Beacons', 'Braves', 'Falcons', 'Wolf Pack', 'Lobos',
+        'Aztecs', 'Runnin Rebels', 'Cowboys', 'Blue Devils', 'Sharks', 'Skyhawks',
+        'Lakers', 'Chargers', 'Black Knights', 'Terriers', 'Raiders', 'Crusaders',
+        'Leopards', 'Mountain Hawks', 'Greyhounds', 'Midshipmen', 'Norse', 'Golden Grizzlies',
+        'Mastodons', 'Penguins', 'Vikings', 'Titans', 'Flames', 'Jaguars', 'Grizzlies',
+        'Bobcats', 'Vandals', 'Bengals', 'Lopes', 'Hornets', 'Aggies', 'Leathernecks',
+        'Redhawks', 'Golden Eagles', 'Screaming Eagles', 'Trojans', 'Rattlers', 'Delta Devils',
+        'Golden Lions', 'Jaguars', 'Braves', 'Fighting Camels', 'Blue Hens'
+    ]
+
+    name = full_name.strip()
+    for mascot in sorted(mascots, key=len, reverse=True):  # Try longest first
+        if name.lower().endswith(' ' + mascot.lower()):
+            name = name[:-(len(mascot)+1)].strip()
+            break
+    return name
+
 def main():
     # Load API key
     config_path = os.path.join(os.path.dirname(__file__), '..', 'config', 'api_config.txt')
@@ -55,63 +105,58 @@ def main():
     missing_in_cbb = []
     matched = []
     
+    # Build FoxSports lookup by school name (without mascot)
+    fox_by_school_name = {}  # school_name (lowercase) -> fox_id
+    for fox_id_str, fox_full_name in foxsports_teams.items():
+        school_name = extract_school_name(fox_full_name).lower()
+        fox_by_school_name[school_name] = fox_id_str
+        # Also add full name
+        fox_by_school_name[fox_full_name.lower()] = fox_id_str
+
     # Match CBB teams to FoxSports teams
     for cbb_team in cbb_teams:
         cbb_id = str(cbb_team.get('id'))
         cbb_name = cbb_team.get('school') or cbb_team.get('name') or ''
-        
+
         if not cbb_id or not cbb_name:
             continue
-        
+
         # First check: if IDs match, use that (simplest case)
         if cbb_id in foxsports_teams:
             mapping[cbb_id] = cbb_id
             matched.append((cbb_id, cbb_name, cbb_id, foxsports_teams[cbb_id]))
             continue
-        
-        # Try exact match first
+
         fox_id = None
-        best_match = None
-        best_similarity = 0
-        
-        # Normalize names for better matching (remove common suffixes)
-        def normalize_for_matching(name):
-            # Remove common mascot suffixes
-            suffixes = [' ducks', ' bears', ' tigers', ' wildcats', ' eagles', ' bulldogs', 
-                       ' lions', ' panthers', ' cougars', ' hornets', ' warriors', ' knights',
-                       ' spartans', ' wolverines', ' buckeyes', ' badgers', ' hoosiers',
-                       ' boilermakers', ' nittany lions', ' fighting illini', ' golden gophers',
-                       ' cornhuskers', ' scarlet knights', ' bruins', ' trojans', ' huskies']
-            name_lower = name.lower()
-            for suffix in suffixes:
-                if name_lower.endswith(suffix):
-                    name_lower = name_lower[:-len(suffix)].strip()
-                    break
-            return name_lower
-        
-        cbb_normalized = normalize_for_matching(cbb_name)
-        
-        for fox_id_str, fox_name in foxsports_teams.items():
-            # Exact match
-            if cbb_name.lower() == fox_name.lower():
-                fox_id = fox_id_str
-                break
-            
-            # Normalized match (without mascot)
-            fox_normalized = normalize_for_matching(fox_name)
-            if cbb_normalized == fox_normalized:
-                fox_id = fox_id_str
-                break
-            
-            # Similarity match (lower threshold for better matching)
-            sim = similarity(cbb_name, fox_name)
-            if sim > best_similarity and sim > 0.7:  # Lowered to 70% similarity threshold
-                best_similarity = sim
-                best_match = fox_id_str
-        
-        if not fox_id and best_match:
-            fox_id = best_match
-        
+
+        # Try exact match on school name (CBB name -> FoxSports school name)
+        cbb_name_lower = cbb_name.lower()
+        if cbb_name_lower in fox_by_school_name:
+            fox_id = fox_by_school_name[cbb_name_lower]
+
+        # Try matching CBB school name to FoxSports school name
+        if not fox_id:
+            cbb_school = extract_school_name(cbb_name).lower()
+            if cbb_school in fox_by_school_name:
+                fox_id = fox_by_school_name[cbb_school]
+
+        # Try high-confidence similarity matching (0.95+ threshold to avoid false positives)
+        if not fox_id:
+            best_match = None
+            best_similarity = 0
+            for fox_id_str, fox_name in foxsports_teams.items():
+                fox_school = extract_school_name(fox_name)
+                cbb_school = extract_school_name(cbb_name)
+
+                # Compare school names without mascots
+                sim = similarity(cbb_school, fox_school)
+                if sim > best_similarity and sim >= 0.95:  # High threshold to avoid false positives
+                    best_similarity = sim
+                    best_match = fox_id_str
+
+            if best_match:
+                fox_id = best_match
+
         if fox_id:
             # Check if IDs match
             if cbb_id == fox_id:
@@ -122,7 +167,9 @@ def main():
                 print(f"⚠️  ID MISMATCH: CBB {cbb_id} ({cbb_name}) → FoxSports {fox_id} ({foxsports_teams[fox_id]})")
         else:
             missing_in_foxsports.append({'id': cbb_id, 'name': cbb_name})
-            print(f"❌ NOT FOUND IN FOXSPORTS: CBB {cbb_id} ({cbb_name})")
+            # Only print for D1 teams (likely to be important)
+            if len(cbb_name) > 2:  # Skip very short names
+                print(f"❌ NOT FOUND IN FOXSPORTS: CBB {cbb_id} ({cbb_name})")
     
     # Find FoxSports teams not in CBB
     cbb_ids = {str(t.get('id')) for t in cbb_teams if t.get('id')}
