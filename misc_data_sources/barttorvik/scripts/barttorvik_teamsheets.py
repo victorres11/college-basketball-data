@@ -76,9 +76,38 @@ def ensure_playwright_browsers():
 
 
 # Team name mapping for special cases where fuzzy matching fails
+# Keys must be lowercase
 BARTTORVIK_TEAM_MAPPING = {
+    # Ole Miss
     'ole miss': 'Mississippi',
     'mississippi rebels': 'Mississippi',
+    # Miami schools (parentheses vs space)
+    'miami(fl)': 'Miami FL',
+    'miami fl': 'Miami FL',
+    'miami (fl)': 'Miami FL',
+    'miami(oh)': 'Miami OH',
+    'miami oh': 'Miami OH',
+    'miami (oh)': 'Miami OH',
+    # UConn
+    'uconn': 'Connecticut',
+    'connecticut huskies': 'Connecticut',
+    # Hawaii (apostrophe variations)
+    "hawai'i": 'Hawaii',
+    'hawai`i': 'Hawaii',
+    # UIC
+    'uic': 'Illinois Chicago',
+    'illinois-chicago': 'Illinois Chicago',
+    # FDU
+    'fdu': 'Fairleigh Dickinson',
+    # Gardner-Webb (hyphen variations)
+    'gardner-webb': 'Gardner Webb',
+    # Bethune-Cookman (hyphen variations)
+    'bethune-cookman': 'Bethune Cookman',
+    # St. Francis (parentheses variations) - barttorvik uses "Saint Francis"
+    'st. francis(pa)': 'Saint Francis',
+    'st francis(pa)': 'Saint Francis',
+    'st. francis (pa)': 'Saint Francis',
+    'saint francis(pa)': 'Saint Francis',
 }
 
 
