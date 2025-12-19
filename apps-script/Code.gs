@@ -693,13 +693,30 @@ function GET_TEAM_META(url) {
         });
       }
 
-      // Sort all games chronologically
-      allGames.sort(function(a, b) {
+      // Deduplicate games by date - prefer played games (with results) over upcoming games
+      var gamesByDate = {};
+      allGames.forEach(function(game) {
+        var dateKey = game.sortDate.toISOString().split('T')[0]; // YYYY-MM-DD
+        var hasResult = game.row[4] !== ""; // Result column (W/L)
+
+        if (!gamesByDate[dateKey]) {
+          // First game for this date
+          gamesByDate[dateKey] = game;
+        } else if (hasResult && gamesByDate[dateKey].row[4] === "") {
+          // Current game has result, existing one doesn't - replace
+          gamesByDate[dateKey] = game;
+        }
+        // If existing game has result, keep it (don't replace with upcoming)
+      });
+
+      // Convert back to array and sort chronologically
+      var deduplicatedGames = Object.values(gamesByDate);
+      deduplicatedGames.sort(function(a, b) {
         return a.sortDate - b.sortDate;
       });
 
       // Build final table
-      allGames.forEach(function(game) {
+      deduplicatedGames.forEach(function(game) {
         table.push(game.row);
       });
 

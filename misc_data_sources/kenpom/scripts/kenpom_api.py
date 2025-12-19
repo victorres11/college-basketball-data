@@ -104,44 +104,64 @@ def get_team_id(team_name: str, season: int = 2026) -> Optional[int]:
         
         # Normalize team name for matching
         team_name_lower = team_name.lower().strip()
-        
+
         # Try exact match first
         for team in data:
             if team.get('TeamName', '').lower() == team_name_lower:
                 return team.get('TeamID')
-        
-        # Try partial match
-        for team in data:
-            team_name_api = team.get('TeamName', '').lower()
-            if team_name_lower in team_name_api or team_name_api in team_name_lower:
-                return team.get('TeamID')
-        
-        # Try common name variations
+
+        # Try common name variations BEFORE partial match (all keys must be lowercase)
+        # This prevents false matches like "North Carolina State" -> "North Carolina"
         name_variations = {
-            'michigan state': 'Michigan St',
-            'ohio state': 'Ohio St',
-            'penn state': 'Penn St',
-            'iowa state': 'Iowa St',
-            'washington state': 'Washington St',
-            'oregon state': 'Oregon St',
-            'kansas state': 'Kansas St',
-            'oklahoma state': 'Oklahoma St',
-            'florida state': 'Florida St',
-            'nc state': 'NC State',
-            'north carolina state': 'NC State',
+            'michigan state': 'Michigan St.',
+            'michigan st': 'Michigan St.',
+            'michigan st.': 'Michigan St.',
+            'ohio state': 'Ohio St.',
+            'ohio st': 'Ohio St.',
+            'ohio st.': 'Ohio St.',
+            'penn state': 'Penn St.',
+            'penn st': 'Penn St.',
+            'penn st.': 'Penn St.',
+            'iowa state': 'Iowa St.',
+            'iowa st': 'Iowa St.',
+            'iowa st.': 'Iowa St.',
+            'washington state': 'Washington St.',
+            'washington st': 'Washington St.',
+            'washington st.': 'Washington St.',
+            'oregon state': 'Oregon St.',
+            'oregon st': 'Oregon St.',
+            'oregon st.': 'Oregon St.',
+            'kansas state': 'Kansas St.',
+            'kansas st': 'Kansas St.',
+            'kansas st.': 'Kansas St.',
+            'oklahoma state': 'Oklahoma St.',
+            'oklahoma st': 'Oklahoma St.',
+            'oklahoma st.': 'Oklahoma St.',
+            'florida state': 'Florida St.',
+            'florida st': 'Florida St.',
+            'florida st.': 'Florida St.',
+            'nc state': 'N.C. State',
+            'n.c. state': 'N.C. State',
+            'north carolina state': 'N.C. State',
             'usc': 'Southern California',
             'southern california': 'Southern California',
             'ole miss': 'Mississippi',
             'ole miss rebels': 'Mississippi',
             'mississippi': 'Mississippi',
         }
-        
+
         if team_name_lower in name_variations:
             normalized = name_variations[team_name_lower]
             for team in data:
                 if team.get('TeamName', '').lower() == normalized.lower():
                     return team.get('TeamID')
-        
+
+        # Try partial match as last resort
+        for team in data:
+            team_name_api = team.get('TeamName', '').lower()
+            if team_name_lower in team_name_api or team_name_api in team_name_lower:
+                return team.get('TeamID')
+
         return None
     except Exception as e:
         print(f"[KENPOM API] Warning: Failed to lookup team ID for {team_name}: {e}")
