@@ -131,6 +131,9 @@ def get_team_id(team_name: str, season: int = 2026) -> Optional[int]:
             'north carolina state': 'NC State',
             'usc': 'Southern California',
             'southern california': 'Southern California',
+            'ole miss': 'Mississippi',
+            'ole miss rebels': 'Mississippi',
+            'mississippi': 'Mississippi',
         }
         
         if team_name_lower in name_variations:
