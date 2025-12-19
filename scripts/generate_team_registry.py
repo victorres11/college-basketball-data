@@ -30,6 +30,26 @@ SPORTS_REF_MAPPING_FILE = PROJECT_ROOT / 'misc_data_sources' / 'coaching_history
 # Output file
 OUTPUT_FILE = PROJECT_ROOT / 'config' / 'team_registry.json'
 
+# Manual alias overrides - common abbreviations that can't be auto-generated
+# Key: team_id, Value: list of additional aliases
+MANUAL_ALIASES = {
+    "28": ["nc state", "nc state wolfpack"],  # North Carolina State
+    "333": ["usc", "usc trojans"],  # Southern California
+    "342": ["ole miss", "ole miss rebels"],  # Mississippi
+    "162": ["miami oh", "miami ohio", "miami redhawks"],  # Miami (OH)
+    "55": ["miami fl", "miami florida"],  # Miami (FL)
+    "296": ["wku", "wku hilltoppers"],  # Western Kentucky
+    "339": ["lsu", "lsu tigers"],  # Louisiana State
+    "223": ["cal", "cal bears", "california bears"],  # California
+    "252": ["uconn", "uconn huskies"],  # Connecticut
+    "151": ["smu", "smu mustangs"],  # Southern Methodist
+    "271": ["utsa", "utsa roadrunners"],  # UTSA
+    "87": ["utep", "utep miners"],  # UTEP
+    "251": ["ucf", "ucf knights"],  # UCF
+    "277": ["unlv", "unlv rebels", "unlv runnin rebels"],  # UNLV
+    "96": ["uab", "uab blazers"],  # UAB
+}
+
 
 def load_team_ids() -> Dict[str, str]:
     """Load CBB API team IDs → team names with mascots"""
@@ -377,6 +397,11 @@ def generate_registry():
         # Also add the canonical name with mascot variations
         if mascot:
             aliases.add(f"{canonical_name.lower()} {mascot.lower()}")
+
+        # Add manual aliases (common abbreviations that can't be auto-generated)
+        if team_id in MANUAL_ALIASES:
+            for alias in MANUAL_ALIASES[team_id]:
+                aliases.add(alias.lower())
 
         # Create team entry
         team_entry = {
