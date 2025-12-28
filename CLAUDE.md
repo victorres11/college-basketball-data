@@ -47,6 +47,27 @@ python app.py
 # Access at http://localhost:5001
 ```
 
+### Production API (Regenerate Team Data)
+The production web UI is hosted on Render at `https://cbb-data-generator.onrender.com`
+
+To regenerate team data via API:
+```bash
+# Start generation job
+curl -X POST https://cbb-data-generator.onrender.com/api/generate \
+  -H "Content-Type: application/json" \
+  -d '{"team_name": "Utah", "include_historical_stats": true}'
+
+# Response: {"job_id": "utah_2026_1735123456"}
+
+# Check job status
+curl https://cbb-data-generator.onrender.com/api/status/<job_id>
+
+# Cancel a job
+curl -X POST https://cbb-data-generator.onrender.com/api/cancel/<job_id>
+```
+
+Optional: Add `"notify_email": "you@example.com"` to the request body for email notification on completion.
+
 ### Running Tests
 ```bash
 # Run all end-to-end tests (Oregon, Western Kentucky, Arizona State)
@@ -287,3 +308,40 @@ Each team JSON file contains:
 - Use Development mode for automatic updates during development
 - Switch to versioned releases for production stability
 - See `docs/DEVELOPMENT_MODE_SETUP.md` and `docs/LIBRARY_INFO.md`
+
+## Session Continuity
+
+**IMPORTANT:** When suggesting that the user restart Claude Code (e.g., after MCP server changes, token refresh, or config updates), ALWAYS provide a ready-to-paste prompt that will seamlessly continue the current task. Include:
+1. What was just changed/fixed
+2. What to test or verify
+3. Any cleanup needed from the previous session
+4. The next step in the workflow
+
+This ensures the user doesn't lose context between sessions.
+
+## Google Sheets MCP Server
+
+The project includes a custom MCP server for Google Sheets integration at `mcp-google-sheets/`.
+
+### Available Tools
+- `drive_list_spreadsheets` - List accessible spreadsheets
+- `drive_copy_file` - Duplicate entire spreadsheet (preserves all formulas/references)
+- `sheets_read_range` / `sheets_write_range` - Read/write cell values
+- `sheets_get_formulas` - Get formulas (not computed values)
+- `sheets_list_sheets` - List tabs in a spreadsheet
+- `sheets_copy_sheet` - Copy individual sheets (cross-sheet references may break)
+- `sheets_batch_update` - Execute multiple updates
+- `sheets_set_format` - Apply formatting
+- And more (see `mcp-google-sheets/server.py`)
+
+### Re-authentication
+If MCP server scopes change, re-authenticate:
+```bash
+cd mcp-google-sheets
+rm token.json
+python auth.py
+```
+Then restart Claude Code.
+
+### Key Spreadsheets
+- UCLA mbb Dec4 `<master>`: `1Aj43ImLkcDDNkKmktgiTFBv6sgMiHObdI9lOLbearzA` - Template/master scouting sheet

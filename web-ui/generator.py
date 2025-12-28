@@ -237,7 +237,7 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
         if progress_callback is not None:
             status_entry = {
                 'name': name,
-                'status': status,  # 'success', 'failed', 'skipped', 'pending'
+                'status': status,  # 'success', 'failed', 'skipped', 'pending', 'warning'
                 'message': message or '',
                 'details': details or ''
             }
@@ -535,10 +535,13 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
                                 if jersey:
                                     player_classes_by_jersey[jersey] = player.get('class')
                             print(f"Loaded {len(player_classes_by_jersey)} players from FoxSports cache for team {foxsports_team_id}")
+                            add_status('Player Classes', 'success', f'Loaded {len(player_classes_by_jersey)} player classes from cache')
                         else:
                             print(f"Warning: No players found in FoxSports cache for team {foxsports_team_id}")
+                            add_status('Player Classes', 'warning', f'No players in FoxSports cache for team {foxsports_team_id}')
                 else:
                     print(f"Warning: No FoxSports team ID found for CBB team ID {cbb_team_id}")
+                    add_status('Player Classes', 'warning', f'No FoxSports mapping for team ID {cbb_team_id} - classes will be N/A')
         except Exception as e:
             import traceback
             print(f"Error loading FoxSports roster cache: {e}")
