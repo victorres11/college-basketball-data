@@ -1036,12 +1036,27 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
                         'pageTitle': wikipedia_data.get('page_title')
                     }
 
-                    # Set mascot from Wikipedia (primary and only source)
+                    # Set mascot from Wikipedia (primary source) with fallback to team registry
                     if wikipedia_data.get('mascot'):
                         team_data['mascot'] = wikipedia_data.get('mascot')
                         print(f"[GENERATOR] Mascot: {wikipedia_data.get('mascot')}")
                     else:
-                        print(f"[GENERATOR] WARNING: No mascot found in Wikipedia for {team_name}")
+                        # Fallback: try team registry for mascot
+                        registry_mascot = None
+                        if TEAM_LOOKUP_AVAILABLE:
+                            lookup = get_team_lookup()
+                            team_id = lookup.get_team_id(team_name)
+                            if team_id:
+                                team_info = lookup.get_team(team_id)
+                                if team_info:
+                                    registry_mascot = team_info.get('mascot')
+
+                        if registry_mascot:
+                            team_data['mascot'] = registry_mascot
+                            team_data['wikipedia']['mascot'] = registry_mascot  # Also update wikipedia section
+                            print(f"[GENERATOR] Mascot (from registry fallback): {registry_mascot}")
+                        else:
+                            print(f"[GENERATOR] WARNING: No mascot found in Wikipedia or registry for {team_name}")
                     
                     # Get season rankings (current and highest AP rankings)
                     try:
