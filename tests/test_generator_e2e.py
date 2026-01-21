@@ -133,3 +133,68 @@ def test_all_teams_locally(test_teams, test_season, project_root):
     # Fail if any failed
     failures = [t for t, r in results.items() if r != 'PASS']
     assert not failures, f"Failed teams: {failures}"
+
+
+@pytest.mark.e2e
+@pytest.mark.parametrize("team_name,expected_player,expected_class", [
+    ("Northwestern", "Nick Martinelli", "SR"),
+    ("Oregon", "Jackson Shelstad", "SO"),
+])
+def test_player_classes_match_foxsports_cache(team_name, expected_player, expected_class, test_season, project_root):
+    """
+    Regression test: Verify player classes are correctly loaded from FoxSports cache.
+
+    This test catches bugs where the wrong team's roster cache is used due to
+    team ID mismatches (e.g., CBB API returning wrong teamId).
+    """
+    # Load FoxSports cache for the team
+    sys.path.insert(0, str(project_root / 'scripts'))
+    from team_lookup import get_team_lookup
+
+    lookup = get_team_lookup()
+    team_id = lookup.get_team_id(team_name)
+    assert team_id, f"Team '{team_name}' not found in registry"
+
+    # Load the FoxSports cache
+    cache_path = project_root / 'foxsports_rosters' / 'rosters_cache' / f'{team_id}_classes.json'
+    assert cache_path.exists(), f"FoxSports cache not found: {cache_path}"
+
+    with open(cache_path) as f:
+        cached_players = json.load(f)
+
+    # Find the expected player in cache
+    cached_class = None
+    for player in cached_players:
+        if expected_player.lower() in player['name'].lower():
+            cached_class = player['class']
+            break
+
+    assert cached_class == expected_class, \
+        f"FoxSports cache mismatch: {expected_player} should be {expected_class}, got {cached_class}"
+
+    # Now generate data and verify it matches
+    progress_callback = {'status': 'queued', 'progress': 0, 'message': '', 'dataStatus': []}
+
+    result_path = generate_team_data(
+        team_name=team_name,
+        season=test_season,
+        progress_callback=progress_callback,
+        include_historical_stats=False
+    )
+
+    full_path = project_root / result_path
+    with open(full_path) as f:
+        data = json.load(f)
+
+    # Find the player in generated data
+    generated_class = None
+    for player in data['players']:
+        if expected_player.lower() in player['name'].lower():
+            generated_class = player['class']
+            break
+
+    assert generated_class == expected_class, \
+        f"Generated data mismatch: {expected_player} should be {expected_class}, got {generated_class}. " \
+        f"This may indicate the generator used the wrong team's FoxSports cache."
+
+    print(f"✅ {team_name}: {expected_player} correctly shows as {expected_class}")

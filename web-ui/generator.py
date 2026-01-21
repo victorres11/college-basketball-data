@@ -490,6 +490,12 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
         cbb_team_id = lookup.get_team_id(team_name)
         print(f"DEBUG: Team '{team_name}' - Team registry ID: {cbb_team_id}")
 
+    # Warn if API teamId doesn't match registry (helps catch data issues)
+    if cbb_team_id and team_season_stats and len(team_season_stats) > 0:
+        api_team_id = team_season_stats[0].get('teamId')
+        if api_team_id and api_team_id != cbb_team_id:
+            print(f"WARNING: CBB API teamId mismatch for '{team_name}': API returned {api_team_id}, registry has {cbb_team_id}")
+
     # Fallback to API response if registry lookup fails (but log a warning)
     if not cbb_team_id and team_season_stats and len(team_season_stats) > 0:
         cbb_team_id = team_season_stats[0].get('teamId')
