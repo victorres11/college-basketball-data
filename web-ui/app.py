@@ -189,7 +189,21 @@ def generate_data():
         team_name = data.get('team_name')
         # Fixed to 2026 season
         season = 2026
-        include_historical_stats = data.get('include_historical_stats', True)  # Default to True for backward compatibility
+
+        # Smart historical stats handling:
+        # - New param: force_historical_refresh (default: False) - force re-fetch all
+        # - Legacy param: include_historical_stats - for backward compatibility
+        # If neither is provided, uses smart auto-detection (include_historical_stats=None)
+        force_historical_refresh = data.get('force_historical_refresh', False)
+
+        # Backward compatibility: check if legacy param was explicitly provided
+        if 'include_historical_stats' in data:
+            include_historical_stats = data.get('include_historical_stats')
+            print(f"[API] Legacy mode: include_historical_stats={include_historical_stats}")
+        else:
+            include_historical_stats = None  # Triggers smart auto-detection
+            print(f"[API] Smart mode: force_historical_refresh={force_historical_refresh}")
+
         notify_email = data.get('notify_email')  # Optional email for completion notification
         print(f"[API] notify_email extracted: '{notify_email}'")  # Debug: log notify_email
 
@@ -216,7 +230,7 @@ def generate_data():
         # Start background thread
         thread = threading.Thread(
             target=run_generation,
-            args=(job_id, team_name, season, include_historical_stats)
+            args=(job_id, team_name, season, include_historical_stats, force_historical_refresh)
         )
         thread.daemon = True
         thread.start()
@@ -254,7 +268,7 @@ def cancel_job(job_id):
         return jsonify({'error': 'Job cannot be cancelled (already completed or failed)'}), 400
 
 
-def run_generation(job_id, team_name, season, include_historical_stats=True):
+def run_generation(job_id, team_name, season, include_historical_stats=None, force_historical_refresh=False):
     """Background job runner"""
     try:
         # Check if cancelled before starting
@@ -262,19 +276,23 @@ def run_generation(job_id, team_name, season, include_historical_stats=True):
             jobs[job_id]['status'] = 'cancelled'
             jobs[job_id]['message'] = 'Generation cancelled by user'
             return
-        
+
         jobs[job_id]['status'] = 'running'
         jobs[job_id]['message'] = 'Starting data generation...'
         jobs[job_id]['progress'] = 0
-        
+
         # Check for cancellation before generating
         if jobs[job_id].get('cancelled', False):
             jobs[job_id]['status'] = 'cancelled'
             jobs[job_id]['message'] = 'Generation cancelled by user'
             return
-        
+
         # Generate data (with progress updates)
-        output_file = generate_team_data(team_name, season, jobs[job_id], include_historical_stats=include_historical_stats)
+        output_file = generate_team_data(
+            team_name, season, jobs[job_id],
+            include_historical_stats=include_historical_stats,
+            force_historical_refresh=force_historical_refresh
+        )
         
         # Check for cancellation after generation
         if jobs[job_id].get('cancelled', False):

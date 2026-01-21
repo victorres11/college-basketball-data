@@ -174,9 +174,9 @@ function generateData() {
         }
     }, 1000);
     
-    // Get checkbox value
-    const includeHistorical = document.getElementById('include-historical-stats').checked;
-    
+    // Get advanced options checkbox value
+    const forceHistoricalRefresh = document.getElementById('force-historical-refresh').checked;
+
     // Start generation
     fetch('/api/generate', {
         method: 'POST',
@@ -184,7 +184,7 @@ function generateData() {
         body: JSON.stringify({
             team_name: selectedTeam.name,
             season: season,
-            include_historical_stats: includeHistorical
+            force_historical_refresh: forceHistoricalRefresh
         })
     })
     .then(res => res.json())

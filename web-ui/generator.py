@@ -228,19 +228,23 @@ def load_cached_roster(team_name, season):
     return {}
 
 
-def generate_team_data(team_name, season, progress_callback=None, include_historical_stats=True):
+def generate_team_data(team_name, season, progress_callback=None, include_historical_stats=None, force_historical_refresh=False):
     """
     Generate team data JSON file for any team.
-    
+
     Args:
         team_name: Team name (e.g., "Oregon", "Wisconsin", "UCLA")
         season: Season year (e.g., 2026)
         progress_callback: Optional dict to update progress
-        include_historical_stats: Whether to fetch historical stats (default: True)
-    
+        include_historical_stats: DEPRECATED - for backward compatibility only.
+            If explicitly set (True/False), uses legacy behavior.
+            If None (default), uses smart auto-detection.
+        force_historical_refresh: When True, re-fetches all historical stats from API
+            regardless of cached data. Default: False (uses cache when available).
+
     Returns:
         Path to generated JSON file
-    
+
     Raises:
         Exception: If generation is cancelled
     """
@@ -1173,20 +1177,50 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
     player_progress_range = 80  # 80% of total progress for players
     player_progress_start = 10   # Start player progress at 10%
     
-    # Load historical stats from existing S3 file if not fetching new ones
+    # Smart historical stats handling
+    # Priority: legacy mode (explicit include_historical_stats) > force_refresh > auto-detect from S3
     existing_historical_stats = None
-    if not include_historical_stats:
-        if progress_callback:
-            progress_callback['message'] = 'Loading historical stats from existing file...'
-        existing_historical_stats = load_historical_stats_from_s3(team_name, season)
-        if existing_historical_stats:
-            print(f"[Generator] Loaded historical stats for {len(existing_historical_stats)} players from existing S3 file")
+    cached_player_names = set()
+
+    # Determine mode
+    if include_historical_stats is not None:
+        # Legacy mode: explicit include_historical_stats parameter was passed
+        if not include_historical_stats:
+            # Legacy: include_historical_stats=False means load from S3
             if progress_callback:
+                progress_callback['message'] = 'Loading historical stats from existing file...'
+            existing_historical_stats = load_historical_stats_from_s3(team_name, season)
+            if existing_historical_stats:
+                cached_player_names = set(existing_historical_stats.keys())
+                print(f"[Generator] Loaded historical stats for {len(existing_historical_stats)} players from existing S3 file")
                 add_status('Historical Stats (from S3)', 'success', f'Loaded from existing file for {len(existing_historical_stats)} players')
-        else:
-            print(f"[Generator] No existing historical stats found in S3")
-            if progress_callback:
+            else:
+                print(f"[Generator] No existing historical stats found in S3")
                 add_status('Historical Stats (from S3)', 'skipped', 'No existing file found')
+        else:
+            # Legacy: include_historical_stats=True means fetch all from API
+            print(f"[Generator] Legacy mode: will fetch all historical stats from API")
+            add_status('Historical Stats Mode', 'pending', 'Will fetch all from API (legacy mode)')
+    else:
+        # New smart mode: auto-detect + selective fetch
+        if force_historical_refresh:
+            if progress_callback:
+                progress_callback['message'] = 'Force refreshing all historical stats...'
+            print(f"[Generator] Force refresh enabled - will fetch all historical stats from API")
+            add_status('Historical Stats Mode', 'pending', 'Force refresh - fetching all from API')
+            # existing_historical_stats stays None, will fetch all from API
+        else:
+            # Auto-detect: try to load from S3
+            if progress_callback:
+                progress_callback['message'] = 'Checking for cached historical stats...'
+            existing_historical_stats = load_historical_stats_from_s3(team_name, season)
+            if existing_historical_stats:
+                cached_player_names = set(existing_historical_stats.keys())
+                print(f"[Generator] Auto-detected cached historical stats for {len(existing_historical_stats)} players")
+                add_status('Historical Stats Mode', 'success', f'Using cached data ({len(existing_historical_stats)} players). New players will be fetched.')
+            else:
+                print(f"[Generator] No cached historical stats found - will fetch all from API")
+                add_status('Historical Stats Mode', 'pending', 'No cache found - fetching all from API')
     
     for idx, player_name_lower in enumerate(sorted(all_players_to_process)):
         # Check for cancellation periodically (every 5 players to avoid overhead)
@@ -1448,25 +1482,47 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
                 player_record['conferenceRankings'] = player_conference_rankings
         
         # Get player's historical season stats from previous schools
-        # This can be slow as it makes multiple API calls per player (3 seasons × all players)
-        if include_historical_stats:
-            if progress_callback:
-                players_completed = idx + 1  # 1-indexed for display
-                # Update progress message but keep same progress percentage (updated at start of loop)
-                progress_callback['message'] = f'Fetching historical stats for {player_name} ({players_completed}/{total_players})...'
-            historical_seasons = get_player_career_season_stats(api, player_name, team_slug)
-            if historical_seasons:
-                player_record['previousSeasons'] = historical_seasons
-        else:
-            # Try to load from existing S3 file
-            if existing_historical_stats:
-                # Match by player name (case-insensitive)
-                player_key = player_name.lower()
-                if player_key in existing_historical_stats:
+        # Smart hybrid logic: use cache when available, fetch from API only when needed
+        player_key = player_name.lower()
+        players_completed = idx + 1  # 1-indexed for display
+
+        if include_historical_stats is not None:
+            # Legacy mode: explicit include_historical_stats parameter controls behavior
+            if include_historical_stats:
+                # Legacy: fetch all from API
+                if progress_callback:
+                    progress_callback['message'] = f'Fetching historical stats for {player_name} ({players_completed}/{total_players})...'
+                historical_seasons = get_player_career_season_stats(api, player_name, team_slug)
+                if historical_seasons:
+                    player_record['previousSeasons'] = historical_seasons
+            else:
+                # Legacy: use cached data only
+                if existing_historical_stats and player_key in existing_historical_stats:
                     player_record['previousSeasons'] = existing_historical_stats[player_key]
-                    if progress_callback and idx == 0:  # Only log once
-                        progress_callback['message'] = 'Merging historical stats from existing file...'
-            # If no existing stats found, player_record won't have previousSeasons (which is fine)
+                    if progress_callback and idx == 0:
+                        progress_callback['message'] = 'Using cached historical stats...'
+        else:
+            # New smart mode: auto-detect + selective fetch
+            if force_historical_refresh:
+                # Force refresh: fetch all from API
+                if progress_callback:
+                    progress_callback['message'] = f'Force refreshing history for {player_name} ({players_completed}/{total_players})...'
+                historical_seasons = get_player_career_season_stats(api, player_name, team_slug)
+                if historical_seasons:
+                    player_record['previousSeasons'] = historical_seasons
+            elif player_key in cached_player_names:
+                # Player exists in cache: use cached data (fast path)
+                player_record['previousSeasons'] = existing_historical_stats[player_key]
+                if progress_callback and idx == 0:
+                    progress_callback['message'] = 'Using cached historical stats...'
+            else:
+                # New player not in cache: fetch just this player from API
+                if progress_callback:
+                    progress_callback['message'] = f'Fetching history for new player {player_name} ({players_completed}/{total_players})...'
+                print(f"[Generator] New player {player_name} not in cache - fetching from API")
+                historical_seasons = get_player_career_season_stats(api, player_name, team_slug)
+                if historical_seasons:
+                    player_record['previousSeasons'] = historical_seasons
         
         team_data['players'].append(player_record)
     
