@@ -24,7 +24,82 @@ except ImportError as e:
 from bs4 import BeautifulSoup
 import json
 import re
+from datetime import datetime, timezone
 from typing import Dict, List, Optional
+
+try:
+    import requests
+    REQUESTS_AVAILABLE = True
+except ImportError:
+    REQUESTS_AVAILABLE = False
+
+# S3 cache configuration
+S3_CACHE_URL = "https://cbb-data-files.s3.us-east-1.amazonaws.com/cache/barttorvik_teamsheets_{year}.json"
+CACHE_MAX_AGE_HOURS = 24  # Consider cache stale after 24 hours
+
+
+def get_cached_teamsheets_from_s3(year: int = 2026) -> Optional[List[Dict]]:
+    """
+    Fetch cached teamsheets data from S3 (uploaded by Raspberry Pi).
+
+    Args:
+        year: Season year
+
+    Returns:
+        List of team dictionaries if cache is valid, None otherwise
+    """
+    if not REQUESTS_AVAILABLE:
+        print("[BARTTORVIK] requests not available, cannot fetch S3 cache")
+        return None
+
+    cache_url = S3_CACHE_URL.format(year=year)
+
+    try:
+        print(f"[BARTTORVIK] Checking S3 cache: {cache_url}")
+        response = requests.get(cache_url, timeout=10)
+
+        if response.status_code == 404:
+            print("[BARTTORVIK] S3 cache not found (404)")
+            return None
+
+        response.raise_for_status()
+        cache_data = response.json()
+
+        # Check cache age
+        fetched_at_str = cache_data.get('fetched_at')
+        if fetched_at_str:
+            try:
+                fetched_at = datetime.fromisoformat(fetched_at_str.replace('Z', '+00:00'))
+                age_hours = (datetime.now(timezone.utc) - fetched_at).total_seconds() / 3600
+
+                if age_hours > CACHE_MAX_AGE_HOURS:
+                    print(f"[BARTTORVIK] S3 cache is stale ({age_hours:.1f} hours old)")
+                    return None
+
+                print(f"[BARTTORVIK] S3 cache is fresh ({age_hours:.1f} hours old)")
+            except Exception as e:
+                print(f"[BARTTORVIK] Could not parse cache timestamp: {e}")
+
+        teams = cache_data.get('teams', [])
+        if teams:
+            print(f"[BARTTORVIK] Loaded {len(teams)} teams from S3 cache")
+            return teams
+
+        print("[BARTTORVIK] S3 cache has no teams data")
+        return None
+
+    except requests.exceptions.Timeout:
+        print("[BARTTORVIK] S3 cache request timed out")
+        return None
+    except requests.exceptions.RequestException as e:
+        print(f"[BARTTORVIK] S3 cache request failed: {e}")
+        return None
+    except json.JSONDecodeError as e:
+        print(f"[BARTTORVIK] S3 cache JSON parse error: {e}")
+        return None
+    except Exception as e:
+        print(f"[BARTTORVIK] S3 cache error: {e}")
+        return None
 
 
 def ensure_playwright_browsers():
@@ -434,21 +509,32 @@ def get_teamsheets_data_structured(year: int = 2026, conference: Optional[str] =
     return structured_data
 
 
-def get_team_teamsheet_data(team_name: str, year: int = 2026, sort: int = 8) -> Optional[Dict]:
+def get_team_teamsheet_data(team_name: str, year: int = 2026, sort: int = 8, use_cache: bool = True) -> Optional[Dict]:
     """
     Fetch teamsheet data for a specific team from barttorvik.com.
-    Fetches all teams and filters to the specified team.
-    
+
+    First checks S3 cache (populated by Raspberry Pi), then falls back to
+    direct scraping if cache is unavailable or stale.
+
     Args:
         team_name: Team name to fetch (e.g., "UCLA", "Oregon", "Michigan State")
         year: Season year (default: 2026)
         sort: Sort column (default: 8)
-    
+        use_cache: Whether to try S3 cache first (default: True)
+
     Returns:
         Dictionary with structured team data, or None if team not found
     """
-    # Fetch all teams
-    all_teams = get_teamsheets_data_structured(year=year, conference='All', sort=sort)
+    all_teams = None
+
+    # Try S3 cache first (from Raspberry Pi)
+    if use_cache:
+        all_teams = get_cached_teamsheets_from_s3(year=year)
+
+    # Fall back to direct scraping if cache unavailable
+    if all_teams is None:
+        print("[BARTTORVIK] Falling back to direct scraping...")
+        all_teams = get_teamsheets_data_structured(year=year, conference='All', sort=sort)
 
     # Check if team name has a direct mapping
     team_name_lower = team_name.lower()
