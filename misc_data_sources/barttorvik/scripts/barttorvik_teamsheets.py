@@ -160,21 +160,53 @@ def get_teamsheets_data(year: int = 2026, conference: Optional[str] = None, sort
         if USE_PLAYWRIGHT:
             # Ensure browsers are installed (runtime check for Render.com)
             ensure_playwright_browsers()
-            
+
             # Use Playwright to handle JavaScript rendering
+            # Barttorvik uses Cloudflare protection, so we need to wait for the challenge to complete
             with sync_playwright() as p:
-                browser = p.chromium.launch(headless=True)
-                page = browser.new_page()
-                # Try to wait for the table to be present instead of network idle
-                page.goto(url, wait_until='domcontentloaded', timeout=30000)
-                # Wait for table to appear (more efficient than networkidle)
+                browser = p.chromium.launch(
+                    headless=True,
+                    args=[
+                        '--disable-blink-features=AutomationControlled',
+                        '--no-sandbox',
+                        '--disable-dev-shm-usage',
+                    ]
+                )
+                context = browser.new_context(
+                    user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                    viewport={'width': 1920, 'height': 1080},
+                    java_script_enabled=True,
+                )
+                page = context.new_page()
+
+                # Navigate and wait for Cloudflare challenge to complete
+                print(f"[BARTTORVIK] Navigating to {url}")
+                page.goto(url, wait_until='domcontentloaded', timeout=60000)
+
+                # Wait for Cloudflare challenge to complete (look for table or timeout)
+                max_wait_time = 45000  # 45 seconds max for Cloudflare
                 try:
-                    page.wait_for_selector('table', timeout=10000)
+                    # First, wait for any "Verifying" message to disappear
+                    page.wait_for_function(
+                        "document.body && !document.body.innerText.includes('Verifying')",
+                        timeout=max_wait_time
+                    )
+                    print("[BARTTORVIK] Cloudflare verification completed")
+                except Exception as cf_err:
+                    print(f"[BARTTORVIK] Cloudflare wait note: {cf_err}")
+
+                # Now wait for the actual table
+                try:
+                    page.wait_for_selector('table', timeout=15000)
                     # Small wait for any final rendering
-                    page.wait_for_timeout(500)
-                except:
-                    # Fallback: if table not found quickly, wait a bit longer
-                    page.wait_for_timeout(1500)
+                    page.wait_for_timeout(1000)
+                    print("[BARTTORVIK] Table found on page")
+                except Exception as table_err:
+                    # Log page content for debugging
+                    body_text = page.evaluate("document.body.innerText.substring(0, 500)")
+                    print(f"[BARTTORVIK] Table not found. Page content preview: {body_text}")
+                    print(f"[BARTTORVIK] Table wait error: {table_err}")
+
                 html_content = page.content()
                 browser.close()
             soup = BeautifulSoup(html_content, 'html.parser')
