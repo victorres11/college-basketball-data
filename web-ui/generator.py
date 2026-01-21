@@ -21,7 +21,7 @@ from datetime import datetime, timezone
 import time
 from s3_handler import load_historical_stats_from_s3
 
-# Import FoxSports roster cache
+# Import FoxSports roster cache and on-demand scraper
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 foxsports_path = os.path.join(project_root, 'foxsports_rosters')
 sys.path.insert(0, foxsports_path)
@@ -31,6 +31,29 @@ try:
 except ImportError:
     FOXSPORTS_CACHE_AVAILABLE = False
     print("Warning: FoxSports roster cache not available")
+
+# Import FoxSports on-demand scraper (fetches fresh roster when cache is missing)
+try:
+    from foxsports_scraper import fetch_and_cache_roster, get_cached_or_fetch
+    FOXSPORTS_SCRAPER_AVAILABLE = True
+    print("[GENERATOR] FoxSports scraper import: OK")
+except ImportError as e:
+    FOXSPORTS_SCRAPER_AVAILABLE = False
+    print(f"Warning: FoxSports scraper not available: {e}")
+
+# Import data quality monitoring framework
+try:
+    from data_quality import DataQualityHub, Severity, ValidationResult
+    from validators import (
+        validate_foxsports_roster_match,
+        validate_class_year_coverage,
+        validate_roster_size,
+    )
+    DATA_QUALITY_AVAILABLE = True
+    print("[GENERATOR] Data quality framework import: OK")
+except ImportError as e:
+    DATA_QUALITY_AVAILABLE = False
+    print(f"Warning: Data quality framework not available: {e}")
 
 # Import quadrant scraper
 misc_data_sources_path = os.path.join(project_root, 'misc_data_sources')
@@ -270,9 +293,15 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
     time.sleep(1)
     
     check_cancelled()
-    
+
     # Team name normalization (lowercase for API)
     team_slug = team_name.lower()
+
+    # Initialize data quality monitoring
+    quality_hub = None
+    if DATA_QUALITY_AVAILABLE:
+        quality_hub = DataQualityHub(team_name, season, progress_callback)
+        print(f"[GENERATOR] Data quality monitoring: ENABLED")
     
     # Helper function to get Sports Reference slug
     def get_sports_ref_slug(team_name_lower):
@@ -341,9 +370,13 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
         print(f"[GENERATOR] ERROR: Failed to fetch roster data: {e}")
         add_status('Roster Data', 'failed', str(e))
         roster_data = None
-    
+
+    # Collect roster data for quality validation
+    if quality_hub and roster_data and len(roster_data) > 0 and 'players' in roster_data[0]:
+        quality_hub.collect('api_roster_players', roster_data[0]['players'])
+
     check_cancelled()
-    
+
     if progress_callback:
         progress_callback['message'] = 'Fetching recruiting data...'
         progress_callback['progress'] = 5
@@ -498,25 +531,43 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
                 print(f"[GENERATOR] FoxSports ID for '{team_name}': {foxsports_team_id}")
                 cache_dir = os.path.join(foxsports_path, 'rosters_cache')
 
+                # Ensure cache directory exists
                 if not os.path.exists(cache_dir):
-                    print(f"Warning: FoxSports cache directory not found at: {cache_dir}")
-                else:
-                    cache = RosterCache(cache_dir=cache_dir)
-                    cached_players = cache.get_player_classes(foxsports_team_id)
+                    os.makedirs(cache_dir, exist_ok=True)
+                    print(f"[GENERATOR] Created FoxSports cache directory: {cache_dir}")
 
-                    if cached_players:
-                        # Create lookup by normalized jersey number
-                        for player in cached_players:
-                            jersey = normalize_jersey(player.get('jersey'))
-                            if jersey:
-                                player_classes_by_jersey[jersey] = player.get('class')
-                        print(f"Loaded {len(player_classes_by_jersey)} players from FoxSports cache for team {foxsports_team_id}")
-                        add_status('Player Classes', 'success', f'Loaded {len(player_classes_by_jersey)} player classes from cache')
-                        foxsports_cache_loaded = True
-                    else:
-                        print(f"WARNING: No players found in FoxSports cache for team {foxsports_team_id}")
-                        print(f"  Cache file may be missing: rosters_cache/{foxsports_team_id}_classes.json")
-                        add_status('Player Classes', 'warning', f'No players in FoxSports cache for team {foxsports_team_id}')
+                cache = RosterCache(cache_dir=cache_dir)
+                cached_players = cache.get_player_classes(foxsports_team_id)
+
+                # If cache is empty/missing and scraper is available, fetch fresh data
+                if not cached_players and FOXSPORTS_SCRAPER_AVAILABLE:
+                    print(f"[GENERATOR] FoxSports cache empty for {team_name}, fetching fresh roster...")
+                    add_status('Player Classes', 'pending', f'Fetching fresh roster from FoxSports...')
+                    try:
+                        # Fetch and cache the roster on-demand
+                        fetched_players = fetch_and_cache_roster(team_name, foxsports_team_id)
+                        if fetched_players:
+                            # fetched_players is already in the right format
+                            cached_players = fetched_players
+                            print(f"[GENERATOR] Successfully fetched {len(cached_players)} players from FoxSports")
+                        else:
+                            print(f"[GENERATOR] FoxSports scraper returned no players for {team_name}")
+                    except Exception as scrape_err:
+                        print(f"[GENERATOR] Error fetching from FoxSports: {scrape_err}")
+
+                if cached_players:
+                    # Create lookup by normalized jersey number
+                    for player in cached_players:
+                        jersey = normalize_jersey(player.get('jersey'))
+                        if jersey:
+                            player_classes_by_jersey[jersey] = player.get('class')
+                    print(f"Loaded {len(player_classes_by_jersey)} players from FoxSports for team {foxsports_team_id}")
+                    add_status('Player Classes', 'success', f'Loaded {len(player_classes_by_jersey)} player classes')
+                    foxsports_cache_loaded = True
+                else:
+                    print(f"WARNING: No players found from FoxSports for team {foxsports_team_id}")
+                    print(f"  Cache file location: rosters_cache/{foxsports_team_id}_classes.json")
+                    add_status('Player Classes', 'warning', f'No players found from FoxSports for team {foxsports_team_id}')
             else:
                 print(f"Warning: No FoxSports ID found in registry for '{team_name}'")
                 add_status('Player Classes', 'warning', f'No FoxSports ID in registry for {team_name}')
@@ -524,7 +575,27 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
             import traceback
             print(f"Error loading FoxSports roster cache: {e}")
             print(f"Traceback: {traceback.format_exc()}")
-    
+
+    # Collect FoxSports data for quality validation and run cross-validation
+    if quality_hub:
+        quality_hub.collect('foxsports_id', foxsports_team_id)
+        quality_hub.collect('foxsports_source', 'cache' if foxsports_cache_loaded else 'fetched')
+
+        # Collect FoxSports players if available
+        if FOXSPORTS_CACHE_AVAILABLE and foxsports_team_id:
+            try:
+                cache_dir = os.path.join(foxsports_path, 'rosters_cache')
+                cache = RosterCache(cache_dir=cache_dir)
+                foxsports_players = cache.get_player_classes(foxsports_team_id)
+                quality_hub.collect('foxsports_players', foxsports_players or [])
+            except Exception:
+                quality_hub.collect('foxsports_players', [])
+
+        # Run FoxSports roster cross-validation immediately (CRITICAL check)
+        if DATA_QUALITY_AVAILABLE:
+            print("[GENERATOR] Running FoxSports roster cross-validation...")
+            quality_hub.run_immediate(validate_foxsports_roster_match)
+
     # Load cached roster if available (for better class/year and high school data)
     cached_roster_lookup = load_cached_roster(team_name, season)
     
@@ -1432,10 +1503,47 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
         else:
             add_status('Player Historical Stats', 'skipped', 'Historical stats disabled and no existing file found')
     
+    # Finalize data quality validation
+    quality_report = None
+    if quality_hub and DATA_QUALITY_AVAILABLE:
+        print("[GENERATOR] Running final data quality validation...")
+
+        # Collect final players for validation
+        quality_hub.collect('players', team_data['players'])
+
+        # Register and run remaining validators
+        quality_hub.register_validator(validate_class_year_coverage)
+        quality_hub.register_validator(validate_roster_size)
+
+        # Finalize and get report
+        quality_report = quality_hub.finalize()
+
+        # Add quality summary to status
+        if quality_report.has_critical:
+            critical_issues = [r for r in quality_report.results if r.severity == Severity.CRITICAL]
+            add_status('Data Quality', 'warning',
+                      f'CRITICAL: {critical_issues[0].message if critical_issues else "Issues found"}',
+                      'Review immediately')
+        elif quality_report.has_errors:
+            error_count = len([r for r in quality_report.results if r.severity >= Severity.ERROR])
+            add_status('Data Quality', 'warning', f'{error_count} data quality errors found')
+        else:
+            add_status('Data Quality', 'success',
+                      f'{quality_report.checks_passed}/{quality_report.checks_run} checks passed ({quality_report.pass_rate:.0f}%)')
+
+        # Add quality report to team data
+        team_data['dataQuality'] = quality_report.to_dict()
+
+        # Add quality report to progress callback for email notifications
+        if progress_callback:
+            progress_callback['qualityReport'] = quality_report.to_dict()
+
+        print(f"[GENERATOR] {quality_report.summary()}")
+
     if progress_callback:
         progress_callback['message'] = 'Saving JSON file...'
         progress_callback['progress'] = 95
-    
+
     # Extract game dates for UI display
     game_dates = []
     if team_data.get('teamGameStats'):
