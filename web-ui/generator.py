@@ -487,6 +487,7 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
     # The team registry is the single source of truth for all service IDs/slugs.
     foxsports_team_id = None
     player_classes_by_jersey = {}
+    foxsports_cache_loaded = False  # Track if we successfully loaded cache data
 
     if FOXSPORTS_CACHE_AVAILABLE and TEAM_LOOKUP_AVAILABLE:
         try:
@@ -511,8 +512,10 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
                                 player_classes_by_jersey[jersey] = player.get('class')
                         print(f"Loaded {len(player_classes_by_jersey)} players from FoxSports cache for team {foxsports_team_id}")
                         add_status('Player Classes', 'success', f'Loaded {len(player_classes_by_jersey)} player classes from cache')
+                        foxsports_cache_loaded = True
                     else:
-                        print(f"Warning: No players found in FoxSports cache for team {foxsports_team_id}")
+                        print(f"WARNING: No players found in FoxSports cache for team {foxsports_team_id}")
+                        print(f"  Cache file may be missing: rosters_cache/{foxsports_team_id}_classes.json")
                         add_status('Player Classes', 'warning', f'No players in FoxSports cache for team {foxsports_team_id}')
             else:
                 print(f"Warning: No FoxSports ID found in registry for '{team_name}'")
@@ -1243,18 +1246,27 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
         # Class year - Priority: FoxSports cache (by jersey) → cached roster file → "N/A"
         # NO CALCULATION - only use cached data to avoid incorrect predictions
         class_year_str = "N/A"
-        
+        class_source = None
+
         # Try FoxSports cache first (by normalized jersey number)
         if normalized_jersey and foxsports_team_id:
             cached_class = player_classes_by_jersey.get(normalized_jersey)
             if cached_class:
                 class_year_str = cached_class
-        
+                class_source = "foxsports_cache"
+
         # Fallback to cached roster file (only if FoxSports cache didn't have it)
         if class_year_str == "N/A":
             cached_year = cached_player.get('year')  # Already normalized to FR/SO/JR/SR/R-FR/etc.
             if cached_year:
                 class_year_str = cached_year
+                class_source = "cached_roster"
+
+        # Log warning if we couldn't determine class from any source
+        if class_year_str == "N/A":
+            print(f"WARNING: No class data for {player_name} (jersey: {jersey_number})")
+            print(f"  - FoxSports cache lookup: {'skipped (no foxsports_id)' if not foxsports_team_id else f'not found for jersey {normalized_jersey}'}")
+            print(f"  - Cached roster lookup: {'not found' if not cached_player else 'no year field'}")
         
         # Set is_freshman based on class from cache (not calculation)
         if class_year_str and class_year_str != "N/A":
