@@ -2212,8 +2212,8 @@ function REFRESH_TEAM_DATA() {
     '</div>' +
     /* Form content */
     '<div class="form-group">' +
-    '<label>Team Name:</label>' +
-    '<input type="text" id="teamName" value="' + currentTeamName + '" placeholder="Enter team name (e.g., UCLA, Oregon)">' +
+    '<label>Team:</label>' +
+    '<div style="font-size: 18px; font-weight: 600; color: #1a73e8; padding: 8px 0;">' + currentTeamName + '</div>' +
     '</div>' +
     '<div class="form-group">' +
     '<label>Email for notification (optional):</label>' +
@@ -2226,14 +2226,10 @@ function REFRESH_TEAM_DATA() {
     '</div>' +
     '<script>' +
     'var isSubmitting = false;' +
+    'var teamName = "' + currentTeamName + '";' +
     'function submitRefresh() {' +
     '  if (isSubmitting) {' +
     '    console.log("[CBBD] submitRefresh blocked - already submitting");' +
-    '    return;' +
-    '  }' +
-    '  var teamName = document.getElementById("teamName").value.trim();' +
-    '  if (!teamName) {' +
-    '    alert("Please enter a team name");' +
     '    return;' +
     '  }' +
     '  isSubmitting = true;' +
