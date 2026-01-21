@@ -350,3 +350,76 @@ function GET_WIKI_DATA(url) {
 function TEST_FUNCTION() {
   return CBBData.TEST_FUNCTION();
 }
+
+// ========================================
+// MENU FUNCTIONS
+// ========================================
+
+/**
+ * Creates a custom menu in the spreadsheet for easy access to utilities.
+ * This function runs automatically when the spreadsheet is opened.
+ */
+function onOpen() {
+  CBBData.onOpen();
+}
+
+/**
+ * Refresh data for the current team (extracted from GET_PLAYERS_FULL!A1)
+ */
+function REFRESH_TEAM_DATA() {
+  CBBData.REFRESH_TEAM_DATA();
+}
+
+/**
+ * Open dialog to select a different team and regenerate its data
+ */
+function REFRESH_DIFFERENT_TEAM() {
+  CBBData.REFRESH_DIFFERENT_TEAM();
+}
+
+/**
+ * Shared function to trigger data regeneration for a team.
+ * Called by the HTML dialog in REFRESH_DIFFERENT_TEAM.
+ * Historical stats are handled automatically via smart detection.
+ * @param {string} teamName - The team name to regenerate data for
+ * @param {string} notifyEmail - Email address for completion notification (optional)
+ */
+function triggerTeamRegeneration(teamName, notifyEmail) {
+  CBBData.triggerTeamRegeneration(teamName, notifyEmail);
+}
+
+/**
+ * Regenerates data for a team AND updates the spreadsheet URL to load that team.
+ * Called by REFRESH_DIFFERENT_TEAM dialog.
+ * Historical stats are handled automatically via smart detection.
+ * @param {string} teamName - The team name to regenerate and switch to
+ * @param {string} notifyEmail - Email address for completion notification (optional)
+ */
+function regenerateAndSwitchTeam(teamName, notifyEmail) {
+  CBBData.regenerateAndSwitchTeam(teamName, notifyEmail);
+}
+
+/**
+ * Helper function called by REFRESH_TEAM_DATA dialog.
+ * Updates the URL if team changed and triggers regeneration.
+ * Historical stats are handled automatically via smart detection.
+ * @param {string} teamName - The team name to regenerate
+ * @param {string} notifyEmail - Email address for completion notification (optional)
+ */
+function refreshTeamWithOptions(teamName, notifyEmail) {
+  CBBData.refreshTeamWithOptions(teamName, notifyEmail);
+}
+
+/**
+ * Reload data by adding a cache-buster parameter to force refresh
+ */
+function RELOAD_DATA() {
+  CBBData.RELOAD_DATA();
+}
+
+/**
+ * Copy roster data as values (removes formulas)
+ */
+function COPY_ROSTER_AS_VALUES() {
+  CBBData.COPY_ROSTER_AS_VALUES();
+}
