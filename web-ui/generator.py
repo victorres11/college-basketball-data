@@ -804,12 +804,41 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
                 print(f"[GENERATOR] WARNING: Quadrant data returned but no quadrants found")
                 add_status('Quadrant Records', 'failed', 'No quadrants found in response')
             
-            # Add upcoming games if available
+            # Add upcoming games if available (filter out already-played games)
             upcoming_games = quadrant_data.get('upcoming_games', [])
             if upcoming_games:
-                team_data['upcomingGames'] = upcoming_games
-                print(f"[GENERATOR] Successfully loaded upcoming games: {len(upcoming_games)} games")
-                add_status('Upcoming Games', 'success', f'Retrieved {len(upcoming_games)} upcoming games')
+                # Filter out games that already appear in teamGameStats (already played)
+                played_opponents = set()
+                if team_data.get('teamGameStats'):
+                    for game in team_data['teamGameStats']:
+                        opponent = game.get('opponent', '').lower().strip()
+                        if opponent:
+                            played_opponents.add(opponent)
+
+                # Filter upcoming games to exclude already-played opponents
+                # Note: This is a simple filter by opponent name. For teams that play
+                # the same opponent twice (home/away), this may filter too aggressively,
+                # but it's better than showing duplicate games.
+                original_count = len(upcoming_games)
+                filtered_upcoming = []
+                for game in upcoming_games:
+                    opponent = game.get('opponent', '').lower().strip()
+                    if opponent not in played_opponents:
+                        filtered_upcoming.append(game)
+                    else:
+                        print(f"[GENERATOR] Filtered out already-played game vs {game.get('opponent')}")
+
+                if filtered_upcoming:
+                    team_data['upcomingGames'] = filtered_upcoming
+                    filtered_count = original_count - len(filtered_upcoming)
+                    msg = f'Retrieved {len(filtered_upcoming)} upcoming games'
+                    if filtered_count > 0:
+                        msg += f' (filtered {filtered_count} already played)'
+                    print(f"[GENERATOR] Successfully loaded upcoming games: {len(filtered_upcoming)} games (filtered {filtered_count})")
+                    add_status('Upcoming Games', 'success', msg)
+                else:
+                    print(f"[GENERATOR] INFO: All upcoming games already played")
+                    add_status('Upcoming Games', 'skipped', 'All games already played')
             else:
                 print(f"[GENERATOR] INFO: No upcoming games found")
                 add_status('Upcoming Games', 'skipped', 'No upcoming games found')
