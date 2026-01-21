@@ -482,79 +482,41 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
     
     check_cancelled()
     
-    # Get team ID for FoxSports cache lookup from team registry (not CBB API response)
-    # The CBB API sometimes returns incorrect teamIds in responses, so we use the registry
-    cbb_team_id = None
-    if TEAM_LOOKUP_AVAILABLE:
-        lookup = get_team_lookup()
-        cbb_team_id = lookup.get_team_id(team_name)
-        print(f"DEBUG: Team '{team_name}' - Team registry ID: {cbb_team_id}")
-
-    # Warn if API teamId doesn't match registry (helps catch data issues)
-    if cbb_team_id and team_season_stats and len(team_season_stats) > 0:
-        api_team_id = team_season_stats[0].get('teamId')
-        if api_team_id and api_team_id != cbb_team_id:
-            print(f"WARNING: CBB API teamId mismatch for '{team_name}': API returned {api_team_id}, registry has {cbb_team_id}")
-
-    # Fallback to API response if registry lookup fails (but log a warning)
-    if not cbb_team_id and team_season_stats and len(team_season_stats) > 0:
-        cbb_team_id = team_season_stats[0].get('teamId')
-        print(f"WARNING: Using CBB API teamId {cbb_team_id} for '{team_name}' - registry lookup failed")
-    
-    # Load FoxSports roster cache for player classes
+    # Get FoxSports team ID from centralized team registry
+    # IMPORTANT: Each service has its own ID system - never assume IDs match between services.
+    # The team registry is the single source of truth for all service IDs/slugs.
     foxsports_team_id = None
     player_classes_by_jersey = {}
-    
-    if FOXSPORTS_CACHE_AVAILABLE and cbb_team_id:
+
+    if FOXSPORTS_CACHE_AVAILABLE and TEAM_LOOKUP_AVAILABLE:
         try:
-            # Load CBB → FoxSports mapping
-            mapping_path = os.path.join(foxsports_path, 'cbb_to_foxsports_team_mapping.json')
-            if not os.path.exists(mapping_path):
-                print(f"Warning: FoxSports mapping file not found at: {mapping_path}")
-                print(f"  Project root: {project_root}")
-                print(f"  FoxSports path: {foxsports_path}")
-            else:
-                with open(mapping_path, 'r') as f:
-                    cbb_to_fox_mapping = json.load(f)
-                
-                # Map CBB ID to FoxSports ID
-                cbb_id_str = str(cbb_team_id)
-                print(f"DEBUG: Looking up CBB ID '{cbb_id_str}' in mapping...")
-                # Check direct mapping first
-                if cbb_id_str in cbb_to_fox_mapping:
-                    foxsports_team_id = cbb_to_fox_mapping[cbb_id_str]
-                    print(f"DEBUG: Found direct mapping: {cbb_id_str} -> {foxsports_team_id}")
-                # Check mismatches
-                elif 'MISMATCHES' in cbb_to_fox_mapping and cbb_id_str in cbb_to_fox_mapping['MISMATCHES']:
-                    foxsports_team_id = cbb_to_fox_mapping['MISMATCHES'][cbb_id_str]
-                    print(f"DEBUG: Found mismatch mapping: {cbb_id_str} -> {foxsports_team_id}")
+            lookup = get_team_lookup()
+            foxsports_team_id = lookup.lookup(team_name, "foxsports_id")
+
+            if foxsports_team_id:
+                print(f"[GENERATOR] FoxSports ID for '{team_name}': {foxsports_team_id}")
+                cache_dir = os.path.join(foxsports_path, 'rosters_cache')
+
+                if not os.path.exists(cache_dir):
+                    print(f"Warning: FoxSports cache directory not found at: {cache_dir}")
                 else:
-                    print(f"DEBUG: No mapping found for CBB ID '{cbb_id_str}'")
-                
-                # Get player classes from FoxSports cache
-                if foxsports_team_id:
-                    print(f"[GENERATOR] Team mapping: {team_name} → CBB ID {cbb_team_id} → FoxSports ID {foxsports_team_id}")
-                    cache_dir = os.path.join(foxsports_path, 'rosters_cache')
-                    if not os.path.exists(cache_dir):
-                        print(f"Warning: FoxSports cache directory not found at: {cache_dir}")
+                    cache = RosterCache(cache_dir=cache_dir)
+                    cached_players = cache.get_player_classes(foxsports_team_id)
+
+                    if cached_players:
+                        # Create lookup by normalized jersey number
+                        for player in cached_players:
+                            jersey = normalize_jersey(player.get('jersey'))
+                            if jersey:
+                                player_classes_by_jersey[jersey] = player.get('class')
+                        print(f"Loaded {len(player_classes_by_jersey)} players from FoxSports cache for team {foxsports_team_id}")
+                        add_status('Player Classes', 'success', f'Loaded {len(player_classes_by_jersey)} player classes from cache')
                     else:
-                        cache = RosterCache(cache_dir=cache_dir)
-                        cached_players = cache.get_player_classes(foxsports_team_id)
-                        
-                        if cached_players:
-                            # Create lookup by normalized jersey number
-                            for player in cached_players:
-                                jersey = normalize_jersey(player.get('jersey'))
-                                if jersey:
-                                    player_classes_by_jersey[jersey] = player.get('class')
-                            print(f"Loaded {len(player_classes_by_jersey)} players from FoxSports cache for team {foxsports_team_id}")
-                            add_status('Player Classes', 'success', f'Loaded {len(player_classes_by_jersey)} player classes from cache')
-                        else:
-                            print(f"Warning: No players found in FoxSports cache for team {foxsports_team_id}")
-                            add_status('Player Classes', 'warning', f'No players in FoxSports cache for team {foxsports_team_id}')
-                else:
-                    print(f"Warning: No FoxSports team ID found for CBB team ID {cbb_team_id}")
-                    add_status('Player Classes', 'warning', f'No FoxSports mapping for team ID {cbb_team_id} - classes will be N/A')
+                        print(f"Warning: No players found in FoxSports cache for team {foxsports_team_id}")
+                        add_status('Player Classes', 'warning', f'No players in FoxSports cache for team {foxsports_team_id}')
+            else:
+                print(f"Warning: No FoxSports ID found in registry for '{team_name}'")
+                add_status('Player Classes', 'warning', f'No FoxSports ID in registry for {team_name}')
         except Exception as e:
             import traceback
             print(f"Error loading FoxSports roster cache: {e}")

@@ -148,9 +148,9 @@ class Player(BaseModel):
         """Validate class year is a known value. N/A is NOT valid."""
         if v == 'N/A':
             raise ValueError(
-                "Class year 'N/A' is not valid. This indicates a FoxSports team ID mapping issue. "
-                "Check that the CBB API team ID is correctly mapped to a FoxSports team ID in "
-                "foxsports_rosters/cbb_to_foxsports_team_mapping.json"
+                "Class year 'N/A' is not valid. This indicates a FoxSports ID lookup issue. "
+                "Check that the team has a 'foxsports_id' in config/team_registry.json and "
+                "that the corresponding roster cache file exists in foxsports_rosters/rosters_cache/"
             )
         if v not in VALID_CLASS_YEARS:
             raise ValueError(f"Invalid class year '{v}'. Must be one of: {VALID_CLASS_YEARS}")

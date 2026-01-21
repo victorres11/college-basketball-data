@@ -3,12 +3,22 @@
 Generate centralized team registry from existing mapping files.
 
 This script merges:
-- team_ids_mapping.json (CBB API IDs → team names with mascots)
+- team_ids_mapping.json (FoxSports IDs → team names with mascots)
 - bballnet_team_mapping.json (team names → bballnet slugs)
 - sports_ref_team_mapping.json (team names → sports reference slugs)
 - TEAM_WIKIPEDIA_MAPPING (team names → wikipedia page titles)
 
 Output: config/team_registry.json
+
+IMPORTANT: Each external service has its own ID system. Never assume IDs match
+between services. The registry stores explicit IDs/slugs for each service:
+- cbb_api_id: The team's ID in the College Basketball Data API
+- foxsports_id: The team's ID in FoxSports (used for roster cache files)
+- bballnet: URL slug for bballnet.com
+- sports_reference: URL slug for sports-reference.com
+- wikipedia_page: Wikipedia article title
+- barttorvik: Team name as used by barttorvik.com
+- kenpom: Team name as used by kenpom.com
 """
 
 import json
@@ -404,13 +414,17 @@ def generate_registry():
                 aliases.add(alias.lower())
 
         # Create team entry
+        # NOTE: team_id here comes from team_ids_mapping.json which uses FoxSports IDs.
+        # For most teams, FoxSports ID happens to match CBB API ID, but this is NOT
+        # guaranteed. Each service has its own ID system - never assume they match.
         team_entry = {
-            "cbb_api_id": int(team_id),
+            "cbb_api_id": int(team_id),  # TODO: Verify this against CBB API separately
             "canonical_name": canonical_name,
             "display_name": full_name,
             "mascot": mascot,
             "aliases": sorted(list(aliases)),
             "services": {
+                "foxsports_id": team_id,  # Explicit FoxSports ID for roster cache lookup
                 "bballnet": bballnet_slug,
                 "sports_reference": sports_ref_slug,
                 "wikipedia_page": wikipedia_page,
@@ -451,11 +465,13 @@ def generate_registry():
     print(f"  - Aliases: {len(alias_index)}")
 
     # Report missing mappings
+    missing_foxsports = sum(1 for t in teams.values() if not t['services']['foxsports_id'])
     missing_bballnet = sum(1 for t in teams.values() if not t['services']['bballnet'])
     missing_sports_ref = sum(1 for t in teams.values() if not t['services']['sports_reference'])
     missing_wikipedia = sum(1 for t in teams.values() if not t['services']['wikipedia_page'])
 
     print(f"\nMissing service mappings:")
+    print(f"  - FoxSports ID: {missing_foxsports} teams")
     print(f"  - Bballnet: {missing_bballnet} teams")
     print(f"  - Sports Reference: {missing_sports_ref} teams")
     print(f"  - Wikipedia: {missing_wikipedia} teams")

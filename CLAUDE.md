@@ -123,7 +123,10 @@ The system integrates multiple external data sources via scrapers in `misc_data_
 - **KenPom** (`misc_data_sources/kenpom/`) - Advanced metrics (Adj. Efficiency, Adj. Tempo, Four Factors, etc.)
 - **Quadrants** (`misc_data_sources/quadrants/`) - NET ratings and quadrant win data
 - **Coaching History** (`misc_data_sources/coaching_history/`) - Historical coach records
-- **FoxSports Rosters** (`foxsports_rosters/`) - Cached roster data with player heights, weights, positions
+- **FoxSports Rosters** (`foxsports_rosters/`) - Cached roster data with player heights, weights, positions, classes
+  - Cache files are named by FoxSports ID: `rosters_cache/{foxsports_id}_classes.json`
+  - FoxSports IDs are stored in the team registry at `services.foxsports_id`
+  - Use `lookup.lookup(team_name, "foxsports_id")` to get the correct cache file ID
 
 Each scraper is optional and non-blocking - if unavailable or fails, data generation continues without that source.
 
@@ -223,7 +226,11 @@ cbbd/
 - JSON files use `_2026` suffix for current season
 - Previous season files have no suffix or `_2025` suffix
 
-### Centralized Team Lookup
+### Centralized Team Lookup (Single Source of Truth)
+
+**IMPORTANT**: Each external service (CBB API, FoxSports, KenPom, etc.) has its own ID system.
+**Never assume IDs match between services.** The team registry stores explicit IDs/slugs for each service.
+
 The project uses a centralized team registry for resolving team names across all external services:
 
 - **Registry**: `config/team_registry.json` - Single source of truth with 365+ teams
@@ -235,18 +242,29 @@ Usage in code:
 from scripts.team_lookup import get_team_lookup
 
 lookup = get_team_lookup()
+fox_id = lookup.lookup("Northwestern", "foxsports_id")  # → "90"
 bballnet_slug = lookup.lookup("Western Kentucky", "bballnet")  # → "western-kentucky"
 wiki_page = lookup.lookup("UCLA", "wikipedia_page")  # → "UCLA Bruins men's basketball"
 team_id = lookup.get_team_id("Arizona St.")  # → 221
 ```
 
-Supported services: `bballnet`, `sports_reference`, `wikipedia_page`, `barttorvik`, `kenpom`
+Supported services: `foxsports_id`, `bballnet`, `sports_reference`, `wikipedia_page`, `barttorvik`, `kenpom`
 
-### Team ID Mapping (Legacy)
-- College Basketball API uses numeric team IDs
-- FoxSports cache uses team names (e.g., "UCLA", "Oregon")
-- Mapping file: `foxsports_rosters/cbb_to_foxsports_team_mapping.json`
-- **Note**: Prefer using centralized `TeamLookup` for new code
+Each team entry in the registry contains:
+```json
+{
+  "cbb_api_id": 90,
+  "canonical_name": "Northwestern",
+  "services": {
+    "foxsports_id": "90",      // FoxSports roster cache ID
+    "bballnet": "northwestern", // URL slug for bballnet.com
+    "sports_reference": "northwestern",
+    "wikipedia_page": "Northwestern Wildcats men's basketball",
+    "barttorvik": "Northwestern",
+    "kenpom": "Northwestern"
+  }
+}
+```
 
 ### JSON Data Structure
 Each team JSON file contains:

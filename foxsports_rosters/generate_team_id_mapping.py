@@ -1,5 +1,17 @@
 #!/usr/bin/env python3
 """
+DEPRECATED: This script is no longer used.
+
+FoxSports IDs are now stored directly in the centralized team registry at
+config/team_registry.json under services.foxsports_id. This eliminates the
+need for a separate mapping file.
+
+To regenerate the team registry (which includes FoxSports IDs), run:
+    python scripts/generate_team_registry.py
+
+This script is kept for historical reference only.
+---
+Original description:
 Generate CBB API → FoxSports team ID mapping.
 Compares all teams from both systems and creates mapping file.
 """
