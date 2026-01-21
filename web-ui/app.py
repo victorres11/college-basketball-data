@@ -185,17 +185,20 @@ def generate_data():
     """Start data generation job"""
     try:
         data = request.json
+        print(f"[API] /api/generate received: {data}")  # Debug: log full request
         team_name = data.get('team_name')
         # Fixed to 2026 season
         season = 2026
         include_historical_stats = data.get('include_historical_stats', True)  # Default to True for backward compatibility
-        
+        notify_email = data.get('notify_email')  # Optional email for completion notification
+        print(f"[API] notify_email extracted: '{notify_email}'")  # Debug: log notify_email
+
         if not team_name:
             return jsonify({'error': 'Team name required'}), 400
-        
+
         # Create job ID
         job_id = f"{team_name.lower().replace(' ', '_')}_{season}_{int(datetime.now().timestamp())}"
-        
+
         # Initialize job status
         jobs[job_id] = {
             'status': 'queued',
@@ -206,9 +209,10 @@ def generate_data():
             'url': None,
             'error': None,
             'gameDates': None,
-            'cancelled': False  # Cancellation flag
+            'cancelled': False,  # Cancellation flag
+            'notify_email': notify_email  # Email to notify on completion
         }
-        
+
         # Start background thread
         thread = threading.Thread(
             target=run_generation,
@@ -216,7 +220,7 @@ def generate_data():
         )
         thread.daemon = True
         thread.start()
-        
+
         return jsonify({'job_id': job_id})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
@@ -304,6 +308,7 @@ def run_generation(job_id, team_name, season, include_historical_stats=True):
         jobs[job_id]['gameDates'] = jobs[job_id].get('gameDates', [])
         
         # Send email notification
+        print(f"[API] Sending email notification. notify_email in job: '{jobs[job_id].get('notify_email')}'")
         send_job_completion_email(jobs[job_id])
         
     except Exception as e:
