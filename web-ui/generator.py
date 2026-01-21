@@ -482,11 +482,18 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
     
     check_cancelled()
     
-    # Get CBB API teamId for FoxSports cache lookup
+    # Get team ID for FoxSports cache lookup from team registry (not CBB API response)
+    # The CBB API sometimes returns incorrect teamIds in responses, so we use the registry
     cbb_team_id = None
-    if team_season_stats and len(team_season_stats) > 0:
+    if TEAM_LOOKUP_AVAILABLE:
+        lookup = get_team_lookup()
+        cbb_team_id = lookup.get_team_id(team_name)
+        print(f"DEBUG: Team '{team_name}' - Team registry ID: {cbb_team_id}")
+
+    # Fallback to API response if registry lookup fails (but log a warning)
+    if not cbb_team_id and team_season_stats and len(team_season_stats) > 0:
         cbb_team_id = team_season_stats[0].get('teamId')
-        print(f"DEBUG: Team '{team_name}' - CBB API teamId: {cbb_team_id}")
+        print(f"WARNING: Using CBB API teamId {cbb_team_id} for '{team_name}' - registry lookup failed")
     
     # Load FoxSports roster cache for player classes
     foxsports_team_id = None
