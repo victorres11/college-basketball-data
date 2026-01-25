@@ -58,6 +58,14 @@ MANUAL_ALIASES = {
     "251": ["ucf", "ucf knights"],  # UCF
     "277": ["unlv", "unlv rebels", "unlv runnin rebels"],  # UNLV
     "96": ["uab", "uab blazers"],  # UAB
+    # Major program abbreviations (commonly searched)
+    "88": ["msu", "msu spartans"],  # Michigan State
+    "91": ["osu", "osu buckeyes"],  # Ohio State
+    "92": ["psu", "psu nittany lions"],  # Penn State
+    "221": ["asu", "asu sun devils"],  # Arizona State
+    "24": ["fsu", "fsu seminoles"],  # Florida State
+    "45": ["ksu", "k-state", "k state"],  # Kansas State
+    "95": ["bsu", "bsu broncos"],  # Boise State
 }
 
 
