@@ -12,6 +12,15 @@ from generator import generate_team_data
 from s3_handler import upload_to_s3
 from email_notifier import send_job_completion_email
 
+# Import team lookup for validation
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'scripts'))
+try:
+    from team_lookup import get_team_lookup
+    TEAM_LOOKUP_AVAILABLE = True
+except ImportError:
+    TEAM_LOOKUP_AVAILABLE = False
+    print("Warning: Team lookup not available for validation")
+
 # Load API key at startup
 config_path = os.path.join(os.path.dirname(__file__), '..', 'config', 'api_config.txt')
 if os.path.exists(config_path):
@@ -209,6 +218,28 @@ def generate_data():
 
         if not team_name:
             return jsonify({'error': 'Team name required'}), 400
+
+        # Validate team name against registry
+        if TEAM_LOOKUP_AVAILABLE:
+            lookup = get_team_lookup()
+            team_id = lookup.get_team_id(team_name)
+
+            if team_id:
+                # Check if input matches canonical name
+                canonical_name = lookup.get_canonical_name(team_name)
+                if canonical_name and team_name.lower() != canonical_name.lower():
+                    # User entered an alias - suggest the canonical name
+                    return jsonify({
+                        'error': f'Please use the full team name "{canonical_name}" instead of "{team_name}"',
+                        'suggestion': canonical_name,
+                        'team_id': team_id
+                    }), 400
+            else:
+                # Team not found at all
+                return jsonify({
+                    'error': f'Team "{team_name}" not found in registry',
+                    'hint': 'Use the full team name (e.g., "Michigan State", "Ohio State", "UCLA")'
+                }), 400
 
         # Create job ID
         job_id = f"{team_name.lower().replace(' ', '_')}_{season}_{int(datetime.now().timestamp())}"
