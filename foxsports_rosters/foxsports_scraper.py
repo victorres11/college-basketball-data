@@ -73,7 +73,7 @@ def parse_roster_to_classes(raw_data: Dict) -> List[Dict[str, str]]:
         raw_data: Raw JSON from FoxSports API
 
     Returns:
-        List of dicts: [{'name': '...', 'jersey': '...', 'class': '...'}, ...]
+        List of dicts: [{'name': '...', 'jersey': '...', 'position': '...', 'class': '...'}, ...]
     """
     players = []
 
@@ -102,16 +102,19 @@ def parse_roster_to_classes(raw_data: Dict) -> List[Dict[str, str]]:
             # Column 1: Position
             # Column 2: Class
             name_col = columns[0]
+            position_col = columns[1]
             class_col = columns[2]
 
             name = name_col.get('text', '').strip()
             jersey = name_col.get('superscript', '').replace('#', '').strip()
+            position = position_col.get('text', '').strip()
             player_class = class_col.get('text', '').strip()
 
             if name and jersey:
                 players.append({
                     'name': name,
                     'jersey': jersey,
+                    'position': position or 'N/A',
                     'class': player_class or 'N/A'
                 })
 
@@ -161,7 +164,7 @@ def fetch_and_cache_roster(team_name: str, foxsports_id: str) -> List[Dict[str, 
         foxsports_id: FoxSports numeric team ID (e.g., "90")
 
     Returns:
-        List of player dicts with name, jersey, class
+        List of player dicts with name, jersey, position, class
     """
     print(f"[FOXSPORTS] Fetching fresh roster for {team_name} (ID: {foxsports_id})...")
 
