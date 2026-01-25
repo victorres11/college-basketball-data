@@ -298,8 +298,21 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
     
     check_cancelled()
 
-    # Team name normalization (lowercase for API)
-    team_slug = team_name.lower()
+    # Team name normalization - use registry to get canonical name for API
+    canonical_name = team_name
+    if TEAM_LOOKUP_AVAILABLE:
+        lookup = get_team_lookup()
+        team_id = lookup.get_team_id(team_name)
+        if team_id:
+            resolved_name = lookup.get_canonical_name(team_name)
+            if resolved_name:
+                canonical_name = resolved_name
+                print(f"[GENERATOR] Resolved '{team_name}' → '{canonical_name}' (ID: {team_id})")
+            else:
+                print(f"[GENERATOR] Team ID {team_id} found but no canonical name, using '{team_name}'")
+        else:
+            print(f"[GENERATOR] Team '{team_name}' not found in registry, using as-is")
+    team_slug = canonical_name.lower()
 
     # Initialize data quality monitoring
     quality_hub = None
@@ -627,7 +640,7 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
                     player_data['highSchool'] = recruit_data.get('school', 'N/A')
                     break
     
-    # Get all players from roster - this is the SOURCE OF TRUTH
+    # Get all players from roster - CBB API is the primary source
     # The roster endpoint determines who is on the team
     # Game data is only used for stats, not for discovering players
     all_roster_players = set()
@@ -636,8 +649,79 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
             player_name = player.get('name', '')
             if player_name:
                 all_roster_players.add(player_name.lower())
-    
-    # Use ONLY roster players - game data is only for stats, not roster discovery
+
+    # Add FoxSports-only players (players in FoxSports but not in CBB API)
+    # This handles mid-season transfers and roster updates that CBB API hasn't caught up with
+    foxsports_only_players = set()
+    if FOXSPORTS_CACHE_AVAILABLE and foxsports_team_id:
+        try:
+            cache_dir = os.path.join(foxsports_path, 'rosters_cache')
+            cache = RosterCache(cache_dir=cache_dir)
+
+            # Load full FoxSports roster data (includes position, height, weight)
+            full_foxsports_roster = cache.get_full_roster(foxsports_team_id)
+            foxsports_full_data = {}  # name_lower -> {position, height, weight, jersey, class}
+
+            if full_foxsports_roster:
+                # Parse full roster data from FoxSports JSON format
+                for group in full_foxsports_roster.get('groups', []):
+                    # Skip summary groups (PLAYER COUNT)
+                    header_text = ""
+                    if group.get('headers') and len(group['headers']) > 0:
+                        cols = group['headers'][0].get('columns', [])
+                        if cols:
+                            header_text = cols[0].get('text', '')
+
+                    if header_text in ['GUARD', 'FORWARD', 'CENTER']:
+                        for row in group.get('rows', []):
+                            cols = row.get('columns', [])
+                            if len(cols) >= 5:
+                                name = cols[0].get('text', '')
+                                jersey = cols[0].get('superscript', '').replace('#', '')
+                                position = cols[1].get('text', '')
+                                player_class = cols[2].get('text', '')
+                                height = cols[3].get('text', '')
+                                weight = cols[4].get('text', '')
+
+                                if name:
+                                    foxsports_full_data[name.lower()] = {
+                                        'name': name,
+                                        'jersey': jersey,
+                                        'position': position,
+                                        'class': player_class,
+                                        'height': height,
+                                        'weight': weight
+                                    }
+
+            # Check for players in FoxSports but not in CBB API
+            for fox_name_lower, fox_data in foxsports_full_data.items():
+                if fox_name_lower not in all_roster_players:
+                    # Add to players to process
+                    foxsports_only_players.add(fox_name_lower)
+                    all_roster_players.add(fox_name_lower)
+
+                    # Create a roster_lookup entry with full FoxSports data
+                    # Position and height format matches what the rest of the code expects
+                    roster_lookup[fox_name_lower] = {
+                        'name': fox_data['name'],
+                        'jersey': fox_data['jersey'],
+                        'position': fox_data['position'],
+                        'height': fox_data['height'],  # Already formatted as "6'2\"" etc.
+                        'weight': fox_data['weight'],  # Already formatted as "185 lbs" etc.
+                        'playerClass': fox_data['class'],
+                        'source': 'foxsports'  # Mark as FoxSports-only player
+                    }
+                    print(f"[GENERATOR] Added FoxSports-only player: {fox_data['name']} (#{fox_data['jersey']}, {fox_data['position']}, {fox_data['height']})")
+
+            if foxsports_only_players:
+                print(f"[GENERATOR] Added {len(foxsports_only_players)} players from FoxSports not in CBB API")
+                add_status('FoxSports Roster Sync', 'success', f'Added {len(foxsports_only_players)} missing players')
+        except Exception as e:
+            import traceback
+            print(f"[GENERATOR] Warning: Could not check FoxSports for missing players: {e}")
+            traceback.print_exc()
+
+    # Use roster players (CBB API + FoxSports-only) - game data is only for stats, not roster discovery
     # This ensures we only process players from the target team, not opponents
     all_players_to_process = all_roster_players
     
@@ -856,9 +940,11 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
     if NET_RATING_SCRAPER_AVAILABLE:
         if progress_callback:
             progress_callback['message'] = 'Fetching NET rating...'
-        print(f"[GENERATOR] Searching for NET rating for {team_name}...")
+        # Use canonical_name for NET rating lookup
+        net_team = canonical_name if canonical_name else team_name
+        print(f"[GENERATOR] Searching for NET rating for {net_team}...")
         try:
-            net_data = get_net_rating(team_name)
+            net_data = get_net_rating(net_team)
             if net_data and net_data.get('net_rating') is not None:
                 team_data['netRating'] = {
                     'rating': net_data['net_rating'],
@@ -974,11 +1060,12 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
     if KENPOM_API_AVAILABLE:
         if progress_callback:
             progress_callback['message'] = 'Fetching KenPom data...'
-        print(f"[GENERATOR] Fetching KenPom data for {team_name} (season {season})...")
+        # Use canonical_name for KenPom lookup (KenPom uses full team names like "Michigan State")
+        kenpom_team = canonical_name if canonical_name else team_name
+        print(f"[GENERATOR] Fetching KenPom data for {kenpom_team} (season {season})...")
         try:
-            # Use team_name for KenPom lookup (it handles normalization internally)
             # Pass season parameter to ensure correct season data is fetched
-            kenpom_result = get_kenpom_team_data(team_name, season=season)
+            kenpom_result = get_kenpom_team_data(kenpom_team, season=season)
             
             if kenpom_result and 'data' in kenpom_result:
                 kenpom_data = kenpom_result['data']
@@ -1030,9 +1117,11 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
     if BARTTORVIK_SCRAPER_AVAILABLE:
         if progress_callback:
             progress_callback['message'] = 'Fetching Bart Torvik teamsheet data...'
-        print(f"[GENERATOR] Fetching Bart Torvik teamsheet data for {team_name}...")
+        # Use canonical_name for Bart Torvik lookup (uses full team names like "Michigan State")
+        barttorvik_team = canonical_name if canonical_name else team_name
+        print(f"[GENERATOR] Fetching Bart Torvik teamsheet data for {barttorvik_team}...")
         try:
-            barttorvik_data = get_team_teamsheet_data(team_name, year=season)
+            barttorvik_data = get_team_teamsheet_data(barttorvik_team, year=season)
             
             if barttorvik_data:
                 team_data['barttorvik'] = {
@@ -1249,7 +1338,7 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
                 add_status('Historical Stats Mode', 'success', f'Using cached data ({len(existing_historical_stats)} players). New players will be fetched.')
             else:
                 print(f"[Generator] No cached historical stats found - will fetch all from API")
-                add_status('Historical Stats Mode', 'pending', 'No cache found - fetching all from API')
+                add_status('Historical Stats Mode', 'pending', 'No cache found - fetching all from API (normal for first-time generation)')
     
     for idx, player_name_lower in enumerate(sorted(all_players_to_process)):
         # Check for cancellation periodically (every 5 players to avoid overhead)
@@ -1362,12 +1451,23 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
         # We'll set this based on class from cache, not calculation
         
         # Extract height
+        # Handles both CBB API format (inches as int) and FoxSports format (e.g., "6'2\"")
         height_str = "N/A"
-        height_inches = player_roster_data.get('height')
-        if height_inches:
-            feet = height_inches // 12
-            inches = height_inches % 12
-            height_str = f"{feet}-{inches}"
+        height_value = player_roster_data.get('height')
+        if height_value:
+            if isinstance(height_value, int):
+                # CBB API format: height in inches
+                feet = height_value // 12
+                inches = height_value % 12
+                height_str = f"{feet}-{inches}"
+            elif isinstance(height_value, str) and height_value != "N/A":
+                # FoxSports format: "6'2\"" -> convert to "6-2"
+                import re
+                match = re.match(r"(\d+)'(\d+)\"?", height_value)
+                if match:
+                    height_str = f"{match.group(1)}-{match.group(2)}"
+                else:
+                    height_str = height_value  # Use as-is if format not recognized
         
         # Extract hometown
         hometown_str = "N/A"
@@ -1377,13 +1477,18 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
         if city and state:
             hometown_str = f"{city}, {state}"
         
-        # Class year - Priority: FoxSports cache (by jersey) → cached roster file → "N/A"
+        # Class year - Priority: FoxSports-only player data → FoxSports cache (by jersey) → cached roster file → "N/A"
         # NO CALCULATION - only use cached data to avoid incorrect predictions
         class_year_str = "N/A"
         class_source = None
 
-        # Try FoxSports cache first (by normalized jersey number)
-        if normalized_jersey and foxsports_team_id:
+        # For FoxSports-only players, class is directly in player_roster_data
+        if player_roster_data.get('source') == 'foxsports' and player_roster_data.get('playerClass'):
+            class_year_str = player_roster_data.get('playerClass')
+            class_source = "foxsports_direct"
+
+        # Try FoxSports cache by jersey (for CBB API players)
+        if class_year_str == "N/A" and normalized_jersey and foxsports_team_id:
             cached_class = player_classes_by_jersey.get(normalized_jersey)
             if cached_class:
                 class_year_str = cached_class
