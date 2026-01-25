@@ -48,12 +48,12 @@ class RosterCache:
     def get_player_classes(self, team_id: str) -> List[Dict[str, str]]:
         """
         Get player classes for a team (from cache, no API call).
-        
+
         Args:
             team_id: Team ID (e.g., "223")
-        
+
         Returns:
-            List of dicts: [{'name': '...', 'jersey': '...', 'class': '...'}, ...]
+            List of dicts: [{'name': '...', 'jersey': '...', 'class': '...', 'position': '...'}, ...]
         """
         class_file = os.path.join(self.cache_dir, f"{team_id}_classes.json")
         
