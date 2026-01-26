@@ -299,9 +299,14 @@ def normalize_name(name: str) -> str:
     Normalize player name for comparison.
 
     - Lowercase
+    - Normalize unicode diacritics (ć → c, ó → o, etc.)
     - Remove Jr/Sr/III/IV suffixes
     - Remove punctuation
     - Normalize whitespace
+
+    This handles cases like:
+    - "Andrija Grbović" vs "Andrija Grbovic" → both become "andrija grbovic"
+    - "Jovan Ićitović" vs "Jovan Icitovic" → both become "jovan icitovic"
 
     Args:
         name: Raw player name
@@ -309,11 +314,18 @@ def normalize_name(name: str) -> str:
     Returns:
         Normalized name for comparison
     """
+    import unicodedata
+
     if not name:
         return ''
 
     # Lowercase and strip
     name = name.lower().strip()
+
+    # Normalize unicode diacritics (NFD decomposes, then we remove combining marks)
+    # This converts ć → c, ó → o, ñ → n, etc.
+    name = unicodedata.normalize('NFD', name)
+    name = ''.join(c for c in name if not unicodedata.combining(c))
 
     # Remove common suffixes (Jr., Sr., III, IV, etc.)
     name = re.sub(r'\s+(jr\.?|sr\.?|iii?|iv|v)$', '', name, flags=re.IGNORECASE)
