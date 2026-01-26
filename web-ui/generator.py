@@ -43,7 +43,7 @@ except ImportError as e:
 
 # Import data quality monitoring framework
 try:
-    from data_quality import DataQualityHub, Severity, ValidationResult
+    from data_quality import DataQualityHub, Severity, ValidationResult, normalize_name
     from validators import (
         validate_foxsports_roster_match,
         validate_class_year_coverage,
@@ -53,6 +53,9 @@ try:
     print("[GENERATOR] Data quality framework import: OK")
 except ImportError as e:
     DATA_QUALITY_AVAILABLE = False
+    # Fallback normalize_name if data_quality not available
+    def normalize_name(name):
+        return name.lower().strip() if name else ''
     print(f"Warning: Data quality framework not available: {e}")
 
 # Import quadrant scraper
@@ -216,12 +219,12 @@ def load_cached_roster(team_name, season):
         try:
             with open(roster_path, 'r') as f:
                 cached_data = json.load(f)
-                # Create lookup by player name (case-insensitive)
+                # Create lookup by player name (unicode-normalized for safe matching)
                 cached_lookup = {}
                 for player in cached_data.get('players', []):
                     player_name = player.get('name', '')
                     if player_name:
-                        cached_lookup[player_name.lower()] = player
+                        cached_lookup[normalize_name(player_name)] = player
                 return cached_lookup
         except Exception as e:
             print(f"Warning: Could not load cached roster: {e}")
@@ -616,17 +619,17 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
     # Load cached roster if available (for better class/year and high school data)
     cached_roster_lookup = load_cached_roster(team_name, season)
     
-    # Create lookups
+    # Create lookups - use normalize_name for unicode-safe matching
     roster_lookup = {}
     if roster_data and len(roster_data) > 0 and 'players' in roster_data[0]:
         for player in roster_data[0]['players']:
             player_name = player.get('name', '')
-            roster_lookup[player_name.lower()] = player
+            roster_lookup[normalize_name(player_name)] = player
     
     recruiting_lookup = {}
     for recruit in recruiting_data:
         player_name = recruit.get('name', '')
-        recruiting_lookup[player_name.lower()] = recruit
+        recruiting_lookup[normalize_name(player_name)] = recruit
     
     # Merge recruiting data (high school) into roster data
     for player_name, player_data in roster_lookup.items():
@@ -643,12 +646,13 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
     # Get all players from roster - CBB API is the primary source
     # The roster endpoint determines who is on the team
     # Game data is only used for stats, not for discovering players
+    # NOTE: We use normalize_name() to handle unicode diacritics (e.g., "Grbović" vs "Grbovic")
     all_roster_players = set()
     if roster_data and len(roster_data) > 0 and 'players' in roster_data[0]:
         for player in roster_data[0]['players']:
             player_name = player.get('name', '')
             if player_name:
-                all_roster_players.add(player_name.lower())
+                all_roster_players.add(normalize_name(player_name))
 
     # Add FoxSports-only players (players in FoxSports but not in CBB API)
     # This handles mid-season transfers and roster updates that CBB API hasn't caught up with
@@ -684,7 +688,8 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
                                 weight = cols[4].get('text', '')
 
                                 if name:
-                                    foxsports_full_data[name.lower()] = {
+                                    # Use normalize_name for unicode-safe comparison
+                                    foxsports_full_data[normalize_name(name)] = {
                                         'name': name,
                                         'jersey': jersey,
                                         'position': position,
@@ -1273,20 +1278,22 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
         add_status('Wikipedia Data', 'skipped', 'Scraper not available')
     
     # Create lookup for player season stats (for rankings)
+    # Use normalize_name for unicode-safe matching
     player_stats_lookup = {}
     if player_season_stats:
         for player in player_season_stats:
             player_name = player.get('name', '')
             if player_name:
-                player_stats_lookup[player_name.lower()] = player
+                player_stats_lookup[normalize_name(player_name)] = player
     
     # Create lookup for player shooting stats (dunks, layups, etc.)
+    # Use normalize_name for unicode-safe matching
     player_shooting_lookup = {}
     if player_shooting_stats:
         for player in player_shooting_stats:
             player_name = player.get('athleteName', '')
             if player_name:
-                player_shooting_lookup[player_name.lower()] = player
+                player_shooting_lookup[normalize_name(player_name)] = player
     
     # Process each player from roster
     total_players = len(all_players_to_process)
@@ -1340,15 +1347,15 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
                 print(f"[Generator] No cached historical stats found - will fetch all from API")
                 add_status('Historical Stats Mode', 'pending', 'No cache found - fetching all from API (normal for first-time generation)')
     
-    for idx, player_name_lower in enumerate(sorted(all_players_to_process)):
+    for idx, player_name_key in enumerate(sorted(all_players_to_process)):
         # Check for cancellation periodically (every 5 players to avoid overhead)
         if idx % 5 == 0:
             check_cancelled()
-        
+
         # Get the actual player name (with proper casing) from roster for progress message
-        player_roster_data_temp = roster_lookup.get(player_name_lower, {})
-        player_name_for_progress = player_roster_data_temp.get('name', player_name_lower.title()) if player_roster_data_temp else player_name_lower.title()
-        
+        player_roster_data_temp = roster_lookup.get(player_name_key, {})
+        player_name_for_progress = player_roster_data_temp.get('name', player_name_key.title()) if player_roster_data_temp else player_name_key.title()
+
         if progress_callback:
             # Calculate progress based on players completed
             # For player 4 out of 15: (4/15) * 80 = 21.33%, plus 10% start = 31.33%
@@ -1357,29 +1364,29 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
             progress_pct = int(player_progress_start + player_progress)
             progress_callback['progress'] = progress_pct
             progress_callback['message'] = f'Processing {player_name_for_progress} ({players_completed}/{total_players})...'
-        
+
         # Get the actual player name (with proper casing) from roster
-        player_roster_data = roster_lookup.get(player_name_lower, {})
-        
+        player_roster_data = roster_lookup.get(player_name_key, {})
+
         # Get cached player data if available
-        cached_player = cached_roster_lookup.get(player_name_lower, {})
-        
+        cached_player = cached_roster_lookup.get(player_name_key, {})
+
         # Get player name - prefer from roster, fallback to title case
         if player_roster_data:
-            player_name = player_roster_data.get('name', player_name_lower.title())
+            player_name = player_roster_data.get('name', player_name_key.title())
         else:
             # Try to find the name from the original roster data
             player_name = None
             if roster_data and len(roster_data) > 0 and 'players' in roster_data[0]:
                 for p in roster_data[0]['players']:
-                    if p.get('name', '').lower() == player_name_lower:
+                    if normalize_name(p.get('name', '')) == player_name_key:
                         player_name = p.get('name')
                         player_roster_data = p
                         break
-            
+
             # If still not found, use title case
             if not player_name:
-                player_name = player_name_lower.title()
+                player_name = player_name_key.title()
         
         # Calculate stats (will return None if no game data)
         # Filter game_data to only include games in our date range
@@ -1570,13 +1577,13 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
         }
         
         # Add player season stats with rankings if available
-        player_season_data = player_stats_lookup.get(player_name.lower())
+        player_season_data = player_stats_lookup.get(normalize_name(player_name))
         if player_season_data:
             player_record['seasonStatsWithRankings'] = player_season_data
         
         # Add player shooting stats (dunks, layups, jumpers, etc.)
         # Always add shootingStats field, even if player has no tracked shots (use zeros)
-        player_shooting_data = player_shooting_lookup.get(player_name.lower())
+        player_shooting_data = player_shooting_lookup.get(normalize_name(player_name))
         if player_shooting_data:
             # Extract just the shooting breakdown (dunks, layups, etc.)
             shooting_breakdown = {
@@ -1617,7 +1624,7 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
         
         # Get player's historical season stats from previous schools
         # Smart hybrid logic: use cache when available, fetch from API only when needed
-        player_key = player_name.lower()
+        player_key = normalize_name(player_name)
         players_completed = idx + 1  # 1-indexed for display
 
         if include_historical_stats is not None:
