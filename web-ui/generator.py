@@ -1508,9 +1508,11 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
                 if cached_class:
                     class_year_str = cached_class
                     class_source = "foxsports_cache_name"
-                    print(f"  Found class via name match for {player_name}: {cached_class}")
+                    if os.environ.get('CBB_DEBUG'):
+                        print(f"  Found class via name match for {player_name}: {cached_class}")
             except Exception as e:
-                print(f"  Warning: Name-based class lookup failed for {player_name}: {e}")
+                if os.environ.get('CBB_DEBUG'):
+                    print(f"  Warning: Name-based class lookup failed for {player_name}: {e}")
 
         # Fallback to cached roster file (only if FoxSports cache didn't have it)
         if class_year_str == "N/A":

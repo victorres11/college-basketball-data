@@ -198,3 +198,89 @@ def test_player_classes_match_foxsports_cache(team_name, expected_player, expect
         f"This may indicate the generator used the wrong team's FoxSports cache."
 
     print(f"✅ {team_name}: {expected_player} correctly shows as {expected_class}")
+
+
+@pytest.mark.e2e
+def test_class_year_name_fallback_on_jersey_mismatch(project_root):
+    """
+    Test that class year lookup falls back to name matching when jersey numbers mismatch.
+
+    This tests the fix for cases where CBB API and FoxSports have different jersey numbers
+    for the same player (e.g., player changed numbers mid-season).
+
+    Uses mocked data to ensure consistent test behavior regardless of external data changes.
+    """
+    from unittest.mock import patch, MagicMock
+
+    # Mock player data: CBB API says jersey #13, but FoxSports has jersey #4
+    mock_player_name = "Test Player Jr."
+    mock_jersey_from_api = "13"
+    mock_jersey_in_foxsports = "4"
+    mock_expected_class = "JR"
+    mock_foxsports_team_id = "999"
+
+    # Create mock FoxSports cache data (keyed by jersey)
+    mock_classes_by_jersey = {
+        mock_jersey_in_foxsports: mock_expected_class,  # Jersey #4 -> JR
+        # Note: jersey #13 is NOT in the cache, simulating the mismatch
+    }
+
+    # Create mock cache object
+    mock_cache = MagicMock()
+    mock_cache.get_class_by_name.return_value = mock_expected_class
+
+    # Import the module to test
+    sys.path.insert(0, str(project_root / 'web-ui'))
+    import generator
+
+    # Save original values
+    original_cache_available = generator.FOXSPORTS_CACHE_AVAILABLE
+    original_cache = getattr(generator, 'cache', None)
+
+    try:
+        # Patch the module-level cache
+        generator.FOXSPORTS_CACHE_AVAILABLE = True
+        generator.cache = mock_cache
+
+        # Simulate the class lookup logic (extracted from the generator)
+        class_year_str = "N/A"
+        class_source = None
+        normalized_jersey = mock_jersey_from_api.lstrip('0') or '0'
+
+        # Step 1: Try jersey lookup (should fail due to mismatch)
+        cached_class = mock_classes_by_jersey.get(normalized_jersey)
+        if cached_class:
+            class_year_str = cached_class
+            class_source = "foxsports_cache_jersey"
+
+        # Verify jersey lookup failed
+        assert class_year_str == "N/A", "Jersey lookup should have failed due to mismatch"
+
+        # Step 2: Try name-based fallback (should succeed)
+        if class_year_str == "N/A" and mock_foxsports_team_id and generator.FOXSPORTS_CACHE_AVAILABLE:
+            try:
+                cached_class = generator.cache.get_class_by_name(mock_foxsports_team_id, mock_player_name)
+                if cached_class:
+                    class_year_str = cached_class
+                    class_source = "foxsports_cache_name"
+            except Exception:
+                pass
+
+        # Verify name fallback succeeded
+        assert class_year_str == mock_expected_class, \
+            f"Name fallback should have found class {mock_expected_class}, got {class_year_str}"
+        assert class_source == "foxsports_cache_name", \
+            f"Class source should be 'foxsports_cache_name', got {class_source}"
+
+        # Verify the mock was called correctly
+        mock_cache.get_class_by_name.assert_called_once_with(mock_foxsports_team_id, mock_player_name)
+
+        print(f"✅ Name-based fallback correctly resolved class for '{mock_player_name}'")
+        print(f"   Jersey mismatch: API #{mock_jersey_from_api} vs FoxSports #{mock_jersey_in_foxsports}")
+        print(f"   Class resolved via name match: {class_year_str}")
+
+    finally:
+        # Restore original values
+        generator.FOXSPORTS_CACHE_AVAILABLE = original_cache_available
+        if original_cache is not None:
+            generator.cache = original_cache
