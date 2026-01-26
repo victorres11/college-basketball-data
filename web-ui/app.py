@@ -216,6 +216,10 @@ def generate_data():
         notify_email = data.get('notify_email')  # Optional email for completion notification
         print(f"[API] notify_email extracted: '{notify_email}'")  # Debug: log notify_email
 
+        # Force refresh roster from FoxSports (bypasses cache staleness check)
+        force_refresh_roster = data.get('force_refresh_roster', False)
+        print(f"[API] force_refresh_roster: {force_refresh_roster}")
+
         if not team_name:
             return jsonify({'error': 'Team name required'}), 400
 
@@ -261,7 +265,7 @@ def generate_data():
         # Start background thread
         thread = threading.Thread(
             target=run_generation,
-            args=(job_id, team_name, season, include_historical_stats, force_historical_refresh)
+            args=(job_id, team_name, season, include_historical_stats, force_historical_refresh, force_refresh_roster)
         )
         thread.daemon = True
         thread.start()
@@ -299,7 +303,7 @@ def cancel_job(job_id):
         return jsonify({'error': 'Job cannot be cancelled (already completed or failed)'}), 400
 
 
-def run_generation(job_id, team_name, season, include_historical_stats=None, force_historical_refresh=False):
+def run_generation(job_id, team_name, season, include_historical_stats=None, force_historical_refresh=False, force_refresh_roster=False):
     """Background job runner"""
     try:
         # Check if cancelled before starting
@@ -322,7 +326,8 @@ def run_generation(job_id, team_name, season, include_historical_stats=None, for
         output_file = generate_team_data(
             team_name, season, jobs[job_id],
             include_historical_stats=include_historical_stats,
-            force_historical_refresh=force_historical_refresh
+            force_historical_refresh=force_historical_refresh,
+            force_refresh_roster=force_refresh_roster
         )
         
         # Check for cancellation after generation

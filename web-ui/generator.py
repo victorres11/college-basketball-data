@@ -231,7 +231,7 @@ def load_cached_roster(team_name, season):
     return {}
 
 
-def generate_team_data(team_name, season, progress_callback=None, include_historical_stats=None, force_historical_refresh=False):
+def generate_team_data(team_name, season, progress_callback=None, include_historical_stats=None, force_historical_refresh=False, force_refresh_roster=False):
     """
     Generate team data JSON file for any team.
 
@@ -244,6 +244,8 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
             If None (default), uses smart auto-detection.
         force_historical_refresh: When True, re-fetches all historical stats from API
             regardless of cached data. Default: False (uses cache when available).
+        force_refresh_roster: When True, always fetches fresh roster from FoxSports
+            regardless of cache age. Default: False (uses cache if < 1 week old).
 
     Returns:
         Path to generated JSON file
@@ -556,24 +558,32 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
                     os.makedirs(cache_dir, exist_ok=True)
                     print(f"[GENERATOR] Created FoxSports cache directory: {cache_dir}")
 
-                cache = RosterCache(cache_dir=cache_dir)
-                cached_players = cache.get_player_classes(foxsports_team_id)
-
-                # If cache is empty/missing and scraper is available, fetch fresh data
-                if not cached_players and FOXSPORTS_SCRAPER_AVAILABLE:
-                    print(f"[GENERATOR] FoxSports cache empty for {team_name}, fetching fresh roster...")
-                    add_status('Player Classes', 'pending', f'Fetching fresh roster from FoxSports...')
+                # Load FoxSports roster with staleness-aware caching
+                if force_refresh_roster and FOXSPORTS_SCRAPER_AVAILABLE:
+                    # Force refresh requested - always fetch fresh
+                    print(f"[FOXSPORTS] Force refresh requested for {team_name}")
+                    add_status('Player Classes', 'pending', f'Force-refreshing roster from FoxSports...')
                     try:
-                        # Fetch and cache the roster on-demand
-                        fetched_players = fetch_and_cache_roster(team_name, foxsports_team_id)
-                        if fetched_players:
-                            # fetched_players is already in the right format
-                            cached_players = fetched_players
+                        cached_players = fetch_and_cache_roster(team_name, foxsports_team_id)
+                        if cached_players:
                             print(f"[GENERATOR] Successfully fetched {len(cached_players)} players from FoxSports")
                         else:
                             print(f"[GENERATOR] FoxSports scraper returned no players for {team_name}")
                     except Exception as scrape_err:
                         print(f"[GENERATOR] Error fetching from FoxSports: {scrape_err}")
+                        cached_players = []
+                elif FOXSPORTS_SCRAPER_AVAILABLE:
+                    # Use staleness-aware fetch (refreshes if > 168 hours / 1 week)
+                    add_status('Player Classes', 'pending', f'Loading roster (refreshes if > 1 week old)...')
+                    try:
+                        cached_players = get_cached_or_fetch(team_name, foxsports_team_id, max_age_hours=168)
+                    except Exception as scrape_err:
+                        print(f"[GENERATOR] Error in staleness-aware fetch: {scrape_err}")
+                        cached_players = []
+                else:
+                    # Fallback to read-only cache when scraper unavailable
+                    cache = RosterCache(cache_dir=cache_dir)
+                    cached_players = cache.get_player_classes(foxsports_team_id)
 
                 if cached_players:
                     # Create lookup by normalized jersey number
