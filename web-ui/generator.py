@@ -1347,15 +1347,15 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
                 print(f"[Generator] No cached historical stats found - will fetch all from API")
                 add_status('Historical Stats Mode', 'pending', 'No cache found - fetching all from API (normal for first-time generation)')
     
-    for idx, player_name_lower in enumerate(sorted(all_players_to_process)):
+    for idx, player_name_key in enumerate(sorted(all_players_to_process)):
         # Check for cancellation periodically (every 5 players to avoid overhead)
         if idx % 5 == 0:
             check_cancelled()
-        
+
         # Get the actual player name (with proper casing) from roster for progress message
-        player_roster_data_temp = roster_lookup.get(player_name_lower, {})
-        player_name_for_progress = player_roster_data_temp.get('name', player_name_lower.title()) if player_roster_data_temp else player_name_lower.title()
-        
+        player_roster_data_temp = roster_lookup.get(player_name_key, {})
+        player_name_for_progress = player_roster_data_temp.get('name', player_name_key.title()) if player_roster_data_temp else player_name_key.title()
+
         if progress_callback:
             # Calculate progress based on players completed
             # For player 4 out of 15: (4/15) * 80 = 21.33%, plus 10% start = 31.33%
@@ -1364,29 +1364,29 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
             progress_pct = int(player_progress_start + player_progress)
             progress_callback['progress'] = progress_pct
             progress_callback['message'] = f'Processing {player_name_for_progress} ({players_completed}/{total_players})...'
-        
+
         # Get the actual player name (with proper casing) from roster
-        player_roster_data = roster_lookup.get(player_name_lower, {})
-        
+        player_roster_data = roster_lookup.get(player_name_key, {})
+
         # Get cached player data if available
-        cached_player = cached_roster_lookup.get(player_name_lower, {})
-        
+        cached_player = cached_roster_lookup.get(player_name_key, {})
+
         # Get player name - prefer from roster, fallback to title case
         if player_roster_data:
-            player_name = player_roster_data.get('name', player_name_lower.title())
+            player_name = player_roster_data.get('name', player_name_key.title())
         else:
             # Try to find the name from the original roster data
             player_name = None
             if roster_data and len(roster_data) > 0 and 'players' in roster_data[0]:
                 for p in roster_data[0]['players']:
-                    if normalize_name(p.get('name', '')) == player_name_lower:
+                    if normalize_name(p.get('name', '')) == player_name_key:
                         player_name = p.get('name')
                         player_roster_data = p
                         break
-            
+
             # If still not found, use title case
             if not player_name:
-                player_name = player_name_lower.title()
+                player_name = player_name_key.title()
         
         # Calculate stats (will return None if no game data)
         # Filter game_data to only include games in our date range

@@ -19,6 +19,7 @@ Usage:
 """
 
 import re
+import unicodedata
 from dataclasses import dataclass, field
 from datetime import datetime
 from enum import IntEnum
@@ -314,8 +315,6 @@ def normalize_name(name: str) -> str:
     Returns:
         Normalized name for comparison
     """
-    import unicodedata
-
     if not name:
         return ''
 
