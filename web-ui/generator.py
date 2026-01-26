@@ -1499,7 +1499,18 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
             cached_class = player_classes_by_jersey.get(normalized_jersey)
             if cached_class:
                 class_year_str = cached_class
-                class_source = "foxsports_cache"
+                class_source = "foxsports_cache_jersey"
+
+        # Fallback: Try FoxSports cache by player name (handles jersey number mismatches)
+        if class_year_str == "N/A" and foxsports_team_id and FOXSPORTS_CACHE_AVAILABLE:
+            try:
+                cached_class = cache.get_class_by_name(foxsports_team_id, player_name)
+                if cached_class:
+                    class_year_str = cached_class
+                    class_source = "foxsports_cache_name"
+                    print(f"  Found class via name match for {player_name}: {cached_class}")
+            except Exception as e:
+                print(f"  Warning: Name-based class lookup failed for {player_name}: {e}")
 
         # Fallback to cached roster file (only if FoxSports cache didn't have it)
         if class_year_str == "N/A":
@@ -1511,7 +1522,8 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
         # Log warning if we couldn't determine class from any source
         if class_year_str == "N/A":
             print(f"WARNING: No class data for {player_name} (jersey: {jersey_number})")
-            print(f"  - FoxSports cache lookup: {'skipped (no foxsports_id)' if not foxsports_team_id else f'not found for jersey {normalized_jersey}'}")
+            print(f"  - FoxSports cache by jersey: {'skipped (no foxsports_id)' if not foxsports_team_id else f'not found for jersey {normalized_jersey}'}")
+            print(f"  - FoxSports cache by name: {'skipped (no foxsports_id)' if not foxsports_team_id else 'not found'}")
             print(f"  - Cached roster lookup: {'not found' if not cached_player else 'no year field'}")
         
         # Set is_freshman based on class from cache (not calculation)
