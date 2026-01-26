@@ -2,81 +2,103 @@
   {
     "name": "Alijah Arenas",
     "jersey": "0",
+    "position": "G",
     "class": "FR"
   },
   {
     "name": "Chad Baker-Mazara",
     "jersey": "4",
+    "position": "G-F",
     "class": "GS"
   },
   {
     "name": "Ryan Cornish",
     "jersey": "9",
+    "position": "G",
     "class": "GS"
   },
   {
     "name": "Amarion Dickerson",
     "jersey": "3",
+    "position": "G-F",
     "class": "SR"
   },
   {
     "name": "Jerry Easter II",
     "jersey": "8",
+    "position": "G",
     "class": "FR"
   },
   {
     "name": "Jonah Goorin",
     "jersey": "21",
+    "position": "G",
     "class": "SO"
   },
   {
     "name": "Jordan Marsh",
     "jersey": "7",
+    "position": "G",
     "class": "JR"
   },
   {
     "name": "EJ Neal Jr.",
     "jersey": "12",
+    "position": "G",
     "class": "GS"
   },
   {
     "name": "Patrick O'Brien",
     "jersey": "18",
+    "position": "G",
     "class": "FR"
   },
   {
     "name": "Rodney Rice",
     "jersey": "1",
+    "position": "G",
     "class": "JR"
+  },
+  {
+    "name": "Kam Woods",
+    "jersey": "13",
+    "position": "G",
+    "class": "GS"
   },
   {
     "name": "Ezra Ausar",
     "jersey": "2",
+    "position": "F",
     "class": "SR"
   },
   {
     "name": "Jaden Brownell",
     "jersey": "33",
+    "position": "F",
     "class": "GS"
   },
   {
     "name": "Brit Burden",
     "jersey": "22",
+    "position": "F",
     "class": "SO"
   },
   {
     "name": "Jacob Cofie",
     "jersey": "6",
+    "position": "F",
     "class": "SO"
   },
   {
     "name": "Terrance Williams II",
     "jersey": "5",
+    "position": "F",
     "class": "GS"
   },
   {
     "name": "Gabe Dynes",
     "jersey": "45",
+    "position": "C",
     "class": "JR"
   }
 ]
