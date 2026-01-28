@@ -8,6 +8,15 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'scripts'))
 
 from cbb_api_wrapper import CollegeBasketballAPI
 
+# Import ESPN fallback for patching games with missing player stats
+try:
+    from espn_fallback import ESPNFallback, patch_game_data_with_espn
+    ESPN_FALLBACK_AVAILABLE = True
+    print("[GENERATOR] ESPN fallback import: OK")
+except ImportError as e:
+    ESPN_FALLBACK_AVAILABLE = False
+    print(f"Warning: ESPN fallback not available: {e}")
+
 # Import centralized team lookup
 try:
     from team_lookup import get_team_lookup
@@ -364,6 +373,24 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
         count = len(game_data) if game_data else 0
         print(f"[GENERATOR] Retrieved {count} game records")
         add_status('Game Data', 'success', f'Retrieved {count} game records')
+        
+        # Check for games with empty player stats and patch with ESPN fallback
+        if game_data and ESPN_FALLBACK_AVAILABLE:
+            empty_games = sum(1 for g in game_data if not g.get('players'))
+            if empty_games > 0:
+                print(f"[GENERATOR] Found {empty_games} games with empty player stats, attempting ESPN fallback...")
+                try:
+                    game_data = patch_game_data_with_espn(game_data, team_name, verbose=True)
+                    patched = sum(1 for g in game_data if g.get('_espn_patched'))
+                    if patched > 0:
+                        print(f"[GENERATOR] ESPN fallback patched {patched}/{empty_games} games")
+                        add_status('ESPN Fallback', 'success', f'Patched {patched} games with missing stats')
+                    else:
+                        print(f"[GENERATOR] ESPN fallback could not patch any games")
+                        add_status('ESPN Fallback', 'warning', f'{empty_games} games still missing player stats')
+                except Exception as espn_e:
+                    print(f"[GENERATOR] ESPN fallback error: {espn_e}")
+                    add_status('ESPN Fallback', 'failed', str(espn_e))
     except Exception as e:
         check_cancelled()  # Check before reporting error (might be cancellation)
         print(f"[GENERATOR] ERROR: Failed to fetch game data: {e}")
