@@ -15,130 +15,20 @@ from typing import Dict, List, Optional, Any
 from datetime import datetime
 import time
 
-
-# ESPN team ID mapping (CBBD team name -> ESPN team ID)
-# Run fetch_espn_team_ids() to discover more IDs
-ESPN_TEAM_IDS = {
-    # Mountain West Conference
-    "san diego state": "21",
-    "unlv": "2439",
-    "new mexico": "167",
-    "colorado state": "36",
-    "fresno state": "278",
-    "utah state": "328",
-    "boise state": "68",
-    "air force": "2005",
-    "nevada": "2440",
-    "wyoming": "2704",
-    "san jose state": "23",
-    "grand canyon": "2253",
-    
-    # Pac-12 / Big Ten / Major conferences
-    "ucla": "26",
-    "oregon": "2483",
-    "oregon state": "204",
-    "usc": "30",
-    "arizona": "12",
-    "arizona state": "9",
-    "washington": "264",
-    "washington state": "265",
-    "colorado": "38",
-    "utah": "254",
-    "stanford": "24",
-    "california": "25",
-    
-    "michigan state": "127",
-    "michigan": "130",
-    "ohio state": "194",
-    "indiana": "84",
-    "purdue": "2509",
-    "illinois": "356",
-    "iowa": "2294",
-    "wisconsin": "275",
-    "minnesota": "135",
-    "northwestern": "77",
-    "penn state": "213",
-    "maryland": "120",
-    "nebraska": "158",
-    "rutgers": "164",
-    
-    # SEC
-    "kentucky": "96",
-    "tennessee": "2633",
-    "alabama": "333",
-    "auburn": "2",
-    "florida": "57",
-    "georgia": "61",
-    "arkansas": "8",
-    "lsu": "99",
-    "ole miss": "145",
-    "mississippi state": "344",
-    "texas a&m": "245",
-    "missouri": "142",
-    "south carolina": "2579",
-    "vanderbilt": "238",
-    
-    # Big 12
-    "kansas": "2305",
-    "baylor": "239",
-    "texas tech": "2641",
-    "texas": "251",
-    "oklahoma": "201",
-    "oklahoma state": "197",
-    "iowa state": "66",
-    "west virginia": "277",
-    "tcu": "2628",
-    "kansas state": "2306",
-    "cincinnati": "2132",
-    "houston": "248",
-    "ucf": "2116",
-    "byu": "252",
-    
-    # ACC
-    "duke": "150",
-    "north carolina": "153",
-    "nc state": "152",
-    "virginia": "258",
-    "virginia tech": "259",
-    "wake forest": "154",
-    "clemson": "228",
-    "florida state": "52",
-    "miami": "2390",
-    "georgia tech": "59",
-    "syracuse": "183",
-    "pittsburgh": "221",
-    "louisville": "97",
-    "boston college": "103",
-    "notre dame": "87",
-    
-    # Big East
-    "uconn": "41",
-    "connecticut": "41",
-    "villanova": "222",
-    "creighton": "156",
-    "marquette": "269",
-    "xavier": "2752",
-    "providence": "2507",
-    "seton hall": "2550",
-    "st. john's": "2599",
-    "butler": "2086",
-    "georgetown": "46",
-    "depaul": "305",
-    
-    # WAC / Other
-    "eastern washington": "2247",
-    "gonzaga": "2250",
-    "saint mary's": "2608",
-    
-    # Add more teams as needed
-}
+# Import centralized team lookup for ESPN IDs
+try:
+    from team_lookup import get_team_lookup
+    TEAM_LOOKUP_AVAILABLE = True
+except ImportError:
+    TEAM_LOOKUP_AVAILABLE = False
+    print("[ESPN_FALLBACK] Warning: team_lookup not available, ESPN fallback will not work")
 
 
 class ESPNFallback:
     """
     Fetches box score data from ESPN when CBBD returns empty player stats.
     """
-    
+
     def __init__(self, verbose: bool = True):
         """Initialize ESPN fallback client."""
         self.base_url = "https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball"
@@ -149,9 +39,31 @@ class ESPNFallback:
         self.verbose = verbose
         self.last_request_time = 0
         self.min_request_interval = 0.3  # 300ms between ESPN requests
-        
+
         # Cache team schedules to avoid repeated requests
         self._schedule_cache: Dict[str, List[Dict]] = {}
+
+        # API call logging (matches cbb_api_wrapper.py pattern)
+        self.api_calls_log: List[Dict] = []
+
+        # Initialize team lookup for ESPN IDs
+        self._team_lookup = get_team_lookup() if TEAM_LOOKUP_AVAILABLE else None
+
+    def _log_api_call(self, endpoint: str, params: Dict, duration_ms: float,
+                      success: bool, response_size: int = 0, error: str = None):
+        """Log an API call for tracking/debugging."""
+        log_entry = {
+            'timestamp': datetime.now().isoformat(),
+            'source': 'espn',
+            'endpoint': endpoint,
+            'params': params,
+            'duration_ms': round(duration_ms, 2),
+            'success': success,
+            'response_size': response_size
+        }
+        if error:
+            log_entry['error'] = error
+        self.api_calls_log.append(log_entry)
     
     def _rate_limit(self):
         """Apply rate limiting between requests."""
@@ -168,57 +80,61 @@ class ESPNFallback:
     
     def get_espn_team_id(self, team_name: str) -> Optional[str]:
         """
-        Get ESPN team ID for a team name.
-        
+        Get ESPN team ID for a team name using centralized team registry.
+
         Args:
             team_name: Team name (e.g., "San Diego State")
-            
+
         Returns:
             ESPN team ID or None if not found
         """
-        normalized = team_name.lower().strip()
-        
-        # Direct lookup
-        if normalized in ESPN_TEAM_IDS:
-            return ESPN_TEAM_IDS[normalized]
-        
-        # Try without common suffixes
-        for suffix in [' aztecs', ' bruins', ' ducks', ' spartans', ' eagles', ' badgers']:
-            if normalized.endswith(suffix):
-                base_name = normalized[:-len(suffix)]
-                if base_name in ESPN_TEAM_IDS:
-                    return ESPN_TEAM_IDS[base_name]
-        
-        return None
+        if not self._team_lookup:
+            self._log(f"WARNING: Team lookup not available, cannot get ESPN ID for '{team_name}'")
+            return None
+
+        espn_id = self._team_lookup.lookup(team_name, "espn_id")
+        if espn_id:
+            self._log(f"Found ESPN ID {espn_id} for '{team_name}' via team registry")
+        return espn_id
     
     def get_team_schedule(self, espn_team_id: str) -> List[Dict]:
         """
         Get team's season schedule from ESPN.
-        
+
         Args:
             espn_team_id: ESPN team ID
-            
+
         Returns:
             List of game events with IDs and dates
         """
         if espn_team_id in self._schedule_cache:
             return self._schedule_cache[espn_team_id]
-        
+
         self._rate_limit()
-        
+
         url = f"{self.base_url}/teams/{espn_team_id}/schedule"
+        endpoint = f"teams/{espn_team_id}/schedule"
+        start_time = time.time()
+
         try:
             response = self.session.get(url, timeout=15)
+            duration_ms = (time.time() - start_time) * 1000
             response.raise_for_status()
             data = response.json()
-            
+
             events = data.get('events', [])
             self._schedule_cache[espn_team_id] = events
             self._log(f"Loaded {len(events)} games from ESPN schedule for team {espn_team_id}")
+
+            self._log_api_call(endpoint, {'team_id': espn_team_id}, duration_ms,
+                             success=True, response_size=len(response.content))
             return events
-            
+
         except Exception as e:
+            duration_ms = (time.time() - start_time) * 1000
             self._log(f"ERROR: Failed to get ESPN schedule for team {espn_team_id}: {e}")
+            self._log_api_call(endpoint, {'team_id': espn_team_id}, duration_ms,
+                             success=False, error=str(e))
             return []
     
     def find_espn_event_id(self, espn_team_id: str, game_date: str, opponent: str) -> Optional[str]:
@@ -292,25 +208,35 @@ class ESPNFallback:
     def get_game_box_score(self, event_id: str) -> Optional[Dict]:
         """
         Get full box score data from ESPN for a game.
-        
+
         Args:
             event_id: ESPN event ID
-            
+
         Returns:
             Box score data or None if failed
         """
         self._rate_limit()
-        
+
         url = f"{self.base_url}/summary?event={event_id}"
+        endpoint = f"summary?event={event_id}"
+        start_time = time.time()
+
         try:
             response = self.session.get(url, timeout=15)
+            duration_ms = (time.time() - start_time) * 1000
             response.raise_for_status()
             data = response.json()
             self._log(f"Retrieved box score for event {event_id}")
+
+            self._log_api_call(endpoint, {'event_id': event_id}, duration_ms,
+                             success=True, response_size=len(response.content))
             return data
-            
+
         except Exception as e:
+            duration_ms = (time.time() - start_time) * 1000
             self._log(f"ERROR: Failed to get ESPN box score for event {event_id}: {e}")
+            self._log_api_call(endpoint, {'event_id': event_id}, duration_ms,
+                             success=False, error=str(e))
             return None
     
     def transform_espn_to_cbbd_format(self, espn_data: Dict, target_team: str, cbbd_game: Dict) -> List[Dict]:
@@ -465,17 +391,21 @@ class ESPNFallback:
     def patch_empty_games(self, game_data: List[Dict], team_name: str) -> List[Dict]:
         """
         Patch games with empty player arrays using ESPN fallback.
-        
+
         Args:
             game_data: List of game data from CBBD API
             team_name: Team name for ESPN lookup
-            
+
         Returns:
             Updated game_data with ESPN stats patched in
         """
         if not game_data:
             return game_data
-        
+
+        if not TEAM_LOOKUP_AVAILABLE:
+            self._log("WARNING: Team lookup not available - cannot use ESPN fallback")
+            return game_data
+
         espn_team_id = self.get_espn_team_id(team_name)
         if not espn_team_id:
             self._log(f"WARNING: No ESPN team ID mapping for '{team_name}' - cannot use fallback")

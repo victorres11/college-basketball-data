@@ -36,6 +36,7 @@ PROJECT_ROOT = Path(__file__).parent.parent
 TEAM_IDS_FILE = PROJECT_ROOT / 'foxsports_rosters' / 'team_ids_mapping.json'
 BBALLNET_MAPPING_FILE = PROJECT_ROOT / 'misc_data_sources' / 'quadrants' / 'mappings' / 'bballnet_team_mapping.json'
 SPORTS_REF_MAPPING_FILE = PROJECT_ROOT / 'misc_data_sources' / 'coaching_history' / 'mappings' / 'sports_ref_team_mapping.json'
+ESPN_MAPPING_FILE = PROJECT_ROOT / 'misc_data_sources' / 'espn' / 'mappings' / 'espn_team_mapping.json'
 
 # Output file
 OUTPUT_FILE = PROJECT_ROOT / 'config' / 'team_registry.json'
@@ -117,6 +118,17 @@ def load_wikipedia_mapping() -> Dict[str, str]:
     except ImportError as e:
         print(f"Warning: Could not import TEAM_WIKIPEDIA_MAPPING: {e}")
         return {}
+
+
+def load_espn_mapping() -> Dict[str, str]:
+    """Load ESPN team name → ESPN ID mapping"""
+    if not ESPN_MAPPING_FILE.exists():
+        print(f"Warning: {ESPN_MAPPING_FILE} not found")
+        return {}
+
+    with open(ESPN_MAPPING_FILE, 'r') as f:
+        data = json.load(f)
+        return data.get('team_id_mapping', {})
 
 
 def extract_canonical_name(full_name: str) -> str:
@@ -380,11 +392,13 @@ def generate_registry():
     bballnet_mapping = load_bballnet_mapping()
     sports_ref_mapping = load_sports_ref_mapping()
     wikipedia_mapping = load_wikipedia_mapping()
+    espn_mapping = load_espn_mapping()
 
     print(f"  - Team IDs: {len(team_ids)} teams")
     print(f"  - Bballnet mappings: {len(bballnet_mapping)} entries")
     print(f"  - Sports Reference mappings: {len(sports_ref_mapping)} entries")
     print(f"  - Wikipedia mappings: {len(wikipedia_mapping)} entries")
+    print(f"  - ESPN mappings: {len(espn_mapping)} entries")
 
     # Build the registry
     teams = {}
@@ -408,6 +422,10 @@ def generate_registry():
         wikipedia_page = find_slug_in_mapping(canonical_name, wikipedia_mapping)
         if not wikipedia_page:
             wikipedia_page = find_slug_in_mapping(full_name, wikipedia_mapping)
+
+        espn_id = find_slug_in_mapping(canonical_name, espn_mapping)
+        if not espn_id:
+            espn_id = find_slug_in_mapping(full_name, espn_mapping)
 
         # Build aliases
         aliases = build_alias_set(canonical_name, canonical_name, full_name)
@@ -437,7 +455,8 @@ def generate_registry():
                 "sports_reference": sports_ref_slug,
                 "wikipedia_page": wikipedia_page,
                 "barttorvik": canonical_name,  # Bart Torvik uses display names
-                "kenpom": canonical_name  # KenPom uses display names
+                "kenpom": canonical_name,  # KenPom uses display names
+                "espn_id": espn_id  # ESPN team ID for ESPN API fallback
             }
         }
 
@@ -477,12 +496,14 @@ def generate_registry():
     missing_bballnet = sum(1 for t in teams.values() if not t['services']['bballnet'])
     missing_sports_ref = sum(1 for t in teams.values() if not t['services']['sports_reference'])
     missing_wikipedia = sum(1 for t in teams.values() if not t['services']['wikipedia_page'])
+    missing_espn = sum(1 for t in teams.values() if not t['services']['espn_id'])
 
     print(f"\nMissing service mappings:")
     print(f"  - FoxSports ID: {missing_foxsports} teams")
     print(f"  - Bballnet: {missing_bballnet} teams")
     print(f"  - Sports Reference: {missing_sports_ref} teams")
     print(f"  - Wikipedia: {missing_wikipedia} teams")
+    print(f"  - ESPN: {missing_espn} teams")
 
     return registry
 
