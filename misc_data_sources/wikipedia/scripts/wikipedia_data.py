@@ -453,7 +453,7 @@ def get_wikipedia_team_data(page_title: str) -> Dict[str, Any]:
             value = clean_template_value(first_value)
             if value:
                 # Strip parenthetical qualifiers like (official), (unofficial)
-                value = re.sub(r'\s*\([^)]*\)\s*', ' ', value).strip()
+                value = re.sub(r'\s*\([^)]*\)\s*', '', value).strip()
                 result['mascot'] = value
                 break
 
