@@ -447,8 +447,13 @@ def get_wikipedia_team_data(page_title: str) -> Dict[str, Any]:
     for param_name in mascot_params:
         param = safe_get_template_param(template, param_name)
         if param:
-            value = clean_template_value(param.value)
+            # Split on <br> variants BEFORE cleaning, take only the first value
+            raw_value = str(param.value)
+            first_value = re.split(r'<br\s*/?>', raw_value, flags=re.IGNORECASE)[0]
+            value = clean_template_value(first_value)
             if value:
+                # Strip parenthetical qualifiers like (official), (unofficial)
+                value = re.sub(r'\s*\([^)]*\)\s*', ' ', value).strip()
                 result['mascot'] = value
                 break
 
