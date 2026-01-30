@@ -2222,7 +2222,7 @@ function REFRESH_TEAM_DATA() {
     '</div>' +
     '<div class="buttons">' +
     '<button class="secondary" id="cancelBtn" onclick="google.script.host.close()">Cancel</button>' +
-    '<button class="primary" id="submitBtn" onclick="submitRefresh()">Refresh Data</button>' +
+    '<button class="primary" id="submitBtn" onclick="submitRefresh()">Start Generation</button>' +
     '</div>' +
     '<script>' +
     'var isSubmitting = false;' +
@@ -2267,7 +2267,7 @@ function REFRESH_TEAM_DATA() {
     .setWidth(400)
     .setHeight(340);
 
-  ui.showModalDialog(html, 'Refresh Team Data');
+  ui.showModalDialog(html, 'Step 1: Start Data Generation');
 }
 
 /**
@@ -2707,9 +2707,10 @@ function RELOAD_DATA() {
   }
 
   SpreadsheetApp.getUi().alert(
-    "Data reloaded successfully!\n\n" +
+    "✅ Data loaded successfully!\n\n" +
     "Data Generated: " + dataGenerated + "\n\n" +
-    "Roster has been copied as values."
+    "Roster has been copied as values.\n\n" +
+    "Tip: If data looks stale, run 'Step 1: Start Data Generation' first, wait for the email notification, then run this step again."
   );
 }
 
@@ -2720,9 +2721,10 @@ function RELOAD_DATA() {
 function onOpen() {
   var ui = SpreadsheetApp.getUi();
   ui.createMenu('CBB Tools')
-    .addItem('Refresh Team Data', 'REFRESH_TEAM_DATA')
-    .addItem('Refresh Different Team...', 'REFRESH_DIFFERENT_TEAM')
-    .addItem('Reload Data', 'RELOAD_DATA')
+    .addItem('1️⃣ Start Data Generation', 'REFRESH_TEAM_DATA')
+    .addItem('2️⃣ Load Updated Data (after job completes)', 'RELOAD_DATA')
+    .addSeparator()
+    .addItem('Switch to Different Team...', 'REFRESH_DIFFERENT_TEAM')
     .addSeparator()
     .addItem('Copy Roster as Values', 'COPY_ROSTER_AS_VALUES')
     .addToUi();
