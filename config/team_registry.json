@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2026-01-25T18:52:48.541423+00:00",
+  "generated": "2026-01-28T17:01:10.861420+00:00",
   "team_count": 365,
   "alias_count": 1184,
   "teams": {
@@ -19,7 +19,8 @@
         "sports_reference": "boston-college",
         "wikipedia_page": "Boston College Eagles men's basketball",
         "barttorvik": "Boston College",
-        "kenpom": "Boston College"
+        "kenpom": "Boston College",
+        "espn_id": "103"
       }
     },
     "222": {
@@ -37,7 +38,8 @@
         "sports_reference": "california",
         "wikipedia_page": "California Golden Bears men's basketball",
         "barttorvik": "California",
-        "kenpom": "California"
+        "kenpom": "California",
+        "espn_id": "25"
       }
     },
     "22": {
@@ -55,7 +57,8 @@
         "sports_reference": "clemson",
         "wikipedia_page": "Clemson Tigers men's basketball",
         "barttorvik": "Clemson",
-        "kenpom": "Clemson"
+        "kenpom": "Clemson",
+        "espn_id": "228"
       }
     },
     "23": {
@@ -73,7 +76,8 @@
         "sports_reference": "duke",
         "wikipedia_page": "Duke Blue Devils men's basketball",
         "barttorvik": "Duke",
-        "kenpom": "Duke"
+        "kenpom": "Duke",
+        "espn_id": "150"
       }
     },
     "24": {
@@ -97,7 +101,8 @@
         "sports_reference": "florida-state",
         "wikipedia_page": "Florida State Seminoles men's basketball",
         "barttorvik": "Florida State",
-        "kenpom": "Florida State"
+        "kenpom": "Florida State",
+        "espn_id": "52"
       }
     },
     "25": {
@@ -115,7 +120,8 @@
         "sports_reference": "georgia-tech",
         "wikipedia_page": "Georgia Tech Yellow Jackets men's basketball",
         "barttorvik": "Georgia Tech",
-        "kenpom": "Georgia Tech"
+        "kenpom": "Georgia Tech",
+        "espn_id": "59"
       }
     },
     "121": {
@@ -133,7 +139,8 @@
         "sports_reference": "louisville",
         "wikipedia_page": "Louisville Cardinals men's basketball",
         "barttorvik": "Louisville",
-        "kenpom": "Louisville"
+        "kenpom": "Louisville",
+        "espn_id": "97"
       }
     },
     "55": {
@@ -156,7 +163,8 @@
         "sports_reference": "miami-fl",
         "wikipedia_page": "Miami Hurricanes men's basketball",
         "barttorvik": "Miami(FL)",
-        "kenpom": "Miami(FL)"
+        "kenpom": "Miami(FL)",
+        "espn_id": "2390"
       }
     },
     "28": {
@@ -184,7 +192,8 @@
         "sports_reference": "north-carolina-state",
         "wikipedia_page": "NC State Wolfpack men's basketball",
         "barttorvik": "North Carolina State",
-        "kenpom": "North Carolina State"
+        "kenpom": "North Carolina State",
+        "espn_id": "152"
       }
     },
     "27": {
@@ -206,7 +215,8 @@
         "sports_reference": "north-carolina",
         "wikipedia_page": "North Carolina Tar Heels men's basketball",
         "barttorvik": "North Carolina",
-        "kenpom": "North Carolina"
+        "kenpom": "North Carolina",
+        "espn_id": "153"
       }
     },
     "61": {
@@ -224,7 +234,8 @@
         "sports_reference": "notre-dame",
         "wikipedia_page": "Notre Dame Fighting Irish men's basketball",
         "barttorvik": "Notre Dame",
-        "kenpom": "Notre Dame"
+        "kenpom": "Notre Dame",
+        "espn_id": "87"
       }
     },
     "62": {
@@ -242,7 +253,8 @@
         "sports_reference": "pittsburgh",
         "wikipedia_page": "Pittsburgh Panthers men's basketball",
         "barttorvik": "Pittsburgh",
-        "kenpom": "Pittsburgh"
+        "kenpom": "Pittsburgh",
+        "espn_id": "221"
       }
     },
     "316": {
@@ -260,7 +272,8 @@
         "sports_reference": "southern-methodist",
         "wikipedia_page": "SMU Mustangs men's basketball",
         "barttorvik": "SMU",
-        "kenpom": "SMU"
+        "kenpom": "SMU",
+        "espn_id": "2567"
       }
     },
     "226": {
@@ -278,7 +291,8 @@
         "sports_reference": "stanford",
         "wikipedia_page": "Stanford Cardinal men's basketball",
         "barttorvik": "Stanford",
-        "kenpom": "Stanford"
+        "kenpom": "Stanford",
+        "espn_id": "24"
       }
     },
     "65": {
@@ -296,7 +310,8 @@
         "sports_reference": "syracuse",
         "wikipedia_page": "Syracuse Orange men's basketball",
         "barttorvik": "Syracuse",
-        "kenpom": "Syracuse"
+        "kenpom": "Syracuse",
+        "espn_id": "183"
       }
     },
     "29": {
@@ -314,7 +329,8 @@
         "sports_reference": "virginia",
         "wikipedia_page": "Virginia Cavaliers men's basketball",
         "barttorvik": "Virginia",
-        "kenpom": "Virginia"
+        "kenpom": "Virginia",
+        "espn_id": "258"
       }
     },
     "59": {
@@ -332,7 +348,8 @@
         "sports_reference": "virginia-tech",
         "wikipedia_page": "Virginia Tech Hokies men's basketball",
         "barttorvik": "Virginia Tech",
-        "kenpom": "Virginia Tech"
+        "kenpom": "Virginia Tech",
+        "espn_id": "259"
       }
     },
     "30": {
@@ -350,7 +367,8 @@
         "sports_reference": "wake-forest",
         "wikipedia_page": "Wake Forest Demon Deacons men's basketball",
         "barttorvik": "Wake Forest",
-        "kenpom": "Wake Forest"
+        "kenpom": "Wake Forest",
+        "espn_id": "154"
       }
     },
     "221": {
@@ -374,7 +392,8 @@
         "sports_reference": "arizona-state",
         "wikipedia_page": "Arizona State Sun Devils men's basketball",
         "barttorvik": "Arizona State",
-        "kenpom": "Arizona State"
+        "kenpom": "Arizona State",
+        "espn_id": "9"
       }
     },
     "220": {
@@ -392,7 +411,8 @@
         "sports_reference": "arizona",
         "wikipedia_page": "Arizona Wildcats men's basketball",
         "barttorvik": "Arizona",
-        "kenpom": "Arizona"
+        "kenpom": "Arizona",
+        "espn_id": "12"
       }
     },
     "192": {
@@ -410,7 +430,8 @@
         "sports_reference": "brigham-young",
         "wikipedia_page": "BYU Cougars men's basketball",
         "barttorvik": "BYU",
-        "kenpom": "BYU"
+        "kenpom": "BYU",
+        "espn_id": "252"
       }
     },
     "41": {
@@ -428,7 +449,8 @@
         "sports_reference": "baylor",
         "wikipedia_page": "Baylor Bears men's basketball",
         "barttorvik": "Baylor",
-        "kenpom": "Baylor"
+        "kenpom": "Baylor",
+        "espn_id": "239"
       }
     },
     "119": {
@@ -446,7 +468,8 @@
         "sports_reference": "cincinnati",
         "wikipedia_page": "Cincinnati Bearcats men's basketball",
         "barttorvik": "Cincinnati",
-        "kenpom": "Cincinnati"
+        "kenpom": "Cincinnati",
+        "espn_id": "2132"
       }
     },
     "42": {
@@ -464,7 +487,8 @@
         "sports_reference": "colorado",
         "wikipedia_page": "Colorado Buffaloes men's basketball",
         "barttorvik": "Colorado",
-        "kenpom": "Colorado"
+        "kenpom": "Colorado",
+        "espn_id": "38"
       }
     },
     "113": {
@@ -482,7 +506,8 @@
         "sports_reference": "houston",
         "wikipedia_page": "Houston Cougars men's basketball",
         "barttorvik": "Houston",
-        "kenpom": "Houston"
+        "kenpom": "Houston",
+        "espn_id": "248"
       }
     },
     "43": {
@@ -504,7 +529,8 @@
         "sports_reference": "iowa-state",
         "wikipedia_page": "Iowa State Cyclones men's basketball",
         "barttorvik": "Iowa State",
-        "kenpom": "Iowa State"
+        "kenpom": "Iowa State",
+        "espn_id": "66"
       }
     },
     "44": {
@@ -522,7 +548,8 @@
         "sports_reference": "kansas",
         "wikipedia_page": "Kansas Jayhawks men's basketball",
         "barttorvik": "Kansas",
-        "kenpom": "Kansas"
+        "kenpom": "Kansas",
+        "espn_id": "2305"
       }
     },
     "45": {
@@ -547,7 +574,8 @@
         "sports_reference": "kansas-state",
         "wikipedia_page": "Kansas State Wildcats men's basketball",
         "barttorvik": "Kansas State",
-        "kenpom": "Kansas State"
+        "kenpom": "Kansas State",
+        "espn_id": "2306"
       }
     },
     "49": {
@@ -569,7 +597,8 @@
         "sports_reference": "oklahoma-state",
         "wikipedia_page": "Oklahoma State Cowboys basketball",
         "barttorvik": "Oklahoma State",
-        "kenpom": "Oklahoma State"
+        "kenpom": "Oklahoma State",
+        "espn_id": "197"
       }
     },
     "317": {
@@ -587,7 +616,8 @@
         "sports_reference": "texas-christian",
         "wikipedia_page": "TCU Horned Frogs men's basketball",
         "barttorvik": "TCU",
-        "kenpom": "TCU"
+        "kenpom": "TCU",
+        "espn_id": "2628"
       }
     },
     "52": {
@@ -605,7 +635,8 @@
         "sports_reference": "texas-tech",
         "wikipedia_page": "Texas Tech Red Raiders basketball",
         "barttorvik": "Texas Tech",
-        "kenpom": "Texas Tech"
+        "kenpom": "Texas Tech",
+        "espn_id": "2641"
       }
     },
     "32": {
@@ -623,7 +654,8 @@
         "sports_reference": "central-florida",
         "wikipedia_page": "UCF Knights men's basketball",
         "barttorvik": "UCF",
-        "kenpom": "UCF"
+        "kenpom": "UCF",
+        "espn_id": "2116"
       }
     },
     "197": {
@@ -641,7 +673,8 @@
         "sports_reference": "utah",
         "wikipedia_page": "Utah Utes men's basketball",
         "barttorvik": "Utah",
-        "kenpom": "Utah"
+        "kenpom": "Utah",
+        "espn_id": "254"
       }
     },
     "66": {
@@ -659,7 +692,8 @@
         "sports_reference": "west-virginia",
         "wikipedia_page": "West Virginia Mountaineers men's basketball",
         "barttorvik": "West Virginia",
-        "kenpom": "West Virginia"
+        "kenpom": "West Virginia",
+        "espn_id": "277"
       }
     },
     "125": {
@@ -677,7 +711,8 @@
         "sports_reference": "butler",
         "wikipedia_page": "Butler Bulldogs men's basketball",
         "barttorvik": "Butler",
-        "kenpom": "Butler"
+        "kenpom": "Butler",
+        "espn_id": "2086"
       }
     },
     "182": {
@@ -695,7 +730,8 @@
         "sports_reference": "creighton",
         "wikipedia_page": "Creighton Bluejays men's basketball",
         "barttorvik": "Creighton",
-        "kenpom": "Creighton"
+        "kenpom": "Creighton",
+        "espn_id": "156"
       }
     },
     "120": {
@@ -713,7 +749,8 @@
         "sports_reference": "depaul",
         "wikipedia_page": "DePaul Blue Demons men's basketball",
         "barttorvik": "DePaul",
-        "kenpom": "DePaul"
+        "kenpom": "DePaul",
+        "espn_id": "305"
       }
     },
     "60": {
@@ -731,7 +768,8 @@
         "sports_reference": "georgetown",
         "wikipedia_page": "Georgetown Hoyas men's basketball",
         "barttorvik": "Georgetown",
-        "kenpom": "Georgetown"
+        "kenpom": "Georgetown",
+        "espn_id": "46"
       }
     },
     "122": {
@@ -749,7 +787,8 @@
         "sports_reference": "marquette",
         "wikipedia_page": "Marquette Golden Eagles men's basketball",
         "barttorvik": "Marquette",
-        "kenpom": "Marquette"
+        "kenpom": "Marquette",
+        "espn_id": "269"
       }
     },
     "56": {
@@ -767,7 +806,8 @@
         "sports_reference": "providence",
         "wikipedia_page": "Providence Friars men's basketball",
         "barttorvik": "Providence",
-        "kenpom": "Providence"
+        "kenpom": "Providence",
+        "espn_id": "2507"
       }
     },
     "64": {
@@ -785,7 +825,8 @@
         "sports_reference": "seton-hall",
         "wikipedia_page": "Seton Hall Pirates men's basketball",
         "barttorvik": "Seton Hall",
-        "kenpom": "Seton Hall"
+        "kenpom": "Seton Hall",
+        "espn_id": "2550"
       }
     },
     "57": {
@@ -805,7 +846,8 @@
         "sports_reference": "st-johns-ny",
         "wikipedia_page": "St. John's Red Storm men's basketball",
         "barttorvik": "St. John's",
-        "kenpom": "St. John's"
+        "kenpom": "St. John's",
+        "espn_id": "2599"
       }
     },
     "54": {
@@ -823,7 +865,8 @@
         "sports_reference": "connecticut",
         "wikipedia_page": "UConn Huskies men's basketball",
         "barttorvik": "UConn",
-        "kenpom": "UConn"
+        "kenpom": "UConn",
+        "espn_id": "41"
       }
     },
     "58": {
@@ -841,7 +884,8 @@
         "sports_reference": "villanova",
         "wikipedia_page": "Villanova Wildcats men's basketball",
         "barttorvik": "Villanova",
-        "kenpom": "Villanova"
+        "kenpom": "Villanova",
+        "espn_id": "222"
       }
     },
     "20": {
@@ -859,7 +903,8 @@
         "sports_reference": "xavier",
         "wikipedia_page": "Xavier Musketeers men's basketball",
         "barttorvik": "Xavier",
-        "kenpom": "Xavier"
+        "kenpom": "Xavier",
+        "espn_id": "2752"
       }
     },
     "84": {
@@ -881,7 +926,8 @@
         "sports_reference": "illinois",
         "wikipedia_page": "Illinois Fighting Illini men's basketball",
         "barttorvik": "Illinois",
-        "kenpom": "Illinois"
+        "kenpom": "Illinois",
+        "espn_id": "356"
       }
     },
     "85": {
@@ -899,7 +945,8 @@
         "sports_reference": "indiana",
         "wikipedia_page": "Indiana Hoosiers men's basketball",
         "barttorvik": "Indiana",
-        "kenpom": "Indiana"
+        "kenpom": "Indiana",
+        "espn_id": "84"
       }
     },
     "86": {
@@ -917,7 +964,8 @@
         "sports_reference": "iowa",
         "wikipedia_page": "Iowa Hawkeyes men's basketball",
         "barttorvik": "Iowa",
-        "kenpom": "Iowa"
+        "kenpom": "Iowa",
+        "espn_id": "2294"
       }
     },
     "26": {
@@ -935,7 +983,8 @@
         "sports_reference": "maryland",
         "wikipedia_page": "Maryland Terrapins men's basketball",
         "barttorvik": "Maryland",
-        "kenpom": "Maryland"
+        "kenpom": "Maryland",
+        "espn_id": "120"
       }
     },
     "88": {
@@ -963,7 +1012,8 @@
         "sports_reference": "michigan-state",
         "wikipedia_page": "Michigan State Spartans men's basketball",
         "barttorvik": "Michigan State",
-        "kenpom": "Michigan State"
+        "kenpom": "Michigan State",
+        "espn_id": "127"
       }
     },
     "87": {
@@ -987,7 +1037,8 @@
         "sports_reference": "michigan",
         "wikipedia_page": "Michigan Wolverines men's basketball",
         "barttorvik": "Michigan",
-        "kenpom": "Michigan"
+        "kenpom": "Michigan",
+        "espn_id": "130"
       }
     },
     "89": {
@@ -1005,7 +1056,8 @@
         "sports_reference": "minnesota",
         "wikipedia_page": "Minnesota Golden Gophers men's basketball",
         "barttorvik": "Minnesota",
-        "kenpom": "Minnesota"
+        "kenpom": "Minnesota",
+        "espn_id": "135"
       }
     },
     "47": {
@@ -1023,7 +1075,8 @@
         "sports_reference": "nebraska",
         "wikipedia_page": "Nebraska Cornhuskers men's basketball",
         "barttorvik": "Nebraska",
-        "kenpom": "Nebraska"
+        "kenpom": "Nebraska",
+        "espn_id": "158"
       }
     },
     "90": {
@@ -1041,7 +1094,8 @@
         "sports_reference": "northwestern",
         "wikipedia_page": "Northwestern Wildcats men's basketball",
         "barttorvik": "Northwestern",
-        "kenpom": "Northwestern"
+        "kenpom": "Northwestern",
+        "espn_id": "77"
       }
     },
     "91": {
@@ -1065,7 +1119,8 @@
         "sports_reference": "ohio-state",
         "wikipedia_page": "Ohio State Buckeyes men's basketball",
         "barttorvik": "Ohio State",
-        "kenpom": "Ohio State"
+        "kenpom": "Ohio State",
+        "espn_id": "194"
       }
     },
     "223": {
@@ -1086,7 +1141,8 @@
         "sports_reference": "oregon",
         "wikipedia_page": "Oregon Ducks men's basketball",
         "barttorvik": "Oregon",
-        "kenpom": "Oregon"
+        "kenpom": "Oregon",
+        "espn_id": "2483"
       }
     },
     "92": {
@@ -1110,7 +1166,8 @@
         "sports_reference": "penn-state",
         "wikipedia_page": "Penn State Nittany Lions men's basketball",
         "barttorvik": "Penn State",
-        "kenpom": "Penn State"
+        "kenpom": "Penn State",
+        "espn_id": "213"
       }
     },
     "93": {
@@ -1128,7 +1185,8 @@
         "sports_reference": "purdue",
         "wikipedia_page": "Purdue Boilermakers men's basketball",
         "barttorvik": "Purdue",
-        "kenpom": "Purdue"
+        "kenpom": "Purdue",
+        "espn_id": "2509"
       }
     },
     "63": {
@@ -1146,7 +1204,8 @@
         "sports_reference": "rutgers",
         "wikipedia_page": "Rutgers Scarlet Knights men's basketball",
         "barttorvik": "Rutgers",
-        "kenpom": "Rutgers"
+        "kenpom": "Rutgers",
+        "espn_id": "164"
       }
     },
     "227": {
@@ -1164,7 +1223,8 @@
         "sports_reference": "ucla",
         "wikipedia_page": "UCLA Bruins men's basketball",
         "barttorvik": "UCLA",
-        "kenpom": "UCLA"
+        "kenpom": "UCLA",
+        "espn_id": "26"
       }
     },
     "225": {
@@ -1182,7 +1242,8 @@
         "sports_reference": "southern-california",
         "wikipedia_page": "USC Trojans men's basketball",
         "barttorvik": "USC",
-        "kenpom": "USC"
+        "kenpom": "USC",
+        "espn_id": "30"
       }
     },
     "228": {
@@ -1200,7 +1261,8 @@
         "sports_reference": "washington",
         "wikipedia_page": "Washington Huskies men's basketball",
         "barttorvik": "Washington",
-        "kenpom": "Washington"
+        "kenpom": "Washington",
+        "espn_id": "264"
       }
     },
     "94": {
@@ -1218,7 +1280,8 @@
         "sports_reference": "wisconsin",
         "wikipedia_page": "Wisconsin Badgers men's basketball",
         "barttorvik": "Wisconsin",
-        "kenpom": "Wisconsin"
+        "kenpom": "Wisconsin",
+        "espn_id": "275"
       }
     },
     "243": {
@@ -1236,7 +1299,8 @@
         "sports_reference": "alabama",
         "wikipedia_page": "Alabama Crimson Tide men's basketball",
         "barttorvik": "Alabama",
-        "kenpom": "Alabama"
+        "kenpom": "Alabama",
+        "espn_id": "333"
       }
     },
     "244": {
@@ -1258,7 +1322,8 @@
         "sports_reference": "arkansas",
         "wikipedia_page": "Arkansas Razorbacks men's basketball",
         "barttorvik": "Arkansas",
-        "kenpom": "Arkansas"
+        "kenpom": "Arkansas",
+        "espn_id": "8"
       }
     },
     "245": {
@@ -1276,7 +1341,8 @@
         "sports_reference": "auburn",
         "wikipedia_page": "Auburn Tigers men's basketball",
         "barttorvik": "Auburn",
-        "kenpom": "Auburn"
+        "kenpom": "Auburn",
+        "espn_id": "2"
       }
     },
     "237": {
@@ -1294,7 +1360,8 @@
         "sports_reference": "florida",
         "wikipedia_page": "Florida Gators men's basketball",
         "barttorvik": "Florida",
-        "kenpom": "Florida"
+        "kenpom": "Florida",
+        "espn_id": "57"
       }
     },
     "238": {
@@ -1312,7 +1379,8 @@
         "sports_reference": "georgia",
         "wikipedia_page": "Georgia Bulldogs basketball",
         "barttorvik": "Georgia",
-        "kenpom": "Georgia"
+        "kenpom": "Georgia",
+        "espn_id": "61"
       }
     },
     "239": {
@@ -1334,7 +1402,8 @@
         "sports_reference": "kentucky",
         "wikipedia_page": "Kentucky Wildcats men's basketball",
         "barttorvik": "Kentucky",
-        "kenpom": "Kentucky"
+        "kenpom": "Kentucky",
+        "espn_id": "96"
       }
     },
     "246": {
@@ -1352,7 +1421,8 @@
         "sports_reference": "louisiana-state",
         "wikipedia_page": "LSU Tigers men's basketball",
         "barttorvik": "LSU",
-        "kenpom": "LSU"
+        "kenpom": "LSU",
+        "espn_id": "99"
       }
     },
     "248": {
@@ -1374,7 +1444,8 @@
         "sports_reference": "mississippi-state",
         "wikipedia_page": "Mississippi State Bulldogs men's basketball",
         "barttorvik": "Mississippi State",
-        "kenpom": "Mississippi State"
+        "kenpom": "Mississippi State",
+        "espn_id": "344"
       }
     },
     "46": {
@@ -1392,7 +1463,8 @@
         "sports_reference": "missouri",
         "wikipedia_page": "Missouri Tigers men's basketball",
         "barttorvik": "Missouri",
-        "kenpom": "Missouri"
+        "kenpom": "Missouri",
+        "espn_id": "142"
       }
     },
     "48": {
@@ -1410,7 +1482,8 @@
         "sports_reference": "oklahoma",
         "wikipedia_page": "Oklahoma Sooners men's basketball",
         "barttorvik": "Oklahoma",
-        "kenpom": "Oklahoma"
+        "kenpom": "Oklahoma",
+        "espn_id": "201"
       }
     },
     "247": {
@@ -1428,7 +1501,8 @@
         "sports_reference": "mississippi",
         "wikipedia_page": "Ole Miss Rebels men's basketball",
         "barttorvik": "Ole Miss",
-        "kenpom": "Ole Miss"
+        "kenpom": "Ole Miss",
+        "espn_id": "145"
       }
     },
     "240": {
@@ -1450,7 +1524,8 @@
         "sports_reference": "south-carolina",
         "wikipedia_page": "South Carolina Gamecocks men's basketball",
         "barttorvik": "South Carolina",
-        "kenpom": "South Carolina"
+        "kenpom": "South Carolina",
+        "espn_id": "2579"
       }
     },
     "241": {
@@ -1468,7 +1543,8 @@
         "sports_reference": "tennessee",
         "wikipedia_page": "Tennessee Volunteers basketball",
         "barttorvik": "Tennessee",
-        "kenpom": "Tennessee"
+        "kenpom": "Tennessee",
+        "espn_id": "2633"
       }
     },
     "51": {
@@ -1486,7 +1562,8 @@
         "sports_reference": "texas-am",
         "wikipedia_page": "Texas A&M Aggies men's basketball",
         "barttorvik": "Texas A&M",
-        "kenpom": "Texas A&M"
+        "kenpom": "Texas A&M",
+        "espn_id": "245"
       }
     },
     "50": {
@@ -1504,7 +1581,8 @@
         "sports_reference": "texas",
         "wikipedia_page": "Texas Longhorns men's basketball",
         "barttorvik": "Texas",
-        "kenpom": "Texas"
+        "kenpom": "Texas",
+        "espn_id": "251"
       }
     },
     "242": {
@@ -1522,7 +1600,8 @@
         "sports_reference": "vanderbilt",
         "wikipedia_page": "Vanderbilt Commodores men's basketball",
         "barttorvik": "Vanderbilt",
-        "kenpom": "Vanderbilt"
+        "kenpom": "Vanderbilt",
+        "espn_id": "238"
       }
     },
     "256": {
@@ -1540,7 +1619,8 @@
         "sports_reference": "davidson",
         "wikipedia_page": "Davidson Wildcats men's basketball",
         "barttorvik": "Davidson",
-        "kenpom": "Davidson"
+        "kenpom": "Davidson",
+        "espn_id": "2166"
       }
     },
     "21": {
@@ -1558,7 +1638,8 @@
         "sports_reference": "dayton",
         "wikipedia_page": "Dayton Flyers men's basketball",
         "barttorvik": "Dayton",
-        "kenpom": "Dayton"
+        "kenpom": "Dayton",
+        "espn_id": "2168"
       }
     },
     "11": {
@@ -1576,7 +1657,8 @@
         "sports_reference": "duquesne",
         "wikipedia_page": "Duquesne Dukes men's basketball",
         "barttorvik": "Duquesne",
-        "kenpom": "Duquesne"
+        "kenpom": "Duquesne",
+        "espn_id": "2184"
       }
     },
     "12": {
@@ -1594,7 +1676,8 @@
         "sports_reference": "fordham",
         "wikipedia_page": "Fordham Rams men's basketball",
         "barttorvik": "Fordham",
-        "kenpom": "Fordham"
+        "kenpom": "Fordham",
+        "espn_id": "2230"
       }
     },
     "106": {
@@ -1612,7 +1695,8 @@
         "sports_reference": "george-mason",
         "wikipedia_page": "George Mason Patriots men's basketball",
         "barttorvik": "George Mason",
-        "kenpom": "George Mason"
+        "kenpom": "George Mason",
+        "espn_id": "2244"
       }
     },
     "13": {
@@ -1630,7 +1714,8 @@
         "sports_reference": "george-washington",
         "wikipedia_page": "George Washington Revolutionaries men's basketball",
         "barttorvik": "George Washington",
-        "kenpom": "George Washington"
+        "kenpom": "George Washington",
+        "espn_id": "45"
       }
     },
     "14": {
@@ -1648,7 +1733,8 @@
         "sports_reference": "la-salle",
         "wikipedia_page": "La Salle Explorers men's basketball",
         "barttorvik": "La Salle",
-        "kenpom": "La Salle"
+        "kenpom": "La Salle",
+        "espn_id": "2325"
       }
     },
     "129": {
@@ -1666,7 +1752,8 @@
         "sports_reference": "loyola-il",
         "wikipedia_page": "Loyola Ramblers men's basketball",
         "barttorvik": "Loyola Chicago",
-        "kenpom": "Loyola Chicago"
+        "kenpom": "Loyola Chicago",
+        "espn_id": "2350"
       }
     },
     "16": {
@@ -1684,7 +1771,8 @@
         "sports_reference": "rhode-island",
         "wikipedia_page": "Rhode Island Rams men's basketball",
         "barttorvik": "Rhode Island",
-        "kenpom": "Rhode Island"
+        "kenpom": "Rhode Island",
+        "espn_id": "227"
       }
     },
     "110": {
@@ -1702,7 +1790,8 @@
         "sports_reference": "richmond",
         "wikipedia_page": "Richmond Spiders men's basketball",
         "barttorvik": "Richmond",
-        "kenpom": "Richmond"
+        "kenpom": "Richmond",
+        "espn_id": "257"
       }
     },
     "18": {
@@ -1720,7 +1809,8 @@
         "sports_reference": "saint-josephs",
         "wikipedia_page": "Saint Joseph's Hawks men's basketball",
         "barttorvik": "Saint Joseph's",
-        "kenpom": "Saint Joseph's"
+        "kenpom": "Saint Joseph's",
+        "espn_id": "2603"
       }
     },
     "124": {
@@ -1738,7 +1828,8 @@
         "sports_reference": "saint-louis",
         "wikipedia_page": "Saint Louis Billikens men's basketball",
         "barttorvik": "Saint Louis",
-        "kenpom": "Saint Louis"
+        "kenpom": "Saint Louis",
+        "espn_id": "139"
       }
     },
     "17": {
@@ -1758,7 +1849,8 @@
         "sports_reference": "st-bonaventure",
         "wikipedia_page": "St. Bonaventure Bonnies men's basketball",
         "barttorvik": "St. Bonaventure",
-        "kenpom": "St. Bonaventure"
+        "kenpom": "St. Bonaventure",
+        "espn_id": "179"
       }
     },
     "111": {
@@ -1776,7 +1868,8 @@
         "sports_reference": "virginia-commonwealth",
         "wikipedia_page": "VCU Rams men's basketball",
         "barttorvik": "VCU",
-        "kenpom": "VCU"
+        "kenpom": "VCU",
+        "espn_id": "2670"
       }
     },
     "211": {
@@ -1794,7 +1887,8 @@
         "sports_reference": "austin-peay",
         "wikipedia_page": "Austin Peay Governors men's basketball",
         "barttorvik": "Austin Peay",
-        "kenpom": "Austin Peay"
+        "kenpom": "Austin Peay",
+        "espn_id": "2046"
       }
     },
     "908": {
@@ -1812,7 +1906,8 @@
         "sports_reference": "bellarmine",
         "wikipedia_page": "Bellarmine Knights men's basketball",
         "barttorvik": "Bellarmine",
-        "kenpom": "Bellarmine"
+        "kenpom": "Bellarmine",
+        "espn_id": "91"
       }
     },
     "465": {
@@ -1834,7 +1929,8 @@
         "sports_reference": "central-arkansas",
         "wikipedia_page": "Central Arkansas Bears basketball",
         "barttorvik": "Central Arkansas",
-        "kenpom": "Central Arkansas"
+        "kenpom": "Central Arkansas",
+        "espn_id": "2110"
       }
     },
     "213": {
@@ -1856,7 +1952,8 @@
         "sports_reference": "eastern-kentucky",
         "wikipedia_page": "Eastern Kentucky Colonels men's basketball",
         "barttorvik": "Eastern Kentucky",
-        "kenpom": "Eastern Kentucky"
+        "kenpom": "Eastern Kentucky",
+        "espn_id": "2198"
       }
     },
     "892": {
@@ -1874,7 +1971,8 @@
         "sports_reference": "florida-gulf-coast",
         "wikipedia_page": "Florida Gulf Coast Eagles men's basketball",
         "barttorvik": "Florida Gulf Coast",
-        "kenpom": "Florida Gulf Coast"
+        "kenpom": "Florida Gulf Coast",
+        "espn_id": "526"
       }
     },
     "35": {
@@ -1892,7 +1990,8 @@
         "sports_reference": "jacksonville",
         "wikipedia_page": "Jacksonville Dolphins men's basketball",
         "barttorvik": "Jacksonville",
-        "kenpom": "Jacksonville"
+        "kenpom": "Jacksonville",
+        "espn_id": "294"
       }
     },
     "731": {
@@ -1910,7 +2009,8 @@
         "sports_reference": "lipscomb",
         "wikipedia_page": "Lipscomb Bisons men's basketball",
         "barttorvik": "Lipscomb",
-        "kenpom": "Lipscomb"
+        "kenpom": "Lipscomb",
+        "espn_id": "288"
       }
     },
     "828": {
@@ -1928,7 +2028,8 @@
         "sports_reference": "north-alabama",
         "wikipedia_page": "North Alabama Lions men's basketball",
         "barttorvik": "North Alabama",
-        "kenpom": "North Alabama"
+        "kenpom": "North Alabama",
+        "espn_id": "2453"
       }
     },
     "394": {
@@ -1946,7 +2047,8 @@
         "sports_reference": "north-florida",
         "wikipedia_page": "North Florida Ospreys men's basketball",
         "barttorvik": "North Florida",
-        "kenpom": "North Florida"
+        "kenpom": "North Florida",
+        "espn_id": "2454"
       }
     },
     "403": {
@@ -1970,7 +2072,8 @@
         "sports_reference": "queens-nc",
         "wikipedia_page": "Queens Royals men's basketball",
         "barttorvik": "Queens University",
-        "kenpom": "Queens University"
+        "kenpom": "Queens University",
+        "espn_id": "2511"
       }
     },
     "39": {
@@ -1988,7 +2091,8 @@
         "sports_reference": "stetson",
         "wikipedia_page": "Stetson Hatters men's basketball",
         "barttorvik": "Stetson",
-        "kenpom": "Stetson"
+        "kenpom": "Stetson",
+        "espn_id": "56"
       }
     },
     "442": {
@@ -2006,7 +2110,8 @@
         "sports_reference": "west-georgia",
         "wikipedia_page": "West Georgia Wolves men's basketball",
         "barttorvik": "West Georgia",
-        "kenpom": "West Georgia"
+        "kenpom": "West Georgia",
+        "espn_id": "2698"
       }
     },
     "123": {
@@ -2024,7 +2129,8 @@
         "sports_reference": "charlotte",
         "wikipedia_page": "Charlotte 49ers men's basketball",
         "barttorvik": "Charlotte",
-        "kenpom": "Charlotte"
+        "kenpom": "Charlotte",
+        "espn_id": "2429"
       }
     },
     "105": {
@@ -2046,7 +2152,8 @@
         "sports_reference": "east-carolina",
         "wikipedia_page": "East Carolina Pirates men's basketball",
         "barttorvik": "East Carolina",
-        "kenpom": "East Carolina"
+        "kenpom": "East Carolina",
+        "espn_id": "151"
       }
     },
     "33": {
@@ -2064,7 +2171,8 @@
         "sports_reference": "florida-atlantic",
         "wikipedia_page": "Florida Atlantic Owls men's basketball",
         "barttorvik": "Florida Atlantic",
-        "kenpom": "Florida Atlantic"
+        "kenpom": "Florida Atlantic",
+        "espn_id": "2226"
       }
     },
     "114": {
@@ -2082,7 +2190,8 @@
         "sports_reference": "memphis",
         "wikipedia_page": "Memphis Tigers men's basketball",
         "barttorvik": "Memphis",
-        "kenpom": "Memphis"
+        "kenpom": "Memphis",
+        "espn_id": "235"
       }
     },
     "301": {
@@ -2100,7 +2209,8 @@
         "sports_reference": "north-texas",
         "wikipedia_page": "North Texas Mean Green men's basketball",
         "barttorvik": "North Texas",
-        "kenpom": "North Texas"
+        "kenpom": "North Texas",
+        "espn_id": "249"
       }
     },
     "314": {
@@ -2118,7 +2228,8 @@
         "sports_reference": "rice",
         "wikipedia_page": "Rice Owls men's basketball",
         "barttorvik": "Rice",
-        "kenpom": "Rice"
+        "kenpom": "Rice",
+        "espn_id": "242"
       }
     },
     "115": {
@@ -2136,7 +2247,8 @@
         "sports_reference": "south-florida",
         "wikipedia_page": "South Florida Bulls men's basketball",
         "barttorvik": "South Florida",
-        "kenpom": "South Florida"
+        "kenpom": "South Florida",
+        "espn_id": "58"
       }
     },
     "19": {
@@ -2154,7 +2266,8 @@
         "sports_reference": "temple",
         "wikipedia_page": "Temple Owls men's basketball",
         "barttorvik": "Temple",
-        "kenpom": "Temple"
+        "kenpom": "Temple",
+        "espn_id": "218"
       }
     },
     "117": {
@@ -2172,7 +2285,8 @@
         "sports_reference": "tulane",
         "wikipedia_page": "Tulane Green Wave men's basketball",
         "barttorvik": "Tulane",
-        "kenpom": "Tulane"
+        "kenpom": "Tulane",
+        "espn_id": "2655"
       }
     },
     "318": {
@@ -2190,7 +2304,8 @@
         "sports_reference": "tulsa",
         "wikipedia_page": "Tulsa Golden Hurricane men's basketball",
         "barttorvik": "Tulsa",
-        "kenpom": "Tulsa"
+        "kenpom": "Tulsa",
+        "espn_id": "202"
       }
     },
     "118": {
@@ -2208,7 +2323,8 @@
         "sports_reference": "alabama-birmingham",
         "wikipedia_page": "UAB Blazers men's basketball",
         "barttorvik": "UAB",
-        "kenpom": "UAB"
+        "kenpom": "UAB",
+        "espn_id": "5"
       }
     },
     "271": {
@@ -2226,7 +2342,8 @@
         "sports_reference": "texas-san-antonio",
         "wikipedia_page": "UTSA Roadrunners men's basketball",
         "barttorvik": "UTSA",
-        "kenpom": "UTSA"
+        "kenpom": "UTSA",
+        "espn_id": "2636"
       }
     },
     "190": {
@@ -2248,7 +2365,8 @@
         "sports_reference": "wichita-state",
         "wikipedia_page": "Wichita State Shockers men's basketball",
         "barttorvik": "Wichita State",
-        "kenpom": "Wichita State"
+        "kenpom": "Wichita State",
+        "espn_id": "2724"
       }
     },
     "478": {
@@ -2266,7 +2384,8 @@
         "sports_reference": "binghamton",
         "wikipedia_page": "Binghamton Bearcats men's basketball",
         "barttorvik": "Binghamton",
-        "kenpom": "Binghamton"
+        "kenpom": "Binghamton",
+        "espn_id": "2066"
       }
     },
     "820": {
@@ -2284,7 +2403,8 @@
         "sports_reference": "bryant",
         "wikipedia_page": "Bryant Bulldogs men's basketball",
         "barttorvik": "Bryant",
-        "kenpom": "Bryant"
+        "kenpom": "Bryant",
+        "espn_id": "2803"
       }
     },
     "6": {
@@ -2302,7 +2422,8 @@
         "sports_reference": "maine",
         "wikipedia_page": "Maine Black Bears men's basketball",
         "barttorvik": "Maine",
-        "kenpom": "Maine"
+        "kenpom": "Maine",
+        "espn_id": "311"
       }
     },
     "388": {
@@ -2320,7 +2441,8 @@
         "sports_reference": "njit",
         "wikipedia_page": "NJIT Highlanders men's basketball",
         "barttorvik": "NJIT",
-        "kenpom": "NJIT"
+        "kenpom": "NJIT",
+        "espn_id": "2885"
       }
     },
     "7": {
@@ -2338,7 +2460,8 @@
         "sports_reference": "new-hampshire",
         "wikipedia_page": "New Hampshire Wildcats men's basketball",
         "barttorvik": "New Hampshire",
-        "kenpom": "New Hampshire"
+        "kenpom": "New Hampshire",
+        "espn_id": "160"
       }
     },
     "202": {
@@ -2356,7 +2479,8 @@
         "sports_reference": "maryland-baltimore-county",
         "wikipedia_page": "UMBC Retrievers men's basketball",
         "barttorvik": "UMBC",
-        "kenpom": "UMBC"
+        "kenpom": "UMBC",
+        "espn_id": "2378"
       }
     },
     "970": {
@@ -2374,7 +2498,8 @@
         "sports_reference": "massachusetts-lowell",
         "wikipedia_page": "UMass Lowell River Hawks men's basketball",
         "barttorvik": "UMass Lowell",
-        "kenpom": "UMass Lowell"
+        "kenpom": "UMass Lowell",
+        "espn_id": "2349"
       }
     },
     "133": {
@@ -2398,7 +2523,8 @@
         "sports_reference": "albany-ny",
         "wikipedia_page": "Albany Great Danes men's basketball",
         "barttorvik": "University at Albany",
-        "kenpom": "University at Albany"
+        "kenpom": "University at Albany",
+        "espn_id": "399"
       }
     },
     "10": {
@@ -2416,7 +2542,8 @@
         "sports_reference": "vermont",
         "wikipedia_page": "Vermont Catamounts men's basketball",
         "barttorvik": "Vermont",
-        "kenpom": "Vermont"
+        "kenpom": "Vermont",
+        "espn_id": "261"
       }
     },
     "68": {
@@ -2434,7 +2561,8 @@
         "sports_reference": "eastern-washington",
         "wikipedia_page": "Eastern Washington Eagles men's basketball",
         "barttorvik": "Eastern Washington",
-        "kenpom": "Eastern Washington"
+        "kenpom": "Eastern Washington",
+        "espn_id": "2247"
       }
     },
     "69": {
@@ -2456,7 +2584,8 @@
         "sports_reference": "idaho-state",
         "wikipedia_page": "Idaho State Bengals men's basketball",
         "barttorvik": "Idaho State",
-        "kenpom": "Idaho State"
+        "kenpom": "Idaho State",
+        "espn_id": "304"
       }
     },
     "98": {
@@ -2474,7 +2603,8 @@
         "sports_reference": "idaho",
         "wikipedia_page": "Idaho Vandals men's basketball",
         "barttorvik": "Idaho",
-        "kenpom": "Idaho"
+        "kenpom": "Idaho",
+        "espn_id": "70"
       }
     },
     "70": {
@@ -2492,7 +2622,8 @@
         "sports_reference": "montana",
         "wikipedia_page": "Montana Grizzlies basketball",
         "barttorvik": "Montana",
-        "kenpom": "Montana"
+        "kenpom": "Montana",
+        "espn_id": "149"
       }
     },
     "71": {
@@ -2514,7 +2645,8 @@
         "sports_reference": "montana-state",
         "wikipedia_page": "Montana State Bobcats men's basketball",
         "barttorvik": "Montana State",
-        "kenpom": "Montana State"
+        "kenpom": "Montana State",
+        "espn_id": "147"
       }
     },
     "72": {
@@ -2532,7 +2664,8 @@
         "sports_reference": "northern-arizona",
         "wikipedia_page": "Northern Arizona Lumberjacks men's basketball",
         "barttorvik": "Northern Arizona",
-        "kenpom": "Northern Arizona"
+        "kenpom": "Northern Arizona",
+        "espn_id": "2464"
       }
     },
     "395": {
@@ -2550,7 +2683,8 @@
         "sports_reference": "northern-colorado",
         "wikipedia_page": "Northern Colorado Bears men's basketball",
         "barttorvik": "Northern Colorado",
-        "kenpom": "Northern Colorado"
+        "kenpom": "Northern Colorado",
+        "espn_id": "2458"
       }
     },
     "73": {
@@ -2572,7 +2706,8 @@
         "sports_reference": "portland-state",
         "wikipedia_page": "Portland State Vikings men's basketball",
         "barttorvik": "Portland State",
-        "kenpom": "Portland State"
+        "kenpom": "Portland State",
+        "espn_id": "2502"
       }
     },
     "74": {
@@ -2594,7 +2729,8 @@
         "sports_reference": "sacramento-state",
         "wikipedia_page": "Sacramento State Hornets men's basketball",
         "barttorvik": "Sacramento State",
-        "kenpom": "Sacramento State"
+        "kenpom": "Sacramento State",
+        "espn_id": "16"
       }
     },
     "75": {
@@ -2616,7 +2752,8 @@
         "sports_reference": "weber-state",
         "wikipedia_page": "Weber State Wildcats men's basketball",
         "barttorvik": "Weber State",
-        "kenpom": "Weber State"
+        "kenpom": "Weber State",
+        "espn_id": "2692"
       }
     },
     "76": {
@@ -2634,7 +2771,8 @@
         "sports_reference": "charleston-southern",
         "wikipedia_page": "Charleston Southern Buccaneers men's basketball",
         "barttorvik": "Charleston Southern",
-        "kenpom": "Charleston Southern"
+        "kenpom": "Charleston Southern",
+        "espn_id": "2127"
       }
     },
     "456": {
@@ -2652,7 +2790,8 @@
         "sports_reference": "gardner-webb",
         "wikipedia_page": "Gardner\u2013Webb Runnin' Bulldogs men's basketball",
         "barttorvik": "Gardner-Webb",
-        "kenpom": "Gardner-Webb"
+        "kenpom": "Gardner-Webb",
+        "espn_id": "2241"
       }
     },
     "79": {
@@ -2670,7 +2809,8 @@
         "sports_reference": "high-point",
         "wikipedia_page": "High Point Panthers men's basketball",
         "barttorvik": "High Point",
-        "kenpom": "High Point"
+        "kenpom": "High Point",
+        "espn_id": "2272"
       }
     },
     "376": {
@@ -2688,7 +2828,8 @@
         "sports_reference": "longwood",
         "wikipedia_page": "Longwood Lancers men's basketball",
         "barttorvik": "Longwood",
-        "kenpom": "Longwood"
+        "kenpom": "Longwood",
+        "espn_id": "2344"
       }
     },
     "402": {
@@ -2706,7 +2847,8 @@
         "sports_reference": "presbyterian",
         "wikipedia_page": "Presbyterian Blue Hose men's basketball",
         "barttorvik": "Presbyterian",
-        "kenpom": "Presbyterian"
+        "kenpom": "Presbyterian",
+        "espn_id": "2506"
       }
     },
     "82": {
@@ -2724,7 +2866,8 @@
         "sports_reference": "radford",
         "wikipedia_page": "Radford Highlanders men's basketball",
         "barttorvik": "Radford",
-        "kenpom": "Radford"
+        "kenpom": "Radford",
+        "espn_id": "2515"
       }
     },
     "81": {
@@ -2742,7 +2885,8 @@
         "sports_reference": "north-carolina-asheville",
         "wikipedia_page": "UNC Asheville Bulldogs men's basketball",
         "barttorvik": "UNC Asheville",
-        "kenpom": "UNC Asheville"
+        "kenpom": "UNC Asheville",
+        "espn_id": "2427"
       }
     },
     "415": {
@@ -2760,7 +2904,8 @@
         "sports_reference": "south-carolina-upstate",
         "wikipedia_page": "USC Upstate Spartans men's basketball",
         "barttorvik": "USC Upstate",
-        "kenpom": "USC Upstate"
+        "kenpom": "USC Upstate",
+        "espn_id": "2908"
       }
     },
     "83": {
@@ -2778,7 +2923,8 @@
         "sports_reference": "winthrop",
         "wikipedia_page": "Winthrop Eagles men's basketball",
         "barttorvik": "Winthrop",
-        "kenpom": "Winthrop"
+        "kenpom": "Winthrop",
+        "espn_id": "2737"
       }
     },
     "96": {
@@ -2798,7 +2944,8 @@
         "sports_reference": "cal-poly",
         "wikipedia_page": "Cal Poly Mustangs men's basketball",
         "barttorvik": "Cal Poly",
-        "kenpom": "Cal Poly"
+        "kenpom": "Cal Poly",
+        "espn_id": "13"
       }
     },
     "335": {
@@ -2820,7 +2967,8 @@
         "sports_reference": "cal-state-bakersfield",
         "wikipedia_page": "Cal State Bakersfield Roadrunners men's basketball",
         "barttorvik": "Cal State Bakersfield",
-        "kenpom": "Cal State Bakersfield"
+        "kenpom": "Cal State Bakersfield",
+        "espn_id": "2934"
       }
     },
     "97": {
@@ -2842,7 +2990,8 @@
         "sports_reference": "cal-state-fullerton",
         "wikipedia_page": "Cal State Fullerton Titans men's basketball",
         "barttorvik": "Cal State Fullerton",
-        "kenpom": "Cal State Fullerton"
+        "kenpom": "Cal State Fullerton",
+        "espn_id": "2239"
       }
     },
     "67": {
@@ -2864,7 +3013,8 @@
         "sports_reference": "cal-state-northridge",
         "wikipedia_page": "Cal State Northridge Matadors men's basketball",
         "barttorvik": "Cal State Northridge",
-        "kenpom": "Cal State Northridge"
+        "kenpom": "Cal State Northridge",
+        "espn_id": "2463"
       }
     },
     "312": {
@@ -2882,7 +3032,8 @@
         "sports_reference": "hawaii",
         "wikipedia_page": "Hawaii Rainbow Warriors basketball",
         "barttorvik": "Hawai'i",
-        "kenpom": "Hawai'i"
+        "kenpom": "Hawai'i",
+        "espn_id": "62"
       }
     },
     "99": {
@@ -2904,7 +3055,8 @@
         "sports_reference": "long-beach-state",
         "wikipedia_page": "Long Beach State Beach men's basketball",
         "barttorvik": "Long Beach State",
-        "kenpom": "Long Beach State"
+        "kenpom": "Long Beach State",
+        "espn_id": "299"
       }
     },
     "341": {
@@ -2922,7 +3074,8 @@
         "sports_reference": "california-davis",
         "wikipedia_page": "UC Davis Aggies men's basketball",
         "barttorvik": "UC Davis",
-        "kenpom": "UC Davis"
+        "kenpom": "UC Davis",
+        "espn_id": "302"
       }
     },
     "101": {
@@ -2940,7 +3093,8 @@
         "sports_reference": "california-irvine",
         "wikipedia_page": "UC Irvine Anteaters men's basketball",
         "barttorvik": "UC Irvine",
-        "kenpom": "UC Irvine"
+        "kenpom": "UC Irvine",
+        "espn_id": "300"
       }
     },
     "476": {
@@ -2958,7 +3112,8 @@
         "sports_reference": "california-riverside",
         "wikipedia_page": "UC Riverside Highlanders men's basketball",
         "barttorvik": "UC Riverside",
-        "kenpom": "UC Riverside"
+        "kenpom": "UC Riverside",
+        "espn_id": "27"
       }
     },
     "610": {
@@ -2976,7 +3131,8 @@
         "sports_reference": "california-san-diego",
         "wikipedia_page": "UC San Diego Tritons men's basketball",
         "barttorvik": "UC San Diego",
-        "kenpom": "UC San Diego"
+        "kenpom": "UC San Diego",
+        "espn_id": "28"
       }
     },
     "102": {
@@ -2994,7 +3150,8 @@
         "sports_reference": "california-santa-barbara",
         "wikipedia_page": "UC Santa Barbara Gauchos men's basketball",
         "barttorvik": "UC Santa Barbara",
-        "kenpom": "UC Santa Barbara"
+        "kenpom": "UC Santa Barbara",
+        "espn_id": "2540"
       }
     },
     "2": {
@@ -3012,7 +3169,8 @@
         "sports_reference": "delaware",
         "wikipedia_page": "Delaware Fightin' Blue Hens men's basketball",
         "barttorvik": "Delaware",
-        "kenpom": "Delaware"
+        "kenpom": "Delaware",
+        "espn_id": "48"
       }
     },
     "293": {
@@ -3030,7 +3188,8 @@
         "sports_reference": "florida-international",
         "wikipedia_page": "FIU Panthers men's basketball",
         "barttorvik": "Florida International",
-        "kenpom": "Florida International"
+        "kenpom": "Florida International",
+        "espn_id": "2229"
       }
     },
     "36": {
@@ -3052,7 +3211,8 @@
         "sports_reference": "jacksonville-state",
         "wikipedia_page": "Jacksonville State Gamecocks men's basketball",
         "barttorvik": "Jacksonville State",
-        "kenpom": "Jacksonville State"
+        "kenpom": "Jacksonville State",
+        "espn_id": "55"
       }
     },
     "858": {
@@ -3074,7 +3234,8 @@
         "sports_reference": "kennesaw-state",
         "wikipedia_page": "Kennesaw State Owls men's basketball",
         "barttorvik": "Kennesaw State",
-        "kenpom": "Kennesaw State"
+        "kenpom": "Kennesaw State",
+        "espn_id": "338"
       }
     },
     "80": {
@@ -3092,7 +3253,8 @@
         "sports_reference": "liberty",
         "wikipedia_page": "Liberty Flames basketball",
         "barttorvik": "Liberty",
-        "kenpom": "Liberty"
+        "kenpom": "Liberty",
+        "espn_id": "2335"
       }
     },
     "294": {
@@ -3110,7 +3272,8 @@
         "sports_reference": "louisiana-tech",
         "wikipedia_page": "Louisiana Tech Bulldogs men's basketball",
         "barttorvik": "Louisiana Tech",
-        "kenpom": "Louisiana Tech"
+        "kenpom": "Louisiana Tech",
+        "espn_id": "2348"
       }
     },
     "295": {
@@ -3128,7 +3291,8 @@
         "sports_reference": "middle-tennessee",
         "wikipedia_page": "Middle Tennessee Blue Raiders men's basketball",
         "barttorvik": "Middle Tennessee",
-        "kenpom": "Middle Tennessee"
+        "kenpom": "Middle Tennessee",
+        "espn_id": "2393"
       }
     },
     "189": {
@@ -3150,7 +3314,8 @@
         "sports_reference": "missouri-state",
         "wikipedia_page": "Missouri State Bears basketball",
         "barttorvik": "Missouri State",
-        "kenpom": "Missouri State"
+        "kenpom": "Missouri State",
+        "espn_id": "2623"
       }
     },
     "299": {
@@ -3172,7 +3337,8 @@
         "sports_reference": "new-mexico-state",
         "wikipedia_page": "New Mexico State Aggies men's basketball",
         "barttorvik": "New Mexico State",
-        "kenpom": "New Mexico State"
+        "kenpom": "New Mexico State",
+        "espn_id": "166"
       }
     },
     "266": {
@@ -3190,7 +3356,8 @@
         "sports_reference": "sam-houston-state",
         "wikipedia_page": "Sam Houston Bearkats men's basketball",
         "barttorvik": "Sam Houston",
-        "kenpom": "Sam Houston"
+        "kenpom": "Sam Houston",
+        "espn_id": "2534"
       }
     },
     "319": {
@@ -3208,7 +3375,8 @@
         "sports_reference": "texas-el-paso",
         "wikipedia_page": "UTEP Miners men's basketball",
         "barttorvik": "UTEP",
-        "kenpom": "UTEP"
+        "kenpom": "UTEP",
+        "espn_id": "2638"
       }
     },
     "296": {
@@ -3232,7 +3400,8 @@
         "sports_reference": "western-kentucky",
         "wikipedia_page": "Western Kentucky Hilltoppers basketball",
         "barttorvik": "Western Kentucky",
-        "kenpom": "Western Kentucky"
+        "kenpom": "Western Kentucky",
+        "espn_id": "98"
       }
     },
     "31": {
@@ -3250,7 +3419,8 @@
         "sports_reference": "campbell",
         "wikipedia_page": "Campbell Fighting Camels men's basketball",
         "barttorvik": "Campbell",
-        "kenpom": "Campbell"
+        "kenpom": "Campbell",
+        "espn_id": "2097"
       }
     },
     "249": {
@@ -3268,7 +3438,8 @@
         "sports_reference": "college-of-charleston",
         "wikipedia_page": "Charleston Cougars men's basketball",
         "barttorvik": "Charleston",
-        "kenpom": "Charleston"
+        "kenpom": "Charleston",
+        "espn_id": "232"
       }
     },
     "3": {
@@ -3286,7 +3457,8 @@
         "sports_reference": "drexel",
         "wikipedia_page": "Drexel Dragons men's basketball",
         "barttorvik": "Drexel",
-        "kenpom": "Drexel"
+        "kenpom": "Drexel",
+        "espn_id": "2182"
       }
     },
     "78": {
@@ -3304,7 +3476,8 @@
         "sports_reference": "elon",
         "wikipedia_page": "Elon Phoenix men's basketball",
         "barttorvik": "Elon",
-        "kenpom": "Elon"
+        "kenpom": "Elon",
+        "espn_id": "2210"
       }
     },
     "174": {
@@ -3322,7 +3495,8 @@
         "sports_reference": "hampton",
         "wikipedia_page": "Hampton Pirates men's basketball",
         "barttorvik": "Hampton",
-        "kenpom": "Hampton"
+        "kenpom": "Hampton",
+        "espn_id": "2261"
       }
     },
     "5": {
@@ -3340,7 +3514,8 @@
         "sports_reference": "hofstra",
         "wikipedia_page": "Hofstra Pride men's basketball",
         "barttorvik": "Hofstra",
-        "kenpom": "Hofstra"
+        "kenpom": "Hofstra",
+        "espn_id": "2275"
       }
     },
     "203": {
@@ -3358,7 +3533,8 @@
         "sports_reference": "monmouth",
         "wikipedia_page": "Monmouth Hawks men's basketball",
         "barttorvik": "Monmouth",
-        "kenpom": "Monmouth"
+        "kenpom": "Monmouth",
+        "espn_id": "2405"
       }
     },
     "179": {
@@ -3380,7 +3556,8 @@
         "sports_reference": "north-carolina-at",
         "wikipedia_page": "North Carolina A&T Aggies men's basketball",
         "barttorvik": "North Carolina A&T",
-        "kenpom": "North Carolina A&T"
+        "kenpom": "North Carolina A&T",
+        "espn_id": "2448"
       }
     },
     "8": {
@@ -3398,7 +3575,8 @@
         "sports_reference": "northeastern",
         "wikipedia_page": "Northeastern Huskies men's basketball",
         "barttorvik": "Northeastern",
-        "kenpom": "Northeastern"
+        "kenpom": "Northeastern",
+        "espn_id": "111"
       }
     },
     "136": {
@@ -3416,7 +3594,8 @@
         "sports_reference": "stony-brook",
         "wikipedia_page": "Stony Brook Seawolves men's basketball",
         "barttorvik": "Stony Brook",
-        "kenpom": "Stony Brook"
+        "kenpom": "Stony Brook",
+        "espn_id": "2619"
       }
     },
     "9": {
@@ -3434,7 +3613,8 @@
         "sports_reference": "towson",
         "wikipedia_page": "Towson Tigers men's basketball",
         "barttorvik": "Towson",
-        "kenpom": "Towson"
+        "kenpom": "Towson",
+        "espn_id": "119"
       }
     },
     "108": {
@@ -3452,7 +3632,8 @@
         "sports_reference": "north-carolina-wilmington",
         "wikipedia_page": "UNC Wilmington Seahawks men's basketball",
         "barttorvik": "UNC Wilmington",
-        "kenpom": "UNC Wilmington"
+        "kenpom": "UNC Wilmington",
+        "espn_id": "350"
       }
     },
     "112": {
@@ -3470,7 +3651,8 @@
         "sports_reference": "william-mary",
         "wikipedia_page": "William & Mary Tribe men's basketball",
         "barttorvik": "William & Mary",
-        "kenpom": "William & Mary"
+        "kenpom": "William & Mary",
+        "espn_id": "2729"
       }
     },
     "126": {
@@ -3492,7 +3674,8 @@
         "sports_reference": "cleveland-state",
         "wikipedia_page": "Cleveland State Vikings men's basketball",
         "barttorvik": "Cleveland State",
-        "kenpom": "Cleveland State"
+        "kenpom": "Cleveland State",
+        "espn_id": "325"
       }
     },
     "127": {
@@ -3510,7 +3693,8 @@
         "sports_reference": "detroit-mercy",
         "wikipedia_page": "Detroit Mercy Titans men's basketball",
         "barttorvik": "Detroit Mercy",
-        "kenpom": "Detroit Mercy"
+        "kenpom": "Detroit Mercy",
+        "espn_id": "2174"
       }
     },
     "130": {
@@ -3528,7 +3712,8 @@
         "sports_reference": "green-bay",
         "wikipedia_page": "Green Bay Phoenix men's basketball",
         "barttorvik": "Green Bay",
-        "kenpom": "Green Bay"
+        "kenpom": "Green Bay",
+        "espn_id": "2739"
       }
     },
     "283": {
@@ -3546,7 +3731,8 @@
         "sports_reference": "iupui",
         "wikipedia_page": "IU Indy Jaguars men's basketball",
         "barttorvik": "IU Indy",
-        "kenpom": "IU Indy"
+        "kenpom": "IU Indy",
+        "espn_id": "85"
       }
     },
     "131": {
@@ -3564,7 +3750,8 @@
         "sports_reference": "milwaukee",
         "wikipedia_page": "Milwaukee Panthers men's basketball",
         "barttorvik": "Milwaukee",
-        "kenpom": "Milwaukee"
+        "kenpom": "Milwaukee",
+        "espn_id": "270"
       }
     },
     "981": {
@@ -3586,7 +3773,8 @@
         "sports_reference": "northern-kentucky",
         "wikipedia_page": "Northern Kentucky Norse men's basketball",
         "barttorvik": "Northern Kentucky",
-        "kenpom": "Northern Kentucky"
+        "kenpom": "Northern Kentucky",
+        "espn_id": "94"
       }
     },
     "285": {
@@ -3604,7 +3792,8 @@
         "sports_reference": "oakland",
         "wikipedia_page": "Oakland Golden Grizzlies men's basketball",
         "barttorvik": "Oakland",
-        "kenpom": "Oakland"
+        "kenpom": "Oakland",
+        "espn_id": "2473"
       }
     },
     "463": {
@@ -3622,7 +3811,8 @@
         "sports_reference": "ipfw",
         "wikipedia_page": "Purdue Fort Wayne Mastodons men's basketball",
         "barttorvik": "Purdue Fort Wayne",
-        "kenpom": "Purdue Fort Wayne"
+        "kenpom": "Purdue Fort Wayne",
+        "espn_id": "2870"
       }
     },
     "206": {
@@ -3640,7 +3830,8 @@
         "sports_reference": "robert-morris",
         "wikipedia_page": "Robert Morris Colonials men's basketball",
         "barttorvik": "Robert Morris",
-        "kenpom": "Robert Morris"
+        "kenpom": "Robert Morris",
+        "espn_id": "2523"
       }
     },
     "132": {
@@ -3662,7 +3853,8 @@
         "sports_reference": "wright-state",
         "wikipedia_page": "Wright State Raiders men's basketball",
         "barttorvik": "Wright State",
-        "kenpom": "Wright State"
+        "kenpom": "Wright State",
+        "espn_id": "2750"
       }
     },
     "290": {
@@ -3684,7 +3876,8 @@
         "sports_reference": "youngstown-state",
         "wikipedia_page": "Youngstown State Penguins men's basketball",
         "barttorvik": "Youngstown State",
-        "kenpom": "Youngstown State"
+        "kenpom": "Youngstown State",
+        "espn_id": "2754"
       }
     },
     "139": {
@@ -3702,7 +3895,8 @@
         "sports_reference": "brown",
         "wikipedia_page": "Brown Bears men's basketball",
         "barttorvik": "Brown",
-        "kenpom": "Brown"
+        "kenpom": "Brown",
+        "espn_id": "225"
       }
     },
     "140": {
@@ -3720,7 +3914,8 @@
         "sports_reference": "columbia",
         "wikipedia_page": "Columbia Lions men's basketball",
         "barttorvik": "Columbia",
-        "kenpom": "Columbia"
+        "kenpom": "Columbia",
+        "espn_id": "171"
       }
     },
     "141": {
@@ -3738,7 +3933,8 @@
         "sports_reference": "cornell",
         "wikipedia_page": "Cornell Big Red men's basketball",
         "barttorvik": "Cornell",
-        "kenpom": "Cornell"
+        "kenpom": "Cornell",
+        "espn_id": "172"
       }
     },
     "142": {
@@ -3756,7 +3952,8 @@
         "sports_reference": "dartmouth",
         "wikipedia_page": "Dartmouth Big Green men's basketball",
         "barttorvik": "Dartmouth",
-        "kenpom": "Dartmouth"
+        "kenpom": "Dartmouth",
+        "espn_id": "159"
       }
     },
     "143": {
@@ -3774,7 +3971,8 @@
         "sports_reference": "harvard",
         "wikipedia_page": "Harvard Crimson men's basketball",
         "barttorvik": "Harvard",
-        "kenpom": "Harvard"
+        "kenpom": "Harvard",
+        "espn_id": "108"
       }
     },
     "144": {
@@ -3792,7 +3990,8 @@
         "sports_reference": "pennsylvania",
         "wikipedia_page": "Penn Quakers men's basketball",
         "barttorvik": "Penn",
-        "kenpom": "Penn"
+        "kenpom": "Penn",
+        "espn_id": "219"
       }
     },
     "145": {
@@ -3810,7 +4009,8 @@
         "sports_reference": "princeton",
         "wikipedia_page": "Princeton Tigers men's basketball",
         "barttorvik": "Princeton",
-        "kenpom": "Princeton"
+        "kenpom": "Princeton",
+        "espn_id": "163"
       }
     },
     "146": {
@@ -3828,7 +4028,8 @@
         "sports_reference": "yale",
         "wikipedia_page": "Yale Bulldogs men's basketball",
         "barttorvik": "Yale",
-        "kenpom": "Yale"
+        "kenpom": "Yale",
+        "espn_id": "43"
       }
     },
     "147": {
@@ -3846,7 +4047,8 @@
         "sports_reference": "canisius",
         "wikipedia_page": "Canisius Golden Griffins men's basketball",
         "barttorvik": "Canisius",
-        "kenpom": "Canisius"
+        "kenpom": "Canisius",
+        "espn_id": "2099"
       }
     },
     "148": {
@@ -3864,7 +4066,8 @@
         "sports_reference": "fairfield",
         "wikipedia_page": "Fairfield Stags men's basketball",
         "barttorvik": "Fairfield",
-        "kenpom": "Fairfield"
+        "kenpom": "Fairfield",
+        "espn_id": "2217"
       }
     },
     "149": {
@@ -3882,7 +4085,8 @@
         "sports_reference": "iona",
         "wikipedia_page": "Iona Gaels men's basketball",
         "barttorvik": "Iona",
-        "kenpom": "Iona"
+        "kenpom": "Iona",
+        "espn_id": "314"
       }
     },
     "151": {
@@ -3902,7 +4106,8 @@
         "sports_reference": "manhattan",
         "wikipedia_page": "Manhattan Jaspers men's basketball",
         "barttorvik": "Manhattan",
-        "kenpom": "Manhattan"
+        "kenpom": "Manhattan",
+        "espn_id": "2363"
       }
     },
     "152": {
@@ -3920,7 +4125,8 @@
         "sports_reference": "marist",
         "wikipedia_page": "Marist Red Foxes men's basketball",
         "barttorvik": "Marist",
-        "kenpom": "Marist"
+        "kenpom": "Marist",
+        "espn_id": "2368"
       }
     },
     "972": {
@@ -3938,7 +4144,8 @@
         "sports_reference": "merrimack",
         "wikipedia_page": "Merrimack Warriors men's basketball",
         "barttorvik": "Merrimack",
-        "kenpom": "Merrimack"
+        "kenpom": "Merrimack",
+        "espn_id": "2771"
       }
     },
     "204": {
@@ -3960,7 +4167,8 @@
         "sports_reference": "mount-st-marys",
         "wikipedia_page": "Mount St. Mary's Mountaineers men's basketball",
         "barttorvik": "Mount St. Mary's",
-        "kenpom": "Mount St. Mary's"
+        "kenpom": "Mount St. Mary's",
+        "espn_id": "116"
       }
     },
     "153": {
@@ -3978,7 +4186,8 @@
         "sports_reference": "niagara",
         "wikipedia_page": "Niagara Purple Eagles men's basketball",
         "barttorvik": "Niagara",
-        "kenpom": "Niagara"
+        "kenpom": "Niagara",
+        "espn_id": "315"
       }
     },
     "205": {
@@ -3996,7 +4205,8 @@
         "sports_reference": "quinnipiac",
         "wikipedia_page": "Quinnipiac Bobcats men's basketball",
         "barttorvik": "Quinnipiac",
-        "kenpom": "Quinnipiac"
+        "kenpom": "Quinnipiac",
+        "espn_id": "2514"
       }
     },
     "154": {
@@ -4014,7 +4224,8 @@
         "sports_reference": "rider",
         "wikipedia_page": "Rider Broncs men's basketball",
         "barttorvik": "Rider",
-        "kenpom": "Rider"
+        "kenpom": "Rider",
+        "espn_id": "2520"
       }
     },
     "207": {
@@ -4032,7 +4243,8 @@
         "sports_reference": "sacred-heart",
         "wikipedia_page": "Sacred Heart Pioneers men's basketball",
         "barttorvik": "Sacred Heart",
-        "kenpom": "Sacred Heart"
+        "kenpom": "Sacred Heart",
+        "espn_id": "2529"
       }
     },
     "156": {
@@ -4050,7 +4262,8 @@
         "sports_reference": "saint-peters",
         "wikipedia_page": "Saint Peter's Peacocks men's basketball",
         "barttorvik": "Saint Peter's",
-        "kenpom": "Saint Peter's"
+        "kenpom": "Saint Peter's",
+        "espn_id": "2612"
       }
     },
     "155": {
@@ -4068,7 +4281,8 @@
         "sports_reference": "siena",
         "wikipedia_page": "Siena Saints men's basketball",
         "barttorvik": "Siena",
-        "kenpom": "Siena"
+        "kenpom": "Siena",
+        "espn_id": "2561"
       }
     },
     "157": {
@@ -4086,7 +4300,8 @@
         "sports_reference": "akron",
         "wikipedia_page": "Akron Zips men's basketball",
         "barttorvik": "Akron",
-        "kenpom": "Akron"
+        "kenpom": "Akron",
+        "espn_id": "2006"
       }
     },
     "164": {
@@ -4108,7 +4323,8 @@
         "sports_reference": "ball-state",
         "wikipedia_page": "Ball State Cardinals men's basketball",
         "barttorvik": "Ball State",
-        "kenpom": "Ball State"
+        "kenpom": "Ball State",
+        "espn_id": "2050"
       }
     },
     "158": {
@@ -4126,7 +4342,8 @@
         "sports_reference": "bowling-green-state",
         "wikipedia_page": "Bowling Green Falcons men's basketball",
         "barttorvik": "Bowling Green",
-        "kenpom": "Bowling Green"
+        "kenpom": "Bowling Green",
+        "espn_id": "189"
       }
     },
     "159": {
@@ -4144,7 +4361,8 @@
         "sports_reference": "buffalo",
         "wikipedia_page": "Buffalo Bulls men's basketball",
         "barttorvik": "Buffalo",
-        "kenpom": "Buffalo"
+        "kenpom": "Buffalo",
+        "espn_id": "2084"
       }
     },
     "165": {
@@ -4166,7 +4384,8 @@
         "sports_reference": "central-michigan",
         "wikipedia_page": "Central Michigan Chippewas men's basketball",
         "barttorvik": "Central Michigan",
-        "kenpom": "Central Michigan"
+        "kenpom": "Central Michigan",
+        "espn_id": "2117"
       }
     },
     "166": {
@@ -4188,7 +4407,8 @@
         "sports_reference": "eastern-michigan",
         "wikipedia_page": "Eastern Michigan Eagles men's basketball",
         "barttorvik": "Eastern Michigan",
-        "kenpom": "Eastern Michigan"
+        "kenpom": "Eastern Michigan",
+        "espn_id": "2199"
       }
     },
     "160": {
@@ -4210,7 +4430,8 @@
         "sports_reference": "kent-state",
         "wikipedia_page": "Kent State Golden Flashes men's basketball",
         "barttorvik": "Kent State",
-        "kenpom": "Kent State"
+        "kenpom": "Kent State",
+        "espn_id": "2309"
       }
     },
     "162": {
@@ -4234,7 +4455,8 @@
         "sports_reference": "miami-oh",
         "wikipedia_page": "Miami RedHawks men's basketball",
         "barttorvik": "Miami(OH)",
-        "kenpom": "Miami(OH)"
+        "kenpom": "Miami(OH)",
+        "espn_id": "2390"
       }
     },
     "167": {
@@ -4256,7 +4478,8 @@
         "sports_reference": "northern-illinois",
         "wikipedia_page": "Northern Illinois Huskies men's basketball",
         "barttorvik": "Northern Illinois",
-        "kenpom": "Northern Illinois"
+        "kenpom": "Northern Illinois",
+        "espn_id": "2459"
       }
     },
     "163": {
@@ -4274,7 +4497,8 @@
         "sports_reference": "ohio",
         "wikipedia_page": "Ohio Bobcats men's basketball",
         "barttorvik": "Ohio",
-        "kenpom": "Ohio"
+        "kenpom": "Ohio",
+        "espn_id": "195"
       }
     },
     "168": {
@@ -4292,7 +4516,8 @@
         "sports_reference": "toledo",
         "wikipedia_page": "Toledo Rockets men's basketball",
         "barttorvik": "Toledo",
-        "kenpom": "Toledo"
+        "kenpom": "Toledo",
+        "espn_id": "2649"
       }
     },
     "15": {
@@ -4310,7 +4535,8 @@
         "sports_reference": "massachusetts",
         "wikipedia_page": "UMass Minutemen basketball",
         "barttorvik": "UMass",
-        "kenpom": "UMass"
+        "kenpom": "UMass",
+        "espn_id": "113"
       }
     },
     "169": {
@@ -4332,7 +4558,8 @@
         "sports_reference": "western-michigan",
         "wikipedia_page": "Western Michigan Broncos men's basketball",
         "barttorvik": "Western Michigan",
-        "kenpom": "Western Michigan"
+        "kenpom": "Western Michigan",
+        "espn_id": "2711"
       }
     },
     "171": {
@@ -4354,7 +4581,8 @@
         "sports_reference": "coppin-state",
         "wikipedia_page": "Coppin State Eagles men's basketball",
         "barttorvik": "Coppin State",
-        "kenpom": "Coppin State"
+        "kenpom": "Coppin State",
+        "espn_id": "2154"
       }
     },
     "172": {
@@ -4376,7 +4604,8 @@
         "sports_reference": "delaware-state",
         "wikipedia_page": "Delaware State Hornets men's basketball",
         "barttorvik": "Delaware State",
-        "kenpom": "Delaware State"
+        "kenpom": "Delaware State",
+        "espn_id": "2169"
       }
     },
     "175": {
@@ -4394,7 +4623,8 @@
         "sports_reference": "howard",
         "wikipedia_page": "Howard Bison men's basketball",
         "barttorvik": "Howard",
-        "kenpom": "Howard"
+        "kenpom": "Howard",
+        "espn_id": "47"
       }
     },
     "176": {
@@ -4412,7 +4642,8 @@
         "sports_reference": "maryland-eastern-shore",
         "wikipedia_page": "Maryland-Eastern Shore Hawks men's basketball",
         "barttorvik": "Maryland-Eastern Shore",
-        "kenpom": "Maryland-Eastern Shore"
+        "kenpom": "Maryland-Eastern Shore",
+        "espn_id": "2379"
       }
     },
     "177": {
@@ -4434,7 +4665,8 @@
         "sports_reference": "morgan-state",
         "wikipedia_page": "Morgan State Bears men's basketball",
         "barttorvik": "Morgan State",
-        "kenpom": "Morgan State"
+        "kenpom": "Morgan State",
+        "espn_id": "2415"
       }
     },
     "178": {
@@ -4456,7 +4688,8 @@
         "sports_reference": "norfolk-state",
         "wikipedia_page": "Norfolk State Spartans men's basketball",
         "barttorvik": "Norfolk State",
-        "kenpom": "Norfolk State"
+        "kenpom": "Norfolk State",
+        "espn_id": "2450"
       }
     },
     "393": {
@@ -4478,7 +4711,8 @@
         "sports_reference": "north-carolina-central",
         "wikipedia_page": "North Carolina Central Eagles men's basketball",
         "barttorvik": "North Carolina Central",
-        "kenpom": "North Carolina Central"
+        "kenpom": "North Carolina Central",
+        "espn_id": "2428"
       }
     },
     "180": {
@@ -4504,7 +4738,8 @@
         "sports_reference": "south-carolina-state",
         "wikipedia_page": "South Carolina State Bulldogs basketball",
         "barttorvik": "South Carolina State",
-        "kenpom": "South Carolina State"
+        "kenpom": "South Carolina State",
+        "espn_id": "2569"
       }
     },
     "134": {
@@ -4522,7 +4757,8 @@
         "sports_reference": "belmont",
         "wikipedia_page": "Belmont Bruins men's basketball",
         "barttorvik": "Belmont",
-        "kenpom": "Belmont"
+        "kenpom": "Belmont",
+        "espn_id": "2057"
       }
     },
     "181": {
@@ -4540,7 +4776,8 @@
         "sports_reference": "bradley",
         "wikipedia_page": "Bradley Braves men's basketball",
         "barttorvik": "Bradley",
-        "kenpom": "Bradley"
+        "kenpom": "Bradley",
+        "espn_id": "71"
       }
     },
     "183": {
@@ -4558,7 +4795,8 @@
         "sports_reference": "drake",
         "wikipedia_page": "Drake Bulldogs men's basketball",
         "barttorvik": "Drake",
-        "kenpom": "Drake"
+        "kenpom": "Drake",
+        "espn_id": "2181"
       }
     },
     "184": {
@@ -4576,7 +4814,8 @@
         "sports_reference": "evansville",
         "wikipedia_page": "Evansville Purple Aces men's basketball",
         "barttorvik": "Evansville",
-        "kenpom": "Evansville"
+        "kenpom": "Evansville",
+        "espn_id": "339"
       }
     },
     "185": {
@@ -4602,7 +4841,8 @@
         "sports_reference": "illinois-state",
         "wikipedia_page": "Illinois State Redbirds men's basketball",
         "barttorvik": "Illinois State",
-        "kenpom": "Illinois State"
+        "kenpom": "Illinois State",
+        "espn_id": "2287"
       }
     },
     "186": {
@@ -4624,7 +4864,8 @@
         "sports_reference": "indiana-state",
         "wikipedia_page": "Indiana State Sycamores men's basketball",
         "barttorvik": "Indiana State",
-        "kenpom": "Indiana State"
+        "kenpom": "Indiana State",
+        "espn_id": "282"
       }
     },
     "215": {
@@ -4646,7 +4887,8 @@
         "sports_reference": "murray-state",
         "wikipedia_page": "Murray State Racers men's basketball",
         "barttorvik": "Murray State",
-        "kenpom": "Murray State"
+        "kenpom": "Murray State",
+        "espn_id": "93"
       }
     },
     "187": {
@@ -4664,7 +4906,8 @@
         "sports_reference": "northern-iowa",
         "wikipedia_page": "Northern Iowa Panthers men's basketball",
         "barttorvik": "Northern Iowa",
-        "kenpom": "Northern Iowa"
+        "kenpom": "Northern Iowa",
+        "espn_id": "2460"
       }
     },
     "188": {
@@ -4686,7 +4929,8 @@
         "sports_reference": "southern-illinois",
         "wikipedia_page": "Southern Illinois Salukis men's basketball",
         "barttorvik": "Southern Illinois",
-        "kenpom": "Southern Illinois"
+        "kenpom": "Southern Illinois",
+        "espn_id": "79"
       }
     },
     "128": {
@@ -4704,7 +4948,8 @@
         "sports_reference": "illinois-chicago",
         "wikipedia_page": "UIC Flames men's basketball",
         "barttorvik": "UIC",
-        "kenpom": "UIC"
+        "kenpom": "UIC",
+        "espn_id": "82"
       }
     },
     "288": {
@@ -4722,7 +4967,8 @@
         "sports_reference": "valparaiso",
         "wikipedia_page": "Valparaiso Beacons men's basketball",
         "barttorvik": "Valparaiso",
-        "kenpom": "Valparaiso"
+        "kenpom": "Valparaiso",
+        "espn_id": "2674"
       }
     },
     "191": {
@@ -4740,7 +4986,8 @@
         "sports_reference": "air-force",
         "wikipedia_page": "Air Force Falcons men's basketball",
         "barttorvik": "Air Force",
-        "kenpom": "Air Force"
+        "kenpom": "Air Force",
+        "espn_id": "2005"
       }
     },
     "95": {
@@ -4764,7 +5011,8 @@
         "sports_reference": "boise-state",
         "wikipedia_page": "Boise State Broncos men's basketball",
         "barttorvik": "Boise State",
-        "kenpom": "Boise State"
+        "kenpom": "Boise State",
+        "espn_id": "68"
       }
     },
     "193": {
@@ -4786,7 +5034,8 @@
         "sports_reference": "colorado-state",
         "wikipedia_page": "Colorado State Rams men's basketball",
         "barttorvik": "Colorado State",
-        "kenpom": "Colorado State"
+        "kenpom": "Colorado State",
+        "espn_id": "36"
       }
     },
     "311": {
@@ -4808,7 +5057,8 @@
         "sports_reference": "fresno-state",
         "wikipedia_page": "Fresno State Bulldogs men's basketball",
         "barttorvik": "Fresno State",
-        "kenpom": "Fresno State"
+        "kenpom": "Fresno State",
+        "espn_id": "278"
       }
     },
     "362": {
@@ -4826,7 +5076,8 @@
         "sports_reference": "grand-canyon",
         "wikipedia_page": "Grand Canyon Antelopes men's basketball",
         "barttorvik": "Grand Canyon",
-        "kenpom": "Grand Canyon"
+        "kenpom": "Grand Canyon",
+        "espn_id": "2253"
       }
     },
     "313": {
@@ -4844,7 +5095,8 @@
         "sports_reference": "nevada",
         "wikipedia_page": "Nevada Wolf Pack men's basketball",
         "barttorvik": "Nevada",
-        "kenpom": "Nevada"
+        "kenpom": "Nevada",
+        "espn_id": "2440"
       }
     },
     "194": {
@@ -4862,7 +5114,8 @@
         "sports_reference": "new-mexico",
         "wikipedia_page": "New Mexico Lobos men's basketball",
         "barttorvik": "New Mexico",
-        "kenpom": "New Mexico"
+        "kenpom": "New Mexico",
+        "espn_id": "167"
       }
     },
     "195": {
@@ -4884,7 +5137,8 @@
         "sports_reference": "san-diego-state",
         "wikipedia_page": "San Diego State Aztecs men's basketball",
         "barttorvik": "San Diego State",
-        "kenpom": "San Diego State"
+        "kenpom": "San Diego State",
+        "espn_id": "21"
       }
     },
     "315": {
@@ -4906,7 +5160,8 @@
         "sports_reference": "san-jose-state",
         "wikipedia_page": "San Jose State Spartans men's basketball",
         "barttorvik": "San Jose State",
-        "kenpom": "San Jose State"
+        "kenpom": "San Jose State",
+        "espn_id": "23"
       }
     },
     "196": {
@@ -4924,7 +5179,8 @@
         "sports_reference": "nevada-las-vegas",
         "wikipedia_page": "UNLV Runnin' Rebels basketball",
         "barttorvik": "UNLV",
-        "kenpom": "UNLV"
+        "kenpom": "UNLV",
+        "espn_id": "2439"
       }
     },
     "103": {
@@ -4946,7 +5202,8 @@
         "sports_reference": "utah-state",
         "wikipedia_page": "Utah State Aggies men's basketball",
         "barttorvik": "Utah State",
-        "kenpom": "Utah State"
+        "kenpom": "Utah State",
+        "espn_id": "328"
       }
     },
     "198": {
@@ -4964,7 +5221,8 @@
         "sports_reference": "wyoming",
         "wikipedia_page": "Wyoming Cowboys basketball",
         "barttorvik": "Wyoming",
-        "kenpom": "Wyoming"
+        "kenpom": "Wyoming",
+        "espn_id": "2704"
       }
     },
     "199": {
@@ -4990,7 +5248,8 @@
         "sports_reference": "central-connecticut-state",
         "wikipedia_page": "Central Connecticut Blue Devils men's basketball",
         "barttorvik": "Central Connecticut State",
-        "kenpom": "Central Connecticut State"
+        "kenpom": "Central Connecticut State",
+        "espn_id": "2115"
       }
     },
     "282": {
@@ -5012,7 +5271,8 @@
         "sports_reference": "chicago-state",
         "wikipedia_page": "Chicago State Cougars men's basketball",
         "barttorvik": "Chicago State",
-        "kenpom": "Chicago State"
+        "kenpom": "Chicago State",
+        "espn_id": "2130"
       }
     },
     "200": {
@@ -5030,7 +5290,8 @@
         "sports_reference": "fairleigh-dickinson",
         "wikipedia_page": "FDU Knights men's basketball",
         "barttorvik": "FDU",
-        "kenpom": "FDU"
+        "kenpom": "FDU",
+        "espn_id": "161"
       }
     },
     "1468": {
@@ -5048,7 +5309,8 @@
         "sports_reference": "long-island-university",
         "wikipedia_page": "LIU Sharks men's basketball",
         "barttorvik": "LIU",
-        "kenpom": "LIU"
+        "kenpom": "LIU",
+        "espn_id": "112358"
       }
     },
     "966": {
@@ -5066,7 +5328,8 @@
         "sports_reference": "le-moyne",
         "wikipedia_page": "Le Moyne Dolphins men's basketball",
         "barttorvik": "Le Moyne",
-        "kenpom": "Le Moyne"
+        "kenpom": "Le Moyne",
+        "espn_id": "2330"
       }
     },
     "459": {
@@ -5084,7 +5347,8 @@
         "sports_reference": "mercyhurst",
         "wikipedia_page": "Mercyhurst Lakers men's basketball",
         "barttorvik": "Mercyhurst",
-        "kenpom": "Mercyhurst"
+        "kenpom": "Mercyhurst",
+        "espn_id": "2385"
       }
     },
     "390": {
@@ -5102,7 +5366,8 @@
         "sports_reference": "new-haven",
         "wikipedia_page": "New Haven Chargers men's basketball",
         "barttorvik": "New Haven",
-        "kenpom": "New Haven"
+        "kenpom": "New Haven",
+        "espn_id": "2441"
       }
     },
     "209": {
@@ -5128,7 +5393,8 @@
         "sports_reference": "saint-francis-pa",
         "wikipedia_page": "Saint Francis Red Flash men's basketball",
         "barttorvik": "St. Francis(PA)",
-        "kenpom": "St. Francis(PA)"
+        "kenpom": "St. Francis(PA)",
+        "espn_id": "2598"
       }
     },
     "904": {
@@ -5146,7 +5412,8 @@
         "sports_reference": "stonehill",
         "wikipedia_page": "Stonehill Skyhawks men's basketball",
         "barttorvik": "Stonehill",
-        "kenpom": "Stonehill"
+        "kenpom": "Stonehill",
+        "espn_id": "284"
       }
     },
     "210": {
@@ -5164,7 +5431,8 @@
         "sports_reference": "wagner",
         "wikipedia_page": "Wagner Seahawks men's basketball",
         "barttorvik": "Wagner",
-        "kenpom": "Wagner"
+        "kenpom": "Wagner",
+        "espn_id": "2681"
       }
     },
     "212": {
@@ -5186,7 +5454,8 @@
         "sports_reference": "eastern-illinois",
         "wikipedia_page": "Eastern Illinois Panthers men's basketball",
         "barttorvik": "Eastern Illinois",
-        "kenpom": "Eastern Illinois"
+        "kenpom": "Eastern Illinois",
+        "espn_id": "2197"
       }
     },
     "1130": {
@@ -5204,7 +5473,8 @@
         "sports_reference": "lindenwood",
         "wikipedia_page": "Lindenwood Lions men's basketball",
         "barttorvik": "Lindenwood",
-        "kenpom": "Lindenwood"
+        "kenpom": "Lindenwood",
+        "espn_id": "2815"
       }
     },
     "292": {
@@ -5222,7 +5492,8 @@
         "sports_reference": "arkansas-little-rock",
         "wikipedia_page": "Little Rock Trojans men's basketball",
         "barttorvik": "Little Rock",
-        "kenpom": "Little Rock"
+        "kenpom": "Little Rock",
+        "espn_id": "2031"
       }
     },
     "214": {
@@ -5244,7 +5515,8 @@
         "sports_reference": "morehead-state",
         "wikipedia_page": "Morehead State Eagles men's basketball",
         "barttorvik": "Morehead State",
-        "kenpom": "Morehead State"
+        "kenpom": "Morehead State",
+        "espn_id": "2413"
       }
     },
     "411": {
@@ -5262,7 +5534,8 @@
         "sports_reference": "southern-illinois-edwardsville",
         "wikipedia_page": "SIU Edwardsville Cougars men's basketball",
         "barttorvik": "SIU Edwardsville",
-        "kenpom": "SIU Edwardsville"
+        "kenpom": "SIU Edwardsville",
+        "espn_id": "2565"
       }
     },
     "216": {
@@ -5284,7 +5557,8 @@
         "sports_reference": "southeast-missouri-state",
         "wikipedia_page": "Southeast Missouri State Redhawks men's basketball",
         "barttorvik": "Southeast Missouri State",
-        "kenpom": "Southeast Missouri State"
+        "kenpom": "Southeast Missouri State",
+        "espn_id": "2546"
       }
     },
     "990": {
@@ -5302,7 +5576,8 @@
         "sports_reference": "southern-indiana",
         "wikipedia_page": "Southern Indiana Screaming Eagles men's basketball",
         "barttorvik": "Southern Indiana",
-        "kenpom": "Southern Indiana"
+        "kenpom": "Southern Indiana",
+        "espn_id": "88"
       }
     },
     "217": {
@@ -5324,7 +5599,8 @@
         "sports_reference": "tennessee-state",
         "wikipedia_page": "Tennessee State Tigers basketball",
         "barttorvik": "Tennessee State",
-        "kenpom": "Tennessee State"
+        "kenpom": "Tennessee State",
+        "espn_id": "2634"
       }
     },
     "218": {
@@ -5342,7 +5618,8 @@
         "sports_reference": "tennessee-tech",
         "wikipedia_page": "Tennessee Tech Golden Eagles men's basketball",
         "barttorvik": "Tennessee Tech",
-        "kenpom": "Tennessee Tech"
+        "kenpom": "Tennessee Tech",
+        "espn_id": "2635"
       }
     },
     "219": {
@@ -5360,7 +5637,8 @@
         "sports_reference": "tennessee-martin",
         "wikipedia_page": "UT Martin Skyhawks men's basketball",
         "barttorvik": "Tennessee-Martin",
-        "kenpom": "Tennessee-Martin"
+        "kenpom": "Tennessee-Martin",
+        "espn_id": "2630"
       }
     },
     "289": {
@@ -5382,7 +5660,8 @@
         "sports_reference": "western-illinois",
         "wikipedia_page": "Western Illinois Leathernecks men's basketball",
         "barttorvik": "Western Illinois",
-        "kenpom": "Western Illinois"
+        "kenpom": "Western Illinois",
+        "espn_id": "2710"
       }
     },
     "104": {
@@ -5400,7 +5679,8 @@
         "sports_reference": "american",
         "wikipedia_page": "American Eagles men's basketball",
         "barttorvik": "American",
-        "kenpom": "American"
+        "kenpom": "American",
+        "espn_id": "44"
       }
     },
     "230": {
@@ -5418,7 +5698,8 @@
         "sports_reference": "army",
         "wikipedia_page": "Army Black Knights men's basketball",
         "barttorvik": "Army",
-        "kenpom": "Army"
+        "kenpom": "Army",
+        "espn_id": "349"
       }
     },
     "1": {
@@ -5442,7 +5723,8 @@
         "sports_reference": "boston-university",
         "wikipedia_page": "Boston University Terriers men's basketball",
         "barttorvik": "Boston University",
-        "kenpom": "Boston University"
+        "kenpom": "Boston University",
+        "espn_id": "104"
       }
     },
     "231": {
@@ -5460,7 +5742,8 @@
         "sports_reference": "bucknell",
         "wikipedia_page": "Bucknell Bison men's basketball",
         "barttorvik": "Bucknell",
-        "kenpom": "Bucknell"
+        "kenpom": "Bucknell",
+        "espn_id": "2083"
       }
     },
     "232": {
@@ -5478,7 +5761,8 @@
         "sports_reference": "colgate",
         "wikipedia_page": "Colgate Raiders men's basketball",
         "barttorvik": "Colgate",
-        "kenpom": "Colgate"
+        "kenpom": "Colgate",
+        "espn_id": "2142"
       }
     },
     "233": {
@@ -5496,7 +5780,8 @@
         "sports_reference": "holy-cross",
         "wikipedia_page": "Holy Cross Crusaders men's basketball",
         "barttorvik": "Holy Cross",
-        "kenpom": "Holy Cross"
+        "kenpom": "Holy Cross",
+        "espn_id": "107"
       }
     },
     "234": {
@@ -5514,7 +5799,8 @@
         "sports_reference": "lafayette",
         "wikipedia_page": "Lafayette Leopards men's basketball",
         "barttorvik": "Lafayette",
-        "kenpom": "Lafayette"
+        "kenpom": "Lafayette",
+        "espn_id": "322"
       }
     },
     "235": {
@@ -5532,7 +5818,8 @@
         "sports_reference": "lehigh",
         "wikipedia_page": "Lehigh Mountain Hawks men's basketball",
         "barttorvik": "Lehigh",
-        "kenpom": "Lehigh"
+        "kenpom": "Lehigh",
+        "espn_id": "2329"
       }
     },
     "150": {
@@ -5550,7 +5837,8 @@
         "sports_reference": "loyola-md",
         "wikipedia_page": "Loyola Greyhounds men's basketball",
         "barttorvik": "Loyola Maryland",
-        "kenpom": "Loyola Maryland"
+        "kenpom": "Loyola Maryland",
+        "espn_id": "2352"
       }
     },
     "236": {
@@ -5568,7 +5856,8 @@
         "sports_reference": "navy",
         "wikipedia_page": "Navy Midshipmen men's basketball",
         "barttorvik": "Navy",
-        "kenpom": "Navy"
+        "kenpom": "Navy",
+        "espn_id": "2426"
       }
     },
     "854": {
@@ -5586,7 +5875,8 @@
         "sports_reference": "texas-am-commerce",
         "wikipedia_page": "East Texas A&M Lions men's basketball",
         "barttorvik": "East Texas A&M",
-        "kenpom": "East Texas A&M"
+        "kenpom": "East Texas A&M",
+        "espn_id": "2837"
       }
     },
     "662": {
@@ -5604,7 +5894,8 @@
         "sports_reference": "houston-baptist",
         "wikipedia_page": "Houston Christian Huskies men's basketball",
         "barttorvik": "Houston Christian",
-        "kenpom": "Houston Christian"
+        "kenpom": "Houston Christian",
+        "espn_id": "2277"
       }
     },
     "962": {
@@ -5622,7 +5913,8 @@
         "sports_reference": "incarnate-word",
         "wikipedia_page": "Incarnate Word Cardinals men's basketball",
         "barttorvik": "Incarnate Word",
-        "kenpom": "Incarnate Word"
+        "kenpom": "Incarnate Word",
+        "espn_id": "2916"
       }
     },
     "261": {
@@ -5640,7 +5932,8 @@
         "sports_reference": "lamar",
         "wikipedia_page": "Lamar Cardinals basketball",
         "barttorvik": "Lamar",
-        "kenpom": "Lamar"
+        "kenpom": "Lamar",
+        "espn_id": "2320"
       }
     },
     "263": {
@@ -5658,7 +5951,8 @@
         "sports_reference": "mcneese-state",
         "wikipedia_page": "McNeese Cowboys basketball",
         "barttorvik": "McNeese",
-        "kenpom": "McNeese"
+        "kenpom": "McNeese",
+        "espn_id": "2377"
       }
     },
     "300": {
@@ -5676,7 +5970,8 @@
         "sports_reference": "new-orleans",
         "wikipedia_page": "New Orleans Privateers men's basketball",
         "barttorvik": "New Orleans",
-        "kenpom": "New Orleans"
+        "kenpom": "New Orleans",
+        "espn_id": "2443"
       }
     },
     "264": {
@@ -5698,7 +5993,8 @@
         "sports_reference": "nicholls-state",
         "wikipedia_page": "Nicholls Colonels men's basketball",
         "barttorvik": "Nicholls State",
-        "kenpom": "Nicholls State"
+        "kenpom": "Nicholls State",
+        "espn_id": "2447"
       }
     },
     "265": {
@@ -5720,7 +6016,8 @@
         "sports_reference": "northwestern-state",
         "wikipedia_page": "Northwestern State Demons basketball",
         "barttorvik": "Northwestern State",
-        "kenpom": "Northwestern State"
+        "kenpom": "Northwestern State",
+        "espn_id": "2466"
       }
     },
     "267": {
@@ -5738,7 +6035,8 @@
         "sports_reference": "southeastern-louisiana",
         "wikipedia_page": "Southeastern Louisiana Lions basketball",
         "barttorvik": "Southeastern Louisiana",
-        "kenpom": "Southeastern Louisiana"
+        "kenpom": "Southeastern Louisiana",
+        "espn_id": "2545"
       }
     },
     "269": {
@@ -5758,7 +6056,8 @@
         "sports_reference": "stephen-f-austin",
         "wikipedia_page": "Stephen F. Austin Lumberjacks basketball",
         "barttorvik": "Stephen F. Austin",
-        "kenpom": "Stephen F. Austin"
+        "kenpom": "Stephen F. Austin",
+        "espn_id": "2617"
       }
     },
     "137": {
@@ -5776,7 +6075,8 @@
         "sports_reference": "texas-am-corpus-christi",
         "wikipedia_page": "Texas A&M\u2013Corpus Christi Islanders basketball",
         "barttorvik": "Texas A&M-Corpus Christi",
-        "kenpom": "Texas A&M-Corpus Christi"
+        "kenpom": "Texas A&M-Corpus Christi",
+        "espn_id": "357"
       }
     },
     "138": {
@@ -5794,7 +6094,8 @@
         "sports_reference": "texas-pan-american",
         "wikipedia_page": "UT Rio Grande Valley Vaqueros men's basketball",
         "barttorvik": "UT Rio Grande Valley",
-        "kenpom": "UT Rio Grande Valley"
+        "kenpom": "UT Rio Grande Valley",
+        "espn_id": "292"
       }
     },
     "272": {
@@ -5812,7 +6113,8 @@
         "sports_reference": "alabama-am",
         "wikipedia_page": "Alabama A&M Bulldogs basketball",
         "barttorvik": "Alabama A&M",
-        "kenpom": "Alabama A&M"
+        "kenpom": "Alabama A&M",
+        "espn_id": "2010"
       }
     },
     "323": {
@@ -5834,7 +6136,8 @@
         "sports_reference": "alabama-state",
         "wikipedia_page": "Alabama State Hornets basketball",
         "barttorvik": "Alabama State",
-        "kenpom": "Alabama State"
+        "kenpom": "Alabama State",
+        "espn_id": "2011"
       }
     },
     "274": {
@@ -5856,7 +6159,8 @@
         "sports_reference": "alcorn-state",
         "wikipedia_page": "Alcorn State Braves basketball",
         "barttorvik": "Alcorn State",
-        "kenpom": "Alcorn State"
+        "kenpom": "Alcorn State",
+        "espn_id": "2016"
       }
     },
     "275": {
@@ -5878,7 +6182,8 @@
         "sports_reference": "arkansas-pine-bluff",
         "wikipedia_page": "Arkansas\u2013Pine Bluff Golden Lions men's basketball",
         "barttorvik": "Arkansas-Pine Bluff",
-        "kenpom": "Arkansas-Pine Bluff"
+        "kenpom": "Arkansas-Pine Bluff",
+        "espn_id": "2029"
       }
     },
     "170": {
@@ -5896,7 +6201,8 @@
         "sports_reference": "bethune-cookman",
         "wikipedia_page": "Bethune\u2013Cookman Wildcats men's basketball",
         "barttorvik": "Bethune-Cookman",
-        "kenpom": "Bethune-Cookman"
+        "kenpom": "Bethune-Cookman",
+        "espn_id": "2065"
       }
     },
     "173": {
@@ -5914,7 +6220,8 @@
         "sports_reference": "florida-am",
         "wikipedia_page": "Florida A&M Rattlers basketball",
         "barttorvik": "Florida A&M",
-        "kenpom": "Florida A&M"
+        "kenpom": "Florida A&M",
+        "espn_id": "50"
       }
     },
     "276": {
@@ -5936,7 +6243,8 @@
         "sports_reference": "grambling",
         "wikipedia_page": "Grambling State Tigers men's basketball",
         "barttorvik": "Grambling State",
-        "kenpom": "Grambling State"
+        "kenpom": "Grambling State",
+        "espn_id": "2755"
       }
     },
     "277": {
@@ -5961,7 +6269,8 @@
         "sports_reference": "jackson-state",
         "wikipedia_page": "Jackson State Tigers basketball",
         "barttorvik": "Jackson State",
-        "kenpom": "Jackson State"
+        "kenpom": "Jackson State",
+        "espn_id": "2296"
       }
     },
     "278": {
@@ -5983,7 +6292,8 @@
         "sports_reference": "mississippi-valley-state",
         "wikipedia_page": "Mississippi Valley State Delta Devils basketball",
         "barttorvik": "Mississippi Valley State",
-        "kenpom": "Mississippi Valley State"
+        "kenpom": "Mississippi Valley State",
+        "espn_id": "2400"
       }
     },
     "279": {
@@ -6001,7 +6311,8 @@
         "sports_reference": "prairie-view",
         "wikipedia_page": "Prairie View A&M Panthers basketball",
         "barttorvik": "Prairie View A&M",
-        "kenpom": "Prairie View A&M"
+        "kenpom": "Prairie View A&M",
+        "espn_id": "2504"
       }
     },
     "280": {
@@ -6025,7 +6336,8 @@
         "sports_reference": "southern",
         "wikipedia_page": "Southern Jaguars basketball",
         "barttorvik": "Southern University",
-        "kenpom": "Southern University"
+        "kenpom": "Southern University",
+        "espn_id": "2582"
       }
     },
     "281": {
@@ -6043,7 +6355,8 @@
         "sports_reference": "texas-southern",
         "wikipedia_page": "Texas Southern Tigers basketball",
         "barttorvik": "Texas Southern",
-        "kenpom": "Texas Southern"
+        "kenpom": "Texas Southern",
+        "espn_id": "2640"
       }
     },
     "250": {
@@ -6061,7 +6374,8 @@
         "sports_reference": "chattanooga",
         "wikipedia_page": "Chattanooga Mocs men's basketball",
         "barttorvik": "Chattanooga",
-        "kenpom": "Chattanooga"
+        "kenpom": "Chattanooga",
+        "espn_id": "236"
       }
     },
     "257": {
@@ -6083,7 +6397,8 @@
         "sports_reference": "east-tennessee-state",
         "wikipedia_page": "East Tennessee State Buccaneers men's basketball",
         "barttorvik": "East Tennessee State",
-        "kenpom": "East Tennessee State"
+        "kenpom": "East Tennessee State",
+        "espn_id": "2193"
       }
     },
     "252": {
@@ -6103,7 +6418,8 @@
         "sports_reference": "furman",
         "wikipedia_page": "Furman Paladins men's basketball",
         "barttorvik": "Furman",
-        "kenpom": "Furman"
+        "kenpom": "Furman",
+        "espn_id": "231"
       }
     },
     "37": {
@@ -6121,7 +6437,8 @@
         "sports_reference": "mercer",
         "wikipedia_page": "Mercer Bears men's basketball",
         "barttorvik": "Mercer",
-        "kenpom": "Mercer"
+        "kenpom": "Mercer",
+        "espn_id": "2382"
       }
     },
     "38": {
@@ -6139,7 +6456,8 @@
         "sports_reference": "samford",
         "wikipedia_page": "Samford Bulldogs men's basketball",
         "barttorvik": "Samford",
-        "kenpom": "Samford"
+        "kenpom": "Samford",
+        "espn_id": "2535"
       }
     },
     "251": {
@@ -6159,7 +6477,8 @@
         "sports_reference": "citadel",
         "wikipedia_page": "The Citadel Bulldogs basketball",
         "barttorvik": "The Citadel",
-        "kenpom": "The Citadel"
+        "kenpom": "The Citadel",
+        "espn_id": "2643"
       }
     },
     "258": {
@@ -6177,7 +6496,8 @@
         "sports_reference": "north-carolina-greensboro",
         "wikipedia_page": "UNC Greensboro Spartans men's basketball",
         "barttorvik": "UNC Greensboro",
-        "kenpom": "UNC Greensboro"
+        "kenpom": "UNC Greensboro",
+        "espn_id": "2430"
       }
     },
     "259": {
@@ -6195,7 +6515,8 @@
         "sports_reference": "virginia-military-institute",
         "wikipedia_page": "VMI Keydets basketball",
         "barttorvik": "VMI",
-        "kenpom": "VMI"
+        "kenpom": "VMI",
+        "espn_id": "2678"
       }
     },
     "260": {
@@ -6217,7 +6538,8 @@
         "sports_reference": "western-carolina",
         "wikipedia_page": "Western Carolina Catamounts men's basketball",
         "barttorvik": "Western Carolina",
-        "kenpom": "Western Carolina"
+        "kenpom": "Western Carolina",
+        "espn_id": "2717"
       }
     },
     "254": {
@@ -6235,7 +6557,8 @@
         "sports_reference": "wofford",
         "wikipedia_page": "Wofford Terriers men's basketball",
         "barttorvik": "Wofford",
-        "kenpom": "Wofford"
+        "kenpom": "Wofford",
+        "espn_id": "2747"
       }
     },
     "297": {
@@ -6253,7 +6576,8 @@
         "sports_reference": "denver",
         "wikipedia_page": "Denver Pioneers men's basketball",
         "barttorvik": "Denver",
-        "kenpom": "Denver"
+        "kenpom": "Denver",
+        "espn_id": "2172"
       }
     },
     "284": {
@@ -6271,7 +6595,8 @@
         "sports_reference": "missouri-kansas-city",
         "wikipedia_page": "Kansas City Roos men's basketball",
         "barttorvik": "Kansas City",
-        "kenpom": "Kansas City"
+        "kenpom": "Kansas City",
+        "espn_id": "140"
       }
     },
     "489": {
@@ -6289,7 +6614,8 @@
         "sports_reference": "north-dakota",
         "wikipedia_page": "North Dakota Fighting Hawks men's basketball",
         "barttorvik": "North Dakota",
-        "kenpom": "North Dakota"
+        "kenpom": "North Dakota",
+        "espn_id": "155"
       }
     },
     "490": {
@@ -6311,7 +6637,8 @@
         "sports_reference": "north-dakota-state",
         "wikipedia_page": "North Dakota State Bison men's basketball",
         "barttorvik": "North Dakota State",
-        "kenpom": "North Dakota State"
+        "kenpom": "North Dakota State",
+        "espn_id": "2449"
       }
     },
     "826": {
@@ -6329,7 +6656,8 @@
         "sports_reference": "nebraska-omaha",
         "wikipedia_page": "Omaha Mavericks men's basketball",
         "barttorvik": "Omaha",
-        "kenpom": "Omaha"
+        "kenpom": "Omaha",
+        "espn_id": "2437"
       }
     },
     "286": {
@@ -6347,7 +6675,8 @@
         "sports_reference": "oral-roberts",
         "wikipedia_page": "Oral Roberts Golden Eagles men's basketball",
         "barttorvik": "Oral Roberts",
-        "kenpom": "Oral Roberts"
+        "kenpom": "Oral Roberts",
+        "espn_id": "198"
       }
     },
     "416": {
@@ -6365,7 +6694,8 @@
         "sports_reference": "south-dakota",
         "wikipedia_page": "South Dakota Coyotes men's basketball",
         "barttorvik": "South Dakota",
-        "kenpom": "South Dakota"
+        "kenpom": "South Dakota",
+        "espn_id": "233"
       }
     },
     "417": {
@@ -6387,7 +6717,8 @@
         "sports_reference": "south-dakota-state",
         "wikipedia_page": "South Dakota State Jackrabbits men's basketball",
         "barttorvik": "South Dakota State",
-        "kenpom": "South Dakota State"
+        "kenpom": "South Dakota State",
+        "espn_id": "2571"
       }
     },
     "573": {
@@ -6407,7 +6738,8 @@
         "sports_reference": "st-thomas-mn",
         "wikipedia_page": "St. Thomas (Minnesota) Tommies men's basketball",
         "barttorvik": "St. Thomas",
-        "kenpom": "St. Thomas"
+        "kenpom": "St. Thomas",
+        "espn_id": "2900"
       }
     },
     "255": {
@@ -6429,7 +6761,8 @@
         "sports_reference": "appalachian-state",
         "wikipedia_page": "Appalachian State Mountaineers men's basketball",
         "barttorvik": "Appalachian State",
-        "kenpom": "Appalachian State"
+        "kenpom": "Appalachian State",
+        "espn_id": "2026"
       }
     },
     "291": {
@@ -6455,7 +6788,8 @@
         "sports_reference": "arkansas-state",
         "wikipedia_page": "Arkansas State Red Wolves men's basketball",
         "barttorvik": "Arkansas State",
-        "kenpom": "Arkansas State"
+        "kenpom": "Arkansas State",
+        "espn_id": "2032"
       }
     },
     "77": {
@@ -6477,7 +6811,8 @@
         "sports_reference": "coastal-carolina",
         "wikipedia_page": "Coastal Carolina Chanticleers men's basketball",
         "barttorvik": "Coastal Carolina",
-        "kenpom": "Coastal Carolina"
+        "kenpom": "Coastal Carolina",
+        "espn_id": "324"
       }
     },
     "253": {
@@ -6495,7 +6830,8 @@
         "sports_reference": "georgia-southern",
         "wikipedia_page": "Georgia Southern Eagles men's basketball",
         "barttorvik": "Georgia Southern",
-        "kenpom": "Georgia Southern"
+        "kenpom": "Georgia Southern",
+        "espn_id": "290"
       }
     },
     "34": {
@@ -6517,7 +6853,8 @@
         "sports_reference": "georgia-state",
         "wikipedia_page": "Georgia State Panthers men's basketball",
         "barttorvik": "Georgia State",
-        "kenpom": "Georgia State"
+        "kenpom": "Georgia State",
+        "espn_id": "2247"
       }
     },
     "107": {
@@ -6535,7 +6872,8 @@
         "sports_reference": "james-madison",
         "wikipedia_page": "James Madison Dukes men's basketball",
         "barttorvik": "James Madison",
-        "kenpom": "James Madison"
+        "kenpom": "James Madison",
+        "espn_id": "256"
       }
     },
     "298": {
@@ -6553,7 +6891,8 @@
         "sports_reference": "louisiana-lafayette",
         "wikipedia_page": "Louisiana Ragin' Cajuns men's basketball",
         "barttorvik": "Louisiana",
-        "kenpom": "Louisiana"
+        "kenpom": "Louisiana",
+        "espn_id": "309"
       }
     },
     "262": {
@@ -6571,7 +6910,8 @@
         "sports_reference": "louisiana-monroe",
         "wikipedia_page": "Louisiana\u2013Monroe Warhawks basketball",
         "barttorvik": "Louisiana-Monroe",
-        "kenpom": "Louisiana-Monroe"
+        "kenpom": "Louisiana-Monroe",
+        "espn_id": "2433"
       }
     },
     "161": {
@@ -6589,7 +6929,8 @@
         "sports_reference": "marshall",
         "wikipedia_page": "Marshall Thundering Herd men's basketball",
         "barttorvik": "Marshall",
-        "kenpom": "Marshall"
+        "kenpom": "Marshall",
+        "espn_id": "276"
       }
     },
     "109": {
@@ -6607,7 +6948,8 @@
         "sports_reference": "old-dominion",
         "wikipedia_page": "Old Dominion Monarchs men's basketball",
         "barttorvik": "Old Dominion",
-        "kenpom": "Old Dominion"
+        "kenpom": "Old Dominion",
+        "espn_id": "295"
       }
     },
     "302": {
@@ -6625,7 +6967,8 @@
         "sports_reference": "south-alabama",
         "wikipedia_page": "South Alabama Jaguars men's basketball",
         "barttorvik": "South Alabama",
-        "kenpom": "South Alabama"
+        "kenpom": "South Alabama",
+        "espn_id": "6"
       }
     },
     "116": {
@@ -6643,7 +6986,8 @@
         "sports_reference": "southern-mississippi",
         "wikipedia_page": "Southern Miss Golden Eagles men's basketball",
         "barttorvik": "Southern Miss",
-        "kenpom": "Southern Miss"
+        "kenpom": "Southern Miss",
+        "espn_id": "2572"
       }
     },
     "268": {
@@ -6665,7 +7009,8 @@
         "sports_reference": "texas-state",
         "wikipedia_page": "Texas State Bobcats men's basketball",
         "barttorvik": "Texas State",
-        "kenpom": "Texas State"
+        "kenpom": "Texas State",
+        "espn_id": "326"
       }
     },
     "40": {
@@ -6683,7 +7028,8 @@
         "sports_reference": "troy",
         "wikipedia_page": "Troy Trojans men's basketball",
         "barttorvik": "Troy",
-        "kenpom": "Troy"
+        "kenpom": "Troy",
+        "espn_id": "2653"
       }
     },
     "320": {
@@ -6701,7 +7047,8 @@
         "sports_reference": "abilene-christian",
         "wikipedia_page": "Abilene Christian Wildcats men's basketball",
         "barttorvik": "Abilene Christian",
-        "kenpom": "Abilene Christian"
+        "kenpom": "Abilene Christian",
+        "espn_id": "2000"
       }
     },
     "648": {
@@ -6719,7 +7066,8 @@
         "sports_reference": "california-baptist",
         "wikipedia_page": "California Baptist Lancers men's basketball",
         "barttorvik": "California Baptist",
-        "kenpom": "California Baptist"
+        "kenpom": "California Baptist",
+        "espn_id": "2856"
       }
     },
     "287": {
@@ -6737,7 +7085,8 @@
         "sports_reference": "southern-utah",
         "wikipedia_page": "Southern Utah Thunderbirds men's basketball",
         "barttorvik": "Southern Utah",
-        "kenpom": "Southern Utah"
+        "kenpom": "Southern Utah",
+        "espn_id": "253"
       }
     },
     "432": {
@@ -6759,7 +7108,8 @@
         "sports_reference": "tarleton-state",
         "wikipedia_page": "Tarleton State Texans men's basketball",
         "barttorvik": "Tarleton State",
-        "kenpom": "Tarleton State"
+        "kenpom": "Tarleton State",
+        "espn_id": "2627"
       }
     },
     "270": {
@@ -6777,7 +7127,8 @@
         "sports_reference": "texas-arlington",
         "wikipedia_page": "UT Arlington Mavericks men's basketball",
         "barttorvik": "UT Arlington",
-        "kenpom": "UT Arlington"
+        "kenpom": "UT Arlington",
+        "espn_id": "250"
       }
     },
     "1181": {
@@ -6795,7 +7146,8 @@
         "sports_reference": "dixie-state",
         "wikipedia_page": "Utah Tech Trailblazers men's basketball",
         "barttorvik": "Utah Tech",
-        "kenpom": "Utah Tech"
+        "kenpom": "Utah Tech",
+        "espn_id": "3101"
       }
     },
     "437": {
@@ -6813,7 +7165,8 @@
         "sports_reference": "utah-valley",
         "wikipedia_page": "Utah Valley Wolverines men's basketball",
         "barttorvik": "Utah Valley",
-        "kenpom": "Utah Valley"
+        "kenpom": "Utah Valley",
+        "espn_id": "3084"
       }
     },
     "303": {
@@ -6831,7 +7184,8 @@
         "sports_reference": "gonzaga",
         "wikipedia_page": "Gonzaga Bulldogs men's basketball",
         "barttorvik": "Gonzaga",
-        "kenpom": "Gonzaga"
+        "kenpom": "Gonzaga",
+        "espn_id": "2250"
       }
     },
     "304": {
@@ -6849,7 +7203,8 @@
         "sports_reference": "loyola-marymount",
         "wikipedia_page": "Loyola Marymount Lions men's basketball",
         "barttorvik": "Loyola Marymount",
-        "kenpom": "Loyola Marymount"
+        "kenpom": "Loyola Marymount",
+        "espn_id": "2351"
       }
     },
     "224": {
@@ -6871,7 +7226,8 @@
         "sports_reference": "oregon-state",
         "wikipedia_page": "Oregon State Beavers men's basketball",
         "barttorvik": "Oregon State",
-        "kenpom": "Oregon State"
+        "kenpom": "Oregon State",
+        "espn_id": "204"
       }
     },
     "100": {
@@ -6889,7 +7245,8 @@
         "sports_reference": "pacific",
         "wikipedia_page": "Pacific Tigers men's basketball",
         "barttorvik": "Pacific",
-        "kenpom": "Pacific"
+        "kenpom": "Pacific",
+        "espn_id": "279"
       }
     },
     "305": {
@@ -6907,7 +7264,8 @@
         "sports_reference": "pepperdine",
         "wikipedia_page": "Pepperdine Waves men's basketball",
         "barttorvik": "Pepperdine",
-        "kenpom": "Pepperdine"
+        "kenpom": "Pepperdine",
+        "espn_id": "2492"
       }
     },
     "306": {
@@ -6925,7 +7283,8 @@
         "sports_reference": "portland",
         "wikipedia_page": "Portland Pilots men's basketball",
         "barttorvik": "Portland",
-        "kenpom": "Portland"
+        "kenpom": "Portland",
+        "espn_id": "2501"
       }
     },
     "307": {
@@ -6943,7 +7302,8 @@
         "sports_reference": "saint-marys-ca",
         "wikipedia_page": "Saint Mary's Gaels men's basketball",
         "barttorvik": "Saint Mary's",
-        "kenpom": "Saint Mary's"
+        "kenpom": "Saint Mary's",
+        "espn_id": "2608"
       }
     },
     "308": {
@@ -6961,7 +7321,8 @@
         "sports_reference": "san-diego",
         "wikipedia_page": "San Diego Toreros men's basketball",
         "barttorvik": "San Diego",
-        "kenpom": "San Diego"
+        "kenpom": "San Diego",
+        "espn_id": "301"
       }
     },
     "309": {
@@ -6979,7 +7340,8 @@
         "sports_reference": "san-francisco",
         "wikipedia_page": "San Francisco Dons men's basketball",
         "barttorvik": "San Francisco",
-        "kenpom": "San Francisco"
+        "kenpom": "San Francisco",
+        "espn_id": "2539"
       }
     },
     "310": {
@@ -6997,7 +7359,8 @@
         "sports_reference": "santa-clara",
         "wikipedia_page": "Santa Clara Broncos men's basketball",
         "barttorvik": "Santa Clara",
-        "kenpom": "Santa Clara"
+        "kenpom": "Santa Clara",
+        "espn_id": "2541"
       }
     },
     "693": {
@@ -7015,7 +7378,8 @@
         "sports_reference": "seattle",
         "wikipedia_page": "Seattle Redhawks men's basketball",
         "barttorvik": "Seattle",
-        "kenpom": "Seattle"
+        "kenpom": "Seattle",
+        "espn_id": "2547"
       }
     },
     "229": {
@@ -7037,352 +7401,353 @@
         "sports_reference": "washington-state",
         "wikipedia_page": "Washington State Cougars men's basketball",
         "barttorvik": "Washington State",
-        "kenpom": "Washington State"
+        "kenpom": "Washington State",
+        "espn_id": "265"
       }
     }
   },
   "alias_index": {
-    "boston college": 53,
     "boston college eagles": 53,
+    "boston college": 53,
     "california": 222,
     "california golden bears": 222,
     "clemson tigers": 22,
     "clemson": 22,
     "duke blue devils": 23,
     "duke": 23,
-    "florida st. seminoles": 24,
-    "florida st.": 24,
-    "florida st seminoles": 24,
-    "florida state seminoles": 24,
     "florida st": 24,
-    "fsu seminoles": 24,
     "florida state": 24,
+    "florida state seminoles": 24,
+    "fsu seminoles": 24,
+    "florida st. seminoles": 24,
+    "florida st seminoles": 24,
+    "florida st.": 24,
     "fsu": 24,
     "georgia tech": 25,
     "georgia tech yellow jackets": 25,
     "louisville": 121,
     "louisville cardinals": 121,
     "miami florida": 55,
-    "miami(fl) hurricanes": 55,
-    "miami(fl)": 55,
-    "miami (fl) hurricanes": 55,
     "miami fl": 55,
-    "miami": 55,
     "miami (fl)": 55,
+    "miami(fl)": 55,
+    "miami": 55,
+    "miami (fl) hurricanes": 55,
+    "miami(fl) hurricanes": 55,
+    "north caro state wolfpack": 28,
+    "north caro. state wolfpack": 28,
+    "north carolina st. wolfpack": 28,
+    "north carolina st wolfpack": 28,
+    "nc state": 28,
+    "north caro state": 28,
+    "north carolina st.": 28,
+    "north caro. state": 28,
+    "north carolina state wolfpack": 28,
+    "north carolina state": 28,
     "nc state wolfpack": 28,
     "north carolina st": 28,
-    "north carolina st. wolfpack": 28,
-    "north caro state wolfpack": 28,
-    "north carolina state wolfpack": 28,
-    "north carolina st.": 28,
-    "north carolina st wolfpack": 28,
-    "north caro. state wolfpack": 28,
-    "north caro. state": 28,
-    "nc state": 28,
-    "north carolina state": 28,
-    "north caro state": 28,
     "north carolina tar heels": 27,
-    "north caro. tar heels": 27,
     "north caro": 27,
+    "north caro. tar heels": 27,
+    "north caro.": 27,
     "north caro tar heels": 27,
     "north carolina": 27,
-    "north caro.": 27,
     "notre dame": 61,
     "notre dame fighting irish": 61,
-    "pittsburgh panthers": 62,
     "pittsburgh": 62,
+    "pittsburgh panthers": 62,
     "smu": 316,
     "smu mustangs": 316,
     "stanford cardinal": 226,
     "stanford": 226,
-    "syracuse orange": 65,
     "syracuse": 65,
-    "virginia": 29,
+    "syracuse orange": 65,
     "virginia cavaliers": 29,
+    "virginia": 29,
     "virginia tech": 59,
     "virginia tech hokies": 59,
     "wake forest": 30,
     "wake forest demon deacons": 30,
+    "arizona st.": 221,
+    "arizona st sun devils": 221,
+    "asu": 221,
     "asu sun devils": 221,
     "arizona state": 221,
     "arizona st. sun devils": 221,
-    "arizona st sun devils": 221,
     "arizona state sun devils": 221,
-    "arizona st.": 221,
     "arizona st": 221,
-    "asu": 221,
     "arizona": 220,
     "arizona wildcats": 220,
-    "byu cougars": 192,
     "byu": 192,
-    "baylor": 41,
+    "byu cougars": 192,
     "baylor bears": 41,
-    "cincinnati bearcats": 119,
+    "baylor": 41,
     "cincinnati": 119,
+    "cincinnati bearcats": 119,
     "colorado buffaloes": 42,
     "colorado": 42,
     "houston cougars": 113,
     "houston": 113,
     "iowa st.": 43,
-    "iowa st": 43,
-    "iowa state": 43,
-    "iowa st. cyclones": 43,
     "iowa state cyclones": 43,
+    "iowa st. cyclones": 43,
+    "iowa state": 43,
+    "iowa st": 43,
     "iowa st cyclones": 43,
     "kansas jayhawks": 44,
     "kansas": 44,
+    "ksu": 45,
+    "kansas state": 45,
+    "kansas st": 45,
     "kansas state wildcats": 45,
     "kansas st.": 45,
-    "kansas state": 45,
     "kansas st. wildcats": 45,
-    "kansas st": 45,
-    "kansas st wildcats": 45,
     "k state": 45,
-    "ksu": 45,
     "k-state": 45,
+    "kansas st wildcats": 45,
     "oklahoma st": 49,
-    "oklahoma st. cowboys": 49,
-    "oklahoma st cowboys": 49,
     "oklahoma state cowboys": 49,
+    "oklahoma st. cowboys": 49,
     "oklahoma state": 49,
     "oklahoma st.": 49,
-    "tcu": 317,
+    "oklahoma st cowboys": 49,
     "tcu horned frogs": 317,
+    "tcu": 317,
     "texas tech red raiders": 52,
     "texas tech": 52,
     "ucf knights": 32,
     "ucf": 32,
-    "utah runnin' utes": 197,
     "utah": 197,
-    "west virginia mountaineers": 66,
+    "utah runnin' utes": 197,
     "west virginia": 66,
-    "butler bulldogs": 125,
+    "west virginia mountaineers": 66,
     "butler": 125,
+    "butler bulldogs": 125,
     "creighton": 182,
     "creighton bluejays": 182,
-    "depaul": 120,
     "depaul blue demons": 120,
-    "georgetown": 60,
+    "depaul": 120,
     "georgetown hoyas": 60,
-    "marquette": 122,
+    "georgetown": 60,
     "marquette golden eagles": 122,
+    "marquette": 122,
     "providence friars": 56,
     "providence": 56,
     "seton hall pirates": 64,
     "seton hall": 64,
-    "st john's": 57,
     "st. john's": 57,
     "st. john's red storm": 57,
     "st john's red storm": 57,
+    "st john's": 57,
     "uconn": 54,
     "uconn huskies": 54,
-    "villanova": 58,
     "villanova wildcats": 58,
+    "villanova": 58,
     "xavier musketeers": 20,
     "xavier": 20,
-    "ill. fighting illini": 84,
+    "ill.": 84,
     "ill": 84,
     "illinois": 84,
-    "ill.": 84,
+    "ill. fighting illini": 84,
     "ill fighting illini": 84,
     "illinois fighting illini": 84,
     "indiana": 85,
     "indiana hoosiers": 85,
-    "iowa hawkeyes": 86,
     "iowa": 86,
-    "maryland": 26,
+    "iowa hawkeyes": 86,
     "maryland terrapins": 26,
-    "michigan state": 88,
-    "michigan st": 88,
-    "michigan st spartans": 88,
-    "mich. state spartans": 88,
+    "maryland": 26,
     "michigan st.": 88,
     "mich state spartans": 88,
     "mich. state": 88,
-    "michigan st. spartans": 88,
     "mich state": 88,
     "msu spartans": 88,
+    "michigan st. spartans": 88,
+    "michigan st": 88,
     "msu": 88,
+    "michigan st spartans": 88,
     "michigan state spartans": 88,
-    "utep miners": 87,
-    "mich.": 87,
+    "mich. state spartans": 88,
+    "michigan state": 88,
     "utep": 87,
-    "michigan": 87,
-    "mich": 87,
-    "mich. wolverines": 87,
-    "mich wolverines": 87,
     "michigan wolverines": 87,
-    "minnesota golden gophers": 89,
+    "utep miners": 87,
+    "mich": 87,
+    "mich wolverines": 87,
+    "michigan": 87,
+    "mich.": 87,
+    "mich. wolverines": 87,
     "minnesota": 89,
+    "minnesota golden gophers": 89,
     "nebraska": 47,
     "nebraska cornhuskers": 47,
-    "northwestern wildcats": 90,
     "northwestern": 90,
+    "northwestern wildcats": 90,
+    "ohio st.": 91,
+    "osu": 91,
+    "ohio state": 91,
     "ohio st": 91,
     "osu buckeyes": 91,
-    "ohio st.": 91,
-    "ohio state": 91,
-    "ohio state buckeyes": 91,
-    "osu": 91,
     "ohio st. buckeyes": 91,
     "ohio st buckeyes": 91,
-    "oregon ducks": 223,
-    "cal": 223,
+    "ohio state buckeyes": 91,
     "cal bears": 223,
+    "oregon ducks": 223,
     "oregon": 223,
     "california bears": 223,
-    "penn st nittany lions": 92,
-    "penn state": 92,
+    "cal": 223,
     "penn state nittany lions": 92,
-    "psu nittany lions": 92,
-    "psu": 92,
-    "penn st": 92,
-    "penn st. nittany lions": 92,
+    "penn state": 92,
     "penn st.": 92,
-    "purdue boilermakers": 93,
+    "penn st. nittany lions": 92,
+    "penn st": 92,
+    "penn st nittany lions": 92,
+    "psu": 92,
+    "psu nittany lions": 92,
     "purdue": 93,
+    "purdue boilermakers": 93,
     "rutgers": 63,
     "rutgers scarlet knights": 63,
     "ucla": 227,
     "ucla bruins": 227,
-    "usc": 225,
     "usc trojans": 225,
+    "usc": 225,
     "washington": 228,
     "washington huskies": 228,
-    "wisconsin badgers": 94,
     "wisconsin": 94,
-    "alabama": 243,
+    "wisconsin badgers": 94,
     "alabama crimson tide": 243,
-    "arkansas razorbacks": 244,
-    "ark razorbacks": 244,
-    "ark": 244,
-    "ark.": 244,
-    "ark. razorbacks": 244,
+    "alabama": 243,
     "arkansas": 244,
+    "ark razorbacks": 244,
+    "ark.": 244,
+    "arkansas razorbacks": 244,
+    "ark. razorbacks": 244,
+    "ark": 244,
     "auburn tigers": 245,
     "auburn": 245,
     "florida gators": 237,
     "florida": 237,
-    "georgia bulldogs": 238,
     "georgia": 238,
-    "ky wildcats": 239,
+    "georgia bulldogs": 238,
+    "kentucky": 239,
     "ky.": 239,
+    "kentucky wildcats": 239,
     "ky": 239,
     "ky. wildcats": 239,
-    "kentucky": 239,
-    "kentucky wildcats": 239,
-    "lsu tigers": 246,
+    "ky wildcats": 239,
     "lsu": 246,
-    "mississippi state": 248,
+    "lsu tigers": 246,
+    "mississippi state bulldogs": 248,
     "mississippi st bulldogs": 248,
     "mississippi st": 248,
     "mississippi st. bulldogs": 248,
-    "mississippi state bulldogs": 248,
     "mississippi st.": 248,
+    "mississippi state": 248,
     "missouri": 46,
     "missouri tigers": 46,
     "oklahoma sooners": 48,
     "oklahoma": 48,
-    "ole miss rebels": 247,
     "ole miss": 247,
-    "south caro.": 240,
+    "ole miss rebels": 247,
     "south caro. gamecocks": 240,
-    "south carolina": 240,
     "south caro gamecocks": 240,
-    "south caro": 240,
+    "south caro.": 240,
     "south carolina gamecocks": 240,
-    "tennessee": 241,
+    "south carolina": 240,
+    "south caro": 240,
     "tennessee volunteers": 241,
+    "tennessee": 241,
     "texas a&m aggies": 51,
     "texas a&m": 51,
-    "texas": 50,
     "texas longhorns": 50,
-    "vanderbilt": 242,
+    "texas": 50,
     "vanderbilt commodores": 242,
+    "vanderbilt": 242,
     "davidson wildcats": 256,
     "davidson": 256,
-    "dayton flyers": 21,
     "dayton": 21,
-    "duquesne dukes": 11,
+    "dayton flyers": 21,
     "duquesne": 11,
-    "fordham rams": 12,
+    "duquesne dukes": 11,
     "fordham": 12,
-    "george mason": 106,
+    "fordham rams": 12,
     "george mason patriots": 106,
-    "george washington": 13,
+    "george mason": 106,
     "george washington revolutionaries": 13,
-    "la salle": 14,
+    "george washington": 13,
     "la salle explorers": 14,
+    "la salle": 14,
     "loyola chicago ramblers": 129,
     "loyola chicago": 129,
     "rhode island": 16,
     "rhode island rams": 16,
-    "richmond": 110,
     "richmond spiders": 110,
+    "richmond": 110,
     "saint joseph's": 18,
     "saint joseph's hawks": 18,
     "saint louis billikens": 124,
     "saint louis": 124,
     "st. bonaventure bonnies": 17,
-    "st bonaventure": 17,
     "st. bonaventure": 17,
     "st bonaventure bonnies": 17,
+    "st bonaventure": 17,
     "vcu": 111,
     "vcu rams": 111,
-    "austin peay governors": 211,
     "austin peay": 211,
+    "austin peay governors": 211,
     "bellarmine knights": 908,
     "bellarmine": 908,
-    "central arkansas": 465,
     "central arkansas bears": 465,
-    "central ark. bears": 465,
-    "central ark bears": 465,
-    "central ark.": 465,
     "central ark": 465,
-    "eastern ky": 213,
-    "eastern kentucky": 213,
-    "eastern ky colonels": 213,
+    "central ark.": 465,
+    "central ark bears": 465,
+    "central arkansas": 465,
+    "central ark. bears": 465,
     "eastern ky. colonels": 213,
+    "eastern ky": 213,
+    "eastern ky colonels": 213,
     "eastern ky.": 213,
+    "eastern kentucky": 213,
     "eastern kentucky colonels": 213,
     "florida gulf coast eagles": 892,
     "florida gulf coast": 892,
-    "jacksonville": 35,
     "jacksonville dolphins": 35,
+    "jacksonville": 35,
     "lipscomb": 731,
     "lipscomb bisons": 731,
-    "north alabama lions": 828,
     "north alabama": 828,
-    "north florida": 394,
+    "north alabama lions": 828,
     "north florida ospreys": 394,
+    "north florida": 394,
     "queens u royals": 403,
-    "queens university royals": 403,
-    "queens university": 403,
-    "queens  royals": 403,
-    "queens u": 403,
-    "queens ": 403,
     "queens u.": 403,
     "queens u. royals": 403,
-    "stetson hatters": 39,
+    "queens  royals": 403,
+    "queens ": 403,
+    "queens university royals": 403,
+    "queens university": 403,
+    "queens u": 403,
     "stetson": 39,
-    "west georgia wolves": 442,
+    "stetson hatters": 39,
     "west georgia": 442,
-    "charlotte 49ers": 123,
+    "west georgia wolves": 442,
     "charlotte": 123,
-    "east caro.": 105,
+    "charlotte 49ers": 123,
     "east carolina": 105,
+    "east caro.": 105,
+    "east caro. pirates": 105,
     "east caro pirates": 105,
     "east caro": 105,
     "east carolina pirates": 105,
-    "east caro. pirates": 105,
     "florida atlantic owls": 33,
     "florida atlantic": 33,
     "memphis tigers": 114,
     "memphis": 114,
-    "north texas mean green": 301,
     "north texas": 301,
-    "rice": 314,
+    "north texas mean green": 301,
     "rice owls": 314,
+    "rice": 314,
     "south florida": 115,
     "south florida bulls": 115,
     "temple": 19,
@@ -7393,14 +7758,14 @@
     "tulsa golden hurricane": 318,
     "uab blazers": 118,
     "uab": 118,
-    "utsa": 271,
     "utsa roadrunners": 271,
-    "wichita st shockers": 190,
+    "utsa": 271,
     "wichita state shockers": 190,
-    "wichita state": 190,
     "wichita st. shockers": 190,
-    "wichita st.": 190,
     "wichita st": 190,
+    "wichita state": 190,
+    "wichita st shockers": 190,
+    "wichita st.": 190,
     "binghamton": 478,
     "binghamton bearcats": 478,
     "bryant": 820,
@@ -7411,749 +7776,749 @@
     "njit": 388,
     "new hampshire": 7,
     "new hampshire wildcats": 7,
-    "umbc": 202,
     "umbc retrievers": 202,
-    "umass lowell river hawks": 970,
+    "umbc": 202,
     "umass lowell": 970,
-    " at albany great danes": 133,
-    "u. at albany": 133,
+    "umass lowell river hawks": 970,
+    "u at albany great danes": 133,
     "u. at albany great danes": 133,
     " at albany": 133,
-    "u at albany great danes": 133,
-    "university at albany great danes": 133,
     "university at albany": 133,
     "u at albany": 133,
-    "vermont catamounts": 10,
+    " at albany great danes": 133,
+    "u. at albany": 133,
+    "university at albany great danes": 133,
     "vermont": 10,
+    "vermont catamounts": 10,
     "eastern washington": 68,
     "eastern washington eagles": 68,
-    "idaho state": 69,
-    "idaho st. bengals": 69,
-    "idaho state bengals": 69,
     "idaho st": 69,
-    "idaho st bengals": 69,
+    "idaho state bengals": 69,
     "idaho st.": 69,
+    "idaho state": 69,
+    "idaho st bengals": 69,
+    "idaho st. bengals": 69,
     "idaho": 98,
     "idaho vandals": 98,
     "montana grizzlies": 70,
     "montana": 70,
+    "montana state bobcats": 71,
     "montana st": 71,
     "montana st. bobcats": 71,
     "montana state": 71,
-    "montana st.": 71,
-    "montana state bobcats": 71,
     "montana st bobcats": 71,
+    "montana st.": 71,
     "northern arizona": 72,
     "northern arizona lumberjacks": 72,
     "northern colorado bears": 395,
     "northern colorado": 395,
-    "portland st": 73,
-    "portland state": 73,
-    "portland st vikings": 73,
-    "portland st.": 73,
-    "portland st. vikings": 73,
     "portland state vikings": 73,
-    "sacramento st": 74,
-    "sacramento state hornets": 74,
+    "portland state": 73,
+    "portland st.": 73,
+    "portland st": 73,
+    "portland st vikings": 73,
+    "portland st. vikings": 73,
     "sacramento state": 74,
+    "sacramento st": 74,
     "sacramento st.": 74,
-    "sacramento st. hornets": 74,
+    "sacramento state hornets": 74,
     "sacramento st hornets": 74,
+    "sacramento st. hornets": 74,
     "weber state": 75,
-    "weber st": 75,
-    "weber st.": 75,
-    "weber state wildcats": 75,
-    "weber st. wildcats": 75,
     "weber st wildcats": 75,
-    "charleston southern buccaneers": 76,
+    "weber st. wildcats": 75,
+    "weber st": 75,
+    "weber state wildcats": 75,
+    "weber st.": 75,
     "charleston southern": 76,
+    "charleston southern buccaneers": 76,
     "gardner-webb": 456,
     "gardner-webb runnin' bulldogs": 456,
     "high point": 79,
     "high point panthers": 79,
-    "longwood lancers": 376,
     "longwood": 376,
-    "presbyterian": 402,
+    "longwood lancers": 376,
     "presbyterian blue hose": 402,
-    "radford highlanders": 82,
+    "presbyterian": 402,
     "radford": 82,
+    "radford highlanders": 82,
     "unc asheville bulldogs": 81,
     "unc asheville": 81,
     "usc upstate": 415,
     "usc upstate spartans": 415,
-    "winthrop eagles": 83,
     "winthrop": 83,
-    "cal poly mustangs": 96,
+    "winthrop eagles": 83,
     "cal poly": 96,
-    "cal state bakersfield roadrunners": 335,
+    "cal poly mustangs": 96,
     "cal st. bakersfield roadrunners": 335,
-    "cal st bakersfield": 335,
-    "cal st. bakersfield": 335,
     "cal st bakersfield roadrunners": 335,
+    "cal st. bakersfield": 335,
+    "cal state bakersfield roadrunners": 335,
+    "cal st bakersfield": 335,
     "cal state bakersfield": 335,
-    "cal st fullerton titans": 97,
-    "cal state fullerton": 97,
-    "cal st. fullerton": 97,
     "cal st. fullerton titans": 97,
     "cal state fullerton titans": 97,
+    "cal st fullerton titans": 97,
+    "cal st. fullerton": 97,
+    "cal state fullerton": 97,
     "cal st fullerton": 97,
-    "cal st northridge matadors": 67,
-    "cal st. northridge": 67,
-    "cal st. northridge matadors": 67,
+    "cal state northridge matadors": 67,
     "cal state northridge": 67,
     "cal st northridge": 67,
-    "cal state northridge matadors": 67,
+    "cal st. northridge": 67,
+    "cal st northridge matadors": 67,
+    "cal st. northridge matadors": 67,
     "hawai'i": 312,
     "hawai'i rainbow warriors": 312,
-    "long beach st. beach": 99,
-    "long beach state beach": 99,
+    "long beach state": 99,
     "long beach st.": 99,
     "long beach st beach": 99,
+    "long beach st. beach": 99,
     "long beach st": 99,
-    "long beach state": 99,
+    "long beach state beach": 99,
     "uc davis aggies": 341,
     "uc davis": 341,
-    "uc irvine": 101,
     "uc irvine anteaters": 101,
+    "uc irvine": 101,
     "uc riverside": 476,
     "uc riverside highlanders": 476,
-    "uc san diego tritons": 610,
     "uc san diego": 610,
+    "uc san diego tritons": 610,
     "uc santa barbara gauchos": 102,
     "uc santa barbara": 102,
     "delaware": 2,
     "delaware fightin' blue hens": 2,
-    "florida international panthers": 293,
     "florida international": 293,
-    "jacksonville state": 36,
-    "jacksonville st": 36,
+    "florida international panthers": 293,
     "jacksonville st.": 36,
-    "jacksonville st. gamecocks": 36,
-    "jacksonville st gamecocks": 36,
+    "jacksonville state": 36,
     "jacksonville state gamecocks": 36,
-    "kennesaw st owls": 858,
-    "kennesaw st": 858,
-    "kennesaw state owls": 858,
-    "kennesaw state": 858,
-    "kennesaw st.": 858,
+    "jacksonville st. gamecocks": 36,
+    "jacksonville st": 36,
+    "jacksonville st gamecocks": 36,
     "kennesaw st. owls": 858,
-    "liberty": 80,
+    "kennesaw state": 858,
+    "kennesaw st": 858,
+    "kennesaw st owls": 858,
+    "kennesaw st.": 858,
+    "kennesaw state owls": 858,
     "liberty flames": 80,
-    "louisiana tech": 294,
+    "liberty": 80,
     "louisiana tech bulldogs": 294,
-    "middle tennessee": 295,
+    "louisiana tech": 294,
     "middle tennessee blue raiders": 295,
-    "missouri st.": 189,
-    "missouri st bears": 189,
-    "missouri state bears": 189,
+    "middle tennessee": 295,
     "missouri state": 189,
-    "missouri st. bears": 189,
+    "missouri st.": 189,
+    "missouri state bears": 189,
+    "missouri st bears": 189,
     "missouri st": 189,
-    "new mexico st": 299,
-    "new mexico state": 299,
-    "new mexico st. aggies": 299,
-    "new mexico state aggies": 299,
-    "new mexico st aggies": 299,
+    "missouri st. bears": 189,
     "new mexico st.": 299,
+    "new mexico st. aggies": 299,
+    "new mexico st": 299,
+    "new mexico st aggies": 299,
+    "new mexico state aggies": 299,
+    "new mexico state": 299,
     "sam houston bearkats": 266,
     "sam houston": 266,
+    "western ky hilltoppers": 296,
+    "western ky": 296,
     "western kentucky": 296,
+    "western ky.": 296,
     "western kentucky hilltoppers": 296,
-    "wku hilltoppers": 296,
     "western ky. hilltoppers": 296,
     "wku": 296,
-    "western ky hilltoppers": 296,
-    "western ky.": 296,
-    "western ky": 296,
+    "wku hilltoppers": 296,
     "campbell": 31,
     "campbell fighting camels": 31,
-    "charleston": 249,
     "charleston cougars": 249,
-    "drexel": 3,
+    "charleston": 249,
     "drexel dragons": 3,
+    "drexel": 3,
     "elon phoenix": 78,
     "elon": 78,
-    "hampton": 174,
     "hampton pirates": 174,
-    "hofstra pride": 5,
+    "hampton": 174,
     "hofstra": 5,
-    "monmouth hawks": 203,
+    "hofstra pride": 5,
     "monmouth": 203,
-    "north carolina a&t aggies": 179,
-    "north caro a&t aggies": 179,
-    "north caro a&t": 179,
+    "monmouth hawks": 203,
     "north carolina a&t": 179,
     "north caro. a&t": 179,
     "north caro. a&t aggies": 179,
-    "northeastern": 8,
+    "north caro a&t": 179,
+    "north caro a&t aggies": 179,
+    "north carolina a&t aggies": 179,
     "northeastern huskies": 8,
-    "stony brook": 136,
+    "northeastern": 8,
     "stony brook seawolves": 136,
-    "towson": 9,
+    "stony brook": 136,
     "towson tigers": 9,
-    "unc wilmington": 108,
+    "towson": 9,
     "unc wilmington seahawks": 108,
+    "unc wilmington": 108,
     "william & mary tribe": 112,
     "william & mary": 112,
     "cleveland state": 126,
-    "cleveland st.": 126,
-    "cleveland st": 126,
     "cleveland state vikings": 126,
-    "cleveland st vikings": 126,
     "cleveland st. vikings": 126,
-    "detroit mercy titans": 127,
+    "cleveland st": 126,
+    "cleveland st vikings": 126,
+    "cleveland st.": 126,
     "detroit mercy": 127,
-    "green bay": 130,
+    "detroit mercy titans": 127,
     "green bay phoenix": 130,
+    "green bay": 130,
     "iu indy": 283,
     "iu indy jaguars": 283,
-    "milwaukee panthers": 131,
     "milwaukee": 131,
+    "milwaukee panthers": 131,
     "northern kentucky norse": 981,
-    "northern kentucky": 981,
-    "northern ky norse": 981,
-    "northern ky.": 981,
-    "northern ky. norse": 981,
     "northern ky": 981,
+    "northern kentucky": 981,
+    "northern ky.": 981,
+    "northern ky norse": 981,
+    "northern ky. norse": 981,
     "oakland": 285,
     "oakland golden grizzlies": 285,
-    "purdue fort wayne mastodons": 463,
     "purdue fort wayne": 463,
+    "purdue fort wayne mastodons": 463,
     "robert morris colonials": 206,
     "robert morris": 206,
-    "wright st. raiders": 132,
-    "wright state raiders": 132,
-    "wright st": 132,
-    "wright st.": 132,
     "wright st raiders": 132,
+    "wright st": 132,
     "wright state": 132,
-    "youngstown state": 290,
-    "youngstown st.": 290,
-    "youngstown st. penguins": 290,
-    "youngstown state penguins": 290,
+    "wright state raiders": 132,
+    "wright st.": 132,
+    "wright st. raiders": 132,
     "youngstown st penguins": 290,
     "youngstown st": 290,
-    "brown": 139,
+    "youngstown st. penguins": 290,
+    "youngstown st.": 290,
+    "youngstown state penguins": 290,
+    "youngstown state": 290,
     "brown bears": 139,
+    "brown": 139,
     "columbia lions": 140,
     "columbia": 140,
     "cornell big red": 141,
     "cornell": 141,
-    "dartmouth": 142,
     "dartmouth big green": 142,
+    "dartmouth": 142,
     "harvard": 143,
     "harvard crimson": 143,
-    "penn quakers": 144,
     "penn": 144,
-    "princeton tigers": 145,
+    "penn quakers": 144,
     "princeton": 145,
-    "yale bulldogs": 146,
+    "princeton tigers": 145,
     "yale": 146,
+    "yale bulldogs": 146,
     "canisius golden griffins": 147,
     "canisius": 147,
-    "fairfield": 148,
     "fairfield stags": 148,
-    "iona": 149,
+    "fairfield": 148,
     "iona gaels": 149,
+    "iona": 149,
     "manhattan jaspers": 151,
     "manhattan": 151,
-    "marist red foxes": 152,
     "marist": 152,
-    "merrimack warriors": 972,
+    "marist red foxes": 152,
     "merrimack": 972,
-    "mount st. mary's mountaineers": 204,
-    "mount state mary's": 204,
-    "mount st mary's mountaineers": 204,
+    "merrimack warriors": 972,
     "mount state mary's mountaineers": 204,
-    "mount st. mary's": 204,
     "mount st mary's": 204,
+    "mount state mary's": 204,
+    "mount st. mary's mountaineers": 204,
+    "mount st mary's mountaineers": 204,
+    "mount st. mary's": 204,
     "niagara purple eagles": 153,
     "niagara": 153,
-    "quinnipiac": 205,
     "quinnipiac bobcats": 205,
-    "rider broncs": 154,
+    "quinnipiac": 205,
     "rider": 154,
-    "sacred heart": 207,
+    "rider broncs": 154,
     "sacred heart pioneers": 207,
-    "saint peter's": 156,
+    "sacred heart": 207,
     "saint peter's peacocks": 156,
-    "siena": 155,
+    "saint peter's": 156,
     "siena saints": 155,
+    "siena": 155,
     "akron": 157,
     "akron zips": 157,
     "ball state": 164,
-    "ball st": 164,
-    "ball st.": 164,
-    "ball st cardinals": 164,
-    "ball state cardinals": 164,
     "ball st. cardinals": 164,
-    "bowling green falcons": 158,
+    "ball st cardinals": 164,
+    "ball st": 164,
+    "ball state cardinals": 164,
+    "ball st.": 164,
     "bowling green": 158,
+    "bowling green falcons": 158,
     "buffalo bulls": 159,
     "buffalo": 159,
-    "central mich chippewas": 165,
-    "central mich": 165,
     "central mich.": 165,
     "central michigan chippewas": 165,
+    "central mich chippewas": 165,
+    "central mich": 165,
     "central michigan": 165,
     "central mich. chippewas": 165,
-    "eastern mich.": 166,
+    "eastern mich": 166,
     "eastern michigan eagles": 166,
+    "eastern michigan": 166,
     "eastern mich. eagles": 166,
     "eastern mich eagles": 166,
-    "eastern mich": 166,
-    "eastern michigan": 166,
+    "eastern mich.": 166,
+    "kent st. golden flashes": 160,
+    "kent state": 160,
     "kent st": 160,
     "kent state golden flashes": 160,
     "kent st golden flashes": 160,
     "kent st.": 160,
-    "kent st. golden flashes": 160,
-    "kent state": 160,
     "miami oh": 162,
-    "miami(oh)": 162,
-    "miami(oh) redhawks": 162,
     "miami ohio": 162,
-    "miami redhawks": 162,
     "miami (oh) redhawks": 162,
     "miami (oh)": 162,
-    "northern ill": 167,
-    "northern ill. huskies": 167,
-    "northern illinois huskies": 167,
+    "miami(oh)": 162,
+    "miami redhawks": 162,
+    "miami(oh) redhawks": 162,
     "northern ill huskies": 167,
     "northern ill.": 167,
+    "northern ill. huskies": 167,
+    "northern illinois huskies": 167,
     "northern illinois": 167,
-    "ohio": 163,
+    "northern ill": 167,
     "ohio bobcats": 163,
+    "ohio": 163,
     "toledo": 168,
     "toledo rockets": 168,
     "umass minutemen": 15,
     "umass": 15,
+    "western mich broncos": 169,
     "western mich": 169,
+    "western mich. broncos": 169,
     "western michigan broncos": 169,
     "western mich.": 169,
-    "western mich. broncos": 169,
-    "western mich broncos": 169,
     "western michigan": 169,
-    "coppin st.": 171,
     "coppin st eagles": 171,
-    "coppin st": 171,
     "coppin st. eagles": 171,
+    "coppin st": 171,
+    "coppin st.": 171,
     "coppin state": 171,
     "coppin state eagles": 171,
-    "delaware state hornets": 172,
     "delaware st.": 172,
+    "delaware st. hornets": 172,
     "delaware state": 172,
     "delaware st hornets": 172,
     "delaware st": 172,
-    "delaware st. hornets": 172,
-    "howard bison": 175,
+    "delaware state hornets": 172,
     "howard": 175,
+    "howard bison": 175,
     "maryland-eastern shore": 176,
     "maryland-eastern shore hawks": 176,
+    "morgan state": 177,
     "morgan st bears": 177,
+    "morgan state bears": 177,
     "morgan st.": 177,
     "morgan st. bears": 177,
-    "morgan state bears": 177,
     "morgan st": 177,
-    "morgan state": 177,
-    "norfolk state": 178,
     "norfolk st": 178,
+    "norfolk st spartans": 178,
     "norfolk st.": 178,
     "norfolk st. spartans": 178,
     "norfolk state spartans": 178,
-    "norfolk st spartans": 178,
-    "north caro central": 393,
-    "north caro central eagles": 393,
-    "north caro. central": 393,
-    "north carolina central eagles": 393,
+    "norfolk state": 178,
     "north carolina central": 393,
+    "north carolina central eagles": 393,
     "north caro. central eagles": 393,
+    "north caro. central": 393,
+    "north caro central eagles": 393,
+    "north caro central": 393,
+    "south carolina state bulldogs": 180,
     "south carolina st": 180,
-    "south carolina st bulldogs": 180,
-    "south caro. state bulldogs": 180,
     "south caro. state": 180,
     "south carolina st. bulldogs": 180,
-    "south carolina state": 180,
-    "south caro state": 180,
-    "south carolina state bulldogs": 180,
-    "south carolina st.": 180,
     "south caro state bulldogs": 180,
-    "belmont bruins": 134,
+    "south caro state": 180,
+    "south carolina st bulldogs": 180,
+    "south carolina st.": 180,
+    "south carolina state": 180,
+    "south caro. state bulldogs": 180,
     "belmont": 134,
-    "bradley braves": 181,
+    "belmont bruins": 134,
     "bradley": 181,
-    "drake": 183,
+    "bradley braves": 181,
     "drake bulldogs": 183,
+    "drake": 183,
     "evansville": 184,
     "evansville purple aces": 184,
+    "illinois st.": 185,
     "illinois st redbirds": 185,
+    "illinois st. redbirds": 185,
+    "illinois state": 185,
+    "ill. state redbirds": 185,
+    "illinois state redbirds": 185,
+    "ill. state": 185,
     "illinois st": 185,
     "ill state redbirds": 185,
-    "illinois state": 185,
-    "illinois state redbirds": 185,
-    "illinois st.": 185,
-    "ill. state redbirds": 185,
     "ill state": 185,
-    "illinois st. redbirds": 185,
-    "ill. state": 185,
-    "indiana st.": 186,
-    "indiana st sycamores": 186,
-    "indiana state": 186,
     "indiana state sycamores": 186,
-    "indiana st": 186,
     "indiana st. sycamores": 186,
-    "murray st racers": 215,
-    "murray state": 215,
+    "indiana state": 186,
+    "indiana st": 186,
+    "indiana st sycamores": 186,
+    "indiana st.": 186,
     "murray state racers": 215,
-    "murray st.": 215,
     "murray st. racers": 215,
     "murray st": 215,
-    "northern iowa panthers": 187,
+    "murray state": 215,
+    "murray st racers": 215,
+    "murray st.": 215,
     "northern iowa": 187,
+    "northern iowa panthers": 187,
     "southern illinois": 188,
-    "southern ill. salukis": 188,
     "southern ill.": 188,
-    "southern illinois salukis": 188,
     "southern ill": 188,
     "southern ill salukis": 188,
-    "uic": 128,
+    "southern illinois salukis": 188,
+    "southern ill. salukis": 188,
     "uic flames": 128,
+    "uic": 128,
     "valparaiso beacons": 288,
     "valparaiso": 288,
     "air force": 191,
     "air force falcons": 191,
-    "boise st.": 95,
-    "boise st": 95,
-    "bsu broncos": 95,
-    "boise state broncos": 95,
-    "boise st broncos": 95,
     "boise state": 95,
-    "bsu": 95,
     "boise st. broncos": 95,
+    "bsu": 95,
+    "bsu broncos": 95,
+    "boise st broncos": 95,
+    "boise st.": 95,
+    "boise state broncos": 95,
+    "boise st": 95,
+    "colorado st": 193,
+    "colorado st.": 193,
     "colorado state rams": 193,
     "colorado st rams": 193,
-    "colorado st. rams": 193,
-    "colorado st": 193,
     "colorado state": 193,
-    "colorado st.": 193,
-    "fresno st": 311,
-    "fresno st.": 311,
+    "colorado st. rams": 193,
+    "fresno st bulldogs": 311,
     "fresno state bulldogs": 311,
     "fresno state": 311,
     "fresno st. bulldogs": 311,
-    "fresno st bulldogs": 311,
-    "grand canyon lopes": 362,
+    "fresno st.": 311,
+    "fresno st": 311,
     "grand canyon": 362,
+    "grand canyon lopes": 362,
     "nevada": 313,
     "nevada wolf pack": 313,
     "new mexico lobos": 194,
     "new mexico": 194,
+    "san diego st aztecs": 195,
+    "san diego state": 195,
     "san diego st": 195,
     "san diego state aztecs": 195,
-    "san diego st aztecs": 195,
     "san diego st. aztecs": 195,
     "san diego st.": 195,
-    "san diego state": 195,
-    "san jose st. spartans": 315,
-    "san jose st spartans": 315,
-    "san jose state": 315,
-    "san jose st.": 315,
     "san jose st": 315,
+    "san jose state": 315,
     "san jose state spartans": 315,
-    "unlv runnin' rebels": 196,
+    "san jose st. spartans": 315,
+    "san jose st.": 315,
+    "san jose st spartans": 315,
     "unlv": 196,
-    "utah st. aggies": 103,
+    "unlv runnin' rebels": 196,
     "utah st aggies": 103,
-    "utah st.": 103,
     "utah state": 103,
     "utah state aggies": 103,
     "utah st": 103,
-    "wyoming": 198,
+    "utah st. aggies": 103,
+    "utah st.": 103,
     "wyoming cowboys": 198,
-    "central connecticut st": 199,
-    "central connecticut st blue devils": 199,
-    "central connecticut state": 199,
-    "central conn state blue devils": 199,
-    "central conn state": 199,
-    "central conn. state": 199,
-    "central conn. state blue devils": 199,
-    "central connecticut st. blue devils": 199,
+    "wyoming": 198,
     "central connecticut state blue devils": 199,
+    "central conn. state blue devils": 199,
+    "central conn state": 199,
+    "central connecticut state": 199,
     "central connecticut st.": 199,
+    "central connecticut st. blue devils": 199,
+    "central connecticut st": 199,
+    "central conn. state": 199,
+    "central conn state blue devils": 199,
+    "central connecticut st blue devils": 199,
+    "chicago st": 282,
+    "chicago st.": 282,
     "chicago st. cougars": 282,
-    "chicago state": 282,
     "chicago state cougars": 282,
     "chicago st cougars": 282,
-    "chicago st.": 282,
-    "chicago st": 282,
-    "fdu": 200,
+    "chicago state": 282,
     "fdu knights": 200,
-    "liu": 1468,
+    "fdu": 200,
     "liu sharks": 1468,
-    "le moyne": 966,
+    "liu": 1468,
     "le moyne dolphins": 966,
-    "mercyhurst lakers": 459,
+    "le moyne": 966,
     "mercyhurst": 459,
-    "new haven chargers": 390,
+    "mercyhurst lakers": 459,
     "new haven": 390,
-    "st francis(pa)": 209,
-    "st. francis (pa)": 209,
-    "st. francis(pa)": 209,
-    "st francis (pa) red flash": 209,
-    "st francis (pa)": 209,
-    "st francis": 209,
+    "new haven chargers": 390,
     "st. francis(pa) red flash": 209,
-    "st. francis (pa) red flash": 209,
+    "st francis (pa)": 209,
     "st. francis": 209,
     "st francis(pa) red flash": 209,
-    "stonehill skyhawks": 904,
+    "st. francis (pa) red flash": 209,
+    "st francis(pa)": 209,
+    "st. francis(pa)": 209,
+    "st. francis (pa)": 209,
+    "st francis (pa) red flash": 209,
+    "st francis": 209,
     "stonehill": 904,
-    "wagner seahawks": 210,
+    "stonehill skyhawks": 904,
     "wagner": 210,
+    "wagner seahawks": 210,
     "eastern ill": 212,
-    "eastern ill.": 212,
-    "eastern ill panthers": 212,
-    "eastern ill. panthers": 212,
-    "eastern illinois panthers": 212,
     "eastern illinois": 212,
-    "lindenwood lions": 1130,
+    "eastern illinois panthers": 212,
+    "eastern ill.": 212,
+    "eastern ill. panthers": 212,
+    "eastern ill panthers": 212,
     "lindenwood": 1130,
+    "lindenwood lions": 1130,
     "little rock": 292,
     "little rock trojans": 292,
     "morehead st. eagles": 214,
-    "morehead st": 214,
+    "morehead st.": 214,
     "morehead st eagles": 214,
     "morehead state eagles": 214,
+    "morehead st": 214,
     "morehead state": 214,
-    "morehead st.": 214,
     "siu edwardsville cougars": 411,
     "siu edwardsville": 411,
-    "southeast missouri st.": 216,
-    "southeast missouri st. redhawks": 216,
     "southeast missouri st": 216,
-    "southeast missouri st redhawks": 216,
-    "southeast missouri state": 216,
     "southeast missouri state redhawks": 216,
-    "southern indiana": 990,
+    "southeast missouri state": 216,
+    "southeast missouri st.": 216,
+    "southeast missouri st redhawks": 216,
+    "southeast missouri st. redhawks": 216,
     "southern indiana screaming eagles": 990,
-    "tennessee st": 217,
-    "tennessee state tigers": 217,
-    "tennessee st tigers": 217,
-    "tennessee st.": 217,
+    "southern indiana": 990,
     "tennessee state": 217,
     "tennessee st. tigers": 217,
-    "tennessee tech golden eagles": 218,
+    "tennessee st.": 217,
+    "tennessee state tigers": 217,
+    "tennessee st": 217,
+    "tennessee st tigers": 217,
     "tennessee tech": 218,
-    "tennessee-martin skyhawks": 219,
+    "tennessee tech golden eagles": 218,
     "tennessee-martin": 219,
+    "tennessee-martin skyhawks": 219,
     "western ill leathernecks": 289,
     "western ill.": 289,
+    "western ill": 289,
+    "western illinois leathernecks": 289,
     "western illinois": 289,
     "western ill. leathernecks": 289,
-    "western illinois leathernecks": 289,
-    "western ill": 289,
-    "american eagles": 104,
     "american": 104,
+    "american eagles": 104,
     "army black knights": 230,
     "army": 230,
+    "boston university terriers": 1,
     "boston u": 1,
-    "boston  terriers": 1,
-    "boston university": 1,
     "boston u. terriers": 1,
+    "boston  terriers": 1,
     "boston u terriers": 1,
+    "boston university": 1,
     "boston u.": 1,
     "boston ": 1,
-    "boston university terriers": 1,
-    "bucknell bison": 231,
     "bucknell": 231,
+    "bucknell bison": 231,
     "colgate raiders": 232,
     "colgate": 232,
-    "holy cross": 233,
     "holy cross crusaders": 233,
-    "lafayette leopards": 234,
+    "holy cross": 233,
     "lafayette": 234,
-    "lehigh": 235,
+    "lafayette leopards": 234,
     "lehigh mountain hawks": 235,
-    "loyola maryland": 150,
+    "lehigh": 235,
     "loyola maryland greyhounds": 150,
-    "navy midshipmen": 236,
+    "loyola maryland": 150,
     "navy": 236,
+    "navy midshipmen": 236,
     "east texas a&m lions": 854,
     "east texas a&m": 854,
-    "houston christian huskies": 662,
     "houston christian": 662,
-    "incarnate word": 962,
+    "houston christian huskies": 662,
     "incarnate word cardinals": 962,
+    "incarnate word": 962,
     "lamar": 261,
     "lamar cardinals": 261,
-    "mcneese": 263,
     "mcneese cowboys": 263,
-    "new orleans privateers": 300,
+    "mcneese": 263,
     "new orleans": 300,
+    "new orleans privateers": 300,
     "nicholls st.": 264,
-    "nicholls st": 264,
     "nicholls state": 264,
     "nicholls st. colonels": 264,
-    "nicholls state colonels": 264,
+    "nicholls st": 264,
     "nicholls st colonels": 264,
+    "nicholls state colonels": 264,
     "northwestern st": 265,
+    "northwestern st demons": 265,
+    "northwestern state": 265,
     "northwestern st.": 265,
     "northwestern state demons": 265,
     "northwestern st. demons": 265,
-    "northwestern state": 265,
-    "northwestern st demons": 265,
     "southeastern louisiana": 267,
     "southeastern louisiana lions": 267,
-    "stephen f austin": 269,
     "stephen f. austin lumberjacks": 269,
     "stephen f. austin": 269,
+    "stephen f austin": 269,
     "stephen f austin lumberjacks": 269,
-    "texas a&m-corpus christi": 137,
     "texas a&m-corpus christi islanders": 137,
-    "ut rio grande valley vaqueros": 138,
+    "texas a&m-corpus christi": 137,
     "ut rio grande valley": 138,
+    "ut rio grande valley vaqueros": 138,
     "alabama a&m bulldogs": 272,
     "alabama a&m": 272,
+    "alabama st": 323,
+    "alabama st hornets": 323,
+    "alabama st. hornets": 323,
+    "alabama state": 323,
     "alabama state hornets": 323,
     "alabama st.": 323,
-    "alabama st": 323,
-    "alabama st. hornets": 323,
-    "alabama st hornets": 323,
-    "alabama state": 323,
-    "alcorn state": 274,
-    "alcorn st braves": 274,
     "alcorn st": 274,
-    "alcorn state braves": 274,
-    "alcorn st.": 274,
+    "alcorn state": 274,
     "alcorn st. braves": 274,
-    "ark-pine bluff golden lions": 275,
+    "alcorn st braves": 274,
+    "alcorn st.": 274,
+    "alcorn state braves": 274,
+    "ark.-pine bluff golden lions": 275,
+    "arkansas-pine bluff": 275,
     "ark.-pine bluff": 275,
     "ark-pine bluff": 275,
-    "arkansas-pine bluff": 275,
+    "ark-pine bluff golden lions": 275,
     "arkansas-pine bluff golden lions": 275,
-    "ark.-pine bluff golden lions": 275,
     "bethune-cookman wildcats": 170,
     "bethune-cookman": 170,
-    "florida a&m": 173,
     "florida a&m rattlers": 173,
-    "grambling st. tigers": 276,
-    "grambling st": 276,
+    "florida a&m": 173,
     "grambling state": 276,
-    "grambling st.": 276,
+    "grambling st": 276,
     "grambling state tigers": 276,
     "grambling st tigers": 276,
-    "jackson st. tigers": 277,
-    "jackson st tigers": 277,
-    "jackson st": 277,
-    "unlv rebels": 277,
-    "jackson st.": 277,
+    "grambling st. tigers": 276,
+    "grambling st.": 276,
     "jackson state tigers": 277,
     "unlv runnin rebels": 277,
+    "unlv rebels": 277,
+    "jackson st.": 277,
     "jackson state": 277,
-    "mississippi valley st": 278,
-    "mississippi valley state delta devils": 278,
+    "jackson st tigers": 277,
+    "jackson st. tigers": 277,
+    "jackson st": 277,
     "mississippi valley st delta devils": 278,
-    "mississippi valley st.": 278,
+    "mississippi valley state delta devils": 278,
     "mississippi valley st. delta devils": 278,
+    "mississippi valley st": 278,
     "mississippi valley state": 278,
+    "mississippi valley st.": 278,
     "prairie view a&m panthers": 279,
     "prairie view a&m": 279,
-    "southern  jaguars": 280,
-    "southern u.": 280,
-    "southern u jaguars": 280,
     "southern u": 280,
-    "southern u. jaguars": 280,
-    "southern university jaguars": 280,
-    "southern university": 280,
+    "southern  jaguars": 280,
     "southern ": 280,
+    "southern u. jaguars": 280,
+    "southern university": 280,
+    "southern university jaguars": 280,
+    "southern u jaguars": 280,
+    "southern u.": 280,
     "texas southern tigers": 281,
     "texas southern": 281,
-    "chattanooga": 250,
     "chattanooga mocs": 250,
-    "east tennessee st.": 257,
+    "chattanooga": 250,
+    "east tennessee st. buccaneers": 257,
     "east tennessee state buccaneers": 257,
+    "east tennessee st.": 257,
+    "east tennessee st": 257,
     "east tennessee state": 257,
     "east tennessee st buccaneers": 257,
-    "east tennessee st. buccaneers": 257,
-    "east tennessee st": 257,
-    "furman paladins": 252,
     "furman": 252,
-    "mercer": 37,
+    "furman paladins": 252,
     "mercer bears": 37,
+    "mercer": 37,
     "samford bulldogs": 38,
     "samford": 38,
-    "the citadel bulldogs": 251,
     "the citadel": 251,
-    "unc greensboro": 258,
+    "the citadel bulldogs": 251,
     "unc greensboro spartans": 258,
+    "unc greensboro": 258,
     "vmi": 259,
     "vmi keydets": 259,
+    "western caro": 260,
+    "western carolina catamounts": 260,
     "western carolina": 260,
-    "western caro catamounts": 260,
     "western caro. catamounts": 260,
     "western caro.": 260,
-    "western carolina catamounts": 260,
-    "western caro": 260,
+    "western caro catamounts": 260,
     "wofford": 254,
     "wofford terriers": 254,
     "denver pioneers": 297,
     "denver": 297,
     "kansas city": 284,
     "kansas city roos": 284,
-    "north dakota": 489,
     "north dakota fighting hawks": 489,
-    "north dakota state bison": 490,
-    "north dakota st bison": 490,
-    "north dakota st": 490,
-    "north dakota st.": 490,
-    "north dakota state": 490,
+    "north dakota": 489,
     "north dakota st. bison": 490,
+    "north dakota st.": 490,
+    "north dakota st bison": 490,
+    "north dakota state bison": 490,
+    "north dakota state": 490,
+    "north dakota st": 490,
     "omaha": 826,
     "omaha mavericks": 826,
-    "oral roberts golden eagles": 286,
     "oral roberts": 286,
+    "oral roberts golden eagles": 286,
     "south dakota": 416,
     "south dakota coyotes": 416,
-    "south dakota state jackrabbits": 417,
-    "south dakota state": 417,
     "south dakota st": 417,
     "south dakota st.": 417,
+    "south dakota state": 417,
     "south dakota st. jackrabbits": 417,
     "south dakota st jackrabbits": 417,
-    "st. thomas tommies": 573,
-    "st. thomas": 573,
+    "south dakota state jackrabbits": 417,
     "st thomas tommies": 573,
+    "st. thomas tommies": 573,
     "st thomas": 573,
-    "appalachian state": 255,
-    "appalachian st mountaineers": 255,
-    "appalachian st. mountaineers": 255,
+    "st. thomas": 573,
     "appalachian st.": 255,
-    "appalachian st": 255,
+    "appalachian st. mountaineers": 255,
     "appalachian state mountaineers": 255,
-    "ark. state": 291,
-    "ark state": 291,
-    "arkansas state": 291,
-    "arkansas st. red wolves": 291,
+    "appalachian state": 255,
+    "appalachian st": 255,
+    "appalachian st mountaineers": 255,
     "arkansas st.": 291,
-    "arkansas st": 291,
     "arkansas st red wolves": 291,
+    "arkansas st. red wolves": 291,
     "ark state red wolves": 291,
-    "arkansas state red wolves": 291,
+    "arkansas state": 291,
     "ark. state red wolves": 291,
-    "coastal carolina chanticleers": 77,
-    "coastal caro. chanticleers": 77,
+    "arkansas state red wolves": 291,
+    "ark state": 291,
+    "ark. state": 291,
+    "arkansas st": 291,
+    "coastal caro": 77,
+    "coastal carolina": 77,
     "coastal caro.": 77,
     "coastal caro chanticleers": 77,
-    "coastal carolina": 77,
-    "coastal caro": 77,
+    "coastal carolina chanticleers": 77,
+    "coastal caro. chanticleers": 77,
     "georgia southern": 253,
     "georgia southern eagles": 253,
-    "georgia state panthers": 34,
     "georgia st panthers": 34,
-    "georgia state": 34,
-    "georgia st. panthers": 34,
     "georgia st.": 34,
+    "georgia st. panthers": 34,
     "georgia st": 34,
+    "georgia state": 34,
+    "georgia state panthers": 34,
     "james madison dukes": 107,
     "james madison": 107,
     "louisiana": 298,
@@ -8164,66 +8529,66 @@
     "marshall thundering herd": 161,
     "old dominion": 109,
     "old dominion monarchs": 109,
-    "south alabama": 302,
     "south alabama jaguars": 302,
+    "south alabama": 302,
     "southern miss golden eagles": 116,
     "southern miss": 116,
-    "texas st": 268,
+    "texas state": 268,
     "texas st. bobcats": 268,
     "texas state bobcats": 268,
-    "texas st.": 268,
     "texas st bobcats": 268,
-    "texas state": 268,
+    "texas st": 268,
+    "texas st.": 268,
     "troy": 40,
     "troy trojans": 40,
     "abilene christian": 320,
     "abilene christian wildcats": 320,
-    "california baptist lancers": 648,
     "california baptist": 648,
-    "southern utah thunderbirds": 287,
+    "california baptist lancers": 648,
     "southern utah": 287,
-    "tarleton st. texans": 432,
-    "tarleton state": 432,
-    "tarleton st texans": 432,
+    "southern utah thunderbirds": 287,
     "tarleton state texans": 432,
+    "tarleton st. texans": 432,
     "tarleton st": 432,
     "tarleton st.": 432,
+    "tarleton st texans": 432,
+    "tarleton state": 432,
     "ut arlington": 270,
     "ut arlington mavericks": 270,
     "utah tech": 1181,
     "utah tech trailblazers": 1181,
-    "utah valley": 437,
     "utah valley wolverines": 437,
+    "utah valley": 437,
     "gonzaga": 303,
     "gonzaga bulldogs": 303,
-    "loyola marymount": 304,
     "loyola marymount lions": 304,
-    "oregon state": 224,
+    "loyola marymount": 304,
+    "oregon state beavers": 224,
     "oregon st": 224,
     "oregon st.": 224,
     "oregon st beavers": 224,
-    "oregon state beavers": 224,
+    "oregon state": 224,
     "oregon st. beavers": 224,
     "pacific tigers": 100,
     "pacific": 100,
-    "pepperdine waves": 305,
     "pepperdine": 305,
+    "pepperdine waves": 305,
     "portland": 306,
     "portland pilots": 306,
     "saint mary's gaels": 307,
     "saint mary's": 307,
     "san diego": 308,
     "san diego toreros": 308,
-    "san francisco": 309,
     "san francisco dons": 309,
-    "santa clara": 310,
+    "san francisco": 309,
     "santa clara broncos": 310,
-    "seattle redhawks": 693,
+    "santa clara": 310,
     "seattle": 693,
-    "washington st.": 229,
-    "washington st": 229,
-    "washington st. cougars": 229,
+    "seattle redhawks": 693,
     "washington state cougars": 229,
+    "washington st": 229,
+    "washington st.": 229,
+    "washington st. cougars": 229,
     "washington state": 229,
     "washington st cougars": 229
   }
