@@ -2710,7 +2710,7 @@ function RELOAD_DATA() {
     "✅ Data loaded successfully!\n\n" +
     "Data Generated: " + dataGenerated + "\n\n" +
     "Roster has been copied as values.\n\n" +
-    "Tip: If data looks stale, run 'Step 1: Start Data Generation' first, wait for the email notification, then run this step again."
+    "Tip: If data looks stale, run '1️⃣ Start Data Generation' first, wait for the email notification, then run this step again."
   );
 }
 
@@ -2722,7 +2722,7 @@ function onOpen() {
   var ui = SpreadsheetApp.getUi();
   ui.createMenu('CBB Tools')
     .addItem('1️⃣ Start Data Generation', 'REFRESH_TEAM_DATA')
-    .addItem('2️⃣ Load Updated Data (after job completes)', 'RELOAD_DATA')
+    .addItem('2️⃣ Load Updated Data', 'RELOAD_DATA')
     .addSeparator()
     .addItem('Switch to Different Team...', 'REFRESH_DIFFERENT_TEAM')
     .addSeparator()
