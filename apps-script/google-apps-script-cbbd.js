@@ -598,12 +598,17 @@ function GET_TEAM_GAMES(url) {
       var day = dateObj.getDate();
       var formattedDate = month + "/" + day;
 
+      // Format opponent name: "@ Team" for away, "Team (N)" for neutral, "Team" for home
+      var opponentDisplay = game.neutralSite 
+        ? game.opponent + " (N)" 
+        : (game.isHome ? game.opponent : "@ " + game.opponent);
+      
       allGames.push({
         sortDate: dateObj,
         row: [
           formattedDate,
-          game.opponent,
-          game.isHome ? "Home" : "Away",
+          opponentDisplay,
+          game.neutralSite ? "Neutral" : (game.isHome ? "Home" : "Away"),
           game.conferenceGame ? "Conf" : "Non-Conf",
           result,
           game.teamStats.points.total,
