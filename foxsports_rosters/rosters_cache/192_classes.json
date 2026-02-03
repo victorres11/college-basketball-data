@@ -2,76 +2,103 @@
   {
     "name": "Dawson Baker",
     "jersey": "25",
+    "position": "G",
     "class": "SR"
   },
   {
     "name": "Kennard Davis Jr.",
     "jersey": "30",
+    "position": "G",
     "class": "JR"
   },
   {
     "name": "Dominique Diomande",
     "jersey": "24",
+    "position": "G",
     "class": "FR"
   },
   {
     "name": "Aleksej Kostic",
     "jersey": "6",
+    "position": "G",
     "class": "FR"
   },
   {
     "name": "Khadim Mboup",
     "jersey": "7",
+    "position": "G",
     "class": "FR"
   },
   {
     "name": "Jared McGregor",
     "jersey": "51",
+    "position": "G",
     "class": "JR"
   },
   {
     "name": "Tyler Mrus",
     "jersey": "2",
+    "position": "G",
     "class": "JR"
+  },
+  {
+    "name": "KJ Perry",
+    "jersey": "-",
+    "position": "G",
+    "class": "SO"
   },
   {
     "name": "Nate Pickens",
     "jersey": "12",
+    "position": "G",
     "class": "SR"
   },
   {
     "name": "Richie Saunders",
     "jersey": "15",
+    "position": "G",
     "class": "SR"
   },
   {
     "name": "Robert Wright III",
     "jersey": "1",
+    "position": "G",
     "class": "SO"
   },
   {
     "name": "Mihailo Boskovic",
     "jersey": "5",
+    "position": "F",
     "class": "SR"
   },
   {
     "name": "AJ Dybantsa",
     "jersey": "3",
+    "position": "F",
     "class": "FR"
   },
   {
     "name": "Brody Kozlowski",
     "jersey": "4",
+    "position": "F",
+    "class": "SO"
+  },
+  {
+    "name": "Abdullah Ahmed",
+    "jersey": "34",
+    "position": "C",
     "class": "SO"
   },
   {
     "name": "Keba Keita",
     "jersey": "13",
+    "position": "C",
     "class": "SR"
   },
   {
     "name": "Xavion Staton",
     "jersey": "33",
+    "position": "C",
     "class": "FR"
   }
 ]
