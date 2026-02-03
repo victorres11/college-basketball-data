@@ -649,9 +649,39 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
                 quality_hub.collect('foxsports_players', [])
 
         # Run FoxSports roster cross-validation immediately (CRITICAL check)
+        # Auto-refresh cache if match rate < 100%
         if DATA_QUALITY_AVAILABLE:
             print("[GENERATOR] Running FoxSports roster cross-validation...")
-            quality_hub.run_immediate(validate_foxsports_roster_match)
+            validation_results = quality_hub.run_immediate(validate_foxsports_roster_match)
+            
+            # Check if we need to auto-refresh the cache
+            for result in validation_results:
+                if result.validator_name == "FoxSports Roster Match":
+                    match_rate = result.details.get('match_rate', 100)
+                    if match_rate < 100 and foxsports_team_id:
+                        print(f"[GENERATOR] Match rate {match_rate}% < 100% - auto-refreshing FoxSports cache...")
+                        try:
+                            # Force refresh from FoxSports API
+                            fresh_players = fetch_and_cache_roster(team_name, foxsports_team_id)
+                            if fresh_players:
+                                print(f"[GENERATOR] Refreshed cache: {len(fresh_players)} players")
+                                # Update the player_classes_by_jersey lookup with fresh data
+                                player_classes_by_jersey = {}
+                                for p in fresh_players:
+                                    jersey = p.get('jersey', '')
+                                    player_class = p.get('class', 'N/A')
+                                    if jersey:
+                                        player_classes_by_jersey[jersey] = player_class
+                                # Re-collect fresh data for validation
+                                quality_hub.collect('foxsports_players', fresh_players)
+                                quality_hub.collect('foxsports_source', 'auto-refreshed')
+                                # Re-run validation to confirm fix
+                                print("[GENERATOR] Re-running validation with fresh data...")
+                                quality_hub.run_immediate(validate_foxsports_roster_match)
+                                add_status('Player Classes', 'success', f'Auto-refreshed FoxSports cache ({len(fresh_players)} players)')
+                        except Exception as e:
+                            print(f"[GENERATOR] Auto-refresh failed: {e}")
+                    break
 
     # Load cached roster if available (for better class/year and high school data)
     cached_roster_lookup = load_cached_roster(team_name, season)
