@@ -666,9 +666,9 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
                             if fresh_players:
                                 print(f"[GENERATOR] Refreshed cache: {len(fresh_players)} players")
                                 # Update the player_classes_by_jersey lookup with fresh data
-                                player_classes_by_jersey = {}
+                                player_classes_by_jersey.clear()
                                 for p in fresh_players:
-                                    jersey = p.get('jersey', '')
+                                    jersey = normalize_jersey(p.get('jersey', ''))
                                     player_class = p.get('class', 'N/A')
                                     if jersey:
                                         player_classes_by_jersey[jersey] = player_class
