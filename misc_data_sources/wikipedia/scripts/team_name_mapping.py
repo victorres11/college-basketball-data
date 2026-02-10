@@ -670,7 +670,7 @@ TEAM_WIKIPEDIA_MAPPING = {
     'penn st nittany': "Penn State Nittany Lions basketball",
     'penn st.': "Penn State Nittany Lions basketball",
     'penn st. nittany': "Penn State Nittany Lions basketball",
-    'penn state': "Penn State Nittany Lions men\'s basketball",
+    'penn state': "Penn State Nittany Lions basketball",
     'penn state nittany': "Penn State Nittany Lions basketball",
     'penn state nittany lions': "Penn State Nittany Lions basketball",
     'pepperdine': "Pepperdine Waves men's basketball",
