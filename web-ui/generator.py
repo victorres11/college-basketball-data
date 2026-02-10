@@ -1773,6 +1773,7 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
     if include_historical_stats:
         players_with_history = sum(1 for p in team_data['players'] if 'previousSeasons' in p and p['previousSeasons'])
         add_status('Player Historical Stats', 'success', f'Retrieved history for {players_with_history}/{len(team_data["players"])} players')
+        add_status('Historical Stats Mode', 'success', f'Fetched from API ({players_with_history} players with history)')
     else:
         # Check if we loaded any from S3
         players_with_history = sum(1 for p in team_data['players'] if 'previousSeasons' in p and p['previousSeasons'])
