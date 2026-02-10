@@ -31,7 +31,8 @@ def get_wikitext(page_title: str) -> Optional[str]:
         'prop': 'revisions',
         'rvprop': 'content',
         'rvslots': 'main',
-        'formatversion': '2'
+        'formatversion': '2',
+        'redirects': 1
     }
     
     # Wikipedia requires a User-Agent header
