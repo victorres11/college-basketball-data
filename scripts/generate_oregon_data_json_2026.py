@@ -144,10 +144,22 @@ def calculate_player_conference_rankings_from_list(all_players_raw, conference_n
         ('minutesPerGame', lambda p: (p['minutes'] / p['games']) if p['games'] > 0 else None),
     ]
     
+    # ESPN qualification threshold: player must have played 75% of max games in conference
+    MIN_GAMES_PCT = 0.75
+    max_games = max((p.get('games', 0) for p in conference_players), default=0)
+    min_games_threshold = int(max_games * MIN_GAMES_PCT)
+    
+    # Per-game stats that require minimum games qualification
+    per_game_stats = {'pointsPerGame', 'assistsPerGame', 'reboundsPerGame', 
+                      'stealsPerGame', 'blocksPerGame', 'minutesPerGame'}
+    
     for stat_name, calc_func in stats_to_rank:
         values = []
         for player in conference_players:
             try:
+                # For per-game stats, require minimum games played (ESPN uses 75%)
+                if stat_name in per_game_stats and player.get('games', 0) < min_games_threshold:
+                    continue
                 value = calc_func(player)
                 if value is not None:
                     values.append((value, player['name']))
