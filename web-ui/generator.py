@@ -974,6 +974,7 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
                         try:
                             game_date = datetime.strptime(date_str, "%m/%d/%Y").date()
                         except Exception:
+                            print(f"[GENERATOR] WARNING: Could not parse upcoming game date '{date_str}' — keeping game as safe default")
                             game_date = None
                     if game_date is None or game_date >= today:
                         filtered_upcoming.append(game)
