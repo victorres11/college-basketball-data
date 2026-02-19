@@ -963,26 +963,22 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
             # Add upcoming games if available (filter out already-played games)
             upcoming_games = quadrant_data.get('upcoming_games', [])
             if upcoming_games:
-                # Filter out games that already appear in teamGameStats (already played)
-                played_opponents = set()
-                if team_data.get('teamGameStats'):
-                    for game in team_data['teamGameStats']:
-                        opponent = game.get('opponent', '').lower().strip()
-                        if opponent:
-                            played_opponents.add(opponent)
-
-                # Filter upcoming games to exclude already-played opponents
-                # Note: This is a simple filter by opponent name. For teams that play
-                # the same opponent twice (home/away), this may filter too aggressively,
-                # but it's better than showing duplicate games.
+                # Filter upcoming games to exclude already-past dates.
+                today = datetime.now().date()
                 original_count = len(upcoming_games)
                 filtered_upcoming = []
                 for game in upcoming_games:
-                    opponent = game.get('opponent', '').lower().strip()
-                    if opponent not in played_opponents:
+                    date_str = game.get('date', '')
+                    game_date = None
+                    if date_str:
+                        try:
+                            game_date = datetime.strptime(date_str, "%m/%d/%Y").date()
+                        except Exception:
+                            game_date = None
+                    if game_date is None or game_date >= today:
                         filtered_upcoming.append(game)
                     else:
-                        print(f"[GENERATOR] Filtered out already-played game vs {game.get('opponent')}")
+                        print(f"[GENERATOR] Filtered out already-past game on {game.get('date')}")
 
                 if filtered_upcoming:
                     team_data['upcomingGames'] = filtered_upcoming
@@ -1901,4 +1897,3 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
             progress_callback['validationErrors'] = validation_errors
 
     return relative_path
-
