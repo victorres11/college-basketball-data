@@ -151,22 +151,38 @@ def calculate_player_conference_rankings_from_list(all_players_raw, conference_n
         ('minutesPerGame', lambda p: (p['minutes'] / p['games']) if p['games'] > 0 else None),
     ]
     
-    # ESPN qualification threshold: player must have played 75% of max games in conference
+    # Official qualification thresholds
     MIN_GAMES_PCT = 0.75
     max_games = max((p.get('games', 0) for p in conference_players), default=0)
     min_games_threshold = int(max_games * MIN_GAMES_PCT)
-    
-    # Per-game stats that require minimum games qualification
-    per_game_stats = {'pointsPerGame', 'assistsPerGame', 'reboundsPerGame', 
+
+    # Per-game stats that require minimum games qualification (75% of team games)
+    per_game_stats = {'pointsPerGame', 'assistsPerGame', 'reboundsPerGame',
                       'stealsPerGame', 'blocksPerGame', 'minutesPerGame'}
-    
+
+    # Percentage stats that require BOTH minimum games (75%) AND a minimum volume per game
+    # threePointPct: official rule is 2.5 made per game + 75% of team games played
+    pct_volume_reqs = {
+        'threePointPct': ('threePointFieldGoals', 'made', 2.5),   # 2.5 3PM/game
+        'freeThrowPct':  ('freeThrows', 'made', 2.5),             # NCAA: 2.5 FTM/game (same standard)
+    }
+
     for stat_name, calc_func in stats_to_rank:
         values = []
         for player in conference_players:
             try:
-                # For per-game stats, require minimum games played (ESPN uses 75%)
-                if stat_name in per_game_stats and player.get('games', 0) < min_games_threshold:
+                games = player.get('games', 0)
+                # For per-game stats, require minimum games played (75%)
+                if stat_name in per_game_stats and games < min_games_threshold:
                     continue
+                # For percentage stats with volume requirements, check both games and volume
+                if stat_name in pct_volume_reqs:
+                    if games < min_games_threshold:
+                        continue
+                    stat_key, sub_key, min_per_game = pct_volume_reqs[stat_name]
+                    total_made = player.get(stat_key, {}).get(sub_key, 0)
+                    if games == 0 or (total_made / games) < min_per_game:
+                        continue
                 value = calc_func(player)
                 if value is not None:
                     values.append((value, player['name']))
