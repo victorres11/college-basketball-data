@@ -598,12 +598,17 @@ function GET_TEAM_GAMES(url) {
       var day = dateObj.getDate();
       var formattedDate = month + "/" + day;
 
+      // Format opponent: "@ Team" for away, "Team (N)" for neutral, "Team" for home
+      var playedOpponentDisplay = game.neutralSite
+        ? game.opponent + " (N)"
+        : (game.isHome ? game.opponent : "@ " + game.opponent);
+
       allGames.push({
         sortDate: dateObj,
         row: [
           formattedDate,
-          game.opponent,
-          game.isHome ? "Home" : "Away",
+          playedOpponentDisplay,
+          game.neutralSite ? "Neutral" : (game.isHome ? "Home" : "Away"),
           game.conferenceGame ? "Conf" : "Non-Conf",
           result,
           game.teamStats.points.total,
@@ -650,11 +655,14 @@ function GET_TEAM_GAMES(url) {
         var day = upcomingDateObj.getDate();
         var formattedDate = month + "/" + day;
 
+        // Format upcoming opponent: "@ Team" for away games
+        var upcomingOpponentDisplay = (game.location === "Away" ? "@ " : "") + (game.opponent || "");
+
         allGames.push({
           sortDate: upcomingDateObj,
           row: [
             formattedDate,
-            game.opponent || "",
+            upcomingOpponentDisplay,
             game.location || "",
             "",  // Conference - empty for upcoming
             "",  // Result - empty for upcoming
