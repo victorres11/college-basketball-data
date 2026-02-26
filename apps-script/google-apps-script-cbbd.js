@@ -655,8 +655,12 @@ function GET_TEAM_GAMES(url) {
         var day = upcomingDateObj.getDate();
         var formattedDate = month + "/" + day;
 
-        // Format upcoming opponent: "@ Team" for away games
-        var upcomingOpponentDisplay = (game.location === "Away" ? "@ " : "") + (game.opponent || "");
+        // Format upcoming opponent: "@ Team" for away, "Team (N)" for neutral, "Team" for home
+        var upcomingOpponentDisplay = game.location === "Away"
+          ? "@ " + (game.opponent || "")
+          : game.location === "Neutral"
+            ? (game.opponent || "") + " (N)"
+            : (game.opponent || "");
 
         allGames.push({
           sortDate: upcomingDateObj,

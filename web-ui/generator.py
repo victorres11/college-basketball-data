@@ -138,19 +138,21 @@ except ImportError as e:
     SCHEMA_VALIDATION_AVAILABLE = False
     print(f"Warning: Schema validation not available: {e}")
 
-# Import helper functions - we'll need to import from a shared location
-# For now, we'll import from one of the existing generators
-# In production, these should be in a shared utilities module
+# Import shared ranking utilities
+scripts_dir = os.path.join(os.path.dirname(__file__), '..', 'scripts')
+sys.path.insert(0, scripts_dir)
+from ranking_utils import calculate_player_conference_rankings_from_list
+
+# Import remaining helper functions from Oregon generator
 import importlib.util
 spec = importlib.util.spec_from_file_location(
-    "generator_utils", 
-    os.path.join(os.path.dirname(__file__), '..', 'scripts', 'generate_oregon_data_json_2026.py')
+    "generator_utils",
+    os.path.join(scripts_dir, 'generate_oregon_data_json_2026.py')
 )
 generator_utils = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(generator_utils)
 
 get_player_career_season_stats = generator_utils.get_player_career_season_stats
-calculate_player_conference_rankings_from_list = generator_utils.calculate_player_conference_rankings_from_list
 calculate_conference_rankings = generator_utils.calculate_conference_rankings
 calculate_per_game_stats = generator_utils.calculate_per_game_stats
 calculate_regular_season_stats = generator_utils.calculate_regular_season_stats
@@ -974,6 +976,7 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
                         try:
                             game_date = datetime.strptime(date_str, "%m/%d/%Y").date()
                         except Exception:
+                            print(f"[GENERATOR] WARNING: Could not parse upcoming game date '{date_str}' — keeping game as safe default")
                             game_date = None
                     if game_date is None or game_date >= today:
                         filtered_upcoming.append(game)

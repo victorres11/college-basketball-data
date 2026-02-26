@@ -8,6 +8,7 @@ Consolidates all player stats, roster info, and game data into a single JSON fil
 """
 
 from cbb_api_wrapper import CollegeBasketballAPI
+from ranking_utils import calculate_player_conference_rankings_from_list
 import json
 from datetime import datetime
 
@@ -92,110 +93,6 @@ def get_player_career_season_stats(api, player_name, current_team):
             continue
     
     return historical_seasons
-
-
-def calculate_player_conference_rankings_from_list(all_players_raw, conference_name, target_player_name):
-    """Calculate player's conference rankings for key statistical categories."""
-    
-    
-    # Filter for conference players
-    conference_players = [p for p in all_players_raw if p.get('conference') == conference_name]
-    
-    # Find our player
-    target_player = None
-    for player in conference_players:
-        if target_player_name.lower() in player.get('name', '').lower():
-            target_player = player
-            break
-    
-    if not target_player:
-        return {}
-    
-    rankings = {}
-    
-    # Calculate rankings for key stats
-    stats_to_rank = [
-        ('pointsPerGame', lambda p: (p['points'] / p['games']) if p['games'] > 0 else None),
-        ('assistsPerGame', lambda p: (p['assists'] / p['games']) if p['games'] > 0 else None),
-        ('reboundsPerGame', lambda p: (p['rebounds']['total'] / p['games']) if p['games'] > 0 else None),
-        ('stealsPerGame', lambda p: (p['steals'] / p['games']) if p['games'] > 0 else None),
-        ('blocksPerGame', lambda p: (p['blocks'] / p['games']) if p['games'] > 0 else None),
-        ('fieldGoalPct', lambda p: p['fieldGoals']['pct']),
-        ('threePointPct', lambda p: p['threePointFieldGoals']['pct']),
-        ('freeThrowPct', lambda p: p['freeThrows']['pct']),
-        ('effectiveFieldGoalPct', lambda p: p.get('effectiveFieldGoalPct')),
-        ('assistToTurnoverRatio', lambda p: p['assistsTurnoverRatio']),
-        ('offensiveRating', lambda p: p.get('offensiveRating')),
-        ('defensiveRating', lambda p: p.get('defensiveRating')),
-        ('netRating', lambda p: p.get('netRating')),
-        # New counting stats rankings
-        ('fieldGoalsMade', lambda p: p['fieldGoals']['made']),
-        ('fieldGoalsAttempted', lambda p: p['fieldGoals']['attempted']),
-        ('threePointFieldGoalsMade', lambda p: p['threePointFieldGoals']['made']),
-        ('threePointFieldGoalsAttempted', lambda p: p['threePointFieldGoals']['attempted']),
-        ('freeThrowsMade', lambda p: p['freeThrows']['made']),
-        ('freeThrowsAttempted', lambda p: p['freeThrows']['attempted']),
-        ('offensiveRebounds', lambda p: p['rebounds']['offensive']),
-        ('defensiveRebounds', lambda p: p['rebounds']['defensive']),
-        ('totalRebounds', lambda p: p['rebounds']['total']),
-        ('totalAssists', lambda p: p['assists']),
-        ('totalBlocks', lambda p: p['blocks']),
-        ('minutesPerGame', lambda p: (p['minutes'] / p['games']) if p['games'] > 0 else None),
-    ]
-    
-    # Official qualification thresholds
-    MIN_GAMES_PCT = 0.75
-    max_games = max((p.get('games', 0) for p in conference_players), default=0)
-    min_games_threshold = int(max_games * MIN_GAMES_PCT)
-
-    # Per-game stats that require minimum games qualification (75% of team games)
-    per_game_stats = {'pointsPerGame', 'assistsPerGame', 'reboundsPerGame',
-                      'stealsPerGame', 'blocksPerGame', 'minutesPerGame'}
-
-    # Percentage stats that require BOTH minimum games (75%) AND a minimum volume per game
-    # threePointPct: official rule is 2.5 made per game + 75% of team games played
-    pct_volume_reqs = {
-        'threePointPct': ('threePointFieldGoals', 'made', 2.5),   # 2.5 3PM/game
-        'freeThrowPct':  ('freeThrows', 'made', 2.5),             # NCAA: 2.5 FTM/game (same standard)
-    }
-
-    for stat_name, calc_func in stats_to_rank:
-        values = []
-        for player in conference_players:
-            try:
-                games = player.get('games', 0)
-                # For per-game stats, require minimum games played (75%)
-                if stat_name in per_game_stats and games < min_games_threshold:
-                    continue
-                # For percentage stats with volume requirements, check both games and volume
-                if stat_name in pct_volume_reqs:
-                    if games < min_games_threshold:
-                        continue
-                    stat_key, sub_key, min_per_game = pct_volume_reqs[stat_name]
-                    total_made = player.get(stat_key, {}).get(sub_key, 0)
-                    if games == 0 or (total_made / games) < min_per_game:
-                        continue
-                value = calc_func(player)
-                if value is not None:
-                    values.append((value, player['name']))
-            except:
-                pass
-        
-        # Sort to determine rank (determine if higher is better)
-        is_higher_better = not ('Turnover' in stat_name or 'defensiveRating' in stat_name)
-        values.sort(reverse=is_higher_better)
-        
-        # Find our player's rank
-        for rank, (value, player_name) in enumerate(values, 1):
-            if target_player_name.lower() in player_name.lower():
-                rankings[stat_name] = {
-                    'rank': rank,
-                    'totalPlayers': len(values),
-                    'value': value
-                }
-                break
-    
-    return rankings
 
 
 def calculate_conference_rankings(api, team_name, conference_name):
