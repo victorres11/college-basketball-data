@@ -673,7 +673,6 @@ def generate_oregon_data_json_2026():
                 'mpg': stats['mpg'],
                 'points': stats['points'],
                 'ppg': stats['ppg'],
-                'rebounds': stats['total_reb'],
                 'rpg': stats['rpg'],
                 'assists': stats['assists'],
                 'apg': stats['apg'],
