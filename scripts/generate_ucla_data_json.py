@@ -669,7 +669,6 @@ def generate_ucla_data_json():
                 'mpg': stats['mpg'],
                 'points': stats['points'],
                 'ppg': stats['ppg'],
-                'rebounds': stats['total_reb'],
                 'rpg': stats['rpg'],
                 'assists': stats['assists'],
                 'apg': stats['apg'],
