@@ -7,6 +7,7 @@ import json
 import os
 import sys
 import subprocess
+import time
 from datetime import datetime
 from generator import generate_team_data
 from s3_handler import upload_to_s3
@@ -42,6 +43,47 @@ app = Flask(__name__)
 # In-memory job storage (simple for MVP)
 # In production, consider using Redis or a database
 jobs = {}
+JOB_TTL_SECONDS = 60 * 60
+QUEUE_POLL_SECONDS = 5
+QUEUE_MAX_WAIT_SECONDS = 10 * 60
+generation_semaphore = threading.Semaphore(2)
+
+
+def mark_job_terminal(job_id, status, message=None, error=None, progress=None):
+    """Set terminal job state and completion timestamp."""
+    job = jobs.get(job_id)
+    if not job:
+        return
+
+    job['status'] = status
+    if message is not None:
+        job['message'] = message
+    if error is not None:
+        job['error'] = error
+    if progress is not None:
+        job['progress'] = progress
+    job['completedAt'] = time.time()
+
+
+def cleanup_old_jobs():
+    """Remove completed/failed/cancelled jobs older than 1 hour."""
+    now = time.time()
+    terminal_statuses = {'completed', 'failed', 'cancelled'}
+    expired_job_ids = []
+
+    for job_id, job in list(jobs.items()):
+        if job.get('status') not in terminal_statuses:
+            continue
+
+        completed_at = job.get('completedAt')
+        if completed_at is None:
+            continue
+
+        if now - completed_at > JOB_TTL_SECONDS:
+            expired_job_ids.append(job_id)
+
+    for job_id in expired_job_ids:
+        jobs.pop(job_id, None)
 
 
 def get_git_info():
@@ -193,6 +235,8 @@ def get_teams():
 def generate_data():
     """Start data generation job"""
     try:
+        cleanup_old_jobs()
+
         data = request.json
         print(f"[API] /api/generate received: {data}")  # Debug: log full request
         team_name = data.get('team_name')
@@ -259,7 +303,8 @@ def generate_data():
             'error': None,
             'gameDates': None,
             'cancelled': False,  # Cancellation flag
-            'notify_email': notify_email  # Email to notify on completion
+            'notify_email': notify_email,  # Email to notify on completion
+            'completedAt': None
         }
 
         # Start background thread
@@ -295,9 +340,7 @@ def cancel_job(job_id):
     # Only allow cancellation if job is queued or running
     if job['status'] in ['queued', 'running']:
         job['cancelled'] = True
-        job['status'] = 'cancelled'
-        job['message'] = 'Generation cancelled by user'
-        job['progress'] = 0
+        mark_job_terminal(job_id, 'cancelled', message='Generation cancelled by user', progress=0)
         return jsonify({'success': True, 'message': 'Job cancelled'})
     else:
         return jsonify({'error': 'Job cannot be cancelled (already completed or failed)'}), 400
@@ -305,11 +348,42 @@ def cancel_job(job_id):
 
 def run_generation(job_id, team_name, season, include_historical_stats=None, force_historical_refresh=False, force_refresh_roster=False):
     """Background job runner"""
+    semaphore_acquired = False
+
     try:
+        # Try to acquire a worker slot. If full, remain queued and retry.
+        if not generation_semaphore.acquire(blocking=False):
+            jobs[job_id]['status'] = 'queued'
+            jobs[job_id]['message'] = 'Queued: waiting for available worker slot...'
+            jobs[job_id]['progress'] = 0
+
+            wait_started = time.time()
+            while time.time() - wait_started < QUEUE_MAX_WAIT_SECONDS:
+                if jobs[job_id].get('cancelled', False):
+                    mark_job_terminal(job_id, 'cancelled', message='Generation cancelled by user', progress=0)
+                    return
+
+                time.sleep(QUEUE_POLL_SECONDS)
+                if generation_semaphore.acquire(blocking=False):
+                    semaphore_acquired = True
+                    break
+
+            if not semaphore_acquired:
+                mark_job_terminal(
+                    job_id,
+                    'failed',
+                    message='Error: Timed out waiting for available worker slot',
+                    error='Timed out waiting for available worker slot',
+                    progress=0
+                )
+                send_job_completion_email(jobs[job_id])
+                return
+        else:
+            semaphore_acquired = True
+
         # Check if cancelled before starting
         if jobs[job_id].get('cancelled', False):
-            jobs[job_id]['status'] = 'cancelled'
-            jobs[job_id]['message'] = 'Generation cancelled by user'
+            mark_job_terminal(job_id, 'cancelled', message='Generation cancelled by user', progress=0)
             return
 
         jobs[job_id]['status'] = 'running'
@@ -318,8 +392,7 @@ def run_generation(job_id, team_name, season, include_historical_stats=None, for
 
         # Check for cancellation before generating
         if jobs[job_id].get('cancelled', False):
-            jobs[job_id]['status'] = 'cancelled'
-            jobs[job_id]['message'] = 'Generation cancelled by user'
+            mark_job_terminal(job_id, 'cancelled', message='Generation cancelled by user', progress=0)
             return
 
         # Generate data (with progress updates)
@@ -332,8 +405,7 @@ def run_generation(job_id, team_name, season, include_historical_stats=None, for
         
         # Check for cancellation after generation
         if jobs[job_id].get('cancelled', False):
-            jobs[job_id]['status'] = 'cancelled'
-            jobs[job_id]['message'] = 'Generation cancelled by user'
+            mark_job_terminal(job_id, 'cancelled', message='Generation cancelled by user', progress=0)
             return
         
         # Upload to S3
@@ -349,17 +421,14 @@ def run_generation(job_id, team_name, season, include_historical_stats=None, for
         
         # Final cancellation check
         if jobs[job_id].get('cancelled', False):
-            jobs[job_id]['status'] = 'cancelled'
-            jobs[job_id]['message'] = 'Generation cancelled by user'
+            mark_job_terminal(job_id, 'cancelled', message='Generation cancelled by user', progress=0)
             return
         
-        jobs[job_id]['status'] = 'completed'
         jobs[job_id]['url'] = s3_url
-        jobs[job_id]['message'] = 'Complete!'
-        jobs[job_id]['progress'] = 100
         # Status list is already in jobs[job_id] from progress_callback
         # Get game dates from progress callback (set by generator)
         jobs[job_id]['gameDates'] = jobs[job_id].get('gameDates', [])
+        mark_job_terminal(job_id, 'completed', message='Complete!', progress=100)
         
         # Send email notification
         print(f"[API] Sending email notification. notify_email in job: '{jobs[job_id].get('notify_email')}'")
@@ -368,17 +437,22 @@ def run_generation(job_id, team_name, season, include_historical_stats=None, for
     except Exception as e:
         # Don't set error if it was cancelled
         if not jobs[job_id].get('cancelled', False):
-            jobs[job_id]['status'] = 'failed'
-            jobs[job_id]['error'] = str(e)
-            jobs[job_id]['message'] = f'Error: {str(e)}'
-            jobs[job_id]['progress'] = 0
+            mark_job_terminal(
+                job_id,
+                'failed',
+                message=f'Error: {str(e)}',
+                error=str(e),
+                progress=0
+            )
             
             # Send email notification for failures too
             send_job_completion_email(jobs[job_id])
+    finally:
+        if semaphore_acquired:
+            generation_semaphore.release()
 
 
 if __name__ == '__main__':
     import sys
     # Use port 5001 to avoid conflict with AirPlay Receiver on macOS
     app.run(debug=True, port=5001, host='0.0.0.0')
-
