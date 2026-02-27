@@ -28,6 +28,7 @@ except ImportError as e:
 import json
 from datetime import datetime, timezone
 import time
+import threading
 from s3_handler import load_historical_stats_from_s3
 
 # Import FoxSports roster cache and on-demand scraper
@@ -154,6 +155,63 @@ calculate_player_conference_rankings_from_list = generator_utils.calculate_playe
 calculate_conference_rankings = generator_utils.calculate_conference_rankings
 calculate_per_game_stats = generator_utils.calculate_per_game_stats
 calculate_regular_season_stats = generator_utils.calculate_regular_season_stats
+
+CACHE_TTL_SECONDS = 4 * 60 * 60
+_all_conference_players_cache = {}
+_conference_rankings_cache = {}
+_all_conference_players_cache_lock = threading.Lock()
+_conference_rankings_cache_lock = threading.Lock()
+
+
+def _get_cache_entry(cache_store, key):
+    entry = cache_store.get(key)
+    if not entry:
+        return None
+
+    if time.time() - entry['cached_at'] <= CACHE_TTL_SECONDS:
+        return entry['value']
+
+    cache_store.pop(key, None)
+    return None
+
+
+def _set_cache_entry(cache_store, key, value):
+    cache_store[key] = {
+        'value': value,
+        'cached_at': time.time()
+    }
+
+
+def get_cached_conference_rankings(api, team_name, conference_name, season):
+    """Get conference rankings from in-memory cache with TTL."""
+    cache_key = (season, conference_name or "Unknown")
+
+    with _conference_rankings_cache_lock:
+        cached_value = _get_cache_entry(_conference_rankings_cache, cache_key)
+        if cached_value is not None:
+            print(f"[GENERATOR] Conference rankings cache hit for season={season}, conference={conference_name}")
+            return cached_value, True
+
+        print(f"[GENERATOR] Conference rankings cache miss for season={season}, conference={conference_name}")
+        rankings = calculate_conference_rankings(api, team_name, conference_name or "Unknown")
+        _set_cache_entry(_conference_rankings_cache, cache_key, rankings)
+        return rankings, False
+
+
+def get_cached_all_conference_players(api, season):
+    """Get league-wide player stats from in-memory cache with TTL."""
+    cache_key = (season,)
+
+    with _all_conference_players_cache_lock:
+        cached_value = _get_cache_entry(_all_conference_players_cache, cache_key)
+        if cached_value is not None:
+            print(f"[GENERATOR] All conference players cache hit for season={season}")
+            return cached_value, True
+
+        print(f"[GENERATOR] All conference players cache miss for season={season}")
+        players = api.get_player_season_stats(season, season_type='regular')
+        _set_cache_entry(_all_conference_players_cache, cache_key, players)
+        return players, False
 
 
 def calculate_possession_game_records(team_game_stats):
@@ -528,9 +586,12 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
         if season == 2026:
             print(f"[GENERATOR] Calculating conference rankings for {team_name} in {conference_name}...")
             print(f"[GENERATOR] WARNING: This will fetch ALL team season stats (large API call)")
-            conference_rankings = calculate_conference_rankings(api, team_name, conference_name or "Unknown")
+            conference_rankings, from_cache = get_cached_conference_rankings(
+                api, team_name, conference_name, season
+            )
             print(f"[GENERATOR] Conference rankings calculated")
-            add_status('Conference Rankings', 'success', f'Calculated rankings for {conference_name}')
+            source = 'cache' if from_cache else 'API'
+            add_status('Conference Rankings', 'success', f'Calculated rankings for {conference_name} ({source})')
         else:
             # For other seasons, create empty rankings for now
             conference_rankings = {'conference': {}, 'd1': {}}
@@ -552,10 +613,11 @@ def generate_team_data(team_name, season, progress_callback=None, include_histor
     print(f"[GENERATOR] WARNING: Fetching ALL player season stats (large API call - no team filter)")
     print(f"[GENERATOR] This is needed for conference player rankings but may trigger rate limits")
     try:
-        all_conference_players = api.get_player_season_stats(season, season_type='regular')
+        all_conference_players, from_cache = get_cached_all_conference_players(api, season)
         count = len(all_conference_players) if all_conference_players else 0
         print(f"[GENERATOR] Retrieved {count} total player records")
-        add_status('All Player Stats (Rankings)', 'success', f'Retrieved {count} player records')
+        source = 'cache' if from_cache else 'API'
+        add_status('All Player Stats (Rankings)', 'success', f'Retrieved {count} player records ({source})')
     except Exception as e:
         check_cancelled()  # Check before reporting error
         print(f"[GENERATOR] ERROR: Failed to fetch all player stats: {e}")
