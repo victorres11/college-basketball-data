@@ -1,17 +1,23 @@
 name: Claude PR Review
 
 on:
-  pull_request:
-    types: [opened, synchronize]
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
 
 jobs:
   review:
     name: Code Review
+    if: |
+      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude')) ||
+      (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude'))
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
       contents: read
       pull-requests: write
+      issues: write
       id-token: write
 
     steps:
@@ -25,7 +31,7 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           prompt: |
-            Review this pull request. Focus on:
+            When reviewing pull requests, focus on:
             - Correctness and potential bugs
             - Thread safety (this project uses threading for background jobs)
             - API rate limiting concerns (cbb_api_wrapper.py has built-in rate limiting)
