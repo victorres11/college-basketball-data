@@ -42,6 +42,7 @@ app = Flask(__name__)
 
 # In-memory job storage (simple for MVP)
 # In production, consider using Redis or a database
+# Note: dict mutations rely on CPython GIL for thread safety
 jobs = {}
 JOB_TTL_SECONDS = 60 * 60
 QUEUE_POLL_SECONDS = 5
@@ -360,7 +361,7 @@ def run_generation(job_id, team_name, season, include_historical_stats=None, for
             wait_started = time.time()
             while time.time() - wait_started < QUEUE_MAX_WAIT_SECONDS:
                 if jobs[job_id].get('cancelled', False):
-                    mark_job_terminal(job_id, 'cancelled', message='Generation cancelled by user', progress=0)
+                    # cancel_job() already called mark_job_terminal
                     return
 
                 time.sleep(QUEUE_POLL_SECONDS)

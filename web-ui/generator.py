@@ -158,6 +158,8 @@ calculate_conference_rankings = generator_utils.calculate_conference_rankings
 calculate_per_game_stats = generator_utils.calculate_per_game_stats
 calculate_regular_season_stats = generator_utils.calculate_regular_season_stats
 
+# 4 hours — long enough to share across concurrent jobs within a session,
+# short enough to pick up mid-day stat updates between game windows.
 CACHE_TTL_SECONDS = 4 * 60 * 60
 _all_conference_players_cache = {}
 _conference_rankings_cache = {}
@@ -185,10 +187,20 @@ def _set_cache_entry(cache_store, key, value):
 
 
 def get_cached_conference_rankings(api, team_name, conference_name, season):
-    """Get conference rankings from in-memory cache with TTL."""
+    """Get conference rankings from in-memory cache with TTL.
+
+    Note: lock is held during the API call on cache miss to prevent
+    duplicate fetches. With the semaphore capped at 2 workers this is
+    acceptable — the second worker blocks briefly instead of issuing a
+    redundant large API call.
+    """
     cache_key = (season, conference_name or "Unknown")
 
-    with _conference_rankings_cache_lock:
+    acquired = _conference_rankings_cache_lock.acquire(blocking=False)
+    if not acquired:
+        print(f"[GENERATOR] Waiting for conference rankings lock (season={season}, conference={conference_name})...")
+        _conference_rankings_cache_lock.acquire()
+    try:
         cached_value = _get_cache_entry(_conference_rankings_cache, cache_key)
         if cached_value is not None:
             print(f"[GENERATOR] Conference rankings cache hit for season={season}, conference={conference_name}")
@@ -198,13 +210,23 @@ def get_cached_conference_rankings(api, team_name, conference_name, season):
         rankings = calculate_conference_rankings(api, team_name, conference_name or "Unknown")
         _set_cache_entry(_conference_rankings_cache, cache_key, rankings)
         return rankings, False
+    finally:
+        _conference_rankings_cache_lock.release()
 
 
 def get_cached_all_conference_players(api, season):
-    """Get league-wide player stats from in-memory cache with TTL."""
+    """Get league-wide player stats from in-memory cache with TTL.
+
+    Note: lock is held during the API call on cache miss (see
+    get_cached_conference_rankings docstring for rationale).
+    """
     cache_key = (season,)
 
-    with _all_conference_players_cache_lock:
+    acquired = _all_conference_players_cache_lock.acquire(blocking=False)
+    if not acquired:
+        print(f"[GENERATOR] Waiting for all-conference-players lock (season={season})...")
+        _all_conference_players_cache_lock.acquire()
+    try:
         cached_value = _get_cache_entry(_all_conference_players_cache, cache_key)
         if cached_value is not None:
             print(f"[GENERATOR] All conference players cache hit for season={season}")
@@ -214,6 +236,8 @@ def get_cached_all_conference_players(api, season):
         players = api.get_player_season_stats(season, season_type='regular')
         _set_cache_entry(_all_conference_players_cache, cache_key, players)
         return players, False
+    finally:
+        _all_conference_players_cache_lock.release()
 
 
 def calculate_possession_game_records(team_game_stats):
