@@ -161,8 +161,8 @@ calculate_regular_season_stats = generator_utils.calculate_regular_season_stats
 # 4 hours — long enough to share across concurrent jobs within a session,
 # short enough to pick up mid-day stat updates between game windows.
 CACHE_TTL_SECONDS = 4 * 60 * 60
-_all_conference_players_cache = {}
-_conference_rankings_cache = {}
+_all_conference_players_cache: dict = {}
+_conference_rankings_cache: dict = {}
 _all_conference_players_cache_lock = threading.Lock()
 _conference_rankings_cache_lock = threading.Lock()
 
