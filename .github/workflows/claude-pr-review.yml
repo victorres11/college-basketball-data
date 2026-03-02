@@ -1,0 +1,35 @@
+name: Claude PR Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  review:
+    name: Code Review
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Review PR with Claude
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          direct_prompt: |
+            Review this pull request. Focus on:
+            - Correctness and potential bugs
+            - Thread safety (this project uses threading for background jobs)
+            - API rate limiting concerns (cbb_api_wrapper.py has built-in rate limiting)
+            - Data integrity (JSON schema consistency across generators)
+            - Security issues (credential handling, injection risks)
+
+            Be concise. Flag real issues, not style nits.
+          max_turns: 5
